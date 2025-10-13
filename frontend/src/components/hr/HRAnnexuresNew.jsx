@@ -143,14 +143,11 @@ const HRAnnexuresNew = ({ setActiveModule }) => {
     setActiveView('form');
   };
 
-  const handleCategoryClick = (categoryData) => {
-    // Find the annexure data that matches this category
-    const annexure = Object.values(annexuresData).find(annex => annex.category === categoryData.name);
-    if (annexure) {
-      setSelectedCategory(annexure);
-      setFilterCategory(categoryData.name);
-      setActiveView('category');
-    }
+  const handleCategoryClick = (annexure) => {
+    // annexure is already the full annexure object from annexuresData
+    setSelectedCategory(annexure);
+    setFilterCategory(annexure.category);
+    setActiveView('category');
   };
 
   const renderDashboard = () => (
