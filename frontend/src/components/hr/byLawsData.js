@@ -217,49 +217,99 @@ export const byLawsData = {
     id: 'section4',
     number: 'SECTION IV',
     title: 'LEAVE POLICY',
-    searchTerms: ['leave', 'vacation', 'absence', 'time off', 'holidays'],
+    searchTerms: ['leave', 'vacation', 'absence', 'time off', 'holidays', 'annual leave', 'sick leave', 'maternity'],
     subsections: [
       {
         number: '4.1',
-        title: 'Types of Leave',
-        content: 'The Hospital provides the following types of leave:',
+        title: 'Types of Leave - Comprehensive Framework',
+        content: 'Koyili Hospital provides a comprehensive leave framework recognizing employees need for rest, personal matters, health, family responsibilities, and work-life balance. Leave entitlements vary by employment category and tenure:',
         points: [
-          'Casual Leave: 12 days per calendar year for personal or urgent matters.',
-          'Sick Leave: 10 days per year with medical certificate for illness exceeding 3 days.',
-          'Annual Leave (Earned Leave): 20 days per calendar year, encashable.',
-          'Maternity Leave: 26 weeks as per Maternity Benefit Act, 1961.',
-          'Paternity Leave: 7 days within six months of childbirth or adoption.',
-          'Compensatory Off: For additional hours worked beyond normal schedule.',
-          'Leave Without Pay: Subject to approval for exceptional circumstances.',
-          'Study Leave: For approved educational pursuits, subject to conditions.',
-          'Bereavement Leave: Up to 5 days for immediate family member\'s death.'
+          'Casual Leave (CL): 12 days per calendar year for short-term personal matters, family events, urgent situations, or rest. CL cannot be combined with any other leave. Maximum 3 consecutive days can be availed at one time unless in exceptional circumstances with approval. Un-availed CL lapses at year-end and cannot be carried forward or encashed.',
+          'Sick Leave (SL): 10 days per calendar year for illness, injury, medical treatment, or recovery. Medical certificate from a registered medical practitioner is mandatory for sick leave exceeding 3 consecutive days. Hospital medical officer may examine the employee upon return from extended sick leave. Un-availed SL can be accumulated up to 90 days during service.',
+          'Earned Leave/Annual Leave (EL): 20 days per calendar year for vacation, rest, and personal pursuits. EL accrues monthly at 1.67 days per month. EL can be accumulated up to 240 days (approximately 10 months) during service. Accumulated EL can be encashed subject to conditions. Minimum 7 days prior notice required except in emergencies.',
+          'Maternity Leave: Female employees are entitled to 26 weeks of maternity leave as per the Maternity Benefit Act, 1961, as amended. For the first two children, 26 weeks leave includes pre-natal and post-natal periods. For third and subsequent children, 12 weeks. Adoptive mothers and commissioning mothers (surrogacy) are entitled to 12 weeks leave from the date of handing over the child. Miscarriage or medical termination of pregnancy entitles 6 weeks leave. Employees must provide medical certificate and advance intimation.',
+          'Paternity Leave: Male employees are entitled to 7 days of paternity leave to be availed within 6 months from the date of childbirth or adoption. Paternity leave helps fathers support their partners and bond with newborns. Documentary proof may be required.',
+          'Compensatory Off (Comp Off): Employees required to work beyond normal working hours, on weekly offs, or public holidays may be granted compensatory time off equivalent to extra hours worked. Comp off must be claimed within one month and availed within 3 months of earning, failing which it lapses. Supervisor approval is required.',
+          'Leave Without Pay (LWP): Employees may request unpaid leave for personal reasons beyond available paid leave. LWP requires approval from department head and HR. LWP periods are not counted as continuous service for benefit calculations. Prolonged LWP may affect confirmation, increments, or benefits.',
+          'Study Leave: Employees pursuing job-related higher education, certifications, or professional courses with Hospital approval may be granted study leave up to 30 days per year. Study leave may be paid or unpaid depending on course relevance and sponsorship terms. Bond agreements may apply.',
+          'Bereavement Leave: Up to 5 days paid leave for the death of immediate family members (spouse, children, parents, siblings, in-laws, grandparents). Documentary proof such as death certificate is required. Additional leave may be granted on compassionate grounds.',
+          'Special Leave: Additional leave may be granted for exceptional circumstances such as serious illness requiring prolonged treatment, accidents, natural calamities affecting employee/family, or other humanitarian grounds at management discretion.',
+          'Sabbatical Leave: Long-serving employees (typically 5+ years) may request sabbatical leave for personal development, research, travel, or family commitments. Sabbaticals are unpaid, subject to operational feasibility, and require advance approval. Maximum duration typically 3-6 months.',
+          'Public Holidays: The Hospital observes national holidays (Republic Day, Independence Day, Gandhi Jayanti), religious festivals (Diwali, Eid, Christmas, etc.), and state-specific holidays as per applicable laws and management decision. Essential services staff working on public holidays receive compensatory off or holiday pay.',
+          'Quarantine Leave: In case of infectious disease exposure or outbreak situations, employees may be placed on quarantine leave as per medical advice and government directives. Quarantine leave is generally paid if work-related exposure.',
+          'Jury Duty and Civic Obligations: Leave for serving as juror, witness in court proceedings, voting, blood donation, or other civic duties. Appropriate documentation required. Such leave is typically paid.'
         ]
       },
       {
         number: '4.2',
-        title: 'Leave Application Procedures',
-        content: 'Leave application must follow these procedures:',
+        title: 'Leave Application and Approval Process',
+        content: 'Structured procedures ensure systematic leave management while maintaining operational continuity:',
         points: [
-          'Submit leave application through Hospital leave management system.',
-          'Casual Leave: Minimum 1 day advance notice, except emergencies.',
-          'Annual Leave: Minimum 7 days advance notice for proper planning.',
-          'Sick Leave exceeding 3 consecutive days: Medical certificate mandatory.',
-          'All leave subject to approval by immediate supervisor and HR department.',
-          'Unauthorized absence results in loss of pay and may lead to disciplinary action.',
-          'Leave balance carried forward as per Hospital policy, up to specified limits.',
-          'Public holidays falling during approved leave shall not be counted as leave.'
+          'Advance Application: Leave applications must be submitted through the Hospital Leave Management System (HLMS) or designated forms with appropriate advance notice - Casual Leave: 1 day (emergencies exempted), Sick Leave: As soon as possible (same day for emergencies), Annual Leave: 7 days minimum, extended leave 15+ days advance notice. Emergency/unplanned sick leave requires immediate telephonic/message intimation to supervisor.',
+          'Approval Workflow: Leave requests route through immediate supervisor for approval, then to HOD for leaves exceeding 7 days, and HR for final processing. Approvals are subject to operational needs, manpower availability, and leave balance verification.',
+          'Documentation Requirements: Sick leave exceeding 3 days requires medical certificate. Maternity leave requires medical certificate from gynecologist. Other leaves may require supporting documents (marriage invitation, death certificate, court summons, etc.).',
+          'Leave Scheduling: Annual leave should be planned and communicated well in advance. Departments maintain leave rosters ensuring adequate staffing. Peak periods, audit times, or critical project phases may have leave restrictions.',
+          'Emergency Leave Procedures: Genuine emergencies (sudden illness, family crisis, accidents) allow relaxed procedural requirements, but employees must inform supervisor immediately via phone/SMS and submit formal application at the earliest.',
+          'Leave Balance Verification: Employees can check leave balances through HRMS portal. HR maintains accurate leave records. Leave applications are system-validated against available balance before approval.',
+          'Denial and Rescheduling: Management reserves right to deny or reschedule leave due to operational exigencies. Affected employees are informed with reasons and alternative dates are mutually agreed upon.',
+          'Cancellation of Approved Leave: Approved leave may be cancelled or curtailed in genuine emergency situations requiring employee presence. Reasonable notice and assistance for travel cancellations are provided.',
+          'Half-Day Leave: Casual and sick leave can be availed in half-day units subject to supervisor approval and operational feasibility.',
+          'Sandwich Leave: Availing leave immediately before and after public holidays or weekly offs may be subject to additional scrutiny and requires proper justification and approval.',
+          'Leave During Notice Period: Employees serving notice period may be required to exhaust accumulated leave or forfeit leave entitlements as per resignation terms and operational requirements.'
         ]
       },
       {
         number: '4.3',
-        title: 'Leave Encashment',
-        content: 'Leave encashment provisions:',
+        title: 'Leave Accumulation and Carry Forward',
+        content: 'Leave accumulation rules balance employee interests with organizational operational needs:',
         points: [
-          'Annual Leave may be encashed subject to minimum balance requirements.',
-          'Encashment allowed once per year during active service.',
-          'Full encashment of accumulated leave upon retirement or resignation.',
-          'Encashment calculated at current basic salary rate.',
-          'Maximum encashment limit as per Hospital policy.'
+          'Earned Leave Accumulation: Unused earned leave accumulates year-on-year up to maximum 240 days. Employees are encouraged to take regular leave for health and well-being while maintaining operational continuity.',
+          'Sick Leave Accumulation: Unused sick leave accumulates up to 90 days. Accumulated sick leave is available for serious illness or hospitalization requiring extended absence.',
+          'Casual Leave Non-Accumulation: Casual leave cannot be carried forward to the next year. Unused CL lapses on December 31st annually.',
+          'Lapse Provisions: Management may direct employees to avail leave if accumulation reaches maximum limits or if prolonged absence from leave is affecting health/performance.',
+          'Transfer of Accumulated Leave: Accumulated leave balance transfers when employee moves between departments within the Hospital. Upon separation, only earned leave is eligible for encashment.'
+        ]
+      },
+      {
+        number: '4.4',
+        title: 'Leave Encashment Provisions',
+        content: 'Monetization of accumulated earned leave under specified conditions:',
+        points: [
+          'During Service Encashment: Employees may encash accumulated earned leave once per year, subject to maintaining minimum balance of 15 days. Maximum encashable leave per year is 50% of accumulated balance or 15 days, whichever is lower.',
+          'Encashment Rate: Leave encashment is calculated at current basic salary rate per day basis (Basic Salary / 30 days).',
+          'Application Process: Leave encashment requests must be submitted to HR during open windows (typically during June and December). Encashment is processed with salary for the month.',
+          'Separation Encashment: Upon resignation, retirement, termination, or death during service, accumulated earned leave balance is fully encashed and paid to the employee or legal heirs. Maximum encashment at separation is 240 days.',
+          'Taxation: Leave encashment is subject to income tax deduction as per applicable IT laws and regulations.',
+          'Encashment During LWP: Leave cannot be encashed if employee is on leave without pay status.',
+          'Non-Encashable Leaves: Casual leave and sick leave cannot be encashed except in case of retirement or death where accumulated sick leave may be partially encashed as per compassionate grounds at management discretion.'
+        ]
+      },
+      {
+        number: '4.5',
+        title: 'Medical and Hospitalization Leave',
+        content: 'Extended provisions for serious illness, major surgeries, or hospitalization:',
+        points: [
+          'Extended Sick Leave: For serious illness or major surgery requiring extended absence, employees can combine accumulated sick leave and earned leave for continuous medical leave up to 90 days.',
+          'Medical Board Review: Leave for critical illness exceeding 90 days requires Medical Board assessment. The Board examines medical reports, prognosis, and expected recovery timeline before recommending leave extension.',
+          'Recovery Period: Post-hospitalization recovery leave is granted based on medical recommendation and fitness-to-resume certification.',
+          'Partial Sick Leave Pay: After exhaustion of paid sick leave, employees on extended medical leave may receive partial pay (typically 50% of basic salary) for humanitarian considerations.',
+          'Return to Work: Employees returning from extended medical leave must submit fitness certificate from treating physician and may undergo Hospital medical examination before resuming duties.',
+          'Work Restrictions Post-Illness: Employees may be assigned modified duties or reduced hours temporarily based on medical recommendations during recovery phase.',
+          'Critical Illness: For life-threatening illnesses requiring intensive treatment (cancer, organ failure, major accidents), Hospital may extend compassionate leave beyond normal entitlements.'
+        ]
+      },
+      {
+        number: '4.6',
+        title: 'Leave Records and Compliance',
+        content: 'Maintaining accurate leave records ensures compliance and transparency:',
+        points: [
+          'Leave Register: HR maintains comprehensive leave registers recording all leave applications, approvals, denials, and balances for each employee.',
+          'Digital Records: Leave Management System provides digital trail of all leave transactions, approvals, and communications.',
+          'Audit Trail: Leave records are subject to internal audit and statutory compliance verification.',
+          'Employee Access: Employees can view their leave history, pending applications, and current balances through self-service portal.',
+          'Confidentiality: Medical reasons for sick leave are treated confidentially and access is restricted to authorized HR personnel.',
+          'Statutory Compliance: Leave policies comply with Shops and Establishments Act, Factories Act (where applicable), Maternity Benefit Act, and other relevant labor legislations.',
+          'Record Retention: Leave records are maintained for the duration of employment plus 7 years post-separation as per document retention policy.'
         ]
       }
     ]
