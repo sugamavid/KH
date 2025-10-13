@@ -137,6 +137,173 @@ const HRSOPs = ({ setActiveModule }) => {
     }
   };
 
+  const renderDashboard = () => (
+    <div className="space-y-6">
+      {/* Board Approval Banner */}
+      <div className="bg-gradient-to-r from-green-50 to-emerald-100 border-l-4 border-green-600 rounded-lg p-6 shadow-md">
+        <div className="flex items-start space-x-4">
+          <div className="w-12 h-12 rounded-full bg-green-600 flex items-center justify-center flex-shrink-0">
+            <CheckCircle className="w-6 h-6 text-white" />
+          </div>
+          <div className="flex-1">
+            <h3 className="text-lg font-bold text-green-900 mb-1">Standardized Procedures</h3>
+            <p className="text-sm text-green-800">
+              These Standard Operating Procedures ensure consistent and compliant HR operations at Koyili Hospital.
+              All procedures are regularly reviewed and updated.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Header */}
+      <div className="bg-gradient-to-r from-green-900 to-emerald-900 rounded-xl p-8 text-white shadow-lg">
+        <div className="flex items-start justify-between">
+          <div>
+            <h1 className="text-3xl font-bold mb-2">HR SOPs Dashboard</h1>
+            <p className="text-green-200 mb-4">Standard Operating Procedures & Process Guidelines</p>
+            <div className="flex items-center space-x-6 text-sm">
+              <div>
+                <p className="text-green-300">Total SOPs</p>
+                <p className="font-semibold">10 Procedures</p>
+              </div>
+              <div>
+                <p className="text-green-300">Last Updated</p>
+                <p className="font-semibold">February 2024</p>
+              </div>
+              <div>
+                <p className="text-green-300">Status</p>
+                <p className="font-semibold">Active</p>
+              </div>
+            </div>
+          </div>
+          <div className="flex space-x-3">
+            <button className="px-4 py-2 bg-white text-green-900 rounded-lg hover:bg-green-50 transition-colors font-semibold flex items-center">
+              <Printer className="w-4 h-4 mr-2" />
+              Print
+            </button>
+            <button className="px-4 py-2 bg-white text-green-900 rounded-lg hover:bg-green-50 transition-colors font-semibold flex items-center">
+              <Download className="w-4 h-4 mr-2" />
+              Download
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* Quick Reference */}
+      <div>
+        <h2 className="text-xl font-bold text-slate-900 mb-4">Quick Reference Guide</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {Object.entries(sopsQuickRef).map(([key, items]) => (
+            <div key={key} className="bg-white rounded-xl p-5 border border-slate-200 shadow-sm hover:shadow-md transition-all">
+              <h3 className="font-bold text-slate-900 mb-3 capitalize">{key} Process</h3>
+              <ul className="space-y-2">
+                {items.map((item, idx) => (
+                  <li key={idx} className="text-sm text-slate-700 flex items-start">
+                    <ChevronRight className="w-4 h-4 text-slate-400 mr-1 flex-shrink-0 mt-0.5" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Section Navigator */}
+      <div className="bg-white rounded-xl p-6 border border-slate-200 shadow-sm">
+        <h2 className="text-xl font-bold text-slate-900 mb-4">Browse SOPs</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+          {navigation.filter(nav => nav.id !== 'dashboard').map((nav) => {
+            const IconComponent = nav.icon;
+            return (
+              <button
+                key={nav.id}
+                onClick={() => setActiveSection(nav.id)}
+                className="flex items-center space-x-3 p-4 bg-slate-50 rounded-lg hover:bg-green-50 hover:border-green-400 border border-slate-200 transition-all text-left"
+              >
+                <IconComponent className="w-5 h-5 text-green-600" />
+                <span className="text-sm font-medium text-slate-900">{nav.title}</span>
+                <ChevronRight className="w-4 h-4 text-slate-400 ml-auto" />
+              </button>
+            );
+          })}
+        </div>
+      </div>
+    </div>
+  );
+
+  const renderSection = (sectionId) => {
+    const section = sopsData[sectionId];
+    if (!section) return null;
+
+    if (sectionId === 'preamble') {
+      return (
+        <div className="bg-white rounded-xl shadow-lg">
+          <div className="bg-gradient-to-r from-green-50 to-emerald-100 border-b-2 border-green-300 p-6">
+            <div className="flex items-center space-x-3">
+              <div className="w-10 h-10 rounded-full bg-green-600 flex items-center justify-center flex-shrink-0">
+                <CheckCircle className="w-5 h-5 text-white" />
+              </div>
+              <div>
+                <p className="font-bold text-green-900">Standard Operating Procedures</p>
+                <p className="text-sm text-green-800">Koyili Hospital • HR Department</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="border-b-4 border-double border-slate-800 p-12 text-center bg-gradient-to-b from-slate-50 to-white">
+            <BookOpen className="w-16 h-16 text-green-900 mx-auto mb-4" />
+            <h1 className="text-3xl font-serif font-bold text-slate-900 mb-6">{section.title}</h1>
+          </div>
+          <div className="p-12 bg-green-50">
+            <p className="text-base leading-relaxed text-justify font-serif text-slate-800 indent-12">
+              {section.content}
+            </p>
+          </div>
+        </div>
+      );
+    }
+
+    return (
+      <div className="bg-white rounded-xl shadow-lg p-12">
+        <div className="border-b-2 border-slate-700 pb-4 mb-8">
+          <h2 className="text-2xl font-serif font-bold text-slate-900">{section.number}</h2>
+          <h3 className="text-xl font-serif font-bold text-slate-800 mt-2">{section.title}</h3>
+          {section.category && (
+            <span className="inline-block mt-2 px-3 py-1 bg-green-100 text-green-800 text-sm font-semibold rounded-full">
+              {section.category}
+            </span>
+          )}
+        </div>
+
+        {section.subsections && section.subsections.map((subsection, idx) => (
+          <div key={idx} className="mb-8 ml-6">
+            <h4 className="text-lg font-serif font-bold text-slate-900 mb-3">
+              {subsection.number} {subsection.title}
+            </h4>
+            {subsection.content && (
+              <p className="text-base leading-relaxed text-justify font-serif text-slate-800 mb-4">
+                {subsection.content}
+              </p>
+            )}
+            {subsection.points && (
+              <ol className="space-y-3 ml-8">
+                {subsection.points.map((point, pointIdx) => (
+                  <li key={pointIdx} className="text-base leading-relaxed text-justify font-serif text-slate-800 relative pl-6">
+                    <span className="absolute left-0 font-bold text-slate-600">
+                      {pointIdx + 1}.
+                    </span>
+                    {point}
+                  </li>
+                ))}
+              </ol>
+            )}
+          </div>
+        ))}
+      </div>
+    );
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
       <div className="bg-white border-b border-slate-200 px-6 py-5">
