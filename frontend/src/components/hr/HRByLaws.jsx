@@ -435,6 +435,19 @@ const HRByLaws = ({ setActiveModule }) => {
     <div className="flex h-screen bg-gradient-to-br from-slate-100 to-slate-200">
       {/* Dedicated Left Sidebar for Navigation */}
       <div className={`${sidebarCollapsed ? 'w-16' : 'w-80'} bg-white border-r-2 border-slate-300 flex flex-col transition-all duration-300 shadow-xl`}>
+        {/* Back to HR Dashboard Button */}
+        {setActiveModule && !sidebarCollapsed && (
+          <div className="p-3 border-b border-slate-200 bg-slate-50">
+            <button
+              onClick={() => setActiveModule('dashboard')}
+              className="w-full flex items-center space-x-2 px-3 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-200 rounded-lg transition-colors"
+            >
+              <ArrowLeft className="w-4 h-4" />
+              <span>Back to HR Dashboard</span>
+            </button>
+          </div>
+        )}
+
         {/* Sidebar Header */}
         <div className="p-4 border-b-2 border-slate-200 bg-gradient-to-r from-blue-800 to-indigo-900">
           <div className="flex items-center justify-between">
