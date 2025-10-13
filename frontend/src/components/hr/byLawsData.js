@@ -644,7 +644,7 @@ export const byLawsData = {
           'Good Faith Requirement: Grievance mechanism is for genuine concerns raised in good faith. Employees should have reasonable basis for their complaints even if investigations prove otherwise.',
           'Malicious Complaints: False complaints made knowingly with intent to harm another person, settle personal scores, or gain unfair advantage are considered malicious. Malicious complaints are serious misconduct.',
           'Frivolous Complaints: Complaints that are clearly baseless, trivial matters blown out of proportion, or repeated complaints on same resolved issue without new facts are frivolous.',
-          'Investigation: If complaint appears malicious/frivolous, investigation examines - complainant's intent, evidence of falsification, pattern of complaints, personal conflicts, and whether complaint was made in good faith despite being unsubstantiated.',
+          'Investigation: If complaint appears malicious/frivolous, investigation examines - complainant\'s intent, evidence of falsification, pattern of complaints, personal conflicts, and whether complaint was made in good faith despite being unsubstantiated.',
           'Consequences: Proven malicious or frivolous complaints result in - counseling for first instance, written warning for repeated instances, or disciplinary action including termination for serious abuse of grievance mechanism.',
           'Differentiation: Unsubstantiated genuine complaints are different from malicious complaints. Genuine complaints that cannot be proved are closed without prejudice to complainant.'
         ]
