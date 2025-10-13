@@ -1616,39 +1616,6 @@ export const byLawsData = {
       }
     ]
   },
-  section16: {
-    id: 'section16',
-    number: 'SECTION XVI',
-    title: 'TRANSFER AND RELOCATION',
-    searchTerms: ['transfer', 'relocation', 'posting', 'movement'],
-    subsections: [
-      {
-        number: '16.1',
-        title: 'Transfer Policy',
-        content: 'Transfers may be initiated for:',
-        points: [
-          'Operational requirements and staffing needs.',
-          'Employee development and career growth.',
-          'At employee request subject to approval.',
-          'Administrative reasons.',
-          'Adequate notice provided for transfers where feasible.',
-          'Family and personal circumstances considered.'
-        ]
-      },
-      {
-        number: '16.2',
-        title: 'Relocation Assistance',
-        content: 'For transfers requiring relocation:',
-        points: [
-          'Transportation costs for employee and family.',
-          'Packing and moving of household goods.',
-          'Temporary accommodation assistance.',
-          'Settling-in allowance as per policy.',
-          'Support in finding accommodation at new location.'
-        ]
-      }
-    ]
-  },
   section17: {
     id: 'section17',
     number: 'SECTION XVII',
