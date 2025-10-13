@@ -1617,26 +1617,6 @@ export const byLawsData = {
     ]
   },
         content: 'Clear career progression paths available:',
-        points: [
-          'Defined career ladders for each department and role.',
-          'Opportunities for vertical and lateral movement.',
-          'Internal job postings for vacant positions.',
-          'Employees encouraged to apply for suitable openings.',
-          'Preference given to internal candidates with requisite qualifications.'
-        ]
-      },
-      {
-        number: '15.2',
-        title: 'Succession Planning',
-        content: 'Identifying and developing future leaders:',
-        points: [
-          'Identification of high-potential employees.',
-          'Targeted development programs for identified successors.',
-          'Mentoring and coaching by senior leaders.',
-          'Rotational assignments for broader exposure.',
-          'Regular review of succession pipeline.'
-        ]
-      }
     ]
   },
   section16: {
