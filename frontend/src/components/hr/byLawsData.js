@@ -318,46 +318,112 @@ export const byLawsData = {
     id: 'section5',
     number: 'SECTION V',
     title: 'PERFORMANCE MANAGEMENT',
-    searchTerms: ['performance', 'appraisal', 'evaluation', 'review', 'assessment'],
+    searchTerms: ['performance', 'appraisal', 'evaluation', 'review', 'assessment', 'KPI', 'goals'],
     subsections: [
       {
         number: '5.1',
-        title: 'Performance Appraisal System',
-        content: 'The Hospital maintains a comprehensive performance management system:',
+        title: 'Performance Management System - Framework and Philosophy',
+        content: 'Koyili Hospital maintains a comprehensive, transparent, and objective performance management system designed to align individual performance with organizational goals, foster continuous improvement, recognize excellence, and support career development. The system is founded on principles of fairness, objectivity, regular feedback, and developmental focus:',
         points: [
-          'Annual performance reviews conducted for all employees.',
-          'Evaluation based on job-specific KPIs, competencies, and behavioral attributes.',
-          'Self-appraisal, supervisor assessment, and peer feedback components.',
-          'Mid-year reviews to track progress and provide feedback.',
-          'Performance ratings used for confirmation, increments, promotions, and training needs.',
-          'Employees have the right to discuss and understand their performance evaluation.',
-          'Appeals process available for employees who disagree with their assessment.'
+          'Performance Management Cycle: The annual performance cycle runs from January to December with clearly defined phases - Goal Setting (January-February), Mid-Year Review (June-July), Year-End Assessment (December-January), and Calibration & Rating (January). This structured approach ensures consistency and adequate time for performance demonstration.',
+          'Objective Setting and Cascading: Organizational objectives cascade down through departments to individual employees. Each employee has 4-8 SMART objectives (Specific, Measurable, Achievable, Relevant, Time-bound) aligned with departmental and Hospital goals. Objectives cover both quantitative targets and qualitative behavioral aspects.',
+          'Key Performance Indicators (KPIs): Role-specific KPIs are defined measuring productivity, quality, efficiency, patient satisfaction, compliance, innovation, and teamwork. Clinical roles have clinical outcome KPIs, administrative roles have operational KPIs, and support roles have service delivery KPIs.',
+          'Competency Framework: Performance evaluation includes assessment of core competencies (communication, teamwork, problem-solving, initiative) and functional competencies (technical skills, domain expertise, procedural knowledge) relevant to each role level.',
+          'Continuous Feedback Culture: Managers provide ongoing informal feedback throughout the year through regular one-on-one meetings, coaching conversations, and real-time recognition or corrective guidance. Formal reviews complement continuous feedback.',
+          'Self-Assessment Component: Employees complete self-appraisal documenting achievements, challenges, learnings, and aspirations. Self-reflection promotes ownership and provides employee perspective to managers.',
+          '360-Degree Feedback: For leadership and managerial roles, feedback is collected from supervisors, peers, subordinates, and internal customers providing holistic performance view. 360-degree feedback identifies leadership strengths and development areas.',
+          'Performance Documentation: All performance discussions, achievements, concerns, and improvement plans are documented in the Performance Management System (PMS). Documentation ensures fairness, consistency, and serves as reference for HR decisions.',
+          'Rating Scale and Distribution: Performance is rated on a 5-point scale - Outstanding (5), Exceeds Expectations (4), Meets Expectations (3), Needs Improvement (2), Unsatisfactory (1). Rating distribution follows organizational guidelines ensuring objectivity and avoiding rating inflation.',
+          'Performance Calibration: Department heads and HR conduct calibration sessions to ensure consistency in ratings across teams, eliminate bias, and maintain fairness. Calibration reviews comparative performance and validates ratings.',
+          'Linkage to Rewards: Performance ratings directly influence annual increments, bonuses, promotions, training opportunities, and recognition programs. High performers receive accelerated career progression and enhanced rewards.',
+          'Development Planning: Performance reviews identify skill gaps and create Individual Development Plans (IDP) with specific actions, training programs, mentoring, stretch assignments, or certifications to enhance capabilities.',
+          'Underperformance Management: Employees rated as Needs Improvement or Unsatisfactory are placed on Performance Improvement Plans (PIP) with clear expectations, support, monitoring, and timelines for improvement.',
+          'Performance Appeal Mechanism: Employees who disagree with their performance assessment can appeal to the next level manager or HR. Appeals are reviewed objectively considering documented evidence and multiple perspectives.'
         ]
       },
       {
         number: '5.2',
-        title: 'Performance Improvement Plans (PIP)',
-        content: 'For employees requiring performance improvement:',
+        title: 'Performance Appraisal Process - Detailed Procedures',
+        content: 'Structured appraisal procedures ensure comprehensive, fair, and developmental performance evaluation:',
         points: [
-          'Identify specific performance gaps and areas requiring improvement.',
-          'Establish SMART (Specific, Measurable, Achievable, Relevant, Time-bound) goals.',
-          'Provide necessary support, training, resources, and mentorship.',
-          'Regular monitoring and feedback sessions with supervisor.',
-          'Specify review period (typically 3-6 months) and consequences of non-improvement.',
-          'Fair opportunity for improvement before any adverse action.',
-          'Documentation of all PIP meetings and progress.'
+          'Goal Setting Phase (January-February): Managers and employees collaboratively set performance objectives for the year aligned with departmental plans. Goals are documented in PMS with success metrics, weightages, and target timelines. Employees acknowledge and commit to goals.',
+          'Mid-Year Review (June-July): Formal mid-year discussion reviews progress toward goals, identifies obstacles, adjusts objectives if needed based on business changes, and provides feedback. Mid-year reviews keep employees on track and allow course correction.',
+          'Year-End Self-Appraisal (December): Employees complete self-assessment documenting accomplishments against each objective, key contributions, challenges faced, skills developed, and suggestions. Self-appraisal deadline is typically mid-December.',
+          'Manager Assessment (December-January): Managers evaluate employee performance against objectives and competencies, provide detailed comments on strengths and areas for improvement, assign ratings, and recommend increment/promotion. Managers consider self-appraisal, work quality, peer feedback, and observable behaviors.',
+          'One-on-One Performance Discussion: Manager conducts face-to-face appraisal discussion sharing assessment, explaining ratings, discussing career aspirations, identifying development needs, and jointly creating development plan. Discussion is developmental and two-way.',
+          'Goal Rollover and New Goal Setting: Unachieved goals may be carried forward with revised timelines. New objectives for upcoming year are discussed during year-end review linking performance discussion with future planning.',
+          'Reviewer/HOD Approval: Department heads review and approve performance ratings of their team ensuring consistency, fairness, and alignment with departmental performance. HODs may normalize ratings if needed.',
+          'HR Review and Calibration: HR reviews all appraisals for completeness, compliance with process, distribution of ratings, and consistency. Calibration meetings are conducted with department heads to finalize ratings.',
+          'Communication of Results: Final performance ratings, increment letters, and bonus communications are provided to employees by January-end. Employees acknowledge receipt of performance communication.',
+          'Performance Data Analysis: HR analyzes performance data identifying high performers for talent pipeline, flight risks, skill gaps, training needs, and trends in performance distribution for organizational insights.',
+          'Feedback to System: Employees and managers provide feedback on appraisal process effectiveness. Process improvements are implemented based on feedback ensuring continuous enhancement.'
         ]
       },
       {
         number: '5.3',
-        title: 'Recognition and Rewards',
-        content: 'Outstanding performance is recognized through:',
+        title: 'Performance Improvement Plans (PIP)',
+        content: 'Structured approach to address underperformance and support employees in meeting expected standards:',
         points: [
-          'Performance-based bonuses and incentives.',
-          'Employee of the Month/Quarter/Year awards.',
-          'Accelerated career advancement opportunities.',
-          'Public recognition and appreciation.',
-          'Additional training and development opportunities.'
+          'PIP Initiation: Employees rated Needs Improvement or Unsatisfactory are placed on formal PIP. PIP is documented specifying performance gaps, expected standards, improvement actions, support provided, and review timelines.',
+          'Performance Gap Analysis: Detailed analysis identifies specific areas of underperformance - technical skills, quality of work, productivity, attendance, behavior, or competencies. Root causes are explored (lack of training, personal issues, role misfit).',
+          'SMART Improvement Goals: PIP establishes 3-5 specific, measurable improvement goals with clear success criteria. Goals focus on closing performance gaps and achieving minimum acceptable standards.',
+          'Support and Resources: Hospital provides necessary support - additional training, mentoring, coaching, resources, tools, revised work allocation, or accommodations. Manager commits to regular guidance and feedback.',
+          'PIP Duration: Standard PIP period is 90 days (3 months) but may be extended to 180 days for complex roles or issues. PIP timeline is clearly communicated to employee.',
+          'Progress Monitoring: Manager conducts fortnightly or monthly review meetings documenting progress, providing feedback, addressing obstacles, and adjusting plan if needed. Progress is objectively assessed against defined metrics.',
+          'PIP Outcomes: At PIP conclusion, performance is assessed resulting in - (a) Successful completion: Employee meets standards, PIP concluded, regular performance management resumes, (b) Partial improvement: PIP extended for additional period, (c) No improvement: Employment termination or role reassignment considered.',
+          'Documentation: All PIP meetings, feedback, progress assessments, and outcomes are thoroughly documented. Documentation protects both employee and Hospital and ensures due process.',
+          'Employee Rights During PIP: Employees on PIP have right to understand expectations, receive fair opportunity to improve, access support resources, and present their perspective. PIP is developmental, not punitive.',
+          'Post-PIP Support: Employees who successfully complete PIP receive continued monitoring and support for 3-6 months ensuring sustained performance improvement. Relapse may result in immediate termination.',
+          'PIP and Employment Actions: Unsatisfactory PIP outcome may lead to termination, demotion, or transfer. Decisions consider performance history, conduct, improvement efforts, and operational needs. All actions follow due process.'
+        ]
+      },
+      {
+        number: '5.4',
+        title: 'Recognition and Rewards Program',
+        content: 'Comprehensive recognition framework celebrating excellence, motivating employees, and reinforcing desired behaviors:',
+        points: [
+          'Spot Recognition: Immediate recognition for exceptional contributions, extra mile efforts, innovative ideas, or exemplary patient service. Spot awards include certificates, gift vouchers, or public appreciation.',
+          'Employee of the Month: Department-level recognition for outstanding performance, dedication, and positive attitude. Criteria include performance excellence, patient feedback, teamwork, and values demonstration. Winners receive certificate, cash award, and public recognition.',
+          'Employee of the Quarter/Year: Hospital-wide recognition for sustained exceptional performance over quarter or year. Nominees are evaluated by selection committee. Winners receive trophy, substantial cash award, and special privileges.',
+          'Team Recognition: Outstanding team achievements in quality improvement, patient safety, cost savings, or process innovations are recognized. Team awards foster collaboration and collective excellence.',
+          'Long Service Awards: Employees completing 5, 10, 15, 20, 25 years of dedicated service receive appreciation certificates, mementos, and recognition events celebrating loyalty and contribution.',
+          'Best Performer Awards: Annual awards for top performers in each department and category (clinical, nursing, administrative, support) based on performance ratings, achievements, and nominations.',
+          'Innovation and Excellence Awards: Recognition for innovative ideas implemented, process improvements, research publications, quality certifications, or exceptional contributions to Hospital reputation.',
+          'Patient Appreciation Awards: Employees receiving exceptional patient feedback, compliments, or gratitude are recognized through Patient Choice Awards based on patient satisfaction scores.',
+          'Safety Champion Awards: Employees demonstrating exemplary safety practices, reporting hazards, preventing incidents, or promoting safety culture receive Safety Excellence recognition.',
+          'Values Champion Recognition: Employees exemplifying Hospital values (integrity, compassion, excellence, teamwork, innovation) in daily work receive Values Awards.',
+          'Performance Bonuses: Annual performance bonuses ranging from 10% to 30% of CTC for high performers (ratings 4 and 5) based on individual performance, departmental achievement, and Hospital financial performance.',
+          'Fast-Track Promotions: Consistently high-performing employees are considered for accelerated promotions, special projects, leadership roles, or career advancement opportunities.',
+          'Professional Development Opportunities: Top performers receive priority for sponsored training, conferences, certifications, higher education support, or international exposure programs.',
+          'Recognition Events: Quarterly or annual award ceremonies celebrate achievers, share success stories, and create culture of appreciation. Events include senior leadership participation and peer recognition.'
+        ]
+      },
+      {
+        number: '5.5',
+        title: 'Performance-Based Career Progression',
+        content: 'Merit-based career advancement framework linking performance to growth opportunities:',
+        points: [
+          'Career Pathways: Clearly defined career progression paths for each role family (clinical, nursing, administrative, technical, support) showing advancement steps, eligibility criteria, and typical timelines.',
+          'Promotion Eligibility: Minimum criteria include - 2 consecutive years of Exceeds or Outstanding ratings, completion of minimum tenure in current role, relevant certifications/qualifications, demonstrated leadership potential, and no major disciplinary issues.',
+          'Promotion Process: Annual promotion cycle where eligible employees are nominated by managers, assessed by promotion committees considering performance, potential, readiness, and vacancy availability. Successful candidates receive promotion letters with revised designation and compensation.',
+          'Skill-Based Progression: Employees can advance through skill certification programs, competency assessments, and demonstrated expertise even without designated vacancies in certain technical and specialist roles.',
+          'Leadership Pipeline: High-performing employees are identified for leadership development programs, stretch assignments, cross-functional projects, mentoring by senior leaders preparing them for future leadership roles.',
+          'Lateral Moves: High performers may be offered lateral moves to different departments or roles for broadening exposure, skill development, or career change interests supporting overall career growth.',
+          'Succession Planning: Top performers are identified as successors for critical roles through talent review process. Successors receive targeted development, exposure, and readiness preparation.'
+        ]
+      },
+      {
+        number: '5.6',
+        title: 'Performance Documentation and Records',
+        content: 'Comprehensive record-keeping ensures transparency, compliance, and effective performance management:',
+        points: [
+          'Performance Management System (PMS): Digital platform maintains complete performance records - objectives, self-appraisals, manager assessments, ratings, feedback, development plans, and historical data.',
+          'Confidentiality: Performance information is confidential and accessible only to the employee, reporting manager, department head, HR, and senior management on need-to-know basis.',
+          'Record Retention: Performance records retained for duration of employment plus 7 years post-separation for legal compliance, references, and audit purposes.',
+          'Access Rights: Employees can access their own performance records through HRMS self-service portal. Managers access records of their direct reports.',
+          'Data Security: Performance data protected through access controls, encryption, audit trails, and compliance with data protection regulations.',
+          'Performance Certificates: Employees may request performance certificates or reference letters. Certificates state factual information - tenure, designation, conduct - without disclosing confidential ratings.',
+          'Audit Compliance: Performance records are subject to internal and external audits verifying process compliance, fairness, and documentation adequacy.'
         ]
       }
     ]
