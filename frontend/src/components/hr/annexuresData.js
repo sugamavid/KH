@@ -13,12 +13,210 @@ export const annexuresData = {
     searchTerms: ['employment', 'joining', 'appointment'],
     category: 'Recruitment & Onboarding',
     forms: [
-      { name: 'Employment Application Form', code: 'EMP-001', description: 'Standard application form for job applicants' },
-      { name: 'Offer Letter Template', code: 'EMP-002', description: 'Official offer letter format' },
-      { name: 'Appointment Letter Template', code: 'EMP-003', description: 'Formal appointment letter' },
-      { name: 'Employee Information Form', code: 'EMP-004', description: 'Personal and contact details' },
-      { name: 'Emergency Contact Form', code: 'EMP-005', description: 'Emergency contact information' },
-      { name: 'Bank Details Form', code: 'EMP-006', description: 'Salary account information' }
+      { 
+        name: 'Employment Application Form', 
+        code: 'EMP-001', 
+        description: 'Standard application form for job applicants',
+        sections: [
+          {
+            title: 'Personal Information',
+            fields: ['Full Name (as per official documents)', 'Date of Birth', 'Gender', 'Blood Group', 'Nationality', 'Religion', 'Marital Status', 'Father\'s/Spouse Name', 'Current Address', 'Permanent Address', 'Contact Numbers (Mobile, Alternate)', 'Email Address (Personal)', 'Aadhaar Number', 'PAN Card Number']
+          },
+          {
+            title: 'Position Applied For',
+            fields: ['Department', 'Designation', 'Specialization (if applicable)', 'Employment Type (Permanent/Contract/Temporary)', 'Expected Salary', 'Available to Join From', 'Notice Period (if currently employed)', 'Preferred Location', 'Willingness to Relocate']
+          },
+          {
+            title: 'Educational Qualifications',
+            fields: ['Highest Qualification', 'Degree/Diploma Name', 'Specialization', 'University/Board', 'Year of Passing', 'Percentage/CGPA', 'Professional Certifications (if any)', 'Registration Numbers (Medical Council, Nursing Council, etc.)', 'Continuing Medical Education (CME) Credits']
+          },
+          {
+            title: 'Work Experience',
+            fields: ['Total Years of Experience', 'Current Employer Name', 'Current Designation', 'Current Salary (CTC)', 'Date of Joining Current Organization', 'Reason for Leaving', 'Previous Employers (Company, Designation, Duration)', 'Key Responsibilities', 'Major Achievements', 'Clinical Experience (for medical staff)', 'Surgical Experience Details (for doctors)']
+          },
+          {
+            title: 'Skills & Competencies',
+            fields: ['Technical Skills', 'Software Proficiency (HMIS, EMR, MS Office)', 'Languages Known (Read, Write, Speak)', 'Special Skills/Training', 'Research Publications (if any)', 'Conference Presentations']
+          },
+          {
+            title: 'References',
+            fields: ['Reference 1: Name, Designation, Organization, Contact Number, Email', 'Reference 2: Name, Designation, Organization, Contact Number, Email', 'Professional Reference (if applicable)']
+          },
+          {
+            title: 'Declaration',
+            fields: ['I hereby declare that all information provided is true and correct. I understand that any false information may lead to rejection of application or termination if employed.', 'Place:', 'Date:', 'Applicant Signature:']
+          }
+        ],
+        instructions: 'Fill all sections completely. Attach copies of educational certificates, experience letters, ID proof, and recent passport-size photograph. Incomplete applications will not be considered.',
+        approvalRequired: 'HR Department',
+        processingTime: '7-10 business days'
+      },
+      { 
+        name: 'Offer Letter Template', 
+        code: 'EMP-002', 
+        description: 'Official offer letter format',
+        sections: [
+          {
+            title: 'Letter Head',
+            fields: ['Koyili Hospital Logo', 'Hospital Address', 'Date', 'Reference Number']
+          },
+          {
+            title: 'Candidate Details',
+            fields: ['Candidate Name', 'Candidate Address', 'Subject: Offer of Employment']
+          },
+          {
+            title: 'Body Content',
+            fields: ['Dear [Candidate Name],', 'We are pleased to offer you the position of [Designation] in the [Department] at Koyili Hospital. Your employment will commence on [Date of Joining] and will be subject to the following terms and conditions:', '1. Designation and Department', '2. Reporting To: [Supervisor Name and Designation]', '3. Location: Koyili Hospital, Kannur', '4. Probation Period: 6 months from date of joining', '5. Compensation Details: Basic Salary, HRA, DA, Special Allowances, Total CTC', '6. Benefits: Medical Insurance, PF, Gratuity, Leave Entitlements', '7. Working Hours: As per department requirements', '8. Notice Period: As per By-Laws', '9. Confidentiality: Bound by confidentiality agreement', '10. Background Verification: Subject to satisfactory verification']
+          },
+          {
+            title: 'Documents Required',
+            fields: ['Educational Certificates (Originals for verification)', 'Experience Letters', 'Relieving Letter from Previous Employer', 'ID Proofs (Aadhaar, PAN, Passport)', 'Passport Size Photographs', 'Medical Fitness Certificate', 'Police Verification Certificate', 'Professional Registration Certificates']
+          },
+          {
+            title: 'Acceptance',
+            fields: ['Please confirm your acceptance by signing and returning this letter by [Date]. This offer is valid for 7 days from the date of issue.', 'We look forward to welcoming you to Koyili Hospital.', 'Sincerely,', '[Name]', '[Designation]', 'Chief Human Resources Officer', 'For Koyili Hospital']
+          },
+          {
+            title: 'Acceptance by Candidate',
+            fields: ['I, [Candidate Name], accept the above terms and conditions of employment.', 'Signature:', 'Date:', 'Place:']
+          }
+        ],
+        instructions: 'To be issued after final interview and approval by department head and CHRO. Verify all details before issuing.',
+        approvalRequired: 'CHRO',
+        processingTime: '2-3 business days'
+      },
+      { 
+        name: 'Appointment Letter Template', 
+        code: 'EMP-003', 
+        description: 'Formal appointment letter (post joining)',
+        sections: [
+          {
+            title: 'Appointment Confirmation',
+            fields: ['This is to confirm your appointment as [Designation] in [Department] effective [Date].', 'Your employee ID is: [EMP-ID]', 'Your employment is governed by Koyili Hospital HR By-Laws and applicable policies.']
+          },
+          {
+            title: 'Terms of Employment',
+            fields: ['Employment Type: Permanent/Contract/Probationary', 'Probation Period: 6 months', 'Confirmation: Subject to satisfactory performance', 'Remuneration: As per offer letter', 'Reporting: [Immediate Supervisor Name and Designation]', 'Working Hours: [Shift timings or standard hours]', 'Weekly Off: As per roster/policy', 'Leave Entitlements: Casual Leave (12 days), Sick Leave (10 days), Annual Leave (20 days)', 'Notice Period: 30 days (or as per By-Laws)', 'Retirement Age: 60 years']
+          },
+          {
+            title: 'Roles and Responsibilities',
+            fields: ['Job Description: [Detailed responsibilities]', 'Key Performance Indicators', 'Quality and Safety Standards', 'Compliance Requirements', 'Continuing Education Expectations']
+          },
+          {
+            title: 'Code of Conduct',
+            fields: ['You are required to comply with Hospital policies, by-laws, and code of conduct', 'Maintain confidentiality of patient and organizational information', 'Adhere to professional ethics and standards', 'Report any violations or concerns to appropriate authorities']
+          },
+          {
+            title: 'Signature',
+            fields: ['Authorized Signatory', 'Name and Designation', 'Date', 'Hospital Seal']
+          },
+          {
+            title: 'Acknowledgment',
+            fields: ['I acknowledge receipt of this appointment letter and agree to the terms stated.', 'Employee Signature:', 'Employee Name:', 'Date:']
+          }
+        ],
+        instructions: 'Issued after candidate joins and completes initial documentation. One copy to be filed in personnel file.',
+        approvalRequired: 'HR Head',
+        processingTime: '1-2 business days'
+      },
+      { 
+        name: 'Employee Information Form', 
+        code: 'EMP-004', 
+        description: 'Comprehensive personal and professional details',
+        sections: [
+          {
+            title: 'Basic Information',
+            fields: ['Employee ID', 'Full Name', 'Date of Birth', 'Age', 'Gender', 'Blood Group', 'Marital Status', 'Anniversary Date (if married)', 'Number of Dependents']
+          },
+          {
+            title: 'Contact Information',
+            fields: ['Current Residential Address', 'Permanent Address', 'City, State, PIN Code', 'Mobile Number (Primary)', 'Mobile Number (Alternate)', 'Personal Email', 'Official Email']
+          },
+          {
+            title: 'Identity Documents',
+            fields: ['Aadhaar Number', 'PAN Card Number', 'Passport Number (if available)', 'Driving License Number', 'Voter ID Number']
+          },
+          {
+            title: 'Family Details',
+            fields: ['Father\'s Name', 'Mother\'s Name', 'Spouse Name (if married)', 'Spouse Occupation', 'Children Details (Name, Age, School/College)']
+          },
+          {
+            title: 'Educational Background',
+            fields: ['Highest Qualification', 'Degree/Diploma Details', 'University Name', 'Year of Passing', 'Additional Certifications', 'Professional Registrations']
+          },
+          {
+            title: 'Employment Details',
+            fields: ['Date of Joining', 'Department', 'Designation', 'Employment Type', 'Reporting Manager', 'Work Location', 'Shift Pattern', 'Employee Status (Active/Probation/Confirmed)']
+          },
+          {
+            title: 'Previous Employment',
+            fields: ['Last Employer Name', 'Last Designation', 'Duration of Employment', 'Reason for Leaving', 'Total Experience (Years)']
+          },
+          {
+            title: 'Languages Known',
+            fields: ['Mother Tongue', 'Languages (Read, Write, Speak proficiency)']
+          }
+        ],
+        instructions: 'Complete all fields accurately. Update any changes in personal information within 7 days.',
+        approvalRequired: 'None (Self-declaration)',
+        processingTime: 'Immediate'
+      },
+      { 
+        name: 'Emergency Contact Form', 
+        code: 'EMP-005', 
+        description: 'Emergency contact information for critical situations',
+        sections: [
+          {
+            title: 'Primary Emergency Contact',
+            fields: ['Contact Name', 'Relationship with Employee', 'Mobile Number', 'Alternate Number', 'Residential Address', 'Email Address (if available)', 'Availability (24x7 or specific hours)']
+          },
+          {
+            title: 'Secondary Emergency Contact',
+            fields: ['Contact Name', 'Relationship with Employee', 'Mobile Number', 'Alternate Number', 'Residential Address']
+          },
+          {
+            title: 'Medical Information',
+            fields: ['Blood Group', 'Known Allergies', 'Chronic Medical Conditions', 'Current Medications', 'Preferred Hospital (in case of emergency)', 'Medical Insurance Details', 'Policy Number', 'Insurance Provider']
+          },
+          {
+            title: 'Additional Information',
+            fields: ['Person Authorized to Take Decisions (if employee incapacitated)', 'Special Instructions or Considerations', 'Organ Donor Status (Yes/No/Not Decided)']
+          },
+          {
+            title: 'Declaration',
+            fields: ['I authorize Koyili Hospital to contact the above persons in case of emergency.', 'Employee Signature:', 'Date:']
+          }
+        ],
+        instructions: 'Keep this information updated. Notify HR immediately of any changes.',
+        approvalRequired: 'None',
+        processingTime: 'Immediate'
+      },
+      { 
+        name: 'Bank Details Form', 
+        code: 'EMP-006', 
+        description: 'Salary account and payment information',
+        sections: [
+          {
+            title: 'Bank Account Details',
+            fields: ['Bank Name', 'Branch Name', 'Branch Address', 'Account Holder Name (as per bank records)', 'Account Number', 'Account Type (Savings/Current)', 'IFSC Code', 'MICR Code', 'Bank Contact Number']
+          },
+          {
+            title: 'Verification',
+            fields: ['Attach cancelled cheque or bank statement', 'Ensure account holder name matches official records', 'Account must be active and operational']
+          },
+          {
+            title: 'Payment Mode Preference',
+            fields: ['Salary Credit: Bank Transfer', 'Reimbursements: Bank Transfer/Cheque', 'Final Settlement: Bank Transfer']
+          },
+          {
+            title: 'Declaration',
+            fields: ['I declare that the above bank account details are correct. I understand that salary will be credited to this account.', 'Any changes to bank details must be communicated in writing 7 days before salary processing.', 'Employee Signature:', 'Date:']
+          }
+        ],
+        instructions: 'Submit with cancelled cheque or bank statement copy. Changes require 7 days notice before salary processing.',
+        approvalRequired: 'HR Department',
+        processingTime: '2-3 business days for activation'
+      }
     ]
   },
   annex2: {
