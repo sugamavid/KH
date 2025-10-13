@@ -40,15 +40,15 @@ const Dashboard = ({ onLogout }) => {
         setSidebarOpen={setSidebarOpen}
       />
       
-      <div className="flex flex-1 pt-16">
+      <div className="flex flex-1 pt-20">
         <Sidebar 
           departments={departments}
           isOpen={sidebarOpen}
           currentPath={location.pathname}
         />
         
-        <main className={`flex-1 transition-all duration-300 ${sidebarOpen ? 'ml-64' : 'ml-0'}`}>
-          <div className="p-6">
+        <main className={`flex-1 transition-all duration-300 ${sidebarOpen ? 'lg:ml-72' : 'ml-0'}`}>
+          <div className="p-4 md:p-6 max-w-[1600px] mx-auto">
             {loading ? (
               <div className="flex items-center justify-center h-96">
                 <div className="text-center">
