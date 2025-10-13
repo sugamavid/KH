@@ -810,11 +810,6 @@ export const byLawsData = {
       }
     ]
   },
-          'Immediate termination for gross misconduct without notice.'
-        ]
-      }
-    ]
-  },
   section9: {
     id: 'section9',
     number: 'SECTION IX',
