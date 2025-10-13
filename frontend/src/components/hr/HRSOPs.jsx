@@ -1,20 +1,141 @@
-import React, { useState } from 'react';
-import { Search, Download, ChevronDown, ChevronUp, BookOpen } from 'lucide-react';
-import { HR_SOPS } from '../../data/hrDemoData';
+import React, { useState, useMemo, useRef } from 'react';
+import { 
+  Home, BookOpen, FileText, Calendar, Users, 
+  DollarSign, Award, Download, Printer, Search,
+  ChevronRight, CheckCircle, X, Menu, ArrowLeft, Zap, Clock, Scale
+} from 'lucide-react';
+import { sopsData, sopsQuickRef } from './sopsData';
 
-const HRSOPs = () => {
+const HRSOPs = ({ setActiveModule }) => {
+  const [activeSection, setActiveSection] = useState('dashboard');
   const [searchQuery, setSearchQuery] = useState('');
-  const [expandedItems, setExpandedItems] = useState({});
+  const [searchResults, setSearchResults] = useState([]);
+  const [showSearch, setShowSearch] = useState(false);
+  const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
+  const contentRef = useRef(null);
 
-  const toggleExpand = (id) => {
-    setExpandedItems(prev => ({ ...prev, [id]: !prev[id] }));
+  // Navigation structure for all SOPs
+  const navigation = [
+    { id: 'dashboard', title: 'Dashboard', icon: Home, category: 'Overview' },
+    { id: 'preamble', title: 'Preamble', icon: BookOpen, category: 'Introduction' },
+    { id: 'sop1', title: 'SOP 001: Onboarding', icon: Users, category: 'Recruitment' },
+    { id: 'sop2', title: 'SOP 002: Leave Management', icon: Calendar, category: 'Operations' },
+    { id: 'sop3', title: 'SOP 003: Performance Appraisal', icon: Award, category: 'Performance' },
+    { id: 'sop4', title: 'SOP 004: Payroll Processing', icon: DollarSign, category: 'Payroll' },
+    { id: 'sop5', title: 'SOP 005: Grievance Handling', icon: Scale, category: 'Employee Relations' },
+    { id: 'sop6', title: 'SOP 006: Exit Process', icon: Users, category: 'Separation' },
+    { id: 'sop7', title: 'SOP 007: Training', icon: BookOpen, category: 'Development' },
+    { id: 'sop8', title: 'SOP 008: Attendance', icon: Clock, category: 'Operations' },
+    { id: 'sop9', title: 'SOP 009: Recruitment', icon: Users, category: 'Recruitment' },
+    { id: 'sop10', title: 'SOP 010: Document Management', icon: FileText, category: 'Administration' }
+  ];
+
+  // Group by category
+  const navigationByCategory = useMemo(() => {
+    const grouped = {};
+    navigation.forEach(nav => {
+      if (!grouped[nav.category]) {
+        grouped[nav.category] = [];
+      }
+      grouped[nav.category].push(nav);
+    });
+    return grouped;
+  }, []);
+
+  // Search functionality
+  const performSearch = (query) => {
+    if (!query.trim()) {
+      setSearchResults([]);
+      setShowSearch(false);
+      return;
+    }
+
+    const results = [];
+    const lowerQuery = query.toLowerCase();
+
+    Object.entries(sopsData).forEach(([sectionId, section]) => {
+      if (section.title && section.title.toLowerCase().includes(lowerQuery)) {
+        results.push({
+          sectionId,
+          title: section.title,
+          type: 'title',
+          preview: section.title
+        });
+      }
+
+      if (section.searchTerms) {
+        section.searchTerms.forEach(term => {
+          if (term.toLowerCase().includes(lowerQuery)) {
+            results.push({
+              sectionId,
+              title: section.title,
+              type: 'keyword',
+              preview: `Keyword match: ${term}`
+            });
+          }
+        });
+      }
+
+      if (section.content && section.content.toLowerCase().includes(lowerQuery)) {
+        const index = section.content.toLowerCase().indexOf(lowerQuery);
+        const preview = section.content.substring(Math.max(0, index - 50), Math.min(section.content.length, index + 150));
+        results.push({
+          sectionId,
+          title: section.title,
+          type: 'content',
+          preview: '...' + preview + '...'
+        });
+      }
+
+      if (section.subsections) {
+        section.subsections.forEach((subsection, idx) => {
+          if (subsection.title && subsection.title.toLowerCase().includes(lowerQuery)) {
+            results.push({
+              sectionId,
+              subsectionIdx: idx,
+              title: `${section.title} - ${subsection.title}`,
+              type: 'subsection',
+              preview: subsection.title
+            });
+          }
+
+          if (subsection.points) {
+            subsection.points.forEach((point, pointIdx) => {
+              if (point.toLowerCase().includes(lowerQuery)) {
+                results.push({
+                  sectionId,
+                  subsectionIdx: idx,
+                  pointIdx,
+                  title: `${section.title} - ${subsection.title}`,
+                  type: 'point',
+                  preview: point.substring(0, 150) + (point.length > 150 ? '...' : '')
+                });
+              }
+            });
+          }
+        });
+      }
+    });
+
+    setSearchResults(results);
+    setShowSearch(true);
   };
 
-  const filteredSOPs = HR_SOPS.filter(sop => 
-    searchQuery === '' || 
-    sop.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    sop.category.toLowerCase().includes(searchQuery.toLowerCase())
-  );
+  const handleSearch = (e) => {
+    const query = e.target.value;
+    setSearchQuery(query);
+    performSearch(query);
+  };
+
+  const jumpToSection = (sectionId) => {
+    setActiveSection(sectionId);
+    setShowSearch(false);
+    setSearchQuery('');
+    setSearchResults([]);
+    if (contentRef.current) {
+      contentRef.current.scrollTop = 0;
+    }
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
