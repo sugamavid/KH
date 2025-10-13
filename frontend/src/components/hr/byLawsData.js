@@ -1818,17 +1818,86 @@ export const byLawsData = {
   section19: {
     id: 'section19',
     number: 'SECTION XIX',
-    title: 'INTELLECTUAL PROPERTY RIGHTS',
-    searchTerms: ['intellectual property', 'IP', 'patents', 'copyright', 'inventions'],
+    title: 'COMMUNICATION, MEETINGS, AND COLLABORATION',
+    searchTerms: ['communication', 'meetings', 'collaboration', 'teamwork', 'email', 'channels'],
     subsections: [
       {
         number: '19.1',
-        title: 'Ownership of Work Product',
-        content: 'Intellectual property created during employment:',
+        title: 'Communication Principles and Standards',
+        content: 'Effective communication is foundation of quality healthcare delivery and organizational functioning:',
         points: [
-          'All work product created in course of employment belongs to Hospital.',
-          'Includes inventions, designs, processes, software, and documentation.',
-          'Employees must disclose all potentially patentable inventions.',
+          'Clear and Concise: Communication should be clear, concise, and easily understood. Avoid jargon when communicating with patients or non-specialist colleagues. Verbal and written communication should be professional.',
+          'Timely Communication: Respond to emails, messages, and calls promptly (within 24 hours for non-urgent, immediately for urgent). Delays in communication can impact patient care and operations. Communicate schedule changes, delays, or issues promptly.',
+          'Respectful Tone: All communication courteous and respectful regardless of hierarchy or situation. Avoid aggressive, condescending, or sarcastic communication. Disagreements handled professionally without personal attacks.',
+          'Appropriate Channel Selection: Use appropriate communication channel for situation - Face-to-face for sensitive or complex matters, Email for formal documentation and non-urgent matters, Phone for urgent issues requiring immediate response, Messaging for quick updates and coordination. Avoid discussing confidential/sensitive matters in public areas or unsecured channels.',
+          'Active Listening: Listen actively to understand before responding. Give full attention in conversations without interruptions. Seek clarification if unclear rather than assuming.',
+          'Documentation: Document important communications and decisions. Email confirmations for verbal agreements or instructions. Clinical documentation as per medical records policy.',
+          'Accessibility: Be accessible and approachable. Return calls and respond to messages. Inform team if unavailable for extended periods.'
+        ]
+      },
+      {
+        number: '19.2',
+        title: 'Email Communication Guidelines',
+        content: 'Email is primary business communication tool requiring professional standards:',
+        points: [
+          'Professional Email Etiquette: Use proper salutation and closing. Proofread before sending for errors and tone. Use subject lines describing content clearly. Keep emails concise focusing on key points. Use bullet points for multiple items.',
+          'Reply Timeliness: Respond to emails within 24 business hours acknowledging receipt even if detailed response needs time. Set out-of-office auto-reply when unavailable for extended periods.',
+          'To, CC, BCC Usage: "To" - Primary recipients who need to act/respond. "CC" (Carbon Copy) - FYI recipients who should be aware. Use CC judiciously; avoid unnecessary CC clutter. "BCC" (Blind Carbon Copy) - Use sparingly for privacy (mailing lists). Reply All cautiously - only when all recipients need your response.',
+          'Attachments: Clearly mention attachments in email body. Ensure correct files attached before sending. Use appropriate file formats and sizes.',
+          'Email Security: Never send confidential patient information via unencrypted email. Use secure email or encrypt sensitive attachments. Verify recipient addresses before sending sensitive information. Be cautious of phishing emails.',
+          'Distribution Lists: Use department or role-based distribution lists for group communication. Avoid spamming large groups unnecessarily. Reply personally, not reply-all, when response intended for sender only.',
+          'Email Signatures: Include professional email signature with - Full name and designation, Department and Hospital name, Phone number and email, Confidentiality disclaimer if appropriate.',
+          'Personal Email Use: Work email for business purposes primarily. Incidental personal use acceptable if minimal. No inappropriate, offensive, or illegal content.',
+          'Email Retention: Important emails archived per document retention policy. Emails may be subject to audits and legal discovery.'
+        ]
+      },
+      {
+        number: '19.3',
+        title: 'Meeting Management and Effectiveness',
+        content: 'Meetings essential for coordination but must be productive and well-managed:',
+        points: [
+          'Meeting Necessity: Call meetings only when necessary for - Decision-making requiring discussion, Information sharing better done collectively than individually, Problem-solving benefiting from multiple perspectives, Team building and alignment. Avoid meetings that could be handled via email.',
+          'Meeting Preparation: Organizer sends agenda in advance clearly stating - Meeting purpose and objectives, Topics to be discussed, Pre-read materials or preparation needed, Expected participants and roles (presenter, decision-maker, attendees), Date, time, duration, location/virtual link. Participants review agenda and prepare accordingly.',
+          'Punctuality: Start meetings on time even if some participants late (reinforces punctuality). Arrive few minutes early especially if presenting. Late arrivals minimize disruption.',
+          'Participation: Come prepared having reviewed agenda and materials. Contribute meaningfully and stay engaged. Avoid side conversations or device distractions. Speak up with ideas, concerns, or questions. Listen actively to others without interrupting.',
+          'Meeting Facilitation: Facilitator keeps meeting on track and on time. Follow agenda covering all items. Manage time allocating appropriately to each topic. Encourage participation from all attendees. Manage dominant speakers and draw out quiet members. Summarize discussions and decisions. Identify action items with owners and deadlines.',
+          'Decision Documentation: Important meetings have minutes/notes documenting - Attendees, Decisions made, Action items with owners and due dates, Key discussion points. Minutes circulated to participants and relevant stakeholders.',
+          'Virtual Meeting Etiquette: Test technology beforehand ensuring working audio/video. Join on time; mute when not speaking to avoid background noise. Use video when appropriate for engagement. Share screen clearly when presenting. Use chat for questions without disrupting speaker. Record meetings when appropriate (with consent) for those unable to attend.',
+          'Meeting Follow-up: Action items tracked to completion. Follow-up meetings scheduled if needed. Accountability for deliverables.',
+          'Meeting Evaluation: Periodically evaluate meeting effectiveness - Are meetings achieving objectives? Is time used efficiently? Can meeting frequency/duration be optimized? Feedback from participants on meeting quality.'
+        ]
+      },
+      {
+        number: '19.4',
+        title: 'Interdepartmental Collaboration',
+        content: 'Effective patient care requires seamless collaboration across departments and disciplines:',
+        points: [
+          'Collaborative Mindset: View colleagues across departments as partners in patient care, not competitors. Focus on shared goals of patient safety, quality, and organizational success. Avoid silo mentality or turf protection.',
+          'Multidisciplinary Teams: Clinical care involves multidisciplinary teams (physicians, nurses, therapists, social workers, etc.). Respect each discipline expertise and contributions. Communicate clearly sharing relevant patient information. Attend multidisciplinary rounds and meetings.',
+          'Handoffs and Transitions: Safe care requires effective handoffs - Patient handoffs between shifts using structured tools (SBAR - Situation, Background, Assessment, Recommendation), Transfers between departments/units with clear communication, Discharge coordination across inpatient, pharmacy, follow-up teams. Handoff failures lead to adverse events.',
+          'Consultation and Referrals: When requesting consultation, provide clear clinical question and relevant information. Consulting specialist responds promptly with recommendations. Follow-up on consultant recommendations ensuring continuity.',
+          'Conflict Resolution: Disagreements between departments/disciplines resolved through - Direct respectful communication between involved parties, Seeking supervisory or managerial intervention if needed, Mediation or conflict resolution resources, Focus on patient best interest, not ego or turf. Avoid public conflicts in patient care areas.',
+          'Shared Resources: Hospital resources (equipment, spaces, support staff) shared across departments. Coordinate usage respecting others needs and schedules. Return shared resources promptly and in good condition.',
+          'Cross-Functional Projects: Collaborate on quality improvement, safety initiatives, process enhancements involving multiple departments. Contribute expertise and participate actively. Implement agreed changes in respective departments.'
+        ]
+      },
+      {
+        number: '19.5',
+        title: 'Internal Communication Channels',
+        content: 'Hospital provides multiple channels for information sharing and collaboration:',
+        points: [
+          'Email System: Primary formal communication tool. Official announcements, policies, notices via email. Employees expected to check email regularly (at least twice daily).',
+          'Intranet Portal: Hospital intranet contains - Policies, procedures, forms, HR information, news and announcements, Department resources, Telephone directory. Employees access for reference and updates.',
+          'Notice Boards: Physical notice boards in common areas for - Important announcements, Safety notices, Event information, Employee recognition. Employees encouraged to review notices regularly.',
+          'Messaging Platforms: Approved messaging platforms (WhatsApp groups, Microsoft Teams, etc.) for quick coordination. Guidelines for appropriate use. Not for confidential patient information without encryption.',
+          'All-Staff Meetings: Periodic town halls or all-staff meetings for - Leadership updates and strategic direction, Major announcements, Q&A with management, Celebrating achievements. Attendance encouraged; recordings/minutes provided.',
+          'Departmental Meetings: Regular department meetings for team updates, issue resolution, coordination. Attendance mandatory as per department norms.',
+          'Suggestion Box: Anonymous or identified suggestions for improvements submitted through suggestion box or online form. Management reviews and responds to suggestions.',
+          'Employee Surveys: Periodic engagement surveys, pulse surveys, or feedback requests. Employees encouraged to participate honestly. Results analyzed and acted upon.'
+        ]
+      }
+    ]
+  },
           'Hospital has sole right to patent, copyright, or protect IP.',
           'Employees cooperate in IP protection processes.',
           'Moral rights waived to extent permitted by law.'
