@@ -1616,9 +1616,6 @@ export const byLawsData = {
       }
     ]
   },
-        content: 'Clear career progression paths available:',
-    ]
-  },
   section16: {
     id: 'section16',
     number: 'SECTION XVI',
