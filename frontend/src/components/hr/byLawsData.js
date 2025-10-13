@@ -1464,12 +1464,158 @@ export const byLawsData = {
   section15: {
     id: 'section15',
     number: 'SECTION XV',
-    title: 'CAREER DEVELOPMENT AND PROGRESSION',
-    searchTerms: ['career', 'progression', 'advancement', 'growth', 'promotion'],
+    title: 'DATA PRIVACY, CONFIDENTIALITY, AND INFORMATION SECURITY',
+    searchTerms: ['data privacy', 'confidentiality', 'information security', 'HIPAA', 'data protection', 'patient privacy'],
     subsections: [
       {
         number: '15.1',
-        title: 'Career Paths',
+        title: 'Information Privacy and Confidentiality Policy',
+        content: 'Koyili Hospital handles vast amounts of sensitive information - patient medical records, employee personal data, financial information, and business intelligence. Protecting confidentiality is legal, ethical, and operational imperative:',
+        points: [
+          'Confidentiality Obligation: All employees have duty to maintain strict confidentiality of - Patient health information and medical records, Employee personal information, Hospital financial and business information, Proprietary processes, trade secrets, strategic plans, Research data and intellectual property. Confidentiality obligation continues even after employment ends.',
+          'Patient Privacy Rights: Patients have fundamental right to privacy of their health information, Access to patient records only on need-to-know basis for treatment, payment, operations, Viewing records of family, friends, celebrities, or other patients out of curiosity is strictly prohibited, Patient consent required for disclosure beyond permitted uses, Violations may result in termination, legal action, and regulatory penalties.',
+          'Personal Data Protection: Hospital complies with Digital Personal Data Protection Act, 2023 (India), Employee personal data collected, used, stored, shared only for legitimate purposes with consent, Employees have rights to access, correct, and request deletion of personal data, Data minimization - collect only necessary information, Data retention limits - delete data when no longer needed.',
+          'Need-to-Know Principle: Access to confidential information restricted to those requiring it for job duties, Minimum necessary standard - access only information needed, not entire records, Role-based access controls in IT systems enforcing need-to-know.',
+          'Prohibited Disclosures: Do not discuss patient information in public areas (elevators, cafeteria, corridors), Do not share patient information with unauthorized persons including family (without patient authorization), Do not post patient information or images on social media, Do not leave patient records unattended or visible to unauthorized persons, Do not access own medical records or records of family/friends through work systems (conflict of interest).',
+          'Authorized Disclosures: Disclosures permitted for - Treatment, payment, healthcare operations (TPO) without specific consent, Legal requirements (court orders, mandatory reporting of certain conditions, public health), Patient authorization - written consent for specific disclosure, De-identified data for research or public health (no patient identifiers).',
+          'Breach Consequences: Confidentiality breaches are serious misconduct resulting in - Immediate termination of employment, Legal action and liability (civil and criminal penalties), Reporting to regulatory authorities, Damage to Hospital reputation and patient trust, Breach notification obligations to affected individuals.'
+        ]
+      },
+      {
+        number: '15.2',
+        title: 'Information Security - Protecting Digital Assets',
+        content: 'With digitization of healthcare, information security (cybersecurity) is critical to protect against unauthorized access, data breaches, ransomware, and cyberattacks:',
+        points: [
+          'Information Security Objectives: Confidentiality - Prevent unauthorized access to information, Integrity - Ensure accuracy and completeness of information, prevent tampering, Availability - Ensure authorized users can access information when needed.',
+          'User Authentication and Access Control: Unique user IDs and strong passwords for all systems (minimum 8 characters, complexity requirements), Passwords never shared with anyone including colleagues or IT staff, Change passwords periodically (every 90 days) and immediately if compromised, Multi-factor authentication for remote access and sensitive systems, Automatic logout after inactivity period, Account locked after multiple failed login attempts.',
+          'System and Device Security: Install only approved and licensed software, no pirated or personal software, Keep systems updated with latest security patches, Use Hospital-provided and managed devices for work, Personal devices (BYOD) subject to security policies if permitted, Encrypt laptops and removable storage devices, Physical security - lock workstations when away, secure devices from theft.',
+          'Email and Internet Security: Be cautious of phishing emails (suspicious sender, urgent requests, attachments from unknown sources), Never click on suspicious links or open attachments from untrusted sources, Do not send confidential information via unencrypted email, Use secure email for sensitive communications, Acceptable use of internet - no illegal, offensive, or inappropriate content, Minimize personal use of work email/internet.',
+          'Mobile Device Security: Password-protect mobile devices, Enable remote wipe capability for Hospital-issued devices, Do not store unsecured patient information on mobile devices, Report lost or stolen devices immediately.',
+          'Removable Media: Encrypt USB drives and external hard drives, Scan removable media for malware before use, Secure disposal of removable media containing sensitive data (shredding, secure delete).',
+          'Secure Data Transmission: Use VPN (Virtual Private Network) for remote access to Hospital systems, Use secure file transfer protocols (SFTP, HTTPS) not insecure methods (FTP, HTTP), Encrypt sensitive data before transmission via email or cloud.',
+          'Wireless Network Security: Use Hospital secure Wi-Fi, not guest or open networks for work, Avoid conducting sensitive work over public Wi-Fi (airports, cafes), Use VPN if accessing Hospital systems from public networks.',
+          'Physical Security: Secure workstations and mobile devices from theft, Lock rooms containing servers and network equipment, Visitor access to IT areas controlled, CCTV monitoring of critical areas, Clean desk policy - no sensitive documents left on desks overnight.'
+        ]
+      },
+      {
+        number: '15.3',
+        title: 'Incident Response - Breach and Security Incidents',
+        content: 'Despite precautions, incidents may occur. Rapid detection, response, and reporting minimize damage:',
+        points: [
+          'Security Incident Definition: Any actual or suspected breach of confidentiality, integrity, or availability - Unauthorized access to patient records or systems, Lost or stolen devices containing sensitive data, Malware or ransomware infection, Phishing attack compromise, Accidental disclosure of patient information, System outage or unavailability.',
+          'Immediate Reporting: Report security incidents immediately to IT Helpdesk and Information Security Officer, Do not attempt to fix or investigate yourself (may destroy evidence), Isolate compromised device from network if possible, Document what occurred, when, what data involved, who notified.',
+          'Incident Response Process: IT security team assesses incident severity and scope, Containment actions - isolate affected systems, change passwords, revoke access, Investigation and forensics to determine cause and extent, Eradication of threat - remove malware, close vulnerabilities, Recovery - restore systems, data from backups, Lessons learned and preventive measures.',
+          'Breach Notification: If breach involves patient information or employee personal data - Investigation to confirm breach and identify affected individuals, Legal and compliance assessment of notification obligations, Notification to affected individuals as required by law (typically within 72 hours to weeks), Notification to regulatory authorities (data protection authority), Potential media notification if large-scale breach, Hospital provides support (credit monitoring, identity theft protection) if appropriate.',
+          'Post-Incident Actions: Root cause analysis, Security measures strengthening based on lessons learned, Additional training if incident due to human error, Disciplinary action if incident due to policy violations.'
+        ]
+      },
+      {
+        number: '15.4',
+        title: 'Employee Responsibilities and Acceptable Use',
+        content: 'All employees are responsible for information security and ethical use of Hospital IT resources:',
+        points: [
+          'Acceptable Use Principles: Hospital IT resources (computers, email, internet, software) provided for business purposes, Incidental personal use acceptable if minimal and does not interfere with work, No expectation of privacy - Hospital may monitor IT usage for security and compliance, Usage must comply with laws and Hospital policies.',
+          'Prohibited Activities: Accessing, storing, sending, or displaying illegal, obscene, offensive, or harassing content, Unauthorized access to systems or data you do not need for work, Hacking, cracking, or attempting to bypass security controls, Downloading or installing unauthorized software, pirated software, games, Introducing malware, viruses, or malicious code intentionally, Using Hospital resources for personal business or outside employment, Excessive personal use impacting work productivity, Disclosing passwords or allowing others to use your account.',
+          'Social Media Guidelines: Exercise good judgment when posting about Hospital or work, Do not disclose confidential or proprietary Hospital information, Do not post patient information or images without authorization, Do not make statements appearing to represent Hospital unless authorized, Be respectful - avoid defamatory or offensive posts about Hospital, colleagues, patients, Identify personal opinions as your own, not Hospital position.',
+          'Bring Your Own Device (BYOD): Personal devices (laptops, tablets, phones) may be used for work if policy permits and device enrolled in Mobile Device Management (MDM), BYOD devices must have - Password/PIN lock, Up-to-date OS and security patches, Antivirus/anti-malware software, Remote wipe capability, Hospital may wipe device if lost/stolen or upon separation (work data only), Personal use and data on BYOD is your responsibility.',
+          'Remote Work Security: Secure home network with strong Wi-Fi password, Ensure no unauthorized persons can view screen or overhear conversations, Lock screen when stepping away, Do not allow family to use work devices, Video conference security - do not share meeting links publicly, use waiting rooms, Secure physical work documents at home, return or shred.'
+        ]
+      },
+      {
+        number: '15.5',
+        title: 'Training and Awareness',
+        content: 'Security is only as strong as the weakest link. Human error is leading cause of breaches. Continuous training is essential:',
+        points: [
+          'Mandatory Security Training: Annual information security and privacy training for all employees, Training covers - Phishing awareness, Password security, Confidentiality obligations, Incident reporting, Acceptable use policies, Completion tracked and mandatory for continued employment.',
+          'Phishing Simulations: Periodic simulated phishing emails to test employee vigilance, Employees clicking on simulated phishing receive immediate training, Aggregate results drive targeted awareness campaigns.',
+          'Security Awareness Campaigns: Regular communications - newsletters, posters, screensavers, Email alerts about current threats and scams, Cybersecurity awareness month programs, Gamification and contests to engage employees.',
+          'Role-Specific Training: Privileged user training for IT staff and administrators, HIPAA training for clinical staff handling patient records, Training on specialized systems and applications.'
+        ]
+      },
+      {
+        number: '15.6',
+        title: 'Compliance and Audits',
+        content: 'Regular assessments ensure policy compliance and identify vulnerabilities:',
+        points: [
+          'Audits and Assessments: Periodic internal audits of access controls, security configurations, audit logs, External security assessments and penetration testing, Vulnerability scans identifying system weaknesses, Compliance audits against HIPAA, data protection laws, accreditation standards.',
+          'Access Reviews: Quarterly reviews of user access ensuring appropriateness, Removal of access for separated employees immediately, Least privilege principle - users have only access needed.',
+          'Policy Reviews: Information security and privacy policies reviewed annually, Updates for new threats, technologies, regulatory changes, Employee acknowledgment of updated policies.',
+          'Incident Metrics: Tracking of security incidents by type, frequency, cause, Learning from trends to improve security posture, Board and management reporting on security metrics and risks.'
+        ]
+      }
+    ]
+  },
+  section16: {
+    id: 'section16',
+    number: 'SECTION XVI',
+    title: 'AMENDMENTS AND INTERPRETATION',
+    searchTerms: ['amendments', 'interpretation', 'modifications', 'changes', 'revisions'],
+    subsections: [
+      {
+        number: '16.1',
+        title: 'Power to Amend',
+        content: 'These By-Laws may be amended, modified, supplemented, or revised by the Board of Directors or authorized management:',
+        points: [
+          'Amendment Authority: Board of Directors has ultimate authority to amend these By-Laws, Management may propose amendments through HR and Legal review, Significant amendments require Board approval, Minor procedural changes may be approved by CEO or designated authority.',
+          'Reasons for Amendments: Changes in laws, regulations, or legal requirements, Judicial pronouncements or regulatory guidance, Organizational restructuring or business changes, Best practices adoption and benchmarking, Lessons learned from policy implementation, Employee feedback and grievances, Accreditation or compliance requirements.',
+          'Amendment Process: Proposal for amendment with justification, Legal and compliance review, Stakeholder consultation where significant, Board or competent authority approval, Documentation of approved amendment, Communication and implementation plan.'
+        ]
+      },
+      {
+        number: '16.2',
+        title: 'Communication of Amendments',
+        content: 'All amendments are communicated effectively ensuring employee awareness and understanding:',
+        points: [
+          'Notification Methods: Email announcements to all affected employees, Intranet posting with highlighted changes, Notice boards at prominent locations, Team meetings and briefings, HR helpdesk to address queries, Training sessions for significant policy changes.',
+          'Effective Date: Amendments specify effective date from which changes apply, Reasonable notice period provided for significant changes, Employees deemed aware from notification date, Updated By-Laws document maintained on intranet.',
+          'Employee Acknowledgment: For significant amendments, employees may be required to acknowledge receipt and understanding, Electronic or physical acknowledgment form, Acknowledgment tracked for compliance.'
+        ]
+      },
+      {
+        number: '16.3',
+        title: 'Interpretation and Clarifications',
+        content: 'Questions regarding interpretation or application of these By-Laws are resolved authoritatively:',
+        points: [
+          'Interpretative Authority: HR Department provides first-level interpretation and guidance, Legal Department consulted for legal interpretation, Management and Board have final interpretative authority, Interpretation documented for consistency.',
+          'Employee Queries: Employees may seek clarification through supervisor or HR, Queries addressed promptly and comprehensively, Significant queries and answers documented as FAQ, Interpretations communicated if affecting multiple employees.',
+          'Precedents: Interpretations and decisions in specific cases may establish precedents, Precedents guide future similar situations ensuring consistency, Material precedents documented and shared.',
+          'Good Faith Interpretation: Where ambiguity exists, interpretation favoring fairness and reasonableness, Interpretation considering policy intent and objectives, Benefit of doubt to employee in ambiguous situations where reasonable.'
+        ]
+      },
+      {
+        number: '16.4',
+        title: 'Conflict and Severability',
+        content: 'Provisions addressing conflicts and validity:',
+        points: [
+          'Conflict with Laws: If any provision of these By-Laws conflicts with applicable laws, the legal provision prevails, Conflicting By-Law provision deemed void to extent of conflict, Remainder of By-Laws remains valid and enforceable.',
+          'Conflict with Contracts: Individual employment contracts may contain specific terms negotiated with employee, In case of conflict between these By-Laws and employment contract, employment contract terms prevail to extent of specific provisions, General provisions in By-Laws apply where contract silent.',
+          'Severability: If any provision deemed invalid, illegal, or unenforceable, that provision severed, Remaining provisions continue in full force, Invalid provision replaced with valid provision closest to original intent.',
+          'Conflict Between Policies: These HR By-Laws are primary HR policy document, Specific policies (leave policy, performance policy) supplement these By-Laws, In case of conflict between By-Laws and specific policy, By-Laws prevail unless specifically stated otherwise, Latest policy or amendment prevails over earlier versions.'
+        ]
+      },
+      {
+        number: '16.5',
+        title: 'Management Rights and Discretion',
+        content: 'While these By-Laws provide framework, management retains certain rights and discretion:',
+        points: [
+          'Managerial Prerogatives: Management retains rights to - Direct workforce and assign duties, Determine staffing levels and organizational structure, Introduce new processes, technology, and changes, Establish performance standards and expectations, Decide operational matters within legal framework.',
+          'Discretionary Decisions: Where By-Laws provide for management discretion (e.g., approval of leave, transfer, training), decisions made in good faith based on business judgment, Discretion exercised reasonably and non-arbitrarily, Employee recourse through grievance mechanism if discretion abused.',
+          'Policy Exceptions: In exceptional and compelling circumstances, management may make exceptions to policy, Exceptions documented with justification, Exceptions do not set precedent automatically, Consistency and fairness balanced with flexibility.'
+        ]
+      },
+      {
+        number: '16.6',
+        title: 'Effective Date and Transition',
+        content: 'These By-Laws become effective from specified date with transition provisions:',
+        points: [
+          'Effective Date: These By-Laws are effective from February 1, 2024, as approved by Board on January 15, 2024, Supersede all previous HR policies and circulars to extent of inconsistency.',
+          'Transition Provisions: Existing employees - These By-Laws apply from effective date, Pre-existing contractual rights protected unless explicitly revised with consent, Ongoing matters (disciplinary proceedings, grievances) continue under applicable policy at time of initiation unless parties agree otherwise, Leave balances and accruals continue as per records.',
+          'Grandfathering: Where amendments reduce benefits, existing employees may be grandfathered under old provisions for reasonable period or permanently in certain cases, Grandfathering decisions made case-by-case considering fairness and business needs.',
+          'Review Date: These By-Laws subject to periodic review - Next comprehensive review January 2027, Interim amendments as needed.'
+        ]
+      }
+    ]
+  },
         content: 'Clear career progression paths available:',
         points: [
           'Defined career ladders for each department and role.',
