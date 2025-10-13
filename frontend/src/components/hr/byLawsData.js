@@ -2463,69 +2463,6 @@ export const byLawsData = {
   section30: {
     id: 'section30',
     number: 'SECTION XXX',
-    title: 'CONCLUSION AND CONTACT INFORMATION',
-    searchTerms: ['conclusion', 'contact', 'HR contact', 'helpdesk', 'queries'],
-    subsections: [
-      {
-        number: '30.1',
-        title: 'Concluding Statement',
-        content: 'These By-Laws represent Hospital commitment to fair, transparent, and legally compliant human resource management fostering employee growth, organizational excellence, and quality patient care:',
-        points: [
-          'Living Document: These By-Laws are living document subject to periodic review and revision reflecting changes in laws, business needs, and best practices. Employees notified of revisions.',
-          'Interpretation and Clarification: HR Department is primary resource for policy interpretation and clarification. Employees encouraged to seek guidance rather than assume or guess.',
-          'Mutual Commitment: Employment relationship is mutual commitment. Hospital commits to fair treatment, growth opportunities, safe workplace, competitive compensation. Employees commit to high performance, ethical conduct, continuous learning, teamwork.',
-          'Feedback Welcome: Hospital values employee feedback on policies and practices. Suggestions for improvements welcome through appropriate channels.'
-        ]
-      },
-      {
-        number: '30.2',
-        title: 'HR Department Contact Information',
-        content: 'Human Resources Department is resource for all employment-related matters, questions, and support:',
-        points: [
-          'HR Department Location: Human Resources Department, 2nd Floor, Administration Building, Koyili Hospital, [Address]',
-          'HR Contact Details: Phone: +91-XXX-XXXXXXX (Monday-Saturday, 9 AM - 6 PM), Email: hr@koyilihospital.com, Helpdesk Email: hrhelp@koyilihospital.com',
-          'HR Leadership: Chief Human Resources Officer (CHRO): [Name], Senior HR Manager: [Name], HR Business Partners assigned to each department',
-          'Online Resources: Employee Self-Service Portal: [URL], HRMS System: [URL], Intranet: [URL]',
-          'Specific Contacts: Recruitment Queries: recruitment@koyilihospital.com, Payroll Queries: payroll@koyilihospital.com, Training & Development: training@koyilihospital.com, Employee Relations: employeerelations@koyilihospital.com, Benefits and Insurance: benefits@koyilihospital.com, Grievances: grievances@koyilihospital.com, ICC Sexual Harassment: icc@koyilihospital.com',
-          'Anonymous Helpline: Ethics and Compliance Helpline (24x7): [Phone Number], For confidential reporting of serious violations, harassment, fraud, safety concerns. Anonymity protected. No retaliation.'
-        ]
-      },
-      {
-        number: '30.3',
-        title: 'Acknowledgment of Receipt',
-        content: 'By signing below or electronically acknowledging, I confirm that:',
-        points: [
-          'I have received a copy of Koyili Hospital Human Resources By-Laws.',
-          'I have read and understood the policies and procedures outlined in these By-Laws.',
-          'I agree to comply with all provisions of these By-Laws during my employment.',
-          'I understand that violation of these By-Laws may result in disciplinary action up to and including termination.',
-          'I understand that these By-Laws do not constitute an employment contract and that my employment is at-will (where applicable).',
-          'I understand that Hospital reserves right to amend, modify, or revoke these By-Laws at any time.',
-          'I have been given opportunity to ask questions and seek clarifications regarding these By-Laws.',
-          'Employee Name: ___________________, Employee ID: ___________, Signature: ________________, Date: __________'
-        ]
-      }
-    ]
-  },
-        ]
-      },
-      {
-        number: '29.2',
-        title: 'Employee Responsibilities',
-        content: 'Employees must:',
-        points: [
-          'Comply with all applicable laws and regulations.',
-          'Complete mandatory compliance training.',
-          'Report violations or suspected violations.',
-          'Cooperate in audits and investigations.',
-          'Maintain required licenses and certifications current.'
-        ]
-      }
-    ]
-  },
-  section30: {
-    id: 'section30',
-    number: 'SECTION XXX',
     title: 'AMENDMENTS AND INTERPRETATIONS',
     searchTerms: ['amendments', 'changes', 'modifications', 'revisions'],
     subsections: [
