@@ -432,49 +432,119 @@ export const byLawsData = {
     id: 'section6',
     number: 'SECTION VI',
     title: 'DISCIPLINARY PROCEDURES',
-    searchTerms: ['disciplinary', 'misconduct', 'violations', 'penalties', 'punishment'],
+    searchTerms: ['disciplinary', 'misconduct', 'violations', 'penalties', 'punishment', 'termination', 'warning'],
     subsections: [
       {
         number: '6.1',
-        title: 'Grounds for Disciplinary Action',
-        content: 'Disciplinary action may be initiated for:',
+        title: 'Grounds for Disciplinary Action - Comprehensive Framework',
+        content: 'Disciplinary action may be initiated when employee conduct, performance, or behavior violates Hospital policies, professional standards, or legal requirements. Misconduct is categorized by severity to ensure proportionate response:',
         points: [
-          'Violation of these By-Laws or any Hospital policy.',
-          'Misconduct, negligence, or dereliction of duty.',
-          'Breach of professional standards or code of conduct.',
-          'Unauthorized absence or persistent tardiness without valid reason.',
-          'Insubordination or refusal to comply with lawful instructions.',
-          'Theft, fraud, or misappropriation of Hospital property.',
-          'Harassment, discrimination, or creating hostile work environment.',
-          'Breach of confidentiality or data protection policies.'
+          'Minor Misconduct: Occasional tardiness, minor dress code violations, failure to follow routine procedures, minor negligence in duties not causing harm, inappropriate language or behavior (first instance), unauthorized use of Hospital phone/internet for personal matters, failure to wear ID badge, minor breaches of workplace etiquette. Minor misconduct typically results in verbal warning or written warning.',
+          'Major Misconduct: Repeated minor misconduct despite warnings, persistent unauthorized absence, insubordination or refusal to follow legitimate instructions, negligence causing patient dissatisfaction or operational disruption, breach of confidentiality (non-critical), misuse of Hospital resources, dishonest claims or misrepresentation, violation of safety protocols causing risk, unprofessional conduct affecting work environment. Major misconduct may result in written warning, suspension, demotion, or termination.',
+          'Gross Misconduct: Theft, fraud, embezzlement, or misappropriation of Hospital property/funds/patient belongings, physical violence, assault, or threatening behavior, willful damage to Hospital property, serious breach of patient confidentiality or data protection, working under influence of alcohol/drugs or possessing prohibited substances, sexual harassment or creating hostile work environment, serious insubordination or willful disobedience, falsification of critical records (medical records, attendance, qualifications), gross negligence causing serious patient harm or safety incident, bribery, corruption, or kickbacks, unauthorized disclosure of trade secrets or proprietary information. Gross misconduct results in immediate termination, may involve police action, and forfeiture of benefits.',
+          'Criminal Offenses: Conviction for criminal offenses whether work-related or personal that affect employee\'s suitability for Hospital employment or Hospital reputation. Criminal convictions may result in termination.',
+          'Attendance Violations: Habitual tardiness (more than 5 instances per month), frequent unplanned absences, unauthorized absence for 3+ consecutive days (abandonment), providing false reasons for leave, abuse of sick leave privileges.',
+          'Performance-Related Grounds: Persistent underperformance despite Performance Improvement Plans, willful negligence or dereliction of duty, refusal to perform assigned legitimate duties, sleeping on duty in critical roles.',
+          'Breach of Professional Standards: For clinical staff - medical negligence, unethical medical practices, violation of medical council regulations, performing procedures without competence/authorization, improper prescribing practices.',
+          'Conflict of Interest Violations: Undisclosed business relationships with Hospital vendors/competitors, using Hospital resources for personal business, accepting inappropriate gifts/kickbacks, engaging in prohibited outside employment.',
+          'Information Security Breaches: Unauthorized access to systems/data, sharing login credentials, data theft or unauthorized copying, installing malware or compromising network security, violation of social media policy causing reputation damage.',
+          'Discrimination and Harassment: Discrimination based on protected characteristics (race, religion, gender, age, disability, caste), bullying, intimidation, or victimization, creating hostile work environment, retaliation against complainants.'
         ]
       },
       {
         number: '6.2',
-        title: 'Disciplinary Measures',
-        content: 'Depending on the severity of misconduct, measures include:',
+        title: 'Disciplinary Measures and Progressive Discipline',
+        content: 'The Hospital follows progressive discipline approach where severity of action is proportionate to misconduct gravity, repetition, and employee history. Progressive discipline provides opportunity for correction before severe action:',
         points: [
-          'Verbal Warning: For minor first-time infractions.',
-          'Written Warning: For repeated or more serious violations.',
-          'Suspension: Temporary suspension with or without pay pending investigation.',
-          'Demotion: Reduction in rank, responsibilities, or compensation.',
-          'Termination: Dismissal from service with or without notice period.',
-          'Recovery of damages: For financial losses caused to the Hospital.',
-          'Progressive discipline applied except for gross misconduct.'
+          'Informal Counseling: For first-time minor issues, manager provides informal verbal counseling explaining concern, expected behavior, and consequences of repetition. Counseling is documented in manager notes but not formal record.',
+          'Verbal Warning: Formal verbal warning issued by manager for minor misconduct or policy violations. Verbal warning is documented in employee file with date, issue, and employee acknowledgment. Valid for 6 months.',
+          'Written Warning (First): First written warning formally documents misconduct, specifies violated policy, states expected behavior correction, and warns of escalated action if repeated. Employee receives copy and signs acknowledgment. Valid for 12 months.',
+          'Written Warning (Final): Second written warning for repeated or more serious misconduct. Final warning emphasizes severity, potential for termination if not corrected, and last opportunity for improvement. Valid for 18-24 months.',
+          'Suspension Without Pay: Temporary removal from duty and stoppage of salary for specified period (typically 1-7 days) for serious misconduct. Suspension serves as strong deterrent and reflection period. Employee must submit in writing understanding of issue and commitment to correction.',
+          'Suspension Pending Investigation: For gross misconduct allegations requiring investigation, employee placed on suspension with partial or full pay preservation until investigation conclusion. Protects Hospital and employee during inquiry.',
+          'Demotion: Reduction in designation, responsibilities, or grade for serious performance issues or misconduct. Demotion impacts salary, benefits, and career progression. Used when employee cannot meet current role demands but can contribute at lower level.',
+          'Salary Increment Withholding: Annual salary increment may be withheld or reduced for employees with poor performance or disciplinary issues. Withheld increments may be released upon sustained improvement.',
+          'Transfer: Disciplinary transfer to different department, location, or shift as consequence of misconduct or to separate conflicting parties. Transfer may be with or without employee consent depending on circumstances.',
+          'Recovery of Damages: For financial losses caused to Hospital through negligence, fraud, or misconduct, responsible employees may be required to compensate Hospital through salary deduction or payment. Quantum is determined through inquiry.',
+          'Termination for Cause: Employment termination due to gross misconduct, repeated violations despite warnings, serious policy breaches, or loss of trust. Termination for cause may involve immediate removal, forfeiture of certain benefits, and no separation pay.',
+          'Termination Without Cause: In some cases, employment may be terminated without cause (e.g., during probation, redundancy, restructuring) with notice period or payment in lieu. This is separation, not disciplinary action.',
+          'Immediate Dismissal: Summary termination without notice for gross misconduct warranting instant removal (theft, violence, gross negligence causing serious harm). Employee escorted out immediately, access revoked, full investigation conducted post-removal for confirmation.',
+          'Progression Override: Hospital may skip progressive steps and impose severe penalty directly for gross misconduct, illegal acts, or where progressive discipline is inappropriate. Principle of proportionality is maintained.'
         ]
       },
       {
         number: '6.3',
-        title: 'Principles of Natural Justice',
-        content: 'All disciplinary proceedings shall adhere to:',
+        title: 'Principles of Natural Justice and Due Process',
+        content: 'All disciplinary proceedings are conducted adhering to principles of natural justice ensuring fairness, transparency, and employee rights protection:',
         points: [
-          'Employee shall be informed in writing of the allegations and charges.',
-          'Reasonable opportunity to respond and present their case.',
-          'Employee may be represented by a colleague during proceedings.',
-          'Decision based on facts, evidence, and fair assessment.',
-          'Right to appeal against disciplinary action to higher authority.',
-          'Documentation of all proceedings maintained confidentially.',
-          'Timely completion of investigations and proceedings.'
+          'Right to be Informed: Employee is informed in writing of allegations, specific charges, policy violations, and potential consequences. Charge sheet or show cause notice provides complete details of misconduct.',
+          'Right to be Heard: Employee given reasonable opportunity (typically 48-72 hours) to respond to charges through written explanation or personal hearing. Employee can present their version, provide evidence, and explain circumstances.',
+          'Right to Representation: During disciplinary hearings, employee may be accompanied by colleague or staff representative (not external legal counsel unless permitted). Representative can support but cannot obstruct proceedings.',
+          'Presumption of Innocence: Employee presumed innocent until proven guilty through fair inquiry. Burden of proof lies with Hospital to establish misconduct based on evidence and facts.',
+          'Fair and Impartial Inquiry: Investigating officer or inquiry committee is independent, unbiased, and not directly involved in the incident. Inquiry examines all evidence, hears witnesses, and arrives at objective findings.',
+          'Reasonable Timeline: Inquiry completed within reasonable timeframe (typically 15-30 days depending on complexity) ensuring justice is not delayed. Extensions with valid reasons communicated to employee.',
+          'Documentation and Record: All inquiry proceedings, witness statements, evidence, employee responses, and findings are documented. Records maintained confidentially and made available to employee upon request.',
+          'Opportunity to Examine Evidence: Employee has right to examine evidence, documents, and witness statements against them. Cross-examination of witnesses may be permitted in serious cases.',
+          'Consideration of Mitigating Factors: Inquiry considers employee service record, provocation, personal circumstances, remorse, cooperation, first-time offense, and other mitigating factors before recommending penalty.',
+          'Proportionate Penalty: Penalty imposed is proportionate to misconduct severity, consistent with precedents, and considers employee\'s length of service and previous record. Harsh or disproportionate penalties are avoided.',
+          'Communication of Decision: Employee informed in writing of inquiry findings, decision, penalty imposed, rationale, and effective date. Communication is clear, specific, and delivered with dignity.',
+          'Right to Appeal: Employee has right to appeal disciplinary decision to higher authority or appellate committee within specified timeline (typically 15 days from decision communication). Appeal is reviewed objectively.',
+          'Confidentiality: Disciplinary matters handled confidentially to protect employee dignity and Hospital reputation. Information shared only on need-to-know basis.',
+          'No Double Jeopardy: Employee cannot be punished twice for same offense. Once penalty imposed and concluded, matter is closed unless new evidence emerges.',
+          'Protection from Victimization: No adverse action taken against employees raising genuine concerns or participating as witnesses in disciplinary proceedings. Retaliation is serious misconduct.'
+        ]
+      },
+      {
+        number: '6.4',
+        title: 'Disciplinary Inquiry Process - Step by Step',
+        content: 'Structured inquiry process ensures thorough, objective investigation of misconduct allegations:',
+        points: [
+          'Step 1 - Complaint/Incident Reporting: Misconduct brought to notice through complaint, incident report, audit finding, or managerial observation. Initial assessment determines if disciplinary action warranted.',
+          'Step 2 - Preliminary Investigation: HR or designated officer conducts preliminary fact-finding to assess credibility, severity, and evidence availability. Immediate actions taken if required (suspension, evidence preservation).',
+          'Step 3 - Show Cause Notice: If prima facie case established, employee issued show cause notice detailing allegations, evidence, policy violations, and requesting explanation within specified period (48-72 hours).',
+          'Step 4 - Employee Response: Employee submits written explanation addressing each allegation, providing their version, evidence, witnesses, and mitigating circumstances. Extension may be granted for valid reasons.',
+          'Step 5 - Decision on Inquiry: Based on show cause response, decision made to - (a) Close case if explanation satisfactory, (b) Issue warning without full inquiry for minor issues, (c) Proceed with formal inquiry for serious matters.',
+          'Step 6 - Inquiry Committee Formation: For formal inquiries, committee of 2-3 senior managers (not from employee\'s department) appointed. Terms of reference, timelines, and process communicated.',
+          'Step 7 - Evidence Collection: Inquiry committee collects documents, records, CCTV footage, emails, attendance data, witness statements, and all relevant evidence objectively.',
+          'Step 8 - Witness Examination: Witnesses called for statements. Employee can suggest witnesses and question opposing witnesses. Witness testimonies recorded.',
+          'Step 9 - Employee Hearing: Employee given personal hearing to present case, explain actions, provide evidence, and make submissions. Hearing is fair, respectful, and documented.',
+          'Step 10 - Inquiry Report: Committee prepares detailed report containing - facts investigated, evidence examined, findings on each charge (proved/not proved), conclusions, and recommendations on penalty. Report submitted to competent authority.',
+          'Step 11 - Disciplinary Authority Decision: Senior management/HR head reviews inquiry report and decides on - (a) Accept findings and impose recommended penalty, (b) Modify penalty, (c) Exonerate employee. Decision is reasoned.',
+          'Step 12 - Communication: Decision communicated to employee in writing with rationale, penalty details, effective date, and appeal rights. Communication is delivered personally or through registered mail.',
+          'Step 13 - Implementation: Penalty implemented - warning letter issued, suspension executed, salary adjustments made, termination processed. HR ensures compliance and documentation.',
+          'Step 14 - Appeal Process: If employee appeals, appellate authority reviews case, may seek clarifications, and makes final decision. Appellate decision is binding.',
+          'Step 15 - Closure and Record: Case closed with complete documentation filed. Record maintained confidentially. Learnings identified for future prevention.'
+        ]
+      },
+      {
+        number: '6.5',
+        title: 'Appeal Procedure',
+        content: 'Employees have right to challenge disciplinary decisions through structured appeal mechanism:',
+        points: [
+          'Appeal Eligibility: All disciplinary actions except minor verbal warnings are appealable. Employee can appeal against inquiry findings, penalty imposed, or both.',
+          'Appeal Timeline: Appeal must be filed within 15 days from date of receiving disciplinary decision. Late appeals may be considered for valid reasons with condonation request.',
+          'Appeal Submission: Written appeal submitted to appellate authority (typically next level manager or designated senior management committee) through HR. Appeal states grounds for challenge and desired relief.',
+          'Grounds for Appeal: Valid grounds include - procedural irregularities, denial of natural justice, relevant facts not considered, penalty disproportionate to offense, new evidence available, bias or prejudice in inquiry.',
+          'Appellate Authority: Independent senior manager or committee not involved in original inquiry. Appellate authority has full powers to review case, examine records, and make decisions.',
+          'Stay on Penalty: Appeal filing may result in stay on penalty implementation (except termination which is typically effective immediately but subject to reinstatement if appeal succeeds).',
+          'Appeal Hearing: Appellate authority may conduct hearing allowing employee to present case. Hearing is not full re-inquiry but focused review of contested aspects.',
+          'Appeal Decision: Appellate authority can - (a) Uphold original decision, (b) Modify penalty to be more or less severe, (c) Overturn decision and exonerate employee. Decision is final and binding.',
+          'Communication of Appeal Outcome: Appeal decision communicated within 30-45 days of filing. If decision modified, corrective actions taken (salary restoration, record correction).',
+          'No Further Appeal: Appellate decision is final. No further internal appeal available. Employee may seek external remedies through labor courts or appropriate forums as per law.'
+        ]
+      },
+      {
+        number: '6.6',
+        title: 'Special Situations',
+        content: 'Certain disciplinary situations require special handling and procedures:',
+        points: [
+          'Sexual Harassment Cases: Handled through Internal Complaints Committee (ICC) as per POSH Act. ICC conducts inquiry following prescribed procedures. Disciplinary action based on ICC findings.',
+          'Criminal Cases: If employee arrested or charged with criminal offense, Hospital may suspend employee pending trial. Conviction may lead to termination. Acquittal reviewed before reinstatement.',
+          'Patient Safety Incidents: Clinical errors or patient safety incidents investigated by Medical Board/Quality Committee along with disciplinary inquiry. Clinical judgment errors differentiated from negligence.',
+          'Whistleblower Protection: Employees reporting violations in good faith protected from retaliation. False or malicious complaints subject to disciplinary action against complainant.',
+          'Mass Misconduct: If multiple employees involved (strike, vandalism, collective indiscipline), individual culpability assessed. Leaders and instigators face stringent action.',
+          'Probationer Misconduct: Probationers may be terminated with shorter notice for misconduct without elaborate inquiry process, though basic fairness maintained.',
+          'Off-Duty Misconduct: Misconduct outside work hours/premises considered if it affects Hospital reputation, trust, or employee\'s job fitness (criminal acts, social media attacks on Hospital).'
         ]
       }
     ]
