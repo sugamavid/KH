@@ -381,10 +381,130 @@ export const annexuresData = {
     searchTerms: ['attendance', 'time', 'timesheet'],
     category: 'Time Management',
     forms: [
-      { name: 'Attendance Regularization Form', code: 'ATT-001', description: 'Correct attendance discrepancies' },
-      { name: 'Overtime Request Form', code: 'ATT-002', description: 'Request overtime approval' },
-      { name: 'Shift Change Request', code: 'ATT-003', description: 'Request shift modification' },
-      { name: 'Manual Attendance Entry', code: 'ATT-004', description: 'Manual punch entry' }
+      { 
+        name: 'Attendance Regularization Form', 
+        code: 'ATT-001', 
+        description: 'Correct attendance discrepancies and missed punch entries',
+        sections: [
+          {
+            title: 'Employee Information',
+            fields: ['Employee Name', 'Employee ID', 'Department', 'Designation', 'Reporting Manager']
+          },
+          {
+            title: 'Regularization Details',
+            fields: ['Date(s) Requiring Regularization', 'Type of Issue: (Missed In-Punch / Missed Out-Punch / Both / Wrong Punch)', 'Actual Time of Arrival (if missed in-punch)', 'Actual Time of Departure (if missed out-punch)', 'Reason for Discrepancy', 'Supporting Evidence: (Meeting invite, email, work logs, colleague confirmation)']
+          },
+          {
+            title: 'Justification',
+            fields: ['Detailed explanation of why punch was missed', 'Were you on official duty during this time? Yes/No', 'If yes, specify: (Meeting, Site Visit, Training, Client Meeting)', 'Location during work hours', 'Work performed during the period']
+          },
+          {
+            title: 'Manager Verification',
+            fields: ['Manager confirms employee was present: Yes/No', 'Manager comments on work performed', 'Exception frequency (if repeated regularizations)', 'Recommendation: Approve/Reject']
+          },
+          {
+            title: 'Approvals',
+            fields: ['Employee Signature and Date', 'Immediate Supervisor Approval', 'HR Verification and System Update', 'Date of Processing']
+          }
+        ],
+        instructions: 'Submit within 3 days of the discrepancy. Frequent regularizations may require additional approval. Attach supporting documents.',
+        approvalRequired: 'Supervisor, HR',
+        processingTime: '2-3 business days'
+      },
+      { 
+        name: 'Overtime Request Form', 
+        code: 'ATT-002', 
+        description: 'Request approval for working beyond regular hours',
+        sections: [
+          {
+            title: 'Employee Details',
+            fields: ['Employee Name', 'Employee ID', 'Department', 'Designation', 'Regular Working Hours', 'Current Month Overtime Hours (if any)']
+          },
+          {
+            title: 'Overtime Request',
+            fields: ['Proposed Overtime Date(s)', 'Start Time', 'End Time', 'Total Hours Requested', 'Day Type: (Weekday / Weekend / Holiday)', 'Work Location: (Office / Site / Remote)']
+          },
+          {
+            title: 'Justification',
+            fields: ['Reason for Overtime: (Project Deadline / Emergency / Staff Shortage / Event)', 'Specific Tasks to be Completed', 'Why work cannot be completed during regular hours', 'Impact if overtime not approved', 'Expected Deliverables', 'Is this a recurring need? Yes/No']
+          },
+          {
+            title: 'Compensation Details',
+            fields: ['Overtime Rate: 1.5x regular hourly rate', 'Estimated Overtime Pay: ₹ _____', 'Alternative: Compensatory Off (if applicable)', 'Meal Allowance (if applicable): ₹ _____', 'Transport Arrangement (if late night)']
+          },
+          {
+            title: 'Approvals',
+            fields: ['Employee Signature', 'Immediate Supervisor: Approved/Rejected', 'Department Head: Approved/Rejected', 'HR Approval for Payment Processing', 'Finance Approval']
+          }
+        ],
+        instructions: 'Submit at least 2 days in advance for planned overtime. For emergency, inform supervisor immediately and submit within 24 hours. Overtime exceeding 10 hours/week requires additional approval.',
+        approvalRequired: 'Supervisor, Department Head, HR, Finance',
+        processingTime: '3-5 business days'
+      },
+      { 
+        name: 'Shift Change Request', 
+        code: 'ATT-003', 
+        description: 'Request modification of assigned shift or roster',
+        sections: [
+          {
+            title: 'Employee Information',
+            fields: ['Employee Name', 'Employee ID', 'Department', 'Current Shift Pattern', 'Date of Joining Current Shift']
+          },
+          {
+            title: 'Change Request',
+            fields: ['Type of Change: (Permanent / Temporary)', 'Current Shift: (Morning/Evening/Night/Rotating)', 'Requested Shift: (Morning/Evening/Night/Rotating)', 'Effective From Date', 'Duration (if temporary)', 'Return to Original Shift Date (if temporary)']
+          },
+          {
+            title: 'Reason for Change',
+            fields: ['Primary Reason: (Personal / Medical / Family / Transportation / Education)', 'Detailed Justification', 'Medical Certificate (if health reasons)', 'Supporting Documents', 'How will this benefit employee performance', 'Previous shift change requests (if any)']
+          },
+          {
+            title: 'Impact Assessment',
+            fields: ['Impact on current shift staffing', 'Replacement availability', 'Team coordination considerations', 'Client/service coverage impact', 'Training or handover required']
+          },
+          {
+            title: 'Manager Recommendation',
+            fields: ['Manager assessment of request', 'Operational feasibility', 'Alternatives considered', 'Recommendation: Approve/Reject/Conditional']
+          },
+          {
+            title: 'Approvals',
+            fields: ['Employee Signature', 'Immediate Supervisor', 'Department Head', 'HR Approval and Roster Update']
+          }
+        ],
+        instructions: 'Submit at least 2 weeks in advance for permanent changes, 1 week for temporary. Approval subject to operational requirements and staffing availability.',
+        approvalRequired: 'Supervisor, Department Head, HR',
+        processingTime: '7-10 business days'
+      },
+      { 
+        name: 'Manual Attendance Entry', 
+        code: 'ATT-004', 
+        description: 'Record attendance when biometric system is unavailable',
+        sections: [
+          {
+            title: 'Employee Details',
+            fields: ['Employee Name', 'Employee ID', 'Department', 'Designation']
+          },
+          {
+            title: 'Manual Entry Details',
+            fields: ['Date(s) for Manual Entry', 'In-Time', 'Out-Time', 'Total Hours Worked', 'Location: (Office / Site / Field / Client Location)']
+          },
+          {
+            title: 'Reason for Manual Entry',
+            fields: ['Biometric Device Issue: (Device Down / Fingerprint Not Reading / New Joinee)', 'Field Duty / Site Work', 'Client Office Visit', 'Hospital Facility Issue', 'Other Reason (specify)']
+          },
+          {
+            title: 'Verification',
+            fields: ['Colleague/Witness Name (if applicable)', 'Work Evidence: (Emails sent, deliverables, meeting minutes)', 'Site Entry Register (if applicable)', 'Client Confirmation (if applicable)', 'Manager observed presence: Yes/No']
+          },
+          {
+            title: 'Approvals',
+            fields: ['Employee Signature and Date', 'Supervisor Verification and Approval', 'HR Processing: Manual entry made in system', 'Date of System Update']
+          }
+        ],
+        instructions: 'Submit on the same day or next working day. Attach supporting documents. Repeated manual entries may require investigation.',
+        approvalRequired: 'Supervisor, HR',
+        processingTime: '1-2 business days'
+      }
     ]
   },
   annex4: {
