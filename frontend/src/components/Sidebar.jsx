@@ -54,8 +54,8 @@ const Sidebar = ({ departments, isOpen, currentPath }) => {
 
   return (
     <aside
-      className={`fixed left-0 top-20 h-[calc(100vh-5rem)] bg-gradient-to-b from-slate-900 to-slate-800 transition-all duration-300 overflow-hidden border-r-2 border-slate-700 shadow-xl ${
-        isOpen ? 'w-72' : 'w-0'
+      className={`fixed left-0 top-20 h-[calc(100vh-5rem)] bg-gradient-to-b from-slate-900 to-slate-800 transition-all duration-300 overflow-hidden border-r-2 border-slate-700 shadow-xl z-40 ${
+        isOpen ? 'w-72' : 'w-0 lg:w-0'
       }`}
     >
       <div className={`${isOpen ? 'block' : 'hidden'} h-full flex flex-col`}>
