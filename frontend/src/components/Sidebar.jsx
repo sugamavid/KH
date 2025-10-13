@@ -53,12 +53,21 @@ const Sidebar = ({ departments, isOpen, currentPath }) => {
   };
 
   return (
-    <aside
-      className={`fixed left-0 top-20 h-[calc(100vh-5rem)] bg-gradient-to-b from-slate-900 to-slate-800 transition-all duration-300 overflow-hidden border-r-2 border-slate-700 shadow-xl z-40 ${
-        isOpen ? 'w-72' : 'w-0 lg:w-0'
-      }`}
-    >
-      <div className={`${isOpen ? 'block' : 'hidden'} h-full flex flex-col`}>
+    <>
+      {/* Mobile Overlay */}
+      {isOpen && (
+        <div 
+          className="fixed inset-0 bg-black/50 z-30 lg:hidden"
+          onClick={() => navigate('/')}
+        ></div>
+      )}
+      
+      <aside
+        className={`fixed left-0 top-20 h-[calc(100vh-5rem)] bg-gradient-to-b from-slate-900 to-slate-800 transition-all duration-300 overflow-hidden border-r-2 border-slate-700 shadow-xl z-40 ${
+          isOpen ? 'w-72' : 'w-0 lg:w-0'
+        }`}
+      >
+        <div className={`${isOpen ? 'block' : 'hidden'} h-full flex flex-col`}>
         {/* Dashboard Home */}
         <div className="p-4 border-b border-slate-700">
           <button
