@@ -269,10 +269,10 @@ const DashboardHome = ({ departments }) => {
                   <div className="flex-1">
                     <p className="text-sm font-semibold text-slate-900">{activity.action}</p>
                     <p className="text-xs text-slate-600">{activity.dept}</p>
-                    <p className="text-xs text-slate-400 mt-1 flex items-center">
+                    <span className="text-xs text-slate-400 mt-1 flex items-center">
                       <Clock className="w-3 h-3 mr-1" />
                       {activity.time}
-                    </p>
+                    </span>
                   </div>
                 </div>
               ))}
