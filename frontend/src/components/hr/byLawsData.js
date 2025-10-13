@@ -100,60 +100,115 @@ export const byLawsData = {
     id: 'section3',
     number: 'SECTION III',
     title: 'EMPLOYMENT TERMS AND CONDITIONS',
-    searchTerms: ['employment', 'terms', 'conditions', 'working hours', 'compensation'],
+    searchTerms: ['employment', 'terms', 'conditions', 'working hours', 'compensation', 'appointment', 'categories'],
     subsections: [
       {
         number: '3.1',
-        title: 'Employment Categories',
-        content: 'The Hospital recognizes the following categories of employment:',
+        title: 'Employment Categories and Classifications',
+        content: 'The Hospital recognizes and maintains the following distinct categories of employment, each with specific terms, conditions, and entitlements. Classification is determined at the time of appointment and may be revised based on organizational requirements and employee performance:',
         points: [
-          'Permanent Employees: Confirmed after successful completion of probation period.',
-          'Probationary Employees: Under probation for a maximum period of six months.',
-          'Contractual Employees: Engaged for specific projects, terms, or durations.',
-          'Temporary Employees: Engaged for short-term assignments or seasonal requirements.',
-          'Part-Time Employees: Working less than standard full-time hours.',
-          'Consultants: Engaged for specialized services on a professional basis.'
+          'Permanent Employees: Individuals who have successfully completed their probation period and have been confirmed in writing by the Hospital. Permanent employees are entitled to all benefits, privileges, and protections under these By-Laws and applicable employment laws. They are considered as regular, full-time members of the Hospital workforce.',
+          'Probationary Employees: New hires undergoing an initial assessment period, typically lasting six months from the date of joining. During probation, employees are evaluated on their technical competence, professional conduct, adaptability, and overall suitability for the role. Probationers are entitled to basic benefits but may have restricted access to certain privileges until confirmation.',
+          'Contractual Employees: Personnel engaged for specific projects, assignments, or fixed durations as per written contracts. Contract terms specify the scope of work, duration, compensation, and applicable terms. Contractual employees may be renewed based on performance and organizational needs, but renewal does not automatically confer permanent status.',
+          'Temporary Employees: Staff engaged for short-term assignments, seasonal requirements, leave replacements, or surge capacity needs. Temporary employment is strictly time-bound and does not create expectancy of permanent employment. Terms and benefits are specified in the temporary appointment letter.',
+          'Part-Time Employees: Individuals working less than the standard full-time hours (typically less than 40 hours per week). Part-time employees receive pro-rata compensation and benefits based on actual hours worked. They are expected to maintain the same standards of performance and conduct as full-time employees.',
+          'Consultants and Advisors: External experts engaged on a retainer or project basis to provide specialized professional services, advice, or expertise not available within the Hospital. Consultants work under consulting agreements rather than employment contracts and are typically not entitled to employee benefits.',
+          'Visiting Medical Staff: Medical practitioners granted privileges to practice at the Hospital while maintaining primary employment elsewhere. Terms of engagement are governed by credentialing and privileging policies in addition to these By-Laws.',
+          'Trainees and Interns: Medical graduates, nursing students, or other professionals undergoing training programs at the Hospital. Trainees receive stipends or training allowances as per applicable regulations and Hospital policy.',
+          'Casual Workers: Daily wage workers engaged for specific tasks or manual work on a day-to-day basis without any commitment for continued employment beyond the immediate assignment.',
+          'Employees on Deputation: Personnel seconded from other organizations or government agencies for specified periods under mutual agreements. Terms of deputation are governed by the deputation orders and inter-organizational agreements.'
         ]
       },
       {
         number: '3.2',
-        title: 'Working Hours and Attendance',
-        content: 'Standard working hours and attendance requirements:',
+        title: 'Working Hours, Schedules, and Attendance',
+        content: 'The Hospital operates 24x7 to provide uninterrupted healthcare services. Working hours and attendance requirements vary by department, role, and operational needs while ensuring compliance with labor laws and employee welfare:',
         points: [
-          'Normal working hours: 8 hours per day, 48 hours per week for full-time employees.',
-          'Shift timings determined by Hospital operational requirements and department needs.',
-          'Regular attendance and punctuality are mandatory for all employees.',
-          'Attendance shall be recorded through the Hospital\'s biometric or approved attendance system.',
-          'Unauthorized absence or persistent tardiness may result in disciplinary action.',
-          'Overtime work requires prior approval from the supervisor.',
-          'Employees working in emergency or critical care may have different shift patterns.'
+          'Standard Working Hours: For administrative and non-shift positions, normal working hours are 8 hours per day (exclusive of lunch break) and 48 hours per week, typically from 9:00 AM to 6:00 PM, Monday through Saturday, with Sundays and declared holidays as weekly off days. Actual timings may vary by department.',
+          'Shift Work: Clinical departments, emergency services, nursing, housekeeping, security, and other essential services operate on shift basis. Shift patterns include morning shift (6 AM to 2 PM), afternoon shift (2 PM to 10 PM), night shift (10 PM to 6 AM), or 12-hour shifts as per rostering. Advance shift schedules are communicated to employees.',
+          'Flexible Working Arrangements: Subject to managerial approval and operational feasibility, eligible employees may be permitted flexible work hours, compressed work weeks, or work-from-home arrangements for specific roles and circumstances, particularly for administrative and support functions.',
+          'Attendance Recording: All employees must record their attendance using the Hospital's biometric attendance system, card-based system, or other approved methods at the start and end of each shift. Manual attendance entries require supervisor approval and HR verification.',
+          'Punctuality Requirements: Employees are expected to report to duty punctually at their assigned time. Late arrival (beyond 15 minutes of scheduled start time without prior intimation) is considered tardiness and may result in loss of pay for the period of absence and disciplinary action for repeated instances.',
+          'Break and Meal Periods: Employees are entitled to meal breaks and rest periods as per applicable labor laws. Typically, a 30 to 60-minute unpaid lunch break is provided for 8-hour shifts. Additional short breaks may be permitted at supervisor discretion without deduction from working hours.',
+          'Unauthorized Absence: Absence from duty without prior approval or without intimation and valid reasons is considered unauthorized absence and will result in loss of pay for the absent period. Three consecutive days of unauthorized absence may be treated as voluntary abandonment of employment.',
+          'Overtime Work: Work performed beyond standard working hours requires prior written approval from the immediate supervisor and department head. Overtime is compensated either through additional payment at prescribed rates (typically 1.5 times regular hourly wage) or through compensatory time off, as per Hospital policy and labor law requirements.',
+          'On-Call Duty: Certain employees, particularly medical and technical staff, may be required to be on-call during off-duty hours to respond to emergencies. On-call schedules, compensation, and response time expectations are defined by departmental policies.',
+          'Weekend and Holiday Work: Employees in essential services work on weekends and holidays as per roster. Those required to work on declared holidays receive holiday pay or compensatory off as per entitlement.',
+          'Attendance Regularization: Minor discrepancies in attendance records due to system errors, forgotten punches, or valid reasons may be regularized through a formal attendance regularization request approved by the supervisor and HR. Frequent regularization requests are viewed as non-compliance.',
+          'Remote Work Monitoring: Employees approved for remote work must maintain regular communication, meet deliverables, and be available during working hours as per remote work policy. Attendance is marked based on login to systems and work output.',
+          'Timesheet Submission: Employees whose roles require timesheet-based tracking (project staff, consultants) must submit accurate timesheets weekly or bi-weekly for payroll processing and project costing.'
         ]
       },
       {
         number: '3.3',
-        title: 'Compensation and Benefits',
-        content: 'Compensation structure includes:',
+        title: 'Compensation Structure and Components',
+        content: 'The Hospital maintains a comprehensive, competitive, and equitable compensation structure designed to attract, retain, and motivate talented professionals. Compensation is determined based on role, qualifications, experience, market benchmarks, and performance:',
         points: [
-          'Basic Salary as specified in the appointment letter and reviewed periodically.',
-          'House Rent Allowance (HRA): 40% of basic salary for eligible employees.',
-          'Dearness Allowance (DA): 20% of basic salary, subject to periodic revision.',
-          'Medical Allowance as per Hospital policy for employee and dependents.',
-          'Provident Fund (PF): Statutory contribution as per applicable laws.',
-          'Gratuity: As per Payment of Gratuity Act, 1972.',
-          'Performance Bonuses: Based on individual and organizational performance.',
-          'Other benefits as specified in appointment letter or Hospital policy.'
+          'Basic Salary: The fixed component of monthly remuneration forming the foundation for calculation of other allowances and statutory contributions. Basic salary is determined based on grade, role, qualifications, and experience, and is subject to annual review and revision based on performance and market conditions.',
+          'House Rent Allowance (HRA): A monthly allowance to assist employees with accommodation expenses. HRA is typically 40% of basic salary for employees in metro cities, 30% in non-metro cities, or as per applicable income tax regulations. Employees provided with Hospital accommodation receive reduced or nil HRA.',
+          'Dearness Allowance (DA): A cost-of-living adjustment allowance linked to inflation indices, typically 20% of basic salary or as revised periodically by management. DA helps employees cope with price increases in essential commodities.',
+          'Transport Allowance: Monthly reimbursement or allowance for commuting expenses, typically ranging from INR 1,600 to INR 3,200 per month based on grade, or as per actual expenses for eligible roles. Hospital-provided transport reduces or eliminates this allowance.',
+          'Medical Allowance: A monthly allowance or reimbursement facility for medical expenses incurred by the employee and dependent family members. The Hospital also provides group health insurance coverage and medical benefits as detailed in Section XII.',
+          'Special Allowances: Role-specific or location-specific allowances such as shift allowance for night shifts, emergency duty allowance, critical skill allowance, hazard allowance for high-risk roles, on-call allowance, or station allowance for remote postings.',
+          'Performance-Linked Incentives: Variable pay component based on individual performance against set objectives (KPIs), departmental performance, and overall Hospital performance. Incentives are typically paid quarterly or annually and may range from 10% to 30% of annual compensation for eligible roles.',
+          'Provident Fund (PF): Statutory retirement savings under the Employees Provident Fund Organization (EPFO) scheme. Both employee and employer contribute 12% of basic salary (or such percentage as notified) monthly. Employees receive a Universal Account Number (UAN) for tracking and portability.',
+          'Gratuity: A lump sum retirement benefit payable upon completion of 5 years of continuous service, calculated as 15 days of last drawn salary for each completed year of service, as per the Payment of Gratuity Act, 1972. Maximum gratuity is capped at INR 20 lakhs or as per applicable law.',
+          'Employee State Insurance (ESI): For employees earning below the wage ceiling as per ESI Act, contributions are made to ESI for medical and income security benefits. The Hospital contributes 4.75% and employees contribute 1.75% of wages.',
+          'Professional Tax: Deducted as per applicable state professional tax regulations and remitted to state government authorities.',
+          'Income Tax Deduction at Source (TDS): Tax deducted from salary income as per Income Tax Act provisions based on employee declarations, investments, and applicable exemptions.',
+          'Bonus: Annual bonus as per Payment of Bonus Act or Hospital bonus policy, typically ranging from 8.33% to 20% of annual earnings, payable during festive season or financial year-end.',
+          'Allowances for Overtime, Holiday Work, and Night Shifts: Additional compensation for work beyond normal hours as specified in relevant sections.',
+          'Leave Encashment: Monetization of accumulated earned leave subject to policy terms, either annually or at the time of separation.',
+          'Relocation and Transfer Assistance: Financial assistance for employees transferred to other locations, covering transportation, packing, and temporary accommodation costs.',
+          'Educational Assistance: Reimbursement or sponsorship for job-related courses, certifications, or professional development programs as per learning and development policy.',
+          'Other Benefits: Cafeteria facilities, employee assistance programs, staff discount on medical services, group personal accident insurance, life insurance, uniforms or dress allowance where applicable.'
         ]
       },
       {
         number: '3.4',
-        title: 'Appointment and Confirmation',
-        content: 'Appointment and confirmation procedures:',
+        title: 'Appointment, Offer Letter, and Joining Formalities',
+        content: 'All appointments at Koyili Hospital follow a structured process ensuring transparency, documentation, and compliance:',
         points: [
-          'All appointments shall be made through a formal appointment letter.',
-          'Probation period: Typically 6 months, extendable by up to 3 months.',
-          'Confirmation subject to satisfactory performance and conduct.',
-          'Confirmation shall be communicated in writing.',
-          'Employees may be transferred between departments based on organizational needs.'
+          'Offer Letter: Selected candidates receive a formal offer letter specifying the position, reporting relationship, location, compensation, joining date, probation terms, and key employment conditions. The offer is valid for the period specified in the letter (typically 15 days) and is subject to candidate acceptance.',
+          'Pre-Joining Formalities: Candidates must submit required documents including educational certificates, experience letters, identity and address proofs, medical fitness certificate, police verification (if applicable), resignation acceptance from previous employer, and any other documents as specified.',
+          'Background Verification: The Hospital conducts background checks including education verification, employment verification, reference checks, criminal record checks, and identity verification. Appointment is subject to satisfactory background verification.',
+          'Medical Fitness: All employees must undergo pre-employment medical examination at designated Hospital facilities or approved diagnostic centers. The examination includes general health assessment, vision and hearing tests, and role-specific health checks (e.g., hepatitis B immunity for clinical staff).',
+          'Appointment Letter: Upon successful completion of joining formalities and verification, the Hospital issues a formal appointment letter that serves as the official employment contract. The appointment letter details designation, grade, department, reporting manager, compensation, benefits, probation terms, working hours, location, and references to applicable policies.',
+          'Probation Period: New employees serve a probation period of six months from the date of joining to assess their suitability, competence, performance, conduct, and cultural fit. During probation, performance is reviewed periodically by the supervisor.',
+          'Extension of Probation: If performance during probation is not satisfactory but shows potential, the probation period may be extended for up to three additional months with written notice to the employee specifying areas requiring improvement.',
+          'Confirmation Process: Upon successful completion of probation, employees are confirmed in writing by the HR Department based on supervisor recommendation. Confirmation entitles employees to full benefits and enhanced job security.',
+          'Induction and Orientation: All new employees undergo a structured induction program covering Hospital overview, organizational structure, policies, procedures, safety, compliance, systems access, role introduction, and team integration.',
+          'Identification and Access: Employees are issued Hospital ID cards, access cards, email accounts, system login credentials, and other necessary tools and resources to perform their duties.',
+          'Policy Acknowledgment: Employees must read and acknowledge understanding of these By-Laws, code of conduct, data protection policy, confidentiality obligations, and other key policies within the first week of employment.',
+          'Probationary Performance Reviews: Probationers receive formal performance feedback at three-month and six-month intervals, documenting strengths, areas for improvement, and progress toward confirmation.',
+          'Termination During Probation: Either party may terminate the employment during probation with shorter notice (typically one month or as per appointment letter). Termination during probation does not require extensive justification but should be based on performance, conduct, or suitability considerations.',
+          'Confirmation Eligibility: Confirmation requires satisfactory performance ratings, adherence to policies, acceptable attendance record, completion of mandatory training, and positive behavioral feedback.'
+        ]
+      },
+      {
+        number: '3.5',
+        title: 'Job Description and Duties',
+        content: 'Each position at the Hospital has a defined job description outlining responsibilities, accountabilities, reporting relationships, and performance expectations:',
+        points: [
+          'Role Clarity: Job descriptions provide clarity on the scope of work, key responsibilities, decision-making authority, and expected outcomes for each position.',
+          'Dynamic Nature: Job descriptions may evolve based on organizational changes, technological advancements, or business requirements. Employees are expected to adapt to reasonable changes in duties.',
+          'Performance Standards: Job descriptions form the basis for performance evaluation, goal setting, and career development discussions.',
+          'Additional Duties: Employees may be assigned additional or temporary duties beyond their primary role based on organizational needs, provided such duties are reasonable and within their competence.',
+          'Duty of Care: All employees have a duty to perform their work with reasonable care, skill, and diligence, maintaining professional standards and quality benchmarks.',
+          'Cross-Functional Collaboration: Employees are expected to collaborate across departments, participate in institutional initiatives, and contribute to organizational goals beyond their immediate responsibilities.'
+        ]
+      },
+      {
+        number: '3.6',
+        title: 'Modification of Employment Terms',
+        content: 'The Hospital reserves the right to modify employment terms and conditions based on business requirements, legal changes, or other justifiable reasons:',
+        points: [
+          'Salary Revisions: Compensation is reviewed annually based on performance, inflation, market benchmarking, and organizational performance. Salary revisions are communicated in writing and typically effective from January each year.',
+          'Role Changes: Employees may be promoted, transferred, reassigned, or their roles may be restructured based on organizational needs, performance, or career development considerations.',
+          'Notification of Changes: Material changes to employment terms are communicated to affected employees in writing with advance notice (typically 30 to 90 days depending on the nature of change).',
+          'Employee Consent: Changes requiring significant alterations to compensation, location, or role may require employee consent. However, reasonable operational changes within the scope of employment do not require explicit consent.',
+          'Grievance Rights: Employees aggrieved by changes to employment terms may utilize the grievance redressal mechanism outlined in Section VII.',
+          'Continued Employment: Continued employment after notification of changes is deemed acceptance unless the employee formally disputes the changes through proper channels within specified timelines.'
         ]
       }
     ]
