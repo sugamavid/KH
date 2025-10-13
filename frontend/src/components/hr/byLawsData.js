@@ -2144,17 +2144,6 @@ export const byLawsData = {
       }
     ]
   },
-        content: 'Protection of Hospital assets:',
-        points: [
-          'Employees responsible for Hospital property in their custody.',
-          'Report loss, theft, or damage immediately.',
-          'Proper check-out procedures for removing Hospital property.',
-          'Personal belongings security is employee responsibility.',
-          'Searches may be conducted as per policy and law.'
-        ]
-      }
-    ]
-  },
   section23: {
     id: 'section23',
     number: 'SECTION XXIII',
