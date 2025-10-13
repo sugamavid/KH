@@ -1,13 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo, useRef, useEffect } from 'react';
 import { 
   Home, Scale, BookOpen, FileText, Calendar, Clock, Users, 
   DollarSign, Award, AlertCircle, Download, Printer, Search,
-  ChevronRight, TrendingUp, CheckCircle, Shield
+  ChevronRight, TrendingUp, CheckCircle, Shield, X, ChevronDown,
+  Menu, ArrowLeft, Filter, Zap
 } from 'lucide-react';
+import { byLawsData, quickReferenceData, keyHighlights } from './byLawsData';
 
 const HRByLaws = () => {
   const [activeSection, setActiveSection] = useState('dashboard');
   const [searchQuery, setSearchQuery] = useState('');
+  const [searchResults, setSearchResults] = useState([]);
+  const [showSearch, setShowSearch] = useState(false);
+  const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
+  const contentRef = useRef(null);
 
   // Navigation structure
   const navigation = [
