@@ -364,12 +364,25 @@ const HRByLaws = () => {
   );
 
   const renderSection = (sectionId) => {
-    const section = byLawsContent[sectionId];
+    const section = byLawsData[sectionId];
     if (!section) return null;
 
     if (sectionId === 'preamble') {
       return (
         <div className="bg-white rounded-xl shadow-lg">
+          {/* Board Approval Banner */}
+          <div className="bg-gradient-to-r from-amber-50 to-amber-100 border-b-2 border-amber-300 p-6">
+            <div className="flex items-center space-x-3">
+              <div className="w-10 h-10 rounded-full bg-amber-600 flex items-center justify-center flex-shrink-0">
+                <CheckCircle className="w-5 h-5 text-white" />
+              </div>
+              <div>
+                <p className="font-bold text-amber-900">Official Board-Approved Document</p>
+                <p className="text-sm text-amber-800">Effective February 1, 2024 • Version 2.0</p>
+              </div>
+            </div>
+          </div>
+
           <div className="border-b-4 border-double border-slate-800 p-12 text-center bg-gradient-to-b from-slate-50 to-white">
             <Scale className="w-16 h-16 text-blue-900 mx-auto mb-4" />
             <h1 className="text-3xl font-serif font-bold text-slate-900 mb-6">{section.title}</h1>
@@ -390,7 +403,7 @@ const HRByLaws = () => {
           <h3 className="text-xl font-serif font-bold text-slate-800 mt-2">{section.title}</h3>
         </div>
 
-        {section.subsections.map((subsection, idx) => (
+        {section.subsections && section.subsections.map((subsection, idx) => (
           <div key={idx} className="mb-8 ml-6">
             <h4 className="text-lg font-serif font-bold text-slate-900 mb-3">
               {subsection.number} {subsection.title}
