@@ -1343,43 +1343,120 @@ export const byLawsData = {
   section14: {
     id: 'section14',
     number: 'SECTION XIV',
-    title: 'TRAINING AND DEVELOPMENT',
-    searchTerms: ['training', 'development', 'learning', 'education', 'skills'],
+    title: 'TRAINING, LEARNING, AND DEVELOPMENT',
+    searchTerms: ['training', 'development', 'learning', 'education', 'skills', 'CME', 'capability building'],
     subsections: [
       {
         number: '14.1',
-        title: 'Training Programs',
-        content: 'The Hospital is committed to continuous learning:',
+        title: 'Learning and Development Philosophy',
+        content: 'Koyili Hospital views employee development as strategic investment driving quality care, innovation, and organizational excellence. Continuous learning is encouraged, supported, and expected:',
         points: [
-          'Induction training for all new employees.',
-          'Regular technical and soft skills training programs.',
-          'Mandatory compliance and safety training.',
-          'Specialized clinical and medical training for healthcare staff.',
-          'Leadership development programs for managers.',
-          'E-learning platforms and resources available.'
+          'Commitment to Learning: Hospital invests minimum 2-3% of payroll in training and development annually, Training viewed as right and responsibility - employees entitled to development opportunities, Learning culture where curiosity, experimentation, and growth valued, Support from individual skills training to organizational capability building.',
+          'Learning Objectives: Enhance technical/clinical competencies ensuring best practices, Develop soft skills - communication, teamwork, leadership, customer service, Ensure regulatory and compliance training completion, Prepare employees for higher responsibilities and succession, Promote innovation, quality improvement, and evidence-based practices, Build organizational agility and change readiness.',
+          'Shared Responsibility: Hospital provides opportunities, resources, time, and financial support, Employees must actively participate, apply learning, and pursue growth, Managers facilitate team development and individual coaching, HR designs programs, tracks compliance, and measures impact.',
+          'Needs Assessment: Training needs identified through - Performance appraisals highlighting skill gaps, Supervisor and employee identification of development needs, New equipment, technology, or process implementations, Regulatory requirements and accreditation standards, Quality indicators and incident analysis, Organizational strategic plans and future capabilities needed.'
         ]
       },
       {
         number: '14.2',
-        title: 'Educational Assistance',
-        content: 'Support for further education:',
+        title: 'Induction and Orientation Programs',
+        content: 'Comprehensive onboarding sets foundation for new employee success:',
         points: [
-          'Financial assistance for job-related certifications and courses.',
-          'Study leave for pursuing relevant degrees or diplomas.',
-          'Bond requirements may apply for substantial educational investments.',
-          'Prior approval required from management.',
-          'Reimbursement upon successful completion.'
+          'Corporate Induction (Day 1-2): Welcome by HR and senior management communicating Hospital vision, mission, values, Organizational structure, governance, and leadership, Overview of departments, services, and operations, HR policies review (employment terms, leave, benefits, code of conduct), POSH Act and anti-harassment policy, IT systems access and email setup, ID badge, access card, and facility tour, Benefits enrollment and documentation completion.',
+          'Department Induction (Week 1): Introduction to department team, functions, and workflows, Reporting relationships and key contacts, Tour of department facilities and equipment, Department-specific policies and procedures, Role expectations and initial assignments, Buddy/mentor assignment for support.',
+          'Technical Induction (Week 1-4): Role-specific training on equipment, systems, software, Clinical staff - Hospital clinical protocols, medication systems, documentation, Non-clinical staff - Job-specific tools and procedures, Hands-on practice with supervision, Competency assessments where applicable.',
+          'Compliance and Safety Training (Week 1-2): Fire safety and emergency procedures, Infection control and hand hygiene, Biomedical waste management, Workplace safety and PPE use, Patient rights and confidentiality, NABH/JCI standards overview, Code of conduct and ethics.',
+          'Probation Support: Regular check-ins with supervisor and HR during probation, Addressing questions, concerns, and adaptation challenges, Performance feedback at 1-month, 3-month intervals, Induction effectiveness evaluation and improvements.'
         ]
       },
       {
         number: '14.3',
-        title: 'Continuing Medical Education (CME)',
-        content: 'For medical professionals:',
+        title: 'Mandatory Training Programs',
+        content: 'Certain training is mandatory for all or specific employee categories ensuring compliance and safety:',
         points: [
-          'Mandatory CME hours as per regulatory requirements.',
-          'Support for attending conferences and seminars.',
-          'In-house CME programs conducted regularly.',
-          'Credits tracked for license renewal purposes.'
+          'Annual Mandatory Training: Fire safety and emergency response (annual), Infection control and hand hygiene (annual), Biomedical waste management (annual), Patient safety and quality (annual), Code of conduct and ethics refresher (annual), Data privacy and information security (annual), POSH Act awareness (annual), Attendance tracked and non-compliance addressed.',
+          'Role-Specific Mandatory Training: Basic Life Support (BLS) certification for clinical staff (every 2 years), Advanced Cardiac Life Support (ACLS) for critical care staff (every 2 years), Pediatric Advanced Life Support (PALS) for pediatric/neonatal staff (every 2 years), Ventilator management for ICU nurses, Chemotherapy administration certification for oncology nurses, Radiation safety for radiology and cath lab staff (annual), Phlebotomy training for lab staff.',
+          'Equipment and Technology Training: Training mandatory before using new equipment or technology, Competency assessment before independent operation, Refresher training for complex equipment periodically.',
+          'Regulatory and Accreditation Training: NABH/JCI standards training for all staff, Preparation training before accreditation surveys, Disease-specific program training (stroke, trauma, cardiac care).',
+          'Tracking and Compliance: Training Management System tracks completion, Automated reminders for due training, Non-completion impacts performance evaluation, Critical certifications monitored (e.g., BLS expiry).'
+        ]
+      },
+      {
+        number: '14.4',
+        title: 'Continuing Medical Education (CME) and Professional Development',
+        content: 'Ongoing learning for medical and nursing professionals maintaining clinical competence:',
+        points: [
+          'CME Requirements: Medical Council of India / National Medical Commission (NMC) mandates CME credits for license renewal, State nursing councils require continuing nursing education (CNE) credits, Hospital supports and tracks CME/CNE credit completion.',
+          'In-House CME Programs: Weekly clinical case discussions and grand rounds, Monthly CME lectures by visiting faculty or internal experts, Journal club reviewing latest research and evidence, Morbidity and Mortality (M&M) conferences analyzing cases, Department-specific clinical meetings and updates, Multidisciplinary team meetings fostering collaboration.',
+          'External CME Opportunities: Sponsorship for attending conferences, workshops, seminars (national/international), Financial support for registration fees, travel, and accommodation, Priority given based on topic relevance, employee performance, past participation, Limit of 1-2 sponsored events per year per eligible employee.',
+          'CME Credit Tracking: Hospital maintains CME credit records for medical staff, Certificates submitted and logged, Assistance with license renewal documentation, Alerts for credit deficits.',
+          'Clinical Skills Training: Simulation-based training for high-risk procedures (intubation, central line insertion), Cadaveric workshops for surgical skills, Ultrasound training for point-of-care imaging, Advanced procedural training (endoscopy, bronchoscopy, etc.).',
+          'Nursing Professional Development: Specialty nursing certifications (critical care, oncology, pediatrics, etc.), Clinical ladder program with advanced practice roles, Preceptor training for nurses mentoring new staff, Nursing research and quality improvement training.'
+        ]
+      },
+      {
+        number: '14.5',
+        title: 'Leadership and Management Development',
+        content: 'Building leadership pipeline and managerial capabilities:',
+        points: [
+          'First-Time Manager Program: Training for employees promoted to supervisory roles, Topics - Transition from individual contributor to manager, Goal-setting and performance management, Delegation and accountability, Difficult conversations and feedback, Team building and motivation, Time management and priorities.',
+          'Middle Management Development: Advanced leadership topics - Strategic thinking and business acumen, Change management and leading transformation, Conflict resolution and negotiation, Emotional intelligence and self-awareness, Coaching and developing others, Financial management and budgeting.',
+          'Senior Leadership Program: Executive education for senior managers and department heads, Organizational leadership and vision-setting, Decision-making under uncertainty, Stakeholder management, Crisis management, Healthcare trends and future preparation, External executive education programs or business school modules.',
+          'Emerging Leaders Program: Identification of high-potential employees for future leadership roles, Structured 12-18 month development program, Rotational assignments across departments, Executive mentoring, Action learning projects solving real business challenges, Graduation to leadership roles upon completion.',
+          'Women in Leadership: Special initiatives encouraging women leadership development, Mentoring by senior women leaders, Addressing barriers and confidence-building, Networking and peer support.'
+        ]
+      },
+      {
+        number: '14.6',
+        title: 'Educational Assistance and Sponsorships',
+        content: 'Financial support for employees pursuing higher education enhancing professional capabilities:',
+        points: [
+          'Eligibility: Minimum 2 years service with Hospital, Good performance record, Course must be relevant to current or future Hospital role, Approval from supervisor and management.',
+          'Types of Support: Partial or full tuition fee reimbursement, Study leave with full or partial pay, Flexible work arrangements during course, Examination leave, Book and material allowances.',
+          'Supported Programs: Postgraduate medical specializations (MD, MS, DNB), Nursing postgraduate programs (MSc Nursing, specialty diplomas), Hospital administration degrees (MHA, MBA-Healthcare), Allied health specialty certifications, Quality and patient safety certifications (Six Sigma, Lean, CQI), Healthcare IT and informatics programs.',
+          'Application Process: Submit course details, institution accreditation, fees, duration, Prior approval mandatory before course commencement, Evaluation based on course relevance, employee potential, organizational benefit, budget availability.',
+          'Bond Agreement: Educational sponsorships with substantial investment require service bond, Bond duration typically 2-3 years post-course completion, Early separation requires bond amount repayment pro-rata, Bond protects Hospital investment and ensures benefit realization.',
+          'Reimbursement Terms: Fees reimbursed upon successful course completion (passing exams), Submission of grade sheets, certificates, fee receipts, Typically 50-100% reimbursement based on course and performance, Installment-based reimbursement for multi-year programs.',
+          'Performance Expectations: Maintain good work performance during study period, Apply learning to work improving practices, Share knowledge with colleagues post-completion, Participate in Hospital teaching or committees related to study area.'
+        ]
+      },
+      {
+        number: '14.7',
+        title: 'On-the-Job Training and Cross-Skilling',
+        content: 'Practical learning through work experience and exposure:',
+        points: [
+          'Job Rotation: Short-term rotations to different departments or roles, Understand end-to-end processes and interdependencies, Develop versatility and adaptability, Particularly valuable for early-career employees.',
+          'Stretch Assignments: Challenging projects beyond routine responsibilities, Opportunities to develop new skills and demonstrate capabilities, Build confidence and visibility, Stepping stone to promotions.',
+          'Cross-Functional Projects: Multi-disciplinary teams working on improvement initiatives, Quality projects, patient safety interventions, operational efficiency, Learn collaboration and project management skills.',
+          'Acting Roles: Temporarily acting in higher position during incumbent leave or vacancy, Exposure to higher-level responsibilities, Assessment for future promotions, Development opportunity with safety net.',
+          'Mentoring and Coaching: Pairing employees with experienced mentors for guidance, Regular mentoring sessions on career development, skill-building, challenges, Coaching on specific competencies or behaviors, Reverse mentoring (junior teaching senior on technology, new methods).',
+          'Job Shadowing: Observing and learning from experienced employees, Understanding best practices and tacit knowledge, New employees shadowing veterans, Cross-departmental shadowing for appreciation of other roles.'
+        ]
+      },
+      {
+        number: '14.8',
+        title: 'Training Delivery Methods and Resources',
+        content: 'Diverse learning modalities catering to different learning styles and needs:',
+        points: [
+          'Classroom Training: Traditional instructor-led training for groups, Lectures, discussions, case studies, role-plays, Ideal for complex topics requiring interaction.',
+          'E-Learning: Online courses accessible anytime, anywhere, Self-paced modules on compliance, soft skills, clinical topics, Learning Management System (LMS) tracks progress, Cost-effective for large workforce, Blended approach combining online and classroom.',
+          'Simulation-Based Training: High-fidelity simulators for clinical skills practice, Scenario-based learning in safe environment, Code blue simulations, disaster drills, Allows mistakes and learning without patient risk.',
+          'On-the-Job Training: Learning while performing actual work, Preceptorship and supervised practice, Real-time feedback and corrections, Most effective for technical skills.',
+          'Microlearning: Short, focused learning modules (5-15 minutes), Just-in-time learning before task performance, Videos, infographics, quick reference guides, Fits busy healthcare schedules.',
+          'Webinars and Virtual Learning: Live or recorded webinars from experts, Participation in virtual conferences, Cost-effective access to external expertise.',
+          'Learning Resources: Hospital library with medical books, journals, reference materials, Online journal subscriptions and databases, Standard operating procedures and protocols repository, Video library of procedures and techniques.'
+        ]
+      },
+      {
+        number: '14.9',
+        title: 'Training Evaluation and Impact Measurement',
+        content: 'Assessing training effectiveness and return on investment:',
+        points: [
+          'Kirkpatrick Model Evaluation: Level 1 - Reaction: Participant feedback on training quality, relevance, delivery, Level 2 - Learning: Knowledge/skill gain assessed through tests, demonstrations, Level 3 - Behavior: On-the-job application observed post-training, Level 4 - Results: Business impact measured (quality indicators, efficiency, patient outcomes).',
+          'Training Metrics: Participation rates and completion rates, Training hours per employee annually, CME credit completion rates, Competency assessment pass rates, Training cost per employee.',
+          'Impact on Performance: Correlation between training and performance improvements, Quality and safety indicators pre/post training, Patient satisfaction scores, Clinical outcome improvements.',
+          'Continuous Improvement: Regular feedback from participants and managers, Updating content based on new evidence and standards, Trainer development and improvement, Exploring new delivery methods and technologies.',
+          'Organizational Learning: Knowledge management and best practice sharing, Lessons learned documentation, Innovation and improvement culture, Learning organization aspiration.'
         ]
       }
     ]
