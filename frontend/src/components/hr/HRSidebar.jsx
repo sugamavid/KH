@@ -9,7 +9,10 @@ import {
   GraduationCap,
   Scale,
   BarChart3,
-  Calculator
+  Calculator,
+  FileText,
+  FolderOpen,
+  BookOpen
 } from 'lucide-react';
 
 const HRSidebar = ({ activeModule, setActiveModule }) => {
