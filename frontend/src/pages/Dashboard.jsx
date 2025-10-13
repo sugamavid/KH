@@ -17,6 +17,9 @@ const Dashboard = ({ onLogout }) => {
   const navigate = useNavigate();
   const location = useLocation();
 
+  // Check if user is inside a department
+  const isInDepartment = location.pathname.startsWith('/department/');
+
   useEffect(() => {
     fetchDepartments();
   }, []);
@@ -38,17 +41,21 @@ const Dashboard = ({ onLogout }) => {
         onLogout={onLogout} 
         sidebarOpen={sidebarOpen}
         setSidebarOpen={setSidebarOpen}
+        isInDepartment={isInDepartment}
       />
       
       <div className="flex flex-1 pt-16 md:pt-20">
-        <Sidebar 
-          departments={departments}
-          isOpen={sidebarOpen}
-          currentPath={location.pathname}
-        />
+        {/* Only show main sidebar when NOT in a department */}
+        {!isInDepartment && (
+          <Sidebar 
+            departments={departments}
+            isOpen={sidebarOpen}
+            currentPath={location.pathname}
+          />
+        )}
         
-        <main className={`flex-1 transition-all duration-300 ${sidebarOpen ? 'lg:ml-72' : 'ml-0'}`}>
-          <div className="p-4 md:p-6 max-w-[1600px] mx-auto">
+        <main className={`flex-1 transition-all duration-300 ${!isInDepartment && sidebarOpen ? 'lg:ml-72' : 'ml-0'}`}>
+          <div className={`${isInDepartment ? '' : 'p-4 md:p-6 max-w-[1600px] mx-auto'}`}>
             {loading ? (
               <div className="flex items-center justify-center h-96">
                 <div className="text-center">
@@ -64,7 +71,7 @@ const Dashboard = ({ onLogout }) => {
             )}
           </div>
           
-          <Footer />
+          {!isInDepartment && <Footer />}
         </main>
       </div>
     </div>
