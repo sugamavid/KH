@@ -40,11 +40,11 @@ const HRDashboard = () => {
       case 'training':
         return <TrainingManagement />;
       case 'bylaws':
-        return <HRByLaws />;
+        return <HRByLaws setActiveModule={setActiveModule} />;
       case 'sops':
-        return <HRSOPs />;
+        return <HRSOPs setActiveModule={setActiveModule} />;
       case 'annexures':
-        return <HRAnnexures />;
+        return <HRAnnexures setActiveModule={setActiveModule} />;
       case 'reckoner':
         return <ToolsCalculators />;
       case 'reports':
