@@ -378,6 +378,567 @@ Once drafted, the policy shall be reviewed internally by:
     category: 'B. Recruitment, Selection & Appointment',
     content: 'Establishes uniform process for issuing signed appointment letters to newly joining employees while ensuring completion of all administrative and regulatory formalities.'
   },
+
+  // SECTION C: ONBOARDING & ACCESS CONTROL
+  sopC1: {
+    id: 'sopC1',
+    number: 'SOP C.1',
+    title: 'Orientation Program (HR & Departmental)',
+    searchTerms: ['orientation', 'induction', 'onboarding', 'training', 'introduction'],
+    category: 'C. Onboarding & Access Control',
+    content: 'Ensures structured and meaningful induction process for newly joined employees through comprehensive orientation covering HR policies, organizational values, statutory obligations, and department-specific workflows.'
+  },
+
+  sopC2: {
+    id: 'sopC2',
+    number: 'SOP C.2',
+    title: 'Uniform, ID Card & Biometric Enrollment',
+    searchTerms: ['uniform', 'id', 'card', 'biometric', 'enrollment', 'badge'],
+    category: 'C. Onboarding & Access Control',
+    content: 'Establishes standardised protocol for issuance of uniforms, ID cards, and biometric registration ensuring compliance with institutional safety, identity verification, and attendance policies.'
+  },
+
+  sopC3: {
+    id: 'sopC3',
+    number: 'SOP C.3',
+    title: 'HRMS & Payroll System Access Creation',
+    searchTerms: ['hrms', 'payroll', 'system', 'access', 'portal', 'login'],
+    category: 'C. Onboarding & Access Control',
+    content: 'Ensures timely and secure provisioning of access credentials to HRMS and Payroll Portal enabling employees to manage personal records, attendance, leave, and payslips effectively.'
+  },
+
+  sopC4: {
+    id: 'sopC4',
+    number: 'SOP C.4',
+    title: 'Policy Orientation & Confidentiality Briefing',
+    searchTerms: ['policy', 'orientation', 'confidentiality', 'briefing', 'training'],
+    category: 'C. Onboarding & Access Control',
+    content: 'Institutionalizes formal mechanism for orienting newly joined employees on hospital-wide policies, statutory obligations, ethical standards, and confidentiality expectations.'
+  },
+
+  sopC5: {
+    id: 'sopC5',
+    number: 'SOP C.5',
+    title: 'Credentialing & Clinical Privileging',
+    searchTerms: ['credentialing', 'privileging', 'clinical', 'medical', 'license'],
+    category: 'C. Onboarding & Access Control',
+    content: 'Ensures all clinical personnel possess verified credentials and are granted clinical privileges in accordance with qualifications, experience, scope of practice, and hospital policy.'
+  },
+
+  // SECTION D: EMPLOYEE RECORDS & STATUTORY COMPLIANCE
+  sopD1: {
+    id: 'sopD1',
+    number: 'SOP D.1',
+    title: 'Personnel File Creation & Document Archiving',
+    searchTerms: ['personnel', 'file', 'records', 'archiving', 'documents'],
+    category: 'D. Employee Records & Statutory Compliance',
+    content: 'Establishes structured, compliant, and secure method for creating, maintaining, and archiving employee personnel files ensuring proper documentation and ease of reference.'
+  },
+
+  sopD2: {
+    id: 'sopD2',
+    number: 'SOP D.2',
+    title: 'Document Verification & Retention Standards',
+    searchTerms: ['verification', 'retention', 'documents', 'validation', 'standards'],
+    category: 'D. Employee Records & Statutory Compliance',
+    content: 'Establishes standardised procedure for verifying employee-submitted documents and defines legally compliant retention standards for physical and digital employee records.'
+  },
+
+  sopD3: {
+    id: 'sopD3',
+    number: 'SOP D.3',
+    title: 'Statutory Compliance Filing & Registers',
+    searchTerms: ['statutory', 'compliance', 'filing', 'registers', 'legal', 'returns'],
+    category: 'D. Employee Records & Statutory Compliance',
+    content: 'Ensures strict adherence to statutory filing obligations and maintenance of mandated registers under applicable labour, employment, and healthcare laws.'
+  },
+
+  sopD4: {
+    id: 'sopD4',
+    number: 'SOP D.4',
+    title: 'Display Boards & Legal Disclosures Maintenance',
+    searchTerms: ['display', 'boards', 'notices', 'legal', 'disclosures'],
+    category: 'D. Employee Records & Statutory Compliance',
+    content: 'Ensures all legally mandated and policy-relevant information is prominently displayed at designated hospital locations in compliance with labour laws and transparency standards.'
+  },
+
+  sopD5: {
+    id: 'sopD5',
+    number: 'SOP D.5',
+    title: 'KYC/ESIC/UAN/Bank Account Mapping',
+    searchTerms: ['kyc', 'esic', 'uan', 'bank', 'account', 'pf', 'epf'],
+    category: 'D. Employee Records & Statutory Compliance',
+    content: 'Establishes structured process for collection, verification, and integration of KYC details, ESIC registration, UAN activation for EPF, and bank account mapping for salary disbursement.'
+  },
+
+  // SECTION E: ATTENDANCE & SHIFT MANAGEMENT
+  sopE1: {
+    id: 'sopE1',
+    number: 'SOP E.1',
+    title: 'Attendance Monitoring & Biometric Protocol',
+    searchTerms: ['attendance', 'biometric', 'monitoring', 'punch', 'tracking'],
+    category: 'E. Attendance & Shift Management',
+    content: 'Defines standardised process for recording, verifying, and managing employee attendance using biometric systems ensuring punctuality, transparency, and integration with payroll.'
+  },
+
+  sopE2: {
+    id: 'sopE2',
+    number: 'SOP E.2',
+    title: 'Shift Roster Creation and Approval',
+    searchTerms: ['shift', 'roster', 'schedule', 'duty', 'rotation'],
+    category: 'E. Attendance & Shift Management',
+    content: 'Defines process of preparing, reviewing, and approving duty rosters ensuring optimal staffing, uninterrupted operations, compliance with labour norms, and employee wellbeing.'
+  },
+
+  sopE3: {
+    id: 'sopE3',
+    number: 'SOP E.3',
+    title: 'Half-Day, Short Leave & Late Entry Management',
+    searchTerms: ['half-day', 'short', 'leave', 'late', 'entry', 'punctuality'],
+    category: 'E. Attendance & Shift Management',
+    content: 'Implements structured protocol for managing short durations of absence, delayed reporting, and early departures through standardised definitions, documentation, and approval workflows.'
+  },
+
+  sopE4: {
+    id: 'sopE4',
+    number: 'SOP E.4',
+    title: 'Weekly Off and Holiday Calendar Issuance',
+    searchTerms: ['weekly', 'off', 'holiday', 'calendar', 'rest', 'day'],
+    category: 'E. Attendance & Shift Management',
+    content: 'Ensures proper scheduling and communication of employee weekly offs and public holidays through institution-wide calendar while maintaining seamless hospital operations.'
+  },
+
+  // SECTION F: LEAVE MANAGEMENT
+  sopF1: {
+    id: 'sopF1',
+    number: 'SOP F.1',
+    title: 'Leave Application & Workflow Process',
+    searchTerms: ['leave', 'application', 'workflow', 'approval', 'request'],
+    category: 'F. Leave Management',
+    content: 'Establishes uniform and transparent process for applying, approving, tracking, and recording leave across all employee categories ensuring smooth workforce planning.'
+  },
+
+  sopF2: {
+    id: 'sopF2',
+    number: 'SOP F.2',
+    title: 'Emergency Leave Escalation Procedure',
+    searchTerms: ['emergency', 'leave', 'escalation', 'urgent', 'unplanned'],
+    category: 'F. Leave Management',
+    content: 'Formalizes standardised, time-sensitive protocol for reporting, documenting, and managing emergency leave scenarios ensuring minimal disruption to patient care and operations.'
+  },
+
+  sopF3: {
+    id: 'sopF3',
+    number: 'SOP F.3',
+    title: 'Special Leaves (Maternity, Paternity, Study, Bereavement)',
+    searchTerms: ['maternity', 'paternity', 'study', 'bereavement', 'special', 'leave'],
+    category: 'F. Leave Management',
+    content: 'Establishes structured process for applying, approving, and recording special category leaves in accordance with statutory entitlements and institutional policy.'
+  },
+
+  sopF4: {
+    id: 'sopF4',
+    number: 'SOP F.4',
+    title: 'Leave Encashment Process',
+    searchTerms: ['leave', 'encashment', 'cash', 'payment', 'settlement'],
+    category: 'F. Leave Management',
+    content: 'Defines standardised, fair, and legally compliant procedure for encashment of eligible accumulated leave ensuring transparency and financial accuracy.'
+  },
+
+  sopF5: {
+    id: 'sopF5',
+    number: 'SOP F.5',
+    title: 'Leave Without Pay (LOP) Tracking & Approval',
+    searchTerms: ['lop', 'leave', 'without', 'pay', 'unpaid', 'absence'],
+    category: 'F. Leave Management',
+    content: 'Defines structured process for approval, tracking, and recording of Leave Without Pay ensuring clarity in payroll deductions and workforce availability.'
+  },
+
+  // SECTION G: CODE OF CONDUCT & DISCIPLINARY CONTROL
+  sopG1: {
+    id: 'sopG1',
+    number: 'SOP G.1',
+    title: 'Dress Code Enforcement (Clinical/Non Clinical)',
+    searchTerms: ['dress', 'code', 'uniform', 'attire', 'appearance'],
+    category: 'G. Code of Conduct & Disciplinary Control',
+    content: 'Ensures professional, hygienic, and standardised appearance across all departments by prescribing and enforcing clear dress code for clinical and non-clinical personnel.'
+  },
+
+  sopG2: {
+    id: 'sopG2',
+    number: 'SOP G.2',
+    title: 'Ethical Conduct & Monitoring Protocol',
+    searchTerms: ['ethical', 'conduct', 'monitoring', 'integrity', 'values'],
+    category: 'G. Code of Conduct & Disciplinary Control',
+    content: 'Establishes standardised framework promoting and enforcing ethical behaviour ensuring integrity, professionalism, and patient-centred care while maintaining institutional reputation.'
+  },
+
+  sopG3: {
+    id: 'sopG3',
+    number: 'SOP G.3',
+    title: 'Conflict of Interest Declaration',
+    searchTerms: ['conflict', 'interest', 'declaration', 'disclosure', 'coi'],
+    category: 'G. Code of Conduct & Disciplinary Control',
+    content: 'Establishes transparent system for declaration, monitoring, and mitigation of actual or perceived conflicts of interest to uphold institutional integrity and clinical neutrality.'
+  },
+
+  sopG4: {
+    id: 'sopG4',
+    number: 'SOP G.4',
+    title: 'Reporting & Action on Misconduct',
+    searchTerms: ['misconduct', 'reporting', 'action', 'disciplinary', 'violation'],
+    category: 'G. Code of Conduct & Disciplinary Control',
+    content: 'Establishes transparent mechanism for reporting, investigating, and acting upon employee misconduct to maintain discipline, patient safety, and institutional reputation.'
+  },
+
+  sopG5: {
+    id: 'sopG5',
+    number: 'SOP G.5',
+    title: 'Intoxication, Behavioural Checks & Fitness to Work',
+    searchTerms: ['intoxication', 'behavioural', 'fitness', 'work', 'substance'],
+    category: 'G. Code of Conduct & Disciplinary Control',
+    content: 'Safeguards safety and professional environment by establishing standards for identifying, addressing, and managing cases related to substance intoxication or unfitness for duty.'
+  },
+
+  // SECTION H: PERFORMANCE MANAGEMENT
+  sopH1: {
+    id: 'sopH1',
+    number: 'SOP H.1',
+    title: 'Annual Goal Setting & KPI Process',
+    searchTerms: ['goal', 'setting', 'kpi', 'objectives', 'targets', 'performance'],
+    category: 'H. Performance Management',
+    content: 'Institutes formal mechanism for setting annual performance goals and KPIs ensuring role clarity, measurable targets, and alignment with institutional vision.'
+  },
+
+  sopH2: {
+    id: 'sopH2',
+    number: 'SOP H.2',
+    title: 'Mid-Year & Year-End Appraisals',
+    searchTerms: ['appraisal', 'review', 'evaluation', 'performance', 'assessment'],
+    category: 'H. Performance Management',
+    content: 'Establishes standardised process for conducting Mid-Year and Year-End Performance Appraisals enabling objective evaluation of deliverables, conduct, and alignment with KPIs.'
+  },
+
+  sopH3: {
+    id: 'sopH3',
+    number: 'SOP H.3',
+    title: 'Feedback Mechanisms (360° & Peer Review)',
+    searchTerms: ['feedback', '360', 'peer', 'review', 'evaluation'],
+    category: 'H. Performance Management',
+    content: 'Institutionalizes structured feedback systems including 360° reviews and peer assessments promoting continuous performance enhancement and team collaboration.'
+  },
+
+  sopH4: {
+    id: 'sopH4',
+    number: 'SOP H.4',
+    title: 'PIP (Performance Improvement Plan) Process',
+    searchTerms: ['pip', 'performance', 'improvement', 'plan', 'remediation'],
+    category: 'H. Performance Management',
+    content: 'Outlines structured and time-bound Performance Improvement Plan framework for employees whose performance falls short of expected standards.'
+  },
+
+  sopH5: {
+    id: 'sopH5',
+    number: 'SOP H.5',
+    title: 'Promotion Review & IJP (Internal Job Posting) Management',
+    searchTerms: ['promotion', 'ijp', 'internal', 'job', 'posting', 'career', 'growth'],
+    category: 'H. Performance Management',
+    content: 'Establishes transparent, merit-based framework for promotion review and Internal Job Posting encouraging internal mobility and recognising high performers.'
+  },
+
+  sopH6: {
+    id: 'sopH6',
+    number: 'SOP H.6',
+    title: 'Employee Recognition & Award Nomination',
+    searchTerms: ['recognition', 'award', 'nomination', 'appreciation', 'reward'],
+    category: 'H. Performance Management',
+    content: 'Establishes transparent Employee Recognition Framework rewarding exemplary conduct, outstanding performance, and values-aligned behaviour through formal Award Nomination process.'
+  },
+
+  // SECTION I: PAYROLL, COMPENSATION & ALLOWANCES
+  sopI1: {
+    id: 'sopI1',
+    number: 'SOP I.1',
+    title: 'Monthly Payroll Processing',
+    searchTerms: ['payroll', 'salary', 'processing', 'wages', 'compensation'],
+    category: 'I. Payroll, Compensation & Allowances',
+    content: 'Defines standardised and time-bound procedure for monthly payroll processing ensuring accurate salary computation, statutory compliance, and timely disbursement.'
+  },
+
+  sopI2: {
+    id: 'sopI2',
+    number: 'SOP I.2',
+    title: 'Overtime Logging & Approval',
+    searchTerms: ['overtime', 'ot', 'extra', 'hours', 'compensation'],
+    category: 'I. Payroll, Compensation & Allowances',
+    content: 'Defines authorised process for logging, approval, and compensation of overtime for eligible employees ensuring transparency and accurate tracking.'
+  },
+
+  sopI3: {
+    id: 'sopI3',
+    number: 'SOP I.3',
+    title: 'Allowance Disbursement Protocols',
+    searchTerms: ['allowance', 'disbursement', 'reimbursement', 'benefits'],
+    category: 'I. Payroll, Compensation & Allowances',
+    content: 'Institutionalizes clear mechanism for verification, approval, and disbursement of all employee allowances ensuring fairness, transparency, and proper accounting.'
+  },
+
+  sopI4: {
+    id: 'sopI4',
+    number: 'SOP I.4',
+    title: 'Bonus (Annual/Festival/Spot) Management',
+    searchTerms: ['bonus', 'annual', 'festival', 'spot', 'incentive'],
+    category: 'I. Payroll, Compensation & Allowances',
+    content: 'Establishes structured system for calculation, approval, and disbursement of bonus payments including annual, festival, and spot bonuses in accordance with statutory mandates.'
+  },
+
+  sopI5: {
+    id: 'sopI5',
+    number: 'SOP I.5',
+    title: 'Salary Revision & Increment Cycle',
+    searchTerms: ['salary', 'revision', 'increment', 'hike', 'raise'],
+    category: 'I. Payroll, Compensation & Allowances',
+    content: 'Establishes structured protocol for review, approval, and implementation of salary revisions and annual increments ensuring transparency and alignment with performance.'
+  },
+
+  sopI6: {
+    id: 'sopI6',
+    number: 'SOP I.6',
+    title: 'Salary Slip Dissemination & Helpdesk',
+    searchTerms: ['salary', 'slip', 'payslip', 'helpdesk', 'queries'],
+    category: 'I. Payroll, Compensation & Allowances',
+    content: 'Ensures timely, accurate, and secure dissemination of monthly salary slips and establishes formal salary helpdesk to address queries and discrepancies.'
+  },
+
+  // SECTION J: TRAINING, CERTIFICATION & DEVELOPMENT
+  sopJ1: {
+    id: 'sopJ1',
+    number: 'SOP J.1',
+    title: 'Training Needs Assessment Process',
+    searchTerms: ['training', 'needs', 'assessment', 'tna', 'development'],
+    category: 'J. Training, Certification & Development',
+    content: 'Institutes formal mechanism for identifying, documenting, and prioritizing training needs ensuring alignment with institutional goals and continuous professional development.'
+  },
+
+  sopJ2: {
+    id: 'sopJ2',
+    number: 'SOP J.2',
+    title: 'Induction & Refresher Training Program Calendar',
+    searchTerms: ['induction', 'refresher', 'training', 'calendar', 'schedule'],
+    category: 'J. Training, Certification & Development',
+    content: 'Establishes structured framework for conducting Induction and Refresher Training Programs ensuring familiarity with institutional values, protocols, and competencies.'
+  },
+
+  sopJ3: {
+    id: 'sopJ3',
+    number: 'SOP J.3',
+    title: 'Clinical Competency Validation Protocol',
+    searchTerms: ['clinical', 'competency', 'validation', 'skills', 'assessment'],
+    category: 'J. Training, Certification & Development',
+    content: 'Establishes systematic framework for assessing, documenting, and validating clinical competencies ensuring patient safety and continual skill upgradation.'
+  },
+
+  sopJ4: {
+    id: 'sopJ4',
+    number: 'SOP J.4',
+    title: 'External Training Reimbursement Workflow',
+    searchTerms: ['external', 'training', 'reimbursement', 'workshop', 'certification'],
+    category: 'J. Training, Certification & Development',
+    content: 'Lays down clear process for employees to apply for, seek approval, and claim reimbursement for external training programs, workshops, and certifications.'
+  },
+
+  sopJ5: {
+    id: 'sopJ5',
+    number: 'SOP J.5',
+    title: 'Certificate Recording & Training Tracker',
+    searchTerms: ['certificate', 'recording', 'training', 'tracker', 'documentation'],
+    category: 'J. Training, Certification & Development',
+    content: 'Ensures systematic collection, validation, recording, and tracking of all training-related certificates maintaining robust compliance trail and enabling audits.'
+  },
+
+  sopJ6: {
+    id: 'sopJ6',
+    number: 'SOP J.6',
+    title: 'Leadership Development & Succession Planning',
+    searchTerms: ['leadership', 'development', 'succession', 'planning', 'talent'],
+    category: 'J. Training, Certification & Development',
+    content: 'Establishes structured framework for identifying, developing, and retaining future leaders while ensuring continuity in key roles through formal succession planning.'
+  },
+
+  // SECTION K: TECHNOLOGY USAGE & DIGITAL SECURITY
+  sopK1: {
+    id: 'sopK1',
+    number: 'SOP K.1',
+    title: 'Employee Use of Internet, Email & Communication Tools',
+    searchTerms: ['internet', 'email', 'communication', 'tools', 'usage', 'policy'],
+    category: 'K. Technology Usage & Digital Security',
+    content: 'Defines responsible and secure use of internet, email services, and internal communication tools ensuring professional conduct, confidentiality, and cybersecurity compliance.'
+  },
+
+  sopK2: {
+    id: 'sopK2',
+    number: 'SOP K.2',
+    title: 'Password Management & IT Security Policy',
+    searchTerms: ['password', 'security', 'it', 'policy', 'cybersecurity'],
+    category: 'K. Technology Usage & Digital Security',
+    content: 'Establishes secure protocols for password creation, usage, update, and protection ensuring protection of patient data, hospital records, and institutional assets.'
+  },
+
+  sopK3: {
+    id: 'sopK3',
+    number: 'SOP K.3',
+    title: 'Digital Device Allocation & Return Protocol',
+    searchTerms: ['digital', 'device', 'allocation', 'laptop', 'mobile', 'equipment'],
+    category: 'K. Technology Usage & Digital Security',
+    content: 'Defines standardised process for issuance, tracking, and return of digital devices ensuring institutional asset protection and continuity in operations.'
+  },
+
+  sopK4: {
+    id: 'sopK4',
+    number: 'SOP K.4',
+    title: 'Remote Work Monitoring & Task Logging',
+    searchTerms: ['remote', 'work', 'monitoring', 'wfh', 'task', 'logging'],
+    category: 'K. Technology Usage & Digital Security',
+    content: 'Establishes structured protocol for monitoring remote work activities, tracking task completion, and ensuring productivity and accountability during remote assignments.'
+  },
+
+  sopK5: {
+    id: 'sopK5',
+    number: 'SOP K.5',
+    title: 'Cybersecurity Breach Reporting Protocol',
+    searchTerms: ['cybersecurity', 'breach', 'reporting', 'incident', 'security'],
+    category: 'K. Technology Usage & Digital Security',
+    content: 'Outlines standardised procedure for identifying, reporting, investigating, and mitigating cybersecurity breaches ensuring protection of data and operational continuity.'
+  },
+
+  // SECTION L: WELLNESS, WORK-LIFE BALANCE & EAP
+  sopL1: {
+    id: 'sopL1',
+    number: 'SOP L.1',
+    title: 'EAP Access (Employee Assistance Program)',
+    searchTerms: ['eap', 'employee', 'assistance', 'program', 'counselling', 'wellness'],
+    category: 'L. Wellness, Work-Life Balance & EAP',
+    content: 'Provides structured framework for employees to confidentially access professional counselling, mental health, and wellness support through institutionalized EAP.'
+  },
+
+  sopL2: {
+    id: 'sopL2',
+    number: 'SOP L.2',
+    title: 'Wellness Camps, Health Days & Fitness Drives',
+    searchTerms: ['wellness', 'camps', 'health', 'fitness', 'drives', 'activities'],
+    category: 'L. Wellness, Work-Life Balance & EAP',
+    content: 'Institutionalizes periodic organization of wellness camps, health awareness days, and fitness initiatives promoting preventive healthcare and holistic well-being.'
+  },
+
+  sopL3: {
+    id: 'sopL3',
+    number: 'SOP L.3',
+    title: 'Health Screening & Doctor on Call Framework',
+    searchTerms: ['health', 'screening', 'doctor', 'call', 'medical', 'checkup'],
+    category: 'L. Wellness, Work-Life Balance & EAP',
+    content: 'Establishes formalized framework for routine and emergency health screening and access to Doctor-on-Call service ensuring proactive care and occupational health safety.'
+  },
+
+  sopL4: {
+    id: 'sopL4',
+    number: 'SOP L.4',
+    title: 'Mental Health Support & Referral Flow',
+    searchTerms: ['mental', 'health', 'support', 'referral', 'counselling', 'wellness'],
+    category: 'L. Wellness, Work-Life Balance & EAP',
+    content: 'Establishes comprehensive protocol for identifying, supporting, and referring employees requiring mental health assistance ensuring confidentiality and professional care.'
+  },
+
+  sopL5: {
+    id: 'sopL5',
+    number: 'SOP L.5',
+    title: 'Work-Life Balance Support Initiatives',
+    searchTerms: ['work', 'life', 'balance', 'support', 'initiatives', 'wellness'],
+    category: 'L. Wellness, Work-Life Balance & EAP',
+    content: 'Institutionalizes various initiatives and policies supporting employee work-life balance promoting overall wellness, job satisfaction, and organizational productivity.'
+  },
+
+  // SECTION M: GRIEVANCE, COMPLAINTS & REDRESSAL
+  sopM1: {
+    id: 'sopM1',
+    number: 'SOP M.1',
+    title: 'Filing & Escalation of Grievances',
+    searchTerms: ['grievance', 'filing', 'escalation', 'complaint', 'issue'],
+    category: 'M. Grievance, Complaints & Redressal',
+    content: 'Establishes formal mechanism for employees to file grievances and defines clear escalation pathways ensuring timely and fair resolution.'
+  },
+
+  sopM2: {
+    id: 'sopM2',
+    number: 'SOP M.2',
+    title: 'Grievance Redressal Committee Functioning',
+    searchTerms: ['grievance', 'redressal', 'committee', 'resolution', 'hearing'],
+    category: 'M. Grievance, Complaints & Redressal',
+    content: 'Defines composition, functioning, and procedures of Grievance Redressal Committee ensuring impartial investigation and resolution of employee grievances.'
+  },
+
+  sopM3: {
+    id: 'sopM3',
+    number: 'SOP M.3',
+    title: 'Disciplinary Process: Show Cause, Hearings, Action',
+    searchTerms: ['disciplinary', 'show', 'cause', 'hearing', 'action', 'inquiry'],
+    category: 'M. Grievance, Complaints & Redressal',
+    content: 'Establishes structured disciplinary process including show cause notices, hearings, and actions ensuring fairness, transparency, and natural justice.'
+  },
+
+  sopM4: {
+    id: 'sopM4',
+    number: 'SOP M.4',
+    title: 'Appeals and Review Flow',
+    searchTerms: ['appeals', 'review', 'reconsideration', 'challenge'],
+    category: 'M. Grievance, Complaints & Redressal',
+    content: 'Defines formal process for employees to appeal disciplinary decisions or grievance outcomes ensuring fair review and reconsideration opportunities.'
+  },
+
+  sopM5: {
+    id: 'sopM5',
+    number: 'SOP M.5',
+    title: 'POSH Complaints & ICC Protocol',
+    searchTerms: ['posh', 'sexual', 'harassment', 'icc', 'complaints', 'committee'],
+    category: 'M. Grievance, Complaints & Redressal',
+    content: 'Establishes comprehensive protocol for handling complaints under Prevention of Sexual Harassment Act through Internal Complaints Committee ensuring legal compliance.'
+  },
+
+  // SECTION N: EXIT & SEPARATION MANAGEMENT
+  sopN1: {
+    id: 'sopN1',
+    number: 'SOP N.1',
+    title: 'Resignation Filing and Withdrawal Process',
+    searchTerms: ['resignation', 'filing', 'withdrawal', 'notice', 'period'],
+    category: 'N. Exit & Separation Management',
+    content: 'Defines formal process for employees to submit resignation, serve notice period, and procedures for withdrawal of resignation if applicable.'
+  },
+
+  sopN2: {
+    id: 'sopN2',
+    number: 'SOP N.2',
+    title: 'Exit Interview & Feedback Review Process',
+    searchTerms: ['exit', 'interview', 'feedback', 'review', 'separation'],
+    category: 'N. Exit & Separation Management',
+    content: 'Establishes structured process for conducting exit interviews, collecting feedback, and analyzing separation trends for organizational improvement.'
+  },
+
+  sopN3: {
+    id: 'sopN3',
+    number: 'SOP N.3',
+    title: 'Departmental Clearance & Asset Return',
+    searchTerms: ['clearance', 'asset', 'return', 'handover', 'exit'],
+    category: 'N. Exit & Separation Management',
+    content: 'Defines comprehensive clearance process ensuring proper handover of responsibilities, return of institutional assets, and closure of access rights.'
+  },
+
+  sopN4: {
+    id: 'sopN4',
+    number: 'SOP N.4',
+    title: 'Full & Final Settlement & Service Certificate Issuance',
+    searchTerms: ['full', 'final', 'settlement', 'fnf', 'service', 'certificate', 'relieving'],
+    category: 'N. Exit & Separation Management',
+    content: 'Establishes standardised process for calculating and disbursing full and final settlement dues and issuing service certificates to separated employees.'
+  }
   sop2: {
     id: 'sop2',
     number: 'SOP 002',
