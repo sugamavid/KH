@@ -174,57 +174,30 @@ const HRByLaws = () => {
       contentRef.current.scrollTop = 0;
     }
   };
+  const quickReferenceCards = [
     {
       title: 'Leave Entitlements',
       icon: Calendar,
       color: 'blue',
-      items: [
-        'Casual Leave: 12 days/year',
-        'Sick Leave: 10 days/year',
-        'Annual Leave: 20 days/year',
-        'Maternity Leave: 26 weeks',
-        'Paternity Leave: 7 days',
-        'Compensatory Off: As earned'
-      ]
+      items: quickReferenceData.leaveEntitlements
     },
     {
       title: 'Working Hours',
       icon: Clock,
       color: 'green',
-      items: [
-        'Daily: 8 hours',
-        'Weekly: 48 hours',
-        'Shifts: As per roster',
-        'Attendance: Biometric',
-        'Overtime: 1.5x pay rate',
-        'Break: As per schedule'
-      ]
+      items: quickReferenceData.workingHours
     },
     {
       title: 'Compensation Structure',
       icon: DollarSign,
       color: 'purple',
-      items: [
-        'HRA: 40% of basic',
-        'DA: 20% of basic',
-        'Allowances: 10% of basic',
-        'PF: 12% contribution',
-        'TDS: As per Income Tax',
-        'Gratuity: As per Act'
-      ]
+      items: quickReferenceData.compensation
     },
     {
       title: 'Probation & Notice',
       icon: Users,
       color: 'orange',
-      items: [
-        'Probation: 6 months',
-        'Extension: Max 3 months',
-        'Notice Period: 30 days',
-        'Retirement Age: 60 years',
-        'Confirmation: In writing',
-        'Exit Clearance: Required'
-      ]
+      items: quickReferenceData.probationNotice
     }
   ];
 
