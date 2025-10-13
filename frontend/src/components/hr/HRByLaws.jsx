@@ -15,20 +15,53 @@ const HRByLaws = () => {
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
   const contentRef = useRef(null);
 
-  // Navigation structure
+  // Complete Navigation structure for all 30 sections
   const navigation = [
-    { id: 'dashboard', title: 'Dashboard', icon: Home },
-    { id: 'preamble', title: 'Preamble', icon: BookOpen },
-    { id: 'section1', title: 'Section I: Definitions', icon: FileText },
-    { id: 'section2', title: 'Section II: Code of Conduct', icon: Shield },
-    { id: 'section3', title: 'Section III: Employment Terms', icon: Users },
-    { id: 'section4', title: 'Section IV: Leave Policy', icon: Calendar },
-    { id: 'section5', title: 'Section V: Performance', icon: Award },
-    { id: 'section6', title: 'Section VI: Disciplinary', icon: AlertCircle },
-    { id: 'section7', title: 'Section VII: Grievance', icon: Scale },
-    { id: 'section8', title: 'Section VIII: Separation', icon: Users },
-    { id: 'section9', title: 'Section IX: Amendments', icon: FileText }
+    { id: 'dashboard', title: 'Dashboard', icon: Home, category: 'Overview' },
+    { id: 'preamble', title: 'Preamble', icon: BookOpen, category: 'Introduction' },
+    { id: 'section1', title: 'Section I: Definitions', icon: FileText, category: 'Introduction' },
+    { id: 'section2', title: 'Section II: Code of Conduct', icon: Shield, category: 'Core Policies' },
+    { id: 'section3', title: 'Section III: Employment Terms', icon: Users, category: 'Core Policies' },
+    { id: 'section4', title: 'Section IV: Leave Policy', icon: Calendar, category: 'Core Policies' },
+    { id: 'section5', title: 'Section V: Performance Management', icon: Award, category: 'Performance' },
+    { id: 'section6', title: 'Section VI: Disciplinary Procedures', icon: AlertCircle, category: 'Compliance' },
+    { id: 'section7', title: 'Section VII: Grievance Redressal', icon: Scale, category: 'Compliance' },
+    { id: 'section8', title: 'Section VIII: Separation', icon: Users, category: 'Employee Lifecycle' },
+    { id: 'section9', title: 'Section IX: Probation', icon: Clock, category: 'Employee Lifecycle' },
+    { id: 'section10', title: 'Section X: Working Hours & Overtime', icon: Clock, category: 'Operations' },
+    { id: 'section11', title: 'Section XI: Compensation', icon: DollarSign, category: 'Compensation' },
+    { id: 'section12', title: 'Section XII: Medical Benefits', icon: Award, category: 'Benefits' },
+    { id: 'section13', title: 'Section XIII: Insurance', icon: Shield, category: 'Benefits' },
+    { id: 'section14', title: 'Section XIV: Training', icon: BookOpen, category: 'Development' },
+    { id: 'section15', title: 'Section XV: Career Development', icon: TrendingUp, category: 'Development' },
+    { id: 'section16', title: 'Section XVI: Transfer', icon: Users, category: 'Mobility' },
+    { id: 'section17', title: 'Section XVII: Promotion', icon: TrendingUp, category: 'Mobility' },
+    { id: 'section18', title: 'Section XVIII: Confidentiality', icon: Shield, category: 'Information Security' },
+    { id: 'section19', title: 'Section XIX: Intellectual Property', icon: FileText, category: 'Information Security' },
+    { id: 'section20', title: 'Section XX: Workplace Safety', icon: Shield, category: 'Health & Safety' },
+    { id: 'section21', title: 'Section XXI: Occupational Health', icon: Award, category: 'Health & Safety' },
+    { id: 'section22', title: 'Section XXII: Security', icon: Shield, category: 'Security' },
+    { id: 'section23', title: 'Section XXIII: IT Use', icon: FileText, category: 'Technology' },
+    { id: 'section24', title: 'Section XXIV: Communication', icon: FileText, category: 'Communication' },
+    { id: 'section25', title: 'Section XXV: Sexual Harassment', icon: AlertCircle, category: 'Workplace Culture' },
+    { id: 'section26', title: 'Section XXVI: Equal Opportunity', icon: Users, category: 'Workplace Culture' },
+    { id: 'section27', title: 'Section XXVII: Sustainability', icon: BookOpen, category: 'Corporate Responsibility' },
+    { id: 'section28', title: 'Section XXVIII: CSR', icon: Award, category: 'Corporate Responsibility' },
+    { id: 'section29', title: 'Section XXIX: Compliance', icon: CheckCircle, category: 'Governance' },
+    { id: 'section30', title: 'Section XXX: Amendments', icon: FileText, category: 'Governance' }
   ];
+
+  // Group navigation by category
+  const navigationByCategory = useMemo(() => {
+    const grouped = {};
+    navigation.forEach(nav => {
+      if (!grouped[nav.category]) {
+        grouped[nav.category] = [];
+      }
+      grouped[nav.category].push(nav);
+    });
+    return grouped;
+  }, []);
 
   // Dashboard data extracted from by-laws
   const quickReferenceCards = [
