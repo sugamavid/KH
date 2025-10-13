@@ -220,18 +220,48 @@ const HRByLaws = ({ setActiveModule }) => {
 
   const renderDashboard = () => (
     <div className="space-y-6">
-      {/* Board Approval Banner */}
-      <div className="bg-gradient-to-r from-amber-50 to-amber-100 border-l-4 border-amber-600 rounded-lg p-6 shadow-md">
-        <div className="flex items-start space-x-4">
-          <div className="w-12 h-12 rounded-full bg-amber-600 flex items-center justify-center flex-shrink-0">
-            <CheckCircle className="w-6 h-6 text-white" />
+      {/* Enhanced Board Approval Banner */}
+      <div className="relative bg-gradient-to-br from-amber-50 via-yellow-50 to-amber-100 border-2 border-amber-400 rounded-2xl p-8 shadow-xl overflow-hidden">
+        <div className="absolute top-0 right-0 w-64 h-64 bg-amber-200 rounded-full opacity-10 -mr-32 -mt-32"></div>
+        <div className="absolute bottom-0 left-0 w-48 h-48 bg-yellow-200 rounded-full opacity-10 -ml-24 -mb-24"></div>
+        <div className="relative flex items-start space-x-6">
+          <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-amber-600 to-amber-700 flex items-center justify-center flex-shrink-0 shadow-lg">
+            <CheckCircle className="w-8 h-8 text-white" />
           </div>
           <div className="flex-1">
-            <h3 className="text-lg font-bold text-amber-900 mb-1">Board Approved Document</h3>
-            <p className="text-sm text-amber-800">
-              This document has been officially approved by the Board of Directors of Koyili Hospital 
-              and is effective from February 1, 2024. All employees are required to read, understand, 
-              and comply with these by-laws.
+            <div className="flex items-center space-x-3 mb-2">
+              <h3 className="text-2xl font-bold text-amber-900">Official Board-Approved Document</h3>
+              <span className="px-3 py-1 bg-amber-600 text-white text-xs font-bold rounded-full shadow-sm">
+                CERTIFIED
+              </span>
+            </div>
+            <p className="text-base text-amber-900 mb-3 leading-relaxed">
+              This comprehensive Human Resources By-Laws document has been officially reviewed, ratified, 
+              and approved by the Board of Directors of Koyili Hospital in their meeting held on 
+              <span className="font-bold"> January 15, 2024</span>. These by-laws are effective from 
+              <span className="font-bold"> February 1, 2024</span> and supersede all previous HR policies.
+            </p>
+            <div className="grid grid-cols-4 gap-4 pt-4 border-t border-amber-300">
+              <div>
+                <p className="text-xs text-amber-700 font-semibold">Document Code</p>
+                <p className="text-sm font-bold text-amber-900">KH-HR-BL/001/2024</p>
+              </div>
+              <div>
+                <p className="text-xs text-amber-700 font-semibold">Version</p>
+                <p className="text-sm font-bold text-amber-900">2.0</p>
+              </div>
+              <div>
+                <p className="text-xs text-amber-700 font-semibold">Classification</p>
+                <p className="text-sm font-bold text-amber-900">Official - Binding</p>
+              </div>
+              <div>
+                <p className="text-xs text-amber-700 font-semibold">Next Review</p>
+                <p className="text-sm font-bold text-amber-900">January 2027</p>
+              </div>
+            </div>
+            <p className="text-sm text-amber-800 mt-4 italic">
+              All employees, contractors, and personnel associated with Koyili Hospital are required to 
+              read, understand, acknowledge, and comply with these by-laws in their entirety.
             </p>
           </div>
         </div>
