@@ -1723,33 +1723,94 @@ export const byLawsData = {
   section18: {
     id: 'section18',
     number: 'SECTION XVIII',
-    title: 'CONFIDENTIALITY AND DATA PROTECTION',
-    searchTerms: ['confidentiality', 'data protection', 'privacy', 'information security'],
+    title: 'ATTENDANCE, PUNCTUALITY, AND TIME MANAGEMENT',
+    searchTerms: ['attendance', 'punctuality', 'time management', 'working hours', 'tardiness', 'absenteeism'],
     subsections: [
       {
         number: '18.1',
-        title: 'Confidentiality Obligations',
-        content: 'All employees must maintain strict confidentiality regarding:',
+        title: 'Attendance Policy - Expectations and Requirements',
+        content: 'Regular attendance and punctuality are fundamental employment obligations essential for operational efficiency and quality patient care:',
         points: [
-          'Patient medical records and personal information.',
-          'Hospital business strategies, plans, and financial information.',
-          'Proprietary processes, methodologies, and systems.',
-          'Employee personal and salary information.',
-          'Any information marked or understood to be confidential.',
-          'Confidentiality obligations continue after employment ends.'
+          'Attendance Obligation: All employees expected to report to work regularly as per assigned schedule. Attendance is core job requirement and performance metric. Irregular attendance affects team productivity, patient care, and creates burden on colleagues.',
+          'Punctuality Requirement: Employees must report at assigned start time ready to commence work. Late arrival disrupts operations, handovers, and team functioning. Consistent punctuality demonstrates professionalism and commitment.',
+          'Scheduled Working Days: Employees work assigned days per work schedule/roster - 5-day or 6-day work week as per role, Shift rosters for 24x7 operations, On-call duties as applicable. Holiday and weekend work as per operational needs and roster.',
+          'Flexibility Limitations: While Hospital accommodates personal needs reasonably through leave policies, attendance flexibility has limits due to - Patient care continuity requirements, Staffing level needs for safe operations, Team coordination dependencies, 24x7 emergency readiness.',
+          'Attendance Tracking: Attendance recorded through biometric system, card punch, or digital attendance. Employees responsible for marking attendance accurately at shift start and end. Manual entries require supervisor approval and justification.',
+          'Remote Work Attendance: Employees approved for remote work must maintain regular hours and availability. Attendance marked through system login/logout or as per remote work policy. Deliverable completion tracked as attendance proxy.'
         ]
       },
       {
         number: '18.2',
-        title: 'Data Protection Compliance',
-        content: 'Adherence to data protection laws:',
+        title: 'Tardiness and Lateness',
+        content: 'Occasional lateness understandable, but habitual tardiness is performance issue requiring correction:',
         points: [
-          'Compliance with applicable data protection and privacy laws.',
-          'Collect and process personal data only for legitimate purposes.',
-          'Implement appropriate security measures.',
-          'Provide data subjects rights as per law.',
-          'Report data breaches as per legal requirements.',
-          'Regular training on data protection provided.'
+          'Grace Period: Grace period of 10-15 minutes beyond scheduled start time before considered late. Grace accommodates traffic, minor delays. Grace is privilege, not right - still expected to arrive on time.',
+          'Reporting Lateness: If late, inform supervisor immediately via call/message with expected arrival time. Allows operational adjustments and demonstrates responsibility.',
+          'Tardiness Consequences: First 3 instances in month - Verbal counseling and warning, 4-5 instances in month - Written warning and loss of pay for late duration, More than 5 instances - Final written warning and disciplinary action, Persistent tardiness despite warnings - Termination for cause. Tardiness tracked monthly and quarterly.',
+          'Late Deductions: Late arrival beyond grace period may result in proportionate salary deduction. Repeated lateness impacts attendance bonus or incentives.',
+          'Valid Reasons: Lateness due to genuine reasons (medical emergency, accident, public transport breakdown) treated leniently with proper documentation. Advance intimation expected where possible.',
+          'Pattern Analysis: HR and supervisors monitor lateness patterns. Consistent lateness same day/time may indicate scheduling issue needing discussion. Habitual lateness post-leave or weekends addressed specifically.'
+        ]
+      },
+      {
+        number: '18.3',
+        title: 'Absenteeism and Unauthorized Absence',
+        content: 'Unplanned or unauthorized absences disrupt operations and are serious policy violations:',
+        points: [
+          'Authorized Absence: Absence authorized through - Approved leave applications, Medical emergencies with same-day intimation and subsequent documentation, Authorized work assignments outside workplace, Compensatory off or time-off-in-lieu.',
+          'Unauthorized Absence: Absence without prior leave approval, intimation, or valid reason. Includes - Not reporting without informing supervisor, Leaving early without permission, Extended lunch breaks or breaks. Unauthorized absence is misconduct.',
+          'Same-Day Absence Intimation: If unable to report due to sudden illness or emergency, inform supervisor immediately (within 2 hours of shift start) via - Phone call (preferred), SMS/WhatsApp message if call not possible, Email in extreme situations. Message must include reason and expected return date.',
+          'Documentation: Submit leave application and medical certificate/documentation immediately upon return. Absence remains unauthorized until documents submitted and approved. Supervisor may reject documentation if inadequate or suspicious.',
+          'Consequences of Unauthorized Absence: One day unauthorized absence - Loss of pay for absent day(s), counseling, two days unauthorized absence - Written warning, loss of pay, impact on performance rating, three consecutive unauthorized days - Treated as voluntary abandonment of employment (absconding), termination process initiated. Frequent unauthorized absences - Disciplinary action up to termination.',
+          'Patterns of Absenteeism: HR monitors absenteeism patterns - Frequent Monday or Saturday absences (suspicious), Absences immediately before/after holidays (extending holidays), Absences during peak periods or after weekends. Patterns addressed through counseling and if needed, disciplinary action.',
+          'Excessive Absenteeism: Even with valid reasons, excessive absenteeism (beyond leave entitlements) is concern. Depletes leave balance, May indicate health or personal issues needing support, May require accommodations or adjustments, Persistent excessive absenteeism may lead to performance review or medical incapacity evaluation.'
+        ]
+      },
+      {
+        number: '18.4',
+        title: 'Attendance Regularization',
+        content: 'Process to correct attendance discrepancies due to genuine reasons:',
+        points: [
+          'Need for Regularization: Attendance regularization required when - Forgot to punch in/out due to urgency or oversight, Biometric system failure or malfunction, Out of office for authorized work (meetings, training, site visits), Early departure with permission but not recorded. Regularization is for genuine discrepancies, not to cover unauthorized absence.',
+          'Regularization Request: Employee submits attendance regularization request through HRMS or form specifying - Date(s) of discrepancy, Actual work hours/attendance status, Reason for discrepancy, Supporting information (email, meeting invite, etc.). Request within 2-3 days of occurrence.',
+          'Supervisor Approval: Supervisor verifies genuineness of request and work performance that day. Approves or rejects with rationale. HR processes approved regularization updating attendance records.',
+          'Limits on Regularization: Maximum 2-3 regularizations per month typically allowed. Excessive regularization requests indicate non-compliance with attendance procedures. May result in warning or denial of future regularizations. Managers counseled on excessive team regularization approvals.',
+          'Audit and Monitoring: HR audits regularizations periodically for patterns of misuse. Suspicious regularizations investigated. False regularizations are misconduct subject to disciplinary action.'
+        ]
+      },
+      {
+        number: '18.5',
+        title: 'Leave vs. Absence Management',
+        content: 'Clear distinction between planned leave and unplanned absence:',
+        points: [
+          'Planned Leave: Advance leave applications as per leave policy. Leave approved before absence. Recorded as leave (CL, EL, SL, etc.) as per entitlement. Leave balance adjusted accordingly.',
+          'Unplanned Absence: Same-day sick leave (with intimation and medical certificate). Emergency situations requiring immediate absence. Initially marked as absent, converted to leave upon application and approval. If leave balance insufficient or approval denied, remains unauthorized absence with loss of pay.',
+          'Leave Without Pay (LWP): When leave balance exhausted, absence may be approved as LWP. LWP requires approval and valid reason. LWP days not paid and may affect benefits calculation. Prolonged LWP may require special approval and impact employment status.',
+          'Medical Leave Documentation: Sick leave beyond 3 consecutive days requires medical certificate from registered practitioner. Certificate must specify - Patient name, Dates of illness/treatment, Practitioner name, signature, and registration number. Hospital medical officer may verify or examine employee if doubt exists.'
+        ]
+      },
+      {
+        number: '18.6',
+        title: 'Time Management and Productivity',
+        content: 'Effective time management expected from all employees:',
+        points: [
+          'Working Hours Utilization: Working hours for productive work, not personal activities. Minimize personal calls, messages, browsing during work time. Take breaks at designated times without impacting work.',
+          'Meeting Punctuality: Arrive on time for meetings, handovers, clinical rounds, patient appointments. Late arrival wastes others time and disrupts proceedings. Critical in healthcare where delays affect patient care.',
+          'Task Prioritization: Prioritize urgent and important tasks. Meet deadlines and commitments. Communicate early if deadlines at risk due to workload.',
+          'Distractions Minimization: Avoid excessive socializing during work hours. Personal matters handled during breaks or outside work hours. Focus and concentration on work tasks.',
+          'Time Theft: Clocking in for colleague (buddy punching) or falsifying time records is theft and fraud. Immediate termination for time theft. Both parties (one clocking and one asking) subject to termination.'
+        ]
+      },
+      {
+        number: '18.7',
+        title: 'Shift Work and Roster Management',
+        content: 'Special considerations for shift workers and roster-based schedules:',
+        points: [
+          'Shift Roster: Shift rosters published in advance (typically 2-4 weeks). Employees expected to work assigned shifts. Roster changes must be approved by supervisor. Shift swaps between employees allowed with advance notice and approval.',
+          'Shift Handover: Critical in patient care. Employees must arrive early enough to receive handover from outgoing shift. Leaving before handover to incoming shift is prohibited. Handover documentation and communication essential.',
+          'On-Call Duty: On-call roster published in advance. On-call employees must be reachable and able to report within specified time (typically 30-60 minutes). Failure to respond to on-call is serious misconduct.',
+          'Shift Allowances: Night shift allowance for shifts between 10 PM - 6 AM. Weekend and holiday shift differentials as per policy. On-call allowance for on-call hours.',
+          'Roster Fairness: Rosters balanced to ensure - Equitable distribution of unpopular shifts (nights, weekends), Adequate rest between shifts (minimum 8-10 hours), Considerations for personal circumstances where feasible. Roster concerns addressed through supervisor.'
         ]
       }
     ]
