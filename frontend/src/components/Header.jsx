@@ -14,8 +14,8 @@ const Header = ({ onLogout, sidebarOpen, setSidebarOpen }) => {
   const unreadCount = notifications.filter(n => n.unread).length;
 
   return (
-    <header className="fixed top-0 left-0 right-0 h-20 bg-white border-b-2 border-slate-200 z-50 shadow-sm">
-      <div className="h-full px-6 flex items-center justify-between">
+    <header className="fixed top-0 left-0 right-0 h-16 md:h-20 bg-white border-b-2 border-slate-200 z-50 shadow-sm">
+      <div className="h-full px-3 md:px-6 flex items-center justify-between">
         {/* Left Section - Logo & Menu */}
         <div className="flex items-center space-x-6">
           <button
