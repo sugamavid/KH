@@ -918,42 +918,125 @@ export const byLawsData = {
   section10: {
     id: 'section10',
     number: 'SECTION X',
-    title: 'WORKING HOURS, SHIFTS, AND OVERTIME',
-    searchTerms: ['working hours', 'shifts', 'overtime', 'schedule', 'roster'],
+    title: 'EMPLOYEE BENEFITS AND WELFARE',
+    searchTerms: ['benefits', 'welfare', 'insurance', 'medical', 'health', 'perks', 'facilities'],
     subsections: [
       {
         number: '10.1',
-        title: 'Standard Working Hours',
-        content: 'Working hours and shift arrangements:',
+        title: 'Statutory Benefits - Legal Compliance',
+        content: 'The Hospital ensures full compliance with all statutory benefits mandated by Indian labor laws, providing employees with legally required protections and benefits:',
         points: [
-          'Standard working day: 8 hours excluding breaks.',
-          'Standard working week: 48 hours for full-time employees.',
-          'Break time: As per shift schedule, not counted as working hours.',
-          'Shift timings determined by operational requirements.',
-          'Advance notice provided for shift changes where possible.'
+          'Employees Provident Fund (EPF): Mandatory retirement savings scheme under EPF Act, 1952. Both employer and employee contribute 12% of basic salary monthly. Contributions deposited with EPFO. Employees receive Universal Account Number (UAN) for tracking and portability. PF accumulation includes interest (currently ~8.15% annually). Withdrawable upon retirement, resignation (after completion of conditions), or specified circumstances. Partial withdrawal allowed for specific purposes (medical emergency, education, housing, marriage) after minimum service.',
+          'Employees State Insurance (ESI): For employees earning below wage ceiling (currently INR 21,000/month). Comprehensive medical and cash benefit scheme under ESI Act, 1948. Employee contributes 0.75% and employer contributes 3.25% of wages. Coverage includes medical care at ESI dispensaries/hospitals, sickness benefits, maternity benefits, disablement benefits, and dependent benefits. Family members also covered under medical benefits.',
+          'Gratuity: Lump sum payment to employees with minimum 5 years continuous service as per Payment of Gratuity Act, 1972. Calculated as 15 days of last drawn salary for each completed year of service. Maximum limit INR 20 lakhs or as per amendments. Payable on retirement, resignation (after 5 years), death, or disablement. Gratuity is non-contributory employer obligation.',
+          'Bonus: Annual bonus as per Payment of Bonus Act, 1965, for employees earning below specified salary threshold. Minimum bonus 8.33% of annual earnings or INR 100, maximum 20%. Calculation based on eligible wages. Payable typically during Diwali season or financial year-end. Hospital may provide higher bonus voluntarily.',
+          'Maternity Benefit: 26 weeks paid maternity leave for first two children, 12 weeks for third and subsequent children as per Maternity Benefit Act, 1961. Includes pre-natal and post-natal leave. Crèche facilities mandated for establishments with 50+ employees. Work from home option for certain roles post-maternity. Medical bonus for pregnancy expenses.',
+          'Professional Tax: Deduction as per applicable state professional tax laws. Varies by state and salary slab. Deducted from salary and remitted to state government. Certificate of deduction provided annually.',
+          'Weekly Off: At least one day off per week as per Shops and Establishments Act. For 6-day work week, typically Sunday. For shift workers, roster ensures weekly off. Two weekly offs may be provided where feasible.',
+          'Annual Leave: Minimum earned leave/privilege leave as per applicable Shops and Establishments Act (typically 15-21 days annually for adults). Hospital provides enhanced leave beyond statutory minimum.',
+          'Overtime Payment: For roles covered under Factories Act or Shops Act, overtime payment at twice the ordinary rate of wages for work beyond standard hours. Hospital complies with all overtime regulations.',
+          'National and Festival Holidays: Paid holidays for national holidays (Republic Day, Independence Day, Gandhi Jayanti) and 5-6 festival holidays as per Negotiable Instruments Act and state notifications.',
+          'Notice Period on Termination: Minimum notice period or payment in lieu as per Industrial Employment (Standing Orders) Act and employment contract.',
+          'Retrenchment Compensation: For employees with minimum one year service, compensation as per Industrial Disputes Act (15 days average pay for each completed year) in case of retrenchment.'
         ]
       },
       {
         number: '10.2',
-        title: 'Overtime Policy',
-        content: 'Overtime work provisions:',
+        title: 'Health and Medical Benefits',
+        content: 'Comprehensive health coverage ensures employees and families receive quality medical care without financial burden:',
         points: [
-          'Overtime requires prior approval from supervisor.',
-          'Overtime calculated beyond standard working hours.',
-          'Overtime compensation: 1.5 times regular hourly rate.',
-          'Compensatory off may be granted in lieu of overtime payment.',
-          'Overtime records maintained for compliance purposes.',
-          'Emergency overtime may be required in critical situations.'
+          'Group Health Insurance: Comprehensive mediclaim policy covering hospitalization, surgeries, ICU, room rent, and medical expenses. Sum insured ranging from INR 3 lakhs to INR 10 lakhs depending on employee grade. Coverage includes employee, spouse, and dependent children. Cashless treatment at network hospitals. Reimbursement for non-network hospitalization. Annual premium fully paid by Hospital.',
+          'Top-up Health Insurance: Additional voluntary top-up coverage available for employees to purchase at discounted group rates for enhanced sum insured.',
+          'Group Personal Accident Insurance: Coverage for death or disability due to accident. Sum assured ranges from INR 5 lakhs to INR 50 lakhs based on grade. 24x7 worldwide coverage. Benefits payable to nominee in case of death or to employee in case of disability.',
+          'In-House Medical Facilities: Free consultation with Hospital medical officers for employees. Subsidized diagnostic tests and medications at Hospital pharmacy (typically 20-40% discount). Preventive health check-ups annually for employees above 40 years age.',
+          'Medical Reimbursement: Monthly medical allowance or annual reimbursement for outpatient medical expenses (consultation, medicines, diagnostics) for self and family. Submission of bills required. Typically INR 15,000-25,000 annually.',
+          'Critical Illness Insurance: Optional or employer-sponsored coverage for critical illnesses (cancer, heart attack, stroke, kidney failure, major organ transplant). Lump sum payout on diagnosis. Helps cover treatment costs and income loss.',
+          'Maternity Medical Coverage: Enhanced maternity medical coverage including pre-natal consultations, delivery (normal/cesarean), post-natal care, and newborn care. Coverage under group health insurance plus additional employer support.',
+          'Occupational Health Services: Pre-employment medical examination, Periodic health surveillance for specific roles (clinical staff, radiology, laboratory), Vaccination programs (Hepatitis B, seasonal flu), Occupational health counseling.',
+          'Mental Health Support: Access to counseling and mental health professionals, Employee Assistance Program (EAP) providing confidential psychological counseling, stress management workshops.',
+          'Vision Care: Annual eye check-ups for computer-intensive roles, Reimbursement for prescription eyeglasses or contact lenses (typically INR 2,000-5,000).',
+          'Dental Care: Basic dental care coverage under health insurance or separate dental plan. Includes preventive cleanings, fillings, extractions, and emergency dental care.',
+          'Medical Emergency Support: 24x7 emergency medical support at Hospital, Ambulance facility for medical emergencies during duty, Emergency contact protocols for off-duty medical emergencies.'
         ]
       },
       {
         number: '10.3',
-        title: 'Shift Allowances',
-        content: 'Employees working in shifts may be eligible for:',
+        title: 'Financial and Retirement Benefits',
+        content: 'Long-term financial security and retirement planning support beyond statutory requirements:',
         points: [
-          'Night shift allowance for shifts between 10 PM and 6 AM.',
-          'Shift rotation as per departmental requirements.',
-          'Adequate rest period between consecutive shifts.'
+          'Enhanced Provident Fund: Hospital may provide employer PF contribution higher than statutory 12% for certain senior grades (e.g., 15% or 18%), enhancing retirement corpus.',
+          'Superannuation / Pension Scheme: Defined contribution pension plan for eligible senior employees. Employer contributes percentage of salary (typically 10-15%) to superannuation fund. Corpus grows through investments. Upon retirement, provides lump sum or annuity. Portable across employers.',
+          'Voluntary Provident Fund (VPF): Employees can contribute additional voluntary amount above 12% to PF (up to 100% of basic), earning same PF interest rate (tax-free). Helps build retirement corpus.',
+          'National Pension System (NPS): Opt-in pension scheme with employer contribution. Additional retirement savings vehicle. Tax benefits on contributions.',
+          'Life Insurance: Group Term Life Insurance covering employee life. Sum assured ranges from INR 5 lakhs to INR 50 lakhs or multiple of annual salary based on grade. Premium paid by employer. Benefit payable to nominee on employee death during service.',
+          'Loan Facilities: Interest-free or low-interest loans for - Medical emergencies (up to 3 months salary), Education (for employee or dependent children - up to INR 2 lakhs), Housing (as per policy, typically substantial amounts with longer repayment), Vehicle purchase (two-wheeler/four-wheeler loans), Festival advance (Diwali, Puja advance), Personal emergency loans. Loans recovered through monthly salary deductions. Eligibility based on tenure and repayment capacity.',
+          'Emergency Financial Assistance: Grants or interest-free loans for genuine emergencies - serious illness, family crisis, natural calamity affecting employee. Assistance provided on case-by-case basis.',
+          'Salary Advances: Advance salary (typically 1-2 months) in case of urgent financial need. Recovered from subsequent salaries.',
+          'Leave Encashment Facility: Encashment of accumulated earned leave once annually during service. Full encashment on retirement/separation.',
+          'Retirement Gratuity: Gratuity as per Payment of Gratuity Act. Additionally, enhanced gratuity or golden handshake for long-serving employees (25+ years) over and above statutory gratuity at employer discretion.',
+          'Post-Retirement Medical Benefit: Extended health insurance coverage for retirees and spouses for certain number of years post-retirement, with premium either subsidized or fully paid by employer depending on service years.'
+        ]
+      },
+      {
+        number: '10.4',
+        title: 'Work-Life Balance and Family Support',
+        content: 'Benefits supporting employees in balancing professional and personal life, enhancing family welfare:',
+        points: [
+          'Flexible Work Arrangements: Flexible working hours for eligible roles and circumstances, Work from home / remote work options where feasible, Compressed work weeks (longer days, fewer days per week) in certain roles, Part-time work options for specific situations (new mothers, employees pursuing education, senior citizens).',
+          'Child Care Support: On-site crèche facility for employees with young children (as per Maternity Benefit Act requirement for 50+ employee establishments), Subsidized daycare services, Extended maternity leave beyond statutory requirement, Paternity leave for fathers, Adoption leave for adoptive parents.',
+          'Education Assistance: Reimbursement for dependent children\'s school/college fees (typically up to specified limit per child per annum), Scholarships for meritorious children of employees, Educational loans at concessional interest rates, Study leave and financial support for employees pursuing job-related education.',
+          'Family Events Support: Leave and financial assistance for marriages - employee own marriage, dependent children marriages, Special leave for family events - childbirth, adoption, festivals, Bereavement leave and support for family loss.',
+          'Festival Advances and Gifts: Festival bonus or gift vouchers during major festivals (Diwali, Eid, Christmas, Pongal, etc.), Festival advance salary to help with celebrations, Gifts or hampers on special occasions.',
+          'Employee Family Health Programs: Annual family health check-ups at subsidized rates, Health awareness sessions for employees and families, Vaccination camps for family members, Wellness programs accessible to families.',
+          'Transportation Support: Company-provided transport for employees in specific locations or shifts, Transport allowance to cover commuting expenses, Park and ride facilities, Bicycle/two-wheeler parking, Carpooling initiatives and support.',
+          'Accommodation Assistance: Hospital accommodation for employees in certain roles or locations (doctors on call, remote posting staff), Accommodation allowance or rent subsidy for transferred employees, Assistance in finding accommodation in new cities for transfers.',
+          'Recreation and Social Activities: Annual day celebrations and family picnics, Sports days and inter-department competitions, Festival celebrations at Hospital, Family members invited to Hospital events, Employee clubs and interest groups (sports, cultural, book club).',
+          'Relocation Support: Comprehensive relocation assistance for employees transferred to other locations - Packing and transportation of household goods, Temporary accommodation at new location, Travel expenses for family, Joining assistance / settling-in allowance, Assistance in school admissions for children at new location, Spouse job search support in new location.'
+        ]
+      },
+      {
+        number: '10.5',
+        title: 'Cafeteria and Food Services',
+        content: 'Nutritious, hygienic, and subsidized food services supporting employee health and convenience:',
+        points: [
+          'Staff Cafeteria: In-house cafeteria providing breakfast, lunch, snacks, and dinner, Subsidized meal prices (typically 40-60% of actual cost subsidized by Hospital), Separate vegetarian and non-vegetarian options, Special dietary options (diabetic-friendly, low-sodium, etc.) on request.',
+          'Meal Vouchers: Meal vouchers or coupons provided to employees monthly, Redeemable at Hospital cafeteria, May be used for self or guests visiting employee.',
+          'Food Quality and Safety: Regular inspection of cafeteria hygiene and food quality, Compliance with food safety regulations, Nutritionist consultation on menu planning, Employee feedback mechanism for menu improvements.',
+          'Night Shift Meals: Free or highly subsidized meals for night shift employees, Hot meals available 24x7, Special consideration for nutritional needs of night shift workers.',
+          'Vending Machines: Tea, coffee, and beverage vending machines in various locations, Subsidized or free tea/coffee for employees, Healthy snack vending options.',
+          'Special Meal Programs: Lunch hosted by management periodically, Team lunch or dinner on achievements or festivals, Birthday celebrations and treats.',
+          'Pantry Facilities: Microwave, refrigerator, and pantry facilities in departments, Employees can bring and heat homemade food, Provide plates, cutlery, and glasses.'
+        ]
+      },
+      {
+        number: '10.6',
+        title: 'Professional Development and Learning Benefits',
+        content: 'Investment in employee growth through comprehensive learning and development support detailed in Section XV (Training and Development), summarized here:',
+        points: [
+          'Sponsored Training Programs: Technical and soft skills training programs, Leadership development for managerial staff, Clinical training and medical education for healthcare professionals.',
+          'Certification Support: Financial support for job-related professional certifications (ACLS, BLS, Six Sigma, PMP, etc.), Study leave for certification examinations, Certification exam fees reimbursement.',
+          'Higher Education Sponsorship: Sponsorship for relevant postgraduate programs (MBA, MPH, specialized diplomas), Partial or full tuition fee coverage with service bond, Study leave or work schedule adjustments during course.',
+          'Conference and Seminar Participation: Sponsorship for attending national/international conferences, Opportunity to present papers or research at conferences, Travel and accommodation support.',
+          'Library and Learning Resources: Access to medical library, online journals, research databases, E-learning platforms and online course subscriptions, Books and reference materials.',
+          'Mentoring and Coaching: Formal mentoring programs pairing junior staff with senior professionals, Executive coaching for leadership roles, Career guidance and counseling.',
+          'Cross-Functional Exposure: Job rotation opportunities for skill broadening, Project assignments outside primary role, Inter-departmental committees and task forces.'
+        ]
+      },
+      {
+        number: '10.7',
+        title: 'Additional Perquisites and Benefits',
+        content: 'Various perks and privileges enhancing employee experience and satisfaction:',
+        points: [
+          'Staff Discount on Medical Services: Employees and immediate family members receive substantial discount (typically 30-50%) on medical services - Consultation fees, Diagnostic tests, Surgeries and procedures, Pharmacy medicines, Hospitalization charges (room rent, nursing). Discount percentage varies by service type and employee grade.',
+          'Communication Allowance: Mobile phone reimbursement or company-provided mobile connection for roles requiring frequent communication. Monthly call allowance or actual bill reimbursement up to limit.',
+          'Newspaper and Periodicals: Complimentary newspapers and magazines in employee lounges, Subscription to professional journals for relevant departments.',
+          'Uniform and Dress: Uniforms provided free for clinical staff, housekeeping, security, and frontline roles, Laundering facility for uniforms, Dress allowance for administrative staff in some cases.',
+          'Identity and Access: Employee ID cards with access control and cashless cafeteria facility, Parking access cards, Locker facilities for personal belongings.',
+          'Staff Rooms and Lounges: Comfortable rest rooms for staff during breaks, Separate lounges for doctors, nurses, and staff, Sleeping quarters for on-call duty staff.',
+          'Birthday and Work Anniversary Recognition: Birthday wishes and small gifts or vouchers, Work anniversary recognition and appreciation, Milestone service awards (5, 10, 15, 20, 25 years) with certificates and mementos.',
+          'Wellness Programs: Annual health check-ups for all employees, Yoga and meditation sessions, Fitness center access (if available), Health awareness talks and screenings (diabetes, blood pressure, etc.), Wellness challenges and competitions.',
+          'Employee Referral Bonus: Cash bonus for successfully referring candidates who join and complete probation, Referral bonus ranges from INR 10,000 to INR 50,000 depending on role.',
+          'Exit Benefits: Farewell gifts for retiring employees, Service certificates and reference letters, Retirement party or event, Support in PF and gratuity settlement.'
         ]
       }
     ]
