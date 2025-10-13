@@ -1144,33 +1144,111 @@ export const byLawsData = {
   section12: {
     id: 'section12',
     number: 'SECTION XII',
-    title: 'MEDICAL BENEFITS AND HEALTHCARE',
-    searchTerms: ['medical', 'healthcare', 'health benefits', 'insurance'],
+    title: 'WORKPLACE SAFETY, HEALTH, AND HYGIENE',
+    searchTerms: ['safety', 'health', 'hygiene', 'occupational health', 'workplace safety', 'infection control'],
     subsections: [
       {
         number: '12.1',
-        title: 'Medical Benefits',
-        content: 'The Hospital provides comprehensive medical benefits:',
+        title: 'Workplace Safety Policy - Commitment and Framework',
+        content: 'Koyili Hospital is committed to providing a safe, healthy, and hazard-free work environment for all employees, patients, visitors, and contractors. Safety is a shared responsibility requiring active participation from management and employees at all levels:',
         points: [
-          'Free or subsidized treatment at Hospital facilities for employees.',
-          'Coverage for spouse and dependent children.',
-          'Preventive health check-ups annually.',
-          'Emergency medical care available 24/7.',
-          'Reimbursement for external medical expenses as per policy.',
-          'Mental health and wellness support programs.'
+          'Safety Vision: Zero harm workplace where every person returns home safely every day. Proactive identification and mitigation of hazards before incidents occur. Culture where safety concerns are raised, heard, and acted upon promptly without fear.',
+          'Regulatory Compliance: Full compliance with Occupational Safety, Health and Working Conditions Code, 2020 (OSH Code), Factories Act provisions applicable to healthcare, Clinical Establishments Acts of applicable states, NABH/JCI safety standards, Bio-Medical Waste Management Rules, 2016, Fire safety codes and building regulations, Occupational health standards and exposure limits.',
+          'Safety Responsibilities: Management - Provide safe work environment, equipment, and systems, Allocate resources for safety programs and infrastructure, Establish safety policies and procedures, Lead by example in safety practices. Safety Committee - Conduct safety audits and inspections, Investigate incidents and recommend corrective actions, Review safety performance and trends, Promote safety awareness. Supervisors - Ensure employees trained on safety procedures, Monitor compliance with safety practices, Report hazards and incidents promptly, Enforce safety rules and consequences. Employees - Follow all safety procedures and protocols, Use personal protective equipment properly, Report hazards, near-misses, and incidents immediately, Participate in safety training, Never bypass safety measures or take shortcuts.',
+          'Right to Refuse Unsafe Work: Employees have right to refuse work they reasonably believe poses imminent danger to health or safety without retaliation, Must report refusal and concerns to supervisor immediately, Management investigates concerns and addresses hazards before work resumes, Employees not penalized for legitimate safety concerns raised in good faith.',
+          'Safety Equipment and PPE: Hospital provides appropriate personal protective equipment (PPE) and safety equipment at no cost to employees - Gloves, masks, face shields, goggles, Gowns, aprons, shoe covers, Needlestick prevention devices, Respirators for specific exposures, Ergonomic equipment, Safety signage.',
+          'Hazard Communication: All hazardous materials clearly labeled with hazard information, Safety Data Sheets (SDS) accessible to employees working with chemicals, Training on hazard identification and safe handling, Visual warnings and signage for hazards (radiation, biohazard, slip hazard, etc.).'
         ]
       },
       {
         number: '12.2',
-        title: 'Group Health Insurance',
-        content: 'Group insurance coverage includes:',
+        title: 'Occupational Health and Safety Programs',
+        content: 'Comprehensive programs ensure ongoing protection of employee health and safety:',
         points: [
-          'Hospitalization expenses covered up to specified limits.',
-          'Pre and post-hospitalization expenses.',
-          'Day care procedures.',
-          'Coverage for critical illnesses.',
-          'Maternity expenses as per policy terms.',
-          'Claim procedures as per insurance provider guidelines.'
+          'Pre-Employment Medical Examination: All new employees undergo medical fitness assessment before joining, Examinations include general health status, vision and hearing tests, chest X-ray and relevant screening, Immunization status verification, Role-specific health requirements (e.g., cardiac fitness for emergency staff). Medical fitness certificate mandatory for employment.',
+          'Periodic Health Surveillance: Regular health monitoring for employees exposed to occupational hazards - Annual check-ups for all employees above 40 years, Specific monitoring for radiology staff (radiation exposure tracking), Lab staff (chemical exposure monitoring), Housekeeping staff (musculoskeletal assessments), Staff handling hazardous drugs (cytotoxic exposure monitoring). Early detection of occupational illnesses enables prompt intervention.',
+          'Immunization Programs: Mandatory and recommended vaccinations for healthcare workers - Hepatitis B vaccination (mandatory for clinical staff handling blood/body fluids), Annual influenza vaccination, Tetanus toxoid, COVID-19 vaccination and boosters, Other vaccines as recommended based on exposure risk and outbreaks. Hospital-sponsored vaccination at no cost to employees.',
+          'Occupational Injury and Illness Management: Immediate first aid and treatment for workplace injuries, Reporting to occupational health physician, Investigation of injury cause and corrective actions, Workers compensation claims assistance, Rehabilitation and return-to-work planning, Tracking and analysis of injury trends.',
+          'Ergonomics Program: Workplace ergonomic assessments to prevent musculoskeletal disorders, Training on proper lifting techniques, patient handling, and posture, Provision of ergonomic equipment (adjustable chairs, standing desks, lifting aids, anti-fatigue mats), Breaks and rotation for repetitive tasks, Addressing ergonomic concerns reported by employees.',
+          'Mental Health and Stress Management: Recognition that healthcare is stressful occupation, Access to counseling and Employee Assistance Program, Stress management workshops and resilience training, Reasonable work hours and adequate rest periods, Support for staff involved in traumatic incidents (critical incident stress debriefing), Anti-stigma culture encouraging help-seeking for mental health issues.',
+          'Hearing Conservation: Audiometric testing for employees exposed to high noise (engineering, generators), Provision of hearing protection devices, Noise reduction measures in work areas.',
+          'Respiratory Protection: Fit-testing for employees using respirators (N95, PAPR), Training on proper use, maintenance, and limitations of respirators, Respiratory protection for specific exposures (TB, airborne pathogens, chemical fumes).',
+          'Health Education: Regular health talks, newsletters, and posters on - Nutrition and fitness, Chronic disease prevention (diabetes, hypertension), Cancer screening, Stress management, Substance abuse prevention, Work-life balance.'
+        ]
+      },
+      {
+        number: '12.3',
+        title: 'Infection Prevention and Control',
+        content: 'Rigorous infection control practices protect healthcare workers from occupational infections:',
+        points: [
+          'Standard Precautions: Universal precautions applied to all patients at all times - Hand hygiene before and after every patient contact (most effective infection control measure), Personal protective equipment based on anticipated exposure, Safe injection practices and sharps safety, Aseptic technique for invasive procedures, Environmental cleaning and disinfection protocols.',
+          'Bloodborne Pathogen Protection: Training on bloodborne pathogen risks (HIV, Hepatitis B/C), Use of safety-engineered devices (retractable needles, needleless systems), Proper sharps disposal in puncture-resistant containers, Prohibition of recapping needles, Immediate reporting and post-exposure prophylaxis for needlestick/splash exposures.',
+          'Airborne and Respiratory Infections: N95 respirator use for suspected/confirmed TB, COVID-19, measles, chickenpox, Negative pressure isolation rooms for airborne infections, Annual TB screening (skin test or IGRA) for healthcare workers, Post-exposure evaluation and treatment for TB exposure.',
+          'Hand Hygiene Compliance: Alcohol-based hand rub dispensers at point of care, Monitoring and feedback on hand hygiene compliance, World Hand Hygiene Day campaigns, Skin care to prevent hand dermatitis from frequent washing.',
+          'Environmental Cleaning: Enhanced cleaning of high-touch surfaces, Terminal cleaning after discharge of infectious patients, Routine cleaning with Hospital-approved disinfectants, Cleaning staff training and supervision.',
+          'Isolation Precautions: Clear signage on patient rooms requiring isolation precautions (contact, droplet, airborne), PPE stations outside isolation rooms with appropriate gear, Staff training on donning and doffing PPE properly, Minimizing personnel entering isolation rooms.',
+          'Outbreak Management: Rapid response to outbreaks of infectious diseases among staff or patients, Contact tracing and screening of exposed employees, Work restrictions for ill employees to prevent spread, Enhanced precautions during outbreaks.',
+          'Antimicrobial Stewardship: Hospital program to optimize antibiotic use reducing resistance, Healthcare worker education on judicious antibiotic prescribing.'
+        ]
+      },
+      {
+        number: '12.4',
+        title: 'Fire Safety and Emergency Preparedness',
+        content: 'Comprehensive fire prevention, emergency response capabilities, and disaster preparedness:',
+        points: [
+          'Fire Prevention Measures: Regular fire safety audits and inspections, Proper storage of flammable materials in fire-rated cabinets, Hot work permits for welding, cutting, or spark-producing activities, Electrical safety inspections preventing overloading and short circuits, No-smoking policy throughout Hospital, Housekeeping practices preventing accumulation of combustibles.',
+          'Fire Detection and Suppression Systems: Smoke detectors and fire alarms in all areas tested regularly, Sprinkler systems where applicable maintained and tested, Fire extinguishers appropriately located and accessible, Extinguishers inspected monthly and serviced annually, Fire hose reels and hydrants in working condition.',
+          'Emergency Exits and Egress: Clearly marked emergency exits with illuminated signage, Exit routes unobstructed and doors unlocked from inside, Evacuation maps posted throughout facility, Adequate exit capacity for occupant load.',
+          'Fire Safety Training: Mandatory fire safety training for all employees during induction, Annual fire safety refresher training, Training on use of fire extinguishers (PASS technique), Fire warden/marshal training for designated employees, Training on evacuation of patients including non-ambulatory patients.',
+          'Fire Drills: Quarterly fire drills simulating real emergency, Drills cover evacuation procedures, assembly point reporting, patient evacuation techniques, Performance evaluated and corrective actions taken, Documentation of drills and attendance.',
+          'Emergency Response Plan: Comprehensive plan for fire, medical emergencies, disasters (earthquake, flood), bomb threats, active shooter, external disasters (mass casualties), Hospital-wide and department-specific plans.',
+          'Emergency Communication: Overhead paging codes (Code Red for fire, Code Blue for cardiac arrest, etc.), Emergency phone numbers clearly posted, Mass notification systems for widespread emergencies.',
+          'Business Continuity: Plans ensuring critical services continue during emergencies, Backup power generators for essential equipment, Backup water supply, Data backup and disaster recovery for IT systems.',
+          'Emergency Supplies: Stockpiles of emergency supplies (water, food, medical supplies, flashlights), First aid stations throughout facility, Emergency equipment (stretchers, wheelchairs, rescue equipment) maintained.'
+        ]
+      },
+      {
+        number: '12.5',
+        title: 'Chemical and Radiation Safety',
+        content: 'Specialized safety programs for hazardous chemical and radiation exposures:',
+        points: [
+          'Chemical Safety Program: Inventory of all chemicals used in Hospital, Safety Data Sheets accessible to employees via electronic or physical library, Training on chemical hazards, safe handling, and emergency response, Proper labeling of chemical containers, Storage in designated areas with appropriate ventilation and containment, Use of fume hoods for volatile chemicals, Spill kits and emergency eyewash/shower stations.',
+          'Hazardous Drug Handling: Special precautions for cytotoxic/antineoplastic drugs used in oncology, Closed-system drug transfer devices, Chemotherapy preparation in biological safety cabinets, Double gloving and protective gowns, Proper disposal of contaminated materials, Medical surveillance for staff handling hazardous drugs.',
+          'Anesthetic Gas Safety: Scavenging systems for waste anesthetic gases in operating rooms, Regular monitoring of anesthetic gas levels, Maintenance of anesthesia equipment to prevent leaks.',
+          'Radiation Safety Program: Radiation Safety Officer oversees program, Licensing and regulatory compliance with Atomic Energy Regulatory Board (AERB), Personal dosimeters for radiation workers (radiologists, cath lab staff, OR staff using fluoroscopy), Quarterly dosimeter reading and records, ALARA principle (As Low As Reasonably Achievable) guiding radiation practices, Shielding (lead aprons, thyroid shields, protective barriers), Controlled area designation and access restriction, Annual radiation safety training, Monitoring of equipment and area radiation levels.',
+          'Formaldehyde Safety: Use of formaldehyde minimized and substituted where possible, Exposure monitoring in pathology and morgue areas, Adequate ventilation and local exhaust, PPE including respirators where needed.',
+          'Waste Anesthetic Gases: Scavenging of waste gases, Monitoring and limiting exposure.'
+        ]
+      },
+      {
+        number: '12.6',
+        title: 'Biomedical Waste Management',
+        content: 'Proper segregation, handling, and disposal of biomedical waste protecting employees and environment:',
+        points: [
+          'Waste Segregation at Source: Color-coded bins for different waste categories - Yellow (infectious, pathological, soiled waste), Red (contaminated recyclable plastics), White (sharp waste - needles, blades), Blue (glassware and metallic implants), Black or Green (non-hazardous general waste). Training on correct waste segregation is critical.',
+          'Safe Handling Practices: Never fill waste bags/containers more than 3/4 full, Securely tie and label waste bags before removal from generation area, Use trolleys for waste transport, never hand-carry waste bags, Separate waste storage area before final disposal, Employees handling waste wear gloves, closed shoes, and protective gear.',
+          'Sharps Safety: Use puncture-proof sharps containers at point of use, Never recap, bend, or break used needles, Dispose sharps immediately after use, Fill sharps containers only to fill line and seal properly.',
+          'Waste Treatment and Disposal: Hospital-operated or outsourced waste treatment facility, Infectious waste autoclaved or incinerated before disposal, Records of waste quantity and disposal maintained, Compliance with Bio-Medical Waste Management Rules, 2016.',
+          'Spill Management: Spill kits available with absorbent, disinfectant, PPE, Spill management training for housekeeping and clinical staff, Procedures for small spills vs. large spills, Reporting of spills and cleanup verification.',
+          'Employee Training: Annual training on biomedical waste rules and Hospital procedures, Visual aids and posters at waste generation points, Consequences of improper waste handling.',
+          'Regulatory Compliance: Authorization from State Pollution Control Board for waste generation, Annual returns filing, Audits and inspections by regulatory authorities, Training records and waste disposal records maintained.'
+        ]
+      },
+      {
+        number: '12.7',
+        title: 'Incident Reporting and Investigation',
+        content: 'Systematic reporting and investigation of incidents, near-misses, and hazards drives continuous safety improvement:',
+        points: [
+          'Incident Categories: Occupational Injury - Any work-related injury requiring medical treatment beyond first aid. Occupational Illness - Illness caused by workplace exposure (chemical exposure, infection, stress-related). Near Miss - Event that could have caused injury/illness but did not. Hazard - Unsafe condition or practice posing risk. Property Damage - Damage to equipment, facility, or property. Patient Safety Incident - Incidents affecting patient safety may have staff safety implications.',
+          'Reporting Obligation: All employees must report incidents, near-misses, and hazards immediately to supervisor and safety officer. Reporting is non-punitive and encouraged. Anonymous reporting option available for sensitive concerns. Failure to report serious incidents may result in disciplinary action.',
+          'Incident Reporting Process: Immediate reporting to supervisor verbally for urgent medical attention or hazard control, Written incident report form completed within 24 hours, Form captures incident details, injuries, witnesses, immediate actions taken, Supervisor reviews and forwards to safety committee.',
+          'Medical Treatment: Injured employee receives immediate first aid or medical attention, Occupational health physician evaluates severity, Treatment provided or referral to emergency/specialist, Work restrictions issued if needed during recovery, Follow-up care and clearance to return to full duties.',
+          'Incident Investigation: Safety committee investigates incidents to identify root causes (not to assign blame), Investigation involves site visit, witness interviews, document review, Root cause analysis methods (5 Whys, Fishbone diagram), Identify contributing factors (equipment, procedures, training, fatigue, etc.), Develop corrective and preventive actions (CAPA).',
+          'Investigation Timeline: Minor incidents investigated within 7 days, Serious incidents investigated within 48-72 hours, Investigation report documents findings and recommendations, Management reviews and approves corrective actions with timelines.',
+          'Corrective Actions: Actions may include equipment repair/replacement, procedure revisions, additional training, engineering controls installation, PPE improvements, staffing or scheduling changes. Responsible persons and deadlines assigned. Implementation tracked to closure.',
+          'Trending and Analysis: Safety committee reviews incident data quarterly for trends - High-risk areas or departments, Common injury types (needlesticks, slips/falls, lifting injuries), Root cause patterns, Effectiveness of past interventions. Analysis informs safety program priorities.',
+          'Regulatory Reporting: Serious incidents reported to regulatory authorities as required (labor department, AERB for radiation incidents), Worker compensation claims filed for occupational injuries/illnesses.',
+          'Learning and Communication: Lessons learned from incidents shared organization-wide (without disclosing employee names), Safety alerts issued for critical hazards, Success stories of near-miss reporting and hazard prevention celebrated.'
         ]
       }
     ]
