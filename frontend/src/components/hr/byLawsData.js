@@ -1901,44 +1901,78 @@ export const byLawsData = {
   section20: {
     id: 'section20',
     number: 'SECTION XX',
-    title: 'WORKPLACE SAFETY',
-    searchTerms: ['safety', 'workplace safety', 'health and safety', 'accidents'],
+    title: 'EMPLOYEE RECORDS AND DOCUMENTATION',
+    searchTerms: ['employee records', 'documentation', 'personnel files', 'record keeping', 'HR records'],
     subsections: [
       {
         number: '20.1',
-        title: 'Safety Responsibilities',
-        content: 'Ensuring a safe workplace is shared responsibility:',
+        title: 'Personnel Records - Maintenance and Content',
+        content: 'Koyili Hospital maintains comprehensive employee records ensuring documentation of employment relationship, compliance, and organizational memory:',
         points: [
-          'Hospital provides safe working environment and equipment.',
-          'Employees must follow safety protocols and guidelines.',
-          'Use of personal protective equipment (PPE) mandatory where required.',
-          'Report unsafe conditions or practices immediately.',
-          'Participate in safety training and drills.',
-          'Zero tolerance for willful safety violations.'
+          'Personnel File Purpose: Personnel records serve multiple purposes - Legal compliance and audit trails, Employment decisions documentation, Performance and development tracking, Reference for future decisions, Protection in disputes or litigation. Accurate, complete records essential for effective HR management.',
+          'Personnel File Contents: Each employee has personnel file containing - Job application and resume, Educational certificates and professional licenses, Background verification reports, Appointment letter and employment contract, Confirmation letter, Performance appraisal records, Promotion and salary revision letters, Training and development records, Leave and attendance records, Disciplinary actions and warnings (if any), Correspondence and communications, Medical fitness certificates, Exit documents (resignation, exit interview, clearances) upon separation.',
+          'File Creation and Updates: Personnel file created upon employee joining. Updated regularly as new documents generated (performance reviews, promotions, training certificates). HR responsible for maintaining files accurately and completely. Supervisors and employees inform HR of relevant updates.',
+          'Physical vs Digital Records: Files maintained in physical form and/or digital format. Scanned copies for backup and easier access. Physical files stored securely in locked cabinets in HR. Digital files stored securely with access controls.',
+          'Record Ownership: Personnel records are Hospital property, not employee property. Hospital retains records even after employment ends. Former employees do not have right to take original files but can request copies of certain documents.',
+          'Separation of Medical Records: Employee medical information (health conditions, medical leaves, disabilities) maintained separately from general personnel file due to confidentiality. Access to medical records highly restricted (HR designee, occupational health physician only). Medical information not disclosed to supervisors/colleagues without employee consent except for accommodations or safety reasons.'
         ]
       },
       {
         number: '20.2',
-        title: 'Accident Reporting',
-        content: 'All accidents and incidents must be:',
+        title: 'Access to Personnel Records',
+        content: 'Access to employee records is controlled ensuring confidentiality while allowing legitimate need-to-know access:',
         points: [
-          'Reported immediately to supervisor and safety officer.',
-          'Documented in incident report within 24 hours.',
-          'Investigated to determine root cause.',
-          'Corrective actions implemented to prevent recurrence.',
-          'Serious accidents reported to regulatory authorities as required.'
+          'Employee Access Rights: Employees have right to access their own personnel file. Request to HR in writing or email to review file. HR schedules appointment for file review in HR office under supervision. Employees can take notes but not remove original documents. Photocopies of specific documents provided on request (may involve small fee for extensive copying).',
+          'Managerial Access: Supervisors and department heads may access personnel files of their direct reports for - Performance management, Promotion decisions, Development planning, Legitimate work-related reasons. Access does not include medical records or confidential investigations unless specifically authorized.',
+          'HR Access: HR personnel have full access to personnel records as part of job responsibilities. Access logged for audit purposes. HR maintains confidentiality of information.',
+          'Other Access: Access by others (legal, audit, senior management) only for legitimate business reasons with proper authorization. External access (lawyers, auditors, government inspectors) only as legally required with proper documentation.',
+          'Prohibited Access: No unauthorized access or "browsing" of personnel files out of curiosity. Accessing files without business need is serious misconduct. Files of family members, friends, or celebrities cannot be accessed by employees even if they have general file access.'
         ]
       },
       {
         number: '20.3',
-        title: 'Emergency Procedures',
-        content: 'Emergency response protocols:',
+        title: 'Confidentiality and Data Protection',
+        content: 'Personnel records contain sensitive personal information requiring strict confidentiality:',
         points: [
-          'Emergency evacuation plans posted and communicated.',
-          'Regular fire drills and disaster preparedness exercises.',
-          'Emergency contacts and assembly points clearly marked.',
-          'First aid facilities available.',
-          'Employees trained in basic emergency response.'
+          'Confidential Information: Personnel files contain highly confidential information - Personal identifiers (ID numbers, birth dates, addresses), Financial information (salary, bank accounts), Performance and disciplinary records, Medical information, Background checks, Assessments and references. Unauthorized disclosure is breach of confidentiality and data protection laws.',
+          'Information Sharing: Employee information shared internally only on strict need-to-know basis. Disclosure to external parties (other than employee) only with - Written employee consent, Legal requirement (court order, government inquiry), Verification of employment for legitimate purposes (limited information). Reference checks for prospective employers handled by HR (not supervisors) with employee authorization.',
+          'Data Protection Compliance: Personnel records handled in compliance with Digital Personal Data Protection Act, 2023 - Lawful basis for data collection and processing, Data minimization - collect only necessary information, Purpose limitation - use data only for stated purposes, Data accuracy maintained, Storage limitation - retention schedules followed, Security measures against unauthorized access or breach, Data subject rights respected (access, correction, deletion in certain cases).',
+          'Confidentiality Agreements: HR personnel sign confidentiality agreements regarding employee information. Managers trained on confidentiality of personnel information. Breach of confidentiality subject to disciplinary action.'
+        ]
+      },
+      {
+        number: '20.4',
+        title: 'Correction and Dispute of Records',
+        content: 'Employees can request corrections to inaccurate information in their personnel files:',
+        points: [
+          'Request for Correction: If employee identifies inaccurate or outdated information in file, may request correction in writing to HR. Specify document and incorrect information. Provide correct information with supporting documentation if available.',
+          'HR Review: HR reviews correction request and supporting evidence. Verifies accuracy of current information on file. If correction valid, HR updates record and notifies employee. If correction not warranted, HR explains rationale to employee.',
+          'Addition of Statement: If employee disagrees with document in file (e.g., performance review, disciplinary action) and HR does not remove it, employee may add written rebuttal or statement. Statement attached to disputed document in file for context. Does not remove original document but provides employee perspective.',
+          'Disputes: Disputes about record contents or corrections may be escalated through grievance mechanism if unresolved. Final decision by senior management or legal counsel.'
+        ]
+      },
+      {
+        number: '20.5',
+        title: 'Record Retention and Disposal',
+        content: 'Personnel records retained for legally required periods and then securely disposed:',
+        points: [
+          'Retention Schedule: Personnel records retained as per legal requirements and organizational policy - Active employee records: Retained throughout employment and updated regularly, Separated employee records: Typically retained for 7 years post-separation (may be longer for certain documents), Specific documents may have different retention periods - Medical records: 10 years, Disciplinary and litigation-related documents: Until matter conclusively resolved plus 5-7 years, Payroll and tax records: As per tax laws (typically 7+ years).',
+          'Retention Rationale: Extended retention needed for - Legal claims and disputes (statute of limitations), Unemployment, workers compensation, discrimination claims, Pension and retirement benefits verification, References and employment verification for former employees, Audit and compliance requirements.',
+          'Secure Disposal: After retention period expires, records securely disposed - Physical records shredded or incinerated (not simply discarded in trash), Digital records permanently deleted from all systems and backups, Disposal logged for audit purposes. Disposal ensures information cannot be reconstructed or retrieved.',
+          'Exceptions to Disposal: Records subject to legal hold (pending litigation, investigation, audit) not disposed until matter concluded and legal clearance obtained. Historic records of significant value may be archived permanently.'
+        ]
+      },
+      {
+        number: '20.6',
+        title: 'Documentation Best Practices',
+        content: 'Effective documentation practices ensure records are accurate, complete, and defensible:',
+        points: [
+          'Timeliness: Documents added to file promptly after creation (within days, not months). Delays result in incomplete records and potential loss of documents.',
+          'Accuracy: Information documented factually and accurately without speculation, exaggeration, or personal opinions. Performance reviews, incident reports, and disciplinary actions state facts and observable behaviors.',
+          'Completeness: All relevant employment events documented - hiring, promotions, transfers, leave, discipline, separation. Gaps in documentation create problems in disputes.',
+          'Professionalism: Documents written professionally, objectively, and free from discriminatory or inappropriate language. Documents may be produced in court or investigations - must withstand scrutiny.',
+          'Consistency: Documentation standards applied consistently across all employees without bias or favoritism. Selective documentation of certain employees issues may indicate discrimination.',
+          'Regular Audits: HR periodically audits personnel files for completeness, accuracy, compliance. Missing documents requested from employees or departments. Outdated documents flagged for disposal consideration.'
         ]
       }
     ]
@@ -1946,32 +1980,80 @@ export const byLawsData = {
   section21: {
     id: 'section21',
     number: 'SECTION XXI',
-    title: 'OCCUPATIONAL HEALTH',
-    searchTerms: ['occupational health', 'employee health', 'wellness'],
+    title: 'EMPLOYEE ENGAGEMENT AND SATISFACTION',
+    searchTerms: ['employee engagement', 'satisfaction', 'morale', 'culture', 'employee experience'],
     subsections: [
       {
         number: '21.1',
-        title: 'Health Surveillance',
-        content: 'Occupational health programs include:',
+        title: 'Employee Engagement - Philosophy and Importance',
+        content: 'Koyili Hospital recognizes that engaged employees are more productive, provide better patient care, stay longer, and contribute to positive organizational culture:',
         points: [
-          'Pre-employment medical examinations.',
-          'Periodic health check-ups for all employees.',
-          'Specific health monitoring for employees in high-risk roles.',
-          'Immunization programs for healthcare workers.',
-          'Fitness for duty certifications as needed.',
-          'Medical confidentiality maintained.'
+          'Engagement Definition: Employee engagement is emotional and intellectual commitment to Hospital mission, values, and success. Engaged employees - Feel valued and appreciated, Understand how their work contributes to organizational goals, Believe Hospital cares about their well-being, Are willing to go extra mile for patients and organization, Intend to stay with Hospital long-term.',
+          'Business Impact: Engaged workforce delivers measurable business outcomes - Higher patient satisfaction and quality of care, Better safety and fewer errors, Lower turnover and absenteeism, Higher productivity and efficiency, Positive workplace culture and reputation, Innovation and continuous improvement. Engagement is strategic imperative, not just "nice to have."',
+          'Drivers of Engagement: Key factors influencing engagement - Meaningful work and sense of purpose, Recognition and appreciation, Career development opportunities, Fair compensation and benefits, Trust in leadership and transparency, Work-life balance and well-being, Respectful and inclusive workplace, Voice and participation in decisions, Resources and support to do job well.',
+          'Shared Responsibility: Engagement is shared responsibility - Leadership sets vision, values, and culture, Managers create engaging team environments through coaching, communication, recognition, HR designs programs and measures engagement, Employees take ownership of their engagement and contribution.'
         ]
       },
       {
         number: '21.2',
-        title: 'Wellness Programs',
-        content: 'Employee wellness initiatives:',
+        title: 'Engagement Measurement and Feedback',
+        content: 'Regular measurement of employee engagement and satisfaction informs improvement actions:',
         points: [
-          'Health awareness campaigns and workshops.',
-          'Mental health support and counseling services.',
-          'Stress management programs.',
-          'Fitness and recreation facilities.',
-          'Support for work-life balance.'
+          'Annual Engagement Survey: Comprehensive employee engagement survey conducted annually. Survey measures - Overall engagement and satisfaction, Specific engagement drivers (leadership, career, recognition, etc.), Departmental and demographic variations, Trends compared to previous years, Benchmark against healthcare industry. Participation encouraged and anonymous to ensure honest feedback.',
+          'Pulse Surveys: Shorter, more frequent pulse surveys (quarterly or bi-annual) tracking key metrics and hot topics. Pulse surveys provide more timely data than annual surveys. Allow testing of interventions and monitoring progress.',
+          'Exit Interviews: Interviews with departing employees to understand reasons for leaving. Exit interview data identifies systemic issues affecting retention. Trends in exit reasons inform improvement priorities.',
+          'Stay Interviews: Proactive interviews with high-performing employees to understand what keeps them engaged and address potential concerns before they consider leaving. Focused on retention of top talent.',
+          'Manager Check-Ins: Regular one-on-one meetings between managers and employees include discussion of engagement, satisfaction, concerns. Provides ongoing pulse beyond formal surveys.',
+          'Open-Door Policy: Employees encouraged to share feedback, ideas, concerns with management anytime. Multiple feedback channels - direct discussion with supervisor, HR meetings, suggestion boxes, intranet forums, town halls with Q&A.'
+        ]
+      },
+      {
+        number: '21.3',
+        title: 'Recognition and Appreciation',
+        content: 'Regular recognition of employee contributions is powerful engagement driver:',
+        points: [
+          'Recognition Philosophy: Recognition should be - Timely and frequent, Specific about what is being recognized, Sincere and genuine, Fair and consistent, Public or private as appropriate for individual preference, Aligned with organizational values and goals.',
+          'Formal Recognition Programs: Employee of the Month/Quarter/Year awards, Service milestone awards (5, 10, 15, 20, 25 years), Team excellence awards, Innovation and quality improvement awards, Patient satisfaction awards. Programs detailed in Section V (Performance Management).',
+          'Informal Recognition: Day-to-day appreciation by managers and peers - Verbal thank you and praise, Handwritten thank you notes, Public recognition in team meetings, Email appreciation copying senior management, Small tokens of appreciation (coffee vouchers, parking spot, etc.).',
+          'Peer Recognition: Employees can nominate peers for recognition through peer recognition platform or programs. Peer recognition builds teamwork and positive culture. Winners featured on intranet, notice boards.',
+          'Celebrations: Celebrating successes - Project completions, Quality certifications achieved, Departmental achievements, Birthdays and personal milestones (graduations, weddings, new babies), Festival celebrations and social events.'
+        ]
+      },
+      {
+        number: '21.4',
+        title: 'Career Development and Growth',
+        content: 'Opportunities for career development strongly influence engagement and retention:',
+        points: [
+          'Career Conversations: Regular career development discussions between employees and managers - Aspirations and career goals, Strengths and development needs, Opportunities within Hospital, Development actions and timelines. Documented in Individual Development Plans (IDP).',
+          'Internal Mobility: Priority to internal candidates for job openings. Internal job postings allowing employees to apply. Lateral moves for skill broadening or better fit. Career ladders showing progression paths. Covered in Section XVII (Promotion).',
+          'Development Programs: Training, education, and development opportunities. Leadership development for aspiring managers. Specialist tracks for technical experts. Covered comprehensively in Section XIV (Training).',
+          'Mentoring and Coaching: Formal mentoring programs pairing employees with experienced mentors. Coaching for specific skill development or career transitions. Succession planning preparing high-potentials for future roles.',
+          'Stretch Assignments: Challenging projects beyond current role for skill development. Cross-functional projects and task forces. Acting roles and temporary assignments to higher positions.'
+        ]
+      },
+      {
+        number: '21.5',
+        title: 'Work-Life Balance and Well-Being',
+        content: 'Supporting employee well-being and work-life balance enhances engagement and reduces burnout:',
+        points: [
+          'Workload Management: Reasonable workloads and realistic expectations. Additional resources or reprioritization when workload excessive. Discourage chronic overtime and overwork.',
+          'Leave and Time Off: Generous leave policies and encouragement to take time off. Leave covered in Section IV (Leave Policy). Manager support for employees taking earned leave.',
+          'Flexible Arrangements: Flexible schedules, compressed work weeks, remote work where feasible and covered in Section X (Benefits).',
+          'Employee Assistance Program (EAP): Confidential counseling services for personal and work issues - Stress, anxiety, depression, Relationship problems, Financial concerns, Substance abuse, Work-life conflicts. Professional counselors available.',
+          'Wellness Programs: Health and wellness initiatives - Physical health (fitness, nutrition, health screenings), Mental health (stress management, mindfulness, resilience), Financial wellness (financial planning, debt management), Social wellness (social events, clubs, volunteering). Covered in Section XII (Occupational Health).',
+          'Preventing Burnout: Particular focus in healthcare on preventing burnout - Manageable patient loads, Adequate staffing, Psychological safety to raise concerns, Support for staff involved in difficult cases or patient deaths, Breaks and rest periods respected.'
+        ]
+      },
+      {
+        number: '21.6',
+        title: 'Organizational Culture and Values',
+        content: 'Strong, positive organizational culture aligned with values drives engagement:',
+        points: [
+          'Culture Definition: Hospital culture encompasses - Shared beliefs, values, and behavioral norms, How work gets done and decisions made, How people treat each other, What is celebrated and what is not tolerated. Culture is "how we do things here."',
+          'Desired Culture: Hospital aspires to culture characterized by - Patient-centricity and compassion, Excellence and continuous improvement, Teamwork and collaboration, Integrity and ethics, Respect and inclusivity, Innovation and adaptability, Learning and growth mindset, Safety and quality consciousness.',
+          'Living Values: Values not just words on wall but lived daily through - Leadership modeling values in decisions and behaviors, Recognition of employees demonstrating values, Accountability for value violations, Values integrated into performance management, recruitment, training.',
+          'Culture Building Activities: Town halls and leadership communication, Social events and team building, Volunteering and community service, Celebrating successes and milestones, Storytelling of employees exemplifying values, Culture surveys and discussions.',
+          'Addressing Cultural Issues: Toxic behaviors or counter-culture actions addressed promptly through coaching or discipline. Cultural change initiatives when needed to address systemic issues or evolve culture.'
         ]
       }
     ]
