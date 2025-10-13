@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
-import { Menu, Bell, Search, User, LogOut, Settings, Building2, ChevronDown, HelpCircle } from 'lucide-react';
+import { Menu, Bell, Search, User, LogOut, Settings, Building2, ChevronDown, HelpCircle, ArrowLeft, Home } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
-const Header = ({ onLogout, sidebarOpen, setSidebarOpen }) => {
+const Header = ({ onLogout, sidebarOpen, setSidebarOpen, isInDepartment }) => {
   const [showUserMenu, setShowUserMenu] = useState(false);
   const [showNotifications, setShowNotifications] = useState(false);
+  const navigate = useNavigate();
 
   const notifications = [
     { id: 1, title: 'New HR Policy Published', time: '2 hours ago', type: 'info', unread: true },
@@ -16,15 +18,29 @@ const Header = ({ onLogout, sidebarOpen, setSidebarOpen }) => {
   return (
     <header className="fixed top-0 left-0 right-0 h-16 md:h-20 bg-white border-b-2 border-slate-200 z-50 shadow-sm">
       <div className="h-full px-3 md:px-6 flex items-center justify-between">
-        {/* Left Section - Logo & Menu */}
+        {/* Left Section - Logo & Menu/Back Button */}
         <div className="flex items-center space-x-2 md:space-x-6">
-          <button
-            onClick={() => setSidebarOpen(!sidebarOpen)}
-            className="p-2 md:p-2.5 hover:bg-slate-100 rounded-xl transition-colors"
-            data-testid="sidebar-toggle"
-          >
-            <Menu className="w-5 h-5 md:w-6 md:h-6 text-slate-700" />
-          </button>
+          {isInDepartment ? (
+            // Show "Back to Dashboard" button when inside a department
+            <button
+              onClick={() => navigate('/')}
+              className="flex items-center space-x-2 px-3 md:px-4 py-2 md:py-2.5 hover:bg-slate-100 rounded-xl transition-colors group"
+              data-testid="back-to-dashboard"
+            >
+              <ArrowLeft className="w-5 h-5 md:w-6 md:h-6 text-slate-700 group-hover:text-blue-600 transition-colors" />
+              <span className="hidden md:inline text-sm font-semibold text-slate-700 group-hover:text-blue-600 transition-colors">Back to Dashboard</span>
+              <Home className="w-4 h-4 md:hidden text-slate-700 group-hover:text-blue-600 transition-colors" />
+            </button>
+          ) : (
+            // Show hamburger menu when on main dashboard
+            <button
+              onClick={() => setSidebarOpen(!sidebarOpen)}
+              className="p-2 md:p-2.5 hover:bg-slate-100 rounded-xl transition-colors"
+              data-testid="sidebar-toggle"
+            >
+              <Menu className="w-5 h-5 md:w-6 md:h-6 text-slate-700" />
+            </button>
+          )}
           
           <div className="flex items-center space-x-2 md:space-x-4">
             <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-xl flex items-center justify-center shadow-lg">
