@@ -36,44 +36,28 @@ const LoginPage = ({ onLogin }) => {
             
             {/* Left Side - Professional Branding */}
             <div className="text-white space-y-10 animate-fade-in-left">
-              {/* Premium Logo and Hospital Name */}
+              {/* Logo and Hospital Name */}
               <div className="space-y-6">
-                {/* Logo Badge */}
-                <div className="relative inline-block">
-                  <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-3xl blur opacity-75"></div>
-                  <div className="relative bg-white rounded-3xl p-6 shadow-2xl">
+                <div className="inline-flex items-center space-x-4 bg-white/10 backdrop-blur-md rounded-2xl p-4 border border-white/20">
+                  <div className="w-16 h-16 bg-white rounded-xl p-2 shadow-xl">
                     <img 
                       src="https://customer-assets.emergentagent.com/job_project-hub-123/artifacts/mpnrrrfw_images.jpeg" 
                       alt="KOYILI HOSPITAL" 
-                      className="w-32 h-32 object-contain"
+                      className="w-full h-full object-contain"
                     />
                   </div>
-                </div>
-
-                {/* Hospital Name & Location */}
-                <div className="space-y-3">
-                  <div className="inline-block">
-                    <h1 className="text-5xl font-black tracking-[0.2em] mb-2 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent" style={{letterSpacing: '0.2em'}}>
-                      KOYILI
+                  <div>
+                    <h1 className="text-2xl font-black tracking-widest" style={{letterSpacing: '0.15em'}}>
+                      KOYILI HOSPITAL
                     </h1>
-                    <h1 className="text-5xl font-black tracking-[0.2em] bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent" style={{letterSpacing: '0.2em'}}>
-                      HOSPITAL
-                    </h1>
-                    <div className="h-1 w-full bg-gradient-to-r from-blue-400 to-transparent mt-2"></div>
+                    <p className="text-blue-200 text-sm font-medium tracking-wide">Kannur, Kerala</p>
                   </div>
-                  <p className="text-blue-200 text-lg font-semibold tracking-wide flex items-center">
-                    <span className="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>
-                    Kannur, Kerala
-                  </p>
                 </div>
 
-                {/* Tagline */}
-                <div className="space-y-3 pt-4">
+                <div className="space-y-3">
                   <h2 className="text-4xl lg:text-5xl font-bold leading-tight tracking-tight">
                     Department<br />Management<br />
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-cyan-300">
-                      Portal
-                    </span>
+                    <span className="text-blue-300">Portal</span>
                   </h2>
                   <p className="text-slate-300 text-lg leading-relaxed max-w-md">
                     Secure, compliant, and comprehensive healthcare management system for modern hospital operations.
