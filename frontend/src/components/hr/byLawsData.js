@@ -814,31 +814,103 @@ export const byLawsData = {
     id: 'section9',
     number: 'SECTION IX',
     title: 'PROBATION AND CONFIRMATION',
-    searchTerms: ['probation', 'confirmation', 'trial period'],
+    searchTerms: ['probation', 'confirmation', 'trial period', 'assessment', 'permanent status'],
     subsections: [
       {
         number: '9.1',
-        title: 'Probation Period',
-        content: 'All new employees undergo probation:',
+        title: 'Probation Policy - Purpose and Framework',
+        content: 'Probation is a mutual assessment period allowing the Hospital to evaluate an employee\'s suitability, performance, skills, conduct, and cultural fit, while enabling the employee to assess role alignment and organizational compatibility:',
         points: [
-          'Standard probation period: 6 months from date of joining.',
-          'Extension possible for maximum 3 additional months if required.',
-          'Performance assessed against predefined objectives and competencies.',
-          'Regular feedback provided during probation period.',
-          'Either party may terminate with shorter notice during probation.'
+          'Purpose of Probation: Probation provides structured opportunity to assess - technical competence and job knowledge, quality and consistency of work output, learning agility and adaptability, professional conduct and attitude, interpersonal skills and teamwork, alignment with Hospital values and culture, attendance and punctuality, compliance with policies and procedures. Probation benefits both employer and employee by reducing long-term commitment risk.',
+          'Standard Probation Period: All new employees (except certain senior appointments with negotiated terms) serve standard probation period of 6 months from date of joining. Six months provides adequate time for comprehensive assessment across various work situations, seasons, and responsibilities.',
+          'Probation Start Date: Probation commences from official date of joining as recorded in appointment letter. Absences during probation (other than approved leave) do not extend probation automatically but may be considered in assessment.',
+          'Employment Status During Probation: Probationers are employees with specific terms - entitled to salary and basic benefits as per appointment letter, subject to abbreviated policies in some areas (shorter notice period, limited leave entitlements initially), performance under continuous evaluation, employment can be terminated with shorter notice by either party without extensive justification.',
+          'No Automatic Confirmation: Completion of probation period does not automatically confer permanent status. Confirmation is an affirmative decision based on satisfactory performance assessment, not a passive process.',
+          'Probation for Internal Transfers: Employees promoted or transferred to significantly different roles may serve probation period in new role (typically 3-6 months depending on role change magnitude). During this period, they retain permanent employee status but new role assignment is probationary.',
+          'Probation for Re-hires: Former employees rejoining Hospital after gap may serve fresh probation or abbreviated probation depending on previous tenure, performance history, and gap duration as determined at time of re-hiring.',
+          'Documentation: Probation terms including duration, assessment criteria, review schedule, and confirmation conditions are clearly specified in appointment letter ensuring transparency.'
         ]
       },
       {
         number: '9.2',
-        title: 'Confirmation Process',
-        content: 'Confirmation subject to:',
+        title: 'Probation Period Duration and Extensions',
+        content: 'While standard probation is 6 months, provisions exist for extensions based on assessment needs:',
         points: [
-          'Satisfactory performance throughout probation period.',
-          'Good conduct and adherence to Hospital policies.',
-          'Recommendation by immediate supervisor.',
-          'Approval by HR Department and Competent Authority.',
-          'Confirmation communicated in writing.',
-          'Confirmed employees entitled to all benefits as per policy.'
+          'Standard Duration: Six months (180 days) from date of joining is standard probation for most roles - frontline staff, administrative roles, technical positions, middle management. Six months balances thorough assessment with reasonable commitment.',
+          'Extended Probation for Complex Roles: Senior management positions, highly specialized roles, or positions requiring extensive training may have longer initial probation (9-12 months) specified in appointment letter upfront.',
+          'Extension of Probation: If performance assessment at 6 months is inconclusive or shows improvement potential but not yet confirmation readiness, probation may be extended for additional period up to maximum 3 months (total 9 months). Extension requires - documented performance gaps or concerns, reasonable expectation that employee can meet standards with more time, specific improvement areas and support plan, formal extension letter to employee, typically not extended beyond 3 additional months.',
+          'Extension Communication: Extension decision communicated to employee in writing before probation expiry, specifying - extended period duration, specific areas requiring improvement, support to be provided, next review date, consequences if improvement not demonstrated. Extension letter maintains transparency and fairness.',
+          'Multiple Extensions: Generally, only one extension of up to 3 months is permitted. Multiple extensions are discouraged as they create uncertainty and usually indicate unsuitable hiring. If employee cannot demonstrate suitability in 9 months, separation is appropriate course.',
+          'Exceptional Circumstances: In rare cases (extended medical leave, training delays, project postponement), probation may be extended for reasons beyond employee control. Such extensions are administrative, not performance-related.'
+        ]
+      },
+      {
+        number: '9.3',
+        title: 'Performance Assessment During Probation',
+        content: 'Structured assessment ensures objective evaluation and developmental support throughout probation:',
+        points: [
+          'Assessment Objectives: Probation assessment focuses on - role-specific technical competencies and skills, quality and accuracy of work output, productivity and ability to meet deadlines, learning curve and adaptation to Hospital systems, initiative and problem-solving approach, teamwork and collaboration, communication effectiveness, adherence to policies and professional conduct, attendance, punctuality, and reliability.',
+          'Continuous Monitoring: Supervisors monitor probationer performance continuously through - daily work observation and interaction, review of work outputs and assignments, feedback from colleagues and internal customers, attendance and punctuality tracking, adherence to policies and procedures, response to feedback and coaching.',
+          'Formal Review Checkpoints: Structured performance reviews conducted at - One Month: Initial settling-in review, early feedback, clarification of expectations, addressing initial challenges, Three Months: Mid-probation formal review, detailed assessment of progress, identification of development areas, corrective actions if needed, Six Months: Final probation assessment, comprehensive evaluation, confirmation decision. Reviews are documented with employee acknowledgment.',
+          'Assessment Criteria and Tools: Probation evaluation uses - Probation Assessment Form covering technical competencies, behavioral competencies, and overall performance, Rating scale (typically Exceeds Expectations, Meets Expectations, Needs Improvement, Unsatisfactory), Specific examples and incidents supporting ratings, Supervisor comments and recommendations, Employee self-assessment and comments.',
+          'Feedback and Development: Regular feedback is essential during probation - Immediate feedback on critical issues or excellent work, Weekly or bi-weekly one-on-one check-ins, Constructive guidance on improvement areas, Recognition of achievements and progress, Support through training, mentoring, resources.',
+          'Documentation: All probation reviews, feedback sessions, improvement plans, and assessment forms are documented and maintained in employee file for transparency, fairness, and future reference.'
+        ]
+      },
+      {
+        number: '9.4',
+        title: 'Confirmation Process and Criteria',
+        content: 'Confirmation marks transition from probationary to permanent status with enhanced job security and full benefits:',
+        points: [
+          'Confirmation Eligibility: At successful completion of probation, employees become eligible for confirmation. Eligibility requires - Satisfactory or better performance ratings in all probation reviews, Consistent demonstration of required competencies, Good attendance record (no excessive absences), No major disciplinary issues or policy violations, Adherence to Hospital values and professional conduct, Positive feedback from supervisor and colleagues, Completion of mandatory training and induction programs.',
+          'Confirmation Initiation: Approximately 15 days before probation completion, supervisor initiates confirmation process by - Completing final probation assessment form, Recommending confirmation or alternative action (extension, termination), Providing detailed performance summary, Submitting to HR with supporting documents.',
+          'HR Review: HR reviews confirmation recommendation verifying - Probation period completion, Assessment documentation completeness, Performance ratings consistency, Attendance and conduct records, Compliance with policies, Any pending issues or concerns. HR may request additional information or clarifications.',
+          'Competent Authority Approval: Based on supervisor recommendation and HR review, competent authority (typically Department Head or designated senior manager) approves confirmation. Authority reviews - Overall performance assessment, Organizational needs and role continuation, Any concerns or reservations, Final decision on confirmation.',
+          'Confirmation Letter: Upon approval, HR issues formal Confirmation Letter stating - Confirmation of permanent employment status, Effective date of confirmation (typically day after probation completion), Congratulations and recognition of satisfactory performance, Reference to full benefits now applicable, Commitment to continued high performance. Confirmation letter is significant milestone in employee career.',
+          'Benefits Upon Confirmation: Confirmed employees receive - Permanent employment status with enhanced job security, Full leave entitlements with accumulation rights, Eligibility for all benefits (medical, insurance, bonuses) as per policy, Participation in provident fund, gratuity, and retirement benefits, Consideration for promotions and career progression, Standard notice period for separation (longer than probationers).',
+          'Confirmation Ceremony: Some departments conduct informal recognition or announcement welcoming confirmed employees as permanent team members.',
+          'Confirmation Timeline: Confirmation process completed within 15 days of probation expiry ensuring no employment status uncertainty. Any delay in confirmation processing does not affect employee status - they are deemed confirmed if probation period elapsed without adverse communication.'
+        ]
+      },
+      {
+        number: '9.5',
+        title: 'Non-Confirmation and Termination During Probation',
+        content: 'When performance or suitability concerns exist, non-confirmation or termination during probation may occur:',
+        points: [
+          'Grounds for Non-Confirmation: Probation may not be confirmed due to - Consistently unsatisfactory performance despite feedback and support, Inability to meet role requirements and expectations, Lack of required technical skills or competencies, Poor attendance, frequent absenteeism, or tardiness, Serious misconduct or policy violations, Failure to adapt to Hospital culture or work environment, Negative feedback from colleagues or internal customers, Behavioral concerns or interpersonal conflicts, Qualification or credential discrepancies discovered post-hiring.',
+          'Early Termination During Probation: Employment may be terminated before probation completion (even in first month) for - Gross misconduct (theft, violence, serious policy breach), Complete unsuitability for role evident early, Falsification of credentials or background verification failures, Abandonment or prolonged unauthorized absence, Serious performance deficiencies with no improvement potential.',
+          'Notice Period for Probationers: Termination during probation requires shorter notice period as specified in appointment letter - Typically 15-30 days notice from either party, or Payment in lieu of notice by either party, Immediate termination without notice for gross misconduct. Shorter notice reflects mutual trial nature of probation.',
+          'Termination Communication: Termination during probation communicated professionally - Private meeting with supervisor and HR, Verbal communication followed by written termination letter, Letter states effective date, mentions unsatisfactory probation outcome (without extensive details), Outlines exit formalities and settlement process.',
+          'Exit Process for Probationers: Similar to regular separations - Return of Hospital property and assets, Departmental clearances, Exit formalities completion, Final settlement of salary up to last working day and pro-rata benefits, No exit interview mandatory but may be conducted.',
+          'Termination Documentation: Reasons for probation termination documented internally for - Legal compliance and record-keeping, Defense against potential disputes, Learnings for future hiring, Maintain in personnel file. However, detailed reasons typically not disclosed to employee unless requested.',
+          'Probation Termination Rights: While probation allows easier separation, basic fairness maintained - No discrimination based on protected characteristics, Termination for legitimate work-related reasons, Dignity and respect maintained in communication, Settlement of all legitimate dues.'
+        ]
+      },
+      {
+        number: '9.6',
+        title: 'Probationer Rights and Support',
+        content: 'While on probation, employees have specific rights and access to support ensuring fair treatment:',
+        points: [
+          'Right to Clear Expectations: Probationers entitled to - Clear written job description and performance expectations, Defined assessment criteria and review schedule, Information about probation terms, conditions, and confirmation process, Access to policies, procedures, and resources needed for success.',
+          'Right to Fair Assessment: Objective, non-discriminatory performance evaluation based on - Job-relevant criteria and competencies, Observable work performance and behaviors, Documented evidence and specific examples, Consistent standards applied to all probationers.',
+          'Right to Feedback and Support: Regular constructive feedback on performance, Guidance on improvement areas, Access to training and development resources, Reasonable opportunity to improve when issues identified, Support from supervisor and HR for successful probation completion.',
+          'Right to Dignity and Respect: Professional treatment by all staff, Respect for privacy and confidentiality, No harassment, discrimination, or humiliation, Opportunity to voice concerns or challenges.',
+          'Compensation and Benefits: Salary and benefits as specified in appointment letter (even if different from confirmed employees in some aspects), Timely and accurate salary payment, Statutory benefits (PF, ESI where applicable), Basic leave entitlements (though may be pro-rata).',
+          'Right to Exit: Probationer can resign during probation with notice period as per appointment letter if role is not suitable. Resignation during probation is legitimate option without stigma.',
+          'Grievance Rights: Probationers can raise legitimate grievances about - Unfair treatment, discrimination, or harassment, Policy violations, Unsafe work conditions, Non-payment or incorrect payment of dues. Grievances addressed through normal channels.'
+        ]
+      },
+      {
+        number: '9.7',
+        title: 'Special Probation Situations',
+        content: 'Certain situations require adapted probation handling:',
+        points: [
+          'Medical Leave During Probation: If probationer takes extended medical leave (beyond few days), probation period typically extended by leave duration to ensure adequate assessment opportunity. Extension is administrative, not performance-based.',
+          'Maternity During Probation: Female employees who go on maternity leave during probation - Probation extended to allow post-maternity assessment, Employment continues with maternity benefits as per law, Confirmation deferred till return and adequate performance demonstration, No discrimination due to maternity.',
+          'Change of Role During Probation: If probationer is transferred to different role during probation (due to restructuring or better fit), probation period may restart or be extended for new role assessment.',
+          'Training-Intensive Roles: Roles requiring extensive initial training (specialized equipment, complex procedures) may have assessment focused on post-training performance, with training period considered as learning phase.',
+          'Pandemic or Emergency Situations: During unusual circumstances (pandemics, natural disasters) affecting work arrangements or assessments, probation may be extended or assessment adjusted considering situation constraints.',
+          'Second Probation (Promotional Probation): Employees promoted to significantly higher role may serve probation in new role while retaining permanent status in organization. Failure in promotional probation results in reversion to previous role, not termination.'
         ]
       }
     ]
