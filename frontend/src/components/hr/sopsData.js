@@ -880,7 +880,171 @@ Once drafted, the policy shall be reviewed internally by:
     title: 'Interview Scheduling & Panel Process',
     searchTerms: ['interview', 'scheduling', 'panel', 'selection', 'evaluation'],
     category: 'B. Recruitment, Selection & Appointment',
-    content: 'Institutionalizes structured procedure for scheduling candidate interviews, finalising panel composition, and conducting interviews with fairness and standardisation.'
+    subsections: [
+      {
+        number: '1',
+        title: 'OBJECTIVE',
+        content: 'This SOP institutionalizes a structured procedure for scheduling candidate interviews, finalizing panel composition, and conducting interviews with fairness, consistency, and standardization. The objective is to ensure efficient, professional, and unbiased candidate assessment leading to optimal hiring decisions.'
+      },
+      {
+        number: '2',
+        title: 'SCOPE AND APPLICABILITY',
+        content: `This SOP applies to:
+• All shortlisted candidates invited for interviews across all positions and departments
+• Interview panels including HR representatives, department heads, technical experts, and senior management
+• All types of interviews: telephonic screening, technical rounds, HR rounds, panel interviews, and final management interviews`
+      },
+      {
+        number: '3',
+        title: 'DEFINITIONS',
+        content: `• Interview: A structured conversation between interviewers and candidates to assess suitability for a position
+• Interview Panel: A group of designated interviewers responsible for evaluating candidates
+• Technical Round: Interview focusing on role-specific technical skills and domain knowledge
+• HR Round: Interview assessing behavioral competencies, cultural fit, and employment terms
+• Panel Interview: Interview conducted by multiple interviewers simultaneously
+• Interview Schedule: A documented timetable specifying interview dates, times, and panelists
+• Competency-Based Interview: Structured interview using predefined questions aligned with job competencies`
+      },
+      {
+        number: '4',
+        title: 'PROCEDURE',
+        subsections: [
+          {
+            number: '4.1',
+            title: 'Interview Panel Constitution',
+            content: `(i) For each position, an Interview Panel shall be constituted based on position level:
+    • Junior/Entry-Level (Grade A-B): Department Supervisor + HR Representative (2 members)
+    • Mid-Level (Grade C-D): Department Head + Technical Expert + HR Manager (3 members)
+    • Senior/Management (Grade E-F): Department Head + Senior Management + HR Head (3-4 members)
+(ii) Panel composition shall ensure:
+    • At least one member with deep technical/functional knowledge of the role
+    • One HR representative for all interviews
+    • Diversity in panel (gender, seniority) wherever possible
+    • No conflict of interest (panelist related to candidate)
+(iii) Panel members shall be:
+    • Formally nominated by HR in consultation with department heads
+    • Briefed on the job requirements and screening criteria
+    • Trained on interview best practices and legal compliance (avoiding discriminatory questions)
+(iv) A Panel Chairperson shall be designated to lead the interview and ensure consistency`
+          },
+          {
+            number: '4.2',
+            title: 'Interview Scheduling',
+            content: `(i) HR shall coordinate interview schedules ensuring:
+    • Panelist availability on proposed dates
+    • Interview room availability (private, professional setting)
+    • Adequate time slots: 30-45 minutes per candidate for standard positions, 60-90 minutes for senior positions
+    • Buffer time of 15 minutes between interviews
+    • Accommodation of candidate availability and notice periods
+(ii) Interview invitations shall be sent to shortlisted candidates via email/phone including:
+    • Interview date, time, and venue
+    • Panel member names and designations
+    • Required documents to bring (resume, certificates, ID proof, references)
+    • Interview format (in-person, telephonic, video conference)
+    • Contact person details for queries or rescheduling
+    • Map/directions to hospital (for in-person interviews)
+(iii) Candidates shall confirm attendance at least 24 hours prior
+(iv) No-shows without prior intimation shall be noted; rescheduling allowed only once for valid reasons`
+          },
+          {
+            number: '4.3',
+            title: 'Pre-Interview Preparation',
+            content: `(i) HR shall prepare and share Interview Kits with panel members 48 hours before interviews including:
+    • Candidate resumes and screening notes
+    • Job Description and person specifications
+    • Interview Evaluation Form (Annexure B.5.1)
+    • List of competency-based questions aligned with job requirements
+    • Scoring rubric and evaluation criteria
+(ii) Panel members shall:
+    • Review candidate profiles thoroughly
+    • Prepare role-specific technical questions
+    • Familiarize themselves with evaluation criteria
+(iii) Interview rooms shall be arranged with:
+    • Professional seating arrangement
+    • Water, tissues, and basic amenities for candidates
+    • Adequate lighting and ventilation
+    • "Interview in Progress" signage to avoid disruptions`
+          },
+          {
+            number: '4.4',
+            title: 'Conducting the Interview',
+            content: `(i) Interview structure (standard 45-minute interview):
+    • Welcome and Introduction (5 min): Put candidate at ease, introduce panel, explain interview flow
+    • Candidate Introduction (5 min): Allow candidate to present background and interest in role
+    • Technical/Functional Assessment (20 min): Role-specific questions, scenario-based problems, skill assessments
+    • Behavioral and Competency Assessment (10 min): Situational questions, past behavior examples, cultural fit
+    • HR Discussion (5 min): Salary expectations, notice period, availability, relocation willingness
+    • Q&A from Candidate (5 min): Opportunity for candidate to ask questions about role, hospital, culture
+    • Closing (3 min): Thank candidate, explain next steps and timeline
+(ii) Interview best practices:
+    • Ask structured, job-related questions consistently across all candidates
+    • Avoid discriminatory questions (age, marital status, religion, caste, health unless job-related)
+    • Allow adequate time for candidate responses without interruption
+    • Take structured notes using Evaluation Forms
+    • Maintain professional, courteous demeanor throughout
+(iii) Each panelist shall independently score the candidate on evaluation criteria immediately after the interview`
+          },
+          {
+            number: '4.5',
+            title: 'Post-Interview Evaluation and Selection',
+            content: `(i) Immediately after interviews, panel shall:
+    • Consolidate individual scores from all panel members
+    • Discuss candidate performance and impressions
+    • Reach consensus on suitability: Selected / Reserve / Rejected
+    • Document selection rationale
+(ii) HR shall prepare Interview Summary Report including:
+    • Candidate-wise scores and rankings
+    • Panel recommendations
+    • Top candidates for offer
+    • Reserve candidates (in case of offer rejections)
+(iii) Final selection approval shall be obtained from:
+    • Department Head (for junior positions)
+    • HR Head + Department Head (for mid-level)
+    • CEO/COO + HR Head (for senior positions)
+(iv) Selected candidates shall proceed to Background Verification (SOP B.7) and Offer Generation (SOP B.9)`
+          }
+        ]
+      },
+      {
+        number: '5',
+        title: 'ROLES AND RESPONSIBILITIES',
+        table: {
+          headers: ['Position', 'Responsibility'],
+          rows: [
+            ['HR Department', 'Constitute panels, schedule interviews, coordinate logistics, prepare interview kits, consolidate evaluations'],
+            ['Interview Panel Members', 'Review candidate profiles, conduct interviews, evaluate candidates, provide selection recommendations'],
+            ['Panel Chairperson', 'Lead interview process, ensure structure and fairness, facilitate panel consensus'],
+            ['Department Head', 'Participate in interviews, provide final selection approval'],
+            ['Candidates', 'Attend interviews punctually, bring required documents, engage professionally']
+          ]
+        }
+      },
+      {
+        number: '6',
+        title: 'COMPLIANCE AND RECORD-KEEPING',
+        content: `• All Interview Evaluation Forms and panel notes shall be maintained for a minimum of 2 years
+• Interview schedules and attendance records shall be documented
+• Panel decisions must be based on objective, job-related criteria with documented rationale
+• Any complaints of bias or unfair treatment during interviews shall be escalated to HR Head for investigation
+• Monthly Interview Metrics shall track:
+    • Number of interviews conducted
+    • Selection-to-interview conversion rate
+    • Average time from shortlist to interview completion
+    • Panel member participation and training compliance
+• Video/audio recording of interviews is prohibited unless explicitly consented by candidates for assessment purposes`
+      },
+      {
+        number: '7',
+        title: 'REFERENCE DOCUMENTS',
+        content: `• Koyili Hospital HR By-Laws (Section 3: Selection Procedures)
+• Job Description Repository
+• SOP B.4: Resume Screening & Shortlisting
+• SOP B.7: Background Verification
+• SOP B.9: Offer Letter Generation
+• Annexure B.5.1: Interview Evaluation Form Template
+• Interview Training Manual for Panelists`
+      }
+    ]
   },
 
   sopB6: {
