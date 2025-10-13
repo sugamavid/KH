@@ -727,7 +727,151 @@ Once drafted, the policy shall be reviewed internally by:
     title: 'Resume Screening & Shortlisting Protocol',
     searchTerms: ['resume', 'screening', 'shortlisting', 'cv', 'candidates'],
     category: 'B. Recruitment, Selection & Appointment',
-    content: 'Defines standardised and transparent process for screening resumes and shortlisting candidates in accordance with pre-approved job descriptions and eligibility criteria.'
+    subsections: [
+      {
+        number: '1',
+        title: 'OBJECTIVE',
+        content: 'This SOP defines a standardised and transparent process for screening resumes and shortlisting candidates in accordance with pre-approved job descriptions and eligibility criteria. The objective is to identify the most suitable candidates efficiently while ensuring fairness, consistency, and compliance with equal opportunity principles.'
+      },
+      {
+        number: '2',
+        title: 'SCOPE AND APPLICABILITY',
+        content: `This SOP applies to:
+• All applications received for approved job vacancies across all departments and employment categories
+• The HR Recruitment Team and technical evaluators involved in resume screening
+• Both internal and external candidates applying for positions at Koyili Hospital`
+      },
+      {
+        number: '3',
+        title: 'DEFINITIONS',
+        content: `• Resume/CV: A document submitted by candidates detailing their educational qualifications, work experience, skills, and achievements
+• Screening: The initial evaluation of applications to assess eligibility based on minimum qualifications
+• Shortlisting: The selection of candidates who meet or exceed the job requirements for further evaluation (interviews)
+• Screening Criteria: Pre-defined parameters based on the job description used to evaluate candidates
+• Rejection: Exclusion of candidates who do not meet minimum eligibility or screening criteria
+• Shortlist Ratio: The ratio of shortlisted candidates to total applications (typically 1:5 to 1:10)`
+      },
+      {
+        number: '4',
+        title: 'PROCEDURE',
+        subsections: [
+          {
+            number: '4.1',
+            title: 'Receipt and Initial Sorting of Applications',
+            content: `(i) All applications received through job portals, email, walk-ins, or referrals shall be logged in the Applicant Tracking System (ATS) with:
+    • Unique Application ID
+    • Candidate name and contact details
+    • Position applied for
+    • Source of application
+    • Date received
+(ii) Duplicate applications from the same candidate for the same position shall be merged
+(iii) Applications shall be sorted by position and date received`
+          },
+          {
+            number: '4.2',
+            title: 'Definition of Screening Criteria',
+            content: `(i) HR shall define screening criteria based on the approved Job Description including:
+    • Essential Qualifications: Degree, diploma, professional certifications (mandatory)
+    • Essential Experience: Minimum years and domain relevance (mandatory)
+    • Desirable Qualifications: Additional certifications, higher degrees (preferred)
+    • Desirable Experience: Specialized skills, industry experience (preferred)
+    • Skills Assessment: Technical skills, software proficiency, language skills
+    • Other Criteria: Current location, willingness to relocate, notice period
+(ii) Criteria shall distinguish between:
+    • Mandatory Criteria: Non-negotiable requirements (automatic rejection if not met)
+    • Preferred Criteria: Advantageous but not essential (used for prioritization within shortlist)
+(iii) Screening criteria shall be documented in the Screening Matrix (Annexure B.4.1)`
+          },
+          {
+            number: '4.3',
+            title: 'Resume Screening Process',
+            content: `(i) HR Recruitment Team shall screen all resumes against the Screening Matrix:
+    • Check for essential qualifications and certifications
+    • Verify minimum experience requirements
+    • Assess relevance of past roles to the position
+    • Review career progression and stability (frequent job changes flagged)
+    • Check for employment gaps (significant gaps require explanation)
+    • Evaluate current/last salary vs. position budget (if disclosed)
+(ii) Each resume shall be assigned a Screening Score:
+    • Essential Criteria Met: Pass/Fail
+    • Preferred Criteria Score: 0-10 points
+    • Overall Assessment: Strong Fit / Moderate Fit / Weak Fit / Not Suitable
+(iii) Resumes not meeting essential criteria shall be rejected at this stage
+(iv) For specialized or senior positions, Department Heads or technical experts may be consulted for technical screening`
+          },
+          {
+            number: '4.4',
+            title: 'Shortlisting and Prioritization',
+            content: `(i) From screened candidates, shortlist shall be prepared based on:
+    • All essential criteria met
+    • Highest scores on preferred criteria
+    • Relevant industry/domain experience
+    • Career trajectory aligned with position
+    • Availability and notice period compatibility
+(ii) Shortlist size shall typically be:
+    • 5-10 candidates for single positions
+    • 15-20 candidates for multiple openings
+    • 1:5 to 1:10 ratio of shortlist to applications received
+(iii) Shortlisted candidates shall be prioritized:
+    • Tier 1: Exceeds all criteria, strong fit
+    • Tier 2: Meets all essential + most preferred criteria
+    • Tier 3: Meets essential criteria, acceptable fit
+(iv) Shortlist shall be documented with justification for each selected candidate`
+          },
+          {
+            number: '4.5',
+            title: 'Approval and Communication',
+            content: `(i) The shortlist shall be submitted to:
+    • Department Head for review and approval
+    • HR Head for final sign-off
+(ii) Upon approval, HR shall:
+    • Send shortlist to interview panel
+    • Schedule interviews as per SOP B.5
+    • Communicate with shortlisted candidates inviting them for interviews
+(iii) Rejected candidates shall be:
+    • Updated in ATS with rejection reason
+    • Sent courteous rejection emails thanking them for interest (batch communication)
+    • Retained in candidate database for 6 months for future opportunities`
+          }
+        ]
+      },
+      {
+        number: '5',
+        title: 'ROLES AND RESPONSIBILITIES',
+        table: {
+          headers: ['Position', 'Responsibility'],
+          rows: [
+            ['HR Recruitment Team', 'Log applications, screen resumes, prepare shortlist, communicate with candidates'],
+            ['Technical Evaluators', 'Provide technical screening for specialized positions'],
+            ['Department Head', 'Review and approve shortlist, provide role-specific insights'],
+            ['HR Head', 'Final approval of shortlist, ensure screening quality and consistency']
+          ]
+        }
+      },
+      {
+        number: '6',
+        title: 'COMPLIANCE AND RECORD-KEEPING',
+        content: `• All resumes, screening matrices, and shortlists shall be retained for a minimum of 2 years
+• Screening decisions must be documented with objective justifications
+• Equal opportunity principles must be observed - no discrimination based on gender, age, religion, caste, disability
+• Monthly Screening Reports shall include:
+    • Total applications received by position
+    • Applications screened and shortlisted
+    • Screening-to-shortlist conversion ratio
+    • Average time from application receipt to shortlist approval
+• Any deviation from screening criteria requires written approval from HR Head`
+      },
+      {
+        number: '7',
+        title: 'REFERENCE DOCUMENTS',
+        content: `• Koyili Hospital HR By-Laws (Section 3: Recruitment Procedures)
+• Job Description Repository
+• SOP B.3: Job Posting, Advertisement & Sourcing
+• SOP B.5: Interview Scheduling & Panel Process
+• Annexure B.4.1: Resume Screening Matrix Template
+• Equal Employment Opportunity Policy`
+      }
+    ]
   },
 
   sopB5: {
