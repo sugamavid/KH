@@ -568,12 +568,222 @@ export const annexuresData = {
     searchTerms: ['exit', 'resignation', 'separation'],
     category: 'Separation',
     forms: [
-      { name: 'Resignation Letter Format', code: 'EXIT-001', description: 'Formal resignation letter' },
-      { name: 'Exit Interview Form', code: 'EXIT-002', description: 'Exit interview questions' },
-      { name: 'Clearance Checklist', code: 'EXIT-003', description: 'Department clearances' },
-      { name: 'Full & Final Settlement', code: 'EXIT-004', description: 'Final dues calculation' },
-      { name: 'Experience Certificate', code: 'EXIT-005', description: 'Work experience certificate' },
-      { name: 'Relieving Letter', code: 'EXIT-006', description: 'Official relieving letter' }
+      { 
+        name: 'Resignation Letter Format', 
+        code: 'EXIT-001', 
+        description: 'Formal resignation letter template',
+        sections: [
+          {
+            title: 'Letter Format',
+            fields: ['Date', 'To: [Manager Name]', '[Designation]', '[Department]', 'Koyili Hospital', '', 'Subject: Resignation from the position of [Your Designation]', '', 'Dear [Manager Name],']
+          },
+          {
+            title: 'Resignation Statement',
+            fields: ['I am writing to formally notify you of my resignation from the position of [Your Designation] in the [Department] at Koyili Hospital.', '', 'As per my employment contract, I am providing [X days] notice. My last working day will be [Date].', '', 'I have made this decision after careful consideration due to [brief reason - optional: career growth, personal reasons, relocation, higher studies].']
+          },
+          {
+            title: 'Transition Commitment',
+            fields: ['During my notice period, I am committed to:', '- Completing all pending assignments and projects', '- Documenting my work processes and procedures', '- Training my replacement or team members', '- Ensuring smooth handover of responsibilities', '- Being available for any clarifications post-departure (if needed)']
+          },
+          {
+            title: 'Acknowledgment',
+            fields: ['I would like to express my sincere gratitude for the opportunities provided during my tenure at Koyili Hospital. I have gained valuable experience and skills working with the team.', '', 'I wish the Hospital and my colleagues continued success.']
+          },
+          {
+            title: 'Closing',
+            fields: ['Thank you for your understanding.', '', 'Sincerely,', '[Your Name]', '[Employee ID]', '[Contact Number]', '[Personal Email]']
+          }
+        ],
+        instructions: 'Submit formal resignation letter to immediate supervisor and HR. Maintain professional tone. Provide adequate notice period as per employment contract.',
+        approvalRequired: 'Manager acknowledgment, HR processing',
+        processingTime: 'Immediate acknowledgment, exit process as per notice period'
+      },
+      { 
+        name: 'Exit Interview Form', 
+        code: 'EXIT-002', 
+        description: 'Feedback questionnaire for departing employees',
+        sections: [
+          {
+            title: 'Employee Information',
+            fields: ['Employee Name', 'Employee ID', 'Department', 'Designation', 'Date of Joining', 'Last Working Day', 'Reason for Leaving: (Career Growth/Higher Studies/Relocation/Personal/Health/Better Opportunity/Other)']
+          },
+          {
+            title: 'Job Satisfaction',
+            fields: ['How satisfied were you with your role? (1-5 scale)', 'Were job responsibilities clearly defined? Yes/No', 'Did you have necessary resources and tools? Yes/No', 'Was workload manageable? Yes/No', 'Work-life balance rating (1-5)', 'What did you like most about your job?', 'What did you like least?']
+          },
+          {
+            title: 'Team & Management',
+            fields: ['Relationship with immediate supervisor (1-5)', 'Did you receive adequate support from management? Yes/No', 'Communication effectiveness rating (1-5)', 'Team collaboration rating (1-5)', 'Recognition and appreciation for work (1-5)', 'What could management have done better?']
+          },
+          {
+            title: 'Growth & Development',
+            fields: ['Training and development opportunities (1-5)', 'Career advancement opportunities available? Yes/No', 'Skills developed during tenure', 'Were your career goals discussed? Yes/No', 'Performance feedback frequency (1-5)']
+          },
+          {
+            title: 'Compensation & Benefits',
+            fields: ['Satisfaction with compensation (1-5)', 'Benefits package adequacy (1-5)', 'Compared to industry standards: Above/At Par/Below', 'Were benefits clearly communicated? Yes/No']
+          },
+          {
+            title: 'Work Environment',
+            fields: ['Physical work environment (1-5)', 'Safety and security measures (1-5)', 'Organizational culture rating (1-5)', 'Diversity and inclusion (1-5)', 'Work environment suggestions']
+          },
+          {
+            title: 'Reason for Leaving',
+            fields: ['Primary reason for resignation (detailed)', 'What could have been done to retain you?', 'Would you consider returning in future? Yes/No/Maybe', 'Would you recommend Koyili Hospital to others? Yes/No', 'Any specific incidents that influenced decision?']
+          },
+          {
+            title: 'Suggestions',
+            fields: ['What should Hospital start doing?', 'What should Hospital stop doing?', 'What should Hospital continue doing?', 'Any other feedback or suggestions']
+          },
+          {
+            title: 'New Employment',
+            fields: ['New organization (optional)', 'New role (optional)', 'What attracted you to new opportunity?']
+          }
+        ],
+        instructions: 'Confidential feedback for organizational improvement. Honest responses appreciated. Exit interview conducted by HR, not reporting manager.',
+        approvalRequired: 'None (Confidential feedback)',
+        processingTime: 'Completed during notice period'
+      },
+      { 
+        name: 'Clearance Checklist', 
+        code: 'EXIT-003', 
+        description: 'Department-wise clearance for exit formalities',
+        sections: [
+          {
+            title: 'Employee Details',
+            fields: ['Employee Name', 'Employee ID', 'Department', 'Designation', 'Last Working Day', 'Resignation Date']
+          },
+          {
+            title: 'Department Clearances',
+            fields: ['1. Immediate Supervisor: Work handover completed, Pending tasks documented, Team briefed, Clearance Signature & Date', '2. Department Head: All departmental assets returned, No pending projects, Final approval, Clearance Signature & Date', '3. IT Department: Laptop/desktop returned, Mobile/tablet returned, Access cards/tokens returned, Email access to be deactivated, Software licenses deactivated, Clearance Signature & Date', '4. HR Department: HR records updated, Exit interview completed, Full & Final settlement initiated, ID card returned, Clearance Signature & Date', '5. Finance Department: Advances settled, Expense claims submitted, No outstanding dues, Salary hold lifts approved, Clearance Signature & Date', '6. Administration: Office keys returned, Parking pass returned, Locker cleared, Cafeteria card returned, Clearance Signature & Date', '7. Library (if applicable): Books returned, Outstanding fines cleared, Clearance Signature & Date', '8. Medical Department (if applicable): Medical equipment returned, Patient handover completed (for clinical staff), Clearance Signature & Date', '9. Security: Gate pass clearance, Visitor management records cleared, Security badge returned, Clearance Signature & Date']
+          },
+          {
+            title: 'Final HR Clearance',
+            fields: ['All departmental clearances obtained: Yes/No', 'Experience certificate issued: Yes/No', 'Relieving letter issued: Yes/No', 'Final settlement processed: Yes/No', 'HR Final Approval: Name, Signature, Date']
+          }
+        ],
+        instructions: 'Obtain clearances from all departments before last working day. Submit completed form to HR. No dues certificate will be issued only after all clearances.',
+        approvalRequired: 'All Departments, Final HR Approval',
+        processingTime: 'Complete during notice period, final processing on last working day'
+      },
+      { 
+        name: 'Full & Final Settlement', 
+        code: 'EXIT-004', 
+        description: 'Final dues calculation and settlement statement',
+        sections: [
+          {
+            title: 'Employee Information',
+            fields: ['Employee Name', 'Employee ID', 'Department', 'Designation', 'Date of Joining', 'Last Working Day', 'Total Service: __ Years __ Months', 'Reason for Exit']
+          },
+          {
+            title: 'Salary Components - Credits',
+            fields: ['Basic Salary (for notice period worked): ₹ _____', 'HRA: ₹ _____', 'Other Allowances: ₹ _____', 'Overtime Payment (if any): ₹ _____', 'Performance Bonus (if applicable): ₹ _____', 'Total Salary Credit: ₹ _____']
+          },
+          {
+            title: 'Leave Encashment',
+            fields: ['Leave Balance: __ days', 'Encashment Rate: ₹ _____/day', 'Total Leave Encashment: ₹ _____']
+          },
+          {
+            title: 'Gratuity (if applicable)',
+            fields: ['Service Period: __ Years __ Months', 'Gratuity Eligibility: Yes/No (minimum 5 years required)', 'Last Drawn Salary: ₹ _____', 'Gratuity Formula: (Last Salary × 15 × Years) / 26', 'Gratuity Amount: ₹ _____']
+          },
+          {
+            title: 'Notice Period Settlement',
+            fields: ['Notice Period Required: __ days', 'Notice Period Served: __ days', 'Shortfall/Excess: __ days', 'Recovery/Payment: ₹ _____ (Debit/Credit)']
+          },
+          {
+            title: 'Deductions',
+            fields: ['Notice Period Shortfall (if any): ₹ _____', 'Advance/Loan Outstanding: ₹ _____', 'Uniform/Equipment Not Returned: ₹ _____', 'Canteen/Cafeteria Dues: ₹ _____', 'Provident Fund (Employee Share): ₹ _____', 'Professional Tax: ₹ _____', 'Income Tax (TDS): ₹ _____', 'Other Deductions: ₹ _____', 'Total Deductions: ₹ _____']
+          },
+          {
+            title: 'Reimbursements',
+            fields: ['Medical Reimbursement: ₹ _____', 'Travel Reimbursement: ₹ _____', 'Other Reimbursements: ₹ _____', 'Total Reimbursements: ₹ _____']
+          },
+          {
+            title: 'Final Settlement Summary',
+            fields: ['Total Credits: ₹ _____', 'Total Debits: ₹ _____', 'Net Amount Payable: ₹ _____', 'Payment Mode: (Bank Transfer/Cheque)', 'Payment Date: _____', 'Bank Account: Account Number ________']
+          },
+          {
+            title: 'Statutory Compliances',
+            fields: ['PF Account Transfer/Withdrawal: Form submitted/Processed', 'Form 16 (TDS Certificate): To be issued', 'Service Certificate: Issued', 'Experience Certificate: Issued', 'Relieving Letter: Issued']
+          },
+          {
+            title: 'Acknowledgment',
+            fields: ['I acknowledge receipt of the above settlement amount in full and final settlement of all my dues from Koyili Hospital.', 'I have no further claims against the Hospital.', 'Employee Signature: _____', 'Date: _____', '', 'HR Signature: _____', 'Finance Signature: _____', 'Date: _____']
+          }
+        ],
+        instructions: 'Final settlement processed after completion of notice period and all clearances. PF withdrawal forms to be submitted separately. Settlement payment within 45 days of last working day.',
+        approvalRequired: 'HR, Finance',
+        processingTime: '30-45 days from last working day'
+      },
+      { 
+        name: 'Experience Certificate', 
+        code: 'EXIT-005', 
+        description: 'Official work experience certificate',
+        sections: [
+          {
+            title: 'Certificate Header',
+            fields: ['KOYILI HOSPITAL', 'To Whom It May Concern', '', 'EXPERIENCE CERTIFICATE', '', 'Ref No: KH/HR/EXP/____', 'Date: _____']
+          },
+          {
+            title: 'Employee Details',
+            fields: ['This is to certify that [Employee Name], [Designation], was employed with Koyili Hospital from [Date of Joining] to [Last Working Day].', '', 'Employee ID: [EMP-ID]', 'Department: [Department Name]', 'Reporting To: [Manager Name and Designation]']
+          },
+          {
+            title: 'Role & Responsibilities',
+            fields: ['During [his/her] tenure, [Employee Name] was primarily responsible for:', '- [Key responsibility 1]', '- [Key responsibility 2]', '- [Key responsibility 3]', '- [Key responsibility 4]', '', '[He/She] handled [specific projects, teams, clients, etc.] with professionalism and dedication.']
+          },
+          {
+            title: 'Performance & Conduct',
+            fields: ['[Employee Name] demonstrated [excellent/good] performance throughout [his/her] tenure.', '[His/Her] technical skills, dedication, and team collaboration were commendable.', '[He/She] maintained high standards of professional conduct and ethics.']
+          },
+          {
+            title: 'Reason for Leaving',
+            fields: ['[He/She] resigned from [his/her] position on [Resignation Date] due to [reason - personal/career growth/relocation].', '[His/Her] last working day was [Date].']
+          },
+          {
+            title: 'Closing',
+            fields: ['We wish [him/her] all the best in [his/her] future endeavors.', '', 'For Koyili Hospital', '', '[CHRO Name]', 'Chief Human Resources Officer', 'Koyili Hospital', '', 'Hospital Seal']
+          }
+        ],
+        instructions: 'Issued after completion of exit formalities and clearance. Request should be made to HR before or on last working day.',
+        approvalRequired: 'CHRO',
+        processingTime: '7-10 business days from request'
+      },
+      { 
+        name: 'Relieving Letter', 
+        code: 'EXIT-006', 
+        description: 'Official relieving letter confirming exit date',
+        sections: [
+          {
+            title: 'Letter Header',
+            fields: ['KOYILI HOSPITAL', '[Hospital Address]', '', 'Date: [Date]', 'Ref No: KH/HR/REL/____']
+          },
+          {
+            title: 'Employee Details',
+            fields: ['To,', '[Employee Name]', '[Address]', '', 'Subject: Relieving from Services']
+          },
+          {
+            title: 'Relieving Statement',
+            fields: ['Dear [Employee Name],', '', 'This is to inform you that your resignation from the position of [Designation] in the [Department] has been accepted.', '', 'As per your resignation letter dated [Date] and after serving the notice period of [X] days, you are relieved from your duties at Koyili Hospital with effect from [Last Working Day].']
+          },
+          {
+            title: 'Clearance Confirmation',
+            fields: ['We confirm that you have completed all exit formalities and obtained necessary clearances from all departments.', 'Your Full & Final settlement has been processed and will be credited to your account as per policy.']
+          },
+          {
+            title: 'Acknowledgment',
+            fields: ['We acknowledge your contributions during your tenure with Koyili Hospital and appreciate your services.', 'We wish you success in your future career.']
+          },
+          {
+            title: 'Closing',
+            fields: ['Yours sincerely,', '', 'For Koyili Hospital', '', '[Name]', '[Designation]', 'Chief Human Resources Officer', '', 'Hospital Seal']
+          }
+        ],
+        instructions: 'Issued on or after last working day. Required for joining new employment. Submit request to HR before last day.',
+        approvalRequired: 'CHRO',
+        processingTime: 'Issued on last working day'
+      }
     ]
   },
   annex9: {
