@@ -99,28 +99,28 @@ const Header = ({ onLogout, sidebarOpen, setSidebarOpen }) => {
             )}
           </div>
           
-          {/* Settings */}
-          <button className="p-2.5 hover:bg-slate-100 rounded-xl transition-colors">
+          {/* Settings - Hidden on small mobile */}
+          <button className="hidden sm:block p-2 md:p-2.5 hover:bg-slate-100 rounded-xl transition-colors">
             <Settings className="w-5 h-5 text-slate-600" />
           </button>
 
           {/* Divider */}
-          <div className="h-10 w-px bg-slate-300"></div>
+          <div className="hidden md:block h-10 w-px bg-slate-300"></div>
 
           {/* User Profile */}
           <div className="relative">
             <button 
               onClick={() => setShowUserMenu(!showUserMenu)}
-              className="flex items-center space-x-3 px-3 py-2 hover:bg-slate-100 rounded-xl transition-colors"
+              className="flex items-center space-x-2 md:space-x-3 px-2 md:px-3 py-2 hover:bg-slate-100 rounded-xl transition-colors"
             >
-              <div className="hidden md:block text-right">
+              <div className="hidden lg:block text-right">
                 <p className="text-sm font-bold text-slate-900">Admin User</p>
                 <p className="text-xs text-slate-500 font-medium">Administrator</p>
               </div>
-              <div className="w-11 h-11 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-xl flex items-center justify-center text-white font-bold shadow-lg">
+              <div className="w-10 h-10 md:w-11 md:h-11 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-xl flex items-center justify-center text-white font-bold shadow-lg text-sm md:text-base">
                 AU
               </div>
-              <ChevronDown className="w-4 h-4 text-slate-400" />
+              <ChevronDown className="w-4 h-4 text-slate-400 hidden sm:block" />
             </button>
             
             {/* User Dropdown */}
