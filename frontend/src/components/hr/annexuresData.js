@@ -226,11 +226,152 @@ export const annexuresData = {
     searchTerms: ['leave', 'absence', 'vacation'],
     category: 'Leave Management',
     forms: [
-      { name: 'Leave Application Form', code: 'LV-001', description: 'Standard leave application' },
-      { name: 'Medical Certificate Format', code: 'LV-002', description: 'Required for sick leave >3 days' },
-      { name: 'Leave Encashment Form', code: 'LV-003', description: 'Request for leave encashment' },
-      { name: 'Compensatory Off Request', code: 'LV-004', description: 'Claim compensatory leave' },
-      { name: 'Leave Cancellation Form', code: 'LV-005', description: 'Cancel approved leave' }
+      { 
+        name: 'Leave Application Form', 
+        code: 'LV-001', 
+        description: 'Standard leave application for all leave types',
+        sections: [
+          {
+            title: 'Employee Details',
+            fields: ['Employee Name', 'Employee ID', 'Department', 'Designation', 'Date of Joining', 'Contact Number During Leave']
+          },
+          {
+            title: 'Leave Details',
+            fields: ['Leave Type (Casual/Sick/Annual/Maternity/Paternity/Compensatory)', 'From Date', 'To Date', 'Total Days Applied', 'First Half/Second Half (if applicable)', 'Reason for Leave', 'Leave Balance Available (before this application)', 'Previous Leave Taken (this year)']
+          },
+          {
+            title: 'Contact During Leave',
+            fields: ['Address During Leave', 'Contact Number', 'Email', 'Emergency Contact Person']
+          },
+          {
+            title: 'Work Handover',
+            fields: ['Pending Tasks Handed Over To: [Name]', 'Critical Deadlines Communicated: Yes/No', 'Backup Person Identified: [Name]']
+          },
+          {
+            title: 'Medical Certificate',
+            fields: ['Required for sick leave exceeding 3 days', 'Attached: Yes/No', 'Doctor Name and Registration Number']
+          },
+          {
+            title: 'Approvals',
+            fields: ['Employee Signature and Date', 'Immediate Supervisor: Approved/Rejected, Signature, Date', 'Department Head: Approved/Rejected, Signature, Date', 'HR Remarks:', 'HR Approval: Approved/Rejected, Signature, Date']
+          }
+        ],
+        instructions: 'Submit at least 3 days in advance for planned leave. For emergency/sick leave, inform supervisor immediately and submit form within 24 hours.',
+        approvalRequired: 'Supervisor, Department Head, HR',
+        processingTime: '1-2 business days'
+      },
+      { 
+        name: 'Medical Certificate Format', 
+        code: 'LV-002', 
+        description: 'Required for sick leave exceeding 3 consecutive days',
+        sections: [
+          {
+            title: 'Medical Certificate',
+            fields: ['To Whom It May Concern / To: HR Department, Koyili Hospital', 'This is to certify that [Patient Name], [Age], [Gender], Employee ID: [EMP-ID] was examined by me on [Date of Examination].']
+          },
+          {
+            title: 'Diagnosis',
+            fields: ['Patient is suffering from: [Medical Condition/Diagnosis]', 'Clinical Findings: [Brief medical findings]', 'ICD-10 Code (if applicable)']
+          },
+          {
+            title: 'Medical Advice',
+            fields: ['Patient is advised rest from [Start Date] to [End Date]', 'Total Days of Rest Recommended: [Number of days]', 'Patient is: Fit to Resume Work from [Date] / Requires Extended Rest (specify duration)', 'Restrictions/Precautions: [Any work restrictions]']
+          },
+          {
+            title: 'Doctor Details',
+            fields: ['Doctor Name', 'Medical Registration Number', 'Specialization', 'Clinic/Hospital Name', 'Clinic Address', 'Doctor Signature and Stamp', 'Date']
+          }
+        ],
+        instructions: 'Certificate must be on doctor\'s letterhead with registration number and stamp. Submit original to HR.',
+        approvalRequired: 'Registered Medical Practitioner',
+        processingTime: 'Immediate submission to HR'
+      },
+      { 
+        name: 'Leave Encashment Form', 
+        code: 'LV-003', 
+        description: 'Request for encashment of accumulated leave',
+        sections: [
+          {
+            title: 'Employee Information',
+            fields: ['Employee Name', 'Employee ID', 'Department', 'Designation', 'Date of Joining', 'Years of Service']
+          },
+          {
+            title: 'Leave Encashment Request',
+            fields: ['Type of Leave to Encash: (Annual/Earned Leave only)', 'Total Leave Balance', 'Number of Days to Encash', 'Remaining Balance After Encashment', 'Reason for Encashment', 'Financial Year', 'Preferred Month for Encashment']
+          },
+          {
+            title: 'Eligibility Criteria',
+            fields: ['Completed minimum 1 year of service: Yes/No', 'Leave balance exceeds minimum threshold: Yes/No', 'Not on probation: Yes/No', 'Maximum encashment limit: 15 days per year (as per policy)']
+          },
+          {
+            title: 'Calculation',
+            fields: ['Basic Salary: ₹ _____', 'Days to Encash: _____', 'Encashment Amount = (Basic/30) × Days = ₹ _____', 'Tax Deduction (if applicable): ₹ _____', 'Net Amount Payable: ₹ _____']
+          },
+          {
+            title: 'Declarations and Approvals',
+            fields: ['I understand that encashed leave cannot be reclaimed. I voluntarily opt for encashment.', 'Employee Signature and Date', 'Supervisor Recommendation', 'HR Verification of Leave Balance', 'Finance Approval', 'Final Approval: CHRO']
+          }
+        ],
+        instructions: 'Can be applied during annual appraisal cycle or financial year-end. Subject to organizational policy and fund availability.',
+        approvalRequired: 'Supervisor, HR, Finance, CHRO',
+        processingTime: '10-15 business days'
+      },
+      { 
+        name: 'Compensatory Off Request', 
+        code: 'LV-004', 
+        description: 'Claim compensatory leave for working on weekly off/holidays',
+        sections: [
+          {
+            title: 'Employee Details',
+            fields: ['Employee Name', 'Employee ID', 'Department', 'Designation']
+          },
+          {
+            title: 'Comp-Off Details',
+            fields: ['Date(s) Worked: [Date when worked on off day]', 'Day: (Sunday/Holiday - specify)', 'Reason for Working: (Emergency/Project/Event)', 'Hours Worked', 'Task/Project Details', 'Authorization for Working: [Supervisor who approved overtime]']
+          },
+          {
+            title: 'Comp-Off Availing',
+            fields: ['Proposed Comp-Off Date: [When you want to avail]', 'Must be availed within 30 days of earning', 'Work Handover Arrangements']
+          },
+          {
+            title: 'Verification',
+            fields: ['Attendance records verified for the date worked', 'Supervisor confirms necessity of working on off day', 'Biometric/timesheet evidence attached']
+          },
+          {
+            title: 'Approvals',
+            fields: ['Employee Signature', 'Immediate Supervisor: Verified and Approved', 'Department Head Approval', 'HR Approval and Record Update']
+          }
+        ],
+        instructions: 'Submit within 7 days of working on off day. Comp-off must be availed within 30 days or will lapse.',
+        approvalRequired: 'Supervisor, Department Head, HR',
+        processingTime: '2-3 business days'
+      },
+      { 
+        name: 'Leave Cancellation Form', 
+        code: 'LV-005', 
+        description: 'Cancel previously approved leave application',
+        sections: [
+          {
+            title: 'Original Leave Details',
+            fields: ['Leave Application Number/Reference', 'Leave Type', 'Approved Leave From Date', 'Approved Leave To Date', 'Total Days Approved', 'Approval Date']
+          },
+          {
+            title: 'Cancellation Request',
+            fields: ['Reason for Cancellation', 'Cancellation Request Date', 'Full Cancellation / Partial Cancellation', 'If Partial: New From Date', 'If Partial: New To Date', 'Revised Total Days (if partial)']
+          },
+          {
+            title: 'Impact Assessment',
+            fields: ['Travel bookings cancelled: Yes/No', 'Team notified of availability: Yes/No', 'Work plans adjusted: Yes/No']
+          },
+          {
+            title: 'Approvals',
+            fields: ['Employee Signature and Date', 'Supervisor Acknowledgment', 'HR Processing: Leave balance credited back', 'Attendance records updated', 'HR Signature and Date']
+          }
+        ],
+        instructions: 'Submit as soon as decision to cancel is made. Cancellation at least 2 days before leave start date preferred.',
+        approvalRequired: 'Supervisor, HR',
+        processingTime: '1 business day'
+      }
     ]
   },
   annex3: {
