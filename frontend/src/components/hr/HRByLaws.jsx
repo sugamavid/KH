@@ -7,7 +7,7 @@ import {
 } from 'lucide-react';
 import { byLawsData, quickReferenceData, keyHighlights } from './byLawsData';
 
-const HRByLaws = () => {
+const HRByLaws = ({ setActiveModule }) => {
   const [activeSection, setActiveSection] = useState('dashboard');
   const [searchQuery, setSearchQuery] = useState('');
   const [searchResults, setSearchResults] = useState([]);
