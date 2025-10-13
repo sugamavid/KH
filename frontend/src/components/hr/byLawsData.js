@@ -1619,33 +1619,103 @@ export const byLawsData = {
   section17: {
     id: 'section17',
     number: 'SECTION XVII',
-    title: 'PROMOTION POLICY',
-    searchTerms: ['promotion', 'advancement', 'elevation'],
+    title: 'PROMOTION AND CAREER ADVANCEMENT',
+    searchTerms: ['promotion', 'advancement', 'elevation', 'career growth', 'upward mobility'],
     subsections: [
       {
         number: '17.1',
-        title: 'Promotion Criteria',
-        content: 'Promotions based on:',
+        title: 'Promotion Philosophy and Framework',
+        content: 'Koyili Hospital believes in merit-based career advancement providing growth opportunities to high-performing employees while ensuring organizational capability building:',
         points: [
-          'Consistent high performance over multiple years.',
-          'Demonstrated competence for next level role.',
-          'Availability of vacancy at higher level.',
-          'Completion of minimum tenure in current role.',
-          'Relevant qualifications and certifications.',
-          'Leadership potential and behavioral competencies.'
+          'Promotion as Recognition: Promotions recognize sustained high performance, enhanced capabilities, and readiness for greater responsibilities. They are rewards for past achievements and investments in future potential.',
+          'Promotion as Development: Promotions provide growth opportunities challenging employees to expand skills, take on leadership, and contribute at higher levels. They are integral to career development and retention strategy.',
+          'Internal Talent Priority: Hospital prioritizes developing and promoting internal talent over external hiring for higher positions (where feasible). Internal promotions boost morale, retain institutional knowledge, and demonstrate career opportunities.',
+          'Fairness and Transparency: Promotion processes are fair, objective, transparent, and non-discriminatory. Criteria clearly communicated. Decisions based on merit, performance, and potential, not favoritism or bias.',
+          'Organizational Needs Alignment: Promotions balance individual aspirations with organizational needs. Vacancies, business requirements, and succession plans guide promotion decisions.',
+          'No Entitlement: Tenure alone does not entitle employees to promotion. Promotions earned through demonstrated performance, competency development, and vacancy availability. Not all high performers can be promoted due to pyramid structure.',
+          'Multiple Career Paths: Promotions include vertical advancement (higher hierarchical level), lateral moves with expanded scope, specialist track advancement for deep technical expertise without managerial responsibilities.'
         ]
       },
       {
         number: '17.2',
-        title: 'Promotion Process',
-        content: 'Transparent promotion procedures:',
+        title: 'Promotion Eligibility Criteria',
+        content: 'Employees must meet multiple criteria to be considered for promotion:',
         points: [
-          'Annual promotion cycle based on performance appraisals.',
-          'Nominations by supervisors and department heads.',
-          'Review by promotion committee.',
-          'Promotions effective from specified date.',
-          'Salary revision accompanying promotion as per policy.',
-          'Promotion letters issued documenting new role and terms.'
+          'Performance Excellence: Minimum two consecutive years of "Exceeds Expectations" or higher performance ratings. Consistent high-quality work output demonstrating excellence. Track record of achieving or exceeding goals and targets. No major performance issues or PIP in recent past.',
+          'Minimum Tenure: Completion of minimum tenure in current role before promotion consideration - Junior roles: 2 years, Mid-level roles: 3 years, Senior roles: 4-5 years. Tenure requirement ensures adequate skill development and role mastery.',
+          'Competency Demonstration: Demonstrated competencies required for next level role - Technical/functional competencies for the higher position, Leadership and people management skills (for supervisory/managerial promotions), Strategic thinking and decision-making, Communication and stakeholder management. Competency assessed through performance reviews, 360-degree feedback, assessments.',
+          'Educational Qualifications: Possess required educational qualifications and professional certifications for higher role. Completion of relevant training and development programs. Continuous learning and skill upgradation demonstrated.',
+          'Conduct and Values: Exemplary conduct and adherence to Hospital values. No disciplinary actions or serious policy violations in recent past (typically 2 years). Positive behavioral feedback from peers, subordinates, and stakeholders.',
+          'Readiness Assessment: Assessment by supervisor and management confirming readiness for promotion. Readiness includes current performance, growth potential, role fit, and development needs addressed. "Ready now" vs "ready in 6-12 months" vs "not yet ready" assessment.',
+          'Vacancy Availability: Promotion dependent on vacancy at higher level or creation of new position. No promotions without approved headcount and budget. Exception: Job regrading if role significantly expanded.',
+          'Promotability Declaration: Employees must be declared promotable by supervisor and department head through formal nomination process during annual promotion cycle.'
+        ]
+      },
+      {
+        number: '17.3',
+        title: 'Annual Promotion Cycle and Process',
+        content: 'Structured annual promotion process ensures systematic talent review and advancement:',
+        points: [
+          'Promotion Cycle Timeline: Annual promotion cycle typically January-March following performance appraisal completion. Timeline announced via HR communication.',
+          'Step 1 - Eligibility Screening: HR identifies employees meeting minimum eligibility criteria (tenure, performance ratings). Preliminary eligibility list shared with department heads.',
+          'Step 2 - Supervisor Nomination: Supervisors and department heads review eligible employees. Nominate deserving employees for promotion with detailed justification - Performance highlights and achievements, Competencies demonstrated, Readiness for next role, Proposed new designation and role, Business case for promotion (if creating new position). Non-nomination of eligible employees also requires brief explanation.',
+          'Step 3 - Departmental Review: Department heads review all nominations within department. Prioritize and rank nominees if multiple candidates. Ensure consistency in standards across teams. Consolidated department nominations submitted to HR.',
+          'Step 4 - HR Review: HR reviews nominations for - Completeness and quality of justification, Consistency with promotion criteria and precedents, Equity across departments and demographics, Budget and headcount implications. HR may seek clarifications or recommend adjustments.',
+          'Step 5 - Promotion Committee Review: Senior management promotion committee reviews all nominations. Committee comprises CEO, COO, CHRO, and relevant senior leaders. Committee evaluates - Individual merit and readiness, Organizational needs and succession plans, Fairness and consistency, Budget and salary implications. Committee approves, defers, or rejects promotions.',
+          'Step 6 - Approval and Communication: Final approved promotions submitted to CEO/Board for authorization. Promotion letters issued to selected employees specifying - New designation and grade, Effective date of promotion, Revised salary and benefits, New reporting structure, Congratulations and expectations. Effective date typically April 1 or as specified.',
+          'Step 7 - Announcement: Promotions announced organization-wide via email, intranet, town halls. Celebrates achievements and motivates workforce. Non-promoted employees receive feedback on development areas.',
+          'Timeline: Entire process completed in 2-3 months ensuring timely advancement.'
+        ]
+      },
+      {
+        number: '17.4',
+        title: 'Promotion Committee and Decision-Making',
+        content: 'Promotion committee ensures objective, consistent, and strategic promotion decisions:',
+        points: [
+          'Committee Composition: Senior management team including CEO, functional heads (Medical Director, Nursing Head, Operations Head, Finance Head), CHRO, Relevant department heads for specific promotions under review.',
+          'Committee Responsibilities: Review promotion nominations and supporting documentation, Evaluate candidates against criteria and organizational needs, Ensure consistency in standards across organization, Balance individual aspirations with business requirements, Make final recommendations on promotions, approvals, deferrals.',
+          'Decision Criteria: Individual performance and potential, Competency fit for next role, Organizational need and succession planning, Comparative assessment if multiple candidates for same role, Budget and salary band considerations, Diversity and inclusion objectives, Retention risk if high performer not promoted.',
+          'Calibration and Consistency: Committee calibrates promotion standards across departments avoiding grade inflation. Ensures similar performance and competencies result in similar promotion outcomes. Compares candidates across organization not just within department.',
+          'Deferral Decisions: Promotions may be deferred (not rejected permanently) if - Candidate needs further development before promotion, No immediate vacancy though candidate deserving, Budget constraints requiring phased promotions, Candidate recently promoted (cooling period). Deferred candidates receive feedback and development plan.',
+          'Documentation: Committee decisions documented with rationale. Records maintained for transparency and audit.'
+        ]
+      },
+      {
+        number: '17.5',
+        title: 'Salary Revision on Promotion',
+        content: 'Promotions accompanied by commensurate salary increases reflecting enhanced role value:',
+        points: [
+          'Promotion Increment: Minimum salary increase of 10-15% on promotion to next grade. Actual increase depends on - Current salary position in grade, New grade salary range, Market competitiveness, Performance and potential, Budget constraints. High performers or critical roles may receive higher increments (15-20%).',
+          'Grade Change: Promotion involves movement to higher salary grade/band. New salary positioned appropriately within new grade range (typically at entry or lower-mid range allowing future growth within grade).',
+          'Other Benefits: Benefits corresponding to new grade become applicable - Enhanced insurance coverage if applicable, Higher leave travel allowance, Car eligibility for senior grades, Increased education reimbursement limits, Other grade-specific perquisites.',
+          'Promotion vs Annual Increment: Promotion increment is in addition to (or in lieu of) annual increment. If promotion and annual increment cycle coincide, typically combined as single higher increase. If promoted mid-year, may receive pro-rated annual increment at year-end.',
+          'Retroactivity: Promotion salary effective from promotion effective date (typically future date). Not retroactive to nomination or approval date.',
+          'Revised Salary Structure: Revised salary structure (breakup of basic, allowances) as per new grade. Communication through promotion letter and revised salary slip.'
+        ]
+      },
+      {
+        number: '17.6',
+        title: 'Non-Promotion and Feedback',
+        content: 'Not all eligible or nominated employees will be promoted each cycle. Handling non-promotions sensitively and constructively:',
+        points: [
+          'Reasons for Non-Promotion: No vacancy at higher level currently, Other candidates more suitable or ranked higher, Insufficient demonstration of next-level competencies, Need for further development or experience, Recent promotion (less than minimum tenure in current role), Performance not consistently at required level, Budget constraints limiting number of promotions.',
+          'Communication: Supervisors communicate non-promotion to nominated employees sensitively. Avoid demotivation or perception of unfairness. Emphasis on developmental perspective.',
+          'Feedback and Development Discussion: Specific feedback on strengths and areas needing development for future promotion. Gap analysis between current competencies and next-level requirements. Individual Development Plan (IDP) to address gaps through - Training programs, Stretch assignments, Mentoring or coaching, Certifications or education. Timeline and milestones for development. Encouragement and support for continued high performance.',
+          'Encouragement: Reassure that non-promotion is not negative judgment of employee value. Many factors influence promotion decisions including organizational needs. Continued performance excellence positions for future opportunities. Recognize and appreciate contributions at current level.',
+          'Appeal Process: If employee believes non-promotion decision unfair or discriminatory, may raise concern through grievance mechanism. HR reviews concern objectively and provides response.'
+        ]
+      },
+      {
+        number: '17.7',
+        title: 'Special Promotion Situations',
+        content: 'Certain promotion scenarios require adapted handling:',
+        points: [
+          'Acting Promotions: Temporary assignment to higher role during incumbent absence (extended leave, vacancy interim). Acting promotion involves additional responsibilities but may have partial salary adjustment. Duration specified. Performance in acting role assessed for future regular promotion consideration.',
+          'Double Promotions: Skipping one grade level in exceptional cases - Outstanding performance and potential far exceeding current level, Critical shortage requiring accelerated advancement, Rare and requires CEO approval. Double promotions carefully evaluated to ensure capability and avoid resentment.',
+          'Lateral Moves: Movement to different department or role at similar level. May be for development, better fit, or organizational need. Typically no salary increase but development opportunity. Can be stepping stone to future promotion.',
+          'Job Regrading: If role significantly expanded or changed, job may be regraded to higher level. Employee promoted through regrading process. Requires job evaluation and approval.',
+          'Promotion During Probation: Generally probationers not promoted until confirmed. Exception for exceptional performance and critical need. Probation may continue in new role.',
+          'Promotion with Relocation: Some promotions may require relocation to different location. Relocation assistance provided as per policy. Employee acceptance required for relocation-linked promotions.'
         ]
       }
     ]
