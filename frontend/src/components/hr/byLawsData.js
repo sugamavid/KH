@@ -1044,45 +1044,99 @@ export const byLawsData = {
   section11: {
     id: 'section11',
     number: 'SECTION XI',
-    title: 'COMPENSATION STRUCTURE AND SALARY ADMINISTRATION',
-    searchTerms: ['compensation', 'salary', 'wages', 'pay', 'remuneration'],
+    title: 'TRANSFERS, POSTINGS, AND MOBILITY',
+    searchTerms: ['transfer', 'posting', 'relocation', 'mobility', 'deployment', 'assignment'],
     subsections: [
       {
         number: '11.1',
-        title: 'Salary Components',
-        content: 'Salary structure comprises:',
+        title: 'Transfer Policy - Framework and Philosophy',
+        content: 'Transfers are organizational decisions to deploy employees across locations, departments, or roles based on business needs, employee development, or operational requirements. The Hospital follows fair, transparent transfer practices balancing organizational needs with employee circumstances:',
         points: [
-          'Basic Salary: Fixed component forming base for other calculations.',
-          'House Rent Allowance (HRA): 40% of basic salary.',
-          'Dearness Allowance (DA): 20% of basic salary.',
-          'Transport Allowance: As per grade and policy.',
-          'Medical Allowance: For medical expenses.',
-          'Special Allowances: Role-specific or location-specific allowances.',
-          'Performance Incentives: Based on individual and organizational performance.'
+          'Purpose of Transfers: Transfers serve multiple organizational and developmental purposes - Meeting operational requirements and staffing needs across locations, Providing career development and broadening employee experience, Succession planning and leadership pipeline development, Addressing interpersonal conflicts or team dynamics issues, Employee requests for family or personal reasons, Disciplinary transfers in certain misconduct cases, Organizational restructuring or service line expansion.',
+          'Types of Transfers: Temporary Transfer - Short-term assignment (typically 3-12 months) for project needs, skill-building, or emergency coverage. Employee returns to original location/role post-assignment. Permanent Transfer - Long-term relocation to different location or department with no defined return date. Becomes employee\'s regular posting. Rotational Transfer - Planned rotation across locations or departments as part of career development program, especially for management trainees or leadership development. Emergency/Urgent Transfer - Immediate transfer due to critical staffing shortage, emergency situation, or safety concerns. Disciplinary Transfer - Transfer as consequence of misconduct or to separate conflicting parties. Voluntary Transfer - Employee-initiated transfer request based on personal circumstances, accepted by management.',
+          'Transfer Authority: Transfers are authorized by competent authority based on employee level - Staff and junior roles: Department Head with HR approval, Middle management: Senior Management with HR concurrence, Senior management: CEO/Board approval. All transfers documented with formal transfer orders.',
+          'Principles Guiding Transfers: Business necessity and operational requirements, Fair and non-discriminatory process, Consideration of employee circumstances where feasible, Advance notice except in emergencies, Reasonable frequency (avoiding excessive transfers), Support and assistance for relocated employees, Clear communication of transfer rationale, Right to represent concerns or grievances.',
+          'Transfer vs. Deputation: Transfer is permanent or long-term change in posting within Hospital. Deputation is temporary assignment to external organization or different entity with return to Hospital after deputation period.'
         ]
       },
       {
         number: '11.2',
-        title: 'Salary Payment',
-        content: 'Salary payment procedures:',
+        title: 'Transfer Procedures and Notice Period',
+        content: 'Structured procedures ensure smooth, planned transitions minimizing disruption:',
         points: [
-          'Salary paid monthly through bank transfer by last working day.',
-          'Detailed salary slip provided showing all components and deductions.',
-          'Deductions include PF, TDS, professional tax, and loan recoveries.',
-          'Advance salary may be provided in exceptional circumstances.',
-          'Queries regarding salary addressed by accounts department promptly.'
+          'Transfer Assessment: Management assesses transfer need considering - Vacant positions in other locations requiring filling, Skill match between employee and new role requirement, Employee past performance and adaptability, Family circumstances and personal situations, Previous transfer history and cooling period, Business criticality and urgency.',
+          'Transfer Order: Formal transfer order issued specifying - Employee name, designation, current location/department, New location/department, Effective date of transfer, Reporting manager at new location, Reason for transfer (if appropriate to disclose), Relocation assistance and benefits applicable, Contact person for queries.',
+          'Notice Period for Transfers: Advance notice provided to allow preparation - Standard transfers: 30-60 days notice, Senior positions: 60-90 days notice, Emergency transfers: As short as possible with compensatory support, Voluntary transfers: Mutually agreed timeline. Notice period allows employee to - Complete pending work and handover, Make personal arrangements (family, housing, children schooling), Plan relocation logistics.',
+          'Employee Acceptance: For voluntary and developmental transfers, employee acceptance obtained. For operational transfers, employee expected to comply, but can represent genuine hardship circumstances for reconsideration. Refusal to accept legitimate transfer without valid grounds may be viewed as insubordination.',
+          'Handover Process: Employee completes comprehensive handover - Document ongoing projects, pending tasks, key contacts, Briefing to replacement or supervisor, Knowledge transfer sessions, Return department-specific assets, Obtain clearance from current department.',
+          'Joining at New Location: Employee reports to new location on specified date, Completes joining formalities at new location, Receives orientation and induction for new role/location, Begins transition period with support from manager and colleagues.',
+          'Settling-In Support: Initial weeks include - Familiarization with new location, systems, team, Regular check-ins from manager and HR, Accommodation and family settling assistance, Performance expectations clarification.'
         ]
       },
       {
         number: '11.3',
-        title: 'Increments and Revisions',
-        content: 'Salary increments based on:',
+        title: 'Relocation Assistance and Benefits',
+        content: 'Comprehensive support helps employees and families transition smoothly to new locations:',
         points: [
-          'Annual performance appraisal ratings.',
-          'Market benchmarking and cost of living adjustments.',
-          'Promotions and role changes.',
-          'Organizational performance and financial health.',
-          'Increments typically effective from January each year.'
+          'Transportation of Household Goods: Hospital covers or reimburses cost of packing, loading, transporting, and unloading household belongings from old to new location. Reimbursement typically based on actual bills up to specified limits depending on grade. Professional packers and movers engaged or employee reimbursed. Insurance coverage for goods in transit.',
+          'Travel Expenses: Employee and family travel costs (train, flight, or mileage) reimbursed. Travel mode based on grade and distance - Junior staff: AC train or economy flight, Senior staff: Business class flight for long distances. Reimbursement includes tickets, meals during journey.',
+          'Temporary Accommodation: Hotel or guest house accommodation at new location for initial days (typically 7-30 days) while employee searches for permanent housing. Accommodation cost borne by Hospital or daily allowance provided.',
+          'House Hunting Assistance: Time off to search for accommodation at new location, HR assistance in identifying housing options, brokers, or Hospital housing if available, Advance salary for security deposit and advance rent.',
+          'Joining/Settling-In Allowance: Lump sum allowance (typically 1-2 months basic salary) to cover miscellaneous expenses - Temporary arrangements, household setup, new connections (electricity, gas, internet), Small purchases for new accommodation, Transportation during initial days.',
+          'Housing Rent Differential: If new location has significantly higher housing costs than previous location, differential rent allowance may be provided for defined period (typically 12-24 months).',
+          'Children Education Assistance: Support for children school admission at new location - Time off for school visits and admissions, Assistance in identifying suitable schools, Transfer certificates and records facilitation, Admission fees reimbursement or contribution in some cases.',
+          'Spouse Job Search Support: For transferred employees with working spouses - Internal job opportunities for spouse within Hospital if available, Networking assistance and job references, Time off for spouse to attend interviews.',
+          'Loan for Relocation: Interest-free or low-interest loan for relocation expenses, recoverable through salary over 12-24 months.',
+          'Hardship Allowance: For transfers to remote, difficult locations - Monthly hardship allowance compensating for location challenges, Enhanced leave travel allowance for visits to hometown, Priority for subsequent transfer to preferred location.',
+          'Return Trip Allowance: For employees relocated far from hometown - Annual return trip expenses for self and family (typically 1-2 trips per year), Covers travel during vacation for family to visit hometown.',
+          'Insurance and Health: Continuity of health insurance and benefits, Assistance in identifying quality healthcare facilities at new location, Medical checkup for family post-relocation if needed.'
+        ]
+      },
+      {
+        number: '11.4',
+        title: 'Employee Hardship and Transfer Requests',
+        content: 'Balancing organizational needs with employee personal circumstances:',
+        points: [
+          'Genuine Hardship Grounds: Employee may represent hardship requesting transfer cancellation or deferment - Serious illness of employee or immediate family requiring specific location, Spouse employment in current location (dual career couples), Children critical education phase (board exams), Sole caregiver for aged/disabled parents or dependents, Recent family bereavement or trauma, Recent transfer (within last 2 years) - cooling period consideration.',
+          'Hardship Representation Process: Employee submits written representation to reporting manager and HR within specified time (typically 7-10 days of transfer order), Representation states specific hardship circumstances with supporting documents (medical certificates, school records, etc.), Management reviews representation considering - Genuineness of hardship claim, Business criticality of transfer, Alternatives (temporary assignment, deferment, different location), Precedents and fairness to other employees.',
+          'Management Decision: After review, management may - Accept representation and cancel transfer, Defer transfer to later date allowing time to resolve hardship, Offer alternative location closer to current posting, Modify transfer to temporary assignment, Proceed with transfer explaining business necessity. Decision communicated to employee with rationale.',
+          'Voluntary Transfer Requests: Employees may request transfer for personal reasons - Family relocation, Return to hometown, Spousal transfer requiring relocation, Health reasons requiring climate or location change, Career growth opportunities at other location. Voluntary transfer requests are accommodated based on - Vacancy availability at desired location, Business needs and operational feasibility, Employee performance and tenure, Frequency of past transfers.',
+          'Transfer Request Process: Submit transfer request through HRMS or written application, State reason, preferred location(s), and timeline, Management reviews periodically (quarterly transfer review meetings), Approved requests placed in transfer waitlist, Employee notified when suitable opportunity arises. May take 3-12 months depending on openings.',
+          'Inter-Location Transfers: For Hospital with multiple branches/units, internal job postings for vacancies at other locations, Employees can apply for posted positions, Selection based on suitability and vacancy needs, Successful applicants transferred on mutual consent.'
+        ]
+      },
+      {
+        number: '11.5',
+        title: 'International Transfers and Expatriate Assignments',
+        content: 'For hospitals with international operations or collaborations, special provisions apply:',
+        points: [
+          'International Assignment Criteria: Selected employees may be offered international postings to - Parent organization or subsidiary overseas, Partner hospitals for knowledge exchange, Medical camps or humanitarian missions, Training or skill development programs abroad. Selection based on technical expertise, language skills, cultural adaptability, past performance.',
+          'Expatriate Benefits: International postings include enhanced benefits - Base salary in INR plus foreign location allowance, Housing provided or generous accommodation allowance, Cost of living adjustment for expensive locations, Hardship allowance for difficult locations, Annual return airfare for employee and family, Children education abroad expenses, Tax equalization (employee pays only India tax, employer handles foreign tax difference), Work permit and visa assistance, Comprehensive international health insurance.',
+          'Assignment Duration: Typically 1-5 years depending on assignment purpose, Short-term assignments (3-12 months) for projects or training, Long-term assignments (2-5 years) for leadership roles or knowledge transfer, Extensions possible based on performance and organizational need.',
+          'Repatriation Support: At end of international assignment, employee returns to India, Hospital assists with - Reverse relocation to India, Reintegration into India operations, Career placement ensuring assignment enhances career, Repatriation bonus or assistance, Children schooling back in India.',
+          'Family Support: Spouse and children typically accompany on long-term assignments, Pre-departure orientation and cultural training for family, Spouse work permit assistance in foreign country if regulations allow, Schooling research and support for children, Community and social integration support.'
+        ]
+      },
+      {
+        number: '11.6',
+        title: 'Performance and Transfers',
+        content: 'Link between performance, development, and transfer decisions:',
+        points: [
+          'Developmental Transfers: High performers offered transfers as development opportunity - Exposure to different operations, geographies, functions, Learning new skills and building versatility, Preparing for higher responsibilities, Building organizational network and perspective. Developmental transfers boost career progression.',
+          'Performance-Based Considerations: Transfer decisions consider performance - High performers: Priority for preferred location transfers, choice postings, Consistent performers: Fair consideration for voluntary transfers, Low performers: May receive transfers to less preferred roles or locations as part of performance management, May be transferred out of critical roles.',
+          'Transfers as Corrective Action: Persistent performance issues in current role may lead to transfer to - Role with reduced responsibilities temporarily, Different environment for fresh start, Under close supervision for performance monitoring. Transfer with performance expectations and timelines.',
+          'Post-Transfer Performance Review: Employee performance reviewed after settling period (typically 3-6 months), Assessment considers adjustment challenges, Determines success of transfer decision, Informs future transfer policies.'
+        ]
+      },
+      {
+        number: '11.7',
+        title: 'Records and Compliance',
+        content: 'Proper documentation ensures transparency and compliance:',
+        points: [
+          'Transfer Records: HR maintains comprehensive transfer records - Transfer orders with date and location details, Employee acceptance or representations, Relocation expenses incurred and reimbursed, Performance post-transfer, Transfer justifications and approvals.',
+          'Transfer Data Analysis: HR analyzes transfer data periodically - Transfer frequency and patterns, Locations with high turnover or transfer reluctance, Cost of relocations, Employee satisfaction with transfer process, Identify process improvements.',
+          'Legal Compliance: Transfers comply with - Employment contract terms on mobility clauses, Labor laws regarding transfers, Non-discriminatory practices, Tax implications of relocation benefits.',
+          'Transfer Policy Review: Transfer policy reviewed every 2-3 years for - Relevance to business needs, Market competitiveness of relocation benefits, Employee feedback incorporation, Best practices adoption.'
         ]
       }
     ]
