@@ -420,64 +420,183 @@ const HRByLaws = ({ setActiveModule }) => {
 
     if (sectionId === 'preamble') {
       return (
-        <div className="bg-white rounded-xl shadow-lg">
-          {/* Board Approval Banner */}
-          <div className="bg-gradient-to-r from-amber-50 to-amber-100 border-b-2 border-amber-300 p-6">
-            <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 rounded-full bg-amber-600 flex items-center justify-center flex-shrink-0">
-                <CheckCircle className="w-5 h-5 text-white" />
+        <div className="bg-white rounded-2xl shadow-2xl overflow-hidden">
+          {/* Enhanced Board Approval Banner for Preamble */}
+          <div className="bg-gradient-to-r from-amber-100 via-yellow-50 to-amber-100 border-b-4 border-amber-400 p-8">
+            <div className="flex items-center space-x-4">
+              <div className="w-14 h-14 rounded-xl bg-amber-600 flex items-center justify-center flex-shrink-0 shadow-lg">
+                <CheckCircle className="w-7 h-7 text-white" />
               </div>
-              <div>
-                <p className="font-bold text-amber-900">Official Board-Approved Document</p>
-                <p className="text-sm text-amber-800">Effective February 1, 2024 • Version 2.0</p>
+              <div className="flex-1">
+                <div className="flex items-center space-x-3 mb-1">
+                  <p className="text-xl font-bold text-amber-900">Official Board-Approved Document</p>
+                  <span className="px-3 py-1 bg-amber-600 text-white text-xs font-bold rounded-full">
+                    CERTIFIED
+                  </span>
+                </div>
+                <div className="flex items-center space-x-6 text-sm text-amber-800">
+                  <span className="flex items-center">
+                    <Calendar className="w-4 h-4 mr-1" />
+                    Effective: February 1, 2024
+                  </span>
+                  <span className="flex items-center">
+                    <FileText className="w-4 h-4 mr-1" />
+                    Version 2.0
+                  </span>
+                  <span className="flex items-center">
+                    <CheckCircle className="w-4 h-4 mr-1" />
+                    Board Approved: January 15, 2024
+                  </span>
+                </div>
               </div>
             </div>
           </div>
 
-          <div className="border-b-4 border-double border-slate-800 p-12 text-center bg-gradient-to-b from-slate-50 to-white">
-            <Scale className="w-16 h-16 text-blue-900 mx-auto mb-4" />
-            <h1 className="text-3xl font-serif font-bold text-slate-900 mb-6">{section.title}</h1>
+          {/* Premium Preamble Header */}
+          <div className="border-b-4 border-double border-slate-800 p-16 text-center bg-gradient-to-b from-slate-50 via-white to-slate-50">
+            <div className="max-w-4xl mx-auto">
+              <div className="mb-6">
+                <Scale className="w-20 h-20 text-blue-900 mx-auto opacity-80" />
+              </div>
+              <h1 className="text-4xl font-serif font-bold text-slate-900 mb-4 tracking-wide">
+                {section.title}
+              </h1>
+              <div className="w-32 h-1 bg-gradient-to-r from-transparent via-blue-600 to-transparent mx-auto"></div>
+            </div>
           </div>
-          <div className="p-12 bg-amber-50">
-            <p className="text-base leading-relaxed text-justify font-serif text-slate-800 indent-12">
-              {section.content}
-            </p>
+
+          {/* Enhanced Content Area */}
+          <div className="p-16 bg-gradient-to-b from-amber-50 to-white">
+            <div className="max-w-4xl mx-auto">
+              <div className="bg-white rounded-xl p-10 shadow-inner border-2 border-amber-200">
+                <p className="text-lg leading-loose text-justify font-serif text-slate-800 indent-16 tracking-wide" style={{textIndent: '3rem', lineHeight: '2'}}>
+                  {section.content}
+                </p>
+              </div>
+              
+              {/* Document Metadata */}
+              <div className="mt-10 pt-8 border-t-2 border-slate-200">
+                <div className="grid grid-cols-3 gap-6 text-center">
+                  <div className="bg-slate-50 rounded-xl p-4">
+                    <p className="text-xs text-slate-600 font-semibold uppercase">Document Code</p>
+                    <p className="text-sm font-bold text-slate-900 mt-1">KH-HR-BL/001/2024</p>
+                  </div>
+                  <div className="bg-slate-50 rounded-xl p-4">
+                    <p className="text-xs text-slate-600 font-semibold uppercase">Classification</p>
+                    <p className="text-sm font-bold text-slate-900 mt-1">Official - Binding</p>
+                  </div>
+                  <div className="bg-slate-50 rounded-xl p-4">
+                    <p className="text-xs text-slate-600 font-semibold uppercase">Total Sections</p>
+                    <p className="text-sm font-bold text-slate-900 mt-1">30 Sections</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       );
     }
 
     return (
-      <div className="bg-white rounded-xl shadow-lg p-12">
-        <div className="border-b-2 border-slate-700 pb-4 mb-8">
-          <h2 className="text-2xl font-serif font-bold text-slate-900">{section.number}</h2>
-          <h3 className="text-xl font-serif font-bold text-slate-800 mt-2">{section.title}</h3>
+      <div className="bg-white rounded-2xl shadow-2xl overflow-hidden">
+        {/* Section Header */}
+        <div className="bg-gradient-to-r from-slate-800 to-slate-700 p-10 text-white">
+          <div className="max-w-4xl mx-auto">
+            <div className="flex items-center space-x-4 mb-4">
+              <div className="w-12 h-12 rounded-lg bg-white bg-opacity-20 flex items-center justify-center">
+                <FileText className="w-6 h-6" />
+              </div>
+              <div className="flex-1">
+                <p className="text-blue-200 text-sm font-semibold uppercase tracking-wider">{section.number}</p>
+                <h2 className="text-3xl font-serif font-bold mt-1">{section.title}</h2>
+              </div>
+            </div>
+            <div className="w-full h-1 bg-gradient-to-r from-blue-400 via-white to-blue-400 opacity-30"></div>
+          </div>
         </div>
 
-        {section.subsections && section.subsections.map((subsection, idx) => (
-          <div key={idx} className="mb-8 ml-6">
-            <h4 className="text-lg font-serif font-bold text-slate-900 mb-3">
-              {subsection.number} {subsection.title}
-            </h4>
-            {subsection.content && (
-              <p className="text-base leading-relaxed text-justify font-serif text-slate-800 mb-4">
-                {subsection.content}
-              </p>
-            )}
-            {subsection.points && (
-              <ol className="space-y-3 ml-8">
-                {subsection.points.map((point, pointIdx) => (
-                  <li key={pointIdx} className="text-base leading-relaxed text-justify font-serif text-slate-800 relative pl-6">
-                    <span className="absolute left-0 font-bold text-slate-600">
-                      {String.fromCharCode(97 + pointIdx)}.
-                    </span>
-                    {point}
-                  </li>
-                ))}
-              </ol>
-            )}
+        {/* Enhanced Content Body */}
+        <div className="p-12">
+          <div className="max-w-4xl mx-auto">
+            {section.subsections && section.subsections.map((subsection, idx) => (
+              <div key={idx} className="mb-10">
+                {/* Subsection Header */}
+                <div className="mb-6 pb-4 border-b-2 border-slate-200">
+                  <div className="flex items-start space-x-4">
+                    <div className="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center flex-shrink-0 mt-1">
+                      <span className="text-blue-700 font-bold text-sm">{subsection.number}</span>
+                    </div>
+                    <h4 className="text-xl font-serif font-bold text-slate-900 flex-1 pt-2">
+                      {subsection.title}
+                    </h4>
+                  </div>
+                </div>
+
+                {/* Subsection Content */}
+                {subsection.content && (
+                  <div className="mb-6 ml-14">
+                    <p className="text-base leading-relaxed text-justify font-serif text-slate-800 tracking-wide" style={{lineHeight: '1.8'}}>
+                      {subsection.content}
+                    </p>
+                  </div>
+                )}
+
+                {/* Subsection Points */}
+                {subsection.points && (
+                  <div className="ml-14 space-y-4">
+                    {subsection.points.map((point, pointIdx) => (
+                      <div key={pointIdx} className="flex items-start group hover:bg-slate-50 p-4 rounded-lg transition-all">
+                        <div className="w-8 h-8 rounded-full bg-slate-100 group-hover:bg-blue-100 flex items-center justify-center flex-shrink-0 mr-4 transition-colors">
+                          <span className="text-slate-600 group-hover:text-blue-700 font-bold text-sm transition-colors">
+                            {String.fromCharCode(97 + pointIdx)}
+                          </span>
+                        </div>
+                        <p className="text-base leading-relaxed text-justify font-serif text-slate-800 flex-1 pt-1" style={{lineHeight: '1.8'}}>
+                          {point}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                )}
+
+                {/* Nested Subsections (if any) */}
+                {subsection.subsections && (
+                  <div className="ml-14 mt-6 space-y-6">
+                    {subsection.subsections.map((nestedSub, nestedIdx) => (
+                      <div key={nestedIdx} className="bg-slate-50 rounded-xl p-6 border-l-4 border-blue-400">
+                        <h5 className="text-lg font-serif font-bold text-slate-900 mb-4">
+                          {nestedSub.title}
+                        </h5>
+                        {nestedSub.points && (
+                          <ul className="space-y-3">
+                            {nestedSub.points.map((point, pointIdx) => (
+                              <li key={pointIdx} className="text-base leading-relaxed text-justify font-serif text-slate-700 flex items-start">
+                                <ChevronRight className="w-5 h-5 text-blue-600 mr-2 flex-shrink-0 mt-1" />
+                                <span>{point}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ))}
           </div>
-        ))}
+        </div>
+
+        {/* Section Footer */}
+        <div className="bg-slate-50 px-12 py-6 border-t-2 border-slate-200">
+          <div className="max-w-4xl mx-auto flex items-center justify-between text-sm text-slate-600">
+            <div>
+              <span className="font-semibold">Document:</span> Koyili Hospital HR By-Laws • {section.number}
+            </div>
+            <div>
+              <span className="font-semibold">Version:</span> 2.0 • <span className="font-semibold">Effective:</span> February 1, 2024
+            </div>
+          </div>
+        </div>
       </div>
     );
   };
