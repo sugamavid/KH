@@ -305,70 +305,201 @@ const HRSOPs = ({ setActiveModule }) => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
-      <div className="bg-white border-b border-slate-200 px-6 py-5">
-        <div className="flex items-center justify-between">
-          <div>
-            <h1 className="text-2xl font-bold text-slate-900">Standard Operating Procedures</h1>
-            <p className="text-sm text-slate-600 mt-1">Standardized processes and operational guidelines</p>
+    <div className="flex h-screen bg-gradient-to-br from-slate-100 to-slate-200">
+      {/* Dedicated Left Sidebar */}
+      <div className={`${sidebarCollapsed ? 'w-16' : 'w-80'} bg-white border-r-2 border-slate-300 flex flex-col transition-all duration-300 shadow-xl`}>
+        {/* Back to HR Dashboard */}
+        {setActiveModule && !sidebarCollapsed && (
+          <div className="p-3 border-b border-slate-200 bg-slate-50">
+            <button
+              onClick={() => setActiveModule('dashboard')}
+              className="w-full flex items-center space-x-2 px-3 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-200 rounded-lg transition-colors"
+            >
+              <ArrowLeft className="w-4 h-4" />
+              <span>Back to HR Dashboard</span>
+            </button>
           </div>
-          <button className="px-5 py-2.5 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors font-semibold flex items-center shadow-md">
-            <Download className="w-5 h-5 mr-2" />
-            Download All
-          </button>
+        )}
+
+        {/* Sidebar Header */}
+        <div className="p-4 border-b-2 border-slate-200 bg-gradient-to-r from-green-800 to-emerald-900">
+          <div className="flex items-center justify-between">
+            {!sidebarCollapsed && (
+              <div className="flex items-center space-x-3">
+                <div className="w-10 h-10 rounded-lg bg-white bg-opacity-20 flex items-center justify-center">
+                  <BookOpen className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <h2 className="text-sm font-bold text-white">HR SOPs</h2>
+                  <p className="text-xs text-green-200">10 Procedures</p>
+                </div>
+              </div>
+            )}
+            <button
+              onClick={() => setSidebarCollapsed(!sidebarCollapsed)}
+              className="p-2 hover:bg-white hover:bg-opacity-10 rounded-lg transition-colors"
+            >
+              <Menu className="w-5 h-5 text-white" />
+            </button>
+          </div>
+        </div>
+
+        {/* Navigation Links */}
+        <div className="flex-1 overflow-y-auto py-4">
+          {!sidebarCollapsed ? (
+            <div className="space-y-1 px-2">
+              {Object.entries(navigationByCategory).map(([category, items]) => (
+                <div key={category} className="mb-4">
+                  <div className="px-3 py-2 text-xs font-bold text-slate-500 uppercase tracking-wider">
+                    {category}
+                  </div>
+                  {items.map((nav) => {
+                    const IconComponent = nav.icon;
+                    return (
+                      <button
+                        key={nav.id}
+                        onClick={() => jumpToSection(nav.id)}
+                        className={`w-full flex items-center space-x-3 px-3 py-2.5 rounded-lg text-left transition-all ${
+                          activeSection === nav.id
+                            ? 'bg-green-600 text-white shadow-md'
+                            : 'text-slate-700 hover:bg-slate-100'
+                        }`}
+                      >
+                        <IconComponent className="w-4 h-4 flex-shrink-0" />
+                        <span className="text-sm font-medium truncate">{nav.title}</span>
+                        {activeSection === nav.id && (
+                          <ChevronRight className="w-4 h-4 ml-auto" />
+                        )}
+                      </button>
+                    );
+                  })}
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div className="space-y-2 px-2">
+              {navigation.map((nav) => {
+                const IconComponent = nav.icon;
+                return (
+                  <button
+                    key={nav.id}
+                    onClick={() => jumpToSection(nav.id)}
+                    className={`w-full p-3 rounded-lg transition-all ${
+                      activeSection === nav.id
+                        ? 'bg-green-600 text-white'
+                        : 'text-slate-700 hover:bg-slate-100'
+                    }`}
+                    title={nav.title}
+                  >
+                    <IconComponent className="w-5 h-5 mx-auto" />
+                  </button>
+                );
+              })}
+            </div>
+          )}
         </div>
       </div>
 
-      <div className="p-6 space-y-6">
-        <div className="bg-white rounded-xl p-5 border border-slate-200 shadow-sm">
-          <div className="relative">
-            <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
-            <input
-              type="text"
-              placeholder="Search SOPs..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-12 pr-4 py-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
-            />
-          </div>
-        </div>
+      {/* Main Content */}
+      <div className="flex-1 flex flex-col overflow-hidden">
+        {/* Top Header */}
+        <div className="bg-white border-b-2 border-slate-300 px-6 py-4 shadow-lg z-10">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center space-x-4">
+              <div className="flex items-center space-x-3">
+                <h1 className="text-xl font-bold text-slate-900">Koyili Hospital • HR SOPs</h1>
+                <span className="px-3 py-1 bg-green-100 text-green-800 text-xs font-bold rounded-full">
+                  Standard Procedures
+                </span>
+              </div>
+            </div>
+            
+            <div className="flex items-center space-x-4">
+              {/* Search Bar */}
+              <div className="relative">
+                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-slate-500 w-5 h-5" />
+                <input
+                  type="text"
+                  placeholder="Search SOPs, procedures, keywords..."
+                  value={searchQuery}
+                  onChange={handleSearch}
+                  onFocus={() => searchQuery && setShowSearch(true)}
+                  className="pl-12 pr-10 py-2.5 border-2 border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent w-96 text-sm"
+                />
+                {searchQuery && (
+                  <button
+                    onClick={() => {
+                      setSearchQuery('');
+                      setSearchResults([]);
+                      setShowSearch(false);
+                    }}
+                    className="absolute right-3 top-1/2 transform -translate-y-1/2 text-slate-400 hover:text-slate-600"
+                  >
+                    <X className="w-4 h-4" />
+                  </button>
+                )}
+                {searchQuery && <span className="absolute -bottom-6 left-0 text-xs text-slate-600">{searchResults.length} results found</span>}
+              </div>
 
-        <div className="space-y-4">
-          {filteredSOPs.map((sopCategory) => (
-            <div key={sopCategory.category} className="bg-white rounded-xl p-6 border border-slate-200 hover:border-green-400 transition-all shadow-sm">
-              <div className="flex justify-between items-start cursor-pointer" onClick={() => toggleExpand(`sop-${sopCategory.category}`)}>
-                <div className="flex-1">
-                  <div className="flex items-center space-x-3 mb-2">
-                    <span className="bg-green-100 text-green-700 px-4 py-1 rounded-full text-sm font-bold">
-                      Category {sopCategory.category}
-                    </span>
-                    <h3 className="text-xl font-bold text-slate-900">{sopCategory.title}</h3>
-                  </div>
-                  <p className="text-sm text-slate-500 mt-2">{sopCategory.sops.length} SOPs in this category</p>
-                </div>
-                <button className="ml-4 text-slate-400 hover:text-slate-600">
-                  {expandedItems[`sop-${sopCategory.category}`] ? <ChevronUp className="w-6 h-6" /> : <ChevronDown className="w-6 h-6" />}
+              {/* Action Buttons */}
+              <button className="px-4 py-2 bg-slate-100 text-slate-700 rounded-lg hover:bg-slate-200 transition-colors font-semibold flex items-center text-sm">
+                <Printer className="w-4 h-4 mr-2" />
+                Print
+              </button>
+              <button className="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors font-semibold flex items-center text-sm">
+                <Download className="w-4 h-4 mr-2" />
+                Download PDF
+              </button>
+            </div>
+          </div>
+
+          {/* Search Results Dropdown */}
+          {showSearch && searchResults.length > 0 && (
+            <div className="absolute top-16 right-6 w-[450px] bg-white border-2 border-slate-300 rounded-lg shadow-2xl max-h-96 overflow-y-auto z-50 mt-2">
+              <div className="p-3 border-b border-slate-200 bg-slate-50 flex items-center justify-between">
+                <span className="text-sm font-bold text-slate-900">
+                  Search Results ({searchResults.length})
+                </span>
+                <button
+                  onClick={() => setShowSearch(false)}
+                  className="text-slate-400 hover:text-slate-600"
+                >
+                  <X className="w-4 h-4" />
                 </button>
               </div>
-              
-              {expandedItems[`sop-${sopCategory.category}`] && (
-                <div className="mt-4 pt-4 border-t border-slate-200 space-y-2">
-                  {sopCategory.sops.map((sop, idx) => (
-                    <div key={idx} className="flex items-center justify-between p-4 bg-slate-50 rounded-lg hover:bg-slate-100 transition-colors">
-                      <div className="flex items-center space-x-3">
-                        <span className="font-mono text-sm font-bold text-green-600">{sop.code}</span>
-                        <span className="text-slate-900 font-medium">{sop.name}</span>
-                      </div>
-                      <div className="flex space-x-2">
-                        <button className="text-blue-600 hover:text-blue-700 text-sm font-semibold">View</button>
-                        <button className="text-slate-600 hover:text-slate-700 text-sm font-semibold">Download</button>
+              <div className="divide-y divide-slate-100">
+                {searchResults.slice(0, 20).map((result, idx) => (
+                  <button
+                    key={idx}
+                    onClick={() => jumpToSection(result.sectionId)}
+                    className="w-full p-4 text-left hover:bg-green-50 transition-colors group"
+                  >
+                    <div className="flex items-start space-x-3">
+                      <Zap className="w-4 h-4 text-green-600 mt-1 flex-shrink-0" />
+                      <div className="flex-1 min-w-0">
+                        <p className="text-sm font-semibold text-slate-900 group-hover:text-green-600">
+                          {result.title}
+                        </p>
+                        <p className="text-xs text-slate-600 mt-1 line-clamp-2">
+                          {result.preview}
+                        </p>
+                        <span className="inline-block mt-1 px-2 py-0.5 bg-slate-100 text-slate-600 text-xs rounded">
+                          {result.type}
+                        </span>
                       </div>
                     </div>
-                  ))}
-                </div>
-              )}
+                  </button>
+                ))}
+              </div>
             </div>
-          ))}
+          )}
+        </div>
+
+        {/* Scrollable Content */}
+        <div ref={contentRef} className="flex-1 overflow-auto p-8">
+          <div className="max-w-5xl mx-auto">
+            {activeSection === 'dashboard' ? renderDashboard() : renderSection(activeSection)}
+          </div>
         </div>
       </div>
     </div>
