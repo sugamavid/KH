@@ -397,15 +397,24 @@ const HRAnnexuresNew = ({ setActiveModule }) => {
           </div>
           <p className="text-purple-100 mb-6">{selectedForm.description}</p>
           <div className="flex space-x-3">
-            <button className="px-6 py-3 bg-white text-purple-900 rounded-xl hover:bg-purple-50 transition-all font-bold flex items-center shadow-lg">
+            <button 
+              onClick={() => handleDownloadPDF(selectedForm)}
+              className="px-6 py-3 bg-white text-purple-900 rounded-xl hover:bg-purple-50 transition-all font-bold flex items-center shadow-lg"
+            >
               <Download className="w-5 h-5 mr-2" />
               Download PDF
             </button>
-            <button className="px-6 py-3 bg-purple-700 text-white rounded-xl hover:bg-purple-600 transition-all font-bold flex items-center">
+            <button 
+              onClick={() => handlePrintForm(selectedForm)}
+              className="px-6 py-3 bg-purple-700 text-white rounded-xl hover:bg-purple-600 transition-all font-bold flex items-center"
+            >
               <Printer className="w-5 h-5 mr-2" />
               Print Form
             </button>
-            <button className="px-6 py-3 bg-purple-700 text-white rounded-xl hover:bg-purple-600 transition-all font-bold flex items-center">
+            <button 
+              onClick={() => handleFillOnline(selectedForm)}
+              className="px-6 py-3 bg-purple-700 text-white rounded-xl hover:bg-purple-600 transition-all font-bold flex items-center"
+            >
               <ExternalLink className="w-5 h-5 mr-2" />
               Fill Online
             </button>
