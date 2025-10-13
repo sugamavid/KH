@@ -939,386 +939,116 @@ Once drafted, the policy shall be reviewed internally by:
     category: 'N. Exit & Separation Management',
     content: 'Establishes standardised process for calculating and disbursing full and final settlement dues and issuing service certificates to separated employees.'
   }
-  sop2: {
-    id: 'sop2',
-    number: 'SOP 002',
-    title: 'Leave Application and Approval',
-    searchTerms: ['leave', 'vacation', 'time off', 'absence'],
-    category: 'Leave Management',
-    subsections: [
-      {
-        number: '2.1',
-        title: 'Leave Application Process',
-        content: 'Steps for applying leave:',
-        points: [
-          'Access leave management system with employee credentials.',
-          'Select leave type (Casual, Sick, Annual, etc.).',
-          'Specify leave dates and duration.',
-          'Provide reason for leave.',
-          'Attach supporting documents if required (medical certificate for sick leave >3 days).',
-          'Submit application to immediate supervisor.',
-          'Receive automated acknowledgment of submission.'
-        ]
-      },
-      {
-        number: '2.2',
-        title: 'Approval Workflow',
-        content: 'Leave approval process:',
-        points: [
-          'Supervisor reviews leave request within 24 hours.',
-          'Check team coverage and operational requirements.',
-          'Verify leave balance and eligibility.',
-          'Approve or reject with comments.',
-          'HR receives notification for record keeping.',
-          'Employee notified of decision via email.',
-          'Approved leave reflected in attendance system.'
-        ]
-      },
-      {
-        number: '2.3',
-        title: 'Emergency Leave',
-        content: 'Process for unplanned absence:',
-        points: [
-          'Inform supervisor via call/message as soon as possible.',
-          'Submit leave application within 24 hours of return.',
-          'Provide supporting documentation.',
-          'Supervisor reviews and approves/rejects.',
-          'Unauthorized absence treated as per disciplinary policy.'
-        ]
-      }
-    ]
-  },
-  sop3: {
-    id: 'sop3',
-    number: 'SOP 003',
-    title: 'Performance Appraisal Cycle',
-    searchTerms: ['performance', 'appraisal', 'review', 'evaluation'],
-    category: 'Performance Management',
-    subsections: [
-      {
-        number: '3.1',
-        title: 'Annual Appraisal Timeline',
-        content: 'Key milestones in appraisal cycle:',
-        points: [
-          'January: Goal setting and KPI finalization for the year.',
-          'June: Mid-year review and feedback session.',
-          'December: Self-appraisal submission by employees.',
-          'December-January: Supervisor assessment and rating.',
-          'January-February: Appraisal discussions and feedback.',
-          'February: HR consolidation and calibration.',
-          'March: Communication of increments and promotions.'
-        ]
-      },
-      {
-        number: '3.2',
-        title: 'Self-Appraisal Process',
-        content: 'Employee self-assessment procedure:',
-        points: [
-          'Access performance management system.',
-          'Review goals and KPIs set at beginning of year.',
-          'Provide achievements and accomplishments against each goal.',
-          'Rate own performance on competencies.',
-          'Highlight major projects and contributions.',
-          'Identify training and development needs.',
-          'Submit by specified deadline.'
-        ]
-      },
-      {
-        number: '3.3',
-        title: 'Supervisor Assessment',
-        content: 'Manager evaluation process:',
-        points: [
-          'Review employee self-appraisal.',
-          'Assess performance against KPIs and competencies.',
-          'Gather 360-degree feedback from peers and stakeholders.',
-          'Rate employee on predefined scale.',
-          'Provide constructive feedback and comments.',
-          'Identify strengths and areas for improvement.',
-          'Recommend increment, promotion, or development plan.'
-        ]
-      }
-    ]
-  },
-  sop4: {
-    id: 'sop4',
-    number: 'SOP 004',
-    title: 'Payroll Processing',
-    searchTerms: ['payroll', 'salary', 'compensation', 'wages'],
-    category: 'Payroll Management',
-    subsections: [
-      {
-        number: '4.1',
-        title: 'Monthly Payroll Cycle',
-        content: 'Steps for processing monthly payroll:',
-        points: [
-          'Day 1-5: Collect attendance data from biometric system.',
-          'Day 5-10: Process leave applications and adjustments.',
-          'Day 10-15: Calculate overtime, incentives, and reimbursements.',
-          'Day 15-20: Process statutory deductions (PF, TDS, professional tax).',
-          'Day 20-23: Generate salary slips and obtain approvals.',
-          'Day 23-25: Process salary transfer to employee bank accounts.',
-          'Day 25-28: Distribute salary slips and address queries.',
-          'Day 28-30: Submit statutory returns and maintain records.'
-        ]
-      },
-      {
-        number: '4.2',
-        title: 'Salary Components Calculation',
-        content: 'Method for calculating salary components:',
-        points: [
-          'Basic Salary: As per appointment letter.',
-          'HRA: 40% of basic salary.',
-          'Dearness Allowance: 20% of basic salary.',
-          'Other Allowances: As per grade and policy.',
-          'Gross Salary: Sum of all earnings.',
-          'PF Deduction: 12% of basic salary.',
-          'TDS: As per Income Tax slab.',
-          'Net Salary: Gross minus all deductions.'
-        ]
-      }
-    ]
-  },
-  sop5: {
-    id: 'sop5',
-    number: 'SOP 005',
-    title: 'Grievance Handling',
-    searchTerms: ['grievance', 'complaint', 'issue', 'concern'],
-    category: 'Employee Relations',
-    subsections: [
-      {
-        number: '5.1',
-        title: 'Grievance Registration',
-        content: 'Process for logging grievances:',
-        points: [
-          'Employee submits grievance in writing to HR or Grievance Officer.',
-          'Use prescribed grievance form or email.',
-          'Provide details: nature of grievance, persons involved, supporting evidence.',
-          'HR acknowledges receipt within 3 working days.',
-          'Grievance assigned unique reference number.',
-          'Confidentiality maintained throughout process.'
-        ]
-      },
-      {
-        number: '5.2',
-        title: 'Investigation Process',
-        content: 'Steps for investigating grievance:',
-        points: [
-          'Grievance Officer reviews complaint and determines severity.',
-          'Collect statements from complainant, respondent, and witnesses.',
-          'Review relevant documents and evidence.',
-          'Conduct fair and impartial investigation.',
-          'Maintain documentation of all proceedings.',
-          'Complete investigation within 30 days.',
-          'Prepare investigation report with findings.'
-        ]
-      },
-      {
-        number: '5.3',
-        title: 'Resolution and Follow-up',
-        content: 'Closure of grievance:',
-        points: [
-          'Communicate findings and resolution to complainant.',
-          'Take corrective action if grievance substantiated.',
-          'Disciplinary action against respondent if required.',
-          'Implement preventive measures to avoid recurrence.',
-          'Document closure in grievance register.',
-          'Follow up with complainant after 30 days.',
-          'Monitor for any retaliation.'
-        ]
-      }
-    ]
-  },
-  sop6: {
-    id: 'sop6',
-    number: 'SOP 006',
-    title: 'Exit and Separation',
-    searchTerms: ['exit', 'resignation', 'separation', 'termination', 'leaving'],
-    category: 'Separation Management',
-    subsections: [
-      {
-        number: '6.1',
-        title: 'Resignation Process',
-        content: 'Steps when employee resigns:',
-        points: [
-          'Employee submits written resignation to supervisor and HR.',
-          'Resignation acknowledgment issued within 2 days.',
-          'Notice period calculated as per appointment terms.',
-          'Exit interview scheduled.',
-          'Handover checklist prepared.',
-          'Knowledge transfer plan initiated.',
-          'Clearance process communicated to employee.'
-        ]
-      },
-      {
-        number: '6.2',
-        title: 'Clearance Process',
-        content: 'Exit formalities and clearance:',
-        points: [
-          'Employee completes handover to designated person.',
-          'Returns all company property (ID card, laptop, keys, documents).',
-          'Obtains clearance from all departments (IT, Admin, Accounts, Library).',
-          'IT deactivates system access.',
-          'HR conducts exit interview and collects feedback.',
-          'Accounts calculates full and final settlement.',
-          'Issue experience certificate and relieving letter.'
-        ]
-      },
-      {
-        number: '6.3',
-        title: 'Final Settlement',
-        content: 'Processing final dues:',
-        points: [
-          'Calculate salary for worked days in final month.',
-          'Process leave encashment for unutilized leave.',
-          'Calculate gratuity if applicable.',
-          'Deduct notice period shortfall if applicable.',
-          'Process PF transfer or withdrawal.',
-          'Generate Form 16 for tax purposes.',
-          'Transfer final settlement within 45 days of last working day.'
-        ]
-      }
-    ]
-  },
-  sop7: {
-    id: 'sop7',
-    number: 'SOP 007',
-    title: 'Training and Development',
-    searchTerms: ['training', 'development', 'learning', 'education'],
-    category: 'Learning & Development',
-    subsections: [
-      {
-        number: '7.1',
-        title: 'Training Need Identification',
-        content: 'Identifying training requirements:',
-        points: [
-          'Annual training needs assessment based on performance appraisals.',
-          'Supervisor recommendations for skill gaps.',
-          'Employee requests for specific training.',
-          'Mandatory compliance training requirements.',
-          'New technology or process training.',
-          'Consolidate all training needs by Q1.',
-          'Prepare annual training calendar.'
-        ]
-      },
-      {
-        number: '7.2',
-        title: 'Training Delivery',
-        content: 'Conducting training programs:',
-        points: [
-          'Select internal trainers or external vendors.',
-          'Schedule training with adequate notice to participants.',
-          'Prepare training materials and resources.',
-          'Conduct training as per schedule.',
-          'Collect participant feedback.',
-          'Conduct pre and post-training assessments.',
-          'Maintain training attendance records.'
-        ]
-      }
-    ]
-  },
-  sop8: {
-    id: 'sop8',
-    number: 'SOP 008',
-    title: 'Attendance and Time Management',
-    searchTerms: ['attendance', 'time', 'biometric', 'timesheet'],
-    category: 'Time Management',
-    subsections: [
-      {
-        number: '8.1',
-        title: 'Attendance Recording',
-        content: 'Daily attendance capture process:',
-        points: [
-          'Employees mark attendance using biometric system.',
-          'Punch in at start of shift and punch out at end.',
-          'System automatically records time.',
-          'Late arrival flagged if after shift start time.',
-          'Early departure requires supervisor approval.',
-          'Missed punch requires manual attendance request.',
-          'Supervisor approves manual attendance entries.'
-        ]
-      },
-      {
-        number: '8.2',
-        title: 'Attendance Regularization',
-        content: 'Correcting attendance discrepancies:',
-        points: [
-          'Employee identifies attendance discrepancy.',
-          'Submit attendance regularization request with reason.',
-          'Attach supporting documents if applicable.',
-          'Supervisor reviews and approves/rejects.',
-          'HR updates attendance record.',
-          'Regularization must be done within 7 days.'
-        ]
-      }
-    ]
-  },
-  sop9: {
-    id: 'sop9',
-    number: 'SOP 009',
-    title: 'Recruitment and Selection',
-    searchTerms: ['recruitment', 'hiring', 'selection', 'interview'],
-    category: 'Recruitment',
-    subsections: [
-      {
-        number: '9.1',
-        title: 'Recruitment Requisition',
-        content: 'Initiating hiring process:',
-        points: [
-          'Department Head submits manpower requisition form.',
-          'Specify position, qualifications, experience, budget.',
-          'HR reviews requisition and obtains management approval.',
-          'HR prepares job description.',
-          'Determine sourcing channels (job portals, referrals, campus hiring).',
-          'Create and post job advertisement.',
-          'Set timeline for recruitment process.'
-        ]
-      },
-      {
-        number: '9.2',
-        title: 'Selection Process',
-        content: 'Candidate evaluation steps:',
-        points: [
-          'Screen applications against job requirements.',
-          'Shortlist candidates for interviews.',
-          'Conduct initial HR screening interview.',
-          'Technical interview by department panel.',
-          'Final interview by senior management.',
-          'Conduct reference checks for selected candidate.',
-          'Prepare and issue offer letter.',
-          'Initiate background verification.'
-        ]
-      }
-    ]
-  },
-  sop10: {
-    id: 'sop10',
-    number: 'SOP 010',
-    title: 'Document Management',
-    searchTerms: ['documents', 'records', 'files', 'archival'],
-    category: 'Administration',
-    subsections: [
-      {
-        number: '10.1',
-        title: 'Employee File Maintenance',
-        content: 'Managing employee documents:',
-        points: [
-          'Create employee file upon joining.',
-          'Maintain physical and digital copies.',
-          'Store documents in secure location.',
-          'Include: appointment letter, ID proofs, certificates, PF forms, appraisals.',
-          'Update file with any new documents.',
-          'Restrict access to authorized personnel only.',
-          'Retain files for 7 years post separation.'
-        ]
-      }
-    ]
-  }
 };
 
-// Quick reference data
+// Category groupings for navigation
+export const sopsCategories = [
+  {
+    id: 'A',
+    title: 'Organisational Governance',
+    sopCount: 4,
+    description: 'Policy creation, organizational structure, role hierarchy, and governance frameworks'
+  },
+  {
+    id: 'B',
+    title: 'Recruitment, Selection & Appointment',
+    sopCount: 10,
+    description: 'Complete recruitment lifecycle from workforce planning to appointment'
+  },
+  {
+    id: 'C',
+    title: 'Onboarding & Access Control',
+    sopCount: 5,
+    description: 'Orientation programs, access provisioning, and credentialing procedures'
+  },
+  {
+    id: 'D',
+    title: 'Employee Records & Statutory Compliance',
+    sopCount: 5,
+    description: 'Personnel file management, statutory compliance, and legal requirements'
+  },
+  {
+    id: 'E',
+    title: 'Attendance & Shift Management',
+    sopCount: 4,
+    description: 'Attendance monitoring, shift scheduling, and time management protocols'
+  },
+  {
+    id: 'F',
+    title: 'Leave Management',
+    sopCount: 5,
+    description: 'Leave application workflows, special leaves, and encashment processes'
+  },
+  {
+    id: 'G',
+    title: 'Code of Conduct & Disciplinary Control',
+    sopCount: 5,
+    description: 'Ethical standards, dress code, misconduct handling, and disciplinary procedures'
+  },
+  {
+    id: 'H',
+    title: 'Performance Management',
+    sopCount: 6,
+    description: 'Goal setting, appraisals, feedback mechanisms, and recognition programs'
+  },
+  {
+    id: 'I',
+    title: 'Payroll, Compensation & Allowances',
+    sopCount: 6,
+    description: 'Salary processing, allowances, bonuses, and increment management'
+  },
+  {
+    id: 'J',
+    title: 'Training, Certification & Development',
+    sopCount: 6,
+    description: 'Training needs assessment, competency validation, and leadership development'
+  },
+  {
+    id: 'K',
+    title: 'Technology Usage & Digital Security',
+    sopCount: 5,
+    description: 'IT security policies, device management, and cybersecurity protocols'
+  },
+  {
+    id: 'L',
+    title: 'Wellness, Work-Life Balance & EAP',
+    sopCount: 5,
+    description: 'Employee assistance programs, wellness initiatives, and health support'
+  },
+  {
+    id: 'M',
+    title: 'Grievance, Complaints & Redressal',
+    sopCount: 5,
+    description: 'Grievance filing, redressal mechanisms, POSH protocols, and appeals'
+  },
+  {
+    id: 'N',
+    title: 'Exit & Separation Management',
+    sopCount: 4,
+    description: 'Resignation, exit interviews, clearance, and final settlement procedures'
+  }
+];
+
+// Quick reference data for commonly used SOPs
 export const sopsQuickRef = {
-  onboarding: ['Pre-joining prep', 'Day 1 activities', 'First week', 'Probation review'],
-  leave: ['Apply in system', 'Supervisor approval', 'HR notification', 'Balance update'],
-  payroll: ['Day 1-5: Attendance', 'Day 10-15: Calculations', 'Day 20-25: Processing', 'Day 25-30: Distribution'],
-  exit: ['Resignation letter', 'Notice period', 'Handover', 'Clearance', 'Final settlement']
+  newJoiner: {
+    title: 'New Employee Quick Guide',
+    steps: ['Complete joining formalities (SOP B.10)', 'Attend orientation program (SOP C.1)', 'Enroll biometrics and get ID (SOP C.2)', 'Access HRMS and payroll (SOP C.3)', 'Receive policy briefing (SOP C.4)']
+  },
+  leave: {
+    title: 'Leave Application Quick Steps',
+    steps: ['Apply in HRMS/system', 'Supervisor reviews & approves', 'HR receives notification', 'Leave balance updated', 'For emergencies: Follow SOP F.2']
+  },
+  payroll: {
+    title: 'Monthly Payroll Timeline',
+    steps: ['Day 1-5: Attendance collection', 'Day 10-15: Calculations & deductions', 'Day 20-25: Approval & processing', 'Day 25-28: Salary disbursement', 'Day 28-30: Query resolution']
+  },
+  exit: {
+    title: 'Employee Separation Process',
+    steps: ['Submit resignation (SOP N.1)', 'Serve notice period', 'Complete exit interview (SOP N.2)', 'Obtain departmental clearance (SOP N.3)', 'Receive F&F settlement (SOP N.4)']
+  },
+  performance: {
+    title: 'Performance Review Cycle',
+    steps: ['January: Set annual goals (SOP H.1)', 'June: Mid-year review (SOP H.2)', 'December: Self-appraisal', 'January: Manager assessment', 'February: Feedback & development plan']
+  }
 };
