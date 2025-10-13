@@ -429,7 +429,145 @@ Once drafted, the policy shall be reviewed internally by:
     title: 'Vacancy Identification & Requisition Approval',
     searchTerms: ['vacancy', 'requisition', 'approval', 'hiring', 'position'],
     category: 'B. Recruitment, Selection & Appointment',
-    content: 'Institutionalizes formal process for identifying vacant positions and securing necessary approvals before initiating recruitment activity.'
+    subsections: [
+      {
+        number: '1',
+        title: 'OBJECTIVE',
+        content: 'This SOP institutionalizes a formal process for identifying vacant positions and securing necessary approvals before initiating recruitment activity. The objective is to ensure that all hiring is aligned with approved manpower budgets, operational needs, and institutional priorities while maintaining cost discipline and compliance.'
+      },
+      {
+        number: '2',
+        title: 'SCOPE AND APPLICABILITY',
+        content: `This SOP applies to:
+• All types of vacancies: new positions, replacement positions, temporary positions, contractual positions, and consultancy assignments
+• All departments of Koyili Hospital requiring additional or replacement staff
+• The HR Department, Departmental Heads, Finance Department, and approval authorities involved in the hiring process`
+      },
+      {
+        number: '3',
+        title: 'DEFINITIONS',
+        content: `• Vacancy: An approved position that is currently unfilled
+• Replacement Position: A vacancy created due to resignation, retirement, termination, or transfer of an existing employee
+• New Position: A position being created for the first time to meet new operational requirements or business expansion
+• Requisition: A formal request to initiate the recruitment process for a vacant position
+• Hiring Authority: The designated officer(s) authorized to approve recruitment requisitions
+• Critical Vacancy: A position whose vacancy poses risks to patient safety, statutory compliance, or critical operations`
+      },
+      {
+        number: '4',
+        title: 'PROCEDURE',
+        subsections: [
+          {
+            number: '4.1',
+            title: 'Vacancy Identification',
+            content: `(i) Vacancies may arise from:
+    • Employee resignation, retirement, or termination
+    • Internal transfer or promotion creating a downstream vacancy
+    • Expansion of services, new units, or increased patient load
+    • Statutory or accreditation requirements
+(ii) The Department Head shall immediately notify HR of any vacancy or anticipated vacancy
+(iii) For planned departures (retirement, resignation with notice), notification shall be provided at least 30 days in advance`
+          },
+          {
+            number: '4.2',
+            title: 'Position Review and Validation',
+            content: `(i) Upon notification, HR shall:
+    • Verify the position exists in the Sanctioned Manpower Budget
+    • Review the most recent Job Description for the position
+    • Check if the position is approved for immediate filling or is subject to freeze/review
+    • Assess whether the position is critical for operations or patient safety
+(ii) For replacement positions:
+    • Confirm the departing employee's last working date
+    • Review exit interview feedback (if available) for role-related insights
+(iii) For new positions:
+    • Verify budget approval and sanctioned headcount
+    • Ensure the position is not a duplication of existing roles`
+          },
+          {
+            number: '4.3',
+            title: 'Recruitment Requisition Submission',
+            content: `(i) The Department Head shall complete a Recruitment Requisition Form (Annexure B.2.1) including:
+    • Position title, department, reporting manager
+    • Position type: Permanent/Temporary/Contract
+    • Reason for vacancy: Replacement/New/Backfill
+    • Required qualifications, experience, and skills
+    • Expected date of joining
+    • Salary range and employment terms
+    • Justification for urgency (if expedited processing required)
+(ii) For new positions, additional justification shall include:
+    • Business case and impact on operations
+    • Budget allocation confirmation
+    • Reporting structure and integration with team
+(iii) The requisition shall be signed by the Department Head and submitted to HR`
+          },
+          {
+            number: '4.4',
+            title: 'Approval Workflow',
+            content: `(i) Approval levels based on position grade and type:
+    • Grade A-B (Junior/Entry-Level): Department Head + HR Head
+    • Grade C-D (Mid-Level): Department Head + HR Head + Finance Head
+    • Grade E-F (Senior/Management): Department Head + HR Head + Finance Head + CEO/COO
+    • New Positions (any grade): Require additional Finance Committee approval
+(ii) HR shall route the requisition through the approval chain electronically or physically
+(iii) Each approving authority may:
+    • Approve the requisition as submitted
+    • Approve with modifications (salary adjustment, qualifications change)
+    • Defer the requisition pending budget review
+    • Reject the requisition with written justification
+(iv) Turnaround time for approvals:
+    • Critical positions: 2-3 business days
+    • Standard positions: 5-7 business days
+    • New positions: 10-15 business days (includes Finance Committee review)`
+          },
+          {
+            number: '4.5',
+            title: 'Post-Approval Actions',
+            content: `(i) Upon final approval, HR shall:
+    • Assign a unique Requisition Number
+    • Update the Vacancy Tracker with requisition details
+    • Initiate the recruitment process as per SOP B.3 (Job Posting & Sourcing)
+    • Communicate approval to the Department Head with expected timelines
+(ii) If rejected, HR shall notify the Department Head with reasons and guidance on re-submission (if applicable)`
+          }
+        ]
+      },
+      {
+        number: '5',
+        title: 'ROLES AND RESPONSIBILITIES',
+        table: {
+          headers: ['Position', 'Responsibility'],
+          rows: [
+            ['Department Head', 'Identify vacancies, submit recruitment requisitions with justification'],
+            ['HR Department', 'Validate positions, route approvals, track requisitions, initiate recruitment'],
+            ['Finance Department', 'Verify budget availability, approve cost implications'],
+            ['CEO/COO', 'Provide final approval for senior positions and new positions'],
+            ['Finance Committee', 'Approve new positions requiring budget augmentation']
+          ]
+        }
+      },
+      {
+        number: '6',
+        title: 'COMPLIANCE AND RECORD-KEEPING',
+        content: `• All Recruitment Requisition Forms shall be maintained for a minimum of 5 years
+• A centralized Vacancy Tracker shall be maintained by HR tracking all open, approved, and filled requisitions
+• Monthly Vacancy Reports shall be submitted to Senior Management showing:
+    • Total open vacancies by department and grade
+    • Requisitions pending approval
+    • Average time-to-approval
+    • Critical vacancies requiring urgent action
+• Unauthorized hiring (without approved requisition) is strictly prohibited and may result in disciplinary action`
+      },
+      {
+        number: '7',
+        title: 'REFERENCE DOCUMENTS',
+        content: `• Koyili Hospital HR By-Laws (Section 3: Recruitment and Selection)
+• Annual Manpower Budget and Sanctioned Headcount
+• Job Description Repository
+• SOP B.1: Workforce Planning and Manpower Budgeting
+• SOP B.3: Job Posting, Advertisement & Sourcing
+• Annexure B.2.1: Recruitment Requisition Form`
+      }
+    ]
   },
 
   sopB3: {
