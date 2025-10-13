@@ -17,22 +17,22 @@ const Header = ({ onLogout, sidebarOpen, setSidebarOpen }) => {
     <header className="fixed top-0 left-0 right-0 h-16 md:h-20 bg-white border-b-2 border-slate-200 z-50 shadow-sm">
       <div className="h-full px-3 md:px-6 flex items-center justify-between">
         {/* Left Section - Logo & Menu */}
-        <div className="flex items-center space-x-6">
+        <div className="flex items-center space-x-2 md:space-x-6">
           <button
             onClick={() => setSidebarOpen(!sidebarOpen)}
-            className="p-2.5 hover:bg-slate-100 rounded-xl transition-colors"
+            className="p-2 md:p-2.5 hover:bg-slate-100 rounded-xl transition-colors"
             data-testid="sidebar-toggle"
           >
-            <Menu className="w-6 h-6 text-slate-700" />
+            <Menu className="w-5 h-5 md:w-6 md:h-6 text-slate-700" />
           </button>
           
-          <div className="flex items-center space-x-4">
-            <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-xl flex items-center justify-center shadow-lg">
-              <Building2 className="w-7 h-7 text-white" />
+          <div className="flex items-center space-x-2 md:space-x-4">
+            <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-xl flex items-center justify-center shadow-lg">
+              <Building2 className="w-5 h-5 md:w-7 md:h-7 text-white" />
             </div>
-            <div>
-              <h1 className="text-xl font-black tracking-wide text-slate-900">KOYILI HOSPITAL</h1>
-              <p className="text-xs font-semibold text-slate-500 uppercase tracking-wider">Management Portal</p>
+            <div className="hidden sm:block">
+              <h1 className="text-base md:text-xl font-black tracking-wide text-slate-900">KOYILI HOSPITAL</h1>
+              <p className="text-xs font-semibold text-slate-500 uppercase tracking-wider hidden md:block">Management Portal</p>
             </div>
           </div>
         </div>
