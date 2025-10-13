@@ -553,46 +553,114 @@ export const byLawsData = {
     id: 'section7',
     number: 'SECTION VII',
     title: 'GRIEVANCE REDRESSAL MECHANISM',
-    searchTerms: ['grievance', 'complaints', 'redressal', 'dispute resolution'],
+    searchTerms: ['grievance', 'complaints', 'redressal', 'dispute resolution', 'complaint procedure'],
     subsections: [
       {
         number: '7.1',
-        title: 'Grievance Redressal Process',
-        content: 'The Hospital maintains a fair grievance redressal mechanism:',
+        title: 'Grievance Redressal Policy - Philosophy and Scope',
+        content: 'Koyili Hospital is committed to maintaining a harmonious, fair, and respectful work environment where employees feel heard, valued, and supported. The grievance redressal mechanism provides formal channels for employees to raise concerns, seek resolution, and ensure their rights are protected:',
         points: [
-          'Submit grievances in writing to HR Department or designated Grievance Officer.',
-          'Acknowledgment of receipt within 3 working days.',
-          'Investigation and resolution within 30 days of receipt.',
-          'Employees informed of outcome and actions taken.',
-          'Fair, transparent, and unbiased process maintained throughout.',
-          'Confidentiality maintained to protect employee privacy.',
-          'Multiple levels of escalation available if initial resolution unsatisfactory.'
+          'Grievance Definition: A grievance is any real or perceived concern, dissatisfaction, complaint, or dispute raised by an employee regarding employment terms, working conditions, interpersonal relationships, policy interpretation, denial of rights, unfair treatment, or any work-related matter affecting the employee.',
+          'Right to Raise Grievance: All employees, regardless of position or tenure, have the right to raise grievances without fear of retaliation or victimization. The Hospital encourages employees to voice concerns early before they escalate into serious issues.',
+          'Coverage: The grievance mechanism covers all employee-related concerns except matters already covered under specific redressal mechanisms (sexual harassment handled by ICC, disciplinary appeals through established appeal process). However, the mechanism is flexible and accommodating.',
+          'Multiple Channels: Employees can raise grievances through multiple channels - direct discussion with supervisor, HR Department, dedicated grievance officer, email grievance portal, suggestion boxes, or skip-level escalation to senior management.',
+          'Confidentiality: All grievances are handled confidentially. Information is shared only on strict need-to-know basis with personnel involved in resolution. Employee identity is protected where feasible, though anonymous complaints have limited investigation scope.',
+          'Non-Retaliation: Employees raising genuine grievances are protected from any form of retaliation, discrimination, or adverse consequences. Retaliation against complainants is serious misconduct subject to disciplinary action. However, frivolous or malicious complaints may attract consequences for the complainant.',
+          'Fair and Timely Resolution: The Hospital is committed to acknowledging grievances promptly (within 3 working days), investigating thoroughly, resolving fairly, and communicating outcomes within reasonable timeframes (typically 30 days, complex cases may take longer with periodic updates).',
+          'Escalation Mechanism: If resolution at one level is unsatisfactory or concerns are unresolved, employees have right to escalate to higher management levels ensuring their concerns receive adequate attention.',
+          'Continuous Improvement: Grievance data is analyzed to identify systemic issues, policy gaps, managerial training needs, and areas for organizational improvement. Proactive measures are taken to prevent recurring grievances.'
         ]
       },
       {
         number: '7.2',
         title: 'Types of Grievances',
-        content: 'Employees may raise grievances regarding:',
+        content: 'Employees may raise grievances on a wide range of issues. Common categories include:',
         points: [
-          'Terms and conditions of employment.',
-          'Work environment and workplace relations.',
-          'Performance evaluation and career progression.',
-          'Compensation and benefits.',
-          'Disciplinary actions.',
-          'Harassment or discrimination.',
-          'Any other work-related concerns.'
+          'Employment Terms: Concerns regarding salary, benefits, allowances, increments, bonuses, leave entitlements, working hours, overtime payment, or any contractual terms discrepancies.',
+          'Working Conditions: Issues related to workplace safety, inadequate facilities, equipment problems, unhygienic conditions, excessive workload, unsafe practices, or lack of resources to perform duties.',
+          'Interpersonal Relations: Conflicts with colleagues, supervisor behavior issues, communication problems, lack of cooperation, favoritism, bullying (non-sexual), or toxic team dynamics.',
+          'Policy Interpretation: Confusion or disputes regarding application or interpretation of HR policies, inconsistent policy enforcement, perceived unfairness in policy application, or requests for policy clarifications.',
+          'Performance Management: Disagreement with performance ratings, perceived unfair evaluation, denial of promotion despite merit, non-recognition of achievements, or bias in performance assessment.',
+          'Leave and Attendance: Denial or cancellation of approved leave, forced leave, attendance discrepancies, mismatch in leave records, or leave balance disputes.',
+          'Career Development: Lack of training opportunities, denial of skill development programs, no career progression despite performance, blocked growth opportunities, or insufficient guidance.',
+          'Transfers and Postings: Unwilling transfers without consultation, frequent reassignments causing hardship, lack of relocation support, or family circumstances not considered.',
+          'Discrimination: Perceived discrimination based on gender, age, religion, caste, disability, marital status, or other protected characteristics in any employment decision.',
+          'Harassment (Non-Sexual): Verbal abuse, intimidation, shouting, humiliation, unreasonable pressure, or creation of hostile work environment (sexual harassment through ICC).',
+          'Denial of Rights: Non-payment or delayed payment of salary/dues, denial of statutory benefits, forced to work on holidays without compensation, denial of entitled leaves, or contract violations.',
+          'Administrative Issues: Delay in issue of appointment/confirmation letters, errors in salary slips, insurance claims delays, PF/gratuity settlement delays, or documentation problems.',
+          'Facility and Service Issues: Inadequate cafeteria services, transport problems, accommodation issues for transferred employees, medical facility access problems, or childcare facility concerns.',
+          'Managerial Conduct: Supervisor micromanagement, unreasonable demands, public criticism or humiliation, biased behavior, lack of support, or abusive supervision.',
+          'Change Management: Concerns about organizational changes, restructuring impacts, new systems/processes creating difficulties, inadequate training on changes, or communication gaps during transitions.'
         ]
       },
       {
         number: '7.3',
-        title: 'Protection Against Retaliation',
-        content: 'The Hospital ensures:',
+        title: 'Grievance Redressal Process - Step by Step',
+        content: 'Structured process ensures systematic, fair, and timely handling of employee grievances:',
         points: [
-          'No retaliation against employees filing grievances in good faith.',
-          'Protection for employees reporting violations or misconduct.',
-          'Safe environment for cooperating in investigations.',
-          'Right to exercise rights under these By-Laws protected.',
-          'Any retaliation treated as serious misconduct.'
+          'Step 1 - Direct Resolution (Informal): Employees are encouraged to first discuss concerns directly with their immediate supervisor or concerned person informally. Many issues can be resolved through open communication and mutual understanding at this stage itself. Timeframe: Immediate to 3 days.',
+          'Step 2 - Formal Grievance Submission: If informal resolution fails or issue is serious, employee submits formal grievance in writing through - (a) Grievance form available on HRMS, (b) Email to designated grievance officer or HR, (c) Physical letter to HR Department. Grievance should clearly state nature of complaint, persons involved, specific incidents with dates, impact on employee, and desired resolution.',
+          'Step 3 - Acknowledgment: HR or grievance officer acknowledges receipt of grievance within 3 working days through email or written communication. Acknowledgment includes grievance reference number, name of officer handling, and expected timeline for resolution.',
+          'Step 4 - Preliminary Assessment: Grievance officer reviews complaint to determine - nature and severity, jurisdiction (whether grievance mechanism applicable or other forum appropriate), evidence availability, urgency, and appropriate resolution approach. Timeframe: 3-5 days.',
+          'Step 5 - Investigation: Based on assessment, investigation is conducted which may include - reviewing documents and records, interviewing complainant for detailed understanding, speaking with respondent/concerned persons for their perspective, examining evidence (emails, attendance records, CCTV if relevant), speaking with witnesses, and analyzing policies/procedures. Investigation is objective and unbiased. Timeframe: 10-15 days.',
+          'Step 6 - Resolution Discussion: Based on investigation findings, resolution discussions held with parties involved. This may involve - mediation between conflicting parties, policy clarification and corrections, manager counseling on handling employee concerns, implementing corrective actions (policy compliance, process improvements), or disciplinary recommendations if policy violations found. Timeframe: 5-7 days.',
+          'Step 7 - Decision and Communication: Grievance officer or resolution committee makes decision on - grievance validity (upheld, partially upheld, not upheld), actions taken or to be taken, rationale for decision, and recommendations. Decision communicated to complainant in writing explaining findings, actions, and rationale. Timeframe: 2-3 days after resolution discussions.',
+          'Step 8 - Implementation and Follow-up: Agreed corrective actions are implemented promptly. HR follows up after 30 days to ensure - actions were effective, issue has not recurred, complainant is satisfied, and working relationship restored. Timeframe: Ongoing for 60-90 days.',
+          'Step 9 - Escalation (if needed): If complainant is dissatisfied with resolution or believes issue not adequately addressed, escalation to next level (HOD, senior management, or appellate committee) is permitted. Escalation process similar but with higher authority review. Timeframe: Additional 15-30 days.',
+          'Step 10 - Closure: Once resolution is implemented, verified effective, and parties are satisfied, grievance is formally closed. Closure communicated to complainant. Records maintained confidentially. Grievance remains closed unless new concerns emerge.'
+        ]
+      },
+      {
+        number: '7.4',
+        title: 'Grievance Officer and Committee',
+        content: 'Dedicated personnel ensure professional and unbiased grievance handling:',
+        points: [
+          'Grievance Officers: Hospital appoints trained grievance officers (typically senior HR personnel) responsible for receiving, investigating, and resolving grievances. Officers have necessary authority, independence, and skills for effective handling.',
+          'Grievance Committee: For complex or serious grievances, a grievance committee may be constituted comprising senior managers from different departments, HR representative, and sometimes external expert. Committee ensures collective wisdom and fairness.',
+          'Independence and Objectivity: Grievance officers/committees operate independently without interference. They are not involved in the matter being grieved. Investigations are objective, fact-based, and free from bias.',
+          'Training: Grievance handling personnel receive training on - active listening, conflict resolution, mediation techniques, investigation methods, confidentiality, empathy, legal aspects, and documentation.',
+          'Accessibility: Grievance officers are easily accessible to employees. Contact details published on intranet. Regular grievance awareness sessions conducted. Employees can meet officers confidentially.',
+          'Reporting: Grievance officers periodically report to senior management on grievance trends, resolution rates, pending cases, systemic issues identified, and recommendations for preventive measures.'
+        ]
+      },
+      {
+        number: '7.5',
+        title: 'Protection Against Retaliation',
+        content: 'Robust safeguards protect employees from adverse consequences of raising grievances:',
+        points: [
+          'Non-Retaliation Policy: The Hospital has zero-tolerance for retaliation against employees who raise grievances in good faith, participate as witnesses, or assist in grievance investigations. Retaliation includes any adverse employment action - termination, demotion, transfer, denial of promotion, unfavorable shifts, excessive scrutiny, isolation, or any form of punishment.',
+          'Monitoring: HR monitors for signs of retaliation after grievance filing. Complainants are contacted periodically to check if they face any adverse consequences. Any retaliation reports investigated immediately.',
+          'Disciplinary Action: Proven retaliation is serious misconduct warranting disciplinary action against the retaliator, which may include termination. Managers are specifically trained on non-retaliation obligations.',
+          'Confidentiality as Protection: Where possible, complainant identity is kept confidential during investigation. However, in cases requiring confrontation, identity may be disclosed but with strong warnings against retaliation.',
+          'Transfer Options: In cases where working relationship is irretrievably damaged post-grievance, complainant may be offered transfer to different team/department as protective measure (if they desire).',
+          'Whistleblower Protection: Employees reporting serious violations (fraud, safety hazards, legal breaches) receive enhanced protection. Anonymous reporting channels available for whistleblowers.'
+        ]
+      },
+      {
+        number: '7.6',
+        title: 'Malicious and Frivolous Complaints',
+        content: 'While the Hospital encourages genuine grievances, protection against abuse of the system is necessary:',
+        points: [
+          'Good Faith Requirement: Grievance mechanism is for genuine concerns raised in good faith. Employees should have reasonable basis for their complaints even if investigations prove otherwise.',
+          'Malicious Complaints: False complaints made knowingly with intent to harm another person, settle personal scores, or gain unfair advantage are considered malicious. Malicious complaints are serious misconduct.',
+          'Frivolous Complaints: Complaints that are clearly baseless, trivial matters blown out of proportion, or repeated complaints on same resolved issue without new facts are frivolous.',
+          'Investigation: If complaint appears malicious/frivolous, investigation examines - complainant's intent, evidence of falsification, pattern of complaints, personal conflicts, and whether complaint was made in good faith despite being unsubstantiated.',
+          'Consequences: Proven malicious or frivolous complaints result in - counseling for first instance, written warning for repeated instances, or disciplinary action including termination for serious abuse of grievance mechanism.',
+          'Differentiation: Unsubstantiated genuine complaints are different from malicious complaints. Genuine complaints that cannot be proved are closed without prejudice to complainant.'
+        ]
+      },
+      {
+        number: '7.7',
+        title: 'Record Keeping and Analysis',
+        content: 'Comprehensive documentation supports fairness, learning, and continuous improvement:',
+        points: [
+          'Grievance Register: HR maintains confidential grievance register recording all formal grievances - date received, employee details, nature of grievance, assigned officer, investigation summary, resolution, and closure date.',
+          'File Documentation: Each grievance has separate file containing - complaint letter, investigation notes, witness statements, evidence collected, correspondence, resolution decisions, and follow-up records.',
+          'Data Analysis: Grievance data analyzed quarterly for trends - frequent complaint types, departments with high grievances, common policy issues, seasonal patterns, resolution timeframes, and satisfaction levels.',
+          'Management Reporting: Summary grievance reports presented to senior management highlighting key issues, systemic problems, and recommendations for policy improvements, training needs, or managerial interventions.',
+          'Confidentiality: Grievance records are highly confidential with access limited to grievance officers, concerned managers (need-to-know), and senior management. Records secured physically and digitally.',
+          'Retention: Grievance records retained for 7 years post-closure for reference, audits, and legal compliance.',
+          'Learning and Prevention: Insights from grievances used to improve policies, enhance manager training, fix systemic issues, improve communication, and prevent future grievances proactively.'
         ]
       }
     ]
