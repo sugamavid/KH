@@ -383,3 +383,70 @@ export const DEMO_CONTRACTS = [
     value: "₹30,00,000"
   }
 ];
+
+// HR By-Laws
+export const HR_BYLAWS = [
+  {
+    section: "1",
+    title: "Code of Conduct",
+    description: "Guidelines for professional behavior and ethical standards",
+    subsections: 8
+  },
+  {
+    section: "2",
+    title: "Employment Terms",
+    description: "Policies regarding employment contracts and terms",
+    subsections: 12
+  },
+  {
+    section: "3",
+    title: "Leave Policy",
+    description: "Regulations for various types of leave and time off",
+    subsections: 6
+  }
+];
+
+// HR SOPs
+export const HR_SOPS = [
+  {
+    category: "A",
+    title: "Recruitment & Onboarding",
+    sops: [
+      { code: "SOP-HR-001", name: "Employee Recruitment Process" },
+      { code: "SOP-HR-002", name: "New Employee Onboarding" }
+    ]
+  },
+  {
+    category: "B",
+    title: "Performance Management",
+    sops: [
+      { code: "SOP-HR-003", name: "Annual Performance Review" },
+      { code: "SOP-HR-004", name: "Goal Setting and KPIs" }
+    ]
+  }
+];
+
+// HR Annexures
+export const HR_ANNEXURES = [
+  {
+    code: "ANX-001",
+    name: "Employment Application Form",
+    category: "Recruitment",
+    format: "PDF",
+    approval: "HR Manager"
+  },
+  {
+    code: "ANX-002",
+    name: "Leave Application Form",
+    category: "Leave Management",
+    format: "PDF",
+    approval: "Department Head"
+  },
+  {
+    code: "ANX-003",
+    name: "Performance Appraisal Form",
+    category: "Performance",
+    format: "PDF",
+    approval: "HR & Reporting Manager"
+  }
+];
