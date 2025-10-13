@@ -74,7 +74,7 @@ const Header = ({ onLogout, sidebarOpen, setSidebarOpen }) => {
 
             {/* Notifications Dropdown */}
             {showNotifications && (
-              <div className="absolute right-0 mt-2 w-96 bg-white rounded-xl shadow-2xl border-2 border-slate-200 overflow-hidden z-50">
+              <div className="absolute right-0 mt-2 w-80 md:w-96 bg-white rounded-xl shadow-2xl border-2 border-slate-200 overflow-hidden z-50">
                 <div className="bg-gradient-to-r from-blue-600 to-indigo-600 px-4 py-3">
                   <h3 className="text-white font-bold text-sm">Notifications</h3>
                   <p className="text-blue-100 text-xs">{unreadCount} unread messages</p>
