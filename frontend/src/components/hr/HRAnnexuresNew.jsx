@@ -138,6 +138,21 @@ const HRAnnexuresNew = ({ setActiveModule }) => {
     alert('Fill Online functionality would open an interactive form.\n\nIn production, this would redirect to an online form builder or fillable PDF interface.');
   };
 
+  const handleFormClick = (form) => {
+    setSelectedForm(form);
+    setActiveView('form');
+  };
+
+  const handleCategoryClick = (categoryData) => {
+    // Find the annexure data that matches this category
+    const annexure = Object.values(annexuresData).find(annex => annex.category === categoryData.name);
+    if (annexure) {
+      setSelectedCategory(annexure);
+      setFilterCategory(categoryData.name);
+      setActiveView('category');
+    }
+  };
+
   const renderDashboard = () => (
     <div className="space-y-6">
       {/* Board Approval Banner */}
