@@ -1,131 +1,63 @@
 <analysis>
-The AI engineer's work has progressed through several iterative phases, beginning with establishing a professional hospital dashboard UI, heavily influenced by user feedback on international legal standard design for the login, header, sidebar, and footer. The core focus then shifted to building a comprehensive Human Resource Management System (HRMS). This involved creating numerous HR-specific modules like Employee Management, Attendance/Leave, Payroll, Performance, Legal Operations, Recruitment, Training, Reports, and Tools. Significant effort was dedicated to refactoring UI components, such as the main dashboard and HR-specific sidebars, to improve user experience, including conditional sidebar display and Back to Dashboard navigation. The development cycle included identifying and resolving multiple frontend syntax errors (e.g., in  and ) and module duplication issues, demonstrating robust debugging capabilities. Most recently, the work has centered on a highly detailed and legally compliant presentation of HR By-Laws, requiring precise content extraction from a user-provided PDF and the design of a dedicated, interactive navigation system. The current challenge is to implement this complex By-Laws system.
+The AI engineer's work has progressed through iterative phases for building a comprehensive HRMS within a hospital dashboard. Initially, the focus was on establishing a professional UI for login, header, sidebar, and footer, then expanding to various HR modules like Employee Management, Attendance/Leave, and Payroll. Significant effort was dedicated to refactoring UI components and fixing frontend syntax errors, demonstrating robust debugging.
+
+Most recently, the work concentrated on a highly detailed and legally compliant presentation of HR By-Laws. This involved creating a dedicated component () with an interactive, section-based navigation sidebar and search functionality. The  was modified to dynamically hide the main HR sidebar when viewing legal documents. A crucial user request, stemming from an initial summary, was to incorporate the *entire, exact content* from provided PDF documents for By-Laws, SOPs, and Annexures, rather than summarized versions. The AI successfully extracted the complete By-Laws content and is currently in the process of extracting the SOPs content. This iteration emphasizes precise content extraction and display alongside advanced UI/UX for legal documents.
 </analysis>
 
 <product_requirements>
-The user requires a hospital dashboard for Koyili Hospital, starting with a Human Resources (HR) department view. Key requirements include:
+The user requires a hospital dashboard for Koyili Hospital, focusing on a Human Resources (HR) department view. Key requirements encompass a highly professional, international standard login page with specific hospital branding, a main dashboard featuring a header, footer, and a navigation sidebar (extensible for future departments), and responsive design. The core is a comprehensive HRMS dashboard, including Employee Lifecycle, Advanced Leave, Payroll & Compensation, Document Management, Performance, Recruitment, Training, Reports, and Tools modules. It needs demo employee data.
 
--   A highly professional, international standard login page with specific hospital branding (logo, name, address, phone, email in a single row), enhanced with animations and world-class design.
--   A main dashboard post-login with a professional header, footer, and a navigation sidebar for departments (extensible for future departments).
--   Responsive design and layout for all UI elements across various screen sizes.
--   A comprehensive Human Resource Management System (HRMS) dashboard, encompassing:
-    -   Employee Lifecycle Management (onboarding, exit workflows, document verification, clearance checklists).
-    -   Advanced Leave Module (accrual, approval workflows, calendar synced with attendance).
-    -   Payroll & Compensation (salary computation, reimbursements, bonus, automated salary slip generation).
-    -   Document Management (central repository for employee files, contracts, compliance certificates with expiry alerts, download/export).
-    -   Performance Management, Recruitment, Training, Reports, and Tools modules.
-    -   Demo employee data population (RBAC explicitly not required initially).
-    -   Forms (e.g., annexures) as downloadable PDFs with information cards.
--   Dashboard Layout Preferences: Hybrid design with Executive Summary KPIs, Widget-Based Sections, and Tab-Based Categories (HR Operations | Leave & Payroll | Documents | Reports).
--   Design & UI Standards: Modern Enterprise (SAP SuccessFactors/Workday inspired with Notion minimalism), international appearance, local adaptability, Koyili Hospital and Avid Legal's blue-gold color themes.
--   Specific handling for legal documents (By-Laws, SOPs, Annexures): Content to be exact from provided documents, presented with professional formatting (justified text, proper fonts for headings/subheadings, bullets), interactive navigation (e.g., for 30 By-Laws sections), a dedicated sidebar for legal documents (independent from HR sidebar), hiding the main HR sidebar when viewing legal documents, and a board approval banner.
+Design standards are modern enterprise (SAP SuccessFactors/Workday inspired with Notion minimalism), international appearance, local adaptability, and Koyili Hospital/Avid Legal's blue-gold color themes. A critical requirement is specific handling for legal documents (By-Laws, SOPs, Annexures): content must be exact from provided PDFs, presented with professional formatting (justified text, proper typography, bullets), interactive navigation (e.g., for 30 By-Laws sections), a dedicated sidebar for legal documents, hiding the main HR sidebar when viewing legal documents, and a board approval banner.
 </product_requirements>
 
 <key_technical_concepts>
 -   **Full-stack Architecture**: React (frontend), FastAPI (backend), MongoDB (database).
 -   **UI/UX Design**: Tailwind CSS for styling, responsive design, custom animations, international standard aesthetic.
--   **Data Handling**: MongoDB for persistence, demo data seeding (), document content extraction.
+-   **Data Handling**: MongoDB for persistence, demo data seeding (), document content extraction from PDFs.
 -   **API Communication**: Frontend consumes backend APIs via  with  prefix.
--   **Development Workflow**: Incremental feature development, iterative design refinement based on user feedback, robust bug fixing (e.g., JSX syntax, component duplication).
 </key_technical_concepts>
 
 <code_architecture>
-The application utilizes a standard full-stack structure with , , , and  directories.
 
-
-
--   ****:
-    -   Summary: Main FastAPI application for backend logic and API routes.
-    -   Changes: Modified to include initial  endpoint and general  health check.
--   ****:
-    -   Summary: Top-level React component managing application routing (login, dashboard).
-    -   Changes: Configured routing to direct to  or .
--   ****:
-    -   Summary: Displays the application's login interface.
-    -   Changes: Extensively refined for professional design, hospital branding details, animations, and color coordination.
--   ****:
-    -   Summary: Main layout component after login, integrating header, sidebar, footer, and main content.
-    -   Changes: Updated to conditionally hide the main  component when navigating into specific departments (like HR), ensuring a focused view (Chat 72).
--   ****:
-    -   Summary: Dashboard header showing branding and navigation.
-    -   Changes: Modified to conditionally display a Back to Dashboard button instead of the hamburger menu when a user is inside a department (Chat 76).
--   ****:
-    -   Summary: Main application navigation sidebar.
-    -   Changes: Updated to support department-specific routing.
--   ****:
-    -   Summary: Component to display content for a specific department.
-    -   Changes: Modified to handle the HR department specifically by routing to the  component (Chat 33).
--   ****:
-    -   Summary: Stores mock data for HRMS modules.
-    -   Changes: Created to provide initial data for HRMS features (Chat 11).
--   ****:
-    -   Summary: Dedicated navigation sidebar for the HR department.
-    -   Changes: Updated multiple times to include new HRMS modules (Recruitment, Training, Reports, Tools - Chat 15). Later,  was removed and replaced with separate , ,  (Chat 139, 141, 143), and Standard Operating Procedures label was changed to HR SOP (Chat 156). Height management was also adjusted (Chat 80).
 -   ****:
     -   Summary: The central container and router for all HR department modules.
-    -   Changes: Created to centralize HR routing (Chat 31). Modified for a full-width layout and to incorporate routing for newly separated legal document components (Chat 78, 147).
+    -   Changes: Modified to conditionally hide the HR sidebar when  is 'hr-bylaws', 'hr-sops', or 'hr-annexures', ensuring a focused view for legal documents. Also updated to pass  function to child components like .
 -   ****:
-    -   Summary: The main landing page for the HR dashboard.
-    -   Changes: Created as part of the initial HRMS setup.
+    -   Summary: Component specifically for displaying HR By-Laws, designed for professional legal document formatting.
+    -   Changes: Created and then completely rebuilt to include a dedicated navigation sidebar for 30 sections, advanced search functionality, Back to HR Dashboard button, and to accept an  prop for navigation. Initially used a summarized , but now designed to display *full, extracted content* from a 115-page PDF. A syntax error related to quick reference cards was identified and fixed.
 -   ****:
-    -   Summary: Module for managing employee records.
-    -   Changes: Created (Chat 13), later extensively enhanced to include Employee Lifecycle features (onboarding, exit management, document verification) and fixed multiple syntax errors (missing JSX closing tags, duplicate content) (Chat 94, 106, 127).
--   ****:
-    -   Summary: Module for handling employee attendance and leave.
-    -   Changes: Created (Chat 13), later enhanced with advanced features like accrual and approval workflows (Chat 160).
--   ****:
-    -   Summary: Module for managing employee payroll.
-    -   Changes: Created (Chat 13), later enhanced with salary slip generation and advanced payroll features (Chat 166).
--   ****:
-    -   Summary: Module to track and manage employee performance.
-    -   Changes: Created (Chat 13), later enhanced to meet international design standards (Chat 181).
--   ****:
-    -   Summary: Module for managing recruitment processes.
-    -   Changes: Created as a new HRMS module (Chat 13), later enhanced for international design standards (Chat 185).
--   ****:
-    -   Summary: Module for employee training and development.
-    -   Changes: Created as a new HRMS module (Chat 13).
--   ****:
-    -   Summary: Module for HR reports and analytics.
-    -   Changes: Created as a new HRMS module (Chat 13).
--   ****:
-    -   Summary: Module for HR-related tools and calculators.
-    -   Changes: Created as a new HRMS module (Chat 13).
--   ****:
-    -   Summary: Original module for legal operations.
-    -   Changes: Created (Chat 13), fixed for syntax errors (Chat 53). Later superseded by more granular components for By-Laws, SOPs, Annexures.
--   ****:
-    -   Summary: Component specifically for displaying HR By-Laws.
-    -   Changes: Created (Chat 145), then completely rebuilt twice to include professional legal document formatting, a ready reckoner landing page, and section-based navigation (Chat 196, 207). It is now designed to display extracted content from a 115-page PDF with 30 sections.
+    -   Summary: Stores the structured content and metadata for HR By-Laws.
+    -   Changes: Created. Initially held summarized content but will be updated to store the complete, detailed content extracted from the provided PDF.
 -   ****:
     -   Summary: Component specifically for displaying HR Standard Operating Procedures.
-    -   Changes: Created (Chat 145).
+    -   Changes: Created. Initially a simple component, it was then transformed to match the comprehensive layout and functionality (dedicated sidebar, search) of , intended to use  for content.
+-   ****:
+    -   Summary: Stores the structured content and metadata for HR SOPs.
+    -   Changes: Created. It will be updated to store the complete, detailed content extracted from the provided PDF.
 -   ****:
     -   Summary: Component specifically for displaying HR Annexures.
-    -   Changes: Created (Chat 145).
+    -   Changes: Created. Currently a placeholder, it is expected to follow a similar comprehensive layout to By-Laws and SOPs, using .
 -   ****:
-    -   Summary: A potential central module for document management.
-    -   Changes: Created (Chat 145).
+    -   Summary: Stores the structured content and metadata for HR Annexures.
+    -   Changes: Created. It will be updated to store the complete, detailed content.
 </code_architecture>
 
 <pending_tasks>
--   Complete the remaining HRMS modules: Training and Reports, ensuring they meet the specified international design standards.
--   Implement ready reckoner tools as interactive calculators, potentially beyond the By-Laws section.
+-   Complete the remaining HRMS modules: Training and Reports, ensuring they meet international design standards.
+-   Implement ready reckoner tools as interactive calculators.
 -   Ensure forms (e.g., annexures) are actual downloadable PDFs with information cards.
 -   Develop functionality for adding more departments dynamically.
+-   Update  and  with the full, detailed content extracted from the provided PDFs.
+-   Integrate the board approval banner into legal document views.
 </pending_tasks>
 
 <current_work>
-Immediately prior to this summary, the AI engineer was tasked with a significant enhancement to the HR By-Laws section. The user explicitly requested a highly professional legal document viewer for the HR By-Laws, emphasizing:
-1.  **Hiding the main HR sidebar** when By-Laws (or SOPs/Annexures) are open.
-2.  Creating a **separate, dedicated navigation sidebar** specifically for the By-Laws document, featuring clickable links to its 30 distinct sections.
-3.  Displaying the **exact content** extracted from the user-provided 115-page By-Laws PDF, without alteration.
-4.  Ensuring **superior professional design and formatting** for legal documents (justified text, proper typography for headings/subheadings, bullet points).
-5.  Including a **board approval banner.**
+Immediately prior to this summary, the AI engineer had implemented a comprehensive HR By-Laws component () featuring a dedicated sidebar with section-based navigation, search functionality, and a Back to HR Dashboard button. The  was updated to conditionally hide the main HR sidebar when By-Laws (or SOPs/Annexures) are viewed. After resolving a minor syntax error in , the frontend compiled successfully, and initial screenshots confirmed the login and dashboard functionality.
 
-The AI successfully extracted the content from the provided By-Laws PDF (Chat 218) and recognized the complexity and scope of this task (Chat 219), confirming the 30 sections over 115 pages. The AI is currently in the process of formulating a plan to implement these detailed requirements and is seeking user confirmation for the next steps.
+However, the user explicitly requested that the  component display the *entire, detailed content* from the provided 115-page PDF, rather than the initially implemented summarized version. The user also reiterated this requirement for  and , re-uploading the By-Laws and SOPs PDFs. The AI successfully extracted the complete detailed content for the By-Laws PDF. The current work in progress is the extraction of the complete detailed content for the SOPs PDF, following the user's latest explicit request.
 </current_work>
 
 <optional_next_step>
-Confirm the detailed plan with the user for implementing the advanced HR By-Laws system based on the extracted PDF content, including dedicated navigation and professional formatting.
+Extract the complete detailed content for SOPs from the provided PDF.
+Now let me extract the SOPs content:
 </optional_next_step>
