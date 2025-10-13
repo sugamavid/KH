@@ -2272,59 +2272,44 @@ export const byLawsData = {
       }
     ]
   },
-          'Physical contact and advances.',
-          'Demand or request for sexual favors.',
-          'Sexually colored remarks.',
-          'Showing pornography.',
-          'Any other unwelcome physical, verbal, or non-verbal conduct of sexual nature.',
-          'Creating hostile or intimidating work environment.'
-        ]
-      },
-      {
-        number: '25.3',
-        title: 'Internal Complaints Committee (ICC)',
-        content: 'Complaint mechanism:',
-        points: [
-          'Internal Complaints Committee (ICC) constituted as per law.',
-          'Complaints submitted to ICC in writing.',
-          'ICC conducts inquiry in fair and time-bound manner.',
-          'Confidentiality maintained throughout process.',
-          'Protection against retaliation provided to complainants.',
-          'Strict action against perpetrators after due inquiry.',
-          'Awareness training conducted regularly.'
-        ]
-      }
-    ]
-  },
   section26: {
     id: 'section26',
     number: 'SECTION XXVI',
-    title: 'EQUAL OPPORTUNITY AND NON-DISCRIMINATION',
-    searchTerms: ['equal opportunity', 'non-discrimination', 'diversity', 'inclusion'],
+    title: 'RESEARCH, INNOVATION, AND INTELLECTUAL PROPERTY',
+    searchTerms: ['research', 'innovation', 'intellectual property', 'patents', 'IP', 'publications'],
     subsections: [
       {
         number: '26.1',
-        title: 'Equal Employment Opportunity',
-        content: 'Hospital is an equal opportunity employer:',
+        title: 'Research and Innovation Encouragement',
+        content: 'Hospital encourages clinical research, quality improvement research, and innovation contributing to medical knowledge and improved patient outcomes:',
         points: [
-          'Employment decisions based on merit, qualifications, and performance.',
-          'No discrimination based on race, religion, caste, gender, age, disability, or sexual orientation.',
-          'Equal pay for equal work.',
-          'Fair access to opportunities for growth and development.',
-          'Reasonable accommodations for employees with disabilities.',
-          'Diversity valued and promoted at all levels.'
+          'Research Culture: Culture of inquiry and evidence-based practice. Employees encouraged to participate in research activities. Support for research proposals and projects. Protected time for research where feasible.',
+          'Types of Research: Clinical trials and studies, Quality improvement research, Patient outcome studies, Operational research, Health services research, Case reports and case series.',
+          'Ethical Approval: All research involving human subjects requires ethics committee approval. Institutional Review Board (IRB) or Ethics Committee reviews proposals. Patient informed consent mandatory. Compliance with ethical guidelines (Declaration of Helsinki, ICH-GCP).',
+          'Publications and Presentations: Employees encouraged to publish research in peer-reviewed journals. Present findings at conferences. Hospital name acknowledged in publications. Prior approval from management for publications mentioning Hospital data or operations.'
         ]
       },
       {
         number: '26.2',
-        title: 'Inclusive Workplace',
-        content: 'Creating inclusive environment:',
+        title: 'Intellectual Property Rights',
+        content: 'Intellectual property created during employment or using Hospital resources belongs to Hospital:',
         points: [
-          'Respect for diverse backgrounds, perspectives, and experiences.',
-          'Zero tolerance for discrimination or bias.',
-          'Unconscious bias training provided.',
-          'Inclusive recruitment and promotion practices.',
-          'Employee resource groups and support networks encouraged.'
+          'Ownership: Inventions, innovations, processes, software, designs created by employees during employment belong to Hospital. Applies even if created outside work hours if related to Hospital work or using Hospital resources.',
+          'Disclosure: Employees must promptly disclose potentially patentable inventions or innovations to Hospital. Hospital decides whether to pursue patent protection.',
+          'Cooperation: Employees cooperate in IP protection processes including patent applications, documentation, testimony if needed. Cooperation obligation continues after employment ends.',
+          'Exceptions: Work created entirely on own time, without Hospital resources, unrelated to Hospital work may belong to employee. Clarify with legal/management if unclear.',
+          'Moral Rights: Employee moral rights (right to be named as inventor/author) respected. Hospital as owner has right to commercialize.'
+        ]
+      },
+      {
+        number: '26.3',
+        title: 'Innovation Programs',
+        content: 'Structured programs support employee innovation:',
+        points: [
+          'Innovation Challenges: Periodic innovation challenges inviting solutions to specific problems. Winning ideas receive recognition, awards, implementation support.',
+          'Idea Management System: Platform for submitting improvement ideas. Ideas reviewed, valuable ones implemented. Submitters involved in implementation.',
+          'Innovation Time: Some roles may have dedicated innovation time for exploring improvements.',
+          'Innovation Awards: Recognition and rewards for significant innovations improving patient care, safety, efficiency.'
         ]
       }
     ]
@@ -2332,22 +2317,54 @@ export const byLawsData = {
   section27: {
     id: 'section27',
     number: 'SECTION XXVII',
-    title: 'ENVIRONMENTAL SUSTAINABILITY',
-    searchTerms: ['environment', 'sustainability', 'green practices', 'eco-friendly'],
+    title: 'BUSINESS CONTINUITY AND DISASTER MANAGEMENT',
+    searchTerms: ['business continuity', 'disaster', 'emergency', 'crisis', 'pandemic', 'resilience'],
     subsections: [
       {
         number: '27.1',
-        title: 'Environmental Commitment',
-        content: 'Hospital committed to environmental sustainability:',
+        title: 'Business Continuity Planning',
+        content: 'Hospital maintains business continuity plans ensuring critical operations continue during disruptions:',
         points: [
-          'Minimize environmental impact of operations.',
-          'Comply with environmental laws and regulations.',
-          'Efficient use of energy, water, and resources.',
-          'Waste segregation and proper disposal.',
-          'Reduce, reuse, and recycle initiatives.',
-          'Green procurement practices where feasible.'
+          'Business Continuity Philosophy: Essential healthcare services must continue despite disruptions - natural disasters, pandemics, technology failures, facility damage, utility outages, supply chain disruptions.',
+          'Critical Functions: Identification of critical functions requiring continuity - Emergency department and critical care, Operating rooms for emergencies, Inpatient care, Laboratory and radiology, Pharmacy, IT systems, Power and utilities.',
+          'Continuity Strategies: Backup systems and redundancy, Alternative work locations, Cross-training for critical roles, Stockpiles of essential supplies, Mutual aid agreements with other hospitals.',
+          'Employee Responsibilities: Essential staff may be required to work during disasters. Advance identification of essential staff roles. Reporting requirements during emergencies. Personal preparedness (emergency contacts, evacuation plans).'
         ]
       },
+      {
+        number: '27.2',
+        title: 'Disaster Response and Management',
+        content: 'Structured approach to disaster response ensuring safety and service continuity:',
+        points: [
+          'Disaster Types: Natural disasters (earthquakes, floods, cyclones, fires), Pandemics and infectious disease outbreaks, Mass casualty incidents, Terrorist attacks or violence, Technology disasters (cyberattacks, system failures).',
+          'Incident Command System: Structured command and control during disasters. Defined roles and responsibilities. Communication protocols. Coordination with external agencies (police, fire, disaster management).',
+          'Emergency Operations Center: Central coordination location during major incidents. Senior leadership and key department heads. Real-time situational awareness and decision-making.',
+          'Employee Safety First: Employee safety is priority during disasters. Evacuation procedures if building unsafe. Shelter-in-place if external danger. Personal protective equipment for responders. Psychological support post-incident.'
+        ]
+      },
+      {
+        number: '27.3',
+        title: 'Pandemic Preparedness',
+        content: 'Specific planning for pandemic situations:',
+        points: [
+          'Pandemic Preparedness Plan: Infectious disease surveillance and early detection. Infection control measures intensification. Staffing plans for high absenteeism. Surge capacity for patient influx. Supply stockpiles (PPE, medications, ventilators).',
+          'Employee Protection During Pandemic: Adequate PPE provision. Vaccination and prophylaxis where available. Safe work practices and hygiene. Screening and testing of staff. Isolation and treatment of infected staff.',
+          'Operational Adjustments: Modified schedules and rosters. Work-from-home for non-essential staff. Visitor restrictions. Elective procedure postponement. Telehealth expansion.',
+          'Communication: Frequent updates to staff on situation and measures. Transparent information sharing. Addressing staff concerns and questions. Mental health support during stressful periods.'
+        ]
+      },
+      {
+        number: '27.4',
+        title: 'Training and Drills',
+        content: 'Regular training and drills ensure preparedness:',
+        points: [
+          'Emergency Training: All staff trained on basic emergency procedures. Role-specific training for emergency responders. Annual refresher training.',
+          'Drills and Exercises: Fire drills quarterly. Disaster drills annually (earthquake, mass casualty, etc.). Tabletop exercises testing decision-making. After-action reviews and improvements.',
+          'Evacuation Procedures: Evacuation routes and assembly points. Patient evacuation procedures. Accounting for all personnel post-evacuation.'
+        ]
+      }
+    ]
+  },
       {
         number: '27.2',
         title: 'Employee Participation',
