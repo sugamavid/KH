@@ -2365,37 +2365,56 @@ export const byLawsData = {
       }
     ]
   },
-      {
-        number: '27.2',
-        title: 'Employee Participation',
-        content: 'Employees expected to:',
-        points: [
-          'Follow waste segregation guidelines.',
-          'Conserve electricity and water.',
-          'Use resources responsibly.',
-          'Participate in environmental initiatives.',
-          'Suggest improvement ideas.'
-        ]
-      }
-    ]
-  },
   section28: {
     id: 'section28',
     number: 'SECTION XXVIII',
-    title: 'CORPORATE SOCIAL RESPONSIBILITY',
-    searchTerms: ['CSR', 'corporate social responsibility', 'community service'],
+    title: 'COMPLIANCE, AUDIT, AND LEGAL REQUIREMENTS',
+    searchTerms: ['compliance', 'audit', 'legal', 'regulatory', 'laws', 'regulations'],
     subsections: [
       {
         number: '28.1',
-        title: 'CSR Initiatives',
-        content: 'Hospital engages in social responsibility activities:',
+        title: 'Regulatory Compliance Framework',
+        content: 'Hospital operates within comprehensive regulatory framework ensuring legal compliance and quality standards:',
         points: [
-          'Healthcare camps and community outreach programs.',
-          'Support for underprivileged patients.',
-          'Health awareness and education initiatives.',
-          'Partnerships with NGOs and community organizations.',
-          'Employee volunteering encouraged and supported.',
-          'Transparent reporting of CSR activities.'
+          'Healthcare Regulations: Clinical Establishments Acts, Medical Council regulations, Nursing Council requirements, Pre-Conception and Pre-Natal Diagnostic Techniques Act (PCPNDT), Drugs and Cosmetics Act, Medical Termination of Pregnancy Act.',
+          'Labor and Employment Laws: Shops and Establishments Acts, Payment of Wages Act, Minimum Wages Act, Payment of Bonus Act, Payment of Gratuity Act, Employees Provident Fund Act, ESI Act, Maternity Benefit Act, Equal Remuneration Act, Sexual Harassment Act (POSH), Contract Labour Act.',
+          'Safety and Environment: Bio-Medical Waste Management Rules, Fire safety regulations, Occupational Safety, Health and Working Conditions Code, Water and Air Pollution Control Acts.',
+          'Other Compliance: Income Tax Act, GST Act, Professional Tax, Digital Personal Data Protection Act, Consumer Protection Act, Information Technology Act.',
+          'Accreditation Standards: NABH, JCI, ISO standards compliance.'
+        ]
+      },
+      {
+        number: '28.2',
+        title: 'Employee Compliance Responsibilities',
+        content: 'All employees have duty to ensure compliance in their work:',
+        points: [
+          'Know Applicable Rules: Employees must be aware of laws, regulations, policies applicable to their role. Attend compliance training. Seek clarification when unsure.',
+          'Follow Procedures: Adhere to established processes ensuring compliance. Do not take shortcuts compromising compliance. Report compliance concerns without fear.',
+          'License and Registration: Maintain valid professional licenses, registrations, certifications required for role. Notify HR immediately if license suspended or revoked. Practice only within scope of license.',
+          'Documentation: Maintain accurate, complete records as required by regulations. Medical records, consent forms, statutory registers.',
+          'Reporting Violations: Report suspected compliance violations through - Supervisor or department head, Compliance officer, HR Department, Anonymous ethics helpline. Whistleblower protection provided.'
+        ]
+      },
+      {
+        number: '28.3',
+        title: 'Internal Audits and Inspections',
+        content: 'Regular audits verify compliance and identify improvement areas:',
+        points: [
+          'Internal Audit Program: Periodic internal audits of clinical, operational, financial, HR processes. Audit schedules published annually. Departments prepare for audits ensuring compliance.',
+          'Audit Cooperation: Employees cooperate fully with auditors. Provide requested documents and information. Answer questions honestly. Do not obstruct or mislead auditors.',
+          'Findings and Corrective Actions: Audit findings communicated to department. Corrective action plans developed with timelines. Implementation tracked to closure. Follow-up audits verify corrections.',
+          'External Inspections: Regulatory inspections by government agencies, Accreditation surveys (NABH, JCI), Insurance and third-party audits. Same cooperation and preparation expected.'
+        ]
+      },
+      {
+        number: '28.4',
+        title: 'Legal Matters and Litigation',
+        content: 'Procedures for handling legal matters involving Hospital or employees:',
+        points: [
+          'Legal Department: Hospital legal team handles legal matters, contracts, litigation, compliance advice. Employees consult legal department for work-related legal questions.',
+          'Litigation Cooperation: If Hospital involved in litigation, employees may be required to - Provide statements or affidavits, Testify as witnesses, Provide documents and records, Cooperate with legal counsel. Cooperation is job duty.',
+          'Personal Legal Issues: Personal legal issues of employees are their responsibility. Hospital may provide guidance but not legal representation. Employees must inform HR if personal legal matters affect employment (arrest, criminal charges).',
+          'Confidentiality: Legal matters are confidential. Employees do not discuss litigation or legal issues publicly or with unauthorized persons. Refer all queries to legal department.'
         ]
       }
     ]
@@ -2403,21 +2422,91 @@ export const byLawsData = {
   section29: {
     id: 'section29',
     number: 'SECTION XXIX',
-    title: 'COMPLIANCE AND LEGAL REQUIREMENTS',
-    searchTerms: ['compliance', 'legal', 'regulatory', 'laws'],
+    title: 'POLICY ACKNOWLEDGMENT AND COMPLIANCE CERTIFICATION',
+    searchTerms: ['policy acknowledgment', 'compliance certification', 'employee handbook', 'acknowledgment'],
     subsections: [
       {
         number: '29.1',
-        title: 'Regulatory Compliance',
-        content: 'Compliance with applicable laws:',
+        title: 'Policy Dissemination and Access',
+        content: 'Hospital ensures all employees have access to policies and By-Laws:',
         points: [
-          'All operations comply with central and state laws.',
-          'Healthcare regulations and medical council guidelines followed.',
-          'Labor laws compliance including minimum wages, working hours, PF, ESI.',
-          'Tax laws including TDS, GST compliance.',
-          'Environmental and safety regulations.',
-          'Data protection and privacy laws.',
-          'Regular compliance audits conducted.'
+          'Employee Handbook: Comprehensive employee handbook containing key policies provided to all employees. Handbook covers employment terms, conduct expectations, benefits, procedures. Available in print and electronic format.',
+          'Intranet Access: Complete By-Laws, policies, procedures available on Hospital intranet. Searchable and organized by topic. Employees have 24x7 access.',
+          'New Employee Orientation: New hires receive policy orientation during induction. Key policies explained. Questions answered. Importance of compliance emphasized.',
+          'Policy Updates: When policies updated, employees notified via email, intranet, meetings. Significant changes highlighted. Employees expected to review updates.'
+        ]
+      },
+      {
+        number: '29.2',
+        title: 'Mandatory Policy Acknowledgment',
+        content: 'Employees required to acknowledge receipt, review, and understanding of critical policies:',
+        points: [
+          'Acknowledgment Requirement: Upon joining and annually thereafter, employees acknowledge - Receipt of employee handbook and By-Laws, Reading and understanding policies, Agreement to comply with policies, Understanding consequences of violations.',
+          'Policies Requiring Acknowledgment: Code of Conduct and Ethics, Confidentiality and Data Protection, Sexual Harassment Prevention (POSH), Information Security and Acceptable Use, Disciplinary Policy, Conflict of Interest, Gift and Hospitality Policy.',
+          'Acknowledgment Process: Electronic acknowledgment through HRMS or signed hard copy forms. HR tracks acknowledgments ensuring 100% compliance. Non-acknowledgment followed up.',
+          'Consequences of Non-Acknowledgment: Continued employment indicates acceptance of policies even if acknowledgment not signed. However, formal acknowledgment preferred for clarity and records.'
+        ]
+      },
+      {
+        number: '29.3',
+        title: 'Annual Compliance Certification',
+        content: 'Annual certification process ensures ongoing policy adherence and awareness:',
+        points: [
+          'Annual Certification: Each year, employees certify that they - Reviewed current policies and understand them, Complied with all applicable policies during the year, Are not aware of any policy violations by themselves or others (or report known violations), Disclosed any conflicts of interest or required information.',
+          'Certification Timing: Annual certification typically part of year-end performance process or early in new calendar year.',
+          'Importance: Certification refreshes employee awareness, Identifies compliance gaps or concerns, Reinforces accountability culture, Provides legal documentation of employee understanding.',
+          'False Certification: Knowingly providing false information in certification is serious misconduct warranting termination.'
+        ]
+      }
+    ]
+  },
+  section30: {
+    id: 'section30',
+    number: 'SECTION XXX',
+    title: 'CONCLUSION AND CONTACT INFORMATION',
+    searchTerms: ['conclusion', 'contact', 'HR contact', 'helpdesk', 'queries'],
+    subsections: [
+      {
+        number: '30.1',
+        title: 'Concluding Statement',
+        content: 'These By-Laws represent Hospital commitment to fair, transparent, and legally compliant human resource management fostering employee growth, organizational excellence, and quality patient care:',
+        points: [
+          'Living Document: These By-Laws are living document subject to periodic review and revision reflecting changes in laws, business needs, and best practices. Employees notified of revisions.',
+          'Interpretation and Clarification: HR Department is primary resource for policy interpretation and clarification. Employees encouraged to seek guidance rather than assume or guess.',
+          'Mutual Commitment: Employment relationship is mutual commitment. Hospital commits to fair treatment, growth opportunities, safe workplace, competitive compensation. Employees commit to high performance, ethical conduct, continuous learning, teamwork.',
+          'Feedback Welcome: Hospital values employee feedback on policies and practices. Suggestions for improvements welcome through appropriate channels.'
+        ]
+      },
+      {
+        number: '30.2',
+        title: 'HR Department Contact Information',
+        content: 'Human Resources Department is resource for all employment-related matters, questions, and support:',
+        points: [
+          'HR Department Location: Human Resources Department, 2nd Floor, Administration Building, Koyili Hospital, [Address]',
+          'HR Contact Details: Phone: +91-XXX-XXXXXXX (Monday-Saturday, 9 AM - 6 PM), Email: hr@koyilihospital.com, Helpdesk Email: hrhelp@koyilihospital.com',
+          'HR Leadership: Chief Human Resources Officer (CHRO): [Name], Senior HR Manager: [Name], HR Business Partners assigned to each department',
+          'Online Resources: Employee Self-Service Portal: [URL], HRMS System: [URL], Intranet: [URL]',
+          'Specific Contacts: Recruitment Queries: recruitment@koyilihospital.com, Payroll Queries: payroll@koyilihospital.com, Training & Development: training@koyilihospital.com, Employee Relations: employeerelations@koyilihospital.com, Benefits and Insurance: benefits@koyilihospital.com, Grievances: grievances@koyilihospital.com, ICC Sexual Harassment: icc@koyilihospital.com',
+          'Anonymous Helpline: Ethics and Compliance Helpline (24x7): [Phone Number], For confidential reporting of serious violations, harassment, fraud, safety concerns. Anonymity protected. No retaliation.'
+        ]
+      },
+      {
+        number: '30.3',
+        title: 'Acknowledgment of Receipt',
+        content: 'By signing below or electronically acknowledging, I confirm that:',
+        points: [
+          'I have received a copy of Koyili Hospital Human Resources By-Laws.',
+          'I have read and understood the policies and procedures outlined in these By-Laws.',
+          'I agree to comply with all provisions of these By-Laws during my employment.',
+          'I understand that violation of these By-Laws may result in disciplinary action up to and including termination.',
+          'I understand that these By-Laws do not constitute an employment contract and that my employment is at-will (where applicable).',
+          'I understand that Hospital reserves right to amend, modify, or revoke these By-Laws at any time.',
+          'I have been given opportunity to ask questions and seek clarifications regarding these By-Laws.',
+          'Employee Name: ___________________, Employee ID: ___________, Signature: ________________, Date: __________'
+        ]
+      }
+    ]
+  },
         ]
       },
       {
