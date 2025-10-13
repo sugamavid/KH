@@ -219,6 +219,23 @@ const HRByLaws = () => {
 
   const renderDashboard = () => (
     <div className="space-y-6">
+      {/* Board Approval Banner */}
+      <div className="bg-gradient-to-r from-amber-50 to-amber-100 border-l-4 border-amber-600 rounded-lg p-6 shadow-md">
+        <div className="flex items-start space-x-4">
+          <div className="w-12 h-12 rounded-full bg-amber-600 flex items-center justify-center flex-shrink-0">
+            <CheckCircle className="w-6 h-6 text-white" />
+          </div>
+          <div className="flex-1">
+            <h3 className="text-lg font-bold text-amber-900 mb-1">Board Approved Document</h3>
+            <p className="text-sm text-amber-800">
+              This document has been officially approved by the Board of Directors of Koyili Hospital 
+              and is effective from February 1, 2024. All employees are required to read, understand, 
+              and comply with these by-laws.
+            </p>
+          </div>
+        </div>
+      </div>
+
       {/* Header */}
       <div className="bg-gradient-to-r from-blue-900 to-indigo-900 rounded-xl p-8 text-white shadow-lg">
         <div className="flex items-start justify-between">
@@ -274,19 +291,25 @@ const HRByLaws = () => {
       <div>
         <h2 className="text-xl font-bold text-slate-900 mb-4">Key Policy Highlights</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {keyHighlights.map((highlight, idx) => (
-            <div key={idx} className="bg-white rounded-xl p-5 border-l-4 border-slate-200 hover:shadow-md transition-all" style={{ borderLeftColor: `var(--${highlight.color}-500)` }}>
-              <div className="flex items-start space-x-4">
-                <div className={`w-10 h-10 rounded-lg bg-${highlight.color}-100 flex items-center justify-center flex-shrink-0`}>
-                  <highlight.icon className={`w-5 h-5 text-${highlight.color}-600`} />
-                </div>
-                <div>
-                  <h3 className="font-bold text-slate-900 mb-2">{highlight.section}</h3>
-                  <p className="text-sm text-slate-700">{highlight.highlight}</p>
+          {keyHighlights.map((highlight, idx) => {
+            const IconComponent = {
+              Shield, Calendar, Scale, AlertCircle
+            }[highlight.icon] || Shield;
+            
+            return (
+              <div key={idx} className="bg-white rounded-xl p-5 border-l-4 border-slate-200 hover:shadow-md transition-all" style={{ borderLeftColor: `var(--${highlight.color}-500)` }}>
+                <div className="flex items-start space-x-4">
+                  <div className={`w-10 h-10 rounded-lg bg-${highlight.color}-100 flex items-center justify-center flex-shrink-0`}>
+                    <IconComponent className={`w-5 h-5 text-${highlight.color}-600`} />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-slate-900 mb-2">{highlight.section}</h3>
+                    <p className="text-sm text-slate-700">{highlight.highlight}</p>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
 
@@ -321,17 +344,20 @@ const HRByLaws = () => {
       <div className="bg-white rounded-xl p-6 border border-slate-200 shadow-sm">
         <h2 className="text-xl font-bold text-slate-900 mb-4">Navigate to Section</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
-          {navigation.filter(nav => nav.id !== 'dashboard').map((nav) => (
-            <button
-              key={nav.id}
-              onClick={() => setActiveSection(nav.id)}
-              className="flex items-center space-x-3 p-4 bg-slate-50 rounded-lg hover:bg-blue-50 hover:border-blue-400 border border-slate-200 transition-all text-left"
-            >
-              <nav.icon className="w-5 h-5 text-blue-600" />
-              <span className="text-sm font-medium text-slate-900">{nav.title}</span>
-              <ChevronRight className="w-4 h-4 text-slate-400 ml-auto" />
-            </button>
-          ))}
+          {navigation.filter(nav => nav.id !== 'dashboard').map((nav) => {
+            const IconComponent = nav.icon;
+            return (
+              <button
+                key={nav.id}
+                onClick={() => setActiveSection(nav.id)}
+                className="flex items-center space-x-3 p-4 bg-slate-50 rounded-lg hover:bg-blue-50 hover:border-blue-400 border border-slate-200 transition-all text-left"
+              >
+                <IconComponent className="w-5 h-5 text-blue-600" />
+                <span className="text-sm font-medium text-slate-900">{nav.title}</span>
+                <ChevronRight className="w-4 h-4 text-slate-400 ml-auto" />
+              </button>
+            );
+          })}
         </div>
       </div>
     </div>
