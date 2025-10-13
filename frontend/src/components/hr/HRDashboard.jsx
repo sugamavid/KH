@@ -42,7 +42,7 @@ const HRDashboard = () => {
   };
 
   return (
-    <div className="flex h-full min-h-screen bg-slate-50">
+    <div className="flex h-screen bg-slate-50 overflow-hidden">
       <HRSidebar activeModule={activeModule} setActiveModule={setActiveModule} />
       <div className="flex-1 overflow-auto">
         {renderModule()}
