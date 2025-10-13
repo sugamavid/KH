@@ -1062,7 +1062,185 @@ Once drafted, the policy shall be reviewed internally by:
     title: 'Background Verification',
     searchTerms: ['background', 'verification', 'bgv', 'checks', 'validation'],
     category: 'B. Recruitment, Selection & Appointment',
-    content: 'Ensures all selected candidates undergo structured background verification to validate academic, professional, criminal, and behavioural credentials before formal onboarding.'
+    subsections: [
+      {
+        number: '1',
+        title: 'OBJECTIVE',
+        content: 'This SOP ensures all selected candidates undergo structured background verification to validate academic, professional, criminal, and behavioral credentials before formal onboarding. The objective is to mitigate hiring risks, ensure integrity of workforce, protect patient safety, and maintain institutional reputation.'
+      },
+      {
+        number: '2',
+        title: 'SCOPE AND APPLICABILITY',
+        content: `This SOP applies to:
+• All candidates who have been selected for employment (post-interview, pre-offer or post-offer acceptance)
+• All categories of employees including permanent, contractual, temporary, consultants, and interns
+• Clinical, paramedical, nursing, administrative, technical, and support staff roles
+• Internal candidates being promoted or transferred to sensitive positions may undergo selective verification`
+      },
+      {
+        number: '3',
+        title: 'DEFINITIONS',
+        content: `• Background Verification (BGV): The process of validating information provided by candidates regarding their identity, education, employment, criminal record, and character
+• Educational Verification: Validation of degrees, diplomas, certifications, and academic credentials
+• Employment Verification: Confirmation of past employment including designations, tenure, and reason for leaving
+• Criminal Record Check: Verification of any criminal convictions or pending cases through police records
+• Reference Check: Contacting references provided by candidates to assess character, work ethics, and suitability
+• Professional License Verification: Validation of medical council registration, nursing council license, or other professional certifications
+• Credit Check: Assessment of financial history and creditworthiness (for finance/cash-handling positions)
+• Address Verification: Physical confirmation of candidate's residential address`
+      },
+      {
+        number: '4',
+        title: 'PROCEDURE',
+        subsections: [
+          {
+            number: '4.1',
+            title: 'Initiation of Background Verification',
+            content: `(i) Background verification shall be initiated:
+    • After candidate selection and before offer letter issuance (preferred), OR
+    • After offer acceptance with BGV clearance as a condition in offer letter
+(ii) HR shall:
+    • Obtain signed consent from candidate for conducting background verification (BGV Consent Form - Annexure B.7.1)
+    • Collect required documents from candidate:
+        A. Educational certificates (originals for verification)
+        B. Previous employment letters (offer, appointment, relieving, experience certificates)
+        C. Professional licenses/registrations (medical, nursing, pharmacy council certificates)
+        D. Two references (name, designation, organization, contact details)
+        E. Address proof (Aadhaar, utility bill, rental agreement)
+        F. Identity proof (Aadhaar, PAN, Passport, Voter ID)
+(iii) HR shall decide verification scope based on position risk level:
+    • High Risk (Clinical, Senior Management, Finance): All checks including criminal record
+    • Medium Risk (Administrative, Technical): Educational, employment, reference checks
+    • Low Risk (Support, Entry-Level): Educational and identity verification`
+          },
+          {
+            number: '4.2',
+            title: 'Educational Qualification Verification',
+            content: `(i) HR or designated BGV agency shall:
+    • Verify degree/diploma certificates with issuing universities/boards
+    • Check authenticity through university verification portals or written requests
+    • Validate marks sheets and transcripts
+    • For professional certifications, verify with issuing bodies (INC, MCI, Pharmacy Council)
+    • Flag any discrepancies in degree names, dates, marks, or institution names
+(ii) Verification methods:
+    • Online verification through university portals (preferred)
+    • Email/phone verification with university registrar offices
+    • Physical verification by visiting institutions (if required)
+(iii) Unverifiable or suspicious credentials shall be immediately flagged for further investigation
+(iv) Typical turnaround: 7-10 business days`
+          },
+          {
+            number: '4.3',
+            title: 'Employment History Verification',
+            content: `(i) For each previous employer listed (last 2-3 employers or last 5 years):
+    • Contact HR department of previous employers
+    • Verify: Designation, tenure (joining and leaving dates), reporting manager, reason for leaving
+    • Obtain confirmation on employment status and eligibility for rehire
+    • Check for any disciplinary issues or termination reasons
+(ii) Verification methods:
+    • Email verification to official HR emails
+    • Phone calls to HR department
+    • Verification through background check agencies with MoUs with companies
+(iii) Gaps in employment:
+    • Any employment gap exceeding 6 months requires explanation from candidate
+    • Reasons (higher education, personal reasons, health) shall be documented
+(iv) Typical turnaround: 10-15 business days (depends on previous employer responsiveness)`
+          },
+          {
+            number: '4.4',
+            title: 'Criminal Record and Court Case Verification',
+            content: `(i) For high-risk positions (clinical staff, senior management, cash handlers):
+    • Obtain Police Verification Certificate or conduct criminal record check through authorized agencies
+    • Check for criminal convictions, pending court cases, or involvement in fraud/misconduct
+(ii) Verification methods:
+    • Police station verification at candidate's current and permanent address
+    • Online court case database checks
+    • Third-party BGV agencies with access to legal databases
+(iii) Any criminal record flagged shall be:
+    • Reviewed for nature of offense, severity, and relevance to job role
+    • Escalated to HR Head and Legal Team for decision
+    • May result in offer withdrawal or conditional employment based on risk assessment
+(iv) Typical turnaround: 15-25 business days`
+          },
+          {
+            number: '4.5',
+            title: 'Reference Checks',
+            content: `(i) HR shall contact references provided by candidate (minimum 2 references):
+    • Verify relationship with candidate (supervisor, colleague, professor)
+    • Ask structured questions:
+        A. Confirmation of working relationship and duration
+        B. Candidate's strengths and areas of improvement
+        C. Work quality, punctuality, teamwork
+        D. Reason for leaving (if employment reference)
+        E. Would you rehire/recommend this candidate? (Yes/No/Conditional)
+(ii) References shall be:
+    • Professional references (preferably from previous supervisors)
+    • Contactable via phone or email
+    • Not related to candidate (family members not accepted)
+(iii) Reference feedback shall be documented in Reference Check Form (Annexure B.7.2)
+(iv) Negative references shall be discussed with candidate before making final decision
+(v) Typical turnaround: 5-7 business days`
+          },
+          {
+            number: '4.6',
+            title: 'BGV Report and Decision',
+            content: `(i) Upon completion of all checks, HR shall consolidate a BGV Report including:
+    • Summary of all verifications conducted
+    • Status: Clear / Discrepancy Found / Red Flag
+    • Detailed findings for each check
+    • Recommendation: Proceed / Conditional Proceed / Do Not Proceed
+(ii) Decision matrix:
+    • All Clear: Proceed with offer letter or onboarding
+    • Minor Discrepancy (e.g., date mismatch by 1-2 months): Obtain clarification from candidate, conditional proceed
+    • Major Discrepancy (fake degree, false employment claim, serious criminal record): Offer withdrawn, candidate notified
+(iii) Candidates shall be given opportunity to explain discrepancies before final decision
+(iv) Final approval authority:
+    • HR Head: For minor discrepancies and conditional clearances
+    • CEO + HR Head: For major discrepancies or red flags
+(v) BGV outcomes shall be communicated to candidate within 3 days of report completion`
+          }
+        ]
+      },
+      {
+        number: '5',
+        title: 'ROLES AND RESPONSIBILITIES',
+        table: {
+          headers: ['Position', 'Responsibility'],
+          rows: [
+            ['HR Department', 'Initiate BGV, collect documents, coordinate with agencies, consolidate reports, communicate outcomes'],
+            ['BGV Agency (if outsourced)', 'Conduct verification checks as per scope, provide detailed reports within SLA timelines'],
+            ['Legal Team', 'Review criminal record findings, provide guidance on legal implications of discrepancies'],
+            ['HR Head', 'Approve BGV outcomes, decide on conditional clearances and offer withdrawals'],
+            ['Candidates', 'Provide consent, submit authentic documents, cooperate in verification process, explain discrepancies']
+          ]
+        }
+      },
+      {
+        number: '6',
+        title: 'COMPLIANCE AND RECORD-KEEPING',
+        content: `• All BGV reports, consent forms, and supporting documents shall be retained for a minimum of 5 years
+• Candidate consent is mandatory before initiating any background checks
+• Personal data collected during BGV shall be handled as per Data Privacy and Protection Policy
+• BGV outcomes shall remain confidential and accessible only to authorized HR personnel
+• Monthly BGV Metrics shall track:
+    • Number of BGV cases initiated and completed
+    • Average turnaround time per check type
+    • Percentage of cases with discrepancies
+    • Offer withdrawals due to BGV failures
+• Any data breach or unauthorized disclosure of BGV information is a serious compliance violation`
+      },
+      {
+        number: '7',
+        title: 'REFERENCE DOCUMENTS',
+        content: `• Koyili Hospital HR By-Laws (Section 3: Pre-Employment Verification)
+• SOP B.5: Interview Scheduling & Panel Process
+• SOP B.9: Offer Letter Generation
+• Annexure B.7.1: Background Verification Consent Form
+• Annexure B.7.2: Reference Check Form
+• Data Privacy and Protection Policy
+• Agreements with Background Verification Agencies`
+      }
+    ]
   },
 
   sopB8: {
