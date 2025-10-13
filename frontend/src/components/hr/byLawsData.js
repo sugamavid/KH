@@ -669,45 +669,147 @@ export const byLawsData = {
     id: 'section8',
     number: 'SECTION VIII',
     title: 'SEPARATION FROM EMPLOYMENT',
-    searchTerms: ['separation', 'resignation', 'retirement', 'termination', 'exit'],
+    searchTerms: ['separation', 'resignation', 'retirement', 'termination', 'exit', 'notice period', 'final settlement'],
     subsections: [
       {
         number: '8.1',
-        title: 'Resignation',
-        content: 'Voluntary resignation procedures:',
+        title: 'Modes of Separation - Comprehensive Overview',
+        content: 'Employment relationship at Koyili Hospital may end through various modes, each with specific procedures, notice requirements, and settlement terms:',
         points: [
-          'Submit written resignation to immediate supervisor and HR Department.',
-          'Notice period as per appointment letter, typically 30 days minimum.',
-          'Complete all exit formalities including handover of responsibilities.',
-          'Obtain clearance from all departments including accounts, IT, and library.',
-          'Return all Hospital property including ID card, keys, equipment, and documents.',
-          'Final settlement processed after complete clearance.',
-          'Exit interview may be conducted to gather feedback.'
+          'Voluntary Resignation: Employee initiates separation by tendering resignation for personal reasons, career advancement, relocation, family circumstances, or better opportunities. Most common and mutual mode of separation.',
+          'Retirement: Separation upon reaching retirement age or through voluntary early retirement schemes. Retirement is planned separation with defined benefits.',
+          'Termination by Hospital: Employer-initiated separation due to misconduct, poor performance, redundancy, restructuring, or breach of contract. May be with or without cause.',
+          'Mutual Separation: By mutual agreement between employee and Hospital, typically with negotiated terms, notice waivers, and settlement. Used when both parties agree separation is in best interest.',
+          'End of Contract: Natural conclusion of fixed-term contracts upon completion of contract period or project. Contract employees separate automatically unless renewed.',
+          'Death During Service: Unfortunate separation due to employee death. Benefits payable to legal heirs or nominees as per policy and law.',
+          'Abandonment of Employment: Deemed separation when employee remains absent without authorization for extended period (typically 7-10 consecutive days) without communication, indicating intent to abandon employment.',
+          'Medical Incapacity: Separation when employee is medically unfit to continue employment based on Medical Board assessment, and reasonable accommodations are not feasible.',
+          'Superannuation: Compulsory retirement upon reaching maximum service age, providing dignified exit with full retirement benefits.',
+          'Voluntary Retirement Scheme (VRS): Special schemes offering enhanced benefits to employees willing to retire voluntarily before reaching retirement age, used during restructuring or cost optimization.'
         ]
       },
       {
         number: '8.2',
-        title: 'Retirement',
-        content: 'Retirement procedures and benefits:',
+        title: 'Voluntary Resignation - Detailed Procedures',
+        content: 'When an employee decides to resign, the following comprehensive procedures ensure smooth transition and proper closure:',
         points: [
-          'Retirement age: 60 years as per Hospital policy.',
-          'Advance notice of retirement procedures provided.',
-          'Complete exit formalities and knowledge transfer.',
-          'Receive all statutory and contractual benefits including gratuity, PF, and leave encashment.',
-          'Extension of service possible at Hospital discretion on case-by-case basis.',
-          'Retirement benefits processed within 30 days of retirement date.'
+          'Resignation Letter: Employee submits formal written resignation letter addressed to immediate supervisor and copied to HR Department. Letter should state - intention to resign, last working day (respecting notice period), brief reason (optional), appreciation for opportunities. Letter date marks the start of notice period.',
+          'Notice Period Requirements: Notice period as specified in appointment letter, typically - 30 days for junior staff, 60 days for middle management, 90 days for senior management and critical positions. Notice period cannot be shortened without mutual consent and HR approval.',
+          'Acceptance of Resignation: Supervisor forwards resignation to HR with recommendation. HR formally accepts resignation acknowledging receipt, confirming last working day, and outlining exit procedures. Acceptance does not bind Hospital if employee reconsiders within reasonable time.',
+          'Early Release Requests: Employee may request early release (shorter notice period) citing urgent circumstances. Early release is discretionary based on operational feasibility, replacement availability, and knowledge transfer status. May require payment in lieu of notice.',
+          'Notice Period Buyout: In exceptional cases, employee may negotiate notice period buyout by paying Hospital equivalent of notice period salary. Hospital may accept, reject, or negotiate based on business needs.',
+          'Withdrawal of Resignation: Employee may withdraw resignation before acceptance or within short grace period (typically 3 days) if accepted. Withdrawal subject to Hospital acceptance. Multiple resignation-withdrawal cycles viewed negatively.',
+          'Retention Discussions: For valued employees, manager or HR may conduct retention discussions exploring concerns and possibilities to retain employee through role changes, compensation adjustments, development opportunities, or work arrangements. Counter-offers are made judiciously.',
+          'Working During Notice: Employees must work diligently during notice period, maintain professional standards, and complete assigned tasks. Taking leave extensively during notice period requires approval. Sick leave during notice may extend notice period.',
+          'Absconding During Notice: Leaving without completing notice period without approval is breach of contract. Hospital may withhold dues, recover notice period salary, and provide negative reference.'
         ]
       },
       {
         number: '8.3',
-        title: 'Termination by Hospital',
-        content: 'The Hospital may terminate employment in case of:',
+        title: 'Exit Formalities and Clearance Process',
+        content: 'Comprehensive exit process ensures proper handover, recovery of Hospital property, settlement of dues, and knowledge preservation:',
         points: [
-          'Gross misconduct or serious violations.',
-          'Continued unsatisfactory performance despite PIP.',
-          'Redundancy or organizational restructuring.',
-          'Termination during probation period.',
-          'Notice period or payment in lieu as per appointment terms.',
+          'Exit Checklist: HR provides exit checklist outlining all clearances required, handover procedures, return of assets, and documentation. Checklist ensures no step is missed.',
+          'Knowledge Transfer and Handover: Employee must document key responsibilities, ongoing projects, pending tasks, critical contacts, passwords, file locations, and processes. Detailed handover note prepared and discussed with supervisor or replacement. Handover period typically last week of notice.',
+          'Return of Hospital Property: All Hospital property must be returned - ID card and access cards, laptops, mobile phones, tablets, office keys, files and documents, stationery, books from library, uniforms, vehicles (if provided), any other equipment or materials. IT Department verifies return of all devices and data deletion.',
+          'IT Access Revocation: IT access (email, systems, networks, applications) revoked on last working day. Employee must backup personal data before revocation. Official data remains Hospital property.',
+          'Departmental Clearances: Employee obtains clearance certificates from - Reporting Manager (work handover complete), Accounts (no pending dues, advances cleared), IT (devices returned, accounts closed), Library (books returned), Transport (vehicles returned, if applicable), Admin (keys, access cards returned), Payroll (final calculations confirmed). Each department signs clearance form.',
+          'No Dues Certificate: After all departmental clearances, HR issues No Dues Certificate confirming employee has no outstanding liabilities, all dues settled, and clearance complete.',
+          'Exit Interview: HR conducts confidential exit interview understanding - reasons for leaving, feedback on work environment, suggestions for improvement, concerns about policies or management, overall satisfaction, and likelihood to recommend Hospital as employer. Exit interview data provides valuable organizational insights.',
+          'Service Certificate: Upon request, Hospital issues Service Certificate (experience letter) stating - period of employment, designation(s) held, brief job responsibilities, and conduct (typically "good" unless serious issues). Certificate is factual and professional.',
+          'Full and Final Settlement: After complete clearance, final settlement calculated including - salary up to last working day, leave encashment for accumulated earned leave, any unpaid bonuses or incentives, reimbursements of pending expenses, recovery of advances or loans, notice period shortfall deduction (if applicable). Full and Final (F&F) statement provided to employee.',
+          'Settlement Timeline: Final settlement processed within 30-45 days of last working day or as per local labor laws. Provident Fund withdrawal and gratuity settlement may take additional time as per statutory procedures.',
+          'Reference and Recommendations: With prior consent, Hospital may provide employment references to prospective employers of resigned employees. References are factual and professional.'
+        ]
+      },
+      {
+        number: '8.4',
+        title: 'Retirement - Procedures and Benefits',
+        content: 'Retirement marks honorable conclusion of an employee\'s career. Hospital ensures dignified retirement with full benefits:',
+        points: [
+          'Retirement Age: Standard retirement age is 60 years as per Hospital policy. Employees attaining 60 years retire on the last day of the month in which birthday falls, unless service extension granted.',
+          'Retirement Intimation: HR notifies employees 6 months before retirement date. Notification includes retirement procedures, benefits entitlements, documentation requirements, and contact person for queries.',
+          'Pre-Retirement Planning: Hospital may conduct pre-retirement counseling sessions on financial planning, pension benefits, post-retirement health insurance, lifestyle adjustments, and legal matters.',
+          'Service Extension: In exceptional cases and for specialized roles, Hospital may extend service beyond retirement age on year-to-year contract basis. Extension is discretionary, based on health fitness, organizational need, and mutual agreement.',
+          'Retirement Benefits: Retiring employees receive - Full Provident Fund accumulation with employer contribution and interest, Gratuity as per Payment of Gratuity Act (15 days salary for each completed year of service, maximum INR 20 lakhs or as per law), Leave encashment for accumulated earned leave, Pension (if applicable under Hospital pension scheme), Any other contractual retirement benefits.',
+          'Health Insurance Continuation: Post-retirement health insurance for retiree and spouse may be offered as per policy, with premium either subsidized by Hospital or fully employee-paid.',
+          'Superannuation Fund: If enrolled in superannuation scheme, accumulated corpus paid out as per scheme terms - lump sum, annuity, or combination.',
+          'Retirement Ceremony: Hospital organizes farewell or retirement ceremony recognizing retiree contributions, service years, and achievements. Token of appreciation presented.',
+          'Retirement Gift: Monetary gift, memento, or gift voucher presented as mark of gratitude for long service.',
+          'Alumni Network: Retirees invited to join Hospital alumni network for continued association, attending events, and maintaining connections.',
+          'Settlement Processing: Retirement settlements processed expeditiously. PF and gratuity follow statutory timelines. Hospital dues settled within 30-45 days.'
+        ]
+      },
+      {
+        number: '8.5',
+        title: 'Termination by Hospital - Types and Procedures',
+        content: 'Employer-initiated separation is serious action taken for justifiable reasons following due process:',
+        points: [
+          'Termination for Cause (Misconduct): Separation due to proven gross misconduct, serious policy violations, criminal acts, or breach of trust after proper disciplinary inquiry as per Section VI. Termination for cause may be immediate without notice period or payment in lieu. Employee may forfeit certain benefits.',
+          'Termination for Poor Performance: Separation due to sustained unsatisfactory performance despite Performance Improvement Plans, counseling, support, and reasonable opportunities to improve. Performance termination follows due process with documented performance issues and PIP records.',
+          'Termination During Probation: Probationary employees may be terminated with shorter notice (typically 15-30 days or as per appointment letter) if found unsuitable for role, without elaborate inquiry process. Probation termination is not disciplinary but assessment-based.',
+          'Redundancy and Retrenchment: Separation due to position elimination, department closure, restructuring, or downsizing driven by business needs. Redundancy is not employee fault. Notice period and redundancy compensation as per Industrial Disputes Act or employment contract provided.',
+          'Medical Incapacity Termination: When employee is permanently unable to perform essential job functions due to illness, disability, or medical condition despite reasonable accommodations, and Medical Board certifies incapacity, employment may be terminated compassionately with full benefits.',
+          'Contractual Expiry: Fixed-term or project-based contracts terminate automatically upon completion of term or project. Notice of non-renewal provided if contract is not being extended.',
+          'Termination Procedure: For termination with cause - Disciplinary inquiry conducted as per Section VI, Findings documented, Employee given opportunity to respond, Termination decision made by competent authority, Termination letter issued stating grounds, last working day, and settlement terms. For performance termination - Performance issues documented, PIP implemented and outcome recorded, Decision reviewed by HR and senior management, Termination communicated professionally.',
+          'Notice Period or Payment in Lieu: Terminations without cause (redundancy, restructuring) require notice period as per contract or payment in lieu of notice. Terminations for gross misconduct may not require notice.',
+          'Severance Pay: For redundancy/retrenchment, severance payment as per law (typically 15 days average pay for each completed year of service) in addition to statutory benefits.',
+          'Termination Communication: Termination communicated with sensitivity in private setting. Written termination letter provided stating effective date, reason (if not confidential), notice/payment terms, and final settlement process.',
+          'Exit Formalities for Terminated Employees: Same clearance process as resignation, though access may be revoked immediately for security reasons. Final settlement completed as per timelines.',
+          'Legal Compliance: All terminations comply with labor laws including Industrial Disputes Act, Standing Orders, and contract terms. Legal vetting for complex terminations.'
+        ]
+      },
+      {
+        number: '8.6',
+        title: 'Full and Final Settlement Components',
+        content: 'Comprehensive settlement ensures all financial dues are properly calculated and paid:',
+        points: [
+          'Salary for Working Days: Pro-rata salary from last salary payment date till last working day including basic, allowances, and variable pay.',
+          'Leave Encashment: Encashment of accumulated earned leave balance at current basic salary rate. Maximum 240 days encashable.',
+          'Notice Period Recovery: If employee did not serve full notice period without approval, salary equivalent to shortfall days deducted from settlement.',
+          'Bonus and Incentives: Pro-rata annual bonus and pending performance incentives for the period worked in financial year.',
+          'Expense Reimbursements: Any pending expense claims, travel reimbursements, or allowances due.',
+          'Loan and Advance Recovery: Outstanding loans, salary advances, or other dues to Hospital deducted from settlement.',
+          'Asset Recovery: Cost of unreturned assets or damaged property deducted.',
+          'Tax Deductions: Income tax on leave encashment and other components deducted as per IT laws.',
+          'Provident Fund: PF accumulation (employee + employer contribution + interest) withdrawn as per EPFO procedures. Employee submits withdrawal form. Transfer to new employer PF or withdrawal to bank account.',
+          'Gratuity Payment: For employees with 5+ years service, gratuity calculated and paid. Gratuity payment within 30 days of separation as per Gratuity Act.',
+          'Insurance Settlements: Group health insurance continues till month-end. Final premium adjustments. Personal accident insurance claim assistance if needed.',
+          'Settlement Statement: Detailed F&F statement provided showing all credits, deductions, and net payable amount with breakup.',
+          'Payment Mode: Settlement paid through bank transfer to employee account or cheque as per preference.',
+          'Timeline Compliance: Settlement completed within 30-45 days of last working day for resignations, 45-60 days for terminations. PF and gratuity follow statutory timelines.'
+        ]
+      },
+      {
+        number: '8.7',
+        title: 'Death During Service',
+        content: 'In the unfortunate event of employee death during employment, Hospital provides support and benefits to family:',
+        points: [
+          'Immediate Support: Immediate assistance to family with hospital formalities, transportation, and any urgent financial needs.',
+          'Nominee Benefits: All dues, benefits, and entitlements paid to registered nominee or legal heirs - salary till date of death, leave encashment, pending bonuses, Provident Fund accumulation, Gratuity (regardless of 5-year service requirement), Group Life Insurance claim (if applicable), Ex-gratia payment as per policy.',
+          'Documentation: Family provides death certificate, legal heir certificate/succession certificate, nominee details, and bank account information.',
+          'Expedited Processing: Death settlements processed expeditiously, typically within 30 days, to provide financial relief to family.',
+          'Compassionate Appointment: As per Hospital policy and applicable laws, one family member may be considered for compassionate appointment to a suitable position.',
+          'Continued Insurance: Health insurance for dependent family may be continued for specified period (typically 3-6 months) to ease transition.',
+          'Memorial: Hospital may organize memorial service or condolence meeting honoring deceased employee contributions and offering support to family.'
+        ]
+      },
+      {
+        number: '8.8',
+        title: 'Post-Separation Obligations',
+        content: 'Certain obligations continue after employment ends:',
+        points: [
+          'Confidentiality: Confidentiality obligations regarding Hospital patient information, proprietary data, trade secrets, and sensitive information continue perpetually even after separation.',
+          'Non-Compete: If non-compete clause exists in contract, employee bound not to join competing organizations or start competing ventures for specified period and geography.',
+          'Non-Solicitation: Employee bound not to solicit Hospital clients, patients, or employees for specified period post-separation.',
+          'Intellectual Property: All work products, inventions, research, or IP created during employment remain Hospital property.',
+          'Return of Information: Any Hospital information in any form must be returned and not retained.',
+          'Cooperation: Former employees may be required to cooperate in ongoing matters, investigations, or litigation involving their tenure.',
+          'No Disparagement: Both parties should refrain from making negative or disparaging statements about each other publicly.'
+        ]
+      }
+    ]
+  },
           'Immediate termination for gross misconduct without notice.'
         ]
       }
