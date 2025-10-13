@@ -88,15 +88,54 @@ const HRAnnexuresNew = ({ setActiveModule }) => {
     'Compliance': 'emerald'
   };
 
-  const handleFormClick = (form) => {
-    setSelectedForm(form);
-    setActiveView('form');
+  const handleDownloadPDF = (form) => {
+    // Simple client-side PDF generation placeholder
+    // In production, this would call a backend API to generate proper PDFs
+    const fileName = `${form.code}_${form.name.replace(/\s+/g, '_')}.pdf`;
+    
+    // Create a simple text content for demonstration
+    let content = `KOYILI HOSPITAL\nHuman Resources Department\n\n`;
+    content += `Form Code: ${form.code}\n`;
+    content += `Form Name: ${form.name}\n`;
+    content += `Category: ${form.category}\n\n`;
+    content += `Description: ${form.description}\n\n`;
+    
+    if (form.sections) {
+      content += `FORM STRUCTURE:\n\n`;
+      form.sections.forEach((section, idx) => {
+        content += `${idx + 1}. ${section.title}\n`;
+        section.fields.forEach(field => {
+          content += `   - ${field}\n`;
+        });
+        content += `\n`;
+      });
+    }
+    
+    if (form.instructions) {
+      content += `\nINSTRUCTIONS:\n${form.instructions}\n`;
+    }
+    
+    // Create a blob and download
+    const blob = new Blob([content], { type: 'text/plain' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = fileName;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+    
+    // Show notification (optional)
+    alert(`Downloading ${form.name}...\n\nNote: This is a demo text file. In production, this would be a properly formatted PDF with fillable fields.`);
   };
 
-  const handleCategoryClick = (category) => {
-    setSelectedCategory(category);
-    setFilterCategory(category.name);
-    setActiveView('category');
+  const handlePrintForm = (form) => {
+    alert('Print functionality would open the form in a print-friendly format.\n\nIn production, this would generate a printable PDF version.');
+  };
+
+  const handleFillOnline = (form) => {
+    alert('Fill Online functionality would open an interactive form.\n\nIn production, this would redirect to an online form builder or fillable PDF interface.');
   };
 
   const renderDashboard = () => (
