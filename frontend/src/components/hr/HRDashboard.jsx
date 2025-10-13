@@ -17,6 +17,10 @@ import DocumentManagement from './DocumentManagement';
 const HRDashboard = () => {
   const [activeModule, setActiveModule] = useState('dashboard');
 
+  // Define modules that should hide the HR sidebar (legal documents)
+  const legalDocumentModules = ['bylaws', 'sops', 'annexures'];
+  const shouldHideSidebar = legalDocumentModules.includes(activeModule);
+
   const renderModule = () => {
     switch (activeModule) {
       case 'dashboard':
