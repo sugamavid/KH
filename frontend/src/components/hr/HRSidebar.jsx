@@ -26,7 +26,7 @@ const HRSidebar = ({ activeModule, setActiveModule }) => {
     { id: 'recruitment', name: 'Recruitment', icon: Briefcase, color: 'pink' },
     { id: 'training', name: 'Training & Development', icon: GraduationCap, color: 'violet' },
     { id: 'bylaws', name: 'HR By-Laws', icon: Scale, color: 'red' },
-    { id: 'sops', name: 'Standard Operating Procedures', icon: BookOpen, color: 'blue' },
+    { id: 'sops', name: 'HR SOP', icon: BookOpen, color: 'blue' },
     { id: 'annexures', name: 'Administrative Annexures', icon: FileText, color: 'purple' },
     { id: 'reckoner', name: 'Ready Reckoner', icon: Calculator, color: 'amber' },
     { id: 'reports', name: 'Reports & Analytics', icon: BarChart3, color: 'cyan' }
