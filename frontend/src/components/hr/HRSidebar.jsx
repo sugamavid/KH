@@ -18,12 +18,15 @@ const HRSidebar = ({ activeModule, setActiveModule }) => {
     { id: 'employees', name: 'Employee Management', icon: Users, color: 'green' },
     { id: 'attendance', name: 'Attendance & Leave', icon: Clock, color: 'purple' },
     { id: 'payroll', name: 'Payroll Management', icon: DollarSign, color: 'emerald' },
+    { id: 'documents', name: 'Document Management', icon: Users, color: 'indigo' },
     { id: 'performance', name: 'Performance Management', icon: TrendingUp, color: 'orange' },
     { id: 'recruitment', name: 'Recruitment', icon: Briefcase, color: 'pink' },
-    { id: 'training', name: 'Training & Development', icon: GraduationCap, color: 'indigo' },
-    { id: 'legal', name: 'Legal Operations & Compliance', icon: Scale, color: 'red' },
-    { id: 'reports', name: 'Reports & Analytics', icon: BarChart3, color: 'cyan' },
-    { id: 'tools', name: 'Ready Reckoner Tools', icon: Calculator, color: 'amber' }
+    { id: 'training', name: 'Training & Development', icon: GraduationCap, color: 'violet' },
+    { id: 'bylaws', name: 'HR By-Laws', icon: Scale, color: 'red' },
+    { id: 'sops', name: 'Standard Operating Procedures', icon: Users, color: 'blue' },
+    { id: 'annexures', name: 'Administrative Annexures', icon: Users, color: 'purple' },
+    { id: 'reckoner', name: 'Ready Reckoner', icon: Calculator, color: 'amber' },
+    { id: 'reports', name: 'Reports & Analytics', icon: BarChart3, color: 'cyan' }
   ];
 
   return (
