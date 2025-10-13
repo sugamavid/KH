@@ -51,9 +51,9 @@ const Header = ({ onLogout, sidebarOpen, setSidebarOpen }) => {
         </div>
 
         {/* Right Section - Actions */}
-        <div className="flex items-center space-x-3">
-          {/* Help */}
-          <button className="p-2.5 hover:bg-slate-100 rounded-xl transition-colors relative group">
+        <div className="flex items-center space-x-1 md:space-x-3">
+          {/* Help - Hidden on mobile */}
+          <button className="hidden md:block p-2.5 hover:bg-slate-100 rounded-xl transition-colors relative group">
             <HelpCircle className="w-5 h-5 text-slate-600" />
             <span className="absolute -bottom-10 right-0 bg-slate-900 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Help & Support</span>
           </button>
@@ -62,11 +62,11 @@ const Header = ({ onLogout, sidebarOpen, setSidebarOpen }) => {
           <div className="relative">
             <button 
               onClick={() => setShowNotifications(!showNotifications)}
-              className="p-2.5 hover:bg-slate-100 rounded-xl transition-colors relative"
+              className="p-2 md:p-2.5 hover:bg-slate-100 rounded-xl transition-colors relative"
             >
               <Bell className="w-5 h-5 text-slate-600" />
               {unreadCount > 0 && (
-                <span className="absolute top-1.5 right-1.5 w-5 h-5 bg-red-500 text-white text-xs rounded-full flex items-center justify-center font-bold">
+                <span className="absolute top-1 right-1 w-4 h-4 md:w-5 md:h-5 bg-red-500 text-white text-xs rounded-full flex items-center justify-center font-bold">
                   {unreadCount}
                 </span>
               )}
