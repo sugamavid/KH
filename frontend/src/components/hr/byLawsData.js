@@ -2061,25 +2061,89 @@ export const byLawsData = {
   section22: {
     id: 'section22',
     number: 'SECTION XXII',
-    title: 'SECURITY AND ACCESS CONTROL',
-    searchTerms: ['security', 'access control', 'physical security'],
+    title: 'COMPENSATION ADMINISTRATION AND SALARY MANAGEMENT',
+    searchTerms: ['compensation', 'salary', 'pay', 'wages', 'remuneration', 'increments', 'payroll'],
     subsections: [
       {
         number: '22.1',
-        title: 'Physical Security',
-        content: 'Security measures in place:',
+        title: 'Compensation Philosophy and Structure',
+        content: 'Koyili Hospital maintains competitive, equitable, and transparent compensation system attracting, motivating, and retaining talent:',
         points: [
-          'Access control systems at all entry points.',
-          'ID cards must be displayed at all times.',
-          'Visitor management system in place.',
-          'CCTV surveillance for security and safety.',
-          'Security personnel on duty 24x7.',
-          'Restricted areas require special authorization.'
+          'Compensation Objectives: Total compensation designed to - Attract qualified candidates in competitive healthcare market, Motivate performance and reward excellence, Retain critical talent and reduce turnover, Ensure internal equity (fair pay for similar work), Maintain external competitiveness with market, Comply with legal requirements (minimum wages, equal pay), Align costs with organizational financial capacity.',
+          'Total Compensation Components: Total compensation includes - Fixed Pay: Basic salary, allowances (HRA, DA, transport, medical, etc.), Variable Pay: Performance bonuses, incentives, profit-sharing, Statutory Benefits: PF, gratuity, ESI, Other Benefits: Insurance, leave, retirement benefits, perquisites. Comprehensive benefits detailed in Section X.',
+          'Salary Grades and Bands: Jobs organized into salary grades based on - Job evaluation assessing responsibility, complexity, qualifications required, experience needed, Each grade has salary range (minimum, midpoint, maximum), Employees progress within grade through annual increments, Promotion moves employee to higher grade with higher range.',
+          'Market Benchmarking: Compensation benchmarked annually against - Healthcare industry salary surveys, Competitor hospitals in region, Professional associations salary data, Government pay commission recommendations (where relevant). Ensures Hospital remains competitive in talent market.',
+          'Pay Equity: Compensation decisions free from discrimination. Equal pay for equal work regardless of gender, religion, caste, or other protected characteristics. Pay differences based only on legitimate factors (experience, performance, qualifications, role level).',
+          'Confidentiality: Salary information is confidential. Employees should not discuss their salary with colleagues (though legally they have right to discuss). Salary discussions create comparisons, dissatisfaction, confidentiality breaches.'
         ]
       },
       {
         number: '22.2',
-        title: 'Asset Protection',
+        title: 'Salary Determination and Offer',
+        content: 'New hire salaries determined through structured process ensuring fairness and competitiveness:',
+        points: [
+          'Offer Determination Factors: Job offer salary considers - Salary range for the grade/role, Candidate qualifications and experience, Current salary and expectations (not sole determinant to avoid perpetuating past inequities), Market rates for similar roles, Internal equity with current employees in similar roles, Budget and organizational salary structure.',
+          'Negotiation: Limited salary negotiation may occur within grade range. Negotiations consider candidate credentials, alternatives, business need urgency. Offers finalized in writing with all compensation components detailed.',
+          'Starting Salary Position: New hires typically placed at lower end of salary range allowing growth through increments. Highly experienced or specialized hires may be placed higher in range. Placement considers experience and internal equity.'
+        ]
+      },
+      {
+        number: '22.3',
+        title: 'Annual Increments and Salary Revisions',
+        content: 'Annual salary review process rewards performance and maintains market competitiveness:',
+        points: [
+          'Annual Increment Cycle: Annual salary increments effective typically from January or April each year. Timing allows incorporation of prior year performance results.',
+          'Increment Determinants: Increment amount based on multiple factors - Individual performance rating (primary factor), Employees with higher ratings receive higher increments, Position in salary range (lower in range = higher % increment potential), Market movement and inflation, Organizational financial performance, Budget allocated for increments.',
+          'Increment Matrix: HR provides increment matrix guiding increment percentages - Performance rating linked to increment range, Example: Outstanding = 12-15%, Exceeds Expectations = 8-10%, Meets Expectations = 5-7%, Needs Improvement = 0-3%, Unsatisfactory = 0%. Actual increment within range per manager discretion and employee position in range.',
+          'Increment Communication: Increment letters issued specifying - Old salary and new salary with breakup, Increment amount and percentage, Effective date, Congratulations and encouragement for continued performance. Increments reflected in salary from effective date.',
+          'Withholding Increments: Increments may be withheld for - Unsatisfactory performance, Disciplinary issues, Probationary status (increments typically post-confirmation), Extended absence (leave without pay) during review period. Withheld increments may be reconsidered once performance improves.',
+          'Salary Adjustments: Out-of-cycle salary adjustments for - Promotions (covered in Section XVII), Role changes with expanded responsibilities (regrading), Market adjustments to address significant compression or market movement, Retention adjustments for critical employees at flight risk. Out-of-cycle adjustments require higher-level approval.'
+        ]
+      },
+      {
+        number: '22.4',
+        title: 'Salary Administration and Payroll',
+        content: 'Systematic salary administration ensures accurate, timely, and compliant payroll processing:',
+        points: [
+          'Salary Payment: Salaries paid monthly through bank transfer to employee account. Payment by last working day of month or first few days of next month. Employees maintain active bank account and update HR if account changes.',
+          'Salary Structure: Salary breakup into components - Basic Salary: Foundation for other calculations (typically 40-50% of CTC), House Rent Allowance (HRA): 40-50% of basic, Dearness Allowance (DA): Cost of living adjustment, Special Allowances: Transport, medical, education, etc., Variable components: Incentives, bonuses. Structure designed for tax optimization and statutory compliance.',
+          'Salary Slip: Detailed salary slip provided monthly (electronic via email or portal) showing - Earnings: All salary components, Deductions: PF, ESI, TDS, professional tax, loans, advances, other deductions, Net pay: Take-home salary after deductions. Employees should review salary slip for accuracy each month.',
+          'Deductions: Various deductions from gross salary - Statutory: PF (12%), ESI (0.75% if applicable), TDS (as per IT Act and employee declarations), Professional tax (as per state law), Voluntary: Loans and advances recovery, Excess leave without pay, Late fines or penalty deductions, Insurance premiums, charitable contributions, others with employee authorization.',
+          'Tax Deduction at Source (TDS): Hospital deducts income tax from salary based on - Employee tax declaration (Form 12BB) with investment proofs, Applicable tax slabs and rates, Deductions under Section 80C, 80D, etc., Home loan interest, HRA exemption calculations. TDS ensures employees comply with tax obligations. Form 16 issued annually for tax filing.',
+          'Tax Planning Support: HR provides guidance on tax-saving investments and declarations (though not financial advice). Reminders sent for declaration submissions. Resources on tax planning made available.',
+          'Payroll Queries: Salary discrepancies or queries addressed by HR payroll team promptly. Employees submit query with details. HR investigates and resolves or clarifies.',
+          'Payroll Confidentiality: Payroll information strictly confidential. Access limited to HR payroll staff and authorized management. Payroll data protected through IT security measures.'
+        ]
+      },
+      {
+        number: '22.5',
+        title: 'Advances and Loans',
+        content: 'Hospital provides salary advances and loans to support employees in financial needs:',
+        points: [
+          'Salary Advance: Advance of up to one month salary for urgent financial need. Eligibility after minimum tenure (typically 6 months). Recovery through next month or two salary installments. Limited frequency (once or twice per year).',
+          'Festival Advance: Special advance provided before major festivals (Diwali, Eid, Christmas, etc.) to help with celebration expenses. Typically one month basic salary. Recovered in 2-3 monthly installments.',
+          'Medical Emergency Loan: Interest-free loan for genuine medical emergencies (serious illness, hospitalization, surgery). Amount based on need and repayment capacity (up to 3 months salary typically). Repayment over 6-12 months through salary deduction. Medical bills/documents required.',
+          'Education Loan: Loans for employee or dependent children education expenses. Moderate interest rate or interest-free. Repayment over extended period (12-24 months). Covered in Section X (Benefits).',
+          'Housing Loan: Substantial loans for home purchase or construction. Competitive interest rates. Long repayment period (up to 5 years). Covered in Section X (Benefits).',
+          'Application Process: Loan applications submitted to HR with - Purpose and amount requested, Repayment plan, Supporting documents, Supervisor recommendation. HR reviews for eligibility, amount reasonableness, repayment capacity. Management approval obtained. Loan agreement signed documenting terms.',
+          'Recovery: Loan recovery through monthly salary deduction as per agreement. Deduction not to exceed specified percentage of salary (typically 30-40% maximum) ensuring adequate take-home for employee. Full outstanding recovered if employment terminates before full repayment.',
+          'Default: Non-payment or employment termination before repayment results in - Recovery from final settlement, Legal action if settlement insufficient, Negative impact on future loan eligibility.'
+        ]
+      },
+      {
+        number: '22.6',
+        title: 'Compensation Governance and Compliance',
+        content: 'Robust governance ensures compensation fairness, compliance, and organizational sustainability:',
+        points: [
+          'Approval Authorities: Compensation decisions require appropriate approvals - New hire offers: HR with HOD/functional head approval, Annual increments: Managers recommend, HR calibrates, CEO/senior management approves, Promotions: Promotion committee reviews and approves (Section XVII), Out-of-cycle adjustments: Senior management and HR head approval, Bonuses and incentives: Performance data validated, CFO and CEO approve.',
+          'Budget Management: Annual compensation budget prepared considering - Projected headcount, Average increment percentage, Promotions and merit increases, Market adjustments needed, Bonus and incentive pools, Statutory increases (PF, gratuity contributions). Budget allocated to departments. Managers work within budget constraints. Overspending requires justification and approval.',
+          'Compliance: Compensation administration complies with - Minimum Wages Act ensuring wages above minimum, Payment of Wages Act regarding timely payment, Equal Remuneration Act prohibiting gender pay discrimination, Payment of Bonus Act for bonus calculations, Income Tax Act for TDS, EPF Act, ESI Act, other applicable laws. Periodic compliance audits conducted.',
+          'Pay Audits: Periodic pay equity audits to identify and address unexplained pay gaps across gender, demographics. Job evaluation reviews ensuring roles properly graded. Market benchmarking updates.',
+          'Compensation Committee: Senior management compensation committee oversees - Compensation strategy and policies, Major compensation decisions, Budget allocation and approval, Pay equity and compliance, Market competitiveness.'
+        ]
+      }
+    ]
+  },
         content: 'Protection of Hospital assets:',
         points: [
           'Employees responsible for Hospital property in their custody.',
