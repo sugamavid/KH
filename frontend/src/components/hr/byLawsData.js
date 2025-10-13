@@ -1256,41 +1256,86 @@ export const byLawsData = {
   section13: {
     id: 'section13',
     number: 'SECTION XIII',
-    title: 'INSURANCE AND RISK COVERAGE',
-    searchTerms: ['insurance', 'risk', 'coverage', 'protection'],
+    title: 'HARASSMENT PREVENTION AND WORKPLACE DIGNITY',
+    searchTerms: ['harassment', 'sexual harassment', 'POSH', 'workplace dignity', 'discrimination', 'bullying'],
     subsections: [
       {
         number: '13.1',
-        title: 'Group Life Insurance',
-        content: 'Life insurance coverage for employees:',
+        title: 'Zero Tolerance Policy on Harassment',
+        content: 'Koyili Hospital is committed to providing a workplace free from all forms of harassment, discrimination, and intimidation. Every employee has the right to work in an environment characterized by dignity, respect, and safety:',
         points: [
-          'Life insurance coverage for all permanent employees.',
-          'Sum assured based on salary level or fixed amount.',
-          'Beneficiary nomination by employee.',
-          'Claims processed through insurance provider.',
-          'Premium borne by Hospital.'
+          'Zero Tolerance Commitment: The Hospital maintains absolute zero tolerance for any form of harassment - sexual, verbal, physical, psychological, or cyber. Harassment is serious misconduct warranting severe disciplinary action including termination. Management commitment demonstrated through policies, resources, training, and swift action.',
+          'Sexual Harassment Definition: As per Sexual Harassment of Women at Workplace (Prevention, Prohibition and Redressal) Act, 2013 (POSH Act), sexual harassment includes unwelcome sexually determined behavior - Physical contact and advances, Demand or request for sexual favors, Sexually colored remarks, Showing pornography, Any other unwelcome physical, verbal, or non-verbal conduct of sexual nature. Includes quid pro quo harassment (job benefits tied to sexual favors) and hostile work environment.',
+          'Other Forms of Harassment: Verbal Harassment - Insults, slurs, derogatory comments, name-calling, yelling, threats, offensive jokes. Psychological Harassment - Bullying, intimidation, humiliation, isolation, unreasonable work demands, undermining. Physical Harassment - Unwanted touching, pushing, assault, blocking passage. Cyber Harassment - Offensive emails, messages, social media posts targeting employee. Discrimination-Based Harassment - Harassment based on protected characteristics (gender, race, religion, caste, age, disability, etc.).',
+          'Protected Characteristics: Hospital prohibits discrimination and harassment based on - Gender, Pregnancy, marital status, Sexual orientation or gender identity, Race, color, ethnic origin, Religion, caste, or community, Age, Disability or medical condition, Political affiliation (within permissible limits).',
+          'Scope of Policy: Policy applies to all employees, contractors, interns, volunteers, Covers conduct during work hours and official events, Covers conduct at workplace and work-related locations, Applies to interactions with colleagues, supervisors, subordinates, patients, visitors, vendors, Covers physical workplace and virtual environments (video calls, messaging).',
+          'Retaliation Prohibition: Strict prohibition against retaliation toward - Individuals who report harassment in good faith, Witnesses or participants in investigations, Anyone who opposes or complains about harassment. Retaliation is separate offense warranting disciplinary action even if underlying harassment complaint unsubstantiated.'
         ]
       },
       {
         number: '13.2',
-        title: 'Personal Accident Insurance',
-        content: 'Accident insurance provisions:',
+        title: 'Internal Complaints Committee (ICC) - POSH Act Compliance',
+        content: 'As mandated by POSH Act, the Hospital constitutes Internal Complaints Committee to redress sexual harassment complaints:',
         points: [
-          'Coverage for accidental death or permanent disability.',
-          'Coverage applicable 24x7, not limited to working hours.',
-          'Compensation as per policy terms.',
-          'Claims require medical and police documentation.'
+          'ICC Composition: Presiding Officer - Senior woman employee with experience in addressing women issues (Chairperson), At least two members from employees (committed to women welfare, at least one woman), One external member - NGO or person familiar with sexual harassment issues. Minimum 50% women members as per POSH Act.',
+          'ICC Tenure and Independence: Members appointed for 3-year term, ICC operates independently without interference from management in complaints handling, Members cannot be removed arbitrarily, Functions with quasi-judicial powers in inquiry process.',
+          'ICC Responsibilities: Receive and investigate sexual harassment complaints, Conduct fair inquiry following principles of natural justice, Recommend disciplinary action or other remedies, Submit annual report on complaints and actions, Conduct awareness programs on sexual harassment prevention, Display POSH Act provisions at conspicuous workplace locations.',
+          'Complaint Filing: Aggrieved woman (employee) can file written complaint to ICC within 3 months of incident (extendable by 3 months for sufficient reasons), Complaint should provide details of incident(s), respondent identification, witnesses if any, ICC acknowledges receipt within 7 days.',
+          'Conciliation Option: ICC may attempt settlement through conciliation before inquiry if complainant requests, Conciliation should not involve monetary settlement alone, If settled, ICC records settlement, No inquiry conducted if conciliation successful, No appeal against conciliation settlement.',
+          'Inquiry Process: If no settlement, ICC conducts inquiry completing within 90 days, Both parties given opportunity to present case, Examination of witnesses, collection of documents, ICC may seek external experts assistance, Confidentiality maintained throughout, Interim relief may be granted (transfer of respondent/complainant, leave, work from home).',
+          'Inquiry Report and Action: ICC submits inquiry report within 10 days of completion, If harassment proved, recommends disciplinary action (warning to termination) and compensation, Management takes action within 60 days, Action communicated to both parties, Parties have appeal rights as per law.',
+          'ICC Contact Information: ICC contact details prominently displayed, Confidential email and helpline for complaints, Regular communication about ICC availability and process.'
         ]
       },
       {
         number: '13.3',
-        title: 'Professional Indemnity',
-        content: 'For clinical and medical staff:',
+        title: 'Complaint Redressal for Other Harassment',
+        content: 'While ICC handles sexual harassment, other harassment complaints addressed through separate mechanisms:',
         points: [
-          'Professional indemnity coverage for medical practitioners.',
-          'Protection against claims of professional negligence.',
-          'Coverage limits as per policy.',
-          'Hospital provides legal support in covered claims.'
+          'Designated Officers: Hospital appoints harassment prevention officers (other than ICC for sexual harassment), Officers receive training on handling harassment complaints sensitively, Available to receive complaints related to bullying, discrimination, verbal abuse, etc.',
+          'Complaint Channels: Direct report to harassment prevention officer or HR, Email to dedicated anti-harassment mailbox, Through regular grievance mechanism, Anonymous reporting option available.',
+          'Investigation Process: Prompt investigation upon receiving complaint, Maintaining confidentiality to extent possible, Fair hearing to both complainant and accused, Witnesses interviewed, evidence collected, Decision based on facts and balance of probabilities, Completed within reasonable timeframe (30-60 days).',
+          'Remedial Actions: Depending on findings, actions may include - Counseling and warning for first minor instance, Apology and behavior modification commitment, Separation of parties (transfer, shift change), Written warning or suspension for serious cases, Termination for severe or repeated harassment, Training or anger management for harassers (along with disciplinary action).',
+          'Support for Complainants: Emotional support and counseling access, Interim protective measures if needed, Information about complaint status, No adverse employment action due to complaint.'
+        ]
+      },
+      {
+        number: '13.4',
+        title: 'Harassment Prevention - Proactive Measures',
+        content: 'Prevention is more effective than redressal. Hospital implements proactive harassment prevention strategies:',
+        points: [
+          'Awareness Training: Mandatory anti-harassment training for all employees during induction, Annual refresher training on harassment prevention and policy, Special training for managers on preventing and addressing harassment in teams, Training covers harassment definitions, examples, reporting, bystander intervention.',
+          'Policy Communication: Harassment prevention policy prominently displayed on noticeboards, intranet, Included in employee handbook, Communicated in multiple languages for understanding by all staff, Regular reminders through emails, meetings, posters.',
+          'Leadership Accountability: Senior management demonstrates commitment through communications and actions, Managers held accountable for fostering respectful teams, Harassment prevention is part of manager performance evaluation.',
+          'Reporting Encouragement: Creating safe environment where reporting is encouraged and supported, Confidentiality assurances, Multiple reporting channels provided, Regular communication about reporting options.',
+          'Workplace Culture: Promoting culture of respect, inclusion, and dignity, Celebrating diversity and inclusion, Zero tolerance messaging from top leadership, Quick and visible action on violations reinforces policy credibility.',
+          'Bystander Intervention: Training employees to intervene safely when witnessing harassment, Speak up culture where colleagues support each other, Recognition for those who prevent or report harassment.',
+          'Risk Assessment: Periodic assessment of harassment risk factors in different departments, Addressing isolated work areas, night shifts, power imbalances, Implementing controls like CCTV, buddy systems, supervision.'
+        ]
+      },
+      {
+        number: '13.5',
+        title: 'Dignity at Work - Positive Workplace Environment',
+        content: 'Beyond preventing harassment, Hospital actively promotes workplace dignity and respectful interactions:',
+        points: [
+          'Respect and Courtesy: Treating all individuals with respect regardless of position or background, Polite and professional communication, Active listening and valuing diverse perspectives.',
+          'Inclusive Environment: Welcoming diversity in workforce - gender, age, religion, ethnicity, disability, Reasonable accommodations for employees with disabilities, Inclusive language and practices.',
+          'Work-Life Balance: Respecting personal time and boundaries, Discouraging excessive work hours and burnout, Supporting family responsibilities.',
+          'Fair Treatment: Objective and non-discriminatory decisions in hiring, promotions, assignments, Performance evaluated on merit, No favoritism or bias.',
+          'Collaborative Culture: Teamwork and mutual support, Healthy conflict resolution, Open communication and feedback.',
+          'Employee Voice: Mechanisms for employees to voice concerns and suggestions, Regular surveys and feedback opportunities, Management accessibility and responsiveness.',
+          'Recognition and Appreciation: Acknowledging contributions and achievements, Positive reinforcement and encouragement, Celebrating successes together.'
+        ]
+      },
+      {
+        number: '13.6',
+        title: 'Documentation and Compliance',
+        content: 'Proper records ensure accountability and legal compliance:',
+        points: [
+          'POSH Act Compliance: ICC annual report submitted to District Officer as per Act, Number of complaints received, disposed, pending, Actions taken, Training conducted, Information displayed at workplace.',
+          'Complaint Records: Confidential records of all harassment complaints maintained, Investigation reports and actions documented, Records retained per legal requirements (7+ years), Access restricted to authorized personnel only.',
+          'Training Records: Attendance records of anti-harassment training, Training content and materials documented, Refresher training schedule maintained.',
+          'Policy Review: Harassment prevention policy reviewed annually, Updated for legal changes and best practices, Employee feedback incorporated in policy improvements.'
         ]
       }
     ]
