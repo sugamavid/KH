@@ -1898,23 +1898,6 @@ export const byLawsData = {
       }
     ]
   },
-          'Hospital has sole right to patent, copyright, or protect IP.',
-          'Employees cooperate in IP protection processes.',
-          'Moral rights waived to extent permitted by law.'
-        ]
-      },
-      {
-        number: '19.2',
-        title: 'Pre-existing IP',
-        content: 'IP brought by employee:',
-        points: [
-          'Employees must disclose pre-existing IP at time of joining.',
-          'Pre-existing IP remains property of employee.',
-          'Hospital obtains license to use disclosed pre-existing IP if necessary.'
-        ]
-      }
-    ]
-  },
   section20: {
     id: 'section20',
     number: 'SECTION XX',
