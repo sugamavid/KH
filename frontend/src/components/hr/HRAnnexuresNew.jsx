@@ -373,22 +373,44 @@ const HRAnnexuresNew = ({ setActiveModule }) => {
           </div>
         </div>
 
-        {/* Form Preview */}
-        <div className="bg-white rounded-2xl p-8 border-2 border-slate-200 shadow-lg">
-          <div className="aspect-[8.5/11] bg-slate-50 rounded-lg border-2 border-slate-300 flex items-center justify-center">
-            <div className="text-center">
-              <FileText className="w-16 h-16 text-slate-400 mx-auto mb-4" />
-              <p className="text-lg font-semibold text-slate-700">Form Preview</p>
-              <p className="text-sm text-slate-600 mt-2">PDF document will be displayed here</p>
-              <p className="text-xs text-slate-500 mt-1">Click "Download PDF" to get the actual form</p>
+        {/* Form Content - Detailed Sections */}
+        {selectedForm.sections && selectedForm.sections.length > 0 && (
+          <div className="bg-white rounded-2xl p-8 border-2 border-slate-200 shadow-lg">
+            <div className="flex items-center space-x-3 mb-6 pb-4 border-b-2 border-slate-200">
+              <FileText className="w-8 h-8 text-purple-600" />
+              <div>
+                <h2 className="text-2xl font-bold text-slate-900">Form Structure & Fields</h2>
+                <p className="text-sm text-slate-600 mt-1">Complete form template with all required sections</p>
+              </div>
+            </div>
+
+            <div className="space-y-6">
+              {selectedForm.sections.map((section, idx) => (
+                <div key={idx} className="bg-slate-50 rounded-xl p-6 border border-slate-200">
+                  <h3 className="text-lg font-bold text-slate-900 mb-4 flex items-center">
+                    <span className="w-8 h-8 rounded-lg bg-purple-100 text-purple-700 flex items-center justify-center text-sm font-bold mr-3">
+                      {idx + 1}
+                    </span>
+                    {section.title}
+                  </h3>
+                  <div className="space-y-3 ml-11">
+                    {section.fields.map((field, fieldIdx) => (
+                      <div key={fieldIdx} className="flex items-start space-x-3 text-sm">
+                        <div className="w-2 h-2 rounded-full bg-purple-400 mt-2 flex-shrink-0"></div>
+                        <p className="text-slate-700 leading-relaxed">{field}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
-        </div>
+        )}
 
         {/* Form Details */}
         <div className="bg-white rounded-2xl p-6 border-2 border-slate-200 shadow-sm">
-          <h3 className="text-lg font-bold text-slate-900 mb-4">Form Details</h3>
-          <div className="grid grid-cols-2 gap-6">
+          <h3 className="text-lg font-bold text-slate-900 mb-4">Form Details & Requirements</h3>
+          <div className="grid grid-cols-2 gap-6 mb-6">
             <div>
               <p className="text-sm text-slate-600 mb-1">Form Code</p>
               <p className="font-semibold text-slate-900">{selectedForm.code}</p>
@@ -405,25 +427,40 @@ const HRAnnexuresNew = ({ setActiveModule }) => {
               <p className="text-sm text-slate-600 mb-1">Format</p>
               <p className="font-semibold text-slate-900">PDF, Digital</p>
             </div>
+            {selectedForm.approvalRequired && (
+              <div>
+                <p className="text-sm text-slate-600 mb-1">Approval Required</p>
+                <p className="font-semibold text-slate-900">{selectedForm.approvalRequired}</p>
+              </div>
+            )}
+            {selectedForm.processingTime && (
+              <div>
+                <p className="text-sm text-slate-600 mb-1">Processing Time</p>
+                <p className="font-semibold text-slate-900">{selectedForm.processingTime}</p>
+              </div>
+            )}
           </div>
         </div>
 
         {/* Instructions */}
-        <div className="bg-blue-50 rounded-2xl p-6 border-2 border-blue-200">
-          <div className="flex items-start space-x-3">
-            <AlertCircle className="w-6 h-6 text-blue-600 flex-shrink-0 mt-1" />
-            <div>
-              <h4 className="font-bold text-blue-900 mb-2">Instructions for Use</h4>
-              <ul className="space-y-2 text-sm text-blue-800">
-                <li>• Complete all mandatory fields marked with asterisk (*)</li>
-                <li>• Ensure all information is accurate and up-to-date</li>
-                <li>• Attach supporting documents where required</li>
-                <li>• Obtain necessary approvals before submission</li>
-                <li>• Submit to HR Department within specified timeline</li>
-              </ul>
+        {selectedForm.instructions && (
+          <div className="bg-blue-50 rounded-2xl p-6 border-2 border-blue-200">
+            <div className="flex items-start space-x-3">
+              <AlertCircle className="w-6 h-6 text-blue-600 flex-shrink-0 mt-1" />
+              <div>
+                <h4 className="font-bold text-blue-900 mb-3">Instructions for Use</h4>
+                <p className="text-sm text-blue-800 mb-3">{selectedForm.instructions}</p>
+                <ul className="space-y-2 text-sm text-blue-800">
+                  <li>• Complete all mandatory fields marked with asterisk (*)</li>
+                  <li>• Ensure all information is accurate and up-to-date</li>
+                  <li>• Attach supporting documents where required</li>
+                  <li>• Obtain necessary approvals before submission</li>
+                  <li>• Submit to HR Department within specified timeline</li>
+                </ul>
+              </div>
             </div>
           </div>
-        </div>
+        )}
       </div>
     );
   };
