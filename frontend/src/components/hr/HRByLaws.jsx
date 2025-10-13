@@ -267,29 +267,40 @@ const HRByLaws = ({ setActiveModule }) => {
         </div>
       </div>
 
-      {/* Header */}
-      <div className="bg-gradient-to-r from-blue-900 to-indigo-900 rounded-xl p-8 text-white shadow-lg">
-        <div className="flex items-start justify-between">
-          <div>
-            <h1 className="text-3xl font-bold mb-2">HR By-Laws Dashboard</h1>
-            <p className="text-blue-200 mb-4">Quick Reference & Compliance Tools</p>
-            <div className="flex items-center space-x-6 text-sm">
+      {/* Premium Header */}
+      <div className="relative bg-gradient-to-br from-blue-900 via-indigo-900 to-blue-800 rounded-2xl p-10 text-white shadow-2xl overflow-hidden">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-blue-700 rounded-full opacity-10 -mr-48 -mt-48"></div>
+        <div className="absolute bottom-0 left-0 w-64 h-64 bg-indigo-700 rounded-full opacity-10 -ml-32 -mb-32"></div>
+        <div className="relative flex items-start justify-between">
+          <div className="flex-1">
+            <div className="flex items-center space-x-3 mb-3">
+              <Scale className="w-10 h-10 text-blue-300" />
+              <div>
+                <h1 className="text-4xl font-bold">HR By-Laws Dashboard</h1>
+                <p className="text-blue-300 text-sm mt-1">Koyili Hospital • Legal & Compliance Framework</p>
+              </div>
+            </div>
+            <p className="text-blue-100 mb-6 text-lg max-w-3xl">
+              Comprehensive policy reference, quick compliance tools, and instant access to all 30 sections 
+              of the Human Resources By-Laws governing employment at Koyili Hospital.
+            </p>
+            <div className="grid grid-cols-4 gap-6 bg-white bg-opacity-10 rounded-xl p-4 backdrop-blur-sm">
               {importantDates.map((date, idx) => (
-                <div key={idx}>
-                  <p className="text-blue-300">{date.label}</p>
-                  <p className="font-semibold">{date.date}</p>
+                <div key={idx} className="text-center">
+                  <p className="text-blue-300 text-xs font-semibold uppercase tracking-wide">{date.label}</p>
+                  <p className="font-bold text-white text-lg mt-1">{date.date}</p>
                 </div>
               ))}
             </div>
           </div>
-          <div className="flex space-x-3">
-            <button className="px-4 py-2 bg-white text-blue-900 rounded-lg hover:bg-blue-50 transition-colors font-semibold flex items-center">
-              <Printer className="w-4 h-4 mr-2" />
-              Print
+          <div className="flex flex-col space-y-3 ml-6">
+            <button className="px-6 py-3 bg-white text-blue-900 rounded-xl hover:bg-blue-50 transition-all font-bold flex items-center shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+              <Printer className="w-5 h-5 mr-2" />
+              Print Document
             </button>
-            <button className="px-4 py-2 bg-white text-blue-900 rounded-lg hover:bg-blue-50 transition-colors font-semibold flex items-center">
-              <Download className="w-4 h-4 mr-2" />
-              Download
+            <button className="px-6 py-3 bg-amber-500 text-white rounded-xl hover:bg-amber-600 transition-all font-bold flex items-center shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+              <Download className="w-5 h-5 mr-2" />
+              Download PDF
             </button>
           </div>
         </div>
