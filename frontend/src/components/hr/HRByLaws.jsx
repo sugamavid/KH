@@ -174,6 +174,7 @@ const HRByLaws = ({ setActiveModule }) => {
       contentRef.current.scrollTop = 0;
     }
   };
+
   const quickReferenceCards = [
     {
       title: 'Leave Entitlements',
