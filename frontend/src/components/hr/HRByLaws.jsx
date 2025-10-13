@@ -306,20 +306,29 @@ const HRByLaws = ({ setActiveModule }) => {
         </div>
       </div>
 
-      {/* Quick Reference Cards */}
+      {/* Enhanced Quick Reference Cards */}
       <div>
-        <h2 className="text-xl font-bold text-slate-900 mb-4">Quick Reference Guide</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="flex items-center justify-between mb-6">
+          <div>
+            <h2 className="text-2xl font-bold text-slate-900">Quick Reference Guide</h2>
+            <p className="text-slate-600 text-sm mt-1">Essential HR policies at a glance</p>
+          </div>
+          <button className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold text-sm flex items-center">
+            <Download className="w-4 h-4 mr-2" />
+            Download as PDF
+          </button>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {quickReferenceCards.map((card, idx) => (
-            <div key={idx} className="bg-white rounded-xl p-5 border border-slate-200 shadow-sm hover:shadow-md transition-all">
-              <div className={`w-12 h-12 rounded-lg bg-${card.color}-100 flex items-center justify-center mb-4`}>
-                <card.icon className={`w-6 h-6 text-${card.color}-600`} />
+            <div key={idx} className="bg-white rounded-2xl p-6 border-2 border-slate-200 shadow-lg hover:shadow-2xl hover:border-slate-300 transition-all transform hover:-translate-y-1">
+              <div className={`w-14 h-14 rounded-xl bg-${card.color}-100 flex items-center justify-center mb-4 shadow-md`}>
+                <card.icon className={`w-7 h-7 text-${card.color}-600`} />
               </div>
-              <h3 className="font-bold text-slate-900 mb-3">{card.title}</h3>
-              <ul className="space-y-2">
+              <h3 className="font-bold text-lg text-slate-900 mb-4">{card.title}</h3>
+              <ul className="space-y-2.5">
                 {card.items.map((item, itemIdx) => (
-                  <li key={itemIdx} className="text-sm text-slate-700 flex items-start">
-                    <ChevronRight className="w-4 h-4 text-slate-400 mr-1 flex-shrink-0 mt-0.5" />
+                  <li key={itemIdx} className="text-sm text-slate-700 flex items-start leading-relaxed">
+                    <ChevronRight className="w-4 h-4 text-slate-400 mr-2 flex-shrink-0 mt-0.5" />
                     <span>{item}</span>
                   </li>
                 ))}
