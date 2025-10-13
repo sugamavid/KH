@@ -104,13 +104,16 @@ const LoginPage = ({ onLogin }) => {
                   <Building2 className="w-4 h-4 flex-shrink-0" />
                   <p className="text-sm">Pallikkunnu, PO, Talap, Kannur, Kerala 670002</p>
                 </div>
-                <div className="flex items-center space-x-3 text-slate-300">
-                  <Phone className="w-4 h-4 flex-shrink-0" />
-                  <p className="text-sm font-medium">0497 271 4400</p>
-                </div>
-                <div className="flex items-center space-x-3 text-slate-300">
-                  <Mail className="w-4 h-4 flex-shrink-0" />
-                  <p className="text-sm">info@koyilihospital.com</p>
+                <div className="flex items-center space-x-6 text-slate-300">
+                  <div className="flex items-center space-x-2">
+                    <Phone className="w-4 h-4 flex-shrink-0" />
+                    <p className="text-sm font-medium">0497 271 4400</p>
+                  </div>
+                  <div className="w-px h-4 bg-slate-500"></div>
+                  <div className="flex items-center space-x-2">
+                    <Mail className="w-4 h-4 flex-shrink-0" />
+                    <p className="text-sm">info@koyilihospital.com</p>
+                  </div>
                 </div>
               </div>
             </div>
