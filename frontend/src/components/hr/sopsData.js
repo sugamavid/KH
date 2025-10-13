@@ -576,7 +576,149 @@ Once drafted, the policy shall be reviewed internally by:
     title: 'Job Posting, Advertisement & Sourcing',
     searchTerms: ['job', 'posting', 'advertisement', 'sourcing', 'recruitment'],
     category: 'B. Recruitment, Selection & Appointment',
-    content: 'Defines structured process for publicising approved job vacancies and sourcing suitable candidates through appropriate internal and external channels.'
+    subsections: [
+      {
+        number: '1',
+        title: 'OBJECTIVE',
+        content: 'This SOP defines a structured process for publicizing approved job vacancies and sourcing suitable candidates through appropriate internal and external channels. The objective is to attract a diverse pool of qualified candidates in a cost-effective, timely, and compliant manner while promoting the hospital\'s employer brand.'
+      },
+      {
+        number: '2',
+        title: 'SCOPE AND APPLICABILITY',
+        content: `This SOP applies to:
+• All approved job vacancies across all departments and levels of Koyili Hospital
+• Internal job postings for career advancement and internal mobility
+• External recruitment through job portals, consultancies, campus hiring, walk-in interviews, and referrals
+• The HR Recruitment Team, Department Heads, and external recruitment partners`
+      },
+      {
+        number: '3',
+        title: 'DEFINITIONS',
+        content: `• Job Posting: A public announcement of a job vacancy with details about the position, requirements, and application process
+• Job Advertisement: A paid or unpaid promotional content distributed through media channels to attract candidates
+• Sourcing: The process of identifying and engaging potential candidates through various channels
+• Internal Posting: Notification of vacancies to existing employees before external advertisement
+• Recruitment Channel: A platform or method used for candidate sourcing (job portals, agencies, referrals, campus hiring)
+• Employer Branding: The hospital\'s reputation and value proposition as an employer`
+      },
+      {
+        number: '4',
+        title: 'PROCEDURE',
+        subsections: [
+          {
+            number: '4.1',
+            title: 'Job Posting Content Preparation',
+            content: `(i) Upon receipt of approved recruitment requisition, HR shall prepare a Job Posting including:
+    • Job Title and Department
+    • Reporting Structure
+    • Key Responsibilities (5-7 bullet points)
+    • Required Qualifications (educational, professional certifications)
+    • Experience Requirements (years, domain)
+    • Skills and Competencies
+    • Salary Range (if to be disclosed)
+    • Employment Type (Permanent/Contract/Part-Time)
+    • Location and Shift Details
+    • Application Deadline
+    • How to Apply (email, portal, walk-in)
+(ii) Job postings shall be reviewed by the Department Head for technical accuracy
+(iii) All postings must comply with equal opportunity employment principles and must not contain discriminatory language`
+          },
+          {
+            number: '4.2',
+            title: 'Internal Job Posting (Mandatory for Eligible Positions)',
+            content: `(i) Internal posting is mandatory for:
+    • All permanent positions Grade C and above
+    • Positions offering career progression opportunities
+    • Replacement positions (except critical time-sensitive roles)
+(ii) Internal postings shall be:
+    • Displayed on HR noticeboards, intranet, and HRMS portal
+    • Emailed to all employees
+    • Kept open for a minimum of 5 working days
+(iii) Eligible internal candidates may apply following Internal Transfer and Promotion Policy (SOP I.1)
+(iv) External sourcing may proceed simultaneously but internal candidates shall receive preference if equally qualified`
+          },
+          {
+            number: '4.3',
+            title: 'External Sourcing Strategy',
+            content: `(i) HR shall select appropriate sourcing channels based on:
+    • Position level and specialization
+    • Urgency of filling
+    • Budget for recruitment
+    • Geographic location and candidate availability
+(ii) Sourcing Channels:
+    • Job Portals: Naukri, Indeed, LinkedIn, specialized healthcare portals (for wide reach)
+    • Hospital Website: Careers page for direct applications
+    • Employee Referrals: Encourage referrals with referral bonus program
+    • Recruitment Consultancies: For senior, specialized, or hard-to-fill positions
+    • Campus Hiring: Tie-ups with nursing colleges, medical colleges, management institutes
+    • Walk-In Interviews: For high-volume junior positions
+    • Social Media: LinkedIn, Facebook, Instagram for employer branding
+    • Government Employment Exchanges: For compliance and diversity
+(iii) Multiple channels may be used simultaneously for critical or specialized positions`
+          },
+          {
+            number: '4.4',
+            title: 'Advertisement Placement and Budget',
+            content: `(i) For positions requiring paid advertisements, HR shall:
+    • Prepare cost estimates for selected channels
+    • Obtain approval from Finance for expenditure (if exceeding approved recruitment budget)
+    • Negotiate rates with vendors for bulk postings
+(ii) Advertisements shall run for:
+    • Standard positions: 15-30 days
+    • Specialized positions: 30-45 days with possible extension
+    • Critical positions: Until adequate applications received
+(iii) All advertisements shall carry Koyili Hospital branding, logo, and contact details`
+          },
+          {
+            number: '4.5',
+            title: 'Application Tracking and Candidate Database',
+            content: `(i) All applications received shall be:
+    • Logged in the Applicant Tracking System (ATS) or HRMS
+    • Assigned a unique Application ID
+    • Categorized by position, source, and date received
+(ii) HR shall send acknowledgment to all applicants within 3 business days
+(iii) A centralized Candidate Database shall be maintained for future opportunities
+(iv) Applications shall be screened as per SOP B.4 (Application Screening and Shortlisting)`
+          }
+        ]
+      },
+      {
+        number: '5',
+        title: 'ROLES AND RESPONSIBILITIES',
+        table: {
+          headers: ['Position', 'Responsibility'],
+          rows: [
+            ['HR Recruitment Team', 'Prepare job postings, select sourcing channels, manage advertisements, track applications'],
+            ['Department Head', 'Review and approve job posting content for technical accuracy'],
+            ['Finance Department', 'Approve advertising budget and process vendor payments'],
+            ['IT Department', 'Maintain careers portal, ATS integration, and application database'],
+            ['Marketing/Communications', 'Support employer branding initiatives and social media outreach']
+          ]
+        }
+      },
+      {
+        number: '6',
+        title: 'COMPLIANCE AND RECORD-KEEPING',
+        content: `• All job postings and advertisements shall be archived with dates and channels used
+• Application data shall be maintained for a minimum of 2 years for audit and compliance
+• Monthly Recruitment Sourcing Reports shall include:
+    • Number of positions advertised
+    • Sourcing channels used and their effectiveness (applications per channel)
+    • Cost per hire by channel
+    • Time to first application and time to sufficient applications
+• Equal opportunity and non-discrimination principles must be observed in all job postings`
+      },
+      {
+        number: '7',
+        title: 'REFERENCE DOCUMENTS',
+        content: `• Koyili Hospital HR By-Laws (Section 3: Recruitment Principles)
+• SOP B.2: Vacancy Identification & Requisition Approval
+• SOP B.4: Application Screening & Shortlisting
+• SOP I.1: Internal Transfer and Promotion Policy
+• Employee Referral Program Policy
+• Recruitment Budget and Vendor Agreements`
+      }
+    ]
   },
 
   sopB4: {
