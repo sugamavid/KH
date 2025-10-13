@@ -27,13 +27,13 @@ const HRSidebar = ({ activeModule, setActiveModule }) => {
   ];
 
   return (
-    <div className="w-72 bg-gradient-to-b from-slate-900 to-slate-800 h-full border-r-2 border-slate-700">
+    <div className="w-72 bg-gradient-to-b from-slate-900 to-slate-800 h-screen border-r-2 border-slate-700 flex flex-col">
       <div className="p-4 border-b border-slate-700">
         <h2 className="text-white font-bold text-lg">HR Management System</h2>
         <p className="text-slate-400 text-xs mt-1">Human Resources Department</p>
       </div>
       
-      <div className="p-4 space-y-1 overflow-y-auto h-[calc(100vh-12rem)]">
+      <div className="p-4 space-y-1 overflow-y-auto flex-1">
         {modules.map((module) => (
           <button
             key={module.id}
