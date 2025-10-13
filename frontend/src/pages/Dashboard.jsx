@@ -40,7 +40,7 @@ const Dashboard = ({ onLogout }) => {
         setSidebarOpen={setSidebarOpen}
       />
       
-      <div className="flex flex-1 pt-20">
+      <div className="flex flex-1 pt-16 md:pt-20">
         <Sidebar 
           departments={departments}
           isOpen={sidebarOpen}
