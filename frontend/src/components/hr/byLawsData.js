@@ -2147,47 +2147,41 @@ export const byLawsData = {
   section23: {
     id: 'section23',
     number: 'SECTION XXIII',
-    title: 'INFORMATION TECHNOLOGY USE',
-    searchTerms: ['IT', 'information technology', 'computers', 'email', 'internet'],
+    title: 'ORGANIZATIONAL CHANGE AND RESTRUCTURING',
+    searchTerms: ['change management', 'restructuring', 'organizational change', 'transformation', 'change'],
     subsections: [
       {
         number: '23.1',
-        title: 'Acceptable Use Policy',
-        content: 'Use of Hospital IT systems and resources:',
+        title: 'Change Management Philosophy',
+        content: 'Healthcare industry and Hospital operations evolve continuously requiring organizational adaptability. Change management ensures smooth transitions minimizing disruption:',
         points: [
-          'IT systems provided for business purposes.',
-          'Limited personal use permitted if it doesn\'t interfere with work.',
-          'Prohibited: Illegal activities, offensive content, unauthorized access.',
-          'Email and internet usage monitored for compliance and security.',
-          'Password security and confidentiality mandatory.',
-          'Report security incidents and suspicious activities immediately.'
+          'Change as Constant: Change is inevitable and necessary for organizational survival and growth - New technology and clinical practices, Regulatory and accreditation requirements, Market dynamics and competition, Patient expectations and demographics, Internal improvements and innovations. Employees expected to embrace and adapt to change.',
+          'Change Communication: Transparent communication about changes - Advance notice where possible, Clear explanation of why change is needed, Expected impact on roles and operations, Timeline and implementation plan, Support and resources available, Q&A opportunities to address concerns.',
+          'Employee Involvement: Where feasible, involve employees in change planning and implementation - Seek input and feedback, Pilot testing with employee participation, Change champions from employee ranks, Feedback loops during rollout.',
+          'Support During Change: Hospital provides support through transitions - Training on new systems, processes, or skills, Additional resources during learning curve, Patience and understanding as employees adapt, Recognition of adaptation efforts.'
         ]
       },
       {
         number: '23.2',
-        title: 'Data Security',
-        content: 'Information security responsibilities:',
+        title: 'Organizational Restructuring',
+        content: 'Restructuring may occur for operational efficiency, cost optimization, or strategic realignment:',
         points: [
-          'Protect login credentials and do not share.',
-          'Use strong passwords and change periodically.',
-          'Encrypt sensitive data as per policy.',
-          'Do not install unauthorized software.',
-          'Use only approved devices and applications.',
-          'Backup critical data regularly.',
-          'Report lost or stolen devices immediately.'
+          'Restructuring Scenarios: Department mergers or splits, Reporting relationship changes, Role redesigns or eliminations, Location consolidations or expansions, Service line additions or discontinuations.',
+          'Impact on Employees: Restructuring may result in - Role changes or reassignments, Transfer to different department or location, Reporting to new supervisor, New responsibilities or reduced scope, Change in grade or compensation (protected where possible), Redundancy and separation (last resort).',
+          'Process and Communication: Restructuring decisions made at senior management/board level. Communication as early as feasible balancing confidentiality and employee concerns. Individual meetings with affected employees. Written communication of changes. Opportunity for questions and concerns.',
+          'Employee Rights: Fair treatment during restructuring, Consideration of seniority, performance, skills in placement decisions, Retraining for new roles where feasible, Relocation support if transfer required, Severance and outplacement support if position eliminated.',
+          'Adaptation Period: Grace period for adjustment to new structure, Support from managers and HR, Performance expectations adjusted during transition.'
         ]
       },
       {
         number: '23.3',
-        title: 'Social Media Guidelines',
-        content: 'Social media use by employees:',
+        title: 'Technology and Process Changes',
+        content: 'New technology implementations and process improvements are common in modern healthcare:',
         points: [
-          'Personal social media use should not impact work.',
-          'Do not disclose confidential Hospital information.',
-          'Clearly state views are personal, not Hospital\'s.',
-          'Do not post on behalf of Hospital without authorization.',
-          'Respectful and professional conduct expected.',
-          'Violation may lead to disciplinary action.'
+          'New Systems Implementation: Electronic Health Records (EHR) upgrades, New clinical equipment or devices, Administrative systems (HRMS, finance, etc.), Communication and collaboration tools. Implementations planned with user training and support.',
+          'Process Improvements: Quality improvement initiatives, Lean or Six Sigma projects, Workflow redesigns, Policy and procedure updates. Process changes aim for better outcomes, efficiency, safety.',
+          'Training and Support: Comprehensive training before go-live, Super users and champions to support peers, Helpdesk and technical support available, Job aids and quick reference guides, Patience during learning curve.',
+          'Feedback and Iteration: Post-implementation feedback collected, Issues addressed and system/process refined, Continuous improvement based on user experience.'
         ]
       }
     ]
@@ -2195,32 +2189,52 @@ export const byLawsData = {
   section24: {
     id: 'section24',
     number: 'SECTION XXIV',
-    title: 'COMMUNICATION AND CORRESPONDENCE',
-    searchTerms: ['communication', 'correspondence', 'official communication'],
+    title: 'QUALITY ASSURANCE AND CONTINUOUS IMPROVEMENT',
+    searchTerms: ['quality', 'quality assurance', 'continuous improvement', 'patient safety', 'excellence'],
     subsections: [
       {
         number: '24.1',
-        title: 'Official Communication',
-        content: 'Guidelines for official communication:',
+        title: 'Quality and Patient Safety Culture',
+        content: 'Quality and safety are everyone\'s responsibility. All employees contribute to culture of excellence:',
         points: [
-          'Use official email for business correspondence.',
-          'Professional tone and language in all communications.',
-          'Proper email etiquette including appropriate subject lines.',
-          'Respond to emails and calls in timely manner.',
-          'Copy relevant stakeholders on important communications.',
-          'Use appropriate communication channels for different purposes.'
+          'Quality Commitment: Hospital committed to highest quality clinical and operational performance. Quality integrated into all processes and decisions. Zero harm goal for patients and employees.',
+          'Patient Safety: Patient safety is top priority. All employees have duty to prevent harm - Follow evidence-based protocols and standards, Speak up about safety concerns without fear, Report errors, near-misses, and unsafe conditions, Participate in safety huddles and briefings, Learn from incidents and implement improvements.',
+          'Error Reporting Culture: Just culture where errors reported without fear of punishment for honest mistakes. Focus on system improvements, not individual blame. Reckless behavior or intentional violations not tolerated. Reporting encouraged and appreciated.',
+          'Quality Indicators: Hospital tracks quality and safety metrics - Clinical outcome measures (mortality, infection rates, readmission), Patient experience and satisfaction scores, Safety indicators (falls, pressure ulcers, medication errors), Compliance with standards and protocols. Metrics reviewed and improvement actions taken.'
         ]
       },
       {
         number: '24.2',
-        title: 'Media Relations',
-        content: 'Interaction with media:',
+        title: 'Employee Role in Quality',
+        content: 'Every employee contributes to quality through daily work and improvement initiatives:',
         points: [
-          'Only authorized spokespersons may speak to media.',
-          'Employees must not make statements on behalf of Hospital.',
-          'Refer all media inquiries to PR or management.',
-          'Social media posts about Hospital require approval.',
-          'Violation treated seriously as it impacts reputation.'
+          'Following Protocols: Adhere to established clinical and operational protocols. Protocols based on evidence and best practices. Deviations only when clinically justified and documented.',
+          'Documentation Quality: Accurate, complete, timely documentation in medical records and systems. Good documentation supports quality care, communication, legal protection.',
+          'Infection Control: Hand hygiene compliance, Proper use of PPE, Environmental cleaning, Aseptic technique, Isolation precautions adherence. Infection prevention is everyone\'s responsibility.',
+          'Medication Safety: Five rights of medication administration (right patient, drug, dose, route, time), Double-checking high-risk medications, Proper labeling and storage, Reporting medication errors or near-misses.',
+          'Communication: Effective handoffs and transitions, SBAR communication, Closed-loop communication, Speaking up about concerns.'
+        ]
+      },
+      {
+        number: '24.3',
+        title: 'Continuous Improvement Participation',
+        content: 'Hospital encourages employee participation in quality improvement initiatives:',
+        points: [
+          'Improvement Projects: Employees invited to join improvement teams addressing specific issues. Multidisciplinary teams analyze problems, develop solutions, implement and measure results. Time allocated for improvement work.',
+          'Suggestion Programs: Employees submit improvement suggestions through formal channels. Suggestions reviewed, valuable ideas implemented. Recognition for implemented suggestions.',
+          'Quality Committees: Department quality committees meet regularly reviewing data and action plans. Employees participate in relevant committees.',
+          'Root Cause Analysis: When serious events occur, Root Cause Analysis (RCA) conducted. Employees participate in RCA as witnesses or team members. Learning disseminated organization-wide.'
+        ]
+      },
+      {
+        number: '24.4',
+        title: 'Accreditation and Compliance',
+        content: 'Hospital seeks and maintains accreditation demonstrating quality standards compliance:',
+        points: [
+          'Accreditation Bodies: NABH (National Accreditation Board for Hospitals), JCI (Joint Commission International), ISO certifications, Specialty program certifications (stroke, trauma, etc.).',
+          'Accreditation Preparation: All employees trained on standards relevant to their roles. Mock surveys and readiness assessments. Document reviews and compliance verification. Culture of continuous readiness, not just pre-survey preparation.',
+          'Survey Participation: During accreditation surveys - Be professional and courteous with surveyors, Answer questions honestly and accurately, Demonstrate knowledge of your role and standards, Refer complex questions to management if unsure, View survey as learning opportunity.',
+          'Compliance Maintenance: Post-accreditation, maintain standards continuously. Internal audits monitor ongoing compliance. Address gaps promptly.'
         ]
       }
     ]
@@ -2228,26 +2242,36 @@ export const byLawsData = {
   section25: {
     id: 'section25',
     number: 'SECTION XXV',
-    title: 'PREVENTION OF SEXUAL HARASSMENT',
-    searchTerms: ['sexual harassment', 'POSH', 'harassment prevention', 'workplace harassment'],
+    title: 'ENVIRONMENTAL SUSTAINABILITY AND CORPORATE SOCIAL RESPONSIBILITY',
+    searchTerms: ['sustainability', 'CSR', 'corporate social responsibility', 'environment', 'green initiatives'],
     subsections: [
       {
         number: '25.1',
-        title: 'Policy Statement',
-        content: 'Zero tolerance for sexual harassment:',
+        title: 'Environmental Sustainability Commitment',
+        content: 'Koyili Hospital recognizes responsibility toward environmental protection and sustainable practices:',
         points: [
-          'Hospital committed to providing workplace free from sexual harassment.',
-          'All employees entitled to respectful and dignified treatment.',
-          'Sexual harassment strictly prohibited under all circumstances.',
-          'Applies to all employees regardless of gender or position.',
-          'Covers conduct at workplace and work-related events.'
+          'Sustainability Vision: Minimize environmental footprint of healthcare operations. Responsible resource consumption - energy, water, materials. Waste reduction and proper disposal. Green procurement practices.',
+          'Energy Conservation: Switch off lights, computers, equipment when not in use. Optimize HVAC usage. Energy-efficient equipment and LED lighting. Solar power or renewable energy where feasible.',
+          'Water Conservation: Fix leaks promptly. Conscious water use in clinical and non-clinical areas. Rainwater harvesting where implemented.',
+          'Waste Segregation and Recycling: Proper biomedical waste segregation (detailed in Section XII). Recycling paper, plastic, glass, e-waste. Minimize single-use plastics. Reusable supplies where safe and feasible.',
+          'Green Procurement: Preference for environmentally friendly products. Suppliers with sustainable practices. Reduce packaging waste.',
+          'Employee Participation: All employees contribute through - Conscious resource use, Proper waste segregation, Suggestions for sustainability improvements, Participation in green initiatives.'
         ]
       },
       {
         number: '25.2',
-        title: 'Definition of Sexual Harassment',
-        content: 'Sexual harassment includes unwelcome:',
+        title: 'Corporate Social Responsibility',
+        content: 'Hospital engages in community service and social responsibility initiatives:',
         points: [
+          'Community Health Programs: Free health camps and screenings, Health awareness programs, Disease prevention campaigns, School health programs.',
+          'Charitable Care: Subsidized or free treatment for economically disadvantaged patients. Tie-ups with charitable organizations. Pro bono services by medical staff.',
+          'Employee Volunteering: Employees encouraged to volunteer in community service activities. Hospital may provide paid volunteer time (e.g., 8-16 hours per year). Blood donation camps, disaster relief, teaching health in schools.',
+          'Educational Support: Scholarships for underprivileged students pursuing healthcare careers. Internship and training opportunities. Academic collaborations with nursing and medical colleges.',
+          'Ethical Business Practices: Fair dealings with vendors and partners. Compliance with laws and regulations. Transparency and accountability.'
+        ]
+      }
+    ]
+  },
           'Physical contact and advances.',
           'Demand or request for sexual favors.',
           'Sexually colored remarks.',
