@@ -295,7 +295,132 @@ Once drafted, the policy shall be reviewed internally by:
     title: 'Workforce Planning and Manpower Budgeting',
     searchTerms: ['workforce', 'planning', 'manpower', 'budgeting', 'headcount'],
     category: 'B. Recruitment, Selection & Appointment',
-    content: 'Establishes structured workforce planning process aligned with institutional strategy, clinical load, patient safety standards, and statutory requirements through data-driven and budget-conscious approach.'
+    subsections: [
+      {
+        number: '1',
+        title: 'OBJECTIVE',
+        content: 'This SOP establishes a structured workforce planning process aligned with institutional strategy, clinical workload, patient safety standards, and statutory requirements. The objective is to ensure optimal staffing levels, cost-effectiveness, and compliance with healthcare regulations through data-driven and budget-conscious manpower planning.'
+      },
+      {
+        number: '2',
+        title: 'SCOPE AND APPLICABILITY',
+        content: `This SOP applies to:
+• All departments of Koyili Hospital requiring human resource planning including clinical, paramedical, nursing, diagnostic, administrative, IT, finance, and support services
+• The HR Department, Finance Department, Department Heads, and Senior Management involved in workforce forecasting and budget allocation
+• Annual and mid-year workforce planning exercises, expansion projects, and restructuring initiatives`
+      },
+      {
+        number: '3',
+        title: 'DEFINITIONS',
+        content: `• Workforce Planning: The strategic process of identifying current and future human resource needs to meet organizational goals
+• Manpower Budget: The allocated financial provision for salaries, benefits, and related employee costs
+• Full-Time Equivalent (FTE): A unit measuring employee workload, where 1 FTE represents one full-time employee working standard hours
+• Sanctioned Strength: The approved maximum headcount for a department or position
+• Attrition Rate: The percentage of employees leaving the organization over a specific period
+• Critical Vacancy: A position whose vacancy significantly impacts operations, patient safety, or regulatory compliance`
+      },
+      {
+        number: '4',
+        title: 'PROCEDURE',
+        subsections: [
+          {
+            number: '4.1',
+            title: 'Annual Workforce Assessment',
+            content: `(i) The HR Department shall conduct an Annual Workforce Assessment in collaboration with Department Heads during October-November for the upcoming financial year
+(ii) Assessment shall include:
+    • Current headcount analysis (sanctioned vs. actual)
+    • Department-wise vacancy analysis
+    • Attrition trends over the past year
+    • Upcoming retirements and planned exits
+    • Workload analysis based on patient admissions, OPD footfall, surgeries, and diagnostic volumes
+(iii) Each Department Head shall submit a Manpower Requirement Form (Annexure B.1.1) detailing:
+    • Existing staff strength
+    • Projected workload for next year
+    • New positions required with justification
+    • Budget implications`
+          },
+          {
+            number: '4.2',
+            title: 'Regulatory and Accreditation Compliance Check',
+            content: `(i) HR shall verify staffing requirements against:
+    • Clinical Establishments Act minimum staffing norms
+    • Indian Nursing Council (INC) nurse-to-bed ratios
+    • Medical Council of India (MCI) doctor staffing requirements
+    • NABH accreditation standards
+    • State-specific healthcare regulations
+(ii) Any gaps identified shall be flagged as Critical Vacancies requiring priority filling`
+          },
+          {
+            number: '4.3',
+            title: 'Manpower Budget Preparation',
+            content: `(i) The HR Department in coordination with Finance shall prepare the Annual Manpower Budget including:
+    • Salary and wages (basic, allowances, incentives)
+    • Statutory contributions (PF, ESI, gratuity provision)
+    • Recruitment costs (advertising, agency fees, background verification)
+    • Training and development costs
+    • Employee benefits (insurance, medical, uniform)
+(ii) Budget shall categorize costs into:
+    • Fixed Costs: Existing employee salaries and statutory obligations
+    • Variable Costs: New hires, increments, performance bonuses, overtime
+    • One-time Costs: Recruitment, relocation, severance payments
+(iii) Budget proposal shall be submitted to the Finance Committee for review`
+          },
+          {
+            number: '4.4',
+            title: 'Prioritization and Approval',
+            content: `(i) The Finance Committee and Senior Management shall:
+    • Review budget proposals against revenue projections and financial constraints
+    • Prioritize critical vacancies (patient safety, statutory compliance, operational continuity)
+    • Approve, defer, or reject proposed new positions
+(ii) Approved Manpower Budget shall be documented as Sanctioned Headcount for the year
+(iii) Mid-year revisions may be permitted for emergency requirements subject to availability of funds`
+          },
+          {
+            number: '4.5',
+            title: 'Quarterly Monitoring and Variance Analysis',
+            content: `(i) HR shall conduct Quarterly Workforce Reviews to monitor:
+    • Hiring progress against approved vacancies
+    • Actual attrition vs. projected attrition
+    • Budget utilization (actual vs. allocated)
+    • Overtime and contractual staffing trends
+(ii) Variance reports shall be submitted to Senior Management with recommendations for corrective action
+(iii) Persistent under-staffing or over-budget conditions shall trigger a mid-year workforce plan revision`
+          }
+        ]
+      },
+      {
+        number: '5',
+        title: 'ROLES AND RESPONSIBILITIES',
+        table: {
+          headers: ['Position', 'Responsibility'],
+          rows: [
+            ['Department Heads', 'Submit departmental manpower requirements with workload justification'],
+            ['HR Department', 'Consolidate workforce data, conduct analysis, prepare manpower budget'],
+            ['Finance Department', 'Provide budget guidelines, review cost implications, monitor expenditure'],
+            ['Senior Management/CEO', 'Review and approve annual workforce plan and manpower budget'],
+            ['Quality Assurance', 'Verify compliance with NABH and statutory staffing norms']
+          ]
+        }
+      },
+      {
+        number: '6',
+        title: 'COMPLIANCE AND RECORD-KEEPING',
+        content: `• Workforce Planning Reports and Manpower Budgets shall be retained for a minimum of 7 years
+• All approvals and revisions shall be documented with proper authorization trails
+• Quarterly Workforce Review Reports shall be archived and made available for internal audits and accreditation reviews
+• Any deviation from approved headcount requires written justification and approval from the CEO or Finance Committee`
+      },
+      {
+        number: '7',
+        title: 'REFERENCE DOCUMENTS',
+        content: `• Koyili Hospital HR By-Laws (Section 3: Employment Terms and Conditions)
+• Clinical Establishments (Registration and Regulation) Act
+• Indian Nursing Council Staffing Norms
+• NABH Standards for Hospital Accreditation (HCO.6 - Human Resource Management)
+• Annual Financial Budget and Revenue Projections
+• Annexure B.1.1: Manpower Requirement Form`
+      }
+    ]
   },
 
   sopB2: {
