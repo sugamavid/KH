@@ -164,6 +164,7 @@ const Sidebar = ({ departments, isOpen, currentPath }) => {
         </div>
       </div>
     </aside>
+    </>
   );
 };
 
