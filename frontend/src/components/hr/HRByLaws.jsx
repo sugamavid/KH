@@ -63,8 +63,117 @@ const HRByLaws = () => {
     return grouped;
   }, []);
 
-  // Dashboard data extracted from by-laws
-  const quickReferenceCards = [
+  // Advanced search with fuzzy matching
+  const performSearch = (query) => {
+    if (!query.trim()) {
+      setSearchResults([]);
+      setShowSearch(false);
+      return;
+    }
+
+    const results = [];
+    const lowerQuery = query.toLowerCase();
+
+    Object.entries(byLawsData).forEach(([sectionId, section]) => {
+      // Search in title
+      if (section.title && section.title.toLowerCase().includes(lowerQuery)) {
+        results.push({
+          sectionId,
+          title: section.title,
+          type: 'title',
+          preview: section.title
+        });
+      }
+
+      // Search in search terms
+      if (section.searchTerms) {
+        section.searchTerms.forEach(term => {
+          if (term.toLowerCase().includes(lowerQuery)) {
+            results.push({
+              sectionId,
+              title: section.title,
+              type: 'keyword',
+              preview: `Keyword match: ${term}`
+            });
+          }
+        });
+      }
+
+      // Search in content
+      if (section.content && section.content.toLowerCase().includes(lowerQuery)) {
+        const index = section.content.toLowerCase().indexOf(lowerQuery);
+        const preview = section.content.substring(Math.max(0, index - 50), Math.min(section.content.length, index + 150));
+        results.push({
+          sectionId,
+          title: section.title,
+          type: 'content',
+          preview: '...' + preview + '...'
+        });
+      }
+
+      // Search in subsections
+      if (section.subsections) {
+        section.subsections.forEach((subsection, idx) => {
+          if (subsection.title && subsection.title.toLowerCase().includes(lowerQuery)) {
+            results.push({
+              sectionId,
+              subsectionIdx: idx,
+              title: `${section.title} - ${subsection.title}`,
+              type: 'subsection',
+              preview: subsection.title
+            });
+          }
+
+          if (subsection.content && subsection.content.toLowerCase().includes(lowerQuery)) {
+            const index = subsection.content.toLowerCase().indexOf(lowerQuery);
+            const preview = subsection.content.substring(Math.max(0, index - 50), Math.min(subsection.content.length, index + 150));
+            results.push({
+              sectionId,
+              subsectionIdx: idx,
+              title: `${section.title} - ${subsection.title}`,
+              type: 'content',
+              preview: '...' + preview + '...'
+            });
+          }
+
+          if (subsection.points) {
+            subsection.points.forEach((point, pointIdx) => {
+              if (point.toLowerCase().includes(lowerQuery)) {
+                results.push({
+                  sectionId,
+                  subsectionIdx: idx,
+                  pointIdx,
+                  title: `${section.title} - ${subsection.title}`,
+                  type: 'point',
+                  preview: point.substring(0, 150) + (point.length > 150 ? '...' : '')
+                });
+              }
+            });
+          }
+        });
+      }
+    });
+
+    setSearchResults(results);
+    setShowSearch(true);
+  };
+
+  const handleSearch = (e) => {
+    const query = e.target.value;
+    setSearchQuery(query);
+    performSearch(query);
+  };
+
+  const jumpToSection = (sectionId) => {
+    setActiveSection(sectionId);
+    setShowSearch(false);
+    setSearchQuery('');
+    setSearchResults([]);
+    // Scroll to top of content
+    if (contentRef.current) {
+      contentRef.current.scrollTop = 0;
+    }
+  };
     {
       title: 'Leave Entitlements',
       icon: Calendar,
