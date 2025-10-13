@@ -6,6 +6,7 @@ import ByLawsTab from './ByLawsTab';
 import SOPsTab from './SOPsTab';
 import AnnexuresTab from './AnnexuresTab';
 import ToolsTab from './ToolsTab';
+import HRDashboard from './hr/HRDashboard';
 
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 const API = `${BACKEND_URL}/api`;
@@ -48,6 +49,11 @@ const DepartmentView = () => {
         <p className="text-gray-600">Department not found</p>
       </div>
     );
+  }
+
+  // If department is Human Resources, show the HR Dashboard
+  if (deptId === 'human-resources' || department.name === 'Human Resources') {
+    return <HRDashboard />;
   }
 
   const tabs = [
