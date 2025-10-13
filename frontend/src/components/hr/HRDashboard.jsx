@@ -7,9 +7,12 @@ import PayrollManagement from './PayrollManagement';
 import PerformanceManagement from './PerformanceManagement';
 import RecruitmentManagement from './RecruitmentManagement';
 import TrainingManagement from './TrainingManagement';
-import LegalOperationsCompliance from './LegalOperationsCompliance';
 import ReportsAnalytics from './ReportsAnalytics';
 import ToolsCalculators from './ToolsCalculators';
+import HRByLaws from './HRByLaws';
+import HRSOPs from './HRSOPs';
+import HRAnnexures from './HRAnnexures';
+import DocumentManagement from './DocumentManagement';
 
 const HRDashboard = () => {
   const [activeModule, setActiveModule] = useState('dashboard');
@@ -24,18 +27,24 @@ const HRDashboard = () => {
         return <AttendanceLeave />;
       case 'payroll':
         return <PayrollManagement />;
+      case 'documents':
+        return <DocumentManagement />;
       case 'performance':
         return <PerformanceManagement />;
       case 'recruitment':
         return <RecruitmentManagement />;
       case 'training':
         return <TrainingManagement />;
-      case 'legal':
-        return <LegalOperationsCompliance />;
+      case 'bylaws':
+        return <HRByLaws />;
+      case 'sops':
+        return <HRSOPs />;
+      case 'annexures':
+        return <HRAnnexures />;
+      case 'reckoner':
+        return <ToolsCalculators />;
       case 'reports':
         return <ReportsAnalytics />;
-      case 'tools':
-        return <ToolsCalculators />;
       default:
         return <HRDashboardHome />;
     }
