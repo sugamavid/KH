@@ -555,7 +555,10 @@ const HRByLaws = ({ setActiveModule }) => {
           </div>
           
           {/* Document Generator */}
-          <div className="bg-white border-2 border-purple-200 rounded-xl p-6 hover:shadow-lg hover:border-purple-400 transition-all cursor-pointer group">
+          <div 
+            onClick={() => setShowDocumentGenerator(true)}
+            className="bg-white border-2 border-purple-200 rounded-xl p-6 hover:shadow-lg hover:border-purple-400 transition-all cursor-pointer group"
+          >
             <div className="flex items-center gap-4 mb-4">
               <div className="p-3 bg-purple-100 rounded-lg group-hover:bg-purple-600 transition-colors">
                 <FileText className="w-7 h-7 text-purple-600 group-hover:text-white transition-colors" />
