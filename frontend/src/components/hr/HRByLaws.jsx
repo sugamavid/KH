@@ -976,6 +976,19 @@ const HRByLaws = ({ setActiveModule }) => {
         />
       )}
 
+      {/* Risk Monitor Modal */}
+      {showRiskMonitor && (
+        <RiskMonitor 
+          onClose={() => setShowRiskMonitor(false)}
+          onNavigateToSection={(sectionId) => {
+            setActiveSection(sectionId);
+            if (contentRef.current) {
+              contentRef.current.scrollTop = 0;
+            }
+          }}
+        />
+      )}
+
       {/* Print Styles */}
       <style jsx>{`
         @media print {
