@@ -868,6 +868,19 @@ const HRByLaws = ({ setActiveModule }) => {
         </div>
       </div>
 
+      {/* Governance Wizard Modal */}
+      {showGovernanceWizard && (
+        <GovernanceWizard 
+          onClose={() => setShowGovernanceWizard(false)}
+          onNavigateToSection={(sectionId) => {
+            setActiveSection(sectionId);
+            if (contentRef.current) {
+              contentRef.current.scrollTop = 0;
+            }
+          }}
+        />
+      )}
+
       {/* Print Styles */}
       <style jsx>{`
         @media print {
