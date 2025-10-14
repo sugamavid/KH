@@ -2,7 +2,10 @@ import React, { useState } from 'react';
 import { 
   X, CheckCircle, Clock, Users, AlertCircle, ChevronRight, 
   PlayCircle, PauseCircle, Calendar, FileText, Target, Zap,
-  TrendingUp, Filter, Search, Plus, Edit, Trash2, MoreVertical
+  TrendingUp, Filter, Search, Plus, Edit, Trash2, MoreVertical,
+  BookOpen, Shield, Award, UserCheck, Building, Scale, Briefcase,
+  ClipboardCheck, Info, AlertTriangle, CheckSquare, ArrowRight,
+  Download, Printer, Eye, ChevronDown, List, GitBranch
 } from 'lucide-react';
 
 const PolicyImplementation = ({ onClose, onNavigateToSection }) => {
