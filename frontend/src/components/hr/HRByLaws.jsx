@@ -18,10 +18,16 @@ const HRByLaws = ({ setActiveModule }) => {
   const [expandedSections, setExpandedSections] = useState({});
   const contentRef = useRef(null);
 
-  // Parse and render content - Using BR tags and explicit block display
+  // Parse and render content - Check if already HTML or needs parsing
   const renderFormattedContent = (content) => {
     if (!content) return '';
     
+    // If content already contains HTML tags, return as-is
+    if (content.includes('<strong') || content.includes('<span') || content.includes('<br')) {
+      return content;
+    }
+    
+    // Otherwise parse the plain text content
     const lines = content.split('\n');
     let html = '';
     let i = 0;
