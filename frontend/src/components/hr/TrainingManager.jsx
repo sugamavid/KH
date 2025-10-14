@@ -527,24 +527,268 @@ const TrainingManager = ({ onClose, onNavigateToSection }) => {
             {activeView === 'catalog' && renderCatalog()}
             {activeView === 'mytrainings' && renderMyTrainings()}
             {activeView === 'schedule' && (
-              <div className="text-center py-12">
-                <Calendar className="w-16 h-16 text-slate-300 mx-auto mb-4" />
-                <p className="text-slate-600 font-medium">Training Schedule</p>
-                <p className="text-sm text-slate-500 mt-1">Building schedule view...</p>
+              <div className="space-y-6">
+                <div className="flex items-center justify-between">
+                  <h4 className="text-xl font-bold text-slate-900">Training Schedule</h4>
+                  <button className="px-4 py-2 bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition-colors font-semibold">
+                    Export Calendar
+                  </button>
+                </div>
+
+                {/* Upcoming Sessions */}
+                <div className="bg-white border-2 border-slate-200 rounded-xl p-6">
+                  <h5 className="text-lg font-bold text-slate-900 mb-4">This Week's Sessions</h5>
+                  <div className="space-y-3">
+                    {upcomingSessions.map((session, idx) => (
+                      <div key={idx} className="flex items-center gap-4 p-4 bg-blue-50 border-2 border-blue-200 rounded-lg">
+                        <div className="text-center min-w-[80px]">
+                          <div className="text-2xl font-bold text-blue-700">{session.date.split('-')[2]}</div>
+                          <div className="text-xs text-blue-600 font-semibold">OCT 2024</div>
+                        </div>
+                        <div className="flex-1">
+                          <div className="font-bold text-slate-900 mb-1">{session.training}</div>
+                          <div className="flex items-center gap-4 text-sm text-slate-600">
+                            <span className="flex items-center gap-1">
+                              <Clock className="w-4 h-4" />
+                              {session.time}
+                            </span>
+                            <span className="flex items-center gap-1">
+                              <Globe className="w-4 h-4" />
+                              {session.location}
+                            </span>
+                          </div>
+                        </div>
+                        <div className="text-right">
+                          <div className="font-semibold text-slate-900 text-sm">{session.seats}</div>
+                          <div className="text-xs text-slate-600">seats</div>
+                        </div>
+                        <button className="px-4 py-2 bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition-colors font-semibold text-sm">
+                          Register
+                        </button>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Calendar View */}
+                <div className="bg-white border-2 border-slate-200 rounded-xl p-6">
+                  <h5 className="text-lg font-bold text-slate-900 mb-4">October 2024</h5>
+                  <div className="grid grid-cols-7 gap-2 mb-4">
+                    {['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].map(day => (
+                      <div key={day} className="text-center font-bold text-slate-600 text-sm py-2">
+                        {day}
+                      </div>
+                    ))}
+                  </div>
+                  <div className="grid grid-cols-7 gap-2">
+                    {Array.from({ length: 35 }).map((_, idx) => {
+                      const day = idx - 1;
+                      const hasTraining = [18, 19, 20, 22, 25, 28, 30].includes(day);
+                      
+                      return (
+                        <div
+                          key={idx}
+                          className={`aspect-square p-2 border rounded-lg text-center ${
+                            day < 1 || day > 31
+                              ? 'bg-slate-50 text-slate-300'
+                              : hasTraining
+                              ? 'bg-orange-50 border-orange-300 cursor-pointer hover:bg-orange-100'
+                              : 'bg-white border-slate-200 hover:bg-slate-50'
+                          }`}
+                        >
+                          {day > 0 && day <= 31 && (
+                            <>
+                              <div className="font-semibold text-slate-900">{day}</div>
+                              {hasTraining && (
+                                <div className="w-2 h-2 bg-orange-600 rounded-full mx-auto mt-1"></div>
+                              )}
+                            </>
+                          )}
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
               </div>
             )}
             {activeView === 'certificates' && (
-              <div className="text-center py-12">
-                <Award className="w-16 h-16 text-slate-300 mx-auto mb-4" />
-                <p className="text-slate-600 font-medium">My Certificates</p>
-                <p className="text-sm text-slate-500 mt-1">Building certificates view...</p>
+              <div className="space-y-6">
+                {/* Certificate Stats */}
+                <div className="grid grid-cols-3 gap-4">
+                  <div className="bg-green-50 border-2 border-green-200 rounded-xl p-5">
+                    <div className="text-3xl font-bold text-green-900 mb-1">{activeCertificates}</div>
+                    <div className="text-sm font-semibold text-green-700">Active Certificates</div>
+                  </div>
+                  <div className="bg-yellow-50 border-2 border-yellow-200 rounded-xl p-5">
+                    <div className="text-3xl font-bold text-yellow-900 mb-1">{expiringCertificates}</div>
+                    <div className="text-sm font-semibold text-yellow-700">Expiring Soon</div>
+                  </div>
+                  <div className="bg-red-50 border-2 border-red-200 rounded-xl p-5">
+                    <div className="text-3xl font-bold text-red-900 mb-1">{certificates.filter(c => c.status === 'expired').length}</div>
+                    <div className="text-sm font-semibold text-red-700">Expired</div>
+                  </div>
+                </div>
+
+                {/* Certificates List */}
+                <div className="space-y-3">
+                  {certificates.map(cert => (
+                    <div
+                      key={cert.id}
+                      className={`bg-white border-2 rounded-xl p-6 ${
+                        cert.status === 'active' ? 'border-green-200' :
+                        cert.status === 'expiring-soon' ? 'border-yellow-200' :
+                        'border-red-200'
+                      }`}
+                    >
+                      <div className="flex items-start justify-between">
+                        <div className="flex items-start gap-4 flex-1">
+                          <div className={`w-14 h-14 rounded-xl flex items-center justify-center ${
+                            cert.status === 'active' ? 'bg-green-100' :
+                            cert.status === 'expiring-soon' ? 'bg-yellow-100' :
+                            'bg-red-100'
+                          }`}>
+                            <Award className={`w-7 h-7 ${
+                              cert.status === 'active' ? 'text-green-600' :
+                              cert.status === 'expiring-soon' ? 'text-yellow-600' :
+                              'text-red-600'
+                            }`} />
+                          </div>
+                          <div className="flex-1">
+                            <div className="flex items-center gap-3 mb-2">
+                              <h5 className="text-lg font-bold text-slate-900">{cert.training}</h5>
+                              <span className={`px-3 py-1 rounded-full text-xs font-bold ${
+                                cert.status === 'active' ? 'bg-green-100 text-green-700' :
+                                cert.status === 'expiring-soon' ? 'bg-yellow-100 text-yellow-700' :
+                                'bg-red-100 text-red-700'
+                              }`}>
+                                {cert.status.toUpperCase().replace('-', ' ')}
+                              </span>
+                            </div>
+                            <div className="grid grid-cols-3 gap-4 text-sm">
+                              <div>
+                                <div className="text-slate-600 text-xs mb-1">Certificate ID</div>
+                                <div className="font-semibold text-slate-900">{cert.id}</div>
+                              </div>
+                              <div>
+                                <div className="text-slate-600 text-xs mb-1">Issued Date</div>
+                                <div className="font-semibold text-slate-900">{cert.issuedDate}</div>
+                              </div>
+                              <div>
+                                <div className="text-slate-600 text-xs mb-1">Expiry Date</div>
+                                <div className={`font-semibold ${
+                                  cert.status === 'expired' ? 'text-red-700' :
+                                  cert.status === 'expiring-soon' ? 'text-yellow-700' :
+                                  'text-green-700'
+                                }`}>
+                                  {cert.expiryDate}
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="flex gap-2 ml-4">
+                          <button className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold flex items-center gap-2">
+                            <Download className="w-4 h-4" />
+                            Download
+                          </button>
+                          {cert.status !== 'active' && (
+                            <button className="px-4 py-2 bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition-colors font-semibold">
+                              Renew
+                            </button>
+                          )}
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
               </div>
             )}
             {activeView === 'reports' && (
-              <div className="text-center py-12">
-                <BarChart className="w-16 h-16 text-slate-300 mx-auto mb-4" />
-                <p className="text-slate-600 font-medium">Training Reports</p>
-                <p className="text-sm text-slate-500 mt-1">Building reports view...</p>
+              <div className="space-y-6">
+                {/* Report Templates */}
+                <div className="bg-white border-2 border-slate-200 rounded-xl p-6">
+                  <h4 className="text-lg font-bold text-slate-900 mb-4">Quick Reports</h4>
+                  <div className="grid grid-cols-3 gap-4">
+                    <button className="p-4 bg-orange-50 border-2 border-orange-200 rounded-xl hover:bg-orange-100 transition-all text-left">
+                      <Download className="w-6 h-6 text-orange-600 mb-2" />
+                      <div className="font-bold text-slate-900">Training Summary</div>
+                      <div className="text-xs text-slate-600 mt-1">Overall completion report</div>
+                    </button>
+                    <button className="p-4 bg-green-50 border-2 border-green-200 rounded-xl hover:bg-green-100 transition-all text-left">
+                      <Award className="w-6 h-6 text-green-600 mb-2" />
+                      <div className="font-bold text-slate-900">Certifications</div>
+                      <div className="text-xs text-slate-600 mt-1">Active certificates report</div>
+                    </button>
+                    <button className="p-4 bg-blue-50 border-2 border-blue-200 rounded-xl hover:bg-blue-100 transition-all text-left">
+                      <Users className="w-6 h-6 text-blue-600 mb-2" />
+                      <div className="font-bold text-slate-900">Enrollment Stats</div>
+                      <div className="text-xs text-slate-600 mt-1">Training participation</div>
+                    </button>
+                  </div>
+                </div>
+
+                {/* Completion Rates */}
+                <div className="bg-white border-2 border-slate-200 rounded-xl p-6">
+                  <h4 className="text-lg font-bold text-slate-900 mb-4">Training Completion Rates</h4>
+                  <div className="space-y-4">
+                    {[
+                      { category: 'Mandatory Trainings', completion: 88, total: 156, completed: 137 },
+                      { category: 'Safety & Health', completion: 92, total: 80, completed: 74 },
+                      { category: 'Compliance', completion: 85, total: 60, completed: 51 },
+                      { category: 'Professional Development', completion: 65, total: 45, completed: 29 },
+                      { category: 'Clinical Training', completion: 90, total: 70, completed: 63 }
+                    ].map((cat, idx) => (
+                      <div key={idx}>
+                        <div className="flex items-center justify-between mb-2">
+                          <span className="font-semibold text-slate-700">{cat.category}</span>
+                          <span className="text-sm text-slate-600">
+                            {cat.completed}/{cat.total} completed ({cat.completion}%)
+                          </span>
+                        </div>
+                        <div className="w-full h-3 bg-slate-200 rounded-full overflow-hidden">
+                          <div
+                            className={`h-full ${
+                              cat.completion >= 90 ? 'bg-green-600' :
+                              cat.completion >= 75 ? 'bg-blue-600' :
+                              cat.completion >= 60 ? 'bg-orange-500' :
+                              'bg-red-600'
+                            }`}
+                            style={{ width: `${cat.completion}%` }}
+                          ></div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Department Performance */}
+                <div className="bg-white border-2 border-slate-200 rounded-xl p-6">
+                  <h4 className="text-lg font-bold text-slate-900 mb-4">Department-wise Performance</h4>
+                  <div className="grid grid-cols-2 gap-4">
+                    {[
+                      { dept: 'Emergency', completion: 95, trainings: 24 },
+                      { dept: 'ICU', completion: 92, trainings: 22 },
+                      { dept: 'Surgery', completion: 88, trainings: 20 },
+                      { dept: 'Pediatrics', completion: 85, trainings: 18 },
+                      { dept: 'Radiology', completion: 82, trainings: 16 },
+                      { dept: 'Administration', completion: 78, trainings: 15 }
+                    ].map((dept, idx) => (
+                      <div key={idx} className="p-4 bg-slate-50 rounded-lg">
+                        <div className="flex items-center justify-between mb-2">
+                          <span className="font-bold text-slate-900">{dept.dept}</span>
+                          <span className="text-2xl font-bold text-orange-700">{dept.completion}%</span>
+                        </div>
+                        <div className="w-full h-2 bg-slate-200 rounded-full overflow-hidden mb-2">
+                          <div
+                            className="h-full bg-orange-600"
+                            style={{ width: `${dept.completion}%` }}
+                          ></div>
+                        </div>
+                        <div className="text-xs text-slate-600">{dept.trainings} trainings completed</div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
               </div>
             )}
           </div>
