@@ -1074,8 +1074,138 @@ export const policyImplementationGuides = {
     ]
   },
 
-  // Placeholder structure for remaining sections
-  section3_appointment: { policyName: 'Staff Appointment and Induction', byLawsSection: 'section3', category: 'HR Operations', status: 'detailed_guide_pending' },
+  // SECTION 3: STAFF APPOINTMENT & INDUCTION
+  section3_appointment: {
+    policyName: 'Staff Appointment and Induction',
+    byLawsSection: 'section3',
+    category: 'HR Operations',
+    implementationSteps: [
+      {
+        step: 1,
+        phase: 'Planning',
+        activity: 'Prepare Appointment Documentation',
+        details: 'Create appointment letter templates, employment contracts, and offer letter formats for all position types',
+        responsibleCommittee: 'hr_committee',
+        responsibleIndividuals: ['HR Director', 'Legal Advisor'],
+        timeline: '1-2 weeks',
+        outputs: ['Appointment letter templates', 'Employment contract templates', 'Offer letter formats', 'Terms of employment document'],
+        checkpoints: ['Templates legally compliant', 'All position types covered', 'Board approval obtained']
+      },
+      {
+        step: 2,
+        phase: 'Preparation',
+        activity: 'Pre-joining Formalities',
+        details: 'Collect required documents, conduct medical examination, police verification, and pre-employment checks',
+        responsibleCommittee: 'hr_committee',
+        responsibleIndividuals: ['HR Officer', 'Medical Officer', 'Admin Officer'],
+        timeline: '1-2 weeks before joining',
+        outputs: ['Document checklist completion', 'Medical fitness certificate', 'Verification reports', 'Pre-employment clearance'],
+        checkpoints: ['All documents received', 'Medical clearance obtained', 'Verifications completed']
+      },
+      {
+        step: 3,
+        phase: 'Implementation',
+        activity: 'Issue Appointment Letter',
+        details: 'Formal appointment letter issuance with clear terms, designation, salary, benefits, and joining date',
+        responsibleCommittee: 'hr_committee',
+        responsibleIndividuals: ['HR Director', 'Department Head'],
+        timeline: '3-5 days before joining',
+        outputs: ['Signed appointment letter', 'Employee acknowledgment', 'Personnel file creation'],
+        checkpoints: ['Letter issued on time', 'Employee acceptance received', 'File created']
+      },
+      {
+        step: 4,
+        phase: 'Implementation',
+        activity: 'First Day Onboarding',
+        details: 'Welcome, ID card, access provisioning, workstation setup, introduction to team and facilities tour',
+        responsibleCommittee: 'hr_committee',
+        responsibleIndividuals: ['HR Officer', 'IT Support', 'Facilities', 'Department Head'],
+        timeline: 'Day 1',
+        outputs: ['ID card', 'Access credentials', 'Workstation setup', 'Welcome kit', 'Attendance enrollment'],
+        checkpoints: ['All systems access granted', 'Workspace ready', 'Team introductions done']
+      },
+      {
+        step: 5,
+        phase: 'Implementation',
+        activity: 'Comprehensive Induction Program',
+        details: 'Multi-day induction covering organization, policies, safety, compliance, department-specific training',
+        responsibleCommittee: 'hr_committee',
+        responsibleIndividuals: ['HR Director', 'Department Heads', 'Safety Officer', 'Compliance Officer'],
+        timeline: 'Week 1-2',
+        outputs: ['Induction schedule', 'Training materials', 'Completion certificates', 'Assessment results'],
+        checkpoints: ['All sessions attended', 'Understanding verified', 'Assessments passed']
+      },
+      {
+        step: 6,
+        phase: 'Implementation',
+        activity: 'Role-Specific Training',
+        details: 'Job-specific training, SOPs, systems training, shadowing experienced staff',
+        responsibleCommittee: 'hr_committee',
+        responsibleIndividuals: ['Department Head', 'Supervisor', 'Assigned Mentor'],
+        timeline: 'Week 2-4',
+        outputs: ['Training plan', 'SOP training records', 'System access training', 'Competency assessment'],
+        checkpoints: ['Job requirements understood', 'Systems proficiency achieved', 'Ready for independent work']
+      },
+      {
+        step: 7,
+        phase: 'Monitoring',
+        activity: 'Buddy/Mentor Assignment',
+        details: 'Assign experienced staff member as buddy for guidance and support during initial months',
+        responsibleCommittee: 'hr_committee',
+        responsibleIndividuals: ['Department Head', 'Assigned Buddy/Mentor'],
+        timeline: 'First 3 months',
+        outputs: ['Buddy assignment', 'Regular check-in meetings', 'Support documentation'],
+        checkpoints: ['Buddy engaged', 'Regular meetings held', 'Issues addressed']
+      },
+      {
+        step: 8,
+        phase: 'Monitoring',
+        activity: 'Regular Check-ins',
+        details: 'Weekly/bi-weekly meetings with supervisor to review progress, address concerns, provide feedback',
+        responsibleCommittee: 'hr_committee',
+        responsibleIndividuals: ['Direct Supervisor', 'HR Officer'],
+        timeline: 'First 3 months',
+        outputs: ['Meeting minutes', 'Feedback records', 'Progress notes'],
+        checkpoints: ['Regular meetings conducted', 'Concerns addressed', 'Progress tracked']
+      },
+      {
+        step: 9,
+        phase: 'Monitoring',
+        activity: 'End of Induction Assessment',
+        details: 'Formal assessment at end of induction period to evaluate readiness and address gaps',
+        responsibleCommittee: 'hr_committee',
+        responsibleIndividuals: ['Department Head', 'HR Director'],
+        timeline: 'End of Month 1',
+        outputs: ['Assessment report', 'Competency evaluation', 'Development plan (if needed)'],
+        checkpoints: ['Assessment completed', 'Readiness confirmed', 'Support plan created if needed']
+      }
+    ],
+    committeeInvolved: ['hr_committee', 'board_of_directors'],
+    approvalChain: [
+      { level: 'Department Head', for: 'Appointment recommendation and induction oversight' },
+      { level: 'HR Director', for: 'Appointment letter issuance and induction program' },
+      { level: 'Administrative Director', for: 'Senior position appointments' },
+      { level: 'Board of Directors', for: 'Senior management appointments' }
+    ],
+    criticalSuccess: [
+      'Smooth joining experience',
+      'Comprehensive understanding of role and organization',
+      'Quick productivity ramp-up',
+      'Strong early engagement and retention'
+    ],
+    risks: [
+      { risk: 'Information overload', mitigation: 'Structured phased induction over multiple weeks' },
+      { risk: 'Poor first impression', mitigation: 'Well-prepared onboarding, warm welcome, ready workspace' },
+      { risk: 'Early disengagement', mitigation: 'Buddy system, regular check-ins, clear expectations' },
+      { risk: 'Documentation gaps', mitigation: 'Comprehensive checklist, verification at each stage' }
+    ],
+    legalCompliance: [
+      'Employment contract requirements',
+      'Medical fitness standards',
+      'Background verification regulations',
+      'Induction training mandates (safety, compliance)'
+    ]
+  },
   section4_probation: { policyName: 'Probation Period Management', byLawsSection: 'section4', category: 'HR Operations', status: 'detailed_guide_pending' },
   section5_equal_opportunity: { policyName: 'Equal Opportunity and DEI', byLawsSection: 'section5', category: 'Compliance', status: 'detailed_guide_pending' },
   section6_code_conduct: { policyName: 'Code of Conduct and Ethics', byLawsSection: 'section6', category: 'Governance', status: 'detailed_guide_pending' },
