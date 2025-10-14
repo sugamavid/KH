@@ -447,15 +447,15 @@ const TrainingHub = ({ onClose, onNavigateToSection }) => {
       <div
         key={training.id}
         onClick={() => handleTrainingClick(training)}
-        className="bg-white rounded-xl p-5 border-2 border-slate-200 hover:border-red-400 hover:shadow-lg transition-all cursor-pointer group"
+        className="bg-white rounded-xl p-5 border-2 border-slate-200 hover:border-teal-400 hover:shadow-lg transition-all cursor-pointer group"
       >
         <div className="flex items-start justify-between mb-3">
           <div className="flex items-start gap-3 flex-1">
-            <div className={`p-3 bg-${training.color}-100 rounded-xl group-hover:bg-red-100 transition-colors`}>
-              <TrainingIcon className={`w-6 h-6 text-${training.color}-600 group-hover:text-red-600 transition-colors`} />
+            <div className={`p-3 bg-${training.color}-100 rounded-xl group-hover:bg-teal-100 transition-colors`}>
+              <TrainingIcon className={`w-6 h-6 text-${training.color}-600 group-hover:text-teal-600 transition-colors`} />
             </div>
             <div className="flex-1 min-w-0">
-              <h4 className="font-bold text-slate-900 mb-1 group-hover:text-red-700 transition-colors line-clamp-2">
+              <h4 className="font-bold text-slate-900 mb-1 group-hover:text-teal-700 transition-colors line-clamp-2">
                 {training.title}
               </h4>
               <div className="flex items-center gap-2 flex-wrap mb-2">
