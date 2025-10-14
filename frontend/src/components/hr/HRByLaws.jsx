@@ -227,41 +227,328 @@ const HRByLaws = ({ setActiveModule }) => {
     window.print();
   };
 
-  // Dashboard render
+  // Dashboard render with comprehensive professional design
   const renderDashboard = () => (
-    <div className="space-y-8">
-      <div className="bg-gradient-to-br from-blue-50 to-white rounded-xl p-8 border border-blue-100">
-        <div className="flex items-start justify-between">
-          <div>
-            <h2 className="text-3xl font-bold text-slate-900 mb-3" style={{ fontFamily: "'Inter', 'Source Sans Pro', sans-serif" }}>
-              HR By-Laws Document Repository
-            </h2>
-            <p className="text-slate-600 text-base leading-relaxed max-w-3xl" style={{ fontFamily: "'Noto Serif', Georgia, serif" }}>
-              Comprehensive legal framework governing human resource policies, procedures, and standards at Koyili Hospital. 
-              This official document outlines employee rights, responsibilities, and organizational guidelines.
-            </p>
+    <div className="space-y-6">
+      {/* Hero Section - Koyili Hospital Branding */}
+      <div className="bg-gradient-to-br from-blue-600 via-blue-700 to-blue-900 rounded-2xl p-12 text-white relative overflow-hidden shadow-2xl">
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-0 left-0 w-96 h-96 bg-white rounded-full mix-blend-overlay filter blur-3xl"></div>
+          <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-300 rounded-full mix-blend-overlay filter blur-3xl"></div>
+        </div>
+        
+        <div className="relative z-10">
+          <div className="flex items-center justify-between mb-8">
+            <div className="flex items-center gap-4">
+              <div className="w-20 h-20 rounded-2xl bg-white/20 backdrop-blur flex items-center justify-center">
+                <Scale className="w-12 h-12 text-white" />
+              </div>
+              <div>
+                <h1 className="text-4xl font-bold mb-1" style={{ fontFamily: "'Inter', sans-serif" }}>
+                  KOYILI HOSPITAL
+                </h1>
+                <p className="text-blue-100 text-lg font-semibold">HR BYLAWS IMPLEMENTATION CENTER</p>
+              </div>
+            </div>
+            <div className="flex gap-3">
+              <button 
+                onClick={handlePrint}
+                className="flex items-center gap-2 px-5 py-3 bg-white/10 hover:bg-white/20 backdrop-blur border border-white/30 text-white rounded-lg transition-all font-semibold"
+              >
+                <Printer className="w-5 h-5" />
+                Print
+              </button>
+              <button className="flex items-center gap-2 px-5 py-3 bg-white text-blue-700 rounded-lg hover:bg-blue-50 transition-all font-semibold shadow-lg">
+                <Download className="w-5 h-5" />
+                Download PDF
+              </button>
+            </div>
           </div>
-          <div className="flex gap-3">
-            <button 
-              onClick={handlePrint}
-              className="flex items-center gap-2 px-4 py-2 bg-slate-700 text-white rounded-lg hover:bg-slate-800 transition-colors font-semibold text-sm"
-            >
-              <Printer className="w-4 h-4" />
-              Print
+          
+          <p className="text-white/90 text-lg leading-relaxed max-w-4xl mb-8" style={{ fontFamily: "'Noto Serif', Georgia, serif" }}>
+            Transform your understanding into action with our comprehensive implementation center. This advanced platform provides interactive tools, guided workflows, and real-time compliance tracking to ensure seamless execution of HR bylaws across all hospital operations with precision and efficiency.
+          </p>
+          
+          {/* Quick Actions */}
+          <div className="flex flex-wrap gap-4">
+            <button className="flex items-center gap-2 px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white rounded-xl font-semibold shadow-lg transition-all transform hover:scale-105">
+              <FileText className="w-5 h-5" />
+              Generate Report
             </button>
-            <button className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold text-sm">
-              <Download className="w-4 h-4" />
-              Download PDF
+            <button className="flex items-center gap-2 px-6 py-3 bg-green-500 hover:bg-green-600 text-white rounded-xl font-semibold shadow-lg transition-all transform hover:scale-105">
+              <Calendar className="w-5 h-5" />
+              Schedule Audit
+            </button>
+            <button className="flex items-center gap-2 px-6 py-3 bg-amber-500 hover:bg-amber-600 text-white rounded-xl font-semibold shadow-lg transition-all transform hover:scale-105">
+              <AlertCircle className="w-5 h-5" />
+              Get Support
+            </button>
+            <button className="flex items-center gap-2 px-6 py-3 bg-purple-500 hover:bg-purple-600 text-white rounded-xl font-semibold shadow-lg transition-all transform hover:scale-105">
+              <Download className="w-5 h-5" />
+              Export Policies
             </button>
           </div>
         </div>
       </div>
 
-      {/* Section Navigator Grid */}
-      <div className="bg-white rounded-xl p-6 border border-slate-200">
-        <h2 className="text-xl font-bold text-slate-900 mb-6" style={{ fontFamily: "'Inter', 'Source Sans Pro', sans-serif" }}>
-          Navigate Sections
-        </h2>
+      {/* Governance & Compliance Tools */}
+      <div className="bg-white rounded-2xl p-8 shadow-sm border border-slate-200">
+        <div className="flex items-center gap-3 mb-6">
+          <div className="p-2 bg-blue-100 rounded-lg">
+            <Shield className="w-6 h-6 text-blue-600" />
+          </div>
+          <div>
+            <h2 className="text-2xl font-bold text-slate-900" style={{ fontFamily: "'Inter', sans-serif" }}>
+              Governance & Compliance Tools
+            </h2>
+            <p className="text-slate-600 text-sm">Comprehensive toolkit for governance, compliance, and administrative management</p>
+          </div>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+          {/* Governance Wizard */}
+          <div className="group bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl p-6 text-white hover:shadow-2xl transition-all transform hover:-translate-y-1 cursor-pointer">
+            <div className="w-14 h-14 bg-white/20 rounded-xl flex items-center justify-center mb-4 backdrop-blur">
+              <FileText className="w-8 h-8" />
+            </div>
+            <h3 className="text-xl font-bold mb-2">Governance Wizard</h3>
+            <div className="px-3 py-1 bg-white/20 rounded-full text-xs font-semibold inline-block">SMART GUIDANCE</div>
+          </div>
+          
+          {/* Authority Finder */}
+          <div className="group bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl p-6 text-white hover:shadow-2xl transition-all transform hover:-translate-y-1 cursor-pointer">
+            <div className="w-14 h-14 bg-white/20 rounded-xl flex items-center justify-center mb-4 backdrop-blur">
+              <Search className="w-8 h-8" />
+            </div>
+            <h3 className="text-xl font-bold mb-2">Authority Finder</h3>
+            <div className="px-3 py-1 bg-white/20 rounded-full text-xs font-semibold inline-block">QUICK LOOKUP</div>
+          </div>
+          
+          {/* Compliance Center */}
+          <div className="group bg-gradient-to-br from-green-500 to-green-600 rounded-xl p-6 text-white hover:shadow-2xl transition-all transform hover:-translate-y-1 cursor-pointer">
+            <div className="w-14 h-14 bg-white/20 rounded-xl flex items-center justify-center mb-4 backdrop-blur">
+              <Scale className="w-8 h-8" />
+            </div>
+            <h3 className="text-xl font-bold mb-2">Compliance Center</h3>
+            <div className="px-3 py-1 bg-white/20 rounded-full text-xs font-semibold inline-block">COMPLIANCE MGMT</div>
+          </div>
+          
+          {/* Policy Manager */}
+          <div className="group bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl p-6 text-white hover:shadow-2xl transition-all transform hover:-translate-y-1 cursor-pointer">
+            <div className="w-14 h-14 bg-white/20 rounded-xl flex items-center justify-center mb-4 backdrop-blur">
+              <CheckSquare className="w-8 h-8" />
+            </div>
+            <h3 className="text-xl font-bold mb-2">Policy Manager</h3>
+            <div className="px-3 py-1 bg-white/20 rounded-full text-xs font-semibold inline-block">DOCUMENT CONTROL</div>
+          </div>
+          
+          {/* Training Hub */}
+          <div className="group bg-gradient-to-br from-red-500 to-red-600 rounded-xl p-6 text-white hover:shadow-2xl transition-all transform hover:-translate-y-1 cursor-pointer">
+            <div className="w-14 h-14 bg-white/20 rounded-xl flex items-center justify-center mb-4 backdrop-blur">
+              <BookOpen className="w-8 h-8" />
+            </div>
+            <h3 className="text-xl font-bold mb-2">Training Hub</h3>
+            <div className="px-3 py-1 bg-white/20 rounded-full text-xs font-semibold inline-block">SKILL DEVELOPMENT</div>
+          </div>
+          
+          {/* Audit Assistant */}
+          <div className="group bg-gradient-to-br from-teal-500 to-teal-600 rounded-xl p-6 text-white hover:shadow-2xl transition-all transform hover:-translate-y-1 cursor-pointer">
+            <div className="w-14 h-14 bg-white/20 rounded-xl flex items-center justify-center mb-4 backdrop-blur">
+              <CheckCircle className="w-8 h-8" />
+            </div>
+            <h3 className="text-xl font-bold mb-2">Audit Assistant</h3>
+            <div className="px-3 py-1 bg-white/20 rounded-full text-xs font-semibold inline-block">REVIEW SYSTEM</div>
+          </div>
+          
+          {/* Risk Monitor */}
+          <div className="group bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl p-6 text-white hover:shadow-2xl transition-all transform hover:-translate-y-1 cursor-pointer">
+            <div className="w-14 h-14 bg-white/20 rounded-xl flex items-center justify-center mb-4 backdrop-blur">
+              <AlertTriangle className="w-8 h-8" />
+            </div>
+            <h3 className="text-xl font-bold mb-2">Risk Monitor</h3>
+            <div className="px-3 py-1 bg-white/20 rounded-full text-xs font-semibold inline-block">THREAT ANALYSIS</div>
+          </div>
+          
+          {/* Report Generator */}
+          <div className="group bg-gradient-to-br from-green-500 to-green-600 rounded-xl p-6 text-white hover:shadow-2xl transition-all transform hover:-translate-y-1 cursor-pointer">
+            <div className="w-14 h-14 bg-white/20 rounded-xl flex items-center justify-center mb-4 backdrop-blur">
+              <TrendingUp className="w-8 h-8" />
+            </div>
+            <h3 className="text-xl font-bold mb-2">Report Generator</h3>
+            <div className="px-3 py-1 bg-white/20 rounded-full text-xs font-semibold inline-block">ANALYTICS SUITE</div>
+          </div>
+        </div>
+      </div>
+
+      {/* Live Monitoring */}
+      <div className="bg-white rounded-2xl p-8 shadow-sm border border-slate-200">
+        <div className="flex items-center gap-3 mb-6">
+          <div className="p-2 bg-green-100 rounded-lg">
+            <TrendingUp className="w-6 h-6 text-green-600" />
+          </div>
+          <div>
+            <h2 className="text-2xl font-bold text-slate-900" style={{ fontFamily: "'Inter', sans-serif" }}>
+              Live Monitoring
+            </h2>
+            <p className="text-slate-600 text-sm">Real-time insights and analytics for organizational oversight</p>
+          </div>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+          {/* Bylaw Sections */}
+          <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-6 border-2 border-blue-200 hover:shadow-lg transition-all">
+            <div className="flex items-center justify-between mb-4">
+              <div className="p-3 bg-blue-600 rounded-lg">
+                <FileText className="w-6 h-6 text-white" />
+              </div>
+              <span className="px-3 py-1 bg-blue-600 text-white text-xs font-bold rounded-full">EXPLORE</span>
+            </div>
+            <div className="text-4xl font-bold text-blue-900 mb-2">30</div>
+            <div className="text-blue-800 font-semibold mb-1">Bylaw Sections</div>
+            <div className="text-blue-600 text-sm">Comprehensive coverage</div>
+          </div>
+          
+          {/* Implementation */}
+          <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-6 border-2 border-green-200 hover:shadow-lg transition-all">
+            <div className="flex items-center justify-between mb-4">
+              <div className="p-3 bg-green-600 rounded-lg">
+                <TrendingUp className="w-6 h-6 text-white" />
+              </div>
+              <span className="px-3 py-1 bg-green-600 text-white text-xs font-bold rounded-full">TRACK</span>
+            </div>
+            <div className="text-4xl font-bold text-green-900 mb-2">85%</div>
+            <div className="text-green-800 font-semibold mb-1">Implementation</div>
+            <div className="text-green-600 text-sm">Real-time tracking</div>
+          </div>
+          
+          {/* Active Users */}
+          <div className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl p-6 border-2 border-orange-200 hover:shadow-lg transition-all">
+            <div className="flex items-center justify-between mb-4">
+              <div className="p-3 bg-orange-600 rounded-lg">
+                <Users className="w-6 h-6 text-white" />
+              </div>
+              <span className="px-3 py-1 bg-orange-600 text-white text-xs font-bold rounded-full">LIVE</span>
+            </div>
+            <div className="text-4xl font-bold text-orange-900 mb-2">524</div>
+            <div className="text-orange-800 font-semibold mb-1">Active Users</div>
+            <div className="text-orange-600 text-sm">Staff engagement</div>
+          </div>
+          
+          {/* Latest Version */}
+          <div className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl p-6 border-2 border-purple-200 hover:shadow-lg transition-all">
+            <div className="flex items-center justify-between mb-4">
+              <div className="p-3 bg-purple-600 rounded-lg">
+                <Clock className="w-6 h-6 text-white" />
+              </div>
+              <span className="px-3 py-1 bg-purple-600 text-white text-xs font-bold rounded-full">CURRENT</span>
+            </div>
+            <div className="text-4xl font-bold text-purple-900 mb-2">2.0</div>
+            <div className="text-purple-800 font-semibold mb-1">Latest Version</div>
+            <div className="text-purple-600 text-sm">Updated Feb 1, 2024</div>
+          </div>
+        </div>
+      </div>
+
+      {/* Implementation Toolkit */}
+      <div className="bg-white rounded-2xl p-8 shadow-sm border border-slate-200">
+        <div className="flex items-center gap-3 mb-6">
+          <div className="p-2 bg-purple-100 rounded-lg">
+            <Zap className="w-6 h-6 text-purple-600" />
+          </div>
+          <div>
+            <h2 className="text-2xl font-bold text-slate-900" style={{ fontFamily: "'Inter', sans-serif" }}>
+              Implementation Toolkit
+            </h2>
+            <p className="text-slate-600 text-sm">Transform policy into practice with powerful tools and workflows</p>
+          </div>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+          {/* Policy Implementation */}
+          <div className="bg-white border-2 border-blue-200 rounded-xl p-6 hover:shadow-lg hover:border-blue-400 transition-all cursor-pointer group">
+            <div className="flex items-center gap-4 mb-4">
+              <div className="p-3 bg-blue-100 rounded-lg group-hover:bg-blue-600 transition-colors">
+                <Zap className="w-7 h-7 text-blue-600 group-hover:text-white transition-colors" />
+              </div>
+              <h3 className="text-lg font-bold text-slate-900 group-hover:text-blue-600 transition-colors">Policy Implementation</h3>
+            </div>
+            <p className="text-slate-600 text-sm leading-relaxed">Guided implementation with automated checklists and timelines</p>
+          </div>
+          
+          {/* Compliance Tracker */}
+          <div className="bg-white border-2 border-green-200 rounded-xl p-6 hover:shadow-lg hover:border-green-400 transition-all cursor-pointer group">
+            <div className="flex items-center gap-4 mb-4">
+              <div className="p-3 bg-green-100 rounded-lg group-hover:bg-green-600 transition-colors">
+                <TrendingUp className="w-7 h-7 text-green-600 group-hover:text-white transition-colors" />
+              </div>
+              <h3 className="text-lg font-bold text-slate-900 group-hover:text-green-600 transition-colors">Compliance Tracker</h3>
+            </div>
+            <p className="text-slate-600 text-sm leading-relaxed">Real-time monitoring of compliance status and metrics</p>
+          </div>
+          
+          {/* Training Manager */}
+          <div className="bg-white border-2 border-orange-200 rounded-xl p-6 hover:shadow-lg hover:border-orange-400 transition-all cursor-pointer group">
+            <div className="flex items-center gap-4 mb-4">
+              <div className="p-3 bg-orange-100 rounded-lg group-hover:bg-orange-600 transition-colors">
+                <BookOpen className="w-7 h-7 text-orange-600 group-hover:text-white transition-colors" />
+              </div>
+              <h3 className="text-lg font-bold text-slate-900 group-hover:text-orange-600 transition-colors">Training Manager</h3>
+            </div>
+            <p className="text-slate-600 text-sm leading-relaxed">Schedule and track staff training programs and certifications</p>
+          </div>
+          
+          {/* Document Generator */}
+          <div className="bg-white border-2 border-purple-200 rounded-xl p-6 hover:shadow-lg hover:border-purple-400 transition-all cursor-pointer group">
+            <div className="flex items-center gap-4 mb-4">
+              <div className="p-3 bg-purple-100 rounded-lg group-hover:bg-purple-600 transition-colors">
+                <FileText className="w-7 h-7 text-purple-600 group-hover:text-white transition-colors" />
+              </div>
+              <h3 className="text-lg font-bold text-slate-900 group-hover:text-purple-600 transition-colors">Document Generator</h3>
+            </div>
+            <p className="text-slate-600 text-sm leading-relaxed">Generate customized policy documents and templates</p>
+          </div>
+          
+          {/* Audit Module */}
+          <div className="bg-white border-2 border-red-200 rounded-xl p-6 hover:shadow-lg hover:border-red-400 transition-all cursor-pointer group">
+            <div className="flex items-center gap-4 mb-4">
+              <div className="p-3 bg-red-100 rounded-lg group-hover:bg-red-600 transition-colors">
+                <Search className="w-7 h-7 text-red-600 group-hover:text-white transition-colors" />
+              </div>
+              <h3 className="text-lg font-bold text-slate-900 group-hover:text-red-600 transition-colors">Audit Module</h3>
+            </div>
+            <p className="text-slate-600 text-sm leading-relaxed">Conduct internal audits and compliance assessments</p>
+          </div>
+          
+          {/* Reporting Dashboard */}
+          <div className="bg-white border-2 border-teal-200 rounded-xl p-6 hover:shadow-lg hover:border-teal-400 transition-all cursor-pointer group">
+            <div className="flex items-center gap-4 mb-4">
+              <div className="p-3 bg-teal-100 rounded-lg group-hover:bg-teal-600 transition-colors">
+                <TrendingUp className="w-7 h-7 text-teal-600 group-hover:text-white transition-colors" />
+              </div>
+              <h3 className="text-lg font-bold text-slate-900 group-hover:text-teal-600 transition-colors">Reporting Dashboard</h3>
+            </div>
+            <p className="text-slate-600 text-sm leading-relaxed">Generate comprehensive reports and analytics</p>
+          </div>
+        </div>
+      </div>
+
+      {/* Section Navigator - Quick Access */}
+      <div className="bg-white rounded-2xl p-8 shadow-sm border border-slate-200">
+        <div className="flex items-center justify-between mb-6">
+          <div className="flex items-center gap-3">
+            <div className="p-2 bg-blue-100 rounded-lg">
+              <BookOpen className="w-6 h-6 text-blue-600" />
+            </div>
+            <div>
+              <h2 className="text-2xl font-bold text-slate-900" style={{ fontFamily: "'Inter', sans-serif" }}>
+                Quick Access to Sections
+              </h2>
+              <p className="text-slate-600 text-sm">Navigate directly to any By-Law section</p>
+            </div>
+          </div>
+          <span className="px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-bold">30 Sections</span>
+        </div>
+        
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
           {navigation.filter(nav => nav.id !== 'dashboard').map((nav) => {
             const IconComponent = nav.icon;
@@ -271,11 +558,13 @@ const HRByLaws = ({ setActiveModule }) => {
                 onClick={() => setActiveSection(nav.id)}
                 className="flex items-center space-x-3 p-4 bg-slate-50 rounded-lg hover:bg-blue-50 hover:border-blue-300 border border-slate-200 transition-all text-left group"
               >
-                <IconComponent className="w-5 h-5 text-blue-600 group-hover:text-blue-700" />
-                <span className="text-sm font-medium text-slate-900 flex-1" style={{ fontFamily: "'Inter', sans-serif" }}>
+                <div className="p-2 bg-white rounded-lg border border-slate-200 group-hover:border-blue-300 group-hover:bg-blue-50 transition-all">
+                  <IconComponent className="w-5 h-5 text-blue-600 group-hover:text-blue-700" />
+                </div>
+                <span className="text-sm font-semibold text-slate-900 flex-1" style={{ fontFamily: "'Inter', sans-serif" }}>
                   {nav.title}
                 </span>
-                <ChevronRight className="w-4 h-4 text-slate-400 group-hover:text-blue-600" />
+                <ChevronRight className="w-5 h-5 text-slate-400 group-hover:text-blue-600 transition-colors" />
               </button>
             );
           })}
