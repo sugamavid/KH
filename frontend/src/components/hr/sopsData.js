@@ -14887,7 +14887,287 @@ Recovery:
     title: 'Full & Final Settlement & Service Certificate Issuance',
     searchTerms: ['full', 'final', 'settlement', 'fnf', 'service', 'certificate', 'relieving'],
     category: 'N. Exit & Separation Management',
-    content: 'Establishes standardised process for calculating and disbursing full and final settlement dues and issuing service certificates to separated employees.'
+    subsections: [
+      {
+        number: '1',
+        title: 'OBJECTIVE',
+        content: 'To establish standardized, transparent, and legally-compliant process for calculating and disbursing Full & Final (F&F) settlement dues, issuing service certificates, relieving letters, and experience certificates ensuring timely closure of financial obligations, providing documentation for future employment, and maintaining positive exit experience.'
+      },
+      {
+        number: '2',
+        title: 'SCOPE',
+        content: 'Covers all separating employees (resignation, termination, retirement) including calculation of final dues (salary, leave encashment, gratuity, etc.), recovery of amounts owed, settlement disbursement, and issuance of separation documents. Applicable to all employment categories with statutory and contractual compliance.'
+      },
+      {
+        number: '3',
+        title: 'FULL & FINAL SETTLEMENT COMPONENTS',
+        subsections: [
+          {
+            number: '3.1',
+            title: 'Amounts Payable to Employee',
+            content: `(i) Salary for Last Month:
+• Prorated salary till last working day
+• Formula: (Monthly Salary / Days in Month) × Days Worked
+
+(ii) Leave Encashment:
+• Unused Earned Leave (EL/PL) balance
+• Calculation: (Basic Salary / 30) × Unused Leave Days
+• Maximum days encashable: As per policy (e.g., 30 days)
+• Note: Casual Leave, Sick Leave typically NOT encashable
+
+(iii) Bonus (If Applicable):
+• Pro-rated annual bonus (if due and policy allows)
+• Statutory bonus (Payment of Bonus Act)
+
+(iv) Reimbursements:
+• Pending expense claims (with valid bills)
+• Travel, mobile, or other reimbursements
+
+(v) Gratuity (If Eligible):
+• Applicable after 5 years of continuous service
+• Formula: (Last drawn Basic × 15 days × Years of Service) / 26
+• Paid as per Payment of Gratuity Act
+
+(vi) Provident Fund (PF):
+• EPF: Employee + Employer contribution with interest
+• Withdrawal process: Employee files online claim (UAN portal)
+• Hospital provides necessary certificates
+
+(vii) Other Benefits:
+• Performance incentives (if declared and due)
+• Any other contractual dues`
+          },
+          {
+            number: '3.2',
+            title: 'Amounts Recoverable from Employee',
+            content: `(i) Notice Period Shortfall:
+• If notice not served or not paid in lieu
+• Salary for unserved notice days
+
+(ii) Loans & Advances:
+• Outstanding loan balance
+• Salary advances not recovered
+
+(iii) Asset Loss or Damage:
+• Cost of lost or damaged company assets
+
+(iv) Training Bond Amount:
+• If employee leaving before bond period ends
+
+(v) Excess Leave Taken:
+• Leave without Pay (LOP) adjustment
+• Leave taken beyond entitlement
+
+(vi) Miscellaneous:
+• Canteen dues, transport charges
+• Any other amounts owed`
+          }
+        ]
+      },
+      {
+        number: '4',
+        title: 'F&F CALCULATION PROCESS',
+        content: `(i) Payroll Department Prepares F&F Statement (Annexure N.4.1):
+• Last month salary calculation
+• Leave balance verification from HRMS
+• Leave encashment calculation
+• Pending reimbursements
+• Recoverable amounts from clearance forms
+
+(ii) Finance Verification:
+• Loan balances
+• Advance recovery
+• Expense settlements
+
+(iii) HR Review:
+• Policy compliance checked
+• Gratuity eligibility and calculation
+• Any pending disciplinary or legal issues
+
+(iv) Net F&F Amount:
+• Total Payables - Total Recoverables = Net Payable
+
+(v) Approval:
+• Department Head approval
+• Finance approval
+• CHRO/HR Head final authorization`
+      },
+      {
+        number: '5',
+        title: 'F&F DISBURSEMENT',
+        content: `Timeline:
+• Within 30-45 days of last working day (as per policy/law)
+• Earlier if clearance completed quickly
+
+Mode of Payment:
+• Direct bank transfer (NEFT/RTGS) to employee salary account
+• Cheque (if bank details not available)
+
+Communication:
+• F&F statement emailed to employee
+• Breakdown of calculation provided
+• Employee can raise queries within 7 days
+• Corrections made if errors found`
+      },
+      {
+        number: '6',
+        title: 'SERVICE CERTIFICATES ISSUANCE',
+        subsections: [
+          {
+            number: '6.1',
+            title: 'Relieving Letter',
+            content: `Issued On:
+• Last working day or immediately after
+
+Contents:
+• Employee name, designation, employee ID
+• Date of joining and date of relieving
+• Statement: "Employee is hereby relieved from duties"
+• Notice period served or waived
+• Good wishes for future
+• Signed by CHRO or Authorized Signatory
+
+Importance:
+• Proof of separation from previous employer
+• Required by new employer for joining
+
+Annexure: N.4.2 - Relieving Letter Template`
+          },
+          {
+            number: '6.2',
+            title: 'Experience Certificate / Service Certificate',
+            content: `Issued On:
+• After clearance and F&F (typically with relieving letter)
+
+Contents:
+• Employee name, designation, department
+• Period of employment (joining to relieving date)
+• Brief description of role and responsibilities
+• Statement of satisfactory service (if applicable)
+• Skills demonstrated or achievements (if policy permits)
+• Good wishes for future endeavors
+• Signed by CHRO or Authorized Signatory
+
+Constraints:
+• Factual information only (dates, designation, department)
+• No negative comments (even for terminated employees - unless gross misconduct)
+• No salary details (unless specifically requested and policy allows)
+
+Annexure: N.4.3 - Experience Certificate Template`
+          },
+          {
+            number: '6.3',
+            title: 'No Objection Certificate (NOC) - If Requested',
+            content: `For specific purposes (higher education, visa, loan):
+• Certifies employee worked at hospital
+• No dues pending
+• No objection to pursuing stated purpose
+• Issued on request with valid reason`
+          }
+        ]
+      },
+      {
+        number: '7',
+        title: 'WITHHOLDING OF CERTIFICATES',
+        content: `Certificates may be withheld if:
+• Clearance incomplete
+• Assets not returned
+• Dues not settled
+• Pending disciplinary inquiry
+• Legal proceedings ongoing
+
+Employee informed of reasons
+Certificates issued upon resolution`
+      },
+      {
+        number: '8',
+        title: 'FORM 16 & TAX DOCUMENTS',
+        content: `• Form 16 (TDS Certificate) issued in May/June for previous financial year
+• If employee leaves mid-year:
+    - Part A of Form 16 issued (TDS deducted till exit)
+    - OR salary certificate for tax filing
+• Employee responsible for filing income tax return`
+      },
+      {
+        number: '9',
+        title: 'PF WITHDRAWAL',
+        content: `Process:
+• Employee files PF withdrawal claim online (UAN portal)
+• Claims: Full withdrawal (Form 19) or advance (Form 31)
+• Hospital HR certifies claim (online attestation)
+• EPFO processes and disburses to employee
+• Timeline: 15-30 days from claim filing
+
+Hospital Role:
+• Provide PF account details
+• Attest online claims promptly`
+      },
+      {
+        number: '10',
+        title: 'GRATUITY PAYMENT',
+        content: `Eligibility:
+• 5 years of continuous service
+• Resignation, retirement, death, disability
+
+Payment:
+• Included in F&F settlement OR
+• Separate payment within 30 days of separation (as per law)
+
+Documentation:
+• Gratuity calculation sheet
+• Payment advice`
+      },
+      {
+        number: '11',
+        title: 'EMPLOYEE QUERIES & DISPUTES',
+        content: `If Employee Disagrees with F&F:
+• Raise query via email to HR/Finance
+• Provide specific concerns
+• HR reviews and responds within 7 days
+• Corrections made if valid
+• If dispute persists: Escalation to senior management
+• Legal recourse: Labor commissioner, civil court (as last resort)`
+      },
+      {
+        number: '12',
+        title: 'POST-EXIT DOCUMENTATION',
+        content: `HR Maintains:
+• F&F calculation sheet
+• Payment proof (bank transfer receipt)
+• Clearance form (all departments)
+• Relieving and experience letters (copies)
+• Exit interview notes
+• Separation reason and category
+• Records retained for 7 years`
+      },
+      {
+        number: '13',
+        title: 'REFERENCE VERIFICATION POLICY',
+        content: `Future Employers May Contact for Reference:
+• Hospital provides:
+    - Dates of employment
+    - Designation
+    - Confirmation of employment
+• Detailed performance feedback: Only with employee written consent
+• Negative information: Avoided unless serious misconduct
+• HR handles reference checks (not shared with managers without protocol)`
+      },
+      {
+        number: '14',
+        title: 'RE-EMPLOYMENT (BOOMERANG HIRING)',
+        content: `Former Employees May Apply to Rejoin:
+• Eligible if separated amicably (resigned with good record)
+• Normal hiring process followed
+• Previous employment considered positively (familiar with culture)
+• Continuity of service for gratuity: As per policy (typically fresh start)
+• Encouraged for good performers who left for genuine reasons`
+      },
+      {
+        number: '15',
+        title: 'REFERENCE DOCUMENTS',
+        content: 'Exit Management Policy, Payment of Gratuity Act 1972, Payment of Bonus Act 1965, EPF Act, Income Tax Act, Annexure N.4.1: F&F Settlement Statement, Annexure N.4.2: Relieving Letter Template, Annexure N.4.3: Experience Certificate Template'
+      }
+    ]
   }
 };
 
