@@ -309,7 +309,10 @@ const HRByLaws = ({ setActiveModule }) => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
           {/* Governance Wizard */}
-          <div className="group bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl p-6 text-white hover:shadow-2xl transition-all transform hover:-translate-y-1 cursor-pointer">
+          <div 
+            onClick={() => setShowGovernanceWizard(true)}
+            className="group bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl p-6 text-white hover:shadow-2xl transition-all transform hover:-translate-y-1 cursor-pointer"
+          >
             <div className="w-14 h-14 bg-white/20 rounded-xl flex items-center justify-center mb-4 backdrop-blur">
               <FileText className="w-8 h-8" />
             </div>
