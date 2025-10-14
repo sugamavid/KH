@@ -504,16 +504,16 @@ const HRSOPs = ({ setActiveModule }) => {
         )}
 
         {/* Sidebar Header */}
-        <div className="p-4 border-b-2 border-slate-200 bg-gradient-to-r from-green-800 to-emerald-900">
+        <div className="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 p-4 border-b-2 border-amber-500">
           <div className="flex items-center justify-between">
             {!sidebarCollapsed && (
               <div className="flex items-center space-x-3">
-                <div className="w-10 h-10 rounded-lg bg-white bg-opacity-20 flex items-center justify-center">
-                  <BookOpen className="w-6 h-6 text-white" />
+                <div className="w-12 h-12 bg-amber-500 rounded-xl flex items-center justify-center shadow-lg">
+                  <BookOpen className="w-6 h-6 text-blue-900" />
                 </div>
                 <div>
-                  <h2 className="text-sm font-bold text-white">HR SOPs</h2>
-                  <p className="text-xs text-green-200">10 Procedures</p>
+                  <h2 className="text-sm font-bold text-white">HR SOPs Manual</h2>
+                  <p className="text-xs text-blue-200">75 Procedures</p>
                 </div>
               </div>
             )}
