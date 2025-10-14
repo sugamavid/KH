@@ -1954,9 +1954,316 @@ export const policyImplementationGuides = {
       'Tax compliance and deductions'
     ]
   },
-  section14_data_privacy: { policyName: 'Data Privacy and Confidentiality', byLawsSection: 'section14', category: 'Compliance', status: 'detailed_guide_pending' },
-  section15_intellectual_property: { policyName: 'Intellectual Property Rights', byLawsSection: 'section15', category: 'Legal', status: 'detailed_guide_pending' },
-  section16_discipline: { policyName: 'Disciplinary Procedures', byLawsSection: 'section16', category: 'HR Operations', status: 'detailed_guide_pending' },
+  // SECTION 14: DATA PRIVACY & CONFIDENTIALITY
+  section14_data_privacy: {
+    policyName: 'Data Privacy and Confidentiality',
+    byLawsSection: 'section14',
+    category: 'Compliance',
+    implementationSteps: [
+      {
+        step: 1,
+        phase: 'Planning',
+        activity: 'Develop Data Privacy Policy',
+        details: 'Create comprehensive policy covering patient data, employee data, research data, and organizational information',
+        responsibleCommittee: 'hr_committee',
+        responsibleIndividuals: ['Data Protection Officer', 'IT Security Head', 'Legal Advisor'],
+        timeline: '2-3 weeks',
+        outputs: ['Data privacy policy', 'Data classification scheme', 'Access control matrix', 'Breach response plan'],
+        checkpoints: ['Policy comprehensive', 'Legal compliance verified', 'Board approval obtained']
+      },
+      {
+        step: 2,
+        phase: 'Preparation',
+        activity: 'Data Mapping and Inventory',
+        details: 'Identify all data types, storage locations, processing activities, and data flows',
+        responsibleCommittee: 'hr_committee',
+        responsibleIndividuals: ['Data Protection Officer', 'IT Team', 'Department Heads'],
+        timeline: '3-4 weeks',
+        outputs: ['Data inventory', 'Data flow maps', 'Processing activities register', 'Risk assessment'],
+        checkpoints: ['All data mapped', 'High-risk areas identified', 'Documentation complete']
+      },
+      {
+        step: 3,
+        phase: 'Preparation',
+        activity: 'Technical Security Implementation',
+        details: 'Implement encryption, access controls, audit trails, backup systems, and security monitoring',
+        responsibleCommittee: 'hr_committee',
+        responsibleIndividuals: ['IT Security Head', 'IT Team', 'Vendors'],
+        timeline: '6-8 weeks',
+        outputs: ['Encryption systems', 'Access control systems', 'Audit logs', 'Monitoring tools', 'Backup systems'],
+        checkpoints: ['Security measures operational', 'Systems tested', 'Compliance verified']
+      },
+      {
+        step: 4,
+        phase: 'Implementation',
+        activity: 'Staff Training on Data Privacy',
+        details: 'Train all staff on data privacy principles, handling practices, confidentiality obligations',
+        responsibleCommittee: 'hr_committee',
+        responsibleIndividuals: ['Data Protection Officer', 'Training Team'],
+        timeline: '2-3 months',
+        outputs: ['Training modules', 'Completion records', 'Signed confidentiality agreements'],
+        checkpoints: ['100% staff trained', 'Understanding verified', 'Agreements signed']
+      },
+      {
+        step: 5,
+        phase: 'Implementation',
+        activity: 'Access Control Management',
+        details: 'Implement role-based access, need-to-know principle, regular access reviews',
+        responsibleCommittee: 'hr_committee',
+        responsibleIndividuals: ['IT Security Head', 'Department Heads', 'Data Protection Officer'],
+        timeline: 'Ongoing',
+        outputs: ['Access permissions', 'Access logs', 'Quarterly access reviews'],
+        checkpoints: ['Least privilege enforced', 'Regular reviews conducted', 'Violations addressed']
+      },
+      {
+        step: 6,
+        phase: 'Monitoring',
+        activity: 'Privacy Impact Assessments',
+        details: 'Conduct PIAs for new systems, processes, or data uses involving personal information',
+        responsibleCommittee: 'hr_committee',
+        responsibleIndividuals: ['Data Protection Officer', 'Project Owners'],
+        timeline: 'As needed for new initiatives',
+        outputs: ['PIA reports', 'Risk mitigation plans', 'Approval records'],
+        checkpoints: ['PIAs completed before deployment', 'Risks addressed', 'Approvals obtained']
+      },
+      {
+        step: 7,
+        phase: 'Monitoring',
+        activity: 'Data Breach Response',
+        details: 'Implement breach detection, response procedures, notification processes, and remediation',
+        responsibleCommittee: 'hr_committee',
+        responsibleIndividuals: ['Data Protection Officer', 'IT Security', 'Legal', 'Communications'],
+        timeline: 'Within 72 hours of breach',
+        outputs: ['Breach reports', 'Notifications', 'Remediation actions', 'Lessons learned'],
+        checkpoints: ['Breach contained', 'Required notifications made', 'Systems secured']
+      }
+    ],
+    committeeInvolved: ['hr_committee', 'board_of_directors'],
+    approvalChain: [
+      { level: 'Data Protection Officer', for: 'Day-to-day privacy compliance' },
+      { level: 'IT Security Head', for: 'Technical security measures' },
+      { level: 'Legal Advisor', for: 'Legal compliance and breach response' },
+      { level: 'Administrative Director', for: 'Policy approval and major decisions' },
+      { level: 'Board of Directors', for: 'Data privacy strategy' }
+    ],
+    criticalSuccess: [
+      'Zero data breaches',
+      'Full regulatory compliance',
+      'Staff awareness and adherence',
+      'Robust technical safeguards'
+    ],
+    risks: [
+      { risk: 'Data breach', mitigation: 'Multi-layered security, monitoring, incident response plan' },
+      { risk: 'Non-compliance', mitigation: 'Regular audits, legal reviews, staff training' },
+      { risk: 'Insider threats', mitigation: 'Access controls, monitoring, confidentiality agreements, background checks' }
+    ],
+    legalCompliance: [
+      'Data protection regulations (GDPR, local laws)',
+      'Healthcare privacy laws (HIPAA equivalent)',
+      'Breach notification requirements',
+      'Patient consent requirements'
+    ]
+  },
+
+  // SECTION 15: INTELLECTUAL PROPERTY RIGHTS
+  section15_intellectual_property: {
+    policyName: 'Intellectual Property Rights Management',
+    byLawsSection: 'section15',
+    category: 'Legal',
+    implementationSteps: [
+      {
+        step: 1,
+        phase: 'Planning',
+        activity: 'Define IP Policy',
+        details: 'Establish policy on ownership, creation, protection, and commercialization of intellectual property',
+        responsibleCommittee: 'board_of_directors',
+        responsibleIndividuals: ['Legal Advisor', 'HR Director', 'Research Head'],
+        timeline: '2-3 weeks',
+        outputs: ['IP policy document', 'Ownership guidelines', 'Disclosure procedures', 'Commercialization process'],
+        checkpoints: ['Policy comprehensive', 'Ownership clear', 'Board approval obtained']
+      },
+      {
+        step: 2,
+        phase: 'Preparation',
+        activity: 'Employment Agreements Update',
+        details: 'Include IP clauses in all employment contracts specifying ownership and obligations',
+        responsibleCommittee: 'hr_committee',
+        responsibleIndividuals: ['Legal Advisor', 'HR Director'],
+        timeline: '1-2 weeks',
+        outputs: ['Updated contract templates', 'IP assignment clauses', 'Confidentiality clauses'],
+        checkpoints: ['All contracts updated', 'Legal review completed', 'Implementation ready']
+      },
+      {
+        step: 3,
+        phase: 'Implementation',
+        activity: 'IP Disclosure System',
+        details: 'Implement system for employees to disclose inventions, innovations, and creative works',
+        responsibleCommittee: 'board_of_directors',
+        responsibleIndividuals: ['Research Head', 'Legal Advisor', 'IT Support'],
+        timeline: '2-3 weeks',
+        outputs: ['Disclosure forms', 'Submission portal', 'Evaluation process', 'Decision workflows'],
+        checkpoints: ['System operational', 'Staff aware', 'Process clear']
+      },
+      {
+        step: 4,
+        phase: 'Implementation',
+        activity: 'IP Protection Measures',
+        details: 'File patents, trademarks, copyrights; implement trade secret protection',
+        responsibleCommittee: 'board_of_directors',
+        responsibleIndividuals: ['Legal Advisor', 'IP Consultant', 'Research Head'],
+        timeline: 'Ongoing as needed',
+        outputs: ['Patent applications', 'Trademark registrations', 'Copyright notices', 'Trade secret protocols'],
+        checkpoints: ['Valuable IP protected', 'Registrations filed', 'Documentation maintained']
+      },
+      {
+        step: 5,
+        phase: 'Monitoring',
+        activity: 'IP Portfolio Management',
+        details: 'Maintain IP register, track renewals, monitor market, assess commercialization opportunities',
+        responsibleCommittee: 'board_of_directors',
+        responsibleIndividuals: ['Legal Advisor', 'Finance Director'],
+        timeline: 'Ongoing quarterly reviews',
+        outputs: ['IP register', 'Renewal schedule', 'Valuation assessments', 'Commercialization plans'],
+        checkpoints: ['Portfolio current', 'Renewals timely', 'Value optimized']
+      }
+    ],
+    committeeInvolved: ['board_of_directors', 'hr_committee'],
+    approvalChain: [
+      { level: 'Research/Innovation Head', for: 'Initial IP evaluation' },
+      { level: 'Legal Advisor', for: 'IP protection strategy and filings' },
+      { level: 'Finance Director', for: 'Budget for IP protection' },
+      { level: 'Administrative Director', for: 'Commercialization decisions' },
+      { level: 'Board of Directors', for: 'Major IP strategy and agreements' }
+    ],
+    criticalSuccess: [
+      'Clear IP ownership',
+      'Valuable IP protected',
+      'Revenue from commercialization',
+      'Zero IP disputes'
+    ],
+    risks: [
+      { risk: 'IP theft or leakage', mitigation: 'Confidentiality agreements, security measures, legal action' },
+      { risk: 'Ownership disputes', mitigation: 'Clear contracts, disclosure system, documentation' },
+      { risk: 'Lost opportunities', mitigation: 'Regular reviews, prompt protection, commercialization strategy' }
+    ],
+    legalCompliance: [
+      'Patent laws',
+      'Trademark regulations',
+      'Copyright laws',
+      'Trade secret protection laws'
+    ]
+  },
+
+  // SECTION 16: DISCIPLINARY PROCEDURES
+  section16_discipline: {
+    policyName: 'Disciplinary Procedures',
+    byLawsSection: 'section16',
+    category: 'HR Operations',
+    implementationSteps: [
+      {
+        step: 1,
+        phase: 'Planning',
+        activity: 'Define Disciplinary Policy',
+        details: 'Establish clear policy on misconduct types, progressive discipline, investigation procedures, and penalties',
+        responsibleCommittee: 'hr_committee',
+        responsibleIndividuals: ['HR Director', 'Legal Advisor', 'Employee Representative'],
+        timeline: '2-3 weeks',
+        outputs: ['Disciplinary policy', 'Misconduct definitions', 'Penalty matrix', 'Investigation procedures'],
+        checkpoints: ['Policy clear and fair', 'Legal compliance verified', 'Board approval obtained']
+      },
+      {
+        step: 2,
+        phase: 'Preparation',
+        activity: 'Establish Disciplinary Committee',
+        details: 'Form committee with HR, management, and employee representatives for handling cases',
+        responsibleCommittee: 'hr_committee',
+        responsibleIndividuals: ['HR Director', 'Administrative Director'],
+        timeline: '1 week',
+        outputs: ['Committee charter', 'Member appointments', 'Investigation protocols', 'Hearing procedures'],
+        checkpoints: ['Committee formed', 'Members trained', 'Procedures documented']
+      },
+      {
+        step: 3,
+        phase: 'Implementation',
+        activity: 'Progressive Discipline Process',
+        details: 'Implement verbal warning → written warning → suspension → termination as per severity',
+        responsibleCommittee: 'hr_committee',
+        responsibleIndividuals: ['Supervisors', 'HR Officers', 'Department Heads'],
+        timeline: 'Ongoing',
+        outputs: ['Warning letters', 'Counseling records', 'Performance improvement plans', 'Suspension orders'],
+        checkpoints: ['Process followed', 'Documentation maintained', 'Due process ensured']
+      },
+      {
+        step: 4,
+        phase: 'Implementation',
+        activity: 'Investigation Procedures',
+        details: 'Conduct fair, thorough investigations with witness interviews, evidence collection, and findings',
+        responsibleCommittee: 'hr_committee',
+        responsibleIndividuals: ['Disciplinary Committee', 'HR Director', 'Legal Advisor'],
+        timeline: '5-15 days per case',
+        outputs: ['Investigation reports', 'Evidence files', 'Witness statements', 'Findings and recommendations'],
+        checkpoints: ['Thorough investigation', 'Both sides heard', 'Evidence documented']
+      },
+      {
+        step: 5,
+        phase: 'Implementation',
+        activity: 'Disciplinary Hearing',
+        details: 'Conduct formal hearing with employee representation, present findings, allow defense, make decision',
+        responsibleCommittee: 'hr_committee',
+        responsibleIndividuals: ['Disciplinary Committee', 'Employee', 'Representative'],
+        timeline: 'Within 7 days of investigation',
+        outputs: ['Hearing minutes', 'Decision letter', 'Penalty order', 'Appeal rights notice'],
+        checkpoints: ['Fair hearing conducted', 'Employee heard', 'Decision justified']
+      },
+      {
+        step: 6,
+        phase: 'Monitoring',
+        activity: 'Appeals Process',
+        details: 'Allow appeals to higher authority with fresh review and final decision',
+        responsibleCommittee: 'board_of_directors',
+        responsibleIndividuals: ['Administrative Director', 'Board Member', 'Legal Advisor'],
+        timeline: '10-15 days',
+        outputs: ['Appeal decision', 'Final order', 'Case closure'],
+        checkpoints: ['Appeal fairly considered', 'Final decision made', 'Case closed']
+      },
+      {
+        step: 7,
+        phase: 'Monitoring',
+        activity: 'Discipline Records Management',
+        details: 'Maintain confidential records, track patterns, analyze trends, improve policies',
+        responsibleCommittee: 'hr_committee',
+        responsibleIndividuals: ['HR Director', 'Records Officer'],
+        timeline: 'Ongoing',
+        outputs: ['Discipline register', 'Trend reports', 'Policy improvements'],
+        checkpoints: ['Records confidential', 'Patterns identified', 'Policies updated']
+      }
+    ],
+    committeeInvolved: ['hr_committee', 'board_of_directors'],
+    approvalChain: [
+      { level: 'Supervisor', for: 'Minor infractions and verbal warnings' },
+      { level: 'Department Head', for: 'Written warnings and suspensions' },
+      { level: 'Disciplinary Committee', for: 'Investigations and hearings' },
+      { level: 'HR Director', for: 'Process compliance and documentation' },
+      { level: 'Administrative Director', for: 'Termination decisions and appeals' }
+    ],
+    criticalSuccess: [
+      'Fair and consistent discipline',
+      'Due process followed',
+      'Improved employee behavior',
+      'Legal compliance maintained'
+    ],
+    risks: [
+      { risk: 'Unfair dismissal claims', mitigation: 'Due process, documentation, legal review, appeals process' },
+      { risk: 'Inconsistent application', mitigation: 'Clear policy, penalty matrix, HR oversight, training' },
+      { risk: 'Retaliation claims', mitigation: 'Independent committee, anti-retaliation policy, monitoring' }
+    ],
+    legalCompliance: [
+      'Labor laws on discipline and termination',
+      'Due process requirements',
+      'Natural justice principles',
+      'Documentation requirements'
+    ]
+  },
   section18_conflict_interest: { policyName: 'Conflict of Interest Management', byLawsSection: 'section18', category: 'Ethics', status: 'detailed_guide_pending' },
   section19_gifts_hospitality: { policyName: 'Gifts and Hospitality Policy', byLawsSection: 'section19', category: 'Ethics', status: 'detailed_guide_pending' },
   section20_wellness: { policyName: 'Employee Wellness Programs', byLawsSection: 'section20', category: 'Employee Relations', status: 'detailed_guide_pending' },
