@@ -22,6 +22,7 @@ const HRByLaws = ({ setActiveModule }) => {
   const [isPrintMode, setIsPrintMode] = useState(false);
   const [showGovernanceWizard, setShowGovernanceWizard] = useState(false);
   const [showAuthorityFinder, setShowAuthorityFinder] = useState(false);
+  const [showComplianceCenter, setShowComplianceCenter] = useState(false);
   const contentRef = useRef(null);
 
   // Professional Legal Document Formatter
