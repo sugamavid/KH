@@ -14,6 +14,12 @@ const PolicyImplementation = ({ onClose, onNavigateToSection }) => {
   const [selectedCommittee, setSelectedCommittee] = useState(null);
   const [expandedStep, setExpandedStep] = useState(null);
   const [searchQuery, setSearchQuery] = useState('');
+  
+  // Wizard state
+  const [wizardStep, setWizardStep] = useState(1); // 1-6
+  const [selectedWizardPolicy, setSelectedWizardPolicy] = useState(null);
+  const [completedSteps, setCompletedSteps] = useState([]);
+  const [stepProgress, setStepProgress] = useState({});
 
   const views = [
     { id: 'overview', name: 'Overview', icon: BookOpen },
