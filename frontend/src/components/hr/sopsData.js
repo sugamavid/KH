@@ -13440,7 +13440,310 @@ Annual Report:
     title: 'Disciplinary Process: Show Cause, Hearings, Action',
     searchTerms: ['disciplinary', 'show', 'cause', 'hearing', 'action', 'inquiry'],
     category: 'M. Grievance, Complaints & Redressal',
-    content: 'Establishes structured disciplinary process including show cause notices, hearings, and actions ensuring fairness, transparency, and natural justice.'
+    subsections: [
+      {
+        number: '1',
+        title: 'OBJECTIVE',
+        content: 'To establish structured, fair, and legally-compliant disciplinary process including show cause notices, inquiries, hearings, and actions ensuring natural justice, due process, consistent enforcement of policies, protection of employee rights, and maintenance of workplace discipline and standards.'
+      },
+      {
+        number: '2',
+        title: 'SCOPE',
+        content: 'Covers all disciplinary matters including misconduct, policy violations, performance issues warranting disciplinary action, and gross misconduct. Applicable to all employees with provisions for different severity levels and ensuring procedural fairness before imposing penalties.'
+      },
+      {
+        number: '3',
+        title: 'CATEGORIES OF MISCONDUCT',
+        subsections: [
+          {
+            number: '3.1',
+            title: 'Minor Misconduct',
+            content: `Examples:
+• Occasional lateness or unauthorized absence
+• Minor policy violations (dress code, mobile usage)
+• Negligence (not causing significant harm)
+• Unprofessional behavior
+
+Action: Verbal warning, written warning, counseling`
+          },
+          {
+            number: '3.2',
+            title: 'Major Misconduct',
+            content: `Examples:
+• Repeated minor misconduct despite warnings
+• Insubordination (refusal to follow legitimate instructions)
+• Unauthorized leave (3+ days without intimation)
+• Misuse of company resources
+• Poor performance despite counseling
+• Breach of confidentiality
+
+Action: Written warning, suspension, final warning, demotion`
+          },
+          {
+            number: '3.3',
+            title: 'Gross Misconduct (Summary Dismissal Grounds)',
+            content: `Examples:
+• Theft, fraud, embezzlement
+• Violence, assault, threats
+• Sexual harassment
+• Intoxication at work (drugs, alcohol)
+• Willful damage to property
+• Data breach or sabotage
+• Accepting bribes
+• Gross insubordination
+• Falsification of records
+• Criminal activity
+
+Action: Suspension pending inquiry, followed by termination if proven`
+          }
+        ]
+      },
+      {
+        number: '4',
+        title: 'PRINCIPLES OF DISCIPLINARY ACTION',
+        content: `• Natural Justice: Opportunity to be heard before penalty
+• Presumption of Innocence: Until proven guilty
+• Proportionality: Punishment fits the offense
+• Consistency: Similar cases treated similarly
+• Progressive Discipline: Escalation for repeated offenses
+• Timely Action: Delays weaken case
+• Documentation: All steps recorded`
+      },
+      {
+        number: '5',
+        title: 'DISCIPLINARY PROCESS STAGES',
+        subsections: [
+          {
+            number: '5.1',
+            title: 'Stage 1: Preliminary Investigation',
+            content: `• Incident reported or discovered
+• HR and supervisor conduct initial fact-finding
+• Gather prima facie evidence
+• Determine if misconduct apparent
+• Decide severity level
+• If misconduct established: Proceed to show cause
+• If no case: Close matter (with counseling if needed)`
+          },
+          {
+            number: '5.2',
+            title: 'Stage 2: Show Cause Notice',
+            content: `Issued when prima facie case exists:
+
+Contents:
+• Date of notice
+• Description of alleged misconduct (specific details: what, when, where)
+• Policies or rules violated
+• Request for written explanation
+• Deadline to respond (typically 3-5 working days)
+• Warning that failure to respond or unsatisfactory response may lead to disciplinary action
+• Signed by authorized officer (HOD, HR Manager)
+
+Delivery:
+• Hand-delivered with acknowledgment OR
+• Email with read receipt OR
+• Registered post (for serious cases)`
+          },
+          {
+            number: '5.3',
+            title: 'Stage 3: Employee Response',
+            content: `Employee submits written explanation:
+• Admits or denies allegations
+• Provides context or justification
+• May provide evidence or witness names
+• Can request time extension (reasonable requests granted)
+
+HR Reviews Response:
+• If satisfactory explanation (e.g., genuine mistake, mitigating circumstances): Warning or counseling, case closed
+• If unsatisfactory or denial: Proceed to inquiry`
+          },
+          {
+            number: '5.4',
+            title: 'Stage 4: Suspension (If Necessary)',
+            content: `Pending inquiry, employee may be suspended:
+• For gross misconduct or when presence disrupts investigation
+• Suspension is not punishment (inquiry outcome pending)
+• Paid suspension OR subsistence allowance (50% of salary, as per law)
+• Duration: Until inquiry completed (max 30-60 days typically)
+• Suspension order in writing`
+          },
+          {
+            number: '5.5',
+            title: 'Stage 5: Domestic Inquiry / Disciplinary Hearing',
+            content: `Formal inquiry conducted if:
+• Serious misconduct
+• Employee denies charges
+• Evidence unclear
+
+Inquiry Process:
+(i) Inquiry Officer appointed (senior manager, HR, or committee)
+(ii) Charge sheet issued to employee listing specific charges
+(iii) Employee given right to:
+    • Written charges in advance (7-10 days notice)
+    • Attend hearing
+    • Defend themselves
+    • Present evidence and witnesses
+    • Cross-examine witnesses (controlled)
+    • Be accompanied by colleague (not lawyer, unless policy allows)
+
+(iv) Inquiry Stages:
+    • Presentation of management case and evidence
+    • Examination of management witnesses
+    • Employee's defense and evidence
+    • Examination of defense witnesses
+    • Cross-examination by both sides
+    • Final arguments / submissions
+
+(v) Inquiry Officer findings:
+    • Charges proved / not proved
+    • Recommendations for action
+    • Report submitted to management`
+          },
+          {
+            number: '5.6',
+            title: 'Stage 6: Management Decision',
+            content: `Management reviews inquiry report:
+• Accepts findings (typically)
+• May seek clarifications or further investigation
+• Decides on punishment based on:
+    - Severity of offense
+    - Inquiry findings
+    - Employee's past record
+    - Mitigating or aggravating circumstances
+    - Organizational precedents`
+          },
+          {
+            number: '5.7',
+            title: 'Stage 7: Disciplinary Action',
+            content: `Penalties (Progressive Discipline):
+(i) Counseling / Verbal Warning:
+    • For minor first-time offenses
+    • Documented in file but not formal record
+
+(ii) Written Warning:
+    • First formal action
+    • Remains in file for 6-12 months
+    • Further misconduct may lead to severe action
+
+(iii) Final Written Warning:
+    • Second or serious misconduct
+    • Clear message: Further violation = termination
+    • Remains in file for 12-24 months
+
+(iv) Suspension without Pay:
+    • Few days (3-7) for major misconduct
+    • Punitive suspension
+
+(v) Demotion / Transfer:
+    • Reduction in grade or salary
+    • Transfer to less desirable location
+
+(vi) Termination / Dismissal:
+    • For gross misconduct or repeated violations
+    • With notice or payment in lieu
+    • For gross misconduct: Summary dismissal without notice
+
+(vii) Other:
+    • Recovery of loss caused
+    • Forfeiture of bonus/increment
+    • Denial of promotion`
+          },
+          {
+            number: '5.8',
+            title: 'Stage 8: Communication of Decision',
+            content: `Disciplinary action letter issued:
+• Details of charges and findings
+• Punishment imposed
+• Effective date
+• Right to appeal (SOP M.4)
+• Signed by authorized officer (CHRO, CEO)
+• Hand-delivered or registered post`
+          }
+        ]
+      },
+      {
+        number: '6',
+        title: 'PROCEDURAL SAFEGUARDS',
+        content: `• Clear charges communicated
+• Adequate time to prepare defense
+• Hearing conducted fairly
+• Evidence and witnesses presented
+• Right to be heard
+• Inquiry officer impartial
+• Findings based on evidence, not assumptions
+• Decision proportionate
+• Appeal rights provided`
+      },
+      {
+        number: '7',
+        title: 'DOCUMENTATION REQUIREMENTS',
+        content: `Maintain:
+• Incident reports
+• Show cause notice and employee response
+• Suspension order (if any)
+• Charge sheet
+• Inquiry proceedings (minutes, evidence, witness statements)
+• Inquiry report
+• Management decision and rationale
+• Disciplinary action letter
+• Appeal (if any) and outcome
+• Retained for 7 years (legal requirement)`
+      },
+      {
+        number: '8',
+        title: 'SPECIAL SITUATIONS',
+        subsections: [
+          {
+            number: '8.1',
+            title: 'Criminal Misconduct',
+            content: `• If offense is criminal (theft, assault, fraud):
+    - Police complaint filed
+    - Employee suspended pending police and internal inquiry
+    - Internal inquiry may await court decision or proceed independently
+    - Conviction in court: Automatic dismissal
+    - Acquittal: Internal inquiry findings considered`
+          },
+          {
+            number: '8.2',
+            title: 'Resignation During Inquiry',
+            content: `• Employee may resign during inquiry
+• Resignation accepted, but inquiry may continue for record
+• If gross misconduct proven: Dismissal on record (affects references)
+• Full & Final settlement: Any dues recovered for losses caused`
+          },
+          {
+            number: '8.3',
+            title: 'Collective Misconduct',
+            content: `• Multiple employees involved (e.g., strike, violence)
+• Individual inquiries OR combined inquiry
+• Each person's role and participation assessed individually
+• Penalties may vary based on involvement`
+          }
+        ]
+      },
+      {
+        number: '9',
+        title: 'LIMITATIONS & LEGAL COMPLIANCE',
+        content: `• Action must be taken within reasonable time of misconduct
+• Delays weaken case (doctrine of laches)
+• Cannot impose punishment without inquiry for serious cases
+• Labor laws require domestic inquiry before termination (to avoid reinstatement by labor court)
+• Evidence must be substantial, not just suspicion
+• Inquiry standards: Preponderance of probability (not beyond reasonable doubt as in criminal cases)`
+      },
+      {
+        number: '10',
+        title: 'EMPLOYEE SUPPORT DURING PROCESS',
+        content: `• Employee can be accompanied by colleague in hearings
+• Access to relevant documents and policies
+• Reasonable time to prepare defense
+• HR available for procedural clarifications (not advocacy)`
+      },
+      {
+        number: '11',
+        title: 'REFERENCE DOCUMENTS',
+        content: 'Disciplinary Policy, Code of Conduct (SOP G.1), Industrial Employment (Standing Orders) Act, Industrial Disputes Act, Annexure M.3.1: Show Cause Notice Template, Annexure M.3.2: Charge Sheet Format, Annexure M.3.3: Inquiry Proceedings Template, Annexure M.3.4: Disciplinary Action Letter Template'
+      }
+    ]
   },
 
   sopM4: {
