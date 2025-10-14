@@ -22,7 +22,12 @@ const HRByLaws = ({ setActiveModule }) => {
   const renderFormattedContent = (content) => {
     if (!content) return '';
     
+    console.log('=== PARSER CALLED ===');
+    console.log('First 200 chars:', content.substring(0, 200));
+    
     const lines = content.split('\n');
+    console.log('Total lines:', lines.length);
+    
     let html = '';
     let i = 0;
     
@@ -39,6 +44,7 @@ const HRByLaws = ({ setActiveModule }) => {
       // Check for (a) **Title:** pattern
       const mainPointMatch = trimmedLine.match(/^\(([a-z])\)\s+\*\*(.*?)\*\*:?$/);
       if (mainPointMatch) {
+        console.log('MATCHED MAIN POINT:', mainPointMatch[1], mainPointMatch[2]);
         html += `<p style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: bold; font-size: 1.1rem; color: #0f172a;">
 (${mainPointMatch[1]}) <strong>${mainPointMatch[2]}:</strong>
 </p>`;
@@ -49,6 +55,7 @@ const HRByLaws = ({ setActiveModule }) => {
       // Check for (i), (ii), (iii) sub-points
       const subPointMatch = line.match(/^\s+((?:i{1,3}|iv|v|vi{0,3}|ix|x))\)\s+(.+)$/);
       if (subPointMatch) {
+        console.log('MATCHED SUB POINT:', subPointMatch[1]);
         const text = subPointMatch[2].replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
         html += `<p style="margin-left: 3rem; margin-top: 0.75rem; margin-bottom: 0.75rem; color: #334155; line-height: 1.75;">
 <span style="font-weight: 600; color: #475569;">(${subPointMatch[1]})</span> ${text}
@@ -60,6 +67,7 @@ const HRByLaws = ({ setActiveModule }) => {
       // Check for bullets
       const bulletMatch = line.match(/^\s+•\s+(.+)$/);
       if (bulletMatch) {
+        console.log('MATCHED BULLET');
         const text = bulletMatch[1].replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
         html += `<p style="margin-left: 2.5rem; margin-top: 0.5rem; margin-bottom: 0.5rem; color: #334155; line-height: 1.75;">
 <span style="color: #d97706; font-weight: bold; font-size: 1.25rem; margin-right: 0.75rem;">•</span>${text}
@@ -73,6 +81,9 @@ const HRByLaws = ({ setActiveModule }) => {
       html += `<p style="color: #334155; line-height: 1.75; margin-bottom: 0.5rem;">${text}</p>`;
       i++;
     }
+    
+    console.log('HTML OUTPUT LENGTH:', html.length);
+    console.log('First 300 chars of HTML:', html.substring(0, 300));
     
     return html;
   };
