@@ -523,10 +523,13 @@ const HRByLaws = ({ setActiveModule }) => {
           </div>
           
           {/* Compliance Tracker */}
-          <div className="bg-white border-2 border-green-200 rounded-xl p-6 hover:shadow-lg hover:border-green-400 transition-all cursor-pointer group">
+          <div 
+            onClick={() => setShowComplianceTracker(true)}
+            className="bg-white border-2 border-green-200 rounded-xl p-6 hover:shadow-lg hover:border-green-400 transition-all cursor-pointer group"
+          >
             <div className="flex items-center gap-4 mb-4">
               <div className="p-3 bg-green-100 rounded-lg group-hover:bg-green-600 transition-colors">
-                <TrendingUp className="w-7 h-7 text-green-600 group-hover:text-white transition-colors" />
+                <Shield className="w-7 h-7 text-green-600 group-hover:text-white transition-colors" />
               </div>
               <h3 className="text-lg font-bold text-slate-900 group-hover:text-green-600 transition-colors">Compliance Tracker</h3>
             </div>
