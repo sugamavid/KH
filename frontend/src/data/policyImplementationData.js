@@ -402,8 +402,7 @@ export const policyImplementationGuides = {
       'Equal treatment requirements',
       'Documentation and record-keeping requirements'
     ]
-  }
-};
+  },
 
   // SECTION 8: PERFORMANCE MANAGEMENT
   section8_performance: {
