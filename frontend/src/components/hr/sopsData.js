@@ -7137,7 +7137,217 @@ Document mid-PIP review in writing`
     title: 'Promotion Review & IJP (Internal Job Posting) Management',
     searchTerms: ['promotion', 'ijp', 'internal', 'job', 'posting', 'career', 'growth'],
     category: 'H. Performance Management',
-    content: 'Establishes transparent, merit-based framework for promotion review and Internal Job Posting encouraging internal mobility and recognising high performers.'
+    subsections: [
+      {
+        number: '1',
+        title: 'OBJECTIVE',
+        content: 'To establish a transparent, merit-based, and structured framework for promotion review and Internal Job Posting (IJP) management encouraging internal talent mobility, recognizing high performers, providing career growth opportunities, and ensuring fair and objective advancement while aligning with organizational succession planning.'
+      },
+      {
+        number: '2',
+        title: 'SCOPE',
+        content: 'Applicable to all confirmed employees eligible for promotion or internal transfers. Covers promotion criteria, IJP process, and approval workflows.'
+      },
+      {
+        number: '3',
+        title: 'PROMOTION FRAMEWORK',
+        subsections: [
+          {
+            number: '3.1',
+            title: 'Promotion Eligibility',
+            content: `Minimum Criteria:
+• Completed minimum tenure in current grade:
+  - Junior to Mid-level: 2 years
+  - Mid to Senior: 3 years
+  - Senior to Management: 4-5 years
+• Performance ratings:
+  - Last 2 years: Minimum "Meets Expectations" (3/5)
+  - At least one "Exceeds Expectations" (4/5) in last 3 years
+• No active disciplinary warnings
+• Completed all mandatory training and certifications
+• Demonstrated readiness for next level responsibilities
+
+Exceptions:
+• Fast-track promotion for exceptional performers (with CHRO approval)
+• Acting role conversion to permanent (after 6 months)`
+          },
+          {
+            number: '3.2',
+            title: 'Promotion Criteria',
+            content: `Promotion based on:
+(i) Performance (50%):
+    • Consistent goal achievement
+    • Quality of work and outcomes
+    • Going beyond job description
+
+(ii) Potential (30%):
+    • Demonstrated leadership or managerial ability
+    • Ability to handle higher responsibilities
+    • Willingness to take on challenges
+
+(iii) Competency (20%):
+    • Technical/functional expertise
+    • Behavioral competencies aligned with next level
+    • Certifications or qualifications relevant to role`
+          },
+          {
+            number: '3.3',
+            title: 'Promotion Review Process',
+            content: `(i) Annual Promotion Cycle (Post-appraisal):
+    • February-March: Promotion review window
+    • Supervisor nominates eligible candidates
+    • Submits promotion recommendation to Department Head
+
+(ii) Department Level Review:
+    • Department Head reviews all nominations
+    • Assesses relative merit within department
+    • Shortlists candidates
+
+(iii) Promotion Committee (for senior roles):
+    • Comprised of: CHRO, Functional Heads, Department Heads
+    • Reviews shortlisted candidates
+    • Interviews candidates (for management roles)
+    • Recommends final promotions
+
+(iv) CHRO Approval:
+    • Final approval by CHRO
+    • Budget considerations
+
+(v) Promotion Communication (April):
+    • Promotion letters issued
+    • Effective date, new designation, revised salary communicated
+    • Congratulations and expectations for new role discussed`
+          }
+        ]
+      },
+      {
+        number: '4',
+        title: 'INTERNAL JOB POSTING (IJP) SYSTEM',
+        subsections: [
+          {
+            number: '4.1',
+            title: 'Purpose of IJP',
+            content: `• Provide career growth and lateral movement opportunities
+• Fill vacancies with internal talent (cost-effective)
+• Retain talent by showing growth pathways
+• Encourage skill diversification and cross-functional exposure`
+          },
+          {
+            number: '4.2',
+            title: 'IJP Eligibility',
+            content: `• Completed minimum 1 year in current role
+• "Meets Expectations" rating or above
+• No active performance or disciplinary issues
+• Current supervisor informed and release approved`
+          },
+          {
+            number: '4.3',
+            title: 'IJP Process',
+            content: `(i) Job Posting:
+    • Vacancies posted on internal portal/email
+    • Job description, eligibility, application deadline
+    • Open for 7-10 days
+
+(ii) Application:
+    • Eligible employees apply online
+    • Attach updated resume
+    • Must inform current supervisor before applying
+
+(iii) Current Manager Consent:
+    • HR seeks consent from current manager
+    • Manager can delay release (max 60 days) for critical transition
+    • Cannot block outright (employee's career growth right)
+
+(iv) Screening:
+    • HR screens applications for eligibility
+    • Shortlists candidates based on qualifications and performance
+
+(v) Interview:
+    • Hiring manager interviews shortlisted candidates
+    • Assessment for role fit
+
+(vi) Selection:
+    • Best candidate selected
+    • Offer communicated
+    • Transition plan agreed with both managers
+
+(vii) Transfer:
+    • Notice period (typically 30 days)
+    • Handover to current team
+    • Joining new role with transition support`
+          },
+          {
+            number: '4.4',
+            title: 'IJP Types',
+            content: `(i) Lateral Move:
+    • Same level, different function/department
+    • Skill diversification
+
+(ii) Vertical Move:
+    • Higher level role (promotion via IJP)
+    • Career advancement
+
+(iii) Rotational Assignment:
+    • Temporary assignment (6-12 months)
+    • Development opportunity
+    • Return to original role or permanent move based on performance`
+          }
+        ]
+      },
+      {
+        number: '5',
+        title: 'FAIRNESS AND TRANSPARENCY',
+        content: `• All vacancies must be posted internally before external hiring
+• Exception: Specialized roles not available internally
+• External hiring alongside IJP: Internal candidates get preference if equally qualified
+• Rejection feedback provided to internal applicants
+• No favoritism or nepotism; merit-based selection
+• HR monitors for bias or unfair practices`
+      },
+      {
+        number: '6',
+        title: 'FAILED PROMOTION - HANDLING DISAPPOINTMENT',
+        content: `If employee not promoted:
+(i) Supervisor provides feedback:
+    • Gaps identified
+    • Development areas suggested
+    • Timeline for next eligibility
+
+(ii) Development Plan:
+    • Specific actions to improve promotion readiness
+    • Training, stretch assignments, mentoring
+
+(iii) Open Communication:
+    • Encourage employee to discuss career aspirations
+    • Explore alternate pathways (lateral moves, project leads)
+
+(iv) Retention Risk:
+    • HR monitors high performers not promoted (flight risk)
+    • Proactive engagement to retain`
+      },
+      {
+        number: '7',
+        title: 'SUCCESSION PLANNING LINKAGE',
+        content: `• Promotion decisions aligned with succession planning
+• High-potential employees groomed for critical roles
+• Development assignments given to prepare for future promotions
+• Talent pipeline maintained for key positions`
+      },
+      {
+        number: '8',
+        title: 'DOCUMENTATION',
+        content: `• Promotion recommendations documented
+• Committee discussions recorded
+• Interview scorecards filed
+• Promotion letters retained in personnel file
+• IJP applications and interview notes archived`
+      },
+      {
+        number: '9',
+        title: 'REFERENCE DOCUMENTS',
+        content: 'HR By-Laws (Promotion Policy), Career Progression Framework, Annexure H.5.1: Promotion Recommendation Form, Annexure H.5.2: IJP Application Form'
+      }
+    ]
   },
 
   sopH6: {
@@ -7146,6 +7356,261 @@ Document mid-PIP review in writing`
     title: 'Employee Recognition & Award Nomination',
     searchTerms: ['recognition', 'award', 'nomination', 'appreciation', 'reward'],
     category: 'H. Performance Management',
+    subsections: [
+      {
+        number: '1',
+        title: 'OBJECTIVE',
+        content: 'To establish a structured, fair, and motivating employee recognition and awards program celebrating exceptional performance, innovation, values demonstration, and long service, thereby fostering a culture of excellence, boosting morale, enhancing engagement, and retaining top talent.'
+      },
+      {
+        number: '2',
+        title: 'SCOPE',
+        content: 'Applicable to all employees. Covers spot recognition, quarterly awards, annual awards, and long service recognition.'
+      },
+      {
+        number: '3',
+        title: 'RECOGNITION PHILOSOPHY',
+        content: `• Recognition is timely (close to the achievement)
+• Recognition is specific (cite exact contribution)
+• Recognition is public (where appropriate)
+• Recognition is sincere and meaningful
+• Recognition is not limited to monetary rewards
+• Everyone can be recognized (not just top performers)
+• Peer-to-peer recognition encouraged`
+      },
+      {
+        number: '4',
+        title: 'TYPES OF RECOGNITION',
+        subsections: [
+          {
+            number: '4.1',
+            title: 'Informal Recognition (Ongoing)',
+            content: `(i) Verbal Appreciation:
+    • Immediate thank you or praise
+    • In team meetings or one-on-one
+    • Cost: Zero, Impact: High
+
+(ii) Thank You Notes/Emails:
+    • Written appreciation from supervisor
+    • Cc to team or HR
+    • Builds morale
+
+(iii) Team Celebrations:
+    • Team lunch or coffee for milestone achievement
+    • Celebrating project completion
+
+(iv) Peer-to-Peer Recognition Platform:
+    • Digital platform for colleagues to appreciate each other
+    • "Kudos" or "High Five" cards
+    • Visible to all employees`
+          },
+          {
+            number: '4.2',
+            title: 'Spot Awards (Monthly)',
+            content: `Purpose: Immediate recognition for exceptional act or contribution
+
+Process:
+(i) Supervisor nominates employee with justification
+(ii) HR approves (sanity check)
+(iii) Award: Certificate + ₹1,000-5,000 cash/voucher
+(iv) Announced in monthly town hall or department meeting
+
+Eligibility: Any employee at any time
+
+Examples:
+• Going extra mile to resolve patient issue
+• Quick problem-solving during crisis
+• Innovation or process improvement idea implemented
+• Stepping up during colleague's absence`
+          },
+          {
+            number: '4.3',
+            title: 'Quarterly Awards',
+            content: `Categories:
+(i) Best Performer (by department):
+    • Top performer based on KPIs
+    • ₹5,000-10,000 + Certificate + Trophy
+
+(ii) Best Team:
+    • Team that achieved outstanding results
+    • Each member receives certificate + team outing/lunch
+
+(iii) Innovation Award:
+    • Best innovation or improvement suggestion implemented
+    • ₹10,000 + Recognition
+
+(iv) Patient Delight Award (for patient-facing staff):
+    • Highest patient satisfaction scores or exemplary patient care
+    • ₹5,000 + Certificate
+
+Selection:
+• Nominated by supervisors
+• Shortlisted by departmental committee
+• Winners announced at quarterly review meeting`
+          },
+          {
+            number: '4.4',
+            title: 'Annual Awards (Grand Event)',
+            content: `Timeline: Annually in Q1 or Q4 (Annual Day celebration)
+
+Major Categories:
+(i) Employee of the Year:
+    • Highest overall contribution
+    • One winner across hospital
+    • ₹50,000 + Trophy + Certificate + Special recognition
+
+(ii) Excellence in Clinical Care (Doctor of the Year):
+    • Outstanding patient outcomes, clinical excellence
+    • ₹25,000 + Trophy
+
+(iii) Excellence in Nursing (Nurse of the Year):
+    • Exceptional patient care and commitment
+    • ₹25,000 + Trophy
+
+(iv) Excellence in Support Services:
+    • Contribution from non-clinical staff
+    • ₹15,000 + Trophy
+
+(v) Leadership Excellence:
+    • Best people manager based on team feedback
+    • ₹20,000 + Trophy
+
+(vi) Rising Star:
+    • High-potential employee (< 3 years service)
+    • ₹10,000 + Trophy
+
+(vii) Values Champion:
+    • Exemplary demonstration of hospital values
+    • ₹10,000 + Trophy
+
+(viii) Innovation and Excellence:
+    • Breakthrough innovation or process transformation
+    • ₹25,000 + Trophy
+
+Selection Process:
+• Nominations by supervisors, peers, and self-nomination allowed
+• Evaluation by Awards Committee (CHRO, HODs, previous winners)
+• Winners announced at gala Annual Day event
+• Presence of Board members and senior leadership`
+          },
+          {
+            number: '4.5',
+            title: 'Long Service Awards',
+            content: `Recognizing loyalty and tenure:
+
+5 Years:
+• Certificate + ₹5,000
+
+10 Years:
+• Trophy + ₹15,000 + 3 days extra leave
+
+15 Years:
+• Plaque + ₹25,000 + 5 days extra leave
+
+20 Years:
+• Gold Medal + ₹50,000 + 7 days extra leave
+
+25 Years:
+• Lifetime Achievement Award + ₹1,00,000 + Felicitation ceremony
+
+Presented during Annual Day or special event`
+          }
+        ]
+      },
+      {
+        number: '5',
+        title: 'NOMINATION PROCESS',
+        subsections: [
+          {
+            number: '5.1',
+            title: 'Who Can Nominate',
+            content: `• Supervisors (for team members)
+• Peers (for colleagues)
+• Self-nomination (for certain categories)
+• Patients or families (written appreciation letters)`
+          },
+          {
+            number: '5.2',
+            title: 'Nomination Criteria',
+            content: `Nomination must include:
+• Specific achievement or contribution
+• Impact on patients, team, or organization
+• Evidence or examples
+• Alignment with award category
+• Supporting documents if any (metrics, testimonials)`
+          },
+          {
+            number: '5.3',
+            title: 'Evaluation and Selection',
+            content: `(i) Screening by HR: Verify eligibility
+(ii) Shortlisting by Awards Committee
+(iii) Scoring based on:
+    • Impact and results
+    • Innovation and creativity
+    • Teamwork and values
+    • Consistency and sustainability
+(iv) Final selection by committee vote
+(v) Winners kept confidential until announcement`
+          }
+        ]
+      },
+      {
+        number: '6',
+        title: 'RECOGNITION BEST PRACTICES',
+        content: `• Timely: Recognize soon after achievement
+• Specific: Mention exact contribution, not vague praise
+• Public: Celebrate openly (with employee's consent)
+• Sincere: Genuine appreciation, not routine formality
+• Inclusive: Recognize at all levels, not just senior staff
+• Balanced: Mix of individual and team recognition
+• Transparent: Clear criteria, fair selection process`
+      },
+      {
+        number: '7',
+        title: 'NON-MONETARY RECOGNITION',
+        content: `Beyond cash/vouchers:
+• Feature in hospital newsletter or intranet
+• Lunch with CEO/Medical Director
+• Preferred shift choice (for shift workers)
+• Parking privileges
+• Professional development opportunities (conference sponsorship)
+• Flexible work hours (for a period)
+• "Employee of the Month" wall of fame`
+      },
+      {
+        number: '8',
+        title: 'TAX AND PAYROLL IMPLICATIONS',
+        content: `• Cash awards and vouchers: Taxable as perquisites
+• TDS deducted as per IT Act
+• Reflected in salary slip and Form 16
+• Non-monetary recognition: Generally not taxable`
+      },
+      {
+        number: '9',
+        title: 'RECOGNITION COMMUNICATION',
+        content: `• Awards announced via email, intranet, notice boards
+• Photos and stories shared in hospital newsletter
+• Social media (with consent) for major awards
+• Certificates/trophies presented ceremonially
+• Recognition creates positive stories and motivation`
+      },
+      {
+        number: '10',
+        title: 'MEASURING IMPACT',
+        content: `Track:
+• Number of recognitions given (aim: 10-15% employees/year)
+• Employee engagement scores post-recognition
+• Retention of recognized employees
+• Peer-to-peer recognition participation
+• Employee feedback on recognition program effectiveness`
+      },
+      {
+        number: '11',
+        title: 'REFERENCE DOCUMENTS',
+        content: 'Employee Recognition Policy, Annexure H.6.1: Award Nomination Form, Annexure H.6.2: Awards Evaluation Scorecard'
+      }
+    ]
+  },
     content: 'Establishes transparent Employee Recognition Framework rewarding exemplary conduct, outstanding performance, and values-aligned behaviour through formal Award Nomination process.'
   },
 
