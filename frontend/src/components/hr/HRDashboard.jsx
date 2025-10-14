@@ -11,7 +11,7 @@ import ReportsAnalytics from './ReportsAnalytics';
 import ToolsCalculators from './ToolsCalculators';
 import HRByLaws from './HRByLaws';
 import HRSOPs from './HRSOPs';
-import HRAnnexures from './HRAnnexuresNew';
+import HRAnnexures from './HRAnnexures';
 import DocumentManagement from './DocumentManagement';
 
 const HRDashboard = () => {
