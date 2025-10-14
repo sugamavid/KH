@@ -994,6 +994,19 @@ const HRByLaws = ({ setActiveModule }) => {
         />
       )}
 
+      {/* Report Generator Modal */}
+      {showReportGenerator && (
+        <ReportGenerator 
+          onClose={() => setShowReportGenerator(false)}
+          onNavigateToSection={(sectionId) => {
+            setActiveSection(sectionId);
+            if (contentRef.current) {
+              contentRef.current.scrollTop = 0;
+            }
+          }}
+        />
+      )}
+
       {/* Print Styles */}
       <style jsx>{`
         @media print {
