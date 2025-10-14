@@ -958,6 +958,19 @@ const HRByLaws = ({ setActiveModule }) => {
         />
       )}
 
+      {/* Audit Assistant Modal */}
+      {showAuditAssistant && (
+        <AuditAssistant 
+          onClose={() => setShowAuditAssistant(false)}
+          onNavigateToSection={(sectionId) => {
+            setActiveSection(sectionId);
+            if (contentRef.current) {
+              contentRef.current.scrollTop = 0;
+            }
+          }}
+        />
+      )}
+
       {/* Print Styles */}
       <style jsx>{`
         @media print {
