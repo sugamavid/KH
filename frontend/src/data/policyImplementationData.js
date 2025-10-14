@@ -2264,9 +2264,80 @@ export const policyImplementationGuides = {
       'Documentation requirements'
     ]
   },
-  section18_conflict_interest: { policyName: 'Conflict of Interest Management', byLawsSection: 'section18', category: 'Ethics', status: 'detailed_guide_pending' },
-  section19_gifts_hospitality: { policyName: 'Gifts and Hospitality Policy', byLawsSection: 'section19', category: 'Ethics', status: 'detailed_guide_pending' },
-  section20_wellness: { policyName: 'Employee Wellness Programs', byLawsSection: 'section20', category: 'Employee Relations', status: 'detailed_guide_pending' },
+  // SECTION 18: CONFLICT OF INTEREST
+  section18_conflict_interest: {
+    policyName: 'Conflict of Interest Management',
+    byLawsSection: 'section18',
+    category: 'Ethics',
+    implementationSteps: [
+      { step: 1, phase: 'Planning', activity: 'Define COI Policy', details: 'Establish policy defining conflicts, disclosure requirements, and management procedures', responsibleCommittee: 'ethics_committee', responsibleIndividuals: ['Ethics Officer', 'Legal Advisor'], timeline: '2 weeks', outputs: ['COI policy', 'Disclosure forms', 'Assessment procedures'], checkpoints: ['Policy comprehensive', 'Examples clear', 'Board approved'] },
+      { step: 2, phase: 'Implementation', activity: 'Annual Disclosures', details: 'Require all staff to annually disclose potential conflicts of interest', responsibleCommittee: 'ethics_committee', responsibleIndividuals: ['Ethics Officer', 'HR Officer'], timeline: 'Annually', outputs: ['Disclosure forms', 'COI register', 'Assessment reports'], checkpoints: ['100% compliance', 'Conflicts identified', 'Actions taken'] },
+      { step: 3, phase: 'Implementation', activity: 'COI Assessment & Management', details: 'Evaluate disclosed conflicts and implement management plans (recusal, divestment, restrictions)', responsibleCommittee: 'ethics_committee', responsibleIndividuals: ['Ethics Committee', 'Department Heads'], timeline: 'As needed', outputs: ['Assessment reports', 'Management plans', 'Monitoring procedures'], checkpoints: ['Conflicts managed', 'Compliance monitored', 'Records maintained'] },
+      { step: 4, phase: 'Monitoring', activity: 'Ongoing Monitoring', details: 'Monitor compliance, review changes, investigate violations, update policies', responsibleCommittee: 'ethics_committee', responsibleIndividuals: ['Ethics Officer'], timeline: 'Ongoing', outputs: ['Monitoring reports', 'Violation investigations', 'Policy updates'], checkpoints: ['Compliance maintained', 'Issues addressed', 'Culture strong'] }
+    ],
+    committeeInvolved: ['ethics_committee'],
+    approvalChain: [
+      { level: 'Ethics Officer', for: 'Review disclosures and minor conflicts' },
+      { level: 'Ethics Committee', for: 'Complex conflicts and violations' },
+      { level: 'Administrative Director', for: 'Senior staff conflicts' }
+    ],
+    criticalSuccess: ['Transparent disclosure', 'Effective management', 'Trust maintained'],
+    risks: [
+      { risk: 'Non-disclosure', mitigation: 'Training, clear policy, consequences for non-disclosure' },
+      { risk: 'Inappropriate influence', mitigation: 'Management plans, recusal requirements, monitoring' }
+    ],
+    legalCompliance: ['Conflict of interest regulations', 'Healthcare ethics standards', 'Governance requirements']
+  },
+
+  // SECTION 19: GIFTS & HOSPITALITY
+  section19_gifts_hospitality: {
+    policyName: 'Gifts and Hospitality Policy',
+    byLawsSection: 'section19',
+    category: 'Ethics',
+    implementationSteps: [
+      { step: 1, phase: 'Planning', activity: 'Define Policy', details: 'Establish clear policy on acceptable gifts, limits, disclosure, and restrictions', responsibleCommittee: 'ethics_committee', responsibleIndividuals: ['Ethics Officer', 'Legal Advisor'], timeline: '1-2 weeks', outputs: ['Gifts policy', 'Value limits', 'Approval process', 'Disclosure forms'], checkpoints: ['Policy clear', 'Limits defined', 'Approved'] },
+      { step: 2, phase: 'Implementation', activity: 'Staff Training', details: 'Train all staff on policy, examples, reporting obligations', responsibleCommittee: 'ethics_committee', responsibleIndividuals: ['Ethics Officer', 'HR'], timeline: '1 month', outputs: ['Training records', 'Acknowledgments'], checkpoints: ['All trained', 'Understanding verified'] },
+      { step: 3, phase: 'Implementation', activity: 'Disclosure & Approval', details: 'Implement system for staff to disclose and seek approval for gifts/hospitality', responsibleCommittee: 'ethics_committee', responsibleIndividuals: ['Ethics Officer', 'Supervisors'], timeline: 'Ongoing', outputs: ['Disclosure records', 'Approval decisions', 'Gift register'], checkpoints: ['System functional', 'Compliance high', 'Register maintained'] },
+      { step: 4, phase: 'Monitoring', activity: 'Monitoring & Enforcement', details: 'Monitor compliance, investigate violations, enforce consequences', responsibleCommittee: 'ethics_committee', responsibleIndividuals: ['Ethics Officer'], timeline: 'Ongoing', outputs: ['Compliance reports', 'Violation investigations', 'Disciplinary actions'], checkpoints: ['Compliance monitored', 'Violations addressed'] }
+    ],
+    committeeInvolved: ['ethics_committee'],
+    approvalChain: [
+      { level: 'Supervisor', for: 'Approve gifts within limits' },
+      { level: 'Ethics Officer', for: 'Approve exceptions and review disclosures' },
+      { level: 'Administrative Director', for: 'Senior staff approvals' }
+    ],
+    criticalSuccess: ['Clear guidelines', 'High compliance', 'Ethical culture'],
+    risks: [
+      { risk: 'Corruption perception', mitigation: 'Strict limits, transparency, disclosure' },
+      { risk: 'Policy violations', mitigation: 'Training, monitoring, consequences' }
+    ],
+    legalCompliance: ['Anti-corruption laws', 'Healthcare industry regulations', 'Ethics standards']
+  },
+
+  // SECTION 20: EMPLOYEE WELLNESS
+  section20_wellness: {
+    policyName: 'Employee Wellness Programs',
+    byLawsSection: 'section20',
+    category: 'Employee Relations',
+    implementationSteps: [
+      { step: 1, phase: 'Planning', activity: 'Needs Assessment', details: 'Assess employee health needs, stress levels, wellness interests through surveys', responsibleCommittee: 'hr_committee', responsibleIndividuals: ['HR Director', 'Wellness Coordinator', 'Medical Officer'], timeline: '2-3 weeks', outputs: ['Needs assessment report', 'Priority areas', 'Program recommendations'], checkpoints: ['Assessment complete', 'Needs identified', 'Priorities set'] },
+      { step: 2, phase: 'Planning', activity: 'Wellness Program Design', details: 'Design comprehensive wellness program covering physical, mental, financial wellbeing', responsibleCommittee: 'hr_committee', responsibleIndividuals: ['Wellness Coordinator', 'HR Director'], timeline: '3-4 weeks', outputs: ['Wellness program plan', 'Budget', 'Activity calendar', 'Success metrics'], checkpoints: ['Program comprehensive', 'Budget approved', 'Calendar ready'] },
+      { step: 3, phase: 'Implementation', activity: 'Launch Wellness Initiatives', details: 'Implement fitness programs, mental health support, nutrition counseling, stress management', responsibleCommittee: 'hr_committee', responsibleIndividuals: ['Wellness Coordinator', 'Service Providers'], timeline: 'Ongoing', outputs: ['Fitness programs', 'EAP services', 'Health screenings', 'Wellness events'], checkpoints: ['Programs launched', 'Participation tracked', 'Feedback collected'] },
+      { step: 4, phase: 'Monitoring', activity: 'Program Evaluation', details: 'Monitor participation, measure outcomes, gather feedback, improve programs', responsibleCommittee: 'hr_committee', responsibleIndividuals: ['Wellness Coordinator', 'HR Analytics'], timeline: 'Quarterly', outputs: ['Participation reports', 'Health metrics', 'Satisfaction surveys', 'Program adjustments'], checkpoints: ['Data analyzed', 'Outcomes measured', 'Improvements made'] }
+    ],
+    committeeInvolved: ['hr_committee'],
+    approvalChain: [
+      { level: 'Wellness Coordinator', for: 'Program implementation and activities' },
+      { level: 'HR Director', for: 'Budget and policy' },
+      { level: 'Administrative Director', for: 'Major investments' }
+    ],
+    criticalSuccess: ['High participation', 'Improved health metrics', 'Positive employee sentiment', 'ROI demonstrated'],
+    risks: [
+      { risk: 'Low participation', mitigation: 'Attractive programs, incentives, convenient scheduling, communication' },
+      { risk: 'Privacy concerns', mitigation: 'Voluntary participation, confidentiality, data protection' }
+    ],
+    legalCompliance: ['Health screening regulations', 'Privacy laws for health data', 'Voluntary participation requirements']
+  },
   section21_communication: { policyName: 'Communication and Information Sharing', byLawsSection: 'section21', category: 'Operations', status: 'detailed_guide_pending' },
   section22_records: { policyName: 'Record Management and Retention', byLawsSection: 'section22', category: 'Compliance', status: 'detailed_guide_pending' },
   section23_quality: { policyName: 'Quality Assurance and Improvement', byLawsSection: 'section23', category: 'Clinical', status: 'detailed_guide_pending' },
