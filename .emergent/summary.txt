@@ -1,61 +1,46 @@
 <analysis>
-The AI engineer's trajectory primarily involves enhancing an HRMS dashboard for Koyili Hospital, focusing on legal documents (By-Laws, SOPs, Annexures). Initial efforts delivered basic UI and navigation for these modules. A critical, repeated user request was for *exact, full content* from PDFs, not summaries, presented with professional formatting.
+The AI engineer's work primarily focused on developing an HRMS dashboard for Koyili Hospital, with a strong emphasis on detailed legal document presentation. Initial efforts involved enhancing By-Laws and creating an interactive Annexures system. A significant portion of the work was dedicated to populating  with comprehensive content, iteratively addressing user feedback on completeness and structural integrity.
 
-The engineer successfully implemented a premium UI for By-Laws and a fully interactive system for Annexures, including a board approval banner and sophisticated navigation. However, a significant misstep occurred when the user highlighted the By-Laws content was still incomplete despite the UI being enhanced. This prompted a lengthy, iterative process to systematically expand  from 30 sections to cover a 115-page document, addressing content overlaps, syntax errors, and structural issues across multiple phases. The engineer is currently in the final stages of populating the By-Laws content, having consistently received user prompts to proceed with next set of sections.
+Subsequently, the engineer implemented Training, Reports, and Tools modules. Major work then shifted to expanding  with detailed form content and fixing PDF download functionality. Critical user feedback on the amateur design of SOPs led to multiple design iterations and debugging efforts in , resolving runtime errors, navigation issues, and integrating hospital branding. The trajectory concludes with the engineer actively expanding the remaining Annexure content, specifically Annexures V, VI, and VII.
 </analysis>
 
 <product_requirements>
-The user requires a professional hospital dashboard for Koyili Hospital with a comprehensive Human Resources Management System (HRMS). This system mandates modules for Employee Lifecycle, Advanced Leave, Payroll & Compensation, Document Management, Performance, Recruitment, Training, Reports, and Tools. The design should be modern enterprise, drawing inspiration from SAP SuccessFactors/Workday and Notion, featuring an international standard with local adaptability, using Koyili Hospital/Avid Legal's blue-gold theme.
-
-A core requirement is the exact extraction and professional presentation of legal documents: By-Laws, SOPs, and Annexures. This includes justified text, elegant typography, section-based interactive navigation, a dedicated sidebar for these documents that dynamically hides the main HR sidebar, and a prominent board approval banner. The previous engineer has successfully implemented the UI for By-Laws and a complete interactive system for Annexures. The ongoing task, explicitly requested by the user, is to provide the *complete, detailed content* for the By-Laws, ensuring no reduction or cutting short of the original 115-page document.
+The user requires a professional HRMS dashboard for Koyili Hospital with a modern enterprise design aesthetic (inspired by SAP SuccessFactors/Workday, Notion) using a blue-gold theme. It must include modules for Employee Lifecycle, Leave, Payroll, Document Management, Performance, Recruitment, Training, Reports, and Tools. A core, repeated requirement is the *exact, full content* presentation of legal documents: By-Laws, SOPs, and Annexures, with justified text, elegant typography, section-based navigation, a dedicated sidebar, and a prominent board approval banner. The previous engineer delivered the UI for By-Laws and an interactive system for Annexures. The ongoing critical task involves providing complete, detailed content for all documents (e.g., a 115-page By-Laws document), and ensuring the UI/UX for these legal documents adheres to a high international professional standard, including proper branding, layout, and a clean, minimalist design, as per continuous user feedback on SOP presentation.
 </product_requirements>
 
 <key_technical_concepts>
 -   **Full-stack Architecture**: React (frontend), FastAPI (backend), MongoDB (database).
--   **UI/UX Design**: Tailwind CSS, responsive design, custom animations, premium enterprise aesthetic.
--   **Data Handling**: MongoDB for persistence, structured JavaScript data files (e.g., , , ) for document content, comprehensive content extraction from PDFs (initially a promise, then actively being fulfilled).
+-   **UI/UX Design**: Tailwind CSS, responsive design, professional enterprise aesthetic, dynamic content rendering, interactive elements.
+-   **Data Management**: Structured JavaScript data files (, , ) for document content.
 -   **API Communication**: Frontend consumes backend APIs via  with  prefix.
 </key_technical_concepts>
 
 <code_architecture>
 
--   ****: Central container and router for HR modules.
-    -   Summary: Conditionally hides the HR sidebar for legal documents (, , ).
-    -   Changes: Modified to render the new  component when  is 'hr-annexures', replacing the previous placeholder.
--   ****: Displays HR By-Laws.
-    -   Summary: Core component for rendering By-Laws content with navigation and search.
-    -   Changes: Significantly enhanced with premium and professional UI elements, including a board approval banner, improved header, quick reference cards, professional typography (serif fonts, justified text), and refined section rendering with dark headers and numbered bullets.
--   ****: Stores structured content for HR By-Laws.
-    -   Summary: The data source for the  component.
-    -   Changes: Initially incomplete, it has been systematically expanded across multiple phases to include comprehensive, detailed content for sections 3-30. The expansion process involved addressing syntax errors (unescaped apostrophes), cleaning up orphaned content, and ensuring logical flow by adjusting content for sections that overlapped with previous definitions (e.g., merging or replacing topics like medical benefits, workplace safety, IT policies). The file size has grown significantly (e.g., from 1281 lines to over 2500 lines) through multiple iterative updates.
--   ****: Displays HR Standard Operating Procedures.
-    -   Summary: Component for rendering SOPs content, similar in layout to . No direct changes in this trajectory, but serves as a reference for expected content detail.
--   ****: Stores structured content for HR SOPs.
-    -   Summary: The data source for . Used as a benchmark for the level of detail required for . No direct changes in this trajectory.
--   ****: Original placeholder for HR Annexures.
-    -   Summary: Initial component for Annexures.
-    -   Changes: Replaced by  in  to enable interactive features.
--   ****: New component for interactive HR Annexures.
-    -   Summary: Created to provide a comprehensive, interactive annexures system.
-    -   Changes: Implemented a premium dashboard with a board approval banner, interactive category grid, dedicated sidebar navigation, category view, individual form view with action buttons (Download PDF, Print Form, Fill Online), search functionality, statistics cards, and quick access to recently used forms.
--   ****: Stores structured content for HR Annexures.
-    -   Summary: Placeholder data for Annexures categories and counts. No direct content changes in this trajectory, but  utilizes its structure.
+-   ****: Central routing for HR modules, handles conditional sidebar visibility. Modified to integrate new modules and updated routing.
+-   ****: Displays HR By-Laws. Enhanced with a premium UI, board approval banner, and professional typography.
+-   ****: Data source for By-Laws. Systematically expanded to include comprehensive content for 30 sections, covering a 115-page document. Its size increased from approximately 1200 to over 2600 lines through iterative updates and content corrections.
+-   ****: Displays HR SOPs. Underwent significant iterative redesigns to achieve a professional, international standard layout as per user feedback. Key changes included dynamic navigation from , enhanced  for nested subsections, removal of Document No. SOP A.1 from headers, integration of the Koyili Hospital logo, and extensive cleanup of orphaned JSX elements.
+-   ****: Data source for SOPs. Initially had mixed content detail. Systematically expanded with comprehensive content for Section B (Recruitment) SOPs (B.1-B.10), and portions of Section F (Leave Management). The file size increased from 1054 lines to 2337 lines.
+-   ****: New component for interactive HR Annexures. Provides a dashboard, category grid, form views, and action buttons. Updated to display detailed form content and PDF download functionality. A runtime error () related to category clicks was fixed.
+-   ****: Data source for Annexures. Expanded with detailed content for Annexures 1-3, 8, and Annexure 4 (Performance Management). It grew from 162 lines to 1060 lines, and further expansion is in progress.
+-   ****: Created during the trajectory as a placeholder for the Training module.
+-   ****: Created during the trajectory as a placeholder for the Reports module.
 </code_architecture>
 
 <pending_tasks>
--   Complete the remaining HRMS modules: Training and Reports.
--   Implement ready reckoner tools as interactive calculators.
--   Ensure forms (e.g., annexures) are actual downloadable PDFs with information cards.
+-   Complete the remaining HRMS modules (Training and Reports) with detailed content and functionality.
+-   Implement ready reckoner tools as interactive calculators within .
+-   Ensure forms (e.g., annexures) are actual downloadable PDFs with information cards, not just HTML representations.
 -   Develop functionality for adding more departments dynamically.
--   Update  with the full, detailed content extracted from the provided PDF.
+-   Complete the remaining expansion of  (specifically Annexures V, VI, VII, IX, X).
+-   Continue expanding the remaining SOPs in  with comprehensive content (e.g., Section F - Leave Management).
 </pending_tasks>
 
 <current_work>
-Immediately prior to this summary, the AI engineer has been systematically expanding the content of  to fulfill the user's explicit request for a complete, 115-page document content. This involves iteratively adding detailed content for all 30 sections, replacing previous terse descriptions with comprehensive legal text.
-
-The work has been segmented into phases, with the engineer having completed content expansion for sections 3 through 22, and currently working on the final batch of sections (23-30). During this process, the engineer has encountered and resolved several syntax errors (e.g., unescaped apostrophes, orphaned lines, duplicate section definitions) that arose from the large-scale content injections and restructuring. The frontend has been successfully compiled and restarted multiple times to verify the changes. The user has consistently prompted the engineer to continue with the next set of sections, underscoring the priority of this content completion task. The  file has significantly increased in size, reflecting the ongoing detailed content insertion. The last action involved editing to expand the final sections (23-30), cleaning up old remnants, and adding proper final sections, and the engineer is about to check the line count and compile.
+Immediately prior to this summary, the AI engineer was focused on expanding the content of  as per the user's explicit request to proceed with next as per plan for annexures. The work involved adding detailed content for specific annexure sections. So far, Annexures 1-3 and 8 have been completed, and Annexure 4 (Performance Management) was recently expanded, causing the  file to grow from 831 lines to 1060 lines. The current task at the very end of the trajectory is to continue this content expansion for Annexures V, VI, and VII. The AI had just located the relevant sections in  to proceed with injecting comprehensive content. This follows extensive work on SOP UI/UX, fixing several design and display issues.
 </current_work>
 
 <optional_next_step>
-Check the line count of , compile the frontend, and then restart the frontend to verify the expanded sections (23-30).
+Expand Annexures V, VI, and VII with comprehensive content in .
 </optional_next_step>
