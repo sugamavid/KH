@@ -49,6 +49,93 @@ const ToolsCalculators = () => {
     { id: 'loan', label: 'Loan Eligibility', icon: Briefcase, color: 'amber', desc: 'Check loan eligibility' },
   ];
 
+  // Helper function to get color classes
+  const getColorClasses = (color, isActive) => {
+    const colorMap = {
+      blue: {
+        border: 'border-blue-200',
+        hoverBorder: 'hover:border-blue-400',
+        bg: 'bg-blue-100',
+        hoverBg: 'hover:bg-blue-600',
+        text: 'text-blue-600',
+        hoverText: 'hover:text-white',
+        activeBg: 'bg-blue-600',
+        activeText: 'text-white'
+      },
+      green: {
+        border: 'border-green-200',
+        hoverBorder: 'hover:border-green-400',
+        bg: 'bg-green-100',
+        hoverBg: 'hover:bg-green-600',
+        text: 'text-green-600',
+        hoverText: 'hover:text-white',
+        activeBg: 'bg-green-600',
+        activeText: 'text-white'
+      },
+      purple: {
+        border: 'border-purple-200',
+        hoverBorder: 'hover:border-purple-400',
+        bg: 'bg-purple-100',
+        hoverBg: 'hover:bg-purple-600',
+        text: 'text-purple-600',
+        hoverText: 'hover:text-white',
+        activeBg: 'bg-purple-600',
+        activeText: 'text-white'
+      },
+      orange: {
+        border: 'border-orange-200',
+        hoverBorder: 'hover:border-orange-400',
+        bg: 'bg-orange-100',
+        hoverBg: 'hover:bg-orange-600',
+        text: 'text-orange-600',
+        hoverText: 'hover:text-white',
+        activeBg: 'bg-orange-600',
+        activeText: 'text-white'
+      },
+      teal: {
+        border: 'border-teal-200',
+        hoverBorder: 'hover:border-teal-400',
+        bg: 'bg-teal-100',
+        hoverBg: 'hover:bg-teal-600',
+        text: 'text-teal-600',
+        hoverText: 'hover:text-white',
+        activeBg: 'bg-teal-600',
+        activeText: 'text-white'
+      },
+      red: {
+        border: 'border-red-200',
+        hoverBorder: 'hover:border-red-400',
+        bg: 'bg-red-100',
+        hoverBg: 'hover:bg-red-600',
+        text: 'text-red-600',
+        hoverText: 'hover:text-white',
+        activeBg: 'bg-red-600',
+        activeText: 'text-white'
+      },
+      indigo: {
+        border: 'border-indigo-200',
+        hoverBorder: 'hover:border-indigo-400',
+        bg: 'bg-indigo-100',
+        hoverBg: 'hover:bg-indigo-600',
+        text: 'text-indigo-600',
+        hoverText: 'hover:text-white',
+        activeBg: 'bg-indigo-600',
+        activeText: 'text-white'
+      },
+      amber: {
+        border: 'border-amber-200',
+        hoverBorder: 'hover:border-amber-400',
+        bg: 'bg-amber-100',
+        hoverBg: 'hover:bg-amber-600',
+        text: 'text-amber-600',
+        hoverText: 'hover:text-white',
+        activeBg: 'bg-amber-600',
+        activeText: 'text-white'
+      }
+    };
+    return colorMap[color] || colorMap.blue;
+  };
+
   const calculateNetSalary = () => {
     const basic = parseFloat(basicSalary) || 0;
     const hraAmount = parseFloat(hra) || 0;
