@@ -782,34 +782,10 @@ const ComplianceTracker = ({ onClose, onNavigateToSection, onOpenPolicyImplement
           <div className="flex-1 overflow-y-auto p-8 bg-slate-50">
             {activeView === 'dashboard' && renderDashboard()}
             {activeView === 'sections' && renderSections()}
-            {activeView === 'checklist' && (
-              <div className="text-center py-12">
-                <CheckCircle className="w-16 h-16 text-slate-300 mx-auto mb-4" />
-                <p className="text-slate-600 font-medium">Compliance Checklist</p>
-                <p className="text-sm text-slate-500 mt-1">Building comprehensive checklist view...</p>
-              </div>
-            )}
-            {activeView === 'violations' && (
-              <div className="text-center py-12">
-                <AlertTriangle className="w-16 h-16 text-slate-300 mx-auto mb-4" />
-                <p className="text-slate-600 font-medium">Violations Tracker</p>
-                <p className="text-sm text-slate-500 mt-1">Building violations management view...</p>
-              </div>
-            )}
-            {activeView === 'calendar' && (
-              <div className="text-center py-12">
-                <Calendar className="w-16 h-16 text-slate-300 mx-auto mb-4" />
-                <p className="text-slate-600 font-medium">Compliance Calendar</p>
-                <p className="text-sm text-slate-500 mt-1">Building calendar view...</p>
-              </div>
-            )}
-            {activeView === 'reports' && (
-              <div className="text-center py-12">
-                <BarChart className="w-16 h-16 text-slate-300 mx-auto mb-4" />
-                <p className="text-slate-600 font-medium">Reports & Analytics</p>
-                <p className="text-sm text-slate-500 mt-1">Building analytics dashboard...</p>
-              </div>
-            )}
+            {activeView === 'checklist' && renderChecklist()}
+            {activeView === 'violations' && renderViolations()}
+            {activeView === 'calendar' && renderCalendar()}
+            {activeView === 'reports' && renderReports()}
           </div>
         </div>
       </div>
