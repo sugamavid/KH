@@ -14,21 +14,27 @@ const HRSOPs = ({ setActiveModule }) => {
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
   const contentRef = useRef(null);
 
-  // Navigation structure for all SOPs
-  const navigation = [
-    { id: 'dashboard', title: 'Dashboard', icon: Home, category: 'Overview' },
-    { id: 'preamble', title: 'Preamble', icon: BookOpen, category: 'Introduction' },
-    { id: 'sop1', title: 'SOP 001: Onboarding', icon: Users, category: 'Recruitment' },
-    { id: 'sop2', title: 'SOP 002: Leave Management', icon: Calendar, category: 'Operations' },
-    { id: 'sop3', title: 'SOP 003: Performance Appraisal', icon: Award, category: 'Performance' },
-    { id: 'sop4', title: 'SOP 004: Payroll Processing', icon: DollarSign, category: 'Payroll' },
-    { id: 'sop5', title: 'SOP 005: Grievance Handling', icon: Scale, category: 'Employee Relations' },
-    { id: 'sop6', title: 'SOP 006: Exit Process', icon: Users, category: 'Separation' },
-    { id: 'sop7', title: 'SOP 007: Training', icon: BookOpen, category: 'Development' },
-    { id: 'sop8', title: 'SOP 008: Attendance', icon: Clock, category: 'Operations' },
-    { id: 'sop9', title: 'SOP 009: Recruitment', icon: Users, category: 'Recruitment' },
-    { id: 'sop10', title: 'SOP 010: Document Management', icon: FileText, category: 'Administration' }
-  ];
+  // Navigation structure - dynamically built from sopsData
+  const navigation = useMemo(() => {
+    const navItems = [
+      { id: 'dashboard', title: 'Dashboard', icon: Home, category: 'Overview' },
+      { id: 'preamble', title: 'Preamble', icon: BookOpen, category: 'Introduction' }
+    ];
+    
+    // Add all SOPs from sopsData
+    Object.entries(sopsData).forEach(([key, sop]) => {
+      if (key !== 'preamble' && sop.number && sop.title) {
+        navItems.push({
+          id: key,
+          title: `${sop.number}: ${sop.title}`,
+          icon: FileText,
+          category: sop.category || 'General'
+        });
+      }
+    });
+    
+    return navItems;
+  }, []);
 
   // Group by category
   const navigationByCategory = useMemo(() => {
