@@ -11806,7 +11806,252 @@ Manager/HR Role:
     title: 'Wellness Camps, Health Days & Fitness Drives',
     searchTerms: ['wellness', 'camps', 'health', 'fitness', 'drives', 'activities'],
     category: 'L. Wellness, Work-Life Balance & EAP',
-    content: 'Institutionalizes periodic organization of wellness camps, health awareness days, and fitness initiatives promoting preventive healthcare and holistic well-being.'
+    subsections: [
+      {
+        number: '1',
+        title: 'OBJECTIVE',
+        content: 'To institutionalize periodic organization of wellness camps, health awareness days, fitness initiatives, and preventive health activities promoting holistic employee well-being, early disease detection, healthy lifestyle adoption, team bonding, and fostering a culture of health and wellness within the organization.'
+      },
+      {
+        number: '2',
+        title: 'SCOPE',
+        content: 'Covers planning, execution, and evaluation of wellness events for all employees and (where applicable) their families. Includes health screenings, fitness activities, awareness sessions, nutrition guidance, mental health initiatives, and special health observance days.'
+      },
+      {
+        number: '3',
+        title: 'TYPES OF WELLNESS INITIATIVES',
+        subsections: [
+          {
+            number: '3.1',
+            title: 'Annual Health Camp',
+            content: `• Comprehensive health screening conducted once a year
+• Services:
+    - Blood tests (CBC, lipid profile, blood sugar, liver/kidney function)
+    - Blood pressure and BMI check
+    - ECG (for 40+ age or risk factors)
+    - Eye check-up
+    - Dental screening
+    - Chest X-ray (if indicated)
+    - Doctor consultation and health counselling
+• Participation encouraged for all employees (voluntary)
+• Reports shared confidentially with employee
+• Follow-up advice provided`
+          },
+          {
+            number: '3.2',
+            title: 'Health Awareness Days',
+            content: `Observing National/International Health Days:
+• World Health Day (April 7)
+• World No Tobacco Day (May 31)
+• International Yoga Day (June 21)
+• World Mental Health Day (October 10)
+• World Diabetes Day (November 14)
+• World Heart Day (September 29)
+
+Activities:
+• Awareness sessions and talks by experts
+• Posters, banners, email campaigns
+• Distribution of informational material
+• Screening camps (e.g., diabetes screening on Diabetes Day)
+• Competitions and quizzes on health topics`
+          },
+          {
+            number: '3.3',
+            title: 'Fitness Drives',
+            content: `(i) Step Challenge:
+    • Month-long walking competition
+    • Employees track daily steps (Fitbit, apps)
+    • Prizes for highest steppers
+    • Promotes physical activity
+
+(ii) Weight Loss Challenge:
+    • 3-month program
+    • Nutrition counselling and diet plans
+    • Weekly weigh-ins
+    • Fitness coaching
+    • Recognition and rewards
+
+(iii) Yoga & Meditation Sessions:
+    • Weekly/bi-weekly sessions
+    • Conducted by certified yoga instructor
+    • 30-45 minutes (early morning or post-work)
+    • Focus on stress relief and flexibility
+
+(iv) Sports Day/Fun Run:
+    • Annual hospital sports day
+    • Cricket, volleyball, badminton tournaments
+    • 5K fun run/walk for employees and families
+    • Team-building and fitness combined`
+          },
+          {
+            number: '3.4',
+            title: 'Nutrition & Diet Counselling',
+            content: `• In-person consultation with dietician (appointment-based)
+• Group nutrition workshops
+• Healthy eating awareness campaigns
+• Canteen collaboration for healthy menu options
+• Distribution of diet charts and recipes`
+          },
+          {
+            number: '3.5',
+            title: 'Mental Health & Stress Management',
+            content: `• Stress management workshops
+• Mindfulness and meditation sessions
+• Work-life balance talks
+• Mental health awareness campaigns (destigmatizing)
+• Relaxation techniques training`
+          }
+        ]
+      },
+      {
+        number: '4',
+        title: 'PLANNING & EXECUTION',
+        subsections: [
+          {
+            number: '4.1',
+            title: 'Wellness Committee',
+            content: `Composition:
+• HR representative (Coordinator)
+• Occupational Health Physician
+• Nursing representative
+• Employee volunteers from departments
+• Admin/Logistics support
+
+Responsibilities:
+• Plan annual wellness calendar
+• Organize events and camps
+• Coordinate with external vendors/experts
+• Budget management
+• Communication and promotion
+• Post-event evaluation`
+          },
+          {
+            number: '4.2',
+            title: 'Annual Wellness Calendar',
+            content: `• Prepared at start of financial year
+• Schedules all wellness events month-wise
+• Shared with all departments
+• Flexible (adjusted based on operational needs)
+
+Example Calendar:
+• April: Health Camp
+• June: Yoga Day celebration
+• August: Weight Loss Challenge launch
+• October: Mental Health Week
+• December: Sports Day`
+          },
+          {
+            number: '4.3',
+            title: 'Logistics & Arrangements',
+            content: `• Venue booking (hospital auditorium, open area, sports ground)
+• External vendors/experts engagement (health screening agency, fitness trainer, nutritionist)
+• Equipment and supplies (testing kits, yoga mats, sports equipment)
+• Refreshments (healthy snacks, water)
+• Communication materials (posters, emails, registration forms)
+• Registration and attendance tracking`
+          }
+        ]
+      },
+      {
+        number: '5',
+        title: 'COMMUNICATION & PROMOTION',
+        content: `Pre-Event:
+• Email announcement (2-3 weeks prior)
+• Posters on notice boards
+• Intranet notifications
+• Department-wise reminders
+• Registration forms circulated
+
+During Event:
+• On-site signage and directions
+• Welcome desk and assistance
+• Photo/video coverage (with consent)
+
+Post-Event:
+• Thank you email with photos
+• Health camp reports distributed (if applicable)
+• Feedback survey
+• Announcement of winners (competitions)
+• Highlights shared on internal channels`
+      },
+      {
+        number: '6',
+        title: 'PARTICIPATION & INCENTIVES',
+        content: `Encouraging Participation:
+• Voluntary participation (except annual health camp, highly encouraged)
+• Time-off during work hours (if event during office hours)
+• Certificates of participation
+• Prizes and rewards for competitions (cash/gift vouchers/trophies)
+• Recognition in newsletters or meetings
+• Wellness points system (optional): Accumulate points for participation, redeem for perks`
+      },
+      {
+        number: '7',
+        title: 'HEALTH SCREENING CONFIDENTIALITY',
+        content: `• Health screening reports strictly confidential
+• Shared only with employee (sealed envelope or email)
+• Aggregate data (anonymized) used for trend analysis
+• No individual health data shared with management or HR (unless employee consents)
+• Doctor-patient confidentiality maintained`
+      },
+      {
+        number: '8',
+        title: 'FAMILY INCLUSION',
+        content: `• Selected events open to employee families (e.g., Sports Day, Fun Run)
+• Family health camps (once a year)
+• Promotes work-life integration
+• Builds community and loyalty`
+      },
+      {
+        number: '9',
+        title: 'BUDGET & FUNDING',
+        content: `• Annual wellness budget allocated by management
+• Typical: 0.5-1% of payroll or fixed amount per employee
+• External sponsorships (pharma companies, wellness brands) if permissible
+• Cost-sharing for premium services (e.g., advanced health packages at discounted rates)`
+      },
+      {
+        number: '10',
+        title: 'EVALUATION & FEEDBACK',
+        content: `Post-Event Feedback:
+• Feedback forms (Annexure L.2.1)
+• Questions: Content quality, organization, usefulness, suggestions
+• Analyze participation rates and satisfaction scores
+• Identify popular programs (repeat next year)
+• Continuous improvement
+
+Annual Wellness Report:
+• Summary of all activities conducted
+• Participation statistics
+• Health metrics improvement (if tracked)
+• Testimonials and photos
+• Recommendations for next year
+• Presented to management`
+      },
+      {
+        number: '11',
+        title: 'SPECIAL CAMPAIGNS',
+        content: `(i) Anti-Tobacco Campaign:
+    • Awareness sessions on smoking hazards
+    • Smoking cessation support (counselling, nicotine patches)
+    • Hospital premises declared smoke-free
+
+(ii) Breast Cancer Awareness (October):
+    • Talks on early detection
+    • Self-examination training
+    • Free mammography camps (for female employees)
+
+(iii) Diabetes Prevention:
+    • HbA1c screening
+    • Pre-diabetes counselling
+    • Lifestyle modification workshops`
+      },
+      {
+        number: '12',
+        title: 'REFERENCE DOCUMENTS',
+        content: 'Wellness Policy, Occupational Health Policy, Health Screening Protocol (SOP L.3), Annexure L.2.1: Event Feedback Form, Annexure L.2.2: Annual Wellness Calendar Template'
+      }
+    ]
   },
 
   sopL3: {
