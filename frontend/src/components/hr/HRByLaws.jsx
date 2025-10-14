@@ -18,95 +18,93 @@ const HRByLaws = ({ setActiveModule }) => {
   const [expandedSections, setExpandedSections] = useState({});
   const contentRef = useRef(null);
 
-  // Parse and render content as React components
+  // Parse and render content as React components with proper formatting
   const renderFormattedContent = (content) => {
     if (!content) return null;
     
     const lines = content.split('\n');
     const elements = [];
-    let currentSection = null;
-    let sectionBullets = [];
+    let currentMainPoint = null;
+    let currentBullets = [];
     
-    const flushSection = () => {
-      if (currentSection && sectionBullets.length > 0) {
+    const flushCurrentGroup = () => {
+      if (currentMainPoint) {
         elements.push(
-          <div key={`section-${elements.length}`} className="mb-4">
-            {currentSection}
-            <div className="ml-8 mt-2 space-y-2">
-              {sectionBullets}
-            </div>
+          <div key={`group-${elements.length}`} className="mb-6">
+            {currentMainPoint}
+            {currentBullets.length > 0 && (
+              <div className="ml-6 mt-3 space-y-3">
+                {currentBullets}
+              </div>
+            )}
           </div>
         );
-        sectionBullets = [];
-        currentSection = null;
-      } else if (currentSection) {
-        elements.push(currentSection);
-        currentSection = null;
+        currentMainPoint = null;
+        currentBullets = [];
       }
     };
     
     lines.forEach((line, index) => {
       const trimmedLine = line.trim();
       
-      // Skip empty lines
+      // Empty line - flush current group
       if (!trimmedLine) {
-        flushSection();
+        flushCurrentGroup();
         return;
       }
       
-      // Main points: (a), (b), (c), (d) with **Title:**
+      // Main points: (a) **Title:**
       const mainPointMatch = trimmedLine.match(/^\(([a-z])\)\s+\*\*(.*?)\*\*:?$/);
       if (mainPointMatch) {
-        flushSection();
-        currentSection = (
-          <div key={`main-${index}`} className="mt-5 mb-2">
-            <span className="font-bold text-slate-900 text-lg">({mainPointMatch[1]}) </span>
-            <span className="font-bold text-slate-900 text-lg">{mainPointMatch[2]}:</span>
+        flushCurrentGroup();
+        currentMainPoint = (
+          <div key={`main-${index}`} className="font-bold text-slate-900 text-base mb-2">
+            <span className="inline-block mr-2">({mainPointMatch[1]})</span>
+            <span>{mainPointMatch[2]}:</span>
           </div>
         );
         return;
       }
       
-      // Sub-points: (i), (ii), (iii)
+      // Sub-points with indentation: (i), (ii), (iii)
       const subPointMatch = line.match(/^\s{4}\(([ivxl]+)\)\s+(.*)/);
       if (subPointMatch) {
-        flushSection();
         const text = subPointMatch[2].replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
-        elements.push(
-          <div key={`sub-${index}`} className="ml-12 mt-2 mb-2">
-            <span className="font-semibold text-slate-700 text-base">({subPointMatch[1]}) </span>
-            <span className="text-slate-700" dangerouslySetInnerHTML={{ __html: text }} />
+        currentBullets.push(
+          <div key={`sub-${index}`} className="ml-6 flex items-start mb-2">
+            <span className="font-semibold text-slate-700 mr-2 min-w-[2rem]">({subPointMatch[1]})</span>
+            <span className="text-slate-700 leading-relaxed" dangerouslySetInnerHTML={{ __html: text }} />
           </div>
         );
         return;
       }
       
-      // Bullets: •
+      // Bullets with indentation: •
       const bulletMatch = line.match(/^\s{4}•\s+(.*)/);
       if (bulletMatch) {
         const text = bulletMatch[1].replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
-        sectionBullets.push(
-          <div key={`bullet-${index}`} className="flex items-start">
-            <span className="text-amber-600 mr-3 mt-0.5 font-bold text-lg">•</span>
-            <span className="flex-1 text-slate-700" dangerouslySetInnerHTML={{ __html: text }} />
+        currentBullets.push(
+          <div key={`bullet-${index}`} className="flex items-start gap-3">
+            <span className="text-amber-600 font-bold text-xl leading-none mt-0.5">•</span>
+            <span className="flex-1 text-slate-700 leading-relaxed" dangerouslySetInnerHTML={{ __html: text }} />
           </div>
         );
         return;
       }
       
-      // Regular text (continuation or standalone)
+      // Regular text line
       if (trimmedLine) {
-        flushSection();
+        flushCurrentGroup();
         const text = trimmedLine.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
         elements.push(
-          <p key={`p-${index}`} className="mb-3 text-slate-700 leading-relaxed" dangerouslySetInnerHTML={{ __html: text }} />
+          <p key={`p-${index}`} className="mb-4 text-slate-700 leading-relaxed" dangerouslySetInnerHTML={{ __html: text }} />
         );
       }
     });
     
-    flushSection(); // Flush any remaining section
+    flushCurrentGroup(); // Flush any remaining group
     
-    return <div>{elements}</div>;
+    return <div className="space-y-2">{elements}</div>;
   };
 
   // Complete Navigation structure for all 30 sections (User's Original By-Laws)
