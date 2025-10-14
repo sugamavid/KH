@@ -16,6 +16,7 @@ import TrainingHub from './TrainingHub';
 import AuditAssistant from './AuditAssistant';
 import RiskMonitor from './RiskMonitor';
 import ReportGenerator from './ReportGenerator';
+import PolicyImplementation from './PolicyImplementation';
 
 const HRByLaws = ({ setActiveModule }) => {
   const [activeSection, setActiveSection] = useState('dashboard');
