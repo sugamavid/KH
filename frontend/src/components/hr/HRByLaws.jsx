@@ -571,12 +571,15 @@ const HRByLaws = ({ setActiveModule }) => {
           </div>
           
           {/* Audit Module */}
-          <div className="bg-white border-2 border-red-200 rounded-xl p-6 hover:shadow-lg hover:border-red-400 transition-all cursor-pointer group">
+          <div 
+            onClick={() => setShowAuditModule(true)}
+            className="bg-white border-2 border-blue-200 rounded-xl p-6 hover:shadow-lg hover:border-blue-400 transition-all cursor-pointer group"
+          >
             <div className="flex items-center gap-4 mb-4">
-              <div className="p-3 bg-red-100 rounded-lg group-hover:bg-red-600 transition-colors">
-                <Search className="w-7 h-7 text-red-600 group-hover:text-white transition-colors" />
+              <div className="p-3 bg-blue-100 rounded-lg group-hover:bg-blue-600 transition-colors">
+                <Shield className="w-7 h-7 text-blue-600 group-hover:text-white transition-colors" />
               </div>
-              <h3 className="text-lg font-bold text-slate-900 group-hover:text-red-600 transition-colors">Audit Module</h3>
+              <h3 className="text-lg font-bold text-slate-900 group-hover:text-blue-600 transition-colors">Audit Module</h3>
             </div>
             <p className="text-slate-600 text-sm leading-relaxed">Conduct internal audits and compliance assessments</p>
           </div>
