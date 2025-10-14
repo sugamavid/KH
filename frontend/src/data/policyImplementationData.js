@@ -2338,14 +2338,183 @@ export const policyImplementationGuides = {
     ],
     legalCompliance: ['Health screening regulations', 'Privacy laws for health data', 'Voluntary participation requirements']
   },
-  section21_communication: { policyName: 'Communication and Information Sharing', byLawsSection: 'section21', category: 'Operations', status: 'detailed_guide_pending' },
-  section22_records: { policyName: 'Record Management and Retention', byLawsSection: 'section22', category: 'Compliance', status: 'detailed_guide_pending' },
-  section23_quality: { policyName: 'Quality Assurance and Improvement', byLawsSection: 'section23', category: 'Clinical', status: 'detailed_guide_pending' },
-  section24_infection_control: { policyName: 'Infection Prevention and Control', byLawsSection: 'section24', category: 'Clinical Safety', status: 'detailed_guide_pending' },
-  section25_emergency_preparedness: { policyName: 'Emergency Preparedness and Response', byLawsSection: 'section25', category: 'Safety', status: 'detailed_guide_pending' },
-  section26_patient_rights: { policyName: 'Patient Rights and Responsibilities', byLawsSection: 'section26', category: 'Clinical', status: 'detailed_guide_pending' },
-  section27_research_ethics: { policyName: 'Research and Clinical Trials Ethics', byLawsSection: 'section27', category: 'Ethics', status: 'detailed_guide_pending' },
-  section28_partnerships: { policyName: 'External Partnerships and Collaboration', byLawsSection: 'section28', category: 'Operations', status: 'detailed_guide_pending' },
-  section29_amendments: { policyName: 'By-Laws Amendments and Reviews', byLawsSection: 'section29', category: 'Governance', status: 'detailed_guide_pending' },
-  section30_interpretation: { policyName: 'Interpretation and Dispute Resolution', byLawsSection: 'section30', category: 'Governance', status: 'detailed_guide_pending' }
+  // SECTION 21: COMMUNICATION & INFORMATION SHARING
+  section21_communication: {
+    policyName: 'Communication and Information Sharing',
+    byLawsSection: 'section21',
+    category: 'Operations',
+    implementationSteps: [
+      { step: 1, phase: 'Planning', activity: 'Communication Strategy', details: 'Develop strategy for internal/external communication, channels, and protocols', responsibleCommittee: 'hr_committee', responsibleIndividuals: ['Communications Officer', 'Administrative Director'], timeline: '2-3 weeks', outputs: ['Communication strategy', 'Channel guidelines', 'Spokesperson protocols'], checkpoints: ['Strategy approved', 'Channels defined', 'Protocols clear'] },
+      { step: 2, phase: 'Implementation', activity: 'Internal Communication Systems', details: 'Implement email, intranet, bulletin boards, meetings, newsletters for staff communication', responsibleCommittee: 'hr_committee', responsibleIndividuals: ['IT Team', 'HR', 'Communications'], timeline: '4-6 weeks', outputs: ['Communication platforms', 'Meeting schedules', 'Newsletter system'], checkpoints: ['Systems operational', 'Staff engaged', 'Information flowing'] },
+      { step: 3, phase: 'Implementation', activity: 'External Communication Management', details: 'Manage media relations, public statements, website, social media with approval processes', responsibleCommittee: 'board_of_directors', responsibleIndividuals: ['Communications Officer', 'Administrative Director'], timeline: 'Ongoing', outputs: ['Media protocols', 'Approved spokespersons', 'Content approval process'], checkpoints: ['Consistent messaging', 'Brand protected', 'Approvals followed'] },
+      { step: 4, phase: 'Monitoring', activity: 'Communication Effectiveness', details: 'Monitor reach, engagement, feedback; improve communication based on results', responsibleCommittee: 'hr_committee', responsibleIndividuals: ['Communications Officer'], timeline: 'Quarterly', outputs: ['Communication reports', 'Feedback analysis', 'Improvement plans'], checkpoints: ['Effectiveness measured', 'Feedback acted upon', 'Continuous improvement'] }
+    ],
+    committeeInvolved: ['hr_committee', 'board_of_directors'],
+    approvalChain: [{ level: 'Communications Officer', for: 'Routine communications' }, { level: 'Department Head', for: 'Department-specific communications' }, { level: 'Administrative Director', for: 'Official statements' }, { level: 'Board of Directors', for: 'Major announcements' }],
+    criticalSuccess: ['Clear communication', 'High engagement', 'Consistent messaging', 'Positive reputation'],
+    risks: [{ risk: 'Misinformation', mitigation: 'Approval processes, trained spokespersons, fact checking' }, { risk: 'Communication breakdown', mitigation: 'Multiple channels, redundancy, feedback mechanisms' }],
+    legalCompliance: ['Public information laws', 'Patient confidentiality in communications', 'Advertising regulations']
+  },
+
+  // SECTION 22: RECORDS MANAGEMENT
+  section22_records: {
+    policyName: 'Record Management and Retention',
+    byLawsSection: 'section22',
+    category: 'Compliance',
+    implementationSteps: [
+      { step: 1, phase: 'Planning', activity: 'Records Retention Policy', details: 'Define retention periods for all record types per legal and operational requirements', responsibleCommittee: 'hr_committee', responsibleIndividuals: ['Records Manager', 'Legal Advisor', 'Compliance Officer'], timeline: '3-4 weeks', outputs: ['Retention schedule', 'Disposal procedures', 'Legal compliance matrix'], checkpoints: ['All records covered', 'Legal requirements met', 'Policy approved'] },
+      { step: 2, phase: 'Preparation', activity: 'Records Management System', details: 'Implement physical and digital systems for organizing, storing, and retrieving records', responsibleCommittee: 'hr_committee', responsibleIndividuals: ['Records Manager', 'IT Team'], timeline: '6-8 weeks', outputs: ['Filing systems', 'Database systems', 'Access controls', 'Backup systems'], checkpoints: ['Systems operational', 'Records organized', 'Access controlled'] },
+      { step: 3, phase: 'Implementation', activity: 'Records Classification', details: 'Classify all records by type, sensitivity, retention period, and access level', responsibleCommittee: 'hr_committee', responsibleIndividuals: ['Records Manager', 'Department Heads'], timeline: '4-6 weeks', outputs: ['Classification scheme', 'Labeled records', 'Access matrix'], checkpoints: ['All records classified', 'Labels applied', 'Access defined'] },
+      { step: 4, phase: 'Monitoring', activity: 'Retention & Disposal', details: 'Monitor retention periods, conduct timely disposal, maintain disposal records', responsibleCommittee: 'hr_committee', responsibleIndividuals: ['Records Manager'], timeline: 'Ongoing annually', outputs: ['Disposal schedules', 'Disposal certificates', 'Audit trails'], checkpoints: ['Timely disposal', 'Secure destruction', 'Records maintained'] }
+    ],
+    committeeInvolved: ['hr_committee'],
+    approvalChain: [{ level: 'Records Manager', for: 'Day-to-day records management' }, { level: 'Department Head', for: 'Department records' }, { level: 'Legal Advisor', for: 'Legal compliance' }, { level: 'Administrative Director', for: 'Policy and disposal approvals' }],
+    criticalSuccess: ['Organized records', 'Easy retrieval', 'Legal compliance', 'Secure disposal'],
+    risks: [{ risk: 'Records loss', mitigation: 'Backup systems, secure storage, disaster recovery' }, { risk: 'Premature disposal', mitigation: 'Retention schedule, approval process, legal review' }, { risk: 'Unauthorized access', mitigation: 'Access controls, audit trails, security measures' }],
+    legalCompliance: ['Record retention laws', 'Medical records regulations', 'Data protection requirements', 'Audit and inspection requirements']
+  },
+
+  // SECTION 23: QUALITY ASSURANCE
+  section23_quality: {
+    policyName: 'Quality Assurance and Improvement',
+    byLawsSection: 'section23',
+    category: 'Clinical',
+    implementationSteps: [
+      { step: 1, phase: 'Planning', activity: 'Quality Framework', details: 'Establish quality goals, standards, metrics, and improvement methodology', responsibleCommittee: 'medical_board', responsibleIndividuals: ['Quality Officer', 'Medical Director'], timeline: '4-6 weeks', outputs: ['Quality framework', 'Standards document', 'KPIs', 'Improvement process'], checkpoints: ['Framework comprehensive', 'Standards evidence-based', 'Metrics defined'] },
+      { step: 2, phase: 'Implementation', activity: 'Quality Monitoring', details: 'Implement systems for monitoring clinical outcomes, patient safety, service quality', responsibleCommittee: 'medical_board', responsibleIndividuals: ['Quality Officer', 'Clinical Staff'], timeline: 'Ongoing', outputs: ['Monitoring systems', 'Data collection', 'Quality dashboards', 'Regular reports'], checkpoints: ['Data accurate', 'Monitoring continuous', 'Issues identified'] },
+      { step: 3, phase: 'Implementation', activity: 'Quality Improvement Projects', details: 'Identify improvement opportunities, implement PDSA cycles, measure impact', responsibleCommittee: 'medical_board', responsibleIndividuals: ['Quality Officer', 'Clinical Teams'], timeline: 'Ongoing projects', outputs: ['Improvement projects', 'Intervention plans', 'Outcome measurements'], checkpoints: ['Projects effective', 'Improvements sustained', 'Learning shared'] },
+      { step: 4, phase: 'Monitoring', activity: 'Quality Audits', details: 'Conduct regular internal audits, external assessments, accreditation reviews', responsibleCommittee: 'medical_board', responsibleIndividuals: ['Quality Officer', 'External Auditors'], timeline: 'Quarterly internal, annual external', outputs: ['Audit reports', 'Findings', 'Corrective actions', 'Accreditation status'], checkpoints: ['Audits thorough', 'Actions implemented', 'Accreditation maintained'] }
+    ],
+    committeeInvolved: ['medical_board', 'board_of_directors'],
+    approvalChain: [{ level: 'Quality Officer', for: 'Quality monitoring and projects' }, { level: 'Medical Director', for: 'Clinical quality standards' }, { level: 'Medical Board', for: 'Quality policies and major initiatives' }, { level: 'Board of Directors', for: 'Quality strategy' }],
+    criticalSuccess: ['High clinical quality', 'Patient safety', 'Continuous improvement', 'Accreditation maintained'],
+    risks: [{ risk: 'Quality failures', mitigation: 'Robust monitoring, rapid response, root cause analysis' }, { risk: 'Staff resistance', mitigation: 'Engagement, training, non-punitive culture, support' }],
+    legalCompliance: ['Healthcare quality standards', 'Accreditation requirements', 'Patient safety regulations', 'Clinical governance requirements']
+  },
+
+  // SECTION 24: INFECTION CONTROL
+  section24_infection_control: {
+    policyName: 'Infection Prevention and Control',
+    byLawsSection: 'section24',
+    category: 'Clinical Safety',
+    implementationSteps: [
+      { step: 1, phase: 'Planning', activity: 'Infection Control Program', details: 'Develop comprehensive program covering surveillance, prevention, response, and training', responsibleCommittee: 'safety_committee', responsibleIndividuals: ['Infection Control Officer', 'Medical Board'], timeline: '4-6 weeks', outputs: ['IC program', 'Protocols', 'Surveillance system', 'Response plans'], checkpoints: ['Program comprehensive', 'Evidence-based', 'Board approved'] },
+      { step: 2, phase: 'Implementation', activity: 'Standard Precautions', details: 'Implement hand hygiene, PPE, environmental cleaning, safe injection practices', responsibleCommittee: 'safety_committee', responsibleIndividuals: ['Infection Control Officer', 'All Staff'], timeline: 'Ongoing', outputs: ['Hand hygiene stations', 'PPE supplies', 'Cleaning protocols', 'Compliance monitoring'], checkpoints: ['Precautions followed', 'Supplies adequate', 'Compliance high'] },
+      { step: 3, phase: 'Implementation', activity: 'Surveillance & Monitoring', details: 'Monitor healthcare-associated infections, outbreaks, compliance with protocols', responsibleCommittee: 'safety_committee', responsibleIndividuals: ['Infection Control Officer', 'Lab'], timeline: 'Continuous', outputs: ['Infection data', 'Trend analysis', 'Outbreak alerts', 'Compliance reports'], checkpoints: ['Data accurate', 'Trends identified', 'Actions prompt'] },
+      { step: 4, phase: 'Monitoring', activity: 'Outbreak Management', details: 'Rapid identification, containment, investigation, and control of outbreaks', responsibleCommittee: 'safety_committee', responsibleIndividuals: ['Infection Control Officer', 'Medical Team', 'Lab'], timeline: 'Immediate response', outputs: ['Outbreak reports', 'Containment actions', 'Investigation findings', 'Preventive measures'], checkpoints: ['Rapid response', 'Outbreak controlled', 'Lessons learned'] }
+    ],
+    committeeInvolved: ['safety_committee', 'medical_board'],
+    approvalChain: [{ level: 'Infection Control Officer', for: 'Daily IC activities' }, { level: 'Safety Committee', for: 'IC policies and protocols' }, { level: 'Medical Board', for: 'Clinical IC standards' }, { level: 'Administrative Director', for: 'Resource allocation' }],
+    criticalSuccess: ['Low infection rates', 'High compliance', 'Rapid outbreak response', 'Safety culture'],
+    risks: [{ risk: 'Healthcare-associated infections', mitigation: 'Strict protocols, monitoring, training, enforcement' }, { risk: 'Outbreaks', mitigation: 'Surveillance, rapid response, isolation, investigation' }],
+    legalCompliance: ['Infection control standards', 'Disease reporting requirements', 'Healthcare facility regulations', 'Occupational health and safety']
+  },
+
+  // SECTION 25: EMERGENCY PREPAREDNESS
+  section25_emergency_preparedness: {
+    policyName: 'Emergency Preparedness and Response',
+    byLawsSection: 'section25',
+    category: 'Safety',
+    implementationSteps: [
+      { step: 1, phase: 'Planning', activity: 'Emergency Plans', details: 'Develop plans for fire, natural disasters, mass casualties, pandemics, security threats', responsibleCommittee: 'safety_committee', responsibleIndividuals: ['Safety Officer', 'Emergency Coordinator', 'Department Heads'], timeline: '6-8 weeks', outputs: ['Emergency response plans', 'Evacuation procedures', 'Command structure', 'Communication protocols'], checkpoints: ['All scenarios covered', 'Plans practical', 'Approved'] },
+      { step: 2, phase: 'Preparation', activity: 'Resources & Infrastructure', details: 'Stockpile supplies, equipment, establish emergency systems, backup power', responsibleCommittee: 'safety_committee', responsibleIndividuals: ['Safety Officer', 'Facilities', 'Procurement'], timeline: '8-12 weeks', outputs: ['Emergency supplies', 'Backup systems', 'Communication equipment', 'Emergency exits'], checkpoints: ['Resources adequate', 'Systems tested', 'Accessible'] },
+      { step: 3, phase: 'Implementation', activity: 'Training & Drills', details: 'Train all staff on emergency procedures, conduct regular drills for different scenarios', responsibleCommittee: 'safety_committee', responsibleIndividuals: ['Safety Officer', 'Training Team'], timeline: 'Quarterly drills', outputs: ['Training records', 'Drill reports', 'Performance assessments', 'Improvements'], checkpoints: ['All staff trained', 'Drills realistic', 'Performance good'] },
+      { step: 4, phase: 'Monitoring', activity: 'Emergency Response', details: 'Activate plans during emergencies, coordinate response, document actions, review performance', responsibleCommittee: 'safety_committee', responsibleIndividuals: ['Emergency Response Team'], timeline: 'During emergencies', outputs: ['Incident reports', 'Response actions', 'After-action reviews', 'Improvements'], checkpoints: ['Effective response', 'Lives protected', 'Lessons learned'] }
+    ],
+    committeeInvolved: ['safety_committee', 'board_of_directors'],
+    approvalChain: [{ level: 'Safety Officer', for: 'Emergency planning and drills' }, { level: 'Emergency Coordinator', for: 'Emergency response activation' }, { level: 'Administrative Director', for: 'Resource allocation' }, { level: 'Board of Directors', for: 'Major emergency decisions' }],
+    criticalSuccess: ['Prepared staff', 'Effective response', 'Lives protected', 'Continuity maintained'],
+    risks: [{ risk: 'Inadequate preparedness', mitigation: 'Comprehensive planning, regular drills, resource stockpiling' }, { risk: 'Poor response', mitigation: 'Training, clear procedures, practiced command structure' }],
+    legalCompliance: ['Emergency preparedness regulations', 'Fire safety codes', 'Disaster management laws', 'Healthcare facility requirements']
+  },
+
+  // SECTION 26: PATIENT RIGHTS
+  section26_patient_rights: {
+    policyName: 'Patient Rights and Responsibilities',
+    byLawsSection: 'section26',
+    category: 'Clinical',
+    implementationSteps: [
+      { step: 1, phase: 'Planning', activity: 'Patient Rights Charter', details: 'Develop charter covering informed consent, privacy, dignity, complaints, access to records', responsibleCommittee: 'medical_board', responsibleIndividuals: ['Patient Advocate', 'Medical Director', 'Legal'], timeline: '2-3 weeks', outputs: ['Patient rights charter', 'Consent forms', 'Complaint procedures', 'Access procedures'], checkpoints: ['Charter comprehensive', 'Legal compliance', 'Approved'] },
+      { step: 2, phase: 'Implementation', activity: 'Patient Communication', details: 'Display rights, provide information in multiple languages, train staff on patient rights', responsibleCommittee: 'medical_board', responsibleIndividuals: ['Patient Advocate', 'Communications'], timeline: '2-4 weeks', outputs: ['Signage', 'Brochures', 'Multi-language materials', 'Staff training'], checkpoints: ['Information accessible', 'Staff trained', 'Patients aware'] },
+      { step: 3, phase: 'Implementation', activity: 'Informed Consent', details: 'Implement robust consent processes for procedures, treatments, research', responsibleCommittee: 'medical_board', responsibleIndividuals: ['Clinical Staff', 'Patient Advocate'], timeline: 'Ongoing', outputs: ['Consent forms', 'Documentation', 'Patient education materials'], checkpoints: ['Consent obtained', 'Understanding verified', 'Documentation complete'] },
+      { step: 4, phase: 'Monitoring', activity: 'Patient Complaints', details: 'Receive, investigate, resolve complaints; monitor trends and improve services', responsibleCommittee: 'medical_board', responsibleIndividuals: ['Patient Advocate', 'Department Heads'], timeline: 'Ongoing', outputs: ['Complaint register', 'Investigation reports', 'Resolutions', 'Trend analysis'], checkpoints: ['Complaints addressed', 'Resolutions fair', 'Improvements made'] }
+    ],
+    committeeInvolved: ['medical_board', 'ethics_committee'],
+    approvalChain: [{ level: 'Patient Advocate', for: 'Daily patient rights issues' }, { level: 'Department Head', for: 'Complaints and resolution' }, { level: 'Medical Director', for: 'Complex cases' }, { level: 'Ethics Committee', for: 'Ethical dilemmas' }],
+    criticalSuccess: ['Patient rights respected', 'Informed decisions', 'Complaints resolved', 'Patient satisfaction'],
+    risks: [{ risk: 'Rights violations', mitigation: 'Training, monitoring, complaint system, consequences' }, { risk: 'Poor consent', mitigation: 'Clear procedures, education, verification, documentation' }],
+    legalCompliance: ['Patient rights laws', 'Informed consent requirements', 'Privacy regulations', 'Healthcare quality standards']
+  },
+
+  // SECTION 27: RESEARCH ETHICS
+  section27_research_ethics: {
+    policyName: 'Research and Clinical Trials Ethics',
+    byLawsSection: 'section27',
+    category: 'Ethics',
+    implementationSteps: [
+      { step: 1, phase: 'Planning', activity: 'Research Ethics Framework', details: 'Establish ethical principles, review processes, informed consent for research', responsibleCommittee: 'ethics_committee', responsibleIndividuals: ['Research Ethics Officer', 'Medical Director'], timeline: '4-6 weeks', outputs: ['Ethics framework', 'Review procedures', 'Consent templates'], checkpoints: ['Framework comprehensive', 'Compliant', 'Approved'] },
+      { step: 2, phase: 'Implementation', activity: 'Ethics Review Board', details: 'Establish IRB/Ethics Committee to review all research protocols', responsibleCommittee: 'ethics_committee', responsibleIndividuals: ['Ethics Committee Chair', 'Members'], timeline: '2 weeks', outputs: ['Committee charter', 'Review checklists', 'Decision templates'], checkpoints: ['Committee functional', 'Members qualified', 'Process clear'] },
+      { step: 3, phase: 'Implementation', activity: 'Protocol Review', details: 'Review all research proposals for scientific merit, ethical considerations, participant protection', responsibleCommittee: 'ethics_committee', responsibleIndividuals: ['Ethics Committee'], timeline: 'As needed', outputs: ['Review reports', 'Approvals/rejections', 'Modifications required'], checkpoints: ['Thorough review', 'Ethical standards met', 'Documentation complete'] },
+      { step: 4, phase: 'Monitoring', activity: 'Ongoing Oversight', details: 'Monitor approved research, review adverse events, conduct audits, ensure compliance', responsibleCommittee: 'ethics_committee', responsibleIndividuals: ['Research Ethics Officer'], timeline: 'Ongoing', outputs: ['Monitoring reports', 'Adverse event reports', 'Audit findings'], checkpoints: ['Research ethical', 'Participants protected', 'Compliance maintained'] }
+    ],
+    committeeInvolved: ['ethics_committee', 'medical_board'],
+    approvalChain: [{ level: 'Ethics Committee', for: 'Research approval' }, { level: 'Medical Board', for: 'Clinical research standards' }, { level: 'Administrative Director', for: 'Resource allocation' }],
+    criticalSuccess: ['Ethical research', 'Participant protection', 'Scientific integrity', 'Compliance maintained'],
+    risks: [{ risk: 'Ethics violations', mitigation: 'Rigorous review, monitoring, training, enforcement' }, { risk: 'Participant harm', mitigation: 'Risk assessment, informed consent, monitoring, adverse event response' }],
+    legalCompliance: ['Research ethics regulations', 'Clinical trials requirements', 'Informed consent laws', 'Data protection in research']
+  },
+
+  // SECTION 28: PARTNERSHIPS
+  section28_partnerships: {
+    policyName: 'External Partnerships and Collaboration',
+    byLawsSection: 'section28',
+    category: 'Operations',
+    implementationSteps: [
+      { step: 1, phase: 'Planning', activity: 'Partnership Policy', details: 'Define criteria for partnerships, due diligence, approval process, agreements', responsibleCommittee: 'board_of_directors', responsibleIndividuals: ['Administrative Director', 'Legal'], timeline: '2-3 weeks', outputs: ['Partnership policy', 'Evaluation criteria', 'Agreement templates'], checkpoints: ['Policy clear', 'Criteria defined', 'Approved'] },
+      { step: 2, phase: 'Implementation', activity: 'Partner Selection', details: 'Identify potential partners, conduct due diligence, evaluate fit and benefits', responsibleCommittee: 'board_of_directors', responsibleIndividuals: ['Administrative Director', 'Department Heads'], timeline: 'Per opportunity', outputs: ['Partner proposals', 'Due diligence reports', 'Recommendations'], checkpoints: ['Thorough evaluation', 'Risks assessed', 'Value clear'] },
+      { step: 3, phase: 'Implementation', activity: 'Agreement Negotiation', details: 'Negotiate terms, define roles, responsibilities, financials, IP, dispute resolution', responsibleCommittee: 'board_of_directors', responsibleIndividuals: ['Legal Advisor', 'Finance', 'Administrative Director'], timeline: 'Per partnership', outputs: ['Partnership agreements', 'MOUs', 'Service contracts'], checkpoints: ['Fair terms', 'Legally sound', 'Signed'] },
+      { step: 4, phase: 'Monitoring', activity: 'Partnership Management', details: 'Monitor performance, resolve issues, maintain relationships, evaluate outcomes', responsibleCommittee: 'board_of_directors', responsibleIndividuals: ['Partnership Manager', 'Department Heads'], timeline: 'Ongoing', outputs: ['Performance reports', 'Issue resolutions', 'Relationship assessments'], checkpoints: ['Value delivered', 'Issues resolved', 'Relationships strong'] }
+    ],
+    committeeInvolved: ['board_of_directors'],
+    approvalChain: [{ level: 'Department Head', for: 'Propose partnerships' }, { level: 'Administrative Director', for: 'Evaluate and negotiate' }, { level: 'Legal Advisor', for: 'Agreement review' }, { level: 'Board of Directors', for: 'Final approval' }],
+    criticalSuccess: ['Strategic partnerships', 'Value creation', 'Risk managed', 'Relationships sustained'],
+    risks: [{ risk: 'Poor partner selection', mitigation: 'Due diligence, evaluation criteria, references' }, { risk: 'Agreement disputes', mitigation: 'Clear terms, legal review, dispute resolution mechanisms' }],
+    legalCompliance: ['Contract laws', 'Healthcare partnership regulations', 'Anti-kickback rules', 'Competition laws']
+  },
+
+  // SECTION 29: AMENDMENTS
+  section29_amendments: {
+    policyName: 'By-Laws Amendments and Reviews',
+    byLawsSection: 'section29',
+    category: 'Governance',
+    implementationSteps: [
+      { step: 1, phase: 'Planning', activity: 'Amendment Policy', details: 'Define process for proposing, reviewing, approving By-Laws amendments', responsibleCommittee: 'board_of_directors', responsibleIndividuals: ['Board Secretary', 'Legal Advisor'], timeline: '1-2 weeks', outputs: ['Amendment procedure', 'Proposal forms', 'Approval requirements'], checkpoints: ['Process clear', 'Legally sound', 'Board approved'] },
+      { step: 2, phase: 'Implementation', activity: 'Regular Review', details: 'Conduct annual review of By-Laws for currency, effectiveness, legal compliance', responsibleCommittee: 'board_of_directors', responsibleIndividuals: ['Board Secretary', 'Legal Advisor', 'Management'], timeline: 'Annually', outputs: ['Review reports', 'Amendment proposals', 'Recommendations'], checkpoints: ['Review thorough', 'Issues identified', 'Proposals drafted'] },
+      { step: 3, phase: 'Implementation', activity: 'Amendment Process', details: 'Propose amendments, stakeholder consultation, board review, approval, documentation', responsibleCommittee: 'board_of_directors', responsibleIndividuals: ['Board of Directors', 'Legal Advisor'], timeline: 'As needed', outputs: ['Amendment proposals', 'Consultation feedback', 'Board resolutions', 'Updated By-Laws'], checkpoints: ['Consultation done', 'Board approval', 'Documentation updated'] },
+      { step: 4, phase: 'Monitoring', activity: 'Communication & Training', details: 'Communicate amendments to all stakeholders, update training materials, ensure compliance', responsibleCommittee: 'board_of_directors', responsibleIndividuals: ['HR Director', 'Communications'], timeline: 'Post-amendment', outputs: ['Communication materials', 'Updated training', 'Acknowledgments'], checkpoints: ['All informed', 'Training updated', 'Compliance ensured'] }
+    ],
+    committeeInvolved: ['board_of_directors'],
+    approvalChain: [{ level: 'Any stakeholder', for: 'Propose amendments' }, { level: 'Board Secretary', for: 'Process amendments' }, { level: 'Legal Advisor', for: 'Legal review' }, { level: 'Board of Directors', for: 'Approval (special majority)' }],
+    criticalSuccess: ['Current By-Laws', 'Legal compliance', 'Stakeholder input', 'Smooth updates'],
+    risks: [{ risk: 'Outdated By-Laws', mitigation: 'Regular reviews, responsive to changes, legal monitoring' }, { risk: 'Poor amendments', mitigation: 'Consultation, legal review, board deliberation' }],
+    legalCompliance: ['Corporate governance laws', 'Healthcare regulations', 'Constitutional/charter requirements']
+  },
+
+  // SECTION 30: INTERPRETATION
+  section30_interpretation: {
+    policyName: 'Interpretation and Dispute Resolution',
+    byLawsSection: 'section30',
+    category: 'Governance',
+    implementationSteps: [
+      { step: 1, phase: 'Planning', activity: 'Interpretation Authority', details: 'Define who has authority to interpret By-Laws provisions in case of ambiguity', responsibleCommittee: 'board_of_directors', responsibleIndividuals: ['Board Secretary', 'Legal Advisor'], timeline: '1 week', outputs: ['Interpretation policy', 'Authority designation', 'Request procedures'], checkpoints: ['Authority clear', 'Process defined', 'Documented'] },
+      { step: 2, phase: 'Implementation', activity: 'Interpretation Requests', details: 'Handle requests for interpretation, provide written guidance, maintain consistency', responsibleCommittee: 'board_of_directors', responsibleIndividuals: ['Board Secretary', 'Legal Advisor', 'Board'], timeline: 'As needed', outputs: ['Interpretation requests', 'Written interpretations', 'Interpretation log'], checkpoints: ['Requests addressed', 'Guidance clear', 'Consistency maintained'] },
+      { step: 3, phase: 'Implementation', activity: 'Dispute Resolution', details: 'Establish internal dispute resolution mechanisms before external legal action', responsibleCommittee: 'board_of_directors', responsibleIndividuals: ['Dispute Resolution Officer', 'Legal Advisor'], timeline: 'As needed', outputs: ['Dispute resolution procedures', 'Mediation services', 'Resolution records'], checkpoints: ['Procedures followed', 'Fair resolution', 'Documentation complete'] },
+      { step: 4, phase: 'Monitoring', activity: 'Clarification Amendments', details: 'Track interpretation issues, identify recurring ambiguities, propose clarifying amendments', responsibleCommittee: 'board_of_directors', responsibleIndividuals: ['Board Secretary', 'Legal Advisor'], timeline: 'Annually', outputs: ['Issue tracking', 'Clarification proposals', 'Amendment recommendations'], checkpoints: ['Issues tracked', 'Ambiguities resolved', 'By-Laws improved'] }
+    ],
+    committeeInvolved: ['board_of_directors'],
+    approvalChain: [{ level: 'Board Secretary/Legal', for: 'Routine interpretations' }, { level: 'Board of Directors', for: 'Major interpretations and disputes' }],
+    criticalSuccess: ['Clear guidance', 'Consistent application', 'Disputes resolved', 'Continuous clarification'],
+    risks: [{ risk: 'Conflicting interpretations', mitigation: 'Single authority, documentation, precedent' }, { risk: 'Unresolved disputes', mitigation: 'Clear procedures, mediation, escalation path' }],
+    legalCompliance: ['Corporate governance principles', 'Dispute resolution laws', 'Legal interpretation standards']
+  }
 };
