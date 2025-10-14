@@ -904,6 +904,19 @@ const HRByLaws = ({ setActiveModule }) => {
         />
       )}
 
+      {/* Compliance Center Modal */}
+      {showComplianceCenter && (
+        <ComplianceCenter 
+          onClose={() => setShowComplianceCenter(false)}
+          onNavigateToSection={(sectionId) => {
+            setActiveSection(sectionId);
+            if (contentRef.current) {
+              contentRef.current.scrollTop = 0;
+            }
+          }}
+        />
+      )}
+
       {/* Print Styles */}
       <style jsx>{`
         @media print {
