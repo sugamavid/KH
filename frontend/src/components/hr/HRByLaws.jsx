@@ -535,11 +535,9 @@ const HRByLaws = ({ setActiveModule }) => {
               {/* Render direct content if no subsections */}
               {section.content && !section.subsections && (
                 <div className="bg-white rounded-xl p-10 shadow-inner border-2 border-amber-200">
-                  <div 
-                    className="text-lg leading-relaxed font-serif text-slate-800" 
-                    style={{lineHeight: '1.8'}}
-                    dangerouslySetInnerHTML={{ __html: formatContent(section.content) }}
-                  />
+                  <div className="text-lg leading-relaxed font-serif text-slate-800">
+                    {renderFormattedContent(section.content)}
+                  </div>
                 </div>
               )}
               
@@ -551,11 +549,9 @@ const HRByLaws = ({ setActiveModule }) => {
                       {subsection.number} {subsection.title}
                     </h3>
                   )}
-                  <div 
-                    className="text-lg leading-relaxed font-serif text-slate-800" 
-                    style={{lineHeight: '1.8'}}
-                    dangerouslySetInnerHTML={{ __html: formatContent(subsection.content) }}
-                  />
+                  <div className="text-lg leading-relaxed font-serif text-slate-800">
+                    {renderFormattedContent(subsection.content)}
+                  </div>
                 </div>
               ))}
               
