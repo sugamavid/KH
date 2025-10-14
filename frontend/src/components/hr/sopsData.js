@@ -8460,7 +8460,195 @@ Optional:
     title: 'Training Needs Assessment Process',
     searchTerms: ['training', 'needs', 'assessment', 'tna', 'development'],
     category: 'J. Training, Certification & Development',
-    content: 'Institutes formal mechanism for identifying, documenting, and prioritizing training needs ensuring alignment with institutional goals and continuous professional development.'
+    subsections: [
+      {
+        number: '1',
+        title: 'OBJECTIVE',
+        content: 'To establish systematic and evidence-based mechanism for identifying, documenting, analyzing, and prioritizing training needs at individual, departmental, and organizational levels ensuring alignment with strategic objectives, regulatory requirements, skill development goals, and continuous professional advancement.'
+      },
+      {
+        number: '2',
+        title: 'SCOPE',
+        content: 'Applicable to all employees across medical, paramedical, administrative, technical, and support categories. Covers annual training needs identification, competency gap analysis, mandatory compliance training, skill enhancement programs, and career development initiatives.'
+      },
+      {
+        number: '3',
+        title: 'TRAINING NEEDS IDENTIFICATION SOURCES',
+        content: `(i) Performance Appraisal Gaps:
+    • Identified during annual performance reviews
+    • Competency deficiencies highlighted by managers
+    • Individual development plans (IDPs)
+
+(ii) Regulatory & Compliance Requirements:
+    • NABH accreditation mandates
+    • Fire safety, infection control, BLS/ACLS training
+    • POSH awareness, biomedical waste management
+    • Statutory training (Factories Act, Clinical Establishments Act)
+
+(iii) Departmental Requests:
+    • New equipment or technology introduction
+    • Process changes or SOP updates
+    • Quality improvement initiatives
+    • Patient safety protocols
+
+(iv) Individual Employee Requests:
+    • Self-identified skill gaps
+    • Career advancement aspirations
+    • Certification requirements
+    • External workshop/conference interests
+
+(v) Organizational Strategic Goals:
+    • New service line launches (e.g., new department)
+    • Digital transformation initiatives
+    • Leadership pipeline development
+    • Patient experience enhancement programs`
+      },
+      {
+        number: '4',
+        title: 'TRAINING NEEDS ASSESSMENT (TNA) CYCLE',
+        content: `Annual TNA Timeline:
+• November-December: Department-wise TNA collection
+• January: Consolidation and analysis by HR
+• February: Budget allocation and prioritization
+• March: Annual Training Calendar finalized
+• April-March: Training execution throughout year
+• March: Year-end training effectiveness review`
+      },
+      {
+        number: '5',
+        title: 'TNA DATA COLLECTION PROCESS',
+        subsections: [
+          {
+            number: '5.1',
+            title: 'Departmental TNA Form Submission',
+            content: `• HR circulates TNA Form (Annexure J.1.1) to all Department Heads
+• Form captures:
+    - Employee name, designation, department
+    - Training topic/skill required
+    - Training type (technical, soft skill, compliance, leadership)
+    - Priority (High/Medium/Low)
+    - Justification/rationale
+    - Preferred mode (classroom, online, on-the-job, external)
+    - Number of participants
+• Department Heads submit completed forms to HR by deadline`
+          },
+          {
+            number: '5.2',
+            title: 'Individual Employee Input',
+            content: `• Employees can submit individual training requests via HRMS
+• Self-assessment of skill gaps
+• Career aspirations and development goals
+• Interest in certifications or advanced training
+• Manager reviews and endorses genuine needs`
+          },
+          {
+            number: '5.3',
+            title: 'Compliance & Statutory Review',
+            content: `• HR reviews mandatory training requirements:
+    - New joiner induction (100% coverage)
+    - Annual refresher training (infection control, fire safety, POSH)
+    - Role-specific certifications (BLS for nurses, ACLS for ICU staff)
+    - Regulatory compliance (Biomedical waste, NABH standards)
+• Ensures 100% compliance with statutory training mandates`
+          }
+        ]
+      },
+      {
+        number: '6',
+        title: 'TNA ANALYSIS & PRIORITIZATION',
+        subsections: [
+          {
+            number: '6.1',
+            title: 'Consolidation',
+            content: `• HR consolidates all TNA inputs
+• Categorizes by:
+    - Training type (Technical, Soft Skills, Compliance, Leadership)
+    - Department
+    - Priority level
+    - Estimated cost
+• Identifies common training needs across departments (e.g., communication skills)`
+          },
+          {
+            number: '6.2',
+            title: 'Gap Analysis',
+            content: `• Compare current competencies vs required competencies
+• Identify critical skill gaps impacting patient care or operations
+• Assess training history (avoid redundant training)
+• Benchmark against industry standards`
+          },
+          {
+            number: '6.3',
+            title: 'Prioritization Matrix',
+            content: `High Priority (Immediate):
+• Mandatory statutory/compliance training
+• Patient safety-critical training
+• New technology/equipment training
+• Skills directly impacting accreditation
+
+Medium Priority (Within 6 months):
+• Performance improvement training
+• Soft skills enhancement
+• Departmental process training
+• Supervisor/manager development
+
+Low Priority (As resources permit):
+• General interest topics
+• Optional certifications
+• Aspirational training
+• Team-building activities`
+          }
+        ]
+      },
+      {
+        number: '7',
+        title: 'BUDGET ALLOCATION',
+        content: `• HR prepares training budget proposal based on TNA
+• Budget components:
+    - In-house training: Trainer fees, materials, venue
+    - External training: Registration fees, travel, accommodation
+    - E-learning platform subscriptions
+    - Certification exam fees
+    - Training infrastructure (e.g., simulation lab)
+• Management approves budget (typically 1-2% of payroll)
+• Budget allocated by priority categories`
+      },
+      {
+        number: '8',
+        title: 'ANNUAL TRAINING CALENDAR CREATION',
+        content: `• HR develops month-wise training schedule
+• Schedules mandatory trainings first (compliance, safety)
+• Plans department-specific technical training
+• Schedules organization-wide programs (leadership, soft skills)
+• Considers operational schedules (avoid high-workload periods)
+• Published and communicated to all departments
+• Quarterly reviews and adjustments as needed`
+      },
+      {
+        number: '9',
+        title: 'TRAINING NEEDS APPROVAL WORKFLOW',
+        content: `(i) Department Head initiates TNA
+(ii) HR reviews and validates
+(iii) L&D Committee (if exists) evaluates
+(iv) Budget approval by Finance
+(v) Final approval by CHRO/CEO
+(vi) Inclusion in Annual Training Calendar`
+      },
+      {
+        number: '10',
+        title: 'TNA DOCUMENTATION & RECORDS',
+        content: `• TNA forms and submissions archived
+• Consolidated TNA report maintained
+• Training calendar and budget documents
+• Approval records and justifications
+• Retained for audit and accreditation purposes
+• Annual TNA effectiveness review report`
+      },
+      {
+        number: '11',
+        title: 'REFERENCE DOCUMENTS',
+        content: 'HR By-Laws (Training Policy), NABH Training Standards, Annexure J.1.1: Training Needs Assessment Form, Annexure J.1.2: Annual Training Calendar Template'
+      }
+    ]
   },
 
   sopJ2: {
