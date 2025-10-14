@@ -27,7 +27,7 @@ def parse_bylaws():
     preamble_content = ' '.join(preamble_lines)
     
     # Split content into sections
-    section_pattern = r'^Section (\d+):(.*?)$'
+    section_pattern = r'^(?:Amended )?Section (\d+):(.*?)$'
     section_matches = list(re.finditer(section_pattern, content[preamble_start:], re.MULTILINE))
     
     sections_data = {}
