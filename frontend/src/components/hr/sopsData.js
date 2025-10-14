@@ -2230,7 +2230,216 @@ Once drafted, the policy shall be reviewed internally by:
     title: 'Personnel File Creation & Document Archiving',
     searchTerms: ['personnel', 'file', 'records', 'archiving', 'documents'],
     category: 'D. Employee Records & Statutory Compliance',
-    content: 'Establishes structured, compliant, and secure method for creating, maintaining, and archiving employee personnel files ensuring proper documentation and ease of reference.'
+    subsections: [
+      {
+        number: '1',
+        title: 'OBJECTIVE',
+        content: 'To establish a systematic, secure, and compliant framework for creating, organizing, maintaining, and archiving employee personnel files ensuring easy retrieval, audit readiness, confidentiality, and adherence to legal retention requirements.'
+      },
+      {
+        number: '2',
+        title: 'SCOPE AND APPLICABILITY',
+        content: `This SOP applies to:
+• All employees of Koyili Hospital across all categories and departments
+• HR Department responsible for personnel file management
+• Authorized personnel with legitimate access requirements (payroll, legal, audit)
+• Physical and digital personnel records maintained at all hospital locations`
+      },
+      {
+        number: '3',
+        title: 'DEFINITIONS',
+        content: `• Personnel File: A comprehensive collection of employment-related documents for an individual employee maintained by HR
+• Master File: Primary physical file containing original or certified copies of critical documents
+• Working File: Day-to-day operational file containing correspondence, leave records, attendance
+• Confidential File: Separate secure file containing sensitive information (disciplinary records, investigations, medical reports)
+• Digital Archive: Scanned electronic copies of personnel documents stored in HRMS or secure cloud storage
+• Retention Period: Legally mandated or institutionally defined duration for which records must be preserved`
+      },
+      {
+        number: '4',
+        title: 'PROCEDURE',
+        subsections: [
+          {
+            number: '4.1',
+            title: 'Personnel File Creation',
+            content: `(i) A personnel file shall be created for every employee within 3 working days of joining
+(ii) File Structure - Three separate files shall be maintained:
+    
+    A. Master File (stored in locked cabinet, restricted access):
+       • Section 1: Personal Information
+         - Application form, resume/CV
+         - Appointment letter, employment contract
+         - Educational certificates (attested copies)
+         - Identity proofs (Aadhaar, PAN, passport)
+         - Address proof
+         - Photographs
+       
+       • Section 2: Employment Documentation
+         - Offer letter acceptance
+         - Background verification report
+         - Reference check reports
+         - Medical fitness certificate
+         - Police verification (if applicable)
+         - Professional registration certificates (for clinical staff)
+       
+       • Section 3: Statutory & Compliance
+         - Form 11 (EPF nomination and declaration)
+         - ESIC registration documents
+         - Bank account details and cancelled cheque
+         - PF/gratuity nomination forms
+         - Tax declaration forms (Form 12BB)
+         - Aadhaar-PAN-UAN linking documents
+    
+    B. Working File (accessible for HR operations):
+       • Attendance and leave records
+       • Leave applications and approvals
+       • Salary revision letters
+       • Confirmation letter
+       • Transfer/promotion letters
+       • Training and development records
+       • Performance appraisal forms
+       • Increment and bonus letters
+       • General correspondence
+    
+    C. Confidential File (secure storage, CHRO access only):
+       • Disciplinary notices and warnings
+       • Investigation reports
+       • Complaint records
+       • Medical records (if sensitive)
+       • Exit interview notes
+       • Legal notices or court matters
+
+(iii) Each file shall have:
+       • Employee Name, ID, Department clearly labeled
+       • File opening date
+       • Index/checklist of documents
+       • Color-coded categorization (e.g., Blue-Active, Red-Separated, Green-Contractual)`
+          },
+          {
+            number: '4.2',
+            title: 'Document Organization and Indexing',
+            content: `(i) All documents shall be arranged in chronological order within each section
+(ii) A Document Index/Checklist shall be maintained at the front of each file listing:
+       • Document name
+       • Date of addition
+       • Added by (HR personnel name)
+       • Verification status
+(iii) Each document page shall be numbered and initialed by HR executive
+(iv) Any document removal (for copying/scanning) shall be logged in Withdrawal Register with date and purpose`
+          },
+          {
+            number: '4.3',
+            title: 'Digital Archiving',
+            content: `(i) All physical documents shall be scanned and uploaded to HRMS within 7 days of receipt
+(ii) Digital files shall be organized in folder structure mirroring physical files
+(iii) File naming convention: EmployeeID_DocumentType_Date (e.g., E001_OfferLetter_20250115)
+(iv) Access controls shall be configured:
+       • HR Team: Full access
+       • Reporting Managers: Limited access (performance, attendance)
+       • Employee: Self-service access (own documents only)
+       • Payroll Team: Access to salary and tax documents
+(v) Cloud storage with encryption and daily backups shall be used
+(vi) Version control shall be maintained for updated documents`
+          },
+          {
+            number: '4.4',
+            title: 'File Maintenance and Updates',
+            content: `(i) Personnel files shall be reviewed and updated:
+       • Monthly: Addition of attendance, leave, salary records
+       • Quarterly: Review of completeness and accuracy
+       • Annually: Verification of updated documents (renewed licenses, updated tax declarations)
+(ii) HR shall send Document Update Reminders to employees for:
+       • License renewals (for clinical staff)
+       • Address changes
+       • Family status changes (marriage, childbirth)
+       • Bank account changes
+       • Emergency contact updates
+(iii) Employees must submit updated documents within 15 days of change
+(iv) Any missing critical documents shall be flagged and followed up until received`
+          },
+          {
+            number: '4.5',
+            title: 'File Archiving Post-Separation',
+            content: `(i) Upon employee separation:
+       • Working file contents shall be consolidated into Master File
+       • Final settlement documents, exit interview, clearance forms shall be added
+       • File shall be marked "Inactive - Archived" with separation date
+       • File color shall be changed to Yellow (archived status)
+(ii) Archived files shall be moved to Archive Room/Storage within 30 days
+(iii) Archived files shall be organized:
+       • By separation year
+       • Alphabetically within each year
+       • With clear labeling and indexing
+(iv) Digital archive shall be marked "Separated" in HRMS with restricted access`
+          },
+          {
+            number: '4.6',
+            title: 'Record Retention and Disposal',
+            content: `(i) Retention periods as per legal requirements:
+       • Active employees: Retain all documents until separation + retention period
+       • Separated employees: 
+         - Core employment documents (appointment, salary, F&F): 7 years
+         - Statutory documents (PF, ESI, tax): As per respective Acts (typically 7-10 years)
+         - Disciplinary and legal matters: Retain until all proceedings are closed + 7 years
+       • Deceased employees: 7 years from date of death
+
+(ii) Document destruction process:
+       • HR shall prepare Annual Disposal List of files eligible for destruction
+       • Approval from CHRO and Legal team required
+       • Disposal shall be done through secure shredding/incineration
+       • Certificate of Destruction shall be obtained and retained for audit
+       • Digital files shall be permanently deleted with deletion logs maintained
+
+(iii) Exception: Files involving legal disputes, ongoing investigations, or contractual obligations shall be retained until matter resolution`
+          }
+        ]
+      },
+      {
+        number: '5',
+        title: 'ACCESS CONTROL AND CONFIDENTIALITY',
+        content: `• Personnel files are highly confidential and shall be accessed only on need-to-know basis
+• Access Register shall record every instance of file access (who, when, purpose)
+• Files shall never leave HR Department premises unless authorized by CHRO
+• Photocopying requires approval and shall be logged
+• Breach of confidentiality shall be treated as serious misconduct
+• External parties (auditors, legal authorities) shall access files only with proper authorization and in HR presence`
+      },
+      {
+        number: '6',
+        title: 'ROLES AND RESPONSIBILITIES',
+        table: {
+          headers: ['Position', 'Responsibility'],
+          rows: [
+            ['HR Department', 'Create, maintain, update, and archive personnel files; ensure completeness and compliance'],
+            ['HR Manager/CHRO', 'Authorize file access, approve disposal, ensure data protection compliance'],
+            ['Employees', 'Submit complete and updated documents promptly, inform HR of any changes'],
+            ['Legal/Compliance Team', 'Advise on retention requirements, review disposal lists'],
+            ['IT Department', 'Maintain digital archive, ensure data security, backup, and access controls']
+          ]
+        }
+      },
+      {
+        number: '7',
+        title: 'COMPLIANCE AND AUDIT',
+        content: `• Annual audit of personnel files for completeness and compliance
+• Random sampling audit of 10% files quarterly for quality check
+• NABH accreditation requires ready access to complete personnel files
+• Labour inspections may demand personnel file production - must be audit-ready
+• ISO/Quality audits shall verify document control and retention compliance`
+      },
+      {
+        number: '8',
+        title: 'REFERENCE DOCUMENTS',
+        content: `• Industrial Disputes Act, 1947 (record retention provisions)
+• Shops and Establishments Act (state-specific retention requirements)
+• EPF Act, ESI Act (statutory document retention)
+• Data Protection and Privacy Policy
+• Document Retention and Disposal Policy
+• Annexure D.1.1: Personnel File Checklist
+• Annexure D.1.2: File Access Register Format
+• Annexure D.1.3: Certificate of Document Destruction`
+      }
+    ]
   },
 
   sopD2: {
@@ -2239,7 +2448,89 @@ Once drafted, the policy shall be reviewed internally by:
     title: 'Document Verification & Retention Standards',
     searchTerms: ['verification', 'retention', 'documents', 'validation', 'standards'],
     category: 'D. Employee Records & Statutory Compliance',
-    content: 'Establishes standardised procedure for verifying employee-submitted documents and defines legally compliant retention standards for physical and digital employee records.'
+    subsections: [
+      {
+        number: '1',
+        title: 'OBJECTIVE',
+        content: 'To establish a robust document verification process ensuring authenticity of employee-submitted credentials and to define clear retention standards aligned with legal, regulatory, and institutional requirements, thereby mitigating fraud risk and ensuring audit readiness.'
+      },
+      {
+        number: '2',
+        title: 'SCOPE',
+        content: 'Applicable to all documents submitted by employees during recruitment, onboarding, and employment. Covers HR Department and third-party verification agencies.'
+      },
+      {
+        number: '3',
+        title: 'PROCEDURE',
+        subsections: [
+          {
+            number: '3.1',
+            title: 'Document Verification Process',
+            content: `(i) Primary Verification (conducted by HR):
+       • Check for completeness: all required documents received
+       • Visual inspection: clarity, no tampering, proper signatures/seals
+       • Cross-reference: name matching across all documents
+       • Date validation: no expired documents (licenses, certificates)
+       • Self-attestation: employee signs declaring authenticity
+
+(ii) Secondary Verification (for critical documents):
+       • Educational Certificates: Verification from university/board (online portal or written request)
+       • Previous Employment: Verification call/email to HR of previous employer
+       • Professional Licenses: Online verification with Medical/Nursing Councils
+       • Identity Documents: Aadhaar authentication, PAN verification via IT portal
+       
+(iii) Background Verification (through agency for senior positions):
+       • Criminal record check
+       • Address verification
+       • Court record check
+       • Credit history (for finance positions)
+       • Social media screening (for client-facing roles)
+
+(iv) Documentation of Verification:
+       • Verification Checklist completed for each employee
+       • Verification reports filed in personnel file
+       • Digital verification records uploaded to HRMS
+       • Any discrepancy immediately escalated to HR Manager`
+          },
+          {
+            number: '3.2',
+            title: 'Document Retention Standards',
+            content: `Legal Retention Requirements:
+
+Category A - Permanent Retention (as long as employee is employed + 7 years post-separation):
+• Appointment letters and employment contracts
+• Educational and professional qualification certificates
+• Final settlement and exit documents
+
+Category B - Long-term Retention (7-10 years post-separation):
+• Salary records, increment letters, payslips
+• PF and ESI contributions records
+• Tax deduction records (Form 16, TDS certificates)
+• Performance appraisals and promotion records
+
+Category C - Medium-term Retention (3-5 years):
+• Attendance and leave records
+• Training records
+• General correspondence
+
+Category D - Short-term Retention (1-2 years):
+• Routine circulars and notices
+• Temporary access records
+• Non-critical operational documents
+
+Special Cases:
+• Legal disputes: Retain until case closure + 7 years
+• Disciplinary matters: Retain until resolution + 5 years
+• Medical records: As per medical record retention laws`
+          }
+        ]
+      },
+      {
+        number: '4',
+        title: 'REFERENCE DOCUMENTS',
+        content: 'Payment of Wages Act, EPF Act, ESI Act, IT Act (TDS provisions), Annexure D.2.1: Document Verification Checklist'
+      }
+    ]
   },
 
   sopD3: {
@@ -2248,7 +2539,199 @@ Once drafted, the policy shall be reviewed internally by:
     title: 'Statutory Compliance Filing & Registers',
     searchTerms: ['statutory', 'compliance', 'filing', 'registers', 'legal', 'returns'],
     category: 'D. Employee Records & Statutory Compliance',
-    content: 'Ensures strict adherence to statutory filing obligations and maintenance of mandated registers under applicable labour, employment, and healthcare laws.'
+    subsections: [
+      {
+        number: '1',
+        title: 'OBJECTIVE',
+        content: 'To ensure strict and timely compliance with all statutory filing obligations and maintenance of legally mandated registers under labour, employment, tax, and social security laws, thereby avoiding penalties, legal proceedings, and maintaining institutional credibility.'
+      },
+      {
+        number: '2',
+        title: 'SCOPE',
+        content: 'Applicable to HR Department, Payroll Team, and Compliance Officer responsible for statutory filings. Covers PF, ESI, Professional Tax, Labour Welfare, Factories Act, Shops & Establishments Act, and healthcare-specific regulations.'
+      },
+      {
+        number: '3',
+        title: 'STATUTORY REGISTERS TO BE MAINTAINED',
+        subsections: [
+          {
+            number: '3.1',
+            title: 'Mandatory Registers under Labour Laws',
+            content: `(i) Register of Employees (Form A/Muster Roll):
+       • Employee name, father's name, date of birth
+       • Date of appointment, designation, department
+       • Working hours, rest intervals, weekly off
+       • Signature/thumb impression
+       • Updated daily with entries, exits, transfers
+
+(ii) Wages Register (Form B):
+       • Employee details, days worked, overtime
+       • Wages paid, deductions, net payment
+       • Signature of employee acknowledging receipt
+       • Updated monthly after payroll processing
+
+(iii) Leave Register:
+       • Types of leave (casual, sick, annual, maternity)
+       • Leave entitlement, availed, balance
+       • Leave application dates and approval status
+       • Maintained employee-wise and updated real-time
+
+(iv) Attendance Register:
+       • Daily attendance marking (present, absent, leave, half-day)
+       • Integrated with biometric system
+       • Monthly summary and reconciliation
+
+(v) Overtime Register (if applicable):
+       • Employee name, date, hours of overtime
+       • Rate of overtime wages
+       • Total overtime payment
+       • Authorization signatures
+
+(vi) Accident Register (Form 25):
+       • Date, time, and nature of accident
+       • Name and details of injured employee
+       • Circumstances and cause of accident
+       • Medical treatment provided
+       • Reported to authorities if serious
+       • Maintained as per Factories Act/ESI Act`
+          },
+          {
+            number: '3.2',
+            title: 'Statutory Filings - EPF (Employees Provident Fund)',
+            content: `(i) Monthly Filings:
+       • ECR (Electronic Challan cum Return) - by 15th of following month
+       • Upload employee-wise PF contributions (employer + employee share)
+       • Online payment through unified portal
+       
+(ii) Annual Return:
+       • Form 3A, 6A - Annual return of PF contributions
+       • Due by 30th April of following financial year
+
+(iii) UAN Activation and Linking:
+       • Generate UAN for new employees within 7 days of joining
+       • Link Aadhaar, PAN, bank account within 30 days
+       • Update member details for job changes, exits
+
+(iv) Documentation:
+       • Maintain challan payment receipts
+       • ECR filing acknowledgments
+       • Employer PF registration certificate
+       • Reconciliation of PF accounts quarterly`
+          },
+          {
+            number: '3.3',
+            title: 'Statutory Filings - ESI (Employees State Insurance)',
+            content: `(i) Monthly Filings:
+       • Return of Contributions (online) - by 15th of following month
+       • Employee-wise ESI contributions (1.75% employee + 4.75% employer for salaries ≤ ₹21,000)
+
+(ii) Half-yearly Return:
+       • Return in Form 01 and 02 - twice a year (April-Sept, Oct-March)
+       • Due within 30 days of period end
+
+(iii) Registration:
+       • Register all eligible employees (salary ≤ ₹21,000) within 10 days of joining
+       • Issue temporary ID until ESI card is received
+       • Update family details and nominations
+
+(iv) Maintain:
+       • Accident register
+       • Inspection book for ESI inspectors
+       • Contribution payment challans`
+          },
+          {
+            number: '3.4',
+            title: 'Statutory Filings - Income Tax (TDS)',
+            content: `(i) Monthly TDS Deduction and Payment:
+       • Deduct TDS on salaries as per IT slabs
+       • Deposit TDS by 7th of following month (Challan 281)
+       • File TDS return quarterly (Form 24Q) by specified due dates
+
+(ii) Annual Compliance:
+       • Issue Form 16 to all employees by June 15th
+       • File Annual Information Statement (AIS)
+       • Reconcile Form 26AS with TDS records
+
+(iii) Tax Declaration Collection:
+       • Collect employee tax-saving investment declarations by Jan 31st
+       • Verify proof of investments by Feb 28th
+       • Adjust TDS computation for final payroll`
+          },
+          {
+            number: '3.5',
+            title: 'Other Statutory Filings',
+            content: `(i) Professional Tax:
+       • Monthly deduction and remittance to state government
+       • Annual return filing as per state rules
+
+(ii) Labour Welfare Fund:
+       • Annual contribution (where applicable)
+       • Filing as per state Labour Welfare Board
+
+(iii) Shops and Establishments Act:
+       • Registration renewal (typically annual)
+       • Display of registration certificate
+       • Maintenance of registers as per state rules
+
+(iv) Maternity Benefit Intimation:
+       • Intimate labour authorities within specified time
+       • Maintain maternity benefit register
+
+(v) Gratuity Return:
+       • Annual return in Form H (if Payment of Gratuity Act applicable)`
+          }
+        ]
+      },
+      {
+        number: '4',
+        title: 'COMPLIANCE CALENDAR',
+        content: `HR shall maintain a Statutory Compliance Calendar with:
+• Monthly due dates (PF, ESI, TDS, PT)
+• Quarterly due dates (TDS returns, ESI half-yearly)
+• Annual due dates (Form 16, annual returns, license renewals)
+• Automated reminders 7 days before due date
+• Escalation to CHRO if deadline at risk
+• Post-filing checklist to confirm submission and payment`
+      },
+      {
+        number: '5',
+        title: 'INSPECTION PREPAREDNESS',
+        content: `• All registers shall be up-to-date and readily available
+• Inspection Book maintained for recording inspector visits
+• Authorized signatory designated to handle inspections
+• Compliance documents organized in accessible format
+• Mock audits conducted quarterly to identify gaps
+• Non-compliance issues rectified immediately with corrective action`
+      },
+      {
+        number: '6',
+        title: 'ROLES AND RESPONSIBILITIES',
+        table: {
+          headers: ['Position', 'Responsibility'],
+          rows: [
+            ['HR Compliance Officer', 'Monitor compliance calendar, file returns, maintain registers'],
+            ['Payroll Team', 'Process PF/ESI/PT/TDS calculations, generate payment challans'],
+            ['Finance Department', 'Ensure timely payment of statutory dues'],
+            ['CHRO', 'Overall accountability, liaise with authorities, handle inspections'],
+            ['External CA/Consultant', 'Advisory support, complex return filing, audit representation']
+          ]
+        }
+      },
+      {
+        number: '7',
+        title: 'PENALTIES FOR NON-COMPLIANCE',
+        content: `• EPF: Penalty of 5-25% of arrears, potential imprisonment for wilful default
+• ESI: Penalty up to ₹10,000 for non-registration, interest on delayed payments
+• TDS: Interest @1-1.5% per month, penalty for late filing
+• Labour Law Violations: Fines, prosecution, closure orders in extreme cases
+• Institutional impact: Reputational damage, disqualification from government tenders`
+      },
+      {
+        number: '8',
+        title: 'REFERENCE DOCUMENTS',
+        content: 'EPF & MP Act 1952, ESI Act 1948, Income Tax Act 1961, Shops & Establishments Act (State), Factories Act 1948, Payment of Gratuity Act 1972, Maternity Benefit Act 1961, Annexure D.3.1: Statutory Compliance Calendar'
+      }
+    ]
   },
 
   sopD4: {
@@ -2257,7 +2740,113 @@ Once drafted, the policy shall be reviewed internally by:
     title: 'Display Boards & Legal Disclosures Maintenance',
     searchTerms: ['display', 'boards', 'notices', 'legal', 'disclosures'],
     category: 'D. Employee Records & Statutory Compliance',
-    content: 'Ensures all legally mandated and policy-relevant information is prominently displayed at designated hospital locations in compliance with labour laws and transparency standards.'
+    subsections: [
+      {
+        number: '1',
+        title: 'OBJECTIVE',
+        content: 'To ensure all legally mandated notices, abstracts of laws, and policy information are prominently displayed at designated locations within the hospital premises in compliance with labour laws, promoting transparency, employee awareness, and regulatory adherence.'
+      },
+      {
+        number: '2',
+        title: 'SCOPE',
+        content: 'Applicable to all hospital locations. Managed by HR and Administration with periodic verification.'
+      },
+      {
+        number: '3',
+        title: 'MANDATORY DISPLAY REQUIREMENTS',
+        subsections: [
+          {
+            number: '3.1',
+            title: 'Statutory Abstracts and Notices',
+            content: `Must be displayed prominently in local language and English:
+
+(i) Factories Act / Shops & Establishments Act:
+       • Abstract of relevant sections
+       • Working hours, overtime rules
+       • Leave entitlements
+       • Registration certificate
+
+(ii) Payment of Wages Act:
+       • Abstract in English and local language
+       • Wage payment dates and methods
+
+(iii) Minimum Wages Act:
+       • Notification of minimum wages for various categories
+       • Revision notifications
+
+(iv) Equal Remuneration Act:
+       • Abstract ensuring equal pay for equal work
+
+(v) EPF Act:
+       • Notice about EPF coverage and contribution rates
+       • Details of PF office and inspector
+
+(vi) ESI Act:
+       • Notice about ESI benefits and coverage
+       • ESI dispensary/hospital details
+
+(vii) Maternity Benefit Act:
+       • Entitlements and procedures
+
+(viii) Child Labour Prohibition:
+       • Notice prohibiting child labour`
+          },
+          {
+            number: '3.2',
+            title: 'Internal Policies and Notices',
+            content: `(i) Prevention of Sexual Harassment (POSH):
+       • POSH Policy summary
+       • Internal Committee (ICC) details: Members, contact numbers
+       • Complaint filing procedure
+
+(ii) Grievance Redressal:
+       • Grievance procedure and contact details
+
+(iii) Code of Conduct:
+       • Summary of key expectations
+
+(iv) Safety and Emergency:
+       • Fire evacuation plan and assembly points
+       • Emergency contact numbers
+       • First aid locations
+
+(v) Working Hours and Attendance:
+       • Shift timings
+       • Weekly off policy
+       • Leave application process
+
+(vi) Payroll Calendar:
+       • Salary payment dates
+       • HR contact for queries`
+          }
+        ]
+      },
+      {
+        number: '4',
+        title: 'DISPLAY LOCATIONS',
+        content: `• Main entrance/reception area
+• Employee common areas (cafeteria, rest rooms)
+• Time clock/biometric punch areas
+• Department notice boards
+• HR office
+• Security gate
+• Language: English + Local language (Malayalam for Kerala location)`
+      },
+      {
+        number: '5',
+        title: 'MAINTENANCE PROTOCOL',
+        content: `(i) HR shall conduct quarterly inspection of all display boards
+(ii) Faded, torn, or outdated notices shall be replaced immediately
+(iii) Any regulatory updates shall be displayed within 7 days of notification
+(iv) Photographic evidence of displays shall be maintained for audit
+(v) Inspection checklist shall be completed and filed`
+      },
+      {
+        number: '6',
+        title: 'REFERENCE DOCUMENTS',
+        content: 'Factories Act 1948, Shops & Establishments Act, POSH Act 2013, EPF/ESI Acts, Annexure D.4.1: Display Board Inspection Checklist'
+      }
+    ]
   },
 
   sopD5: {
@@ -2266,7 +2855,191 @@ Once drafted, the policy shall be reviewed internally by:
     title: 'KYC/ESIC/UAN/Bank Account Mapping',
     searchTerms: ['kyc', 'esic', 'uan', 'bank', 'account', 'pf', 'epf'],
     category: 'D. Employee Records & Statutory Compliance',
-    content: 'Establishes structured process for collection, verification, and integration of KYC details, ESIC registration, UAN activation for EPF, and bank account mapping for salary disbursement.'
+    subsections: [
+      {
+        number: '1',
+        title: 'OBJECTIVE',
+        content: 'To establish a streamlined process for collection, verification, and integration of KYC (Know Your Customer) details, ESIC registration, UAN (Universal Account Number) activation for EPF, and bank account mapping ensuring accurate salary disbursement, statutory compliance, and seamless benefit administration.'
+      },
+      {
+        number: '2',
+        title: 'SCOPE',
+        content: 'Applicable to all new joiners during onboarding and existing employees for updates. Managed by HR with support from Payroll and IT.'
+      },
+      {
+        number: '3',
+        title: 'PROCEDURE',
+        subsections: [
+          {
+            number: '3.1',
+            title: 'KYC Document Collection',
+            content: `(i) Mandatory KYC Documents to be collected on Day 1:
+       • Aadhaar Card (mandatory - original for verification, copy retained)
+       • PAN Card (mandatory for TDS)
+       • Passport (if available)
+       • Driving License (if applicable)
+       • Voter ID (optional)
+
+(ii) Verification:
+       • Aadhaar verification via UIDAI portal or e-KYC
+       • PAN verification via IT Department portal
+       • Cross-check name, DOB, address consistency across documents
+
+(iii) Address Proof:
+       • Aadhaar (preferred) or recent utility bill/rent agreement
+       • If current address differs from Aadhaar, collect additional proof
+
+(iv) Bank Account Details:
+       • Cancelled cheque or bank statement (not older than 3 months)
+       • Account holder name must match employee name exactly
+       • IFSC code verification
+       • Preference for salary account in major banks for NEFT/RTGS`
+          },
+          {
+            number: '3.2',
+            title: 'UAN Generation and EPF Linking',
+            content: `(i) For employees with existing UAN (from previous employment):
+       • Employee provides UAN
+       • HR verifies UAN validity on EPFO portal
+       • Transfer of PF from previous employer initiated (with employee consent via Annexure)
+       • Link UAN to current establishment (Koyili Hospital PF account)
+
+(ii) For new UAN generation (first-time PF members):
+       • HR generates UAN through EPFO portal within 7 days of joining
+       • UAN communicated to employee via SMS and email
+
+(iii) UAN Activation and Linking:
+       • Employee activates UAN on EPFO member portal (if not already active)
+       • Link Aadhaar with UAN (mandatory)
+       • Link PAN with UAN (for higher withdrawal limits and tax benefits)
+       • Link bank account with UAN (for direct EPF credit)
+       • Verify and update mobile number and email
+
+(iv) Monthly ECR Filing:
+       • Include employee in monthly ECR from first month of joining
+       • Upload member details: Name, DOB, father's name, UAN, Aadhaar, PAN
+       • Ensure contribution is reflected in employee's PF passbook`
+          },
+          {
+            number: '3.3',
+            title: 'ESI Registration (for eligible employees)',
+            content: `(i) Eligibility Check:
+       • ESI applicable if gross salary ≤ ₹21,000 per month
+       • Check employee's ESI status from previous employment
+
+(ii) For existing ESI members:
+       • Collect ESI number (17-digit IP number)
+       • Transfer ESI from previous employer
+       • Update hospital details in ESI portal
+
+(iii) For new ESI registration:
+       • HR registers employee in ESI portal within 10 days of joining
+       • Submit employee details and family details
+       • Temporary ESI ID generated immediately
+       • Permanent ESI card issued within 30-45 days
+
+(iv) Family Declaration:
+       • Employee provides family details (spouse, children, dependent parents)
+       • Family members become eligible for ESI medical benefits
+       • Update family changes (marriage, childbirth) within 15 days
+
+(v) ESI Contribution:
+       • Deduct 1.75% from employee salary (if salary ≤ ₹21,000)
+       • Employer contributes 4.75%
+       • File monthly ESI return by 15th of following month`
+          },
+          {
+            number: '3.4',
+            title: 'Bank Account Mapping for Salary',
+            content: `(i) Bank Account Verification:
+       • Collect cancelled cheque or bank statement
+       • Verify:
+         - Account holder name matches employee name (as per Aadhaar/PAN)
+         - Account type: Savings or Current
+         - Account is active and not dormant
+         - IFSC code is correct and branch supports NEFT/RTGS
+
+(ii) Payroll System Integration:
+       • HR/Payroll team enters bank details in payroll software
+       • Map employee ID with bank account number
+       • Verify mapping by processing ₹1 test transaction (if feasible)
+
+(iii) Salary Credit:
+       • Salaries credited by 1st of every month (or as per policy)
+       • Bank file generated from payroll system
+       • Upload to bank portal or submit physically
+       • Obtain credit confirmation report
+       • Share salary credit SMS/Email to employees
+
+(iv) Bank Account Change:
+       • Employee submits Bank Account Change Request with new cancelled cheque
+       • Effective from next payroll cycle after verification
+       • Old and new account details logged for audit trail`
+          },
+          {
+            number: '3.5',
+            title: 'Data Integration and System Mapping',
+            content: `(i) HRMS Data Entry:
+       • All KYC details entered in HRMS within 3 days
+       • UAN, ESIC number, bank account mapped to employee profile
+
+(ii) Single Source of Truth:
+       • HRMS becomes master database for all employee statutory data
+       • Payroll system pulls data from HRMS
+       • Any update in HRMS auto-reflects in payroll (or manual sync monthly)
+
+(iii) Regular Data Audits:
+       • Quarterly audit of KYC completeness
+       • Verify UAN-Aadhaar-PAN linkage for all employees
+       • Check bank account validity (no rejected salary credits)
+       • ESI coverage verification for eligible employees
+
+(iv) Employee Self-Service:
+       • Employees can view and download UAN, ESIC details from HRMS
+       • Facility to submit change requests online
+       • Alerts for pending KYC or linkage tasks`
+          }
+        ]
+      },
+      {
+        number: '4',
+        title: 'ROLES AND RESPONSIBILITIES',
+        table: {
+          headers: ['Position', 'Responsibility'],
+          rows: [
+            ['Employee', 'Submit complete KYC documents, provide UAN/ESIC details, update bank account changes'],
+            ['HR Department', 'Collect and verify documents, generate UAN/ESIC, maintain records'],
+            ['Payroll Team', 'Map bank accounts, process salary, file PF/ESI returns'],
+            ['IT Department', 'Maintain HRMS, ensure data integration, system access'],
+            ['Compliance Officer', 'Ensure regulatory compliance, liaise with EPFO/ESIC authorities']
+          ]
+        }
+      },
+      {
+        number: '5',
+        title: 'TIMELINES',
+        content: `• KYC collection: Day 1 of joining
+• UAN generation/linking: Within 7 days
+• ESIC registration: Within 10 days
+• Bank account mapping: Before first salary (within 15-20 days)
+• Aadhaar-UAN-PAN linkage: Within 30 days
+• All compliance documentation: Within 1 month of joining`
+      },
+      {
+        number: '6',
+        title: 'COMMON ISSUES AND RESOLUTIONS',
+        content: `• UAN not generated: Check EPFO portal for errors, resubmit with correct details
+• Aadhaar-UAN linking failed: Employee must verify Aadhaar details on UIDAI, update if mismatch
+• Salary credit failure: Verify account number, IFSC, account active status; use alternate payment
+• ESIC card not received: Check status on ESIC portal, follow up with local ESIC office
+• Bank name mismatch: Employee provides updated cancelled cheque with exact name as per Aadhaar`
+      },
+      {
+        number: '7',
+        title: 'REFERENCE DOCUMENTS',
+        content: 'EPF & MP Act 1952, EPFO Circulars on UAN, ESI Act 1948, Aadhaar Act 2016, Prevention of Money Laundering Act (PMLA) - KYC norms, Annexure D.5.1: KYC Document Checklist, Annexure D.5.2: Bank Account Change Request Form'
+      }
+    ]
   },
 
   // SECTION E: ATTENDANCE & SHIFT MANAGEMENT
