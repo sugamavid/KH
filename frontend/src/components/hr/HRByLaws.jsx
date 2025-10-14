@@ -465,14 +465,23 @@ const HRByLaws = ({ setActiveModule }) => {
             </div>
           </div>
 
-          {/* Enhanced Content Area */}
+          {/* Enhanced Content Area with Subsections */}
           <div className="p-16 bg-gradient-to-b from-amber-50 to-white">
-            <div className="max-w-4xl mx-auto">
-              <div className="bg-white rounded-xl p-10 shadow-inner border-2 border-amber-200">
-                <p className="text-lg leading-loose text-justify font-serif text-slate-800 indent-16 tracking-wide" style={{textIndent: '3rem', lineHeight: '2'}}>
-                  {section.content}
-                </p>
-              </div>
+            <div className="max-w-4xl mx-auto space-y-10">
+              {section.subsections && section.subsections.map((subsection, idx) => (
+                <div key={idx} className="bg-white rounded-xl p-10 shadow-inner border-2 border-amber-200">
+                  {subsection.title && (
+                    <h3 className="text-2xl font-serif font-bold text-slate-900 mb-6 pb-3 border-b-2 border-amber-300">
+                      {subsection.title}
+                    </h3>
+                  )}
+                  <div 
+                    className="text-lg leading-loose text-justify font-serif text-slate-800 tracking-wide whitespace-pre-line" 
+                    style={{lineHeight: '2'}}
+                    dangerouslySetInnerHTML={{ __html: subsection.content.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') }}
+                  />
+                </div>
+              ))}
               
               {/* Document Metadata */}
               <div className="mt-10 pt-8 border-t-2 border-slate-200">
