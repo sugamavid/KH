@@ -448,5 +448,152 @@ export const HR_ANNEXURES = [
     category: "Performance",
     format: "PDF",
     approval: "HR & Reporting Manager"
+  },
+  {
+    code: "ANX-004",
+    name: "Employee Information Update Form",
+    category: "Operations",
+    format: "PDF",
+    approval: "HR Manager"
+  },
+  {
+    code: "ANX-005",
+    name: "Resignation Letter Template",
+    category: "Operations",
+    format: "PDF",
+    approval: "Department Head"
+  },
+  {
+    code: "ANX-006",
+    name: "Termination Notice",
+    category: "Legal",
+    format: "PDF",
+    approval: "HR Director & Legal Counsel"
+  },
+  {
+    code: "ANX-007",
+    name: "Employee Warning Letter",
+    category: "Compliance",
+    format: "PDF",
+    approval: "HR Manager & Department Head"
+  },
+  {
+    code: "ANX-008",
+    name: "Training Request Form",
+    category: "Performance",
+    format: "PDF",
+    approval: "Department Head"
+  },
+  {
+    code: "ANX-009",
+    name: "Incident Report Form",
+    category: "Compliance",
+    format: "PDF",
+    approval: "Safety Officer"
+  },
+  {
+    code: "ANX-010",
+    name: "Salary Certificate Request",
+    category: "Operations",
+    format: "PDF",
+    approval: "HR Manager"
+  },
+  {
+    code: "ANX-011",
+    name: "Experience Certificate Template",
+    category: "Operations",
+    format: "PDF",
+    approval: "HR Manager"
+  },
+  {
+    code: "ANX-012",
+    name: "Grievance Complaint Form",
+    category: "Compliance",
+    format: "PDF",
+    approval: "HR Director"
+  },
+  {
+    code: "ANX-013",
+    name: "Overtime Authorization Form",
+    category: "Operations",
+    format: "PDF",
+    approval: "Department Head"
+  },
+  {
+    code: "ANX-014",
+    name: "Medical Leave Certificate",
+    category: "Leave Management",
+    format: "PDF",
+    approval: "Medical Officer"
+  },
+  {
+    code: "ANX-015",
+    name: "Transfer Request Form",
+    category: "Operations",
+    format: "PDF",
+    approval: "HR Manager & Dept Heads"
+  },
+  {
+    code: "ANX-016",
+    name: "Employment Contract Template",
+    category: "Legal",
+    format: "PDF",
+    approval: "HR Director & Legal Counsel"
+  },
+  {
+    code: "ANX-017",
+    name: "Non-Disclosure Agreement",
+    category: "Legal",
+    format: "PDF",
+    approval: "Legal Counsel"
+  },
+  {
+    code: "ANX-018",
+    name: "Exit Interview Questionnaire",
+    category: "Recruitment",
+    format: "PDF",
+    approval: "HR Manager"
+  },
+  {
+    code: "ANX-019",
+    name: "Background Verification Form",
+    category: "Recruitment",
+    format: "PDF",
+    approval: "HR Manager"
+  },
+  {
+    code: "ANX-020",
+    name: "Job Description Template",
+    category: "Recruitment",
+    format: "PDF",
+    approval: "Department Head"
+  },
+  {
+    code: "ANX-021",
+    name: "Employee Self-Assessment Form",
+    category: "Performance",
+    format: "PDF",
+    approval: "Reporting Manager"
+  },
+  {
+    code: "ANX-022",
+    name: "Disciplinary Action Form",
+    category: "Compliance",
+    format: "PDF",
+    approval: "HR Director"
+  },
+  {
+    code: "ANX-023",
+    name: "Equipment Handover Form",
+    category: "Operations",
+    format: "PDF",
+    approval: "IT & Admin Manager"
+  },
+  {
+    code: "ANX-024",
+    name: "Attendance Regularization Request",
+    category: "Operations",
+    format: "PDF",
+    approval: "Department Head"
   }
 ];
