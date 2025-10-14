@@ -9,6 +9,7 @@ import {
 } from 'lucide-react';
 import { byLawsData, sections as sectionsData, quickReferenceData, keyHighlights } from './byLawsData';
 import GovernanceWizard from './GovernanceWizard';
+import AuthorityFinder from './AuthorityFinder';
 
 const HRByLaws = ({ setActiveModule }) => {
   const [activeSection, setActiveSection] = useState('dashboard');
