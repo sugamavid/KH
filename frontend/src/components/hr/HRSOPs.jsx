@@ -473,7 +473,7 @@ const HRSOPs = ({ setActiveModule }) => {
   };
 
   return (
-                    <p className="text-blue-200 text-sm font-semibold">Pallikkunnu, Talap, Kannur, Kerala</p>
+    <div className="flex h-screen bg-gradient-to-br from-slate-100 to-slate-200">
                     <p className="text-blue-300 text-xs mt-1">📞 +91-XXXX-XXXXXX | 📧 info@koyilihospital.com</p>
                   </div>
                 </div>
