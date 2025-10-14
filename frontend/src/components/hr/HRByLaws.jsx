@@ -5,7 +5,7 @@ import {
   ChevronRight, TrendingUp, CheckCircle, Shield, X, ChevronDown,
   Menu, ArrowLeft, Filter, Zap, Activity, Heart, Lock, LogOut, 
   Monitor, Globe, MessageCircle, MessageSquare, UserCheck, Smile, 
-  AlertTriangle, Gift, CheckSquare, Mail
+  AlertTriangle, Gift, CheckSquare, Mail, BarChart
 } from 'lucide-react';
 import { byLawsData, sections as sectionsData, quickReferenceData, keyHighlights } from './byLawsData';
 import GovernanceWizard from './GovernanceWizard';
