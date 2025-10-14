@@ -18,7 +18,7 @@ const HRByLaws = ({ setActiveModule }) => {
   const [expandedSections, setExpandedSections] = useState({});
   const contentRef = useRef(null);
 
-  // Parse and render content - FIXED to handle actual content format
+  // Parse and render content - Using <p> tags for guaranteed block display
   const renderFormattedContent = (content) => {
     if (!content) return '';
     
@@ -36,45 +36,41 @@ const HRByLaws = ({ setActiveModule }) => {
         continue;
       }
       
-      // Check for (a) **Title:** pattern (title on its own line, content follows)
+      // Check for (a) **Title:** pattern
       const mainPointMatch = trimmedLine.match(/^\(([a-z])\)\s+\*\*(.*?)\*\*:?$/);
       if (mainPointMatch) {
-        html += `<div style="margin-top: 1.5rem; margin-bottom: 0.75rem;">
-          <span style="font-weight: bold; font-size: 1.1rem; color: #0f172a;">
-            (${mainPointMatch[1]}) <strong>${mainPointMatch[2]}:</strong>
-          </span>
-        </div>`;
+        html += `<p style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: bold; font-size: 1.1rem; color: #0f172a;">
+(${mainPointMatch[1]}) <strong>${mainPointMatch[2]}:</strong>
+</p>`;
         i++;
         continue;
       }
       
-      // Check for (i), (ii), (iii) sub-points with leading spaces
+      // Check for (i), (ii), (iii) sub-points
       const subPointMatch = line.match(/^\s+((?:i{1,3}|iv|v|vi{0,3}|ix|x))\)\s+(.+)$/);
       if (subPointMatch) {
         const text = subPointMatch[2].replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
-        html += `<div style="margin-left: 3rem; margin-top: 0.75rem; margin-bottom: 0.75rem; display: flex; align-items: flex-start;">
-          <span style="font-weight: 600; color: #475569; margin-right: 0.75rem; min-width: 2.5rem;">(${subPointMatch[1]})</span>
-          <span style="color: #334155; line-height: 1.75; flex: 1;">${text}</span>
-        </div>`;
+        html += `<p style="margin-left: 3rem; margin-top: 0.75rem; margin-bottom: 0.75rem; color: #334155; line-height: 1.75;">
+<span style="font-weight: 600; color: #475569;">(${subPointMatch[1]})</span> ${text}
+</p>`;
         i++;
         continue;
       }
       
-      // Check for bullets with leading spaces
+      // Check for bullets
       const bulletMatch = line.match(/^\s+•\s+(.+)$/);
       if (bulletMatch) {
         const text = bulletMatch[1].replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
-        html += `<div style="margin-left: 2.5rem; margin-top: 0.5rem; margin-bottom: 0.5rem; display: flex; align-items: flex-start;">
-          <span style="color: #d97706; font-weight: bold; font-size: 1.25rem; margin-right: 0.75rem; line-height: 1.75;">•</span>
-          <span style="color: #334155; line-height: 1.75; flex: 1;">${text}</span>
-        </div>`;
+        html += `<p style="margin-left: 2.5rem; margin-top: 0.5rem; margin-bottom: 0.5rem; color: #334155; line-height: 1.75;">
+<span style="color: #d97706; font-weight: bold; font-size: 1.25rem; margin-right: 0.75rem;">•</span>${text}
+</p>`;
         i++;
         continue;
       }
       
-      // Regular text line (content after a main point)
+      // Regular text line
       const text = trimmedLine.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
-      html += `<div style="color: #334155; line-height: 1.75; margin-bottom: 0.5rem; margin-left: 0rem;">${text}</div>`;
+      html += `<p style="color: #334155; line-height: 1.75; margin-bottom: 0.5rem;">${text}</p>`;
       i++;
     }
     
