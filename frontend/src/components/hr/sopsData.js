@@ -1833,7 +1833,161 @@ Once drafted, the policy shall be reviewed internally by:
     title: 'Uniform, ID Card & Biometric Enrollment',
     searchTerms: ['uniform', 'id', 'card', 'biometric', 'enrollment', 'badge'],
     category: 'C. Onboarding & Access Control',
-    content: 'Establishes standardised protocol for issuance of uniforms, ID cards, and biometric registration ensuring compliance with institutional safety, identity verification, and attendance policies.'
+    subsections: [
+      {
+        number: '1',
+        title: 'OBJECTIVE',
+        content: 'To establish standardized procedures for issuance of uniforms, identity cards, and biometric enrollment ensuring professional appearance, secure identification, accurate attendance tracking, and compliance with hospital security and safety protocols.'
+      },
+      {
+        number: '2',
+        title: 'SCOPE AND APPLICABILITY',
+        content: `This SOP applies to:
+• All employees of Koyili Hospital including medical, nursing, paramedical, administrative, technical, and support staff
+• The HR Department and Administration Department responsible for uniform issuance and ID card generation
+• IT Department responsible for biometric system enrollment and access control
+• All hospital premises where identification and access control is mandatory`
+      },
+      {
+        number: '3',
+        title: 'DEFINITIONS',
+        content: `• Uniform: Standardized attire prescribed for specific categories of employees to maintain professional appearance and hygiene
+• ID Card/Badge: An official photo identification card displaying employee details, designation, and unique employee number
+• Biometric Enrollment: Registration of employee fingerprints or facial recognition data in the attendance and access control system
+• Access Privileges: Authorization levels defining which areas/systems an employee can access based on role and department`
+      },
+      {
+        number: '4',
+        title: 'PROCEDURE',
+        subsections: [
+          {
+            number: '4.1',
+            title: 'Uniform Issuance Process',
+            content: `(i) Eligibility and Entitlement:
+    • Clinical staff (doctors, nurses, lab technicians): 2-3 sets of scrubs/lab coats per year
+    • Patient-facing non-clinical staff: 2 sets of formal uniform per year
+    • Housekeeping and support staff: 3 sets of work uniforms per year
+    • Administrative staff: Business formals (self-arranged, no uniform provided)
+
+(ii) Uniform Requisition:
+    • HR shall issue Uniform Entitlement Note to new employees on Day 1
+    • Employee shall approach Administration Department for uniform collection
+    • Size measurement and selection shall be done by Administration team
+    • Stock availability shall be verified in the Uniform Inventory Register
+
+(iii) Uniform Collection:
+    • Employee shall sign Uniform Issue Register acknowledging receipt
+    • Uniforms shall be issued within 3 working days of joining
+    • In case of stock unavailability, temporary alternative arrangements shall be made
+    • Employee is responsible for proper maintenance and replacement (at own cost) if damaged due to negligence
+
+(iv) Replacement Policy:
+    • Annual replacement: As per entitlement mentioned above
+    • Premature damage: Employee must apply with justification; approval by Department Head required
+    • Upon separation: Employee must return all issued uniforms in good condition (normal wear and tear accepted)`
+          },
+          {
+            number: '4.2',
+            title: 'ID Card Generation and Issuance',
+            content: `(i) Photo Collection:
+    • New employee shall provide 2 passport-size color photographs (white background, formal attire) on Day 1
+    • Alternatively, HR may arrange on-site photo capture using standardized setup
+
+(ii) ID Card Data Capture:
+    • HR shall prepare ID Card Request Form containing:
+      - Full Name (as per official documents)
+      - Employee ID/Number
+      - Designation
+      - Department
+      - Blood Group
+      - Emergency Contact Number
+      - Date of Issue
+      - Validity Period
+
+(iii) ID Card Design and Printing:
+    • Front: Employee photo, name, designation, employee ID, department, hospital logo
+    • Back: Emergency contact, blood group, barcode/QR code (if applicable), validity date
+    • Color coding: Different colored borders or backgrounds for different departments (e.g., Red for Clinical, Blue for Admin, Green for Support)
+    • Security features: Hologram, tamper-proof lamination
+
+(iv) ID Card Issuance:
+    • ID card shall be issued within 3 working days of joining
+    • Employee shall sign ID Card Issue Register acknowledging receipt
+    • Temporary ID card may be issued if permanent card is delayed
+    • Employee must wear ID card visibly at all times on hospital premises
+
+(v) Lost/Damaged ID Card:
+    • Employee must report loss immediately to HR and Security
+    • Police FIR may be required for lost cards (for security-sensitive areas)
+    • Duplicate ID card fee: ₹200 (first replacement), ₹500 (subsequent replacements)
+    • Damaged card (wear and tear): Free replacement once a year`
+          },
+          {
+            number: '4.3',
+            title: 'Biometric Enrollment Process',
+            content: `(i) Biometric Data Collection:
+    • IT Department shall schedule biometric enrollment on Day 1 or Day 2 of joining
+    • Employee shall provide fingerprint scans (both thumbs + 2 index fingers as backup)
+    • Facial recognition photo (if system supports multi-modal biometrics)
+    • Employee ID number shall be linked to biometric template
+
+(ii) System Configuration:
+    • Access privileges shall be configured based on:
+      - Department and designation
+      - Work location (specific floors, wings, restricted areas)
+      - Shift timings and allowed entry/exit windows
+    • Default access: Main entrance, department floor, cafeteria, general areas
+    • Restricted access: OT complex, ICU, pharmacy, server room, HR records room (requires separate approval)
+
+(iii) Testing and Verification:
+    • Employee shall test biometric punch at designated attendance terminal
+    • Successful registration confirmation shall be documented
+    • In case of enrollment failure (poor fingerprint quality), alternative method (PIN/Card) shall be activated
+    • Backup authentication method shall always be configured
+
+(iv) Training on Biometric Usage:
+    • Employee shall be briefed on:
+      - How to punch in/out (finger placement, system response)
+      - Attendance marking rules (grace time, multiple punches, missed punch regularization)
+      - Reporting biometric system errors or access denial issues
+      - Prohibition of proxy punching (strict disciplinary consequences)`
+          }
+        ]
+      },
+      {
+        number: '5',
+        title: 'ROLES AND RESPONSIBILITIES',
+        table: {
+          headers: ['Position', 'Responsibility'],
+          rows: [
+            ['HR Department', 'Issue uniform entitlement note, collect photos, prepare ID card data, maintain issuance registers'],
+            ['Administration', 'Manage uniform inventory, issue uniforms, coordinate ID card printing'],
+            ['IT Department', 'Conduct biometric enrollment, configure access rights, troubleshoot system issues'],
+            ['Security Department', 'Verify ID cards, monitor access control, report lost/misused cards'],
+            ['Employee', 'Collect and maintain uniform/ID card, comply with biometric attendance, report issues promptly']
+          ]
+        }
+      },
+      {
+        number: '6',
+        title: 'COMPLIANCE AND RECORD-KEEPING',
+        content: `• Uniform Issue Register and ID Card Issue Register shall be maintained with signatures
+• Biometric enrollment records and access privilege logs shall be securely stored in IT systems
+• Lost ID card reports and duplicate card issuance records shall be documented
+• Annual audit of uniform inventory and ID card validity shall be conducted
+• Non-compliance (not wearing ID card, proxy punching) shall be subject to disciplinary action`
+      },
+      {
+        number: '7',
+        title: 'REFERENCE DOCUMENTS',
+        content: `• Koyili Hospital Dress Code Policy
+• Security and Access Control Policy
+• Attendance and Biometric SOP (SOP E.1)
+• Annexure C.2.1: Uniform Entitlement Note
+• Annexure C.2.2: ID Card Request Form
+• Annexure C.2.3: Biometric Enrollment Acknowledgment`
+      }
+    ]
   },
 
   sopC3: {
