@@ -359,3 +359,33 @@ export const keyHighlights = [
     color: 'orange'
   }
 ];
+
+export const quickReferenceData = {
+  leaveEntitlements: [
+    'Privilege Leave: 18 days per year',
+    'Casual Leave: 12 days per year',
+    'Sick Leave: 12 days per year',
+    'Maternity Leave: 26 weeks (as per law)',
+    'Paternity Leave: 5 days'
+  ],
+  workingHours: [
+    'Standard: 8 hours/day, 48 hours/week',
+    'Clinical Staff: Shift-based roster',
+    'Admin Staff: 9:00 AM - 6:00 PM',
+    'Break Time: 1 hour lunch break',
+    'Overtime: As per labor law'
+  ],
+  compensation: [
+    'Salary Structure: Basic + HRA + Allowances',
+    'Provident Fund: 12% contribution',
+    'Gratuity: As per Act (5+ years)',
+    'Annual Increment: Performance-based',
+    'Bonus: As applicable'
+  ],
+  probationNotice: [
+    'Probation Period: 6 months',
+    'Notice Period: 1-3 months',
+    'Extension: Up to 3 months',
+    'Confirmation: Upon satisfactory performance'
+  ]
+};
