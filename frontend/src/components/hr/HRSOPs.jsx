@@ -272,35 +272,58 @@ const HRSOPs = ({ setActiveModule }) => {
           {/* Title Section */}
           <div className="px-16 py-10 bg-white border-b border-slate-200">
             <h2 className="text-3xl font-bold text-slate-900 mb-2">{section.title}</h2>
-            <p className="text-sm text-slate-600">Standard Operating Procedures Manual</p>
+            <p className="text-sm text-slate-600">Standard Operating Procedures Manual - 2025</p>
           </div>
 
-          {/* Content */}
+          {/* Content with Justified Text */}
           <div className="px-16 py-12 bg-white">
-            <p className="text-base leading-relaxed text-slate-800 text-justify">
-              {section.content}
-            </p>
+            <div className="text-[15px] leading-[1.8] text-slate-800 text-justify space-y-4">
+              {section.content.split('\n\n').map((para, idx) => {
+                // Check if it's a bullet list
+                if (para.includes('•')) {
+                  const items = para.split('\n').filter(line => line.trim().startsWith('•'));
+                  return (
+                    <ul key={idx} className="space-y-2.5 pl-6 my-4">
+                      {items.map((item, iIdx) => (
+                        <li key={iIdx} className="flex items-start">
+                          <span className="text-blue-700 font-bold mr-3 mt-1 text-lg">●</span>
+                          <span className="flex-1 text-justify">{item.replace(/^•\s*/, '')}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  );
+                }
+                return <p key={idx} className="text-justify">{para}</p>;
+              })}
+            </div>
           </div>
 
-          {/* Footer */}
-          <div className="border-t border-slate-200 px-16 py-6 bg-slate-50">
-            <div className="grid grid-cols-4 gap-8 text-xs text-slate-600">
+          {/* Enhanced Footer with Color */}
+          <div className="border-t-2 border-blue-900 bg-gradient-to-r from-blue-900 via-blue-800 to-blue-900 px-16 py-8">
+            <div className="grid grid-cols-4 gap-8 text-white mb-4">
               <div>
-                <p className="font-semibold text-slate-900">Version</p>
-                <p>3.0</p>
+                <p className="text-xs font-bold text-blue-200 uppercase tracking-wider mb-2">Version</p>
+                <p className="text-sm font-semibold">3.0</p>
               </div>
               <div>
-                <p className="font-semibold text-slate-900">Effective Date</p>
-                <p>01 January 2024</p>
+                <p className="text-xs font-bold text-blue-200 uppercase tracking-wider mb-2">Effective Date</p>
+                <p className="text-sm font-semibold">01 January 2024</p>
               </div>
               <div>
-                <p className="font-semibold text-slate-900">Approved By</p>
-                <p>Board of Directors</p>
+                <p className="text-xs font-bold text-blue-200 uppercase tracking-wider mb-2">Approved By</p>
+                <p className="text-sm font-semibold">Board of Directors</p>
               </div>
               <div>
-                <p className="font-semibold text-slate-900">Classification</p>
-                <p>Internal Use Only</p>
+                <p className="text-xs font-bold text-blue-200 uppercase tracking-wider mb-2">Classification</p>
+                <p className="text-sm font-semibold">Internal Use Only</p>
               </div>
+            </div>
+            <div className="border-t border-blue-700 pt-4 flex items-center justify-between">
+              <div className="flex items-center space-x-2">
+                <Scale className="w-4 h-4 text-amber-400" />
+                <p className="text-xs text-blue-200">Compliant with NABH & ISO 9001:2015 Standards</p>
+              </div>
+              <p className="text-xs text-blue-300">© 2024 Koyili Hospital. All Rights Reserved.</p>
             </div>
           </div>
         </div>
