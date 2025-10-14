@@ -369,42 +369,58 @@ const HRSOPs = ({ setActiveModule }) => {
           </div>
         </div>
 
-        {/* Content */}
+        {/* Content with Legal Document Formatting */}
         <div className="px-16 py-12 bg-white">
           {/* Simple content */}
           {section.content && !section.subsections && (
-            <p className="text-base leading-relaxed text-slate-800">
+            <p className="text-[15px] leading-[1.8] text-slate-800 text-justify" style={{ lineHeight: '1.8' }}>
               {section.content}
             </p>
           )}
 
-          {/* Subsections */}
+          {/* Subsections with Professional Legal Formatting */}
           {section.subsections && section.subsections.map((subsection, idx) => (
-            <div key={idx} className="mb-12">
-              {/* Section Header */}
-              <div className="mb-6 pb-3 border-b-2 border-blue-900">
+            <div key={idx} className="mb-10">
+              {/* Section Header with Professional Styling */}
+              <div className="mb-6 pb-3 border-b-2 border-blue-900 bg-gradient-to-r from-blue-50 to-transparent px-4 py-3 -mx-4">
                 <div className="flex items-baseline space-x-4">
                   <span className="text-2xl font-bold text-blue-900 min-w-[3rem]">{subsection.number}</span>
                   <h3 className="text-xl font-bold text-slate-900 uppercase tracking-wide">{subsection.title}</h3>
                 </div>
               </div>
 
-              {/* Content */}
+              {/* Content with Justified Text and Proper Spacing */}
               {subsection.content && (
-                <div className="mb-6 pl-16">
-                  <p className="text-base leading-relaxed text-slate-800 whitespace-pre-line">
-                    {subsection.content}
-                  </p>
+                <div className="mb-6 pl-12">
+                  <div className="text-[15px] leading-[1.8] text-slate-800 text-justify space-y-4" style={{ lineHeight: '1.8' }}>
+                    {subsection.content.split('\n\n').map((para, pIdx) => {
+                      // Check if it's a bullet point paragraph
+                      if (para.trim().startsWith('•') || para.trim().startsWith('-')) {
+                        const items = para.split('\n').filter(line => line.trim());
+                        return (
+                          <ul key={pIdx} className="space-y-2.5 pl-6">
+                            {items.map((item, iIdx) => (
+                              <li key={iIdx} className="flex items-start">
+                                <span className="text-blue-700 font-bold mr-3 mt-1 text-lg">●</span>
+                                <span className="flex-1 text-justify">{item.replace(/^[•\-]\s*/, '')}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        );
+                      }
+                      return <p key={pIdx} className="text-justify">{para}</p>;
+                    })}
+                  </div>
                 </div>
               )}
 
-              {/* Bullet Points */}
+              {/* Bullet Points with Enhanced Styling */}
               {subsection.points && (
-                <ul className="pl-16 space-y-3 mb-6">
+                <ul className="pl-12 space-y-3 mb-6">
                   {subsection.points.map((point, pointIdx) => (
                     <li key={pointIdx} className="flex items-start">
-                      <span className="text-blue-900 font-bold mr-3 mt-1">•</span>
-                      <p className="text-base leading-relaxed text-slate-800 flex-1">
+                      <span className="text-blue-700 font-bold mr-3 mt-1 text-lg">●</span>
+                      <p className="text-[15px] leading-[1.8] text-slate-800 flex-1 text-justify">
                         {point}
                       </p>
                     </li>
@@ -412,31 +428,65 @@ const HRSOPs = ({ setActiveModule }) => {
                 </ul>
               )}
 
-              {/* Nested subsections */}
+              {/* Nested subsections with Better Formatting */}
               {subsection.subsections && subsection.subsections.map((nestedSub, nestedIdx) => (
-                <div key={nestedIdx} className="pl-16 mb-6 ml-2">
-                  <div className="border-l-4 border-blue-200 pl-6 py-2">
-                    <h4 className="text-base font-bold text-slate-900 mb-3">
+                <div key={nestedIdx} className="pl-12 mb-6">
+                  <div className="border-l-4 border-blue-400 bg-blue-50/30 pl-8 py-4 rounded-r">
+                    <h4 className="text-base font-bold text-blue-900 mb-3">
                       {nestedSub.number} {nestedSub.title}
                     </h4>
                     {nestedSub.content && (
-                      <p className="text-base leading-relaxed text-slate-700 whitespace-pre-line">
-                        {nestedSub.content}
-                      </p>
+                      <div className="text-[15px] leading-[1.8] text-slate-800 space-y-3">
+                        {nestedSub.content.split('\n\n').map((para, pIdx) => {
+                          // Handle bullet points in nested content
+                          if (para.includes('•') || (para.match(/^\s*\(/))) {
+                            const lines = para.split('\n');
+                            return (
+                              <div key={pIdx} className="space-y-2">
+                                {lines.map((line, lIdx) => {
+                                  const trimmed = line.trim();
+                                  if (trimmed.startsWith('•') || trimmed.startsWith('-')) {
+                                    return (
+                                      <div key={lIdx} className="flex items-start ml-6">
+                                        <span className="text-blue-600 font-bold mr-2 text-sm">◆</span>
+                                        <span className="text-justify flex-1">{trimmed.replace(/^[•\-]\s*/, '')}</span>
+                                      </div>
+                                    );
+                                  }
+                                  if (trimmed.match(/^\(i+\)/)) {
+                                    return (
+                                      <div key={lIdx} className="ml-4">
+                                        <span className="font-semibold text-slate-900">{trimmed}</span>
+                                      </div>
+                                    );
+                                  }
+                                  if (trimmed) {
+                                    return (
+                                      <p key={lIdx} className="text-justify ml-8">{trimmed}</p>
+                                    );
+                                  }
+                                  return null;
+                                })}
+                              </div>
+                            );
+                          }
+                          return <p key={pIdx} className="text-justify">{para}</p>;
+                        })}
+                      </div>
                     )}
                   </div>
                 </div>
               ))}
 
-              {/* Tables */}
+              {/* Tables with Enhanced Styling */}
               {subsection.table && (
-                <div className="pl-16 mb-6">
-                  <div className="border-2 border-slate-300 overflow-hidden">
+                <div className="pl-12 mb-8">
+                  <div className="border-2 border-slate-300 overflow-hidden rounded-lg shadow-sm">
                     <table className="min-w-full">
                       <thead>
-                        <tr className="bg-blue-900">
+                        <tr className="bg-gradient-to-r from-blue-900 to-blue-800">
                           {subsection.table.headers.map((header, hIdx) => (
-                            <th key={hIdx} className="px-6 py-4 text-left text-sm font-bold text-white border-r border-blue-800 last:border-r-0">
+                            <th key={hIdx} className="px-6 py-4 text-left text-sm font-bold text-white border-r border-blue-700 last:border-r-0">
                               {header}
                             </th>
                           ))}
@@ -444,9 +494,9 @@ const HRSOPs = ({ setActiveModule }) => {
                       </thead>
                       <tbody>
                         {subsection.table.rows.map((row, rIdx) => (
-                          <tr key={rIdx} className={`${rIdx % 2 === 0 ? 'bg-white' : 'bg-slate-50'} border-b border-slate-200 last:border-b-0`}>
+                          <tr key={rIdx} className={`${rIdx % 2 === 0 ? 'bg-white' : 'bg-blue-50'} border-b border-slate-200 last:border-b-0 hover:bg-blue-100 transition-colors`}>
                             {row.map((cell, cIdx) => (
-                              <td key={cIdx} className="px-6 py-3 text-sm text-slate-800 border-r border-slate-200 last:border-r-0">
+                              <td key={cIdx} className="px-6 py-3.5 text-[14px] leading-relaxed text-slate-800 border-r border-slate-200 last:border-r-0 align-top">
                                 {cell}
                               </td>
                             ))}
@@ -461,17 +511,40 @@ const HRSOPs = ({ setActiveModule }) => {
           ))}
         </div>
 
-        {/* Footer with Document Reference */}
-        <div className="border-t-2 border-blue-900 bg-slate-50 px-16 py-6">
-          <div className="flex items-center justify-between text-xs text-slate-600">
-            <div className="space-y-1">
-              <p><span className="font-semibold text-slate-900">Document Reference:</span> {section.number}</p>
-              <p><span className="font-semibold text-slate-900">Classification:</span> Internal Use Only</p>
+        {/* Enhanced Footer with Color Gradient */}
+        <div className="border-t-2 border-blue-900 bg-gradient-to-r from-blue-900 via-blue-800 to-blue-900 px-16 py-8">
+          <div className="grid grid-cols-3 gap-8 mb-4">
+            <div>
+              <p className="text-xs font-bold text-blue-200 uppercase tracking-wider mb-2">Document Information</p>
+              <div className="space-y-1 text-white">
+                <p className="text-sm"><span className="font-semibold">Reference:</span> {section.number}</p>
+                <p className="text-sm"><span className="font-semibold">Classification:</span> Internal Use Only</p>
+              </div>
             </div>
-            <div className="text-right space-y-1">
-              <p className="text-green-700 font-semibold">Status: Active & Current</p>
-              <p>© 2024 Koyili Hospital. All Rights Reserved.</p>
+            <div>
+              <p className="text-xs font-bold text-blue-200 uppercase tracking-wider mb-2">Version Control</p>
+              <div className="space-y-1 text-white">
+                <p className="text-sm"><span className="font-semibold">Version:</span> 3.0</p>
+                <p className="text-sm"><span className="font-semibold">Last Updated:</span> Jan 2024</p>
+              </div>
             </div>
+            <div>
+              <p className="text-xs font-bold text-blue-200 uppercase tracking-wider mb-2">Status</p>
+              <div className="space-y-1">
+                <div className="inline-flex items-center px-3 py-1 rounded-full bg-green-500 text-white text-xs font-bold">
+                  <CheckCircle className="w-3 h-3 mr-1" />
+                  Active & Current
+                </div>
+                <p className="text-xs text-blue-200 mt-2">Next Review: Jan 2025</p>
+              </div>
+            </div>
+          </div>
+          <div className="border-t border-blue-700 pt-4 flex items-center justify-between">
+            <div className="flex items-center space-x-2">
+              <Scale className="w-4 h-4 text-amber-400" />
+              <p className="text-xs text-blue-200">Compliant with NABH, ISO 9001:2015 Standards</p>
+            </div>
+            <p className="text-xs text-blue-300">© 2024 Koyili Hospital. All Rights Reserved.</p>
           </div>
         </div>
       </div>
