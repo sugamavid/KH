@@ -7619,7 +7619,178 @@ Presented during Annual Day or special event`
     title: 'Monthly Payroll Processing',
     searchTerms: ['payroll', 'salary', 'processing', 'wages', 'compensation'],
     category: 'I. Payroll, Compensation & Allowances',
-    content: 'Defines standardised and time-bound procedure for monthly payroll processing ensuring accurate salary computation, statutory compliance, and timely disbursement.'
+    subsections: [
+      {
+        number: '1',
+        title: 'OBJECTIVE',
+        content: 'To establish standardized, accurate, and time-bound monthly payroll processing procedures ensuring correct salary computation, statutory deductions, timely disbursement, compliance with labour and tax laws, and maintaining complete audit trails.'
+      },
+      {
+        number: '2',
+        title: 'SCOPE',
+        content: 'Applicable to all employees on hospital payroll. Covers salary calculation, statutory compliance (PF, ESI, PT, TDS), payroll generation, disbursement, and record-keeping.'
+      },
+      {
+        number: '3',
+        title: 'PAYROLL CYCLE TIMELINE',
+        content: `Standard Monthly Cycle:
+• 1st-25th: Attendance and leave data finalized
+• 26th-27th: Payroll inputs (attendance, leave, OT, LOP) locked in HRMS
+• 28th-30th: Payroll processing (salary calculation, deductions)
+• 31st/Last day: Payroll review and approval
+• 1st-3rd of next month: Salary credit to bank accounts
+• 5th: Salary slips issued to employees`
+      },
+      {
+        number: '4',
+        title: 'PAYROLL INPUT COLLECTION',
+        subsections: [
+          {
+            number: '4.1',
+            title: 'Attendance Data',
+            content: `• HR extracts final attendance from biometric system by 26th
+• Leave applications approved and recorded
+• LOP days finalized
+• Working days calculated for each employee
+• Half-days, short leaves accounted
+• Data validated for anomalies (e.g., more leaves than days in month)`
+          },
+          {
+            number: '4.2',
+            title: 'Variable Pay Components',
+            content: `• Overtime hours approved and logged (SOP I.2)
+• Incentives and bonuses approved
+• Arrears or back-pay adjustments
+• Allowance claims submitted and approved (SOP I.3)
+• Salary advances or loans deducted
+• One-time payments (awards, recognition)`
+          },
+          {
+            number: '4.3',
+            title: 'Deductions and Recoveries',
+            content: `• Statutory: PF, ESI, Professional Tax, TDS
+• Loan repayment installments
+• Advance salary recovery
+• Canteen/transport deductions
+• Loss of Pay (LOP) deductions
+• Disciplinary penalty deductions (if any)
+• Notice period shortfall recovery`
+          },
+          {
+            number: '4.4',
+            title: 'New Joiners and Exits',
+            content: `• New joiners: Pro-rated salary from joining date
+• Resignations/terminations: Full & Final settlement processed separately
+• Promotions/transfers: Revised salary effective from specified date
+• Unpaid leave adjustments`
+          }
+        ]
+      },
+      {
+        number: '5',
+        title: 'SALARY COMPUTATION',
+        subsections: [
+          {
+            number: '5.1',
+            title: 'Gross Salary Calculation',
+            content: `Gross Salary = Basic + HRA + Special Allowance + Medical + Conveyance + Other Allowances + Variable Pay
+
+Pro-ration formula (for partial month):
+Pro-rated amount = (Monthly amount / Total days in month) × Days worked`
+          },
+          {
+            number: '5.2',
+            title: 'Statutory Deductions',
+            content: `(i) EPF (Employees' Provident Fund):
+    • Employee contribution: 12% of Basic
+    • Employer contribution: 12% of Basic (3.67% to EPF, 8.33% to EPS)
+    • Applicable if Basic ≤ ₹15,000 (or voluntarily on higher)
+
+(ii) ESI (Employees' State Insurance):
+    • Employee contribution: 1.75% of Gross (if Gross ≤ ₹21,000/month)
+    • Employer contribution: 4.75% of Gross
+
+(iii) Professional Tax:
+    • State-specific (e.g., ₹200/month in many states)
+    • Deducted monthly
+
+(iv) TDS (Tax Deducted at Source):
+    • Calculated based on projected annual income
+    • Income tax slabs applied
+    • Deductions u/s 80C, 80D etc. considered
+    • Recomputed annually or when employee submits investment proofs`
+          },
+          {
+            number: '5.3',
+            title: 'Net Salary Calculation',
+            content: `Net Salary = Gross Salary + Variable Pay - All Deductions
+
+Example:
+Gross: ₹50,000
+Add: Overtime ₹2,000
+Less: PF ₹1,800, ESI ₹0, PT ₹200, TDS ₹3,000, Loan ₹5,000
+Net Salary: ₹42,000`
+          }
+        ]
+      },
+      {
+        number: '6',
+        title: 'PAYROLL PROCESSING STEPS',
+        content: `(i) Data Import: Import attendance, leave, OT data into payroll software
+(ii) Salary Calculation: Run payroll computation module
+(iii) Exception Handling: Review anomalies (negative salary, excessive deductions)
+(iv) Validation: Cross-check sample calculations manually
+(v) Corrections: Fix errors and re-run if needed
+(vi) Management Review: HR Manager reviews and approves payroll
+(vii) Finance Approval: Finance team approves fund disbursement
+(viii) Bank File Generation: Generate salary credit file (NEFT/RTGS format)
+(ix) Upload to Bank: Submit file to bank portal
+(x) Payslip Generation: Generate PDF payslips for all employees`
+      },
+      {
+        number: '7',
+        title: 'SALARY DISBURSEMENT',
+        content: `• Bank file uploaded by 1st or 2nd of month
+• Salary credited by 3rd (working day)
+• Credit confirmation report downloaded from bank
+• Any failed credits immediately investigated and rectified
+• Cash payment (if applicable) for employees without bank accounts`
+      },
+      {
+        number: '8',
+        title: 'PAYSLIP ISSUANCE',
+        content: `• Digital payslips available on HRMS portal by 5th
+• Email notification sent to employees
+• Physical printouts only if requested
+• Payslip includes: Earnings, Deductions, Net Pay, YTD totals, Leave balance
+• Password-protected PDFs for security`
+      },
+      {
+        number: '9',
+        title: 'STATUTORY COMPLIANCE',
+        content: `• PF challan payment and ECR filing by 15th of following month
+• ESI challan payment and return by 15th of following month
+• Professional Tax payment as per state deadlines
+• TDS challan payment by 7th of following month
+• TDS return (Form 24Q) filed quarterly
+• All payment receipts and filing acknowledgments archived`
+      },
+      {
+        number: '10',
+        title: 'PAYROLL REGISTER AND RECORDS',
+        content: `• Monthly Payroll Register: Employee-wise salary details
+• Attendance Register linked to payroll
+• Statutory payment challans and receipts
+• Bank credit confirmation reports
+• Payslip repository
+• Records retained for 7 years minimum (statutory requirement)`
+      },
+      {
+        number: '11',
+        title: 'REFERENCE DOCUMENTS',
+        content: 'HR By-Laws (Salary Policy), EPF Act, ESI Act, Income Tax Act, Annexure I.1.1: Payroll Processing Checklist, Annexure I.1.2: Salary Register Format'
+      }
+    ]
   },
 
   sopI2: {
@@ -7628,7 +7799,117 @@ Presented during Annual Day or special event`
     title: 'Overtime Logging & Approval',
     searchTerms: ['overtime', 'ot', 'extra', 'hours', 'compensation'],
     category: 'I. Payroll, Compensation & Allowances',
-    content: 'Defines authorised process for logging, approval, and compensation of overtime for eligible employees ensuring transparency and accurate tracking.'
+    subsections: [
+      {
+        number: '1',
+        title: 'OBJECTIVE',
+        content: 'To define authorized processes for logging, approving, calculating, and compensating overtime work ensuring fair compensation, compliance with labour laws, accurate record-keeping, and preventing unauthorized overtime costs.'
+      },
+      {
+        number: '2',
+        title: 'SCOPE',
+        content: 'Applicable to eligible employees (non-managerial staff, shift workers) as per labour laws and hospital policy. Management and senior roles typically exempt from overtime.'
+      },
+      {
+        number: '3',
+        title: 'OVERTIME ELIGIBILITY',
+        content: `Eligible for Overtime:
+• Non-management employees (Grade 1-3)
+• Shift workers (nurses, technicians, security, housekeeping)
+• Support staff with defined working hours
+• Contractual workers as per contract terms
+
+Not Eligible (Exempt):
+• Managers and above (Grade 4+)
+• Senior medical officers with flexible hours
+• Employees on fixed CTC with no hourly component`
+      },
+      {
+        number: '4',
+        title: 'OVERTIME APPROVAL PROCESS',
+        content: `(i) Pre-Approval (Mandatory):
+    • Employee requests overtime in advance
+    • Supervisor assesses operational need
+    • Approves only if genuinely required
+    • Preference for voluntary overtime (not forced)
+
+(ii) Emergency Overtime (post-facto approval):
+    • In case of sudden operational need
+    • Employee works extra hours with verbal approval
+    • Formal application submitted next day
+    • Supervisor approves retrospectively within 24 hours
+
+(iii) Approval Criteria:
+    • Operational emergency or staff shortage
+    • Critical deliverable or deadline
+    • Patient care requirements
+    • Budget availability`
+      },
+      {
+        number: '5',
+        title: 'OVERTIME LOGGING',
+        content: `(i) Manual Log:
+    • Overtime Register maintained at department level
+    • Employee signs in/out with exact times
+    • Supervisor verifies and signs
+
+(ii) System-Based (HRMS):
+    • Employee submits OT request in HRMS
+    • Logs actual OT hours worked
+    • Supervisor approves in system
+    • Auto-transferred to payroll
+
+(iii) Biometric Verification:
+    • Actual working hours cross-verified with biometric punch
+    • Prevents false OT claims`
+      },
+      {
+        number: '6',
+        title: 'OVERTIME CALCULATION',
+        content: `(i) Hourly Rate:
+    Hourly rate = Basic Salary / (26 days × 8 hours) = Basic / 208 hours
+
+(ii) Overtime Rate (as per Factories Act/S&E Act):
+    • Normal OT rate: 2× hourly rate
+    • Weekly off/Holiday work: 2× hourly rate
+    
+Example:
+• Monthly Basic: ₹20,000
+• Hourly rate: ₹20,000 / 208 = ₹96.15
+• OT rate: ₹96.15 × 2 = ₹192.30 per hour
+• 5 hours OT: 5 × ₹192.30 = ₹961.50`
+      },
+      {
+        number: '7',
+        title: 'OT PAYMENT',
+        content: `• OT included in next month's salary
+• Separate line item in payslip: "Overtime"
+• OT amount is taxable as salary income
+• TDS applicable on OT earnings`
+      },
+      {
+        number: '8',
+        title: 'OT CAPS AND LIMITS',
+        content: `• Maximum OT hours: 50 hours per month (as per law)
+• Excess OT requires CHRO approval and justification
+• Habitual high OT: Investigated (staffing issue or misuse?)
+• Compensatory off option: Instead of OT pay, employee can take time off`
+      },
+      {
+        number: '9',
+        title: 'MONITORING AND CONTROL',
+        content: `• Department-wise monthly OT reports generated
+• Budget vs actual OT costs tracked
+• High OT departments analyzed for staffing needs
+• Unauthorized OT not paid
+• Abuse (false claims) leads to disciplinary action`
+      },
+      {
+        number: '10',
+        title: 'REFERENCE DOCUMENTS',
+        content: 'Factories Act 1948, Shops & Establishments Act, HR By-Laws (Overtime Policy), Annexure I.2.1: Overtime Request Form, Annexure I.2.2: Overtime Register'
+      }
+    ]
   },
 
   sopI3: {
