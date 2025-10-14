@@ -1091,6 +1091,20 @@ const HRByLaws = ({ setActiveModule }) => {
         />
       )}
 
+      {/* Audit Module Modal */}
+      {showAuditModule && (
+        <AuditModule 
+          onClose={() => setShowAuditModule(false)}
+          onNavigateToSection={(sectionId) => {
+            setActiveSection(sectionId);
+            setShowAuditModule(false);
+            if (contentRef.current) {
+              contentRef.current.scrollTop = 0;
+            }
+          }}
+        />
+      )}
+
       {/* Print Styles */}
       <style jsx>{`
         @media print {
