@@ -26,6 +26,7 @@ const HRByLaws = ({ setActiveModule }) => {
     const elements = [];
     let currentMainPoint = null;
     let currentBullets = [];
+    let collectingMainPointContent = false;
     
     const flushCurrentGroup = () => {
       if (currentMainPoint) {
@@ -41,6 +42,7 @@ const HRByLaws = ({ setActiveModule }) => {
         );
         currentMainPoint = null;
         currentBullets = [];
+        collectingMainPointContent = false;
       }
     };
     
@@ -53,7 +55,24 @@ const HRByLaws = ({ setActiveModule }) => {
         return;
       }
       
-      // Main points: (a) **Title:**
+      // Main points: (a) **Title:** (title on same line as marker)
+      const mainPointWithContentMatch = trimmedLine.match(/^\(([a-z])\)\s+\*\*(.*?)\*\*:?\s*(.*)$/);
+      if (mainPointWithContentMatch && mainPointWithContentMatch[3]) {
+        flushCurrentGroup();
+        const text = mainPointWithContentMatch[3].replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+        currentMainPoint = (
+          <div key={`main-${index}`} className="mb-2">
+            <div className="font-bold text-slate-900 text-base mb-2">
+              <span className="inline-block mr-2">({mainPointWithContentMatch[1]})</span>
+              <span>{mainPointWithContentMatch[2]}:</span>
+            </div>
+            <div className="text-slate-700 leading-relaxed" dangerouslySetInnerHTML={{ __html: text }} />
+          </div>
+        );
+        return;
+      }
+      
+      // Main points: (a) **Title:** (title only, content on next lines)
       const mainPointMatch = trimmedLine.match(/^\(([a-z])\)\s+\*\*(.*?)\*\*:?$/);
       if (mainPointMatch) {
         flushCurrentGroup();
@@ -63,6 +82,7 @@ const HRByLaws = ({ setActiveModule }) => {
             <span>{mainPointMatch[2]}:</span>
           </div>
         );
+        collectingMainPointContent = true;
         return;
       }
       
@@ -76,6 +96,7 @@ const HRByLaws = ({ setActiveModule }) => {
             <span className="text-slate-700 leading-relaxed" dangerouslySetInnerHTML={{ __html: text }} />
           </div>
         );
+        collectingMainPointContent = false;
         return;
       }
       
@@ -89,16 +110,25 @@ const HRByLaws = ({ setActiveModule }) => {
             <span className="flex-1 text-slate-700 leading-relaxed" dangerouslySetInnerHTML={{ __html: text }} />
           </div>
         );
+        collectingMainPointContent = false;
         return;
       }
       
-      // Regular text line
+      // Regular text line - could be continuation of main point or standalone
       if (trimmedLine) {
-        flushCurrentGroup();
         const text = trimmedLine.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
-        elements.push(
-          <p key={`p-${index}`} className="mb-4 text-slate-700 leading-relaxed" dangerouslySetInnerHTML={{ __html: text }} />
-        );
+        
+        if (collectingMainPointContent && currentMainPoint) {
+          // This is content for the current main point
+          currentBullets.push(
+            <div key={`content-${index}`} className="text-slate-700 leading-relaxed mb-2" dangerouslySetInnerHTML={{ __html: text }} />
+          );
+        } else {
+          flushCurrentGroup();
+          elements.push(
+            <p key={`p-${index}`} className="mb-4 text-slate-700 leading-relaxed" dangerouslySetInnerHTML={{ __html: text }} />
+          );
+        }
       }
     });
     
