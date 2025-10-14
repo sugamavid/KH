@@ -18,7 +18,7 @@ const HRByLaws = ({ setActiveModule }) => {
   const [expandedSections, setExpandedSections] = useState({});
   const contentRef = useRef(null);
 
-  // Parse and render content as pure React JSX components
+  // Parse and render content with explicit line breaks and bold conversion
   const renderFormattedContent = (content) => {
     if (!content) return null;
     
@@ -26,38 +26,48 @@ const HRByLaws = ({ setActiveModule }) => {
     const elements = [];
     let key = 0;
     
+    // Helper function to convert **text** to bold
+    const renderTextWithBold = (text) => {
+      const parts = text.split(/(\*\*.*?\*\*)/g);
+      return parts.map((part, idx) => {
+        if (part.startsWith('**') && part.endsWith('**')) {
+          return <strong key={idx}>{part.slice(2, -2)}</strong>;
+        }
+        return part;
+      });
+    };
+    
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i];
       const trimmedLine = line.trim();
       
-      // Skip empty lines
       if (!trimmedLine) continue;
       
       // Check for (a) **Title:** pattern
-      const mainPointMatch = trimmedLine.match(/^\(([a-z])\)\s+\*\*(.*?)\*\*:?$/);
-      if (mainPointMatch) {
+      const mainPointMatch = trimmedLine.match(/^\(([a-z])\)\s+(.+)$/);
+      if (mainPointMatch && trimmedLine.includes('**')) {
         elements.push(
-          <div key={key++} style={{ marginTop: '1.5rem', marginBottom: '0.5rem', fontWeight: 'bold', fontSize: '1.1rem', color: '#0f172a' }}>
-            ({mainPointMatch[1]}) <strong>{mainPointMatch[2]}:</strong>
-          </div>
+          <React.Fragment key={key++}>
+            <br />
+            <br />
+            <strong style={{ display: 'block', fontSize: '1.1rem', color: '#0f172a' }}>
+              ({mainPointMatch[1]}) {renderTextWithBold(mainPointMatch[2])}
+            </strong>
+          </React.Fragment>
         );
         continue;
       }
       
-      // Check for (i), (ii), (iii) sub-points
+      // Check for (i), (ii), (iii) sub-points  
       const subPointMatch = line.match(/^\s+((?:i{1,3}|iv|v|vi{0,3}|ix|x))\)\s+(.+)$/);
       if (subPointMatch) {
-        const text = subPointMatch[2];
-        const boldMatch = text.match(/\*\*(.*?)\*\*/g);
-        const parts = text.split(/\*\*(.*?)\*\*/);
-        
         elements.push(
-          <div key={key++} style={{ marginLeft: '3rem', marginTop: '0.75rem', marginBottom: '0.75rem', color: '#334155', lineHeight: '1.75' }}>
-            <strong style={{ color: '#475569' }}>({subPointMatch[1]})</strong>{' '}
-            {parts.map((part, idx) => 
-              idx % 2 === 0 ? part : <strong key={idx}>{part}</strong>
-            )}
-          </div>
+          <React.Fragment key={key++}>
+            <br />
+            <span style={{ display: 'block', marginLeft: '3rem', color: '#334155' }}>
+              <strong>({subPointMatch[1]})</strong> {renderTextWithBold(subPointMatch[2])}
+            </span>
+          </React.Fragment>
         );
         continue;
       }
@@ -65,30 +75,26 @@ const HRByLaws = ({ setActiveModule }) => {
       // Check for bullets
       const bulletMatch = line.match(/^\s+•\s+(.+)$/);
       if (bulletMatch) {
-        const text = bulletMatch[1];
-        const parts = text.split(/\*\*(.*?)\*\*/);
-        
         elements.push(
-          <div key={key++} style={{ marginLeft: '2.5rem', marginTop: '0.5rem', marginBottom: '0.5rem', color: '#334155', lineHeight: '1.75', display: 'flex', alignItems: 'flex-start' }}>
-            <strong style={{ color: '#d97706', fontSize: '1.25rem', marginRight: '0.75rem' }}>•</strong>
-            <span>
-              {parts.map((part, idx) => 
-                idx % 2 === 0 ? part : <strong key={idx}>{part}</strong>
-              )}
+          <React.Fragment key={key++}>
+            <br />
+            <span style={{ display: 'block', marginLeft: '2.5rem', color: '#334155' }}>
+              <strong style={{ color: '#d97706', fontSize: '1.25rem' }}>• </strong>
+              {renderTextWithBold(bulletMatch[1])}
             </span>
-          </div>
+          </React.Fragment>
         );
         continue;
       }
       
-      // Regular text line
-      const parts = trimmedLine.split(/\*\*(.*?)\*\*/);
+      // Regular text
       elements.push(
-        <div key={key++} style={{ color: '#334155', lineHeight: '1.75', marginBottom: '0.5rem' }}>
-          {parts.map((part, idx) => 
-            idx % 2 === 0 ? part : <strong key={idx}>{part}</strong>
-          )}
-        </div>
+        <React.Fragment key={key++}>
+          <br />
+          <span style={{ display: 'block', color: '#334155' }}>
+            {renderTextWithBold(trimmedLine)}
+          </span>
+        </React.Fragment>
       );
     }
     
