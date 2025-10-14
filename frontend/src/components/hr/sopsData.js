@@ -9117,7 +9117,258 @@ Authorization matrix maintained specifying what each staff member is authorized 
     title: 'External Training Reimbursement Workflow',
     searchTerms: ['external', 'training', 'reimbursement', 'workshop', 'certification'],
     category: 'J. Training, Certification & Development',
-    content: 'Lays down clear process for employees to apply for, seek approval, and claim reimbursement for external training programs, workshops, and certifications.'
+    subsections: [
+      {
+        number: '1',
+        title: 'OBJECTIVE',
+        content: 'To establish transparent, fair, and structured process for employees to seek approval, attend, and claim reimbursement for external training programs, workshops, conferences, certifications, and professional development courses ensuring skill enhancement while maintaining budgetary control and preventing misuse.'
+      },
+      {
+        number: '2',
+        title: 'SCOPE',
+        content: 'Applicable to all permanent employees seeking to attend external training programs. Covers professional certifications, specialized workshops, academic courses, industry conferences, CME (Continuing Medical Education), and skill development programs offered by external vendors or institutions.'
+      },
+      {
+        number: '3',
+        title: 'ELIGIBLE EXTERNAL TRAINING TYPES',
+        content: `(i) Professional Certifications:
+    • Clinical certifications (BLS, ACLS, PALS, ATLS)
+    • Quality certifications (Six Sigma, Lean Healthcare)
+    • IT certifications (CCNA, AWS, Data Analytics)
+    • Management certifications (PMP, HR certifications)
+
+(ii) Workshops & Short Courses:
+    • Technical skill workshops (e.g., laparoscopic surgery)
+    • Soft skills training (communication, leadership)
+    • Specialized clinical training (e.g., wound care)
+
+(iii) Conferences & Seminars:
+    • Medical conferences and CME programs
+    • Healthcare management conferences
+    • Professional association events
+
+(iv) Academic Courses:
+    • Degree/diploma programs (MBA, MHA, M.Sc)
+    • Online courses (Coursera, edX certifications)
+    • Advanced clinical training programs`
+      },
+      {
+        number: '4',
+        title: 'ELIGIBILITY CRITERIA',
+        content: `• Permanent employees (completed probation)
+• Minimum service of 1 year (for sponsored programs)
+• Good performance record (no disciplinary actions)
+• Training relevant to current role or career growth within hospital
+• Budget availability
+• Prior approval mandatory`
+      },
+      {
+        number: '5',
+        title: 'EXTERNAL TRAINING REQUEST & APPROVAL PROCESS',
+        subsections: [
+          {
+            number: '5.1',
+            title: 'Step 1: Employee Initiates Request',
+            content: `• Employee identifies external training program
+• Fills External Training Request Form (Annexure J.4.1)
+• Details required:
+    - Training name and provider
+    - Duration and dates
+    - Location (local/outstation)
+    - Cost breakdown (fees, travel, accommodation)
+    - Relevance and learning objectives
+    - How it benefits hospital/role
+• Attaches training brochure/details`
+          },
+          {
+            number: '5.2',
+            title: 'Step 2: Supervisor/Manager Recommendation',
+            content: `• Supervisor reviews request
+• Evaluates:
+    - Relevance to employee's role
+    - Operational feasibility (can employee be spared?)
+    - Genuine developmental need
+    - Past training utilization
+• Recommends: Approve / Reject with justification
+• Forwards to Department Head`
+          },
+          {
+            number: '5.3',
+            title: 'Step 3: Department Head Approval',
+            content: `• Assesses departmental training budget
+• Verifies alignment with departmental goals
+• Approves and forwards to HR`
+          },
+          {
+            number: '5.4',
+            title: 'Step 4: HR Review',
+            content: `• Checks eligibility criteria
+• Verifies training provider credibility
+• Reviews training policy compliance
+• Assesses overall training budget utilization
+• Recommends to Finance`
+          },
+          {
+            number: '5.5',
+            title: 'Step 5: Finance & CHRO Approval',
+            content: `• Finance approves budget allocation
+• CHRO/CEO final approval for high-value programs (>₹50,000)
+• Approval communicated to employee via email/HRMS`
+          }
+        ]
+      },
+      {
+        number: '6',
+        title: 'REIMBURSEMENT POLICY',
+        subsections: [
+          {
+            number: '6.1',
+            title: 'Full Sponsorship (100% Reimbursement)',
+            content: `Criteria:
+• Training mandated by hospital or regulatory requirement
+• Critical for current role performance
+• Initiated by management/HOD
+
+Coverage:
+• Full registration/course fees
+• Travel (actual, economy class)
+• Accommodation (budget hotel, max ₹3,000/night)
+• Daily allowance (meals, local travel - max ₹500/day)
+
+Conditions:
+• Pre-approval mandatory
+• Submission of bills and certificates
+• Service bond if cost >₹1,00,000 (2-3 years)`
+          },
+          {
+            number: '6.2',
+            title: 'Partial Sponsorship (50-80% Reimbursement)',
+            content: `Criteria:
+• Training beneficial but not critical
+• Employee-initiated request
+• Professional development
+
+Coverage:
+• 50-80% of registration fees (as per policy)
+• Travel and accommodation: Employee bears partial cost
+
+Conditions:
+• Pre-approval required
+• Submission of bills and certificates
+• Service bond if cost >₹50,000 (1-2 years)`
+          },
+          {
+            number: '6.3',
+            title: 'No Sponsorship (Time-Off Only)',
+            content: `Criteria:
+• Training not directly relevant to current role
+• Personal career interest
+• Budget constraints
+
+Support:
+• Paid leave or special leave granted (as per policy)
+• No financial reimbursement
+• Certificate copy to be submitted to HR for records`
+          }
+        ]
+      },
+      {
+        number: '7',
+        title: 'SERVICE BOND & OBLIGATIONS',
+        content: `Service Bond Applicable If:
+• Total training cost >₹50,000
+• Full or substantial partial sponsorship provided
+
+Bond Terms:
+• Cost ₹50,000-₹1,00,000: 1 year service bond
+• Cost >₹1,00,000: 2-3 years service bond
+• If employee resigns during bond period: Refund training cost (pro-rated)
+
+Formula:
+Refund Amount = (Total Cost) × (Months remaining in bond / Total bond months)
+
+Example:
+• Cost: ₹1,00,000, Bond: 2 years (24 months)
+• Employee resigns after 12 months
+• Refund: ₹1,00,000 × (12/24) = ₹50,000
+
+Bond Agreement:
+• Signed at the time of training approval
+• Legally binding document
+• Deducted from Full & Final settlement if applicable`
+      },
+      {
+        number: '8',
+        title: 'REIMBURSEMENT CLAIM PROCESS',
+        content: `(i) Attendance:
+    • Employee attends full training program
+    • Obtains attendance certificate and completion certificate
+
+(ii) Documentation:
+    • Original bills: Registration receipt, travel tickets, hotel bills
+    • Training certificate/credential
+    • Training material/agenda copy
+    • Expense summary sheet
+
+(iii) Claim Submission:
+    • Submit claim within 15 days of training completion
+    • Fill Reimbursement Claim Form (Annexure J.4.2)
+    • Attach all supporting documents
+
+(iv) Verification:
+    • HR verifies attendance and certificate authenticity
+    • Finance checks bills and calculates reimbursable amount
+
+(v) Approval & Payment:
+    • HOD/CHRO approves
+    • Reimbursement processed with next month's salary
+    • Or immediate payment for high amounts`
+      },
+      {
+        number: '9',
+        title: 'POST-TRAINING OBLIGATIONS',
+        content: `(i) Knowledge Sharing:
+    • Employee conducts knowledge-sharing session with team
+    • Presents key learnings and applications
+    • Scheduled within 1 month of training completion
+
+(ii) Certificate Submission:
+    • Original or certified copy submitted to HR
+    • Recorded in training records
+
+(iii) Training Report:
+    • Brief report on training attended (Annexure J.4.3)
+    • Highlights, learnings, and recommendations
+
+(iv) Application of Learning:
+    • Expected to apply acquired knowledge/skills in role
+    • Supervisor monitors and provides feedback`
+      },
+      {
+        number: '10',
+        title: 'NON-COMPLIANCE & PENALTIES',
+        content: `• Non-attendance (after approval): Training cost recovered if already paid
+• Failure to complete training: No reimbursement
+• Fraudulent claims (fake bills): Disciplinary action + recovery + potential termination
+• Non-submission of certificate: Reimbursement withheld
+• Resignation during bond period: Bond amount recovered`
+      },
+      {
+        number: '11',
+        title: 'TRAINING BUDGET LIMITS (Indicative)',
+        content: `Per Employee Per Annum:
+• Grade 1-2 (Junior): ₹10,000-20,000
+• Grade 3-4 (Mid): ₹20,000-50,000
+• Grade 5+ (Senior/Manager): ₹50,000-1,50,000
+
+Note: Limits subject to management discretion and budget availability`
+      },
+      {
+        number: '12',
+        title: 'REFERENCE DOCUMENTS',
+        content: 'HR By-Laws (Training Policy), Travel Policy, Annexure J.4.1: External Training Request Form, Annexure J.4.2: Reimbursement Claim Form, Annexure J.4.3: Post-Training Report Template, Annexure J.4.4: Service Bond Agreement'
+      }
+    ]
   },
 
   sopJ5: {
