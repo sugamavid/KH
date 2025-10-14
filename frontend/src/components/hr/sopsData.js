@@ -7918,7 +7918,123 @@ Example:
     title: 'Allowance Disbursement Protocols',
     searchTerms: ['allowance', 'disbursement', 'reimbursement', 'benefits'],
     category: 'I. Payroll, Compensation & Allowances',
-    content: 'Institutionalizes clear mechanism for verification, approval, and disbursement of all employee allowances ensuring fairness, transparency, and proper accounting.'
+    subsections: [
+      {
+        number: '1',
+        title: 'OBJECTIVE',
+        content: 'To institutionalize clear, fair, and audit-compliant mechanisms for verification, approval, and disbursement of all employee allowances ensuring transparency, proper accounting, timely reimbursement, and preventing misuse or fraudulent claims.'
+      },
+      {
+        number: '2',
+        title: 'SCOPE',
+        content: 'Covers all allowances: HRA, Conveyance, Medical, Travel, Mobile, Meal, Special allowances, and reimbursements. Applicable to all eligible employees.'
+      },
+      {
+        number: '3',
+        title: 'TYPES OF ALLOWANCES',
+        content: `(i) Fixed Monthly Allowances (part of CTC):
+    • House Rent Allowance (HRA): 40-50% of Basic
+    • Conveyance Allowance: ₹1,600-5,000/month
+    • Medical Allowance: ₹1,250-2,500/month
+    • Special Allowance: Balance to reach CTC
+
+(ii) Reimbursement-Based (claim with bills):
+    • Travel Allowance: Actual expenses for official travel
+    • Mobile/Communication Allowance: Up to ₹500-1,000/month with bills
+    • Meal Allowance: For overtime or late shifts
+    • Uniform/Laundry Allowance: Annual reimbursement
+
+(iii) One-Time/Situational:
+    • Relocation Allowance: On transfer
+    • Education Allowance: For children (if policy permits)
+    • Hardship Allowance: For difficult postings`
+      },
+      {
+        number: '4',
+        title: 'CLAIM SUBMISSION PROCESS',
+        content: `(i) Claim Preparation:
+    • Employee fills Reimbursement Claim Form (Annexure I.3.1)
+    • Attaches original bills/receipts (not photocopies)
+    • Provides travel log, expense breakdown
+    • Supervisor pre-approves with signature
+
+(ii) Submission Timeline:
+    • Submit claims by 20th of month for same month's payout
+    • Late submissions processed in following month
+    • Claims older than 3 months may be rejected
+
+(iii) Documentation Requirements:
+    • Original bills with GST details
+    • Travel tickets (boarding pass, train/bus tickets)
+    • Hotel bills with stay dates
+    • Taxi/auto receipts or fuel bills
+    • Expense summary sheet`
+      },
+      {
+        number: '5',
+        title: 'VERIFICATION AND APPROVAL',
+        content: `(i) First Level - Supervisor Verification:
+    • Verify legitimacy of expense
+    • Confirm official purpose
+    • Check bill authenticity
+    • Approve within limits
+
+(ii) Second Level - Finance Review:
+    • Verify calculations
+    • Check against policy limits
+    • Ensure no duplicate claims
+    • Cross-check with budget
+
+(iii) Final Approval - HR/Finance Head:
+    • Approve claims above threshold (e.g., >₹5,000)
+    • Random audit of all claims`
+      },
+      {
+        number: '6',
+        title: 'ALLOWANCE LIMITS AND POLICIES',
+        content: `(i) Travel Allowance:
+    • Air travel: Economy class only (for senior management/long distance)
+    • Train: AC tier for >6 hours journey
+    • Local conveyance: Actual with receipts, max ₹500/day
+    • Hotel: Budget/3-star, max ₹3,000-5,000 per night
+    • Meals during travel: Max ₹500/day with bills
+
+(ii) Mobile Reimbursement:
+    • Up to ₹500-1,000/month with bill
+    • Only for roles requiring extensive communication
+
+(iii) Medical Reimbursement:
+    • Annual limit: ₹15,000-25,000
+    • Submit medical bills, prescriptions
+    • Covers self and dependent family
+
+(iv) LTA (Leave Travel Allowance):
+    • As per Income Tax Act exemption limits
+    • Once in 2 years (block of 4 years)
+    • Actual travel cost with tickets`
+      },
+      {
+        number: '7',
+        title: 'DISBURSEMENT',
+        content: `• Approved claims processed in next payroll cycle
+• Credited with monthly salary
+• Separate line item in payslip
+• Tax treatment as per IT Act (some allowances exempt, others taxable)`
+      },
+      {
+        number: '8',
+        title: 'FRAUD PREVENTION',
+        content: `• Random verification of bills with vendors
+• Duplicate claim detection in system
+• False claims: Disciplinary action + recovery + termination
+• Periodic audit of high-value claims`
+      },
+      {
+        number: '9',
+        title: 'REFERENCE DOCUMENTS',
+        content: 'HR By-Laws (Allowance Policy), Income Tax Act (Exemptions), Travel Policy, Annexure I.3.1: Reimbursement Claim Form'
+      }
+    ]
   },
 
   sopI4: {
@@ -7927,7 +8043,121 @@ Example:
     title: 'Bonus (Annual/Festival/Spot) Management',
     searchTerms: ['bonus', 'annual', 'festival', 'spot', 'incentive'],
     category: 'I. Payroll, Compensation & Allowances',
-    content: 'Establishes structured system for calculation, approval, and disbursement of bonus payments including annual, festival, and spot bonuses in accordance with statutory mandates.'
+    subsections: [
+      {
+        number: '1',
+        title: 'OBJECTIVE',
+        content: 'To establish structured, transparent, and legally-compliant system for calculation, approval, and disbursement of bonus payments including statutory bonus, performance bonus, festival bonus, and spot awards ensuring employee motivation while maintaining fiscal discipline.'
+      },
+      {
+        number: '2',
+        title: 'SCOPE',
+        content: 'Covers all bonus types. Applicable to eligible employees as per Payment of Bonus Act and hospital policy.'
+      },
+      {
+        number: '3',
+        title: 'TYPES OF BONUS',
+        subsections: [
+          {
+            number: '3.1',
+            title: 'Statutory Bonus (Annual)',
+            content: `As per Payment of Bonus Act, 1965:
+• Eligibility: Employees earning ≤₹21,000/month who worked ≥30 days in a year
+• Rate: 8.33% of annual salary (minimum) to 20% (maximum)
+• Calculation basis: Basic + DA (up to ₹7,000/month ceiling)
+• Payment: Within 8 months of financial year end (by Nov/Dec)
+• Mandatory by law
+
+Formula:
+Bonus = (Basic Salary/month capped at ₹7,000) × 8.33% × 12 months
+Minimum: ₹7,000 × 8.33% × 12 = ₹7,000/year approx`
+          },
+          {
+            number: '3.2',
+            title: 'Performance Bonus (Annual)',
+            content: `Based on individual and organizational performance:
+• Target: 10-50% of annual salary (varies by grade)
+• Linked to performance rating and company profitability
+• Eligibility: Permanent employees (excluding those on statutory bonus)
+• Payout: March/April post-appraisal
+
+Rating-wise payout:
+• Outstanding (5): 100-150% of target
+• Exceeds (4): 80-100% of target
+• Meets (3): 50-80% of target
+• Needs Improvement (2): 0-30% of target
+• Unsatisfactory (1): No bonus`
+          },
+          {
+            number: '3.3',
+            title: 'Festival Bonus',
+            content: `• Discretionary, declared by management
+• Typically during Diwali/Onam/Christmas
+• Flat amount (e.g., ₹5,000-10,000) or % of basic
+• All employees (including contractual) eligible
+• Paid in October/November`
+          },
+          {
+            number: '3.4',
+            title: 'Spot Bonus',
+            content: `• Immediate recognition for exceptional work (covered in SOP H.6)
+• ₹1,000-5,000
+• Any time during year
+• Supervisor-initiated, HR-approved`
+          }
+        ]
+      },
+      {
+        number: '4',
+        title: 'BONUS CALCULATION PROCESS',
+        content: `(i) Statutory Bonus:
+    • HR compiles list of eligible employees (salary ≤₹21K, worked ≥30 days)
+    • Calculate for each: (Basic capped at ₹7K) × 8.33% × months worked
+    • Pro-rate for mid-year joiners
+
+(ii) Performance Bonus:
+    • Payroll extracts annual salary and performance ratings
+    • Apply rating-wise percentage
+    • Gross up for tax if policy is tax-free bonus
+
+(iii) Festival Bonus:
+    • Management announces amount
+    • Apply to all active employees as on announcement date`
+      },
+      {
+        number: '5',
+        title: 'APPROVAL AND DISBURSEMENT',
+        content: `• HR prepares bonus calculation sheet
+• Finance verifies budget availability
+• CHRO/CEO approves
+• Processed with monthly salary (or special payout)
+• Separate payslip component: "Statutory Bonus" / "Performance Bonus" / "Festival Bonus"
+• Fully taxable as per IT Act`
+      },
+      {
+        number: '6',
+        title: 'TAX IMPLICATIONS',
+        content: `• All bonuses taxable as salary income
+• TDS deducted as per employee's tax slab
+• Reflected in Form 16
+• Employers' tax: No additional tax for employer (unlike perquisites)`
+      },
+      {
+        number: '7',
+        title: 'ELIGIBILITY CONDITIONS',
+        content: `Bonus NOT paid if:
+• Resigned/terminated before bonus payout date
+• On disciplinary suspension during bonus period
+• Notice period buyout cases (forfeiture clause)
+• Dismissed for misconduct
+• Fresh joiners (<30 working days in year for statutory)`
+      },
+      {
+        number: '8',
+        title: 'REFERENCE DOCUMENTS',
+        content: 'Payment of Bonus Act 1965, HR By-Laws (Bonus Policy), Income Tax Act, Annexure I.4.1: Bonus Calculation Sheet'
+      }
+    ]
   },
 
   sopI5: {
@@ -7936,7 +8166,140 @@ Example:
     title: 'Salary Revision & Increment Cycle',
     searchTerms: ['salary', 'revision', 'increment', 'hike', 'raise'],
     category: 'I. Payroll, Compensation & Allowances',
-    content: 'Establishes structured protocol for review, approval, and implementation of salary revisions and annual increments ensuring transparency and alignment with performance.'
+    subsections: [
+      {
+        number: '1',
+        title: 'OBJECTIVE',
+        content: 'To establish structured, transparent, and merit-based protocol for annual salary reviews, increment approvals, and implementation ensuring fair compensation aligned with performance, market trends, organizational budget, and employee retention while maintaining internal equity.'
+      },
+      {
+        number: '2',
+        title: 'SCOPE',
+        content: 'Applicable to all confirmed permanent employees. Covers annual increment cycle, promotion-linked revisions, and market correction adjustments.'
+      },
+      {
+        number: '3',
+        title: 'ANNUAL INCREMENT CYCLE',
+        content: `Timeline:
+• January: Performance appraisal completed
+• February: Increment budget finalized by management
+• March: Department-wise increment allocation
+• April 1st: Increments effective (financial year start)
+• April: Revised salary letters issued
+
+Frequency: Annual (unless promotion or market correction)`
+      },
+      {
+        number: '4',
+        title: 'INCREMENT DETERMINATION',
+        subsections: [
+          {
+            number: '4.1',
+            title: 'Performance-Linked Increment',
+            content: `Rating-wise increment matrix (on Basic or CTC):
+
+Outstanding (5): 15-20%
+Exceeds (4): 10-15%
+Meets (3): 5-10%
+Needs Improvement (2): 0-5%
+Unsatisfactory (1): 0%
+
+Actual % within range decided by:
+• Company's overall budget/profitability
+• Market salary trends
+• Employee's current position in salary band
+• Critical skill retention needs`
+          },
+          {
+            number: '4.2',
+            title: 'Budget Allocation',
+            content: `• Management announces overall increment budget (e.g., 8% of total payroll)
+• Budget allocated to departments based on headcount and performance
+• Department Heads distribute within team based on individual ratings
+• High performers may get above-average; average performers get lower to balance budget`
+          },
+          {
+            number: '4.3',
+            title: 'Promotion-Linked Increment',
+            content: `• Promotion increment: 15-30% over current salary
+• Separate from annual increment
+• Effective from promotion date
+• Based on new role's salary band`
+          }
+        ]
+      },
+      {
+        number: '5',
+        title: 'SALARY REVISION PROCESS',
+        content: `(i) Performance Data Input:
+    • Payroll extracts current salaries
+    • HR provides final performance ratings
+    • Merge data for increment calculation
+
+(ii) Manager Recommendations:
+    • Managers recommend increment % for each team member (within budget)
+    • Justify deviations from standard matrix
+    • Submit to Department Head
+
+(iii) Department Head Review:
+    • Review all recommendations
+    • Ensure internal equity (similar performers get similar %)
+    • Adjust outliers
+    • Approve within allocated department budget
+
+(iv) HR Review:
+    • Check for policy compliance
+    • Verify calculations
+    • Flag anomalies (e.g., low performer getting high increment)
+
+(v) Finance & CHRO Approval:
+    • Final approval based on affordability
+    • Budget adherence confirmed
+
+(vi) Increment Letters:
+    • HR issues revised salary letters
+    • Effective date, new salary components, increment amount mentioned`
+      },
+      {
+        number: '6',
+        title: 'SPECIAL SALARY REVISIONS',
+        content: `(i) Market Correction:
+    • If employee underpaid vs market, ad-hoc revision
+    • Retention strategy for critical talent
+    • Requires business case and CHRO approval
+
+(ii) Role Change (Lateral):
+    • If significant responsibility increase without promotion
+    • 5-15% adjustment
+
+(iii) Counter-Offer Match:
+    • Employee receives external offer; hospital matches (selectively)
+    • Only for critical, high performers
+    • One-time exception, not policy`
+      },
+      {
+        number: '7',
+        title: 'NO INCREMENT SCENARIOS',
+        content: `• Performance rating 1 or 2 (Unsatisfactory/Needs Improvement)
+• On disciplinary warning
+• On PIP
+• Long absence (>60 days LOP in year)
+• Resigned (serving notice period during increment cycle)`
+      },
+      {
+        number: '8',
+        title: 'COMMUNICATION',
+        content: `• Individual letters (confidential)
+• One-on-one discussion between manager and employee
+• Transparency in methodology, not individual salaries
+• Grievance redressal mechanism for disputes`
+      },
+      {
+        number: '9',
+        title: 'REFERENCE DOCUMENTS',
+        content: 'HR By-Laws (Compensation Policy), Salary Bands and Grades, Annexure I.5.1: Increment Recommendation Form, Annexure I.5.2: Revised Salary Letter Template'
+      }
+    ]
   },
 
   sopI6: {
@@ -7945,7 +8308,149 @@ Example:
     title: 'Salary Slip Dissemination & Helpdesk',
     searchTerms: ['salary', 'slip', 'payslip', 'helpdesk', 'queries'],
     category: 'I. Payroll, Compensation & Allowances',
-    content: 'Ensures timely, accurate, and secure dissemination of monthly salary slips and establishes formal salary helpdesk to address queries and discrepancies.'
+    subsections: [
+      {
+        number: '1',
+        title: 'OBJECTIVE',
+        content: 'To ensure timely, accurate, secure, and confidential dissemination of monthly salary slips and establish formal salary helpdesk for addressing queries, resolving discrepancies, and maintaining employee trust in payroll processes.'
+      },
+      {
+        number: '2',
+        title: 'SCOPE',
+        content: 'Covers payslip generation, distribution, employee access, query handling, and dispute resolution for all employees.'
+      },
+      {
+        number: '3',
+        title: 'PAYSLIP GENERATION',
+        content: `• Generated from payroll software post-salary processing
+• Format: PDF (password-protected for security)
+• Password: Typically employee DOB or Employee ID
+• Includes: Earnings, Deductions, Net Pay, YTD totals, Leave balance, Attendance summary
+• Digital signature or authorized signatory stamp`
+      },
+      {
+        number: '4',
+        title: 'PAYSLIP DISSEMINATION',
+        subsections: [
+          {
+            number: '4.1',
+            title: 'Digital Distribution (Primary)',
+            content: `• Upload to HRMS portal by 5th of every month
+• Employees log in with credentials to download
+• Email notification: "Your payslip for [Month] is now available"
+• Mobile app access (if HRMS has app)
+• Retain last 12 months' payslips online`
+          },
+          {
+            number: '4.2',
+            title: 'Email Distribution (Backup)',
+            content: `• Email to official email ID
+• Password-protected attachment
+• Password shared separately (SMS or communicated during onboarding)
+• Secure email (no salary details in subject line)`
+          },
+          {
+            number: '4.3',
+            title: 'Physical Printout (Exception)',
+            content: `• Only if employee specifically requests
+• Printed in sealed envelope (confidential)
+• Handed over against signature
+• For employees without email/system access (e.g., support staff)`
+          }
+        ]
+      },
+      {
+        number: '5',
+        title: 'PAYSLIP CONTENT',
+        content: `Mandatory Components:
+• Employee details: Name, ID, Designation, Department, PAN, Bank Account
+• Earnings: Basic, HRA, Allowances, Overtime, Bonus, Arrears
+• Deductions: PF, ESI, PT, TDS, Loans, Advances, LOP
+• Net Pay: Total Earnings - Total Deductions
+• YTD (Year-To-Date): Cumulative earnings and deductions
+• Attendance: Working days, Present, Leave, LOP
+• Leave Balance: CL, SL, PL remaining
+
+Optional:
+• Employer's PF/ESI contribution (for transparency)
+• Tax computation summary
+• Messages or announcements`
+      },
+      {
+        number: '6',
+        title: 'SALARY HELPDESK',
+        subsections: [
+          {
+            number: '6.1',
+            title: 'Query Channels',
+            content: `• Email: payroll@koyilihospital.com
+• Phone: Dedicated payroll helpdesk number
+• Walk-in: HR Department (specific hours: 10 AM - 4 PM)
+• HRMS ticketing system: Raise salary query ticket`
+          },
+          {
+            number: '6.2',
+            title: 'Common Queries',
+            content: `• Why is my salary less this month? (LOP, excess leaves)
+• TDS deduction clarification
+• Missing overtime or allowance payment
+• Incorrect attendance or leave calculation
+• Loan deduction queries
+• PF/ESI contribution mismatch
+• Arrears or bonus payment
+• Cannot access payslip`
+          },
+          {
+            number: '6.3',
+            title: 'Query Resolution Process',
+            content: `(i) Acknowledge query within 24 hours
+(ii) Payroll team investigates:
+    • Check payroll records
+    • Verify attendance, leave, deductions
+    • Identify error or explain logic
+(iii) Response within 3 working days:
+    • If error: Correction in next month or immediate adjustment
+    • If no error: Explain calculation with breakdown
+(iv) Escalation: Unresolved queries escalated to HR Manager
+(v) Extreme cases: Employee can file formal grievance`
+          }
+        ]
+      },
+      {
+        number: '7',
+        title: 'SALARY DISCREPANCY CORRECTION',
+        content: `If genuine error found:
+• Immediate correction in next payroll cycle
+• If significant amount, ad-hoc payment processed
+• Apology and explanation provided
+• Root cause identified to prevent recurrence
+• If systemic error affecting multiple employees, mass correction done`
+      },
+      {
+        number: '8',
+        title: 'CONFIDENTIALITY',
+        content: `• Salary information strictly confidential
+• Payroll team has signed confidentiality agreements
+• No discussion of individual salaries in open forums
+• Payslips not shared with unauthorized persons
+• Breach of confidentiality: Serious misconduct`
+      },
+      {
+        number: '9',
+        title: 'HELPDESK METRICS',
+        content: `Tracked monthly:
+• Number of queries received
+• Average resolution time
+• Repeat queries (indicating systemic issue)
+• Employee satisfaction with helpdesk
+• Continuous improvement based on feedback`
+      },
+      {
+        number: '10',
+        title: 'REFERENCE DOCUMENTS',
+        content: 'Payroll Policy, IT Security Policy, Annexure I.6.1: Salary Query Form'
+      }
+    ]
   },
 
   // SECTION J: TRAINING, CERTIFICATION & DEVELOPMENT
