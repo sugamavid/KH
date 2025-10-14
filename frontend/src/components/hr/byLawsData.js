@@ -432,6 +432,431 @@ These By-Laws are applicable to all individuals engaged in any capacity with Koy
     • The hospital shall periodically review and update its DEI policies and initiatives to align with changes in law, societal expectations, and employee needs.`
       }
     ]
+  },
+
+  section6: {
+    section: 'Section 6',
+    title: 'Patient Interaction and Care Standards',
+    searchTerms: ['patient', 'interaction', 'care', 'standards', 'quality'],
+    icon: 'Activity',
+    color: 'pink',
+    subsections: [
+      {
+        number: '6.1',
+        title: 'Patient-Centered Care',
+        content: `(a) **Respect for Patient Dignity:**
+    • All employees must treat patients with respect, compassion, and dignity, recognizing their right to privacy and autonomy in healthcare decisions.
+    • Employees shall maintain professional boundaries and avoid any conduct that could undermine patient trust or compromise care quality.
+
+(b) **Communication with Patients:**
+    • Clear, honest, and empathetic communication with patients and their families is essential. Employees must explain procedures, treatment options, and care plans in a manner that patients can understand.
+    • Language barriers shall be addressed through the use of interpreters or translation services where necessary.
+
+(c) **Informed Consent:**
+    • Employees must ensure that patients provide informed consent before any procedure or treatment, explaining risks, benefits, and alternatives in an accessible manner.
+    • Consent must be documented appropriately and in accordance with hospital policies and legal requirements.`
+      },
+      {
+        number: '6.2',
+        title: 'Quality of Care',
+        content: `(a) **Clinical Excellence:**
+    • Employees in clinical roles must adhere to evidence-based practices and clinical protocols to deliver high-quality care.
+    • Continuous professional development and staying updated with medical advancements are essential for maintaining clinical excellence.
+
+(b) **Patient Safety:**
+    • Patient safety is a top priority. Employees must follow safety protocols, including hand hygiene, equipment sterilization, medication administration guidelines, and infection control measures.
+    • Any safety concerns, near-misses, or adverse events must be reported immediately to supervisors and documented according to hospital procedures.
+
+(c) **Care Coordination:**
+    • Employees must collaborate effectively with multidisciplinary teams to ensure coordinated and comprehensive patient care.
+    • Communication between departments and care providers is essential to prevent errors and ensure seamless transitions in care.`
+      },
+      {
+        number: '6.3',
+        title: 'Patient Confidentiality and Privacy',
+        content: `(a) **Confidentiality Obligations:**
+    • All patient information, including medical records, treatment details, and personal data, must be kept strictly confidential.
+    • Disclosure of patient information is only permissible with patient consent or as required by law.
+
+(b) **Data Protection:**
+    • Employees must comply with data protection laws and hospital policies regarding the handling, storage, and transmission of patient data.
+    • Electronic health records and physical files must be secured, and access should be limited to authorized personnel only.
+
+(c) **Breach of Confidentiality:**
+    • Any breach of patient confidentiality, whether intentional or accidental, must be reported immediately to the appropriate authorities.
+    • Breaches may result in disciplinary action, including termination, and potential legal consequences.`
+      },
+      {
+        number: '6.4',
+        title: 'Cultural Sensitivity in Patient Care',
+        content: `(a) **Respect for Diversity:**
+    • Employees must be sensitive to the cultural, religious, and linguistic diversity of patients, adapting care approaches as needed to respect individual preferences and beliefs.
+    • Cultural competence training shall be provided to enhance employees' ability to deliver culturally appropriate care.
+
+(b) **Accommodation of Cultural Practices:**
+    • Where feasible, the hospital shall accommodate patients' cultural and religious practices, such as dietary requirements, prayer times, and modesty preferences.
+    • Employees should proactively inquire about and respect such needs to foster a supportive care environment.`
+      },
+      {
+        number: '6.5',
+        title: 'Patient Feedback and Complaints',
+        content: `(a) **Encouraging Feedback:**
+    • Patients and their families are encouraged to provide feedback on their care experience through surveys, suggestion boxes, or direct communication with staff.
+    • Feedback shall be used constructively to improve services and address any concerns.
+
+(b) **Handling Complaints:**
+    • All patient complaints must be taken seriously and addressed promptly with empathy and professionalism.
+    • Employees receiving complaints should escalate them to supervisors or the patient relations department as appropriate, ensuring thorough investigation and resolution.
+
+(c) **Non-Retaliation:**
+    • Patients who provide feedback or file complaints shall not face any form of retaliation or negative treatment.
+    • The hospital is committed to maintaining a transparent and responsive approach to patient concerns.`
+      },
+      {
+        number: '6.6',
+        title: 'End-of-Life Care and Palliative Support',
+        content: `(a) **Dignity in End-of-Life Care:**
+    • Employees involved in end-of-life care must provide compassionate support that honors the dignity and wishes of patients and their families.
+    • Palliative care services shall be offered to manage pain and improve the quality of life for patients with serious illnesses.
+
+(b) **Advance Directives:**
+    • The hospital shall respect advance directives, such as living wills or do-not-resuscitate (DNR) orders, as documented by patients.
+    • Employees must be familiar with and adhere to these directives in accordance with legal and ethical standards.
+
+(c) **Support for Families:**
+    • Families of patients receiving end-of-life care shall be provided with emotional support, counseling, and resources to help them through difficult times.
+    • The hospital shall facilitate bereavement support services for families after the loss of a loved one.`
+      }
+    ]
+  },
+
+  section7: {
+    section: 'Section 7',
+    title: 'Attendance and Leave Policy',
+    searchTerms: ['attendance', 'leave', 'vacation', 'sick', 'absence'],
+    icon: 'Calendar',
+    color: 'cyan',
+    subsections: [
+      {
+        number: '7.1',
+        title: 'Working Hours and Attendance',
+        content: `(a) **Standard Working Hours:**
+    • The standard working hours for administrative staff shall be eight (8) hours per day and forty-eight (48) hours per week, typically from 9:00 AM to 6:00 PM with a one-hour lunch break.
+    • Clinical staff may have shift-based schedules depending on departmental needs and patient care requirements.
+
+(b) **Attendance Requirements:**
+    • Employees are expected to maintain regular and punctual attendance as per their designated work schedule.
+    • Attendance shall be recorded through the hospital's time-tracking system, and employees must clock in and out as required.
+
+(c) **Late Arrival and Early Departure:**
+    • Employees who arrive late or depart early must inform their supervisor and seek approval in advance, where possible.
+    • Frequent tardiness or unauthorized absences may result in disciplinary action.`
+      },
+      {
+        number: '7.2',
+        title: 'Types of Leave',
+        content: `(a) **Privilege Leave (Earned Leave):**
+    • Employees are entitled to eighteen (18) days of privilege leave per year, which can be accrued and carried forward as per hospital policy.
+    • Privilege leave may be used for personal reasons, vacations, or any planned absence.
+
+(b) **Casual Leave:**
+    • Employees are entitled to twelve (12) days of casual leave per year for unplanned or short-term absences.
+    • Casual leave cannot be carried forward and must be utilized within the calendar year.
+
+(c) **Sick Leave:**
+    • Employees are entitled to twelve (12) days of sick leave per year for illness or medical appointments.
+    • Medical certificates may be required for sick leave exceeding three (3) consecutive days.
+
+(d) **Maternity Leave:**
+    • Female employees are entitled to twenty-six (26) weeks of paid maternity leave as per the Maternity Benefit Act, 1961.
+    • Employees must notify HR of their pregnancy and expected delivery date at least eight (8) weeks in advance.
+
+(e) **Paternity Leave:**
+    • Male employees are entitled to five (5) days of paid paternity leave to support their partner during childbirth and the postnatal period.
+    • Paternity leave should be taken within one month of the child's birth.`
+      },
+      {
+        number: '7.3',
+        title: 'Leave Application Process',
+        content: `(a) **Advance Notice:**
+    • Employees must apply for leave in advance through the hospital's leave management system or by submitting a written request to their supervisor.
+    • Privilege leave should be applied for at least one week in advance, while casual and sick leave may be requested with shorter notice.
+
+(b) **Approval Process:**
+    • Leave requests shall be reviewed and approved by the employee's immediate supervisor and HR, considering operational needs and staffing requirements.
+    • Employees will be notified of the approval or denial of their leave request in a timely manner.
+
+(c) **Emergency Leave:**
+    • In cases of emergency or unforeseen circumstances, employees should inform their supervisor as soon as possible and follow up with formal leave documentation.
+    • Emergency leave may be granted at the discretion of the supervisor and HR.`
+      },
+      {
+        number: '7.4',
+        title: 'Leave Without Pay',
+        content: `(a) **Eligibility:**
+    • Employees who have exhausted their paid leave entitlements may request leave without pay (LWP) for personal reasons, subject to approval by HR and their supervisor.
+    • LWP is typically granted for a maximum of thirty (30) days per year, depending on operational feasibility.
+
+(b) **Impact on Benefits:**
+    • Leave without pay may affect certain benefits, such as provident fund contributions and eligibility for bonuses, as per hospital policy.
+    • Employees should consult with HR to understand the implications of taking LWP.`
+      },
+      {
+        number: '7.5',
+        title: 'Special Leave Provisions',
+        content: `(a) **Bereavement Leave:**
+    • Employees are entitled to up to five (5) days of paid bereavement leave in the event of the death of an immediate family member (spouse, parent, child, sibling).
+    • Additional leave may be granted on a case-by-case basis.
+
+(b) **Study Leave:**
+    • Employees pursuing further education or professional certifications relevant to their role may request study leave, subject to approval by HR and management.
+    • Study leave may be granted with or without pay, depending on the circumstances and the hospital's policies.
+
+(c) **Sabbatical Leave:**
+    • Long-serving employees may request sabbatical leave for personal development, rest, or travel after completing a minimum of five (5) years of service.
+    • Sabbatical leave is unpaid and subject to approval based on operational needs and the employee's performance history.`
+      }
+    ]
+  },
+
+  section8: {
+    section: 'Section 8',
+    title: 'Performance Management',
+    searchTerms: ['performance', 'appraisal', 'evaluation', 'feedback', 'review'],
+    icon: 'TrendingUp',
+    color: 'orange',
+    subsections: [
+      {
+        number: '8.1',
+        title: 'Performance Appraisal System',
+        content: `(a) **Objective:**
+    • The performance appraisal system is designed to assess employee performance, provide constructive feedback, recognize achievements, and identify areas for improvement.
+    • Appraisals support career development, inform compensation decisions, and align individual performance with organizational goals.
+
+(b) **Appraisal Frequency:**
+    • Formal performance appraisals shall be conducted annually, with mid-year reviews to provide interim feedback and adjust goals as needed.
+    • Probationary employees shall receive performance reviews at three (3) months and prior to confirmation.
+
+(c) **Appraisal Process:**
+    • The appraisal process involves self-assessment, supervisor evaluation, and a performance discussion meeting.
+    • Employees and supervisors shall collaboratively set performance goals, review achievements, and develop action plans for improvement.`
+      },
+      {
+        number: '8.2',
+        title: 'Performance Criteria',
+        content: `(a) **Key Performance Indicators (KPIs):**
+    • Performance shall be evaluated based on KPIs relevant to the employee's role, including quality of work, productivity, adherence to protocols, teamwork, and patient satisfaction (for clinical staff).
+    • KPIs shall be clearly communicated at the beginning of the performance cycle.
+
+(b) **Competency Assessment:**
+    • In addition to KPIs, employees shall be assessed on core competencies such as communication, problem-solving, leadership (for supervisory roles), and adherence to hospital values.
+    • Competency assessments help identify training needs and development opportunities.
+
+(c) **360-Degree Feedback:**
+    • Where applicable, the hospital may use 360-degree feedback, gathering input from peers, subordinates, and supervisors to provide a comprehensive view of an employee's performance.
+    • Feedback shall be used constructively to support professional growth.`
+      },
+      {
+        number: '8.3',
+        title: 'Performance Improvement Plans (PIP)',
+        content: `(a) **Purpose:**
+    • A Performance Improvement Plan (PIP) is a structured approach to help employees who are not meeting performance expectations improve their work quality and productivity.
+    • PIPs are designed to be supportive and provide clear guidance on areas needing improvement.
+
+(b) **Implementation:**
+    • Employees placed on a PIP shall be informed of specific performance deficiencies, measurable goals for improvement, timelines, and support resources available.
+    • Regular check-ins with supervisors shall be conducted to monitor progress and provide ongoing feedback.
+
+(c) **Outcomes:**
+    • Successful completion of a PIP shall result in the employee being removed from the plan and returning to regular performance management processes.
+    • Failure to meet PIP objectives may result in further disciplinary action, including reassignment or termination, as outlined in Section 14: Disciplinary Actions and Compliance.`
+      },
+      {
+        number: '8.4',
+        title: 'Recognition and Rewards',
+        content: `(a) **Recognition Programs:**
+    • The hospital shall implement recognition programs to acknowledge and reward outstanding performance, including employee of the month/year awards, service excellence awards, and team achievement recognitions.
+    • Recognition fosters motivation, reinforces positive behaviours, and contributes to a culture of excellence.
+
+(b) **Performance-Based Rewards:**
+    • High-performing employees may be eligible for performance-based rewards such as bonuses, salary increments, promotions, or additional professional development opportunities.
+    • Reward criteria shall be transparent and communicated to all employees.
+
+(c) **Celebrating Achievements:**
+    • Achievements and contributions shall be celebrated through public acknowledgment in team meetings, newsletters, or hospital-wide communications.
+    • Celebrating successes reinforces the hospital's commitment to recognizing hard work and dedication.`
+      }
+    ]
+  },
+
+  section9: {
+    section: 'Section 9',
+    title: 'Training and Development',
+    searchTerms: ['training', 'development', 'learning', 'skills', 'education'],
+    icon: 'BookOpen',
+    color: 'teal',
+    subsections: [
+      {
+        number: '9.1',
+        title: 'Orientation and Onboarding',
+        content: `(a) **New Employee Orientation:**
+    • All new employees shall undergo a comprehensive orientation program covering hospital policies, procedures, safety protocols, and their specific role responsibilities.
+    • Orientation shall include introductions to key personnel, facility tours, and training on hospital systems and technology.
+
+(b) **Role-Specific Onboarding:**
+    • In addition to general orientation, employees shall receive role-specific onboarding and training to ensure they are equipped to perform their duties effectively.
+    • Clinical staff shall receive training on patient care protocols, equipment usage, and clinical documentation.
+
+(c) **Onboarding Duration:**
+    • The onboarding process typically lasts between one (1) to two (2) weeks, depending on the complexity of the role.
+    • Employees shall be assigned a mentor or buddy to provide guidance and support during the initial period.`
+      },
+      {
+        number: '9.2',
+        title: 'Continuous Professional Development',
+        content: `(a) **Training Programs:**
+    • The hospital shall offer regular training programs on topics such as clinical updates, soft skills, leadership development, technology tools, and regulatory compliance.
+    • Participation in mandatory training programs is required for all employees to maintain competency and compliance.
+
+(b) **Continuing Medical Education (CME):**
+    • Clinical staff are encouraged to participate in continuing medical education (CME) programs, workshops, and conferences to stay updated with advancements in their field.
+    • The hospital may provide financial support or time off for employees attending approved CME activities.
+
+(c) **Skill Enhancement Initiatives:**
+    • Employees are encouraged to pursue skill enhancement initiatives such as certifications, specialized training, or advanced degrees relevant to their roles.
+    • The hospital shall support these initiatives through tuition reimbursement programs or flexible scheduling where feasible.`
+      },
+      {
+        number: '9.3',
+        title: 'Leadership and Management Development',
+        content: `(a) **Leadership Training:**
+    • The hospital shall provide leadership training programs for employees in supervisory or managerial roles to develop skills in team management, decision-making, conflict resolution, and strategic thinking.
+    • Leadership development is essential for building a strong pipeline of future leaders within the organization.
+
+(b) **Mentorship Programs:**
+    • Mentorship programs shall be established to pair experienced leaders with emerging talent, providing guidance, support, and career advice.
+    • Mentorship fosters knowledge transfer and helps develop the next generation of hospital leaders.
+
+(c) **Succession Planning:**
+    • The hospital shall engage in succession planning to identify and prepare employees for key leadership positions.
+    • Succession planning ensures continuity and stability in hospital operations.`
+      },
+      {
+        number: '9.4',
+        title: 'Mandatory Training and Compliance',
+        content: `(a) **Regulatory Compliance Training:**
+    • All employees must complete mandatory training on topics such as infection control, patient safety, data protection, fire safety, and emergency response procedures.
+    • Compliance training shall be conducted during onboarding and refreshed annually.
+
+(b) **Tracking and Documentation:**
+    • The HR department shall track training completion and maintain records to ensure all employees meet mandatory training requirements.
+    • Non-compliance with training requirements may result in restricted duties or other corrective actions until training is completed.
+
+(c) **Updates and Refreshers:**
+    • Training materials and programs shall be updated regularly to reflect changes in regulations, best practices, and hospital policies.
+    • Employees shall be notified of any new or updated training requirements in a timely manner.`
+      },
+      {
+        number: '9.5',
+        title: 'Evaluation of Training Effectiveness',
+        content: `(a) **Training Assessments:**
+    • The effectiveness of training programs shall be evaluated through assessments, surveys, and feedback from participants.
+    • Assessments help identify areas for improvement and ensure that training objectives are being met.
+
+(b) **Continuous Improvement:**
+    • Based on evaluation results, training programs shall be refined and updated to enhance quality and relevance.
+    • The hospital is committed to continuous improvement in its training and development initiatives.
+
+(c) **Employee Feedback:**
+    • Employees are encouraged to provide feedback on training programs, suggesting topics or formats that would be beneficial for their professional growth.
+    • Feedback shall be reviewed by the HR department and incorporated into future training planning.`
+      }
+    ]
+  },
+
+  section10: {
+    section: 'Section 10',
+    title: 'Remote Work and Flexible Scheduling',
+    searchTerms: ['remote', 'work', 'flexible', 'schedule', 'telecommute'],
+    icon: 'Home',
+    color: 'lime',
+    subsections: [
+      {
+        number: '10.1',
+        title: 'Eligibility for Remote Work',
+        content: `(a) **Eligible Roles:**
+    • Remote work arrangements may be available for roles that do not require physical presence at the hospital, such as certain administrative, IT, and support functions.
+    • Clinical roles and positions requiring direct patient interaction are generally not eligible for remote work.
+
+(b) **Application Process:**
+    • Employees interested in remote work must submit a formal request to their supervisor and HR, outlining the proposed arrangement and how work responsibilities will be fulfilled remotely.
+    • Approval shall be based on the nature of the role, operational needs, employee performance, and feasibility of remote work.
+
+(c) **Trial Period:**
+    • Remote work arrangements may be granted on a trial basis to assess effectiveness and suitability.
+    • The trial period typically lasts three (3) months, after which the arrangement shall be reviewed and either confirmed, adjusted, or discontinued.`
+      },
+      {
+        number: '10.2',
+        title: 'Remote Work Guidelines',
+        content: `(a) **Work Hours and Availability:**
+    • Employees working remotely are expected to maintain regular working hours and be available for meetings, calls, and communication during designated times.
+    • Flexibility in scheduling may be permitted with supervisor approval, provided work responsibilities are met.
+
+(b) **Communication and Collaboration:**
+    • Remote employees must stay connected with their teams through email, video conferencing, and collaboration tools.
+    • Regular check-ins with supervisors shall be scheduled to ensure alignment and address any challenges.
+
+(c) **Productivity and Accountability:**
+    • Remote employees are accountable for meeting performance expectations and delivering work outputs on time.
+    • Performance shall be evaluated based on results and contributions rather than physical presence.`
+      },
+      {
+        number: '10.3',
+        title: 'Technology and Equipment',
+        content: `(a) **Provision of Equipment:**
+    • The hospital may provide necessary equipment, such as laptops, phones, and software licenses, to employees working remotely.
+    • Employees are responsible for the proper use and maintenance of hospital-issued equipment.
+
+(b) **Technical Support:**
+    • The IT department shall provide technical support to remote employees to ensure they have access to hospital systems and can resolve any technology-related issues promptly.
+    • Remote employees should report technical problems immediately to minimize disruptions.
+
+(c) **Data Security:**
+    • Remote employees must adhere to data security protocols, including the use of secure networks, VPNs, and password protection.
+    • Confidential and patient information must be handled with the same level of security as if working on-site.`
+      },
+      {
+        number: '10.4',
+        title: 'Flexible Scheduling Arrangements',
+        content: `(a) **Types of Flexible Schedules:**
+    • Flexible scheduling options may include compressed workweeks, staggered shifts, part-time schedules, or job-sharing arrangements.
+    • These arrangements aim to support employees in balancing work and personal responsibilities while meeting organizational needs.
+
+(b) **Request and Approval:**
+    • Employees seeking flexible scheduling must submit a request outlining the proposed arrangement and its impact on their work.
+    • Approval shall be based on operational feasibility, the nature of the role, and the employee's performance history.
+
+(c) **Review and Adjustment:**
+    • Flexible scheduling arrangements shall be reviewed periodically to ensure they continue to meet both employee and hospital needs.
+    • Adjustments may be made as necessary to address any challenges or changes in circumstances.`
+      },
+      {
+        number: '10.5',
+        title: 'Monitoring and Evaluation',
+        content: `(a) **Performance Monitoring:**
+    • The performance of remote and flexibly scheduled employees shall be monitored through regular check-ins, goal tracking, and output assessments.
+    • Supervisors shall ensure that remote work or flexible scheduling does not negatively impact productivity or team collaboration.
+
+(b) **Feedback and Improvement:**
+    • Employees and supervisors are encouraged to provide feedback on remote work and flexible scheduling arrangements to identify best practices and areas for improvement.
+    • The hospital shall continuously refine its policies to support effective remote work and flexibility.
+
+(c) **Discontinuation of Arrangements:**
+    • Remote work or flexible scheduling arrangements may be discontinued if they are found to be detrimental to performance, team dynamics, or operational efficiency.
+    • Employees shall be given advance notice and an opportunity to address any concerns before arrangements are terminated.`
+      }
+    ]
   }
 };
 
