@@ -662,22 +662,63 @@ const HRByLaws = ({ setActiveModule }) => {
                   </div>
                   {items.map((nav) => {
                     const IconComponent = nav.icon;
+                    const sectionData = byLawsData[nav.id];
+                    const hasSubsections = sectionData && sectionData.subsections && sectionData.subsections.length > 0;
+                    const isExpanded = expandedSections[nav.id];
+                    
                     return (
-                      <button
-                        key={nav.id}
-                        onClick={() => jumpToSection(nav.id)}
-                        className={`w-full flex items-center space-x-3 px-3 py-2.5 rounded-lg text-left transition-all ${
-                          activeSection === nav.id
-                            ? 'bg-blue-600 text-white shadow-md'
-                            : 'text-slate-700 hover:bg-slate-100'
-                        }`}
-                      >
-                        <IconComponent className="w-4 h-4 flex-shrink-0" />
-                        <span className="text-sm font-medium truncate">{nav.title.replace('Section ', 'Sec ')}</span>
-                        {activeSection === nav.id && (
-                          <ChevronRight className="w-4 h-4 ml-auto" />
+                      <div key={nav.id}>
+                        <button
+                          onClick={() => {
+                            jumpToSection(nav.id);
+                            if (hasSubsections) {
+                              setExpandedSections(prev => ({
+                                ...prev,
+                                [nav.id]: !prev[nav.id]
+                              }));
+                            }
+                          }}
+                          className={`w-full flex items-center space-x-3 px-3 py-2.5 rounded-lg text-left transition-all ${
+                            activeSection === nav.id
+                              ? 'bg-blue-600 text-white shadow-md'
+                              : 'text-slate-700 hover:bg-slate-100'
+                          }`}
+                        >
+                          <IconComponent className="w-4 h-4 flex-shrink-0" />
+                          <span className="text-sm font-medium truncate flex-1">{nav.title.replace('Section ', 'Sec ')}</span>
+                          {hasSubsections && (
+                            <ChevronDown 
+                              className={`w-4 h-4 transition-transform ${isExpanded ? 'transform rotate-180' : ''}`}
+                            />
+                          )}
+                          {activeSection === nav.id && !hasSubsections && (
+                            <ChevronRight className="w-4 h-4" />
+                          )}
+                        </button>
+                        
+                        {/* Subsections */}
+                        {hasSubsections && isExpanded && activeSection === nav.id && (
+                          <div className="ml-8 mt-1 space-y-1">
+                            {sectionData.subsections.slice(0, 10).map((subsection, idx) => (
+                              <div 
+                                key={idx}
+                                className="px-3 py-1.5 text-xs text-slate-600 hover:text-blue-600 hover:bg-blue-50 rounded transition-colors cursor-pointer"
+                                title={subsection.title}
+                              >
+                                {subsection.number && `${subsection.number}. `}
+                                {subsection.title && subsection.title.length > 30 
+                                  ? subsection.title.substring(0, 30) + '...' 
+                                  : subsection.title}
+                              </div>
+                            ))}
+                            {sectionData.subsections.length > 10 && (
+                              <div className="px-3 py-1 text-xs text-slate-400 italic">
+                                +{sectionData.subsections.length - 10} more...
+                              </div>
+                            )}
+                          </div>
                         )}
-                      </button>
+                      </div>
                     );
                   })}
                 </div>
