@@ -757,11 +757,128 @@ export const annexuresData = {
     searchTerms: ['payroll', 'salary', 'benefits', 'compensation'],
     category: 'Compensation',
     forms: [
-      { name: 'Salary Advance Request', code: 'PAY-001', description: 'Request salary advance' },
-      { name: 'Reimbursement Claim Form', code: 'PAY-002', description: 'Medical/travel reimbursement' },
-      { name: 'Bonus Calculation Template', code: 'PAY-003', description: 'Performance bonus calculation' },
-      { name: 'PF Withdrawal Form', code: 'PAY-004', description: 'Provident Fund withdrawal' },
-      { name: 'Tax Declaration Form', code: 'PAY-005', description: 'Annual tax declaration' }
+      { 
+        name: 'Salary Advance Request', 
+        code: 'PAY-001', 
+        description: 'Request for salary advance in case of emergency',
+        sections: [
+          {
+            title: 'Employee Details',
+            fields: ['Employee Name', 'Employee ID', 'Department', 'Designation', 'Date of Joining', 'Current Monthly Salary (Gross)', 'Bank Account Number']
+          },
+          {
+            title: 'Advance Request Details',
+            fields: ['Advance Amount Requested: ₹ _____', 'Number of Installments for Repayment: ___ (Maximum 6 months)', 'Proposed Monthly Deduction: ₹ _____', 'Reason for Advance Request: (Medical Emergency / Family Function / Education / Home Repair / Debt Settlement / Other)', 'Detailed Justification:']
+          },
+          {
+            title: 'Emergency Justification',
+            fields: ['Brief description of emergency/need:', 'Supporting documents attached (if medical: bills, prescriptions):', 'Have you taken advance in last 12 months? Yes / No', 'If yes, previous advance amount and status:', 'Current outstanding loan/advance (if any): ₹ _____']
+          },
+          {
+            title: 'Repayment Plan',
+            fields: ['Repayment Start Month:', 'Monthly Installment: ₹ _____ for ___ months', 'Final repayment month:', 'I authorize the Hospital to deduct the above installment from my monthly salary.']
+          },
+          {
+            title: 'Terms and Conditions',
+            fields: ['1. Maximum advance: 50% of monthly gross salary or ₹25,000 (whichever is lower)', '2. Repayment will be through salary deduction over maximum 6 months', '3. If employment terminates before full repayment, balance will be deducted from final settlement', '4. Advance is interest-free but subject to approval and fund availability', '5. Only one advance allowed at a time', '', 'I accept the above terms and conditions.']
+          },
+          {
+            title: 'Approvals',
+            fields: ['Employee Signature: ________ Date: ____', 'Immediate Supervisor Recommendation: Approved / Not Approved', 'Supervisor Comments:', 'Signature: ________', '', 'HR Verification (eligibility and outstanding checks):', 'HR Signature: ________ Date: ____', '', 'Finance Approval (fund availability):', 'Finance Signature: ________ Date: ____']
+          }
+        ],
+        instructions: 'Submit at least 10 days before salary processing. Advance subject to eligibility criteria and fund availability. Supporting documents required for emergency requests.',
+        approvalRequired: 'Supervisor, HR, Finance',
+        processingTime: '5-7 business days'
+      },
+      { 
+        name: 'Reimbursement Claim Form', 
+        code: 'PAY-002', 
+        description: 'Claim reimbursement for medical, travel, and other approved expenses',
+        sections: [
+          {
+            title: 'Employee Information',
+            fields: ['Employee Name', 'Employee ID', 'Department', 'Designation', 'Claim Month/Period', 'Contact Number']
+          },
+          {
+            title: 'Reimbursement Type',
+            fields: ['Select Reimbursement Type:', '☐ Medical Reimbursement (self/family)', '☐ Travel/Conveyance (official duty)', '☐ Telephone/Internet (if eligible)', '☐ Professional Development (books, journals)', '☐ Relocation Expenses (if applicable)', '☐ Other (specify): _______']
+          },
+          {
+            title: 'Medical Reimbursement Details',
+            fields: ['(Complete only if claiming medical reimbursement)', 'Patient Name:', 'Relationship with Employee: (Self / Spouse / Child / Parent)', 'Nature of Illness/Treatment:', 'Hospital/Clinic Name:', 'Treatment Date(s):', 'Total Bill Amount: ₹ _____', 'Amount Claimed: ₹ _____', 'Documents Attached:', '  ☐ Original bills/invoices', '  ☐ Prescriptions', '  ☐ Diagnostic reports', '  ☐ Discharge summary (if hospitalization)']
+          },
+          {
+            title: 'Travel Reimbursement Details',
+            fields: ['(Complete only if claiming travel reimbursement)', 'Purpose of Travel: (Client Visit / Official Meeting / Training / Site Visit)', 'Travel Date(s): From ____ To ____', 'Origin: ________ Destination: ________', 'Mode of Transport: (Train / Bus / Taxi / Own Vehicle / Air)', 'Distance (if own vehicle): ____ km', 'Rate per km: ₹ ____ (as per policy)', 'Amount Claimed: ₹ _____', 'Documents Attached:', '  ☐ Tickets/boarding pass', '  ☐ Fuel bills (if own vehicle)', '  ☐ Taxi/cab receipts', '  ☐ Toll receipts']
+          },
+          {
+            title: 'Other Expense Details',
+            fields: ['Description of Expense:', 'Date of Expense:', 'Vendor/Service Provider:', 'Amount Claimed: ₹ _____', 'Justification for claim:', 'Approval obtained prior to expense? Yes / No', 'Documents Attached: (List all)']
+          },
+          {
+            title: 'Summary of Claims',
+            fields: ['Total Amount Claimed: ₹ _____', 'Previous reimbursements this year: ₹ _____', 'Annual limit as per policy: ₹ _____', 'Balance available: ₹ _____', 'Bank Account for credit: Account No. __________', 'IFSC Code: __________']
+          },
+          {
+            title: 'Employee Declaration',
+            fields: ['I declare that:', '1. All expenses claimed are genuine and incurred for purposes stated', '2. Original bills/receipts are attached', '3. These expenses have not been claimed from any other source', '4. Information provided is true and complete', '', 'Employee Signature: ________ Date: ____']
+          },
+          {
+            title: 'Approvals',
+            fields: ['Immediate Supervisor Verification:', 'Supervisor Signature: ________ Date: ____', '', 'HR Review (policy compliance and limit check):', 'HR Signature: ________ Date: ____', '', 'Finance Processing (payment):', 'Finance Signature: ________ Date: ____']
+          }
+        ],
+        instructions: 'Submit within 30 days of expense. Attach all original bills/receipts. Medical reimbursement subject to annual limits. Travel reimbursement only for official duty with prior approval.',
+        approvalRequired: 'Supervisor, HR, Finance',
+        processingTime: '10-15 business days'
+      },
+      { 
+        name: 'Tax Declaration Form', 
+        code: 'PAY-005', 
+        description: 'Annual tax declaration for income tax planning (Form 12BB)',
+        sections: [
+          {
+            title: 'Employee Details',
+            fields: ['Employee Name', 'Employee ID', 'PAN Number', 'Department', 'Financial Year: ____-____', 'Submission Date']
+          },
+          {
+            title: 'Section 80C Deductions (Max ₹1,50,000)',
+            fields: ['1. Life Insurance Premium: ₹ _____', '2. Public Provident Fund (PPF): ₹ _____', '3. Employee Provident Fund (EPF): ₹ _____ (auto-calculated)', '4. Equity Linked Savings Scheme (ELSS): ₹ _____', '5. National Savings Certificate (NSC): ₹ _____', '6. Fixed Deposits (5-year tax-saving): ₹ _____', '7. Principal repayment on Home Loan: ₹ _____', '8. Tuition Fees (2 children max): ₹ _____', '9. Sukanya Samriddhi Yojana: ₹ _____', '10. National Pension Scheme (NPS) Tier 1: ₹ _____', '', 'Total Section 80C: ₹ _____ (Max ₹1,50,000)']
+          },
+          {
+            title: 'Section 80D - Health Insurance',
+            fields: ['Medical Insurance Premium (Self, Spouse, Children): ₹ _____ (Max ₹25,000)', 'Medical Insurance Premium (Parents < 60 years): ₹ _____ (Max ₹25,000)', 'Medical Insurance Premium (Parents ≥ 60 years): ₹ _____ (Max ₹50,000)', 'Preventive Health Checkup: ₹ _____ (Max ₹5,000)', '', 'Total Section 80D: ₹ _____']
+          },
+          {
+            title: 'Other Deductions',
+            fields: ['Section 80E - Education Loan Interest: ₹ _____', 'Section 80G - Donations (with 100% exemption): ₹ _____', 'Section 80G - Donations (with 50% exemption): ₹ _____', 'Section 24(b) - Home Loan Interest: ₹ _____ (Max ₹2,00,000)', 'Section 80TTA - Interest on Savings Account: ₹ _____ (Max ₹10,000)', 'Section 80CCD(1B) - Additional NPS: ₹ _____ (Max ₹50,000)']
+          },
+          {
+            title: 'House Rent Allowance (HRA) Exemption',
+            fields: ['Do you live in rented accommodation? Yes / No', 'Annual Rent Paid: ₹ _____', 'Landlord Name:', 'Landlord PAN (if annual rent > ₹1,00,000):', 'City Type: Metro / Non-Metro', 'HRA Received (from salary): ₹ _____ (auto-calculated)', '', 'Rent receipts attached for months: Jan to Dec']
+          },
+          {
+            title: 'Previous Employment Details',
+            fields: ['(If joined mid-year)', 'Previous Employer Name:', 'Employment Period: From ____ To ____', 'Salary Earned: ₹ _____', 'TDS Deducted: ₹ _____', 'Professional Tax Paid: ₹ _____', '', 'Form 16 from previous employer attached: Yes / No']
+          },
+          {
+            title: 'Document Submission Checklist',
+            fields: ['☐ LIC Premium receipts', '☐ PPF passbook copy/statement', '☐ ELSS investment proof', '☐ Home loan interest certificate', '☐ Tuition fee receipts', '☐ Medical insurance premium receipts', '☐ Rent receipts (all 12 months)', '☐ Donation receipts (80G)', '☐ Education loan interest certificate', '☐ NPS contribution receipts', '☐ Previous employer Form 16 (if applicable)']
+          },
+          {
+            title: 'Employee Declaration',
+            fields: ['I declare that:', '1. Information provided is true and correct', '2. I will submit supporting documents by specified deadline', '3. If documents not submitted, I authorize deduction of applicable TDS', '4. I am responsible for accuracy of declarations', '', 'Employee Signature: ________ Date: ____']
+          },
+          {
+            title: 'HR Processing',
+            fields: ['Declaration received on: ________', 'Documents verified: Yes / No / Partial', 'TDS computation updated: Yes / No', 'Comments:', '', 'HR Signature: ________ Date: ____']
+          }
+        ],
+        instructions: 'Submit by December 31st of financial year for timely tax planning. Supporting documents must be submitted by February 28th. Non-submission will result in higher TDS deduction.',
+        approvalRequired: 'HR Verification',
+        processingTime: 'Process by next payroll'
+      }
     ]
   },
   annex6: {
@@ -771,10 +888,82 @@ export const annexuresData = {
     searchTerms: ['training', 'development', 'education'],
     category: 'Learning',
     forms: [
-      { name: 'Training Nomination Form', code: 'TRN-001', description: 'Nominate for training' },
-      { name: 'Training Feedback Form', code: 'TRN-002', description: 'Post-training evaluation' },
-      { name: 'Educational Assistance Request', code: 'TRN-003', description: 'Request for education support' },
-      { name: 'Training Attendance Sheet', code: 'TRN-004', description: 'Training session attendance' }
+      { 
+        name: 'Training Nomination Form', 
+        code: 'TRN-001', 
+        description: 'Nominate employee for training program',
+        sections: [
+          {
+            title: 'Employee Details',
+            fields: ['Employee Name', 'Employee ID', 'Department', 'Designation', 'Reporting Manager', 'Years in Current Role']
+          },
+          {
+            title: 'Training Program Details',
+            fields: ['Training Program Name:', 'Training Provider/Institute:', 'Training Type: (Internal / External / Online / Certification)', 'Training Duration: From ____ To ____', 'Total Days/Hours:', 'Training Location:', 'Training Mode: (Classroom / Virtual / Blended / Self-paced)']
+          },
+          {
+            title: 'Justification for Training',
+            fields: ['Skill Gap Identified:', 'How will this training benefit employee performance?', 'How will this training benefit department/hospital?', 'Is this training mandatory for role? Yes / No', 'Is this training part of Individual Development Plan (IDP)? Yes / No', 'Priority: High / Medium / Low']
+          },
+          {
+            title: 'Cost and Budget',
+            fields: ['Training Fee: ₹ _____', 'Travel Expenses (if applicable): ₹ _____', 'Accommodation (if applicable): ₹ _____', 'Other Expenses: ₹ _____', 'Total Cost: ₹ _____', 'Budget Head:', 'Funding Source: Department Budget / Hospital Training Budget / Sponsorship']
+          },
+          {
+            title: 'Post-Training Expectations',
+            fields: ['Expected skills/knowledge gain:', 'How will employee apply learning?', 'Will employee train others (Train-the-Trainer)? Yes / No', 'Expected ROI/Impact within: 3 months / 6 months / 1 year', 'Certification expected: Yes / No']
+          },
+          {
+            title: 'Approvals',
+            fields: ['Nominated by (Supervisor): ________ Date: ____', 'Justification for nomination:', '', 'Department Head Approval:', 'Signature: ________ Date: ____', '', 'HR Approval (budget and policy compliance):', 'Signature: ________ Date: ____', '', 'Finance Approval (if cost > ₹10,000):', 'Signature: ________ Date: ____']
+          }
+        ],
+        instructions: 'Submit at least 30 days before training start date. Budget approval required for external programs. Employee must complete post-training feedback and knowledge sharing.',
+        approvalRequired: 'Supervisor, Department Head, HR, Finance',
+        processingTime: '2-3 weeks'
+      },
+      { 
+        name: 'Training Feedback Form', 
+        code: 'TRN-002', 
+        description: 'Post-training evaluation and feedback',
+        sections: [
+          {
+            title: 'Training Details',
+            fields: ['Training Program Name:', 'Training Provider:', 'Training Dates: From ____ To ____', 'Training Location/Mode:', 'Participant Name:', 'Employee ID:', 'Department']
+          },
+          {
+            title: 'Training Content Evaluation',
+            fields: ['Rate the following on scale of 1-5 (1=Poor, 5=Excellent):', '', '1. Relevance of content to your role: ___', '2. Quality of training material: ___', '3. Depth of coverage: ___', '4. Practical applicability: ___', '5. Updated and current information: ___', '', 'Overall Content Rating: ___/5']
+          },
+          {
+            title: 'Trainer Evaluation',
+            fields: ['Trainer Name(s):', '', 'Rate the trainer (1-5):', '1. Subject matter expertise: ___', '2. Clarity of explanation: ___', '3. Engagement and interaction: ___', '4. Ability to answer questions: ___', '5. Time management: ___', '', 'Overall Trainer Rating: ___/5']
+          },
+          {
+            title: 'Logistics and Facilities',
+            fields: ['Rate logistics (1-5):', '1. Training venue/platform: ___', '2. Audio-visual equipment: ___', '3. Training material distribution: ___', '4. Refreshments (if applicable): ___', '5. Registration and coordination: ___']
+          },
+          {
+            title: 'Learning Outcomes',
+            fields: ['Key learning points (list top 3-5):', '1.', '2.', '3.', '4.', '5.', '', 'Skills/knowledge gained:', 'Certification received: Yes / No', 'Certificate Number (if applicable):']
+          },
+          {
+            title: 'Application Plan',
+            fields: ['How will you apply this learning in your work?', '', '', 'Action plan for next 30 days:', '', '', 'Support needed from manager/organization:', '', '', 'Will you share knowledge with team? Yes / No / Scheduled for: ____']
+          },
+          {
+            title: 'Overall Feedback',
+            fields: ['Overall training rating (1-5): ___', '', 'What did you like most about the training?', '', '', 'What could be improved?', '', '', 'Would you recommend this training to colleagues? Yes / No', '', 'Additional comments or suggestions:']
+          },
+          {
+            title: 'Certification',
+            fields: ['I attended the training and completed the required hours/modules.', 'Employee Signature: ________ Date: ____', '', 'Supervisor Acknowledgment (post-training discussion held):', 'Supervisor Signature: ________ Date: ____']
+          }
+        ],
+        instructions: 'Submit within 7 days of training completion. Feedback is used for vendor evaluation and future training planning. Mandatory for all external training programs.',
+        approvalRequired: 'Submit to HR',
+        processingTime: 'Immediate submission'
+      }
     ]
   },
   annex7: {
