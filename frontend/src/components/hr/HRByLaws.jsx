@@ -19,7 +19,7 @@ const HRByLaws = ({ setActiveModule }) => {
   const [isPrintMode, setIsPrintMode] = useState(false);
   const contentRef = useRef(null);
 
-  // Parse and render content with explicit line breaks and bold conversion
+  // Parse and render content with perfect legal document formatting
   const renderFormattedContent = (content) => {
     if (!content) return null;
     
@@ -32,7 +32,7 @@ const HRByLaws = ({ setActiveModule }) => {
       const parts = text.split(/(\*\*.*?\*\*)/g);
       return parts.map((part, idx) => {
         if (part.startsWith('**') && part.endsWith('**')) {
-          return <strong key={idx}>{part.slice(2, -2)}</strong>;
+          return <strong key={idx} className="font-semibold">{part.slice(2, -2)}</strong>;
         }
         return part;
       });
@@ -44,62 +44,65 @@ const HRByLaws = ({ setActiveModule }) => {
       
       if (!trimmedLine) continue;
       
-      // Check for (a) **Title:** pattern
-      const mainPointMatch = trimmedLine.match(/^\(([a-z])\)\s+(.+)$/);
-      if (mainPointMatch && trimmedLine.includes('**')) {
+      // Main clause: (a), (b), (c), (d)
+      const mainClauseMatch = trimmedLine.match(/^\(([a-z])\)\s+(.+)$/);
+      if (mainClauseMatch && trimmedLine.includes('**')) {
         elements.push(
-          <React.Fragment key={key++}>
-            <br />
-            <br />
-            <strong style={{ display: 'block', fontSize: '1.1rem', color: '#0f172a' }}>
-              ({mainPointMatch[1]}) {renderTextWithBold(mainPointMatch[2])}
-            </strong>
-          </React.Fragment>
+          <div key={key++} className="mt-6 mb-3">
+            <div className="flex items-start gap-3">
+              <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-blue-100 text-blue-700 font-semibold text-sm flex-shrink-0">
+                {mainClauseMatch[1]}
+              </span>
+              <div className="flex-1">
+                <div className="font-bold text-slate-900 text-base leading-relaxed">
+                  {renderTextWithBold(mainClauseMatch[2])}
+                </div>
+              </div>
+            </div>
+          </div>
         );
         continue;
       }
       
-      // Check for (i), (ii), (iii) sub-points  
-      const subPointMatch = line.match(/^\s+((?:i{1,3}|iv|v|vi{0,3}|ix|x))\)\s+(.+)$/);
-      if (subPointMatch) {
+      // Sub-clause: (i), (ii), (iii), (iv)
+      const subClauseMatch = line.match(/^\s+((?:i{1,3}|iv|v|vi{0,3}|ix|x))\)\s+(.+)$/);
+      if (subClauseMatch) {
         elements.push(
-          <React.Fragment key={key++}>
-            <br />
-            <span style={{ display: 'block', marginLeft: '3rem', color: '#334155' }}>
-              <strong>({subPointMatch[1]})</strong> {renderTextWithBold(subPointMatch[2])}
+          <div key={key++} className="ml-12 mt-3 mb-2 flex items-start gap-2">
+            <span className="inline-flex items-center px-2 py-0.5 rounded bg-blue-50 text-blue-700 font-medium text-xs flex-shrink-0 mt-1">
+              {subClauseMatch[1]}
             </span>
-          </React.Fragment>
+            <span className="flex-1 text-slate-700 leading-relaxed text-justify">
+              {renderTextWithBold(subClauseMatch[2])}
+            </span>
+          </div>
         );
         continue;
       }
       
-      // Check for bullets
+      // Bullet point
       const bulletMatch = line.match(/^\s+•\s+(.+)$/);
       if (bulletMatch) {
         elements.push(
-          <React.Fragment key={key++}>
-            <br />
-            <span style={{ display: 'block', marginLeft: '2.5rem', color: '#334155' }}>
-              <strong style={{ color: '#d97706', fontSize: '1.25rem' }}>• </strong>
+          <div key={key++} className="ml-10 mt-2 mb-2 flex items-start gap-3">
+            <span className="text-amber-600 font-bold text-lg flex-shrink-0 mt-0.5">•</span>
+            <span className="flex-1 text-slate-700 leading-relaxed text-justify">
               {renderTextWithBold(bulletMatch[1])}
             </span>
-          </React.Fragment>
+          </div>
         );
         continue;
       }
       
-      // Regular text
+      // Regular paragraph
       elements.push(
-        <React.Fragment key={key++}>
-          <br />
-          <span style={{ display: 'block', color: '#334155' }}>
-            {renderTextWithBold(trimmedLine)}
-          </span>
-        </React.Fragment>
+        <p key={key++} className="mt-2 mb-3 text-slate-700 leading-relaxed text-justify">
+          {renderTextWithBold(trimmedLine)}
+        </p>
       );
     }
     
-    return <div>{elements}</div>;
+    return <div className="space-y-1">{elements}</div>;
   };
 
   // Complete Navigation structure for all 30 sections (User's Original By-Laws)
