@@ -289,3 +289,73 @@ Compliance: All contracts reviewed by HR and legal counsel.`
         }
       ]
     }
+,
+    {
+      section: 'Section 6',
+      title: 'Patient Interaction and Care Standards (for Clinical Staff)',
+      searchTerms: ['patient', 'care', 'clinical', 'standards', 'interaction'],
+      icon: 'Activity',
+      color: 'pink',
+      content: 'Detailed standards for patient interaction will be added in next batch'
+    },
+    {
+      section: 'Section 7',
+      title: 'Attendance and Leave Policy',
+      searchTerms: ['attendance', 'leave', 'policy', 'vacation', 'sick'],
+      icon: 'Calendar',
+      color: 'yellow',
+      content: 'Detailed attendance and leave policies will be added in next batch'
+    },
+    {
+      section: 'Section 8',
+      title: 'Working Hours and Overtime',
+      searchTerms: ['working', 'hours', 'overtime', 'schedule', 'shift'],
+      icon: 'Clock',
+      color: 'teal',
+      content: 'Working hours and overtime policies will be added in next batch'
+    },
+    {
+      section: 'Section 9',
+      title: 'Compensation, Payroll and Benefits',
+      searchTerms: ['compensation', 'payroll', 'benefits', 'salary', 'pay'],
+      icon: 'DollarSign',
+      color: 'green',
+      content: 'Compensation and benefits details will be added in next batch'
+    },
+    {
+      section: 'Section 10',
+      title: 'Performance Management',
+      searchTerms: ['performance', 'management', 'appraisal', 'review', 'evaluation'],
+      icon: 'TrendingUp',
+      color: 'blue',
+      content: 'Performance management details will be added in next batch'
+    }
+  ]
+};
+
+export const keyHighlights = [
+  {
+    section: 'Code of Conduct',
+    highlight: 'Zero tolerance for harassment, discrimination, or misconduct',
+    icon: 'Shield',
+    color: 'red'
+  },
+  {
+    section: 'Leave Policy',
+    highlight: 'Medical certificate required for sick leave exceeding 3 days',
+    icon: 'Calendar',
+    color: 'blue'
+  },
+  {
+    section: 'Disciplinary Procedures',
+    highlight: 'Principles of natural justice followed in all proceedings',
+    icon: 'Scale',
+    color: 'purple'
+  },
+  {
+    section: 'Grievance Redressal',
+    highlight: 'All grievances acknowledged within 3 working days',
+    icon: 'AlertCircle',
+    color: 'orange'
+  }
+];
