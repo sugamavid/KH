@@ -244,117 +244,244 @@ const HRSOPs = ({ setActiveModule }) => {
 
     if (sectionId === 'preamble') {
       return (
-        <div className="bg-white rounded-xl shadow-lg">
-          <div className="bg-gradient-to-r from-green-50 to-emerald-100 border-b-2 border-green-300 p-6">
-            <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 rounded-full bg-green-600 flex items-center justify-center flex-shrink-0">
-                <CheckCircle className="w-5 h-5 text-white" />
-              </div>
+        <div className="bg-white rounded-2xl shadow-2xl overflow-hidden">
+          {/* Professional Document Header */}
+          <div className="bg-gradient-to-r from-blue-900 via-blue-800 to-blue-900 text-white px-12 py-8">
+            <div className="flex items-center justify-between mb-6">
               <div>
-                <p className="font-bold text-green-900">Standard Operating Procedures</p>
-                <p className="text-sm text-green-800">Koyili Hospital • HR Department</p>
+                <h1 className="text-3xl font-bold tracking-tight">KOYILI HOSPITAL</h1>
+                <p className="text-blue-200 text-sm mt-1">Pallikkunnu, Talap, Kannur, Kerala</p>
+              </div>
+              <div className="text-right">
+                <div className="bg-amber-500 text-blue-900 px-4 py-2 rounded-lg font-bold text-sm">
+                  ISO 9001:2015 Certified
+                </div>
+              </div>
+            </div>
+            <div className="border-t border-blue-700 pt-4">
+              <h2 className="text-xl font-semibold">Human Resources Department</h2>
+              <p className="text-blue-300 text-sm">Standard Operating Procedures Manual</p>
+            </div>
+          </div>
+
+          {/* Document Title */}
+          <div className="bg-gradient-to-b from-slate-50 to-white px-12 py-10 border-b-4 border-amber-500">
+            <div className="flex items-center space-x-4 mb-4">
+              <BookOpen className="w-12 h-12 text-blue-900" />
+              <div>
+                <h3 className="text-2xl font-bold text-slate-900">{section.title}</h3>
+                <p className="text-slate-600 text-sm mt-1">Introduction to Standard Operating Procedures</p>
               </div>
             </div>
           </div>
 
-          <div className="border-b-4 border-double border-slate-800 p-12 text-center bg-gradient-to-b from-slate-50 to-white">
-            <BookOpen className="w-16 h-16 text-green-900 mx-auto mb-4" />
-            <h1 className="text-3xl font-serif font-bold text-slate-900 mb-6">{section.title}</h1>
+          {/* Content */}
+          <div className="px-12 py-10 bg-white">
+            <div className="prose prose-lg max-w-none">
+              <p className="text-lg leading-relaxed text-slate-800 text-justify font-serif indent-8 first-letter:text-5xl first-letter:font-bold first-letter:text-blue-900 first-letter:float-left first-letter:mr-3 first-letter:mt-1">
+                {section.content}
+              </p>
+            </div>
           </div>
-          <div className="p-12 bg-green-50">
-            <p className="text-base leading-relaxed text-justify font-serif text-slate-800 indent-12">
-              {section.content}
-            </p>
+
+          {/* Professional Footer */}
+          <div className="bg-gradient-to-r from-slate-800 to-slate-900 text-white px-12 py-6">
+            <div className="flex items-center justify-between text-sm">
+              <div>
+                <p className="font-semibold">Document Control</p>
+                <p className="text-slate-400 text-xs">Version 3.0 | Effective Date: January 2024</p>
+              </div>
+              <div className="text-right">
+                <p className="font-semibold">Approved By</p>
+                <p className="text-slate-400 text-xs">Chief Executive Officer | Board of Directors</p>
+              </div>
+            </div>
           </div>
         </div>
       );
     }
 
+    // For regular SOPs
     return (
-      <div className="bg-white rounded-xl shadow-lg p-12">
-        <div className="border-b-2 border-slate-700 pb-4 mb-8">
-          <h2 className="text-2xl font-serif font-bold text-slate-900">{section.number}</h2>
-          <h3 className="text-xl font-serif font-bold text-slate-800 mt-2">{section.title}</h3>
-          {section.category && (
-            <span className="inline-block mt-2 px-3 py-1 bg-green-100 text-green-800 text-sm font-semibold rounded-full">
-              {section.category}
-            </span>
-          )}
-        </div>
-
-        {/* Simple content (for SOPs without subsections) */}
-        {section.content && !section.subsections && (
-          <div className="prose max-w-none">
-            <p className="text-base leading-relaxed text-justify font-serif text-slate-800">
-              {section.content}
-            </p>
-          </div>
-        )}
-
-        {/* Subsections (for detailed SOPs) */}
-        {section.subsections && section.subsections.map((subsection, idx) => (
-          <div key={idx} className="mb-8">
-            <h4 className="text-lg font-serif font-bold text-slate-900 mb-3 bg-slate-100 px-4 py-2 rounded">
-              {subsection.number} {subsection.title}
-            </h4>
-            {subsection.content && (
-              <div className="ml-6 mb-4">
-                <p className="text-base leading-relaxed text-justify font-serif text-slate-800 whitespace-pre-line">
-                  {subsection.content}
-                </p>
+      <div className="bg-white rounded-2xl shadow-2xl overflow-hidden">
+        {/* Professional SOP Header */}
+        <div className="bg-gradient-to-r from-blue-900 via-blue-800 to-blue-900 text-white">
+          <div className="px-12 py-6">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center space-x-4">
+                <div className="w-16 h-16 bg-amber-500 rounded-xl flex items-center justify-center">
+                  <FileText className="w-8 h-8 text-blue-900" />
+                </div>
+                <div>
+                  <h1 className="text-2xl font-bold tracking-tight">KOYILI HOSPITAL</h1>
+                  <p className="text-blue-200 text-sm">Human Resources Department</p>
+                </div>
               </div>
-            )}
-            {subsection.points && (
-              <ul className="space-y-2 ml-10 list-disc">
-                {subsection.points.map((point, pointIdx) => (
-                  <li key={pointIdx} className="text-base leading-relaxed text-justify font-serif text-slate-800">
-                    {point}
-                  </li>
-                ))}
-              </ul>
-            )}
-            {/* Nested subsections (like 4.1, 4.2 under section 4) */}
-            {subsection.subsections && subsection.subsections.map((nestedSub, nestedIdx) => (
-              <div key={nestedIdx} className="ml-8 mt-4 mb-4">
-                <h5 className="text-md font-serif font-semibold text-slate-800 mb-2">
-                  {nestedSub.number} {nestedSub.title}
-                </h5>
-                {nestedSub.content && (
-                  <p className="text-base leading-relaxed text-justify font-serif text-slate-700 ml-4 whitespace-pre-line">
-                    {nestedSub.content}
-                  </p>
+              <div className="text-right">
+                <div className="bg-amber-500 text-blue-900 px-3 py-1 rounded-md font-bold text-xs mb-2">
+                  CONTROLLED DOCUMENT
+                </div>
+                <p className="text-blue-300 text-xs">Reference: {section.number}</p>
+              </div>
+            </div>
+          </div>
+          
+          {/* Document Title Bar */}
+          <div className="bg-gradient-to-r from-blue-800 to-blue-900 px-12 py-6 border-t border-blue-700">
+            <div className="flex items-start justify-between">
+              <div className="flex-1">
+                <h2 className="text-3xl font-bold text-white mb-2">{section.title}</h2>
+                {section.category && (
+                  <div className="flex items-center space-x-2 mt-3">
+                    <span className="bg-amber-500 text-blue-900 px-3 py-1 rounded-full text-xs font-bold">
+                      {section.category}
+                    </span>
+                  </div>
                 )}
               </div>
-            ))}
-            {/* Table support (for roles & responsibilities) */}
-            {subsection.table && (
-              <div className="ml-6 mt-4 overflow-x-auto">
-                <table className="min-w-full border-collapse border border-slate-300">
-                  <thead>
-                    <tr className="bg-slate-100">
-                      {subsection.table.headers.map((header, hIdx) => (
-                        <th key={hIdx} className="border border-slate-300 px-4 py-2 text-left font-bold text-slate-900">
-                          {header}
-                        </th>
-                      ))}
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {subsection.table.rows.map((row, rIdx) => (
-                      <tr key={rIdx} className={rIdx % 2 === 0 ? 'bg-white' : 'bg-slate-50'}>
-                        {row.map((cell, cIdx) => (
-                          <td key={cIdx} className="border border-slate-300 px-4 py-2 text-slate-800">
-                            {cell}
-                          </td>
+            </div>
+          </div>
+        </div>
+
+        {/* Document Metadata Bar */}
+        <div className="bg-gradient-to-r from-slate-100 to-slate-50 px-12 py-4 border-b-2 border-amber-500">
+          <div className="grid grid-cols-4 gap-4 text-sm">
+            <div>
+              <p className="text-slate-600 text-xs font-semibold">Version</p>
+              <p className="text-slate-900 font-bold">3.0</p>
+            </div>
+            <div>
+              <p className="text-slate-600 text-xs font-semibold">Effective Date</p>
+              <p className="text-slate-900 font-bold">01 Jan 2024</p>
+            </div>
+            <div>
+              <p className="text-slate-600 text-xs font-semibold">Review Date</p>
+              <p className="text-slate-900 font-bold">01 Jan 2025</p>
+            </div>
+            <div>
+              <p className="text-slate-600 text-xs font-semibold">Owner</p>
+              <p className="text-slate-900 font-bold">HR Department</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Main Content Area */}
+        <div className="px-12 py-10 bg-white">
+          {/* Simple content (for SOPs without subsections) */}
+          {section.content && !section.subsections && (
+            <div className="prose prose-lg max-w-none">
+              <p className="text-base leading-relaxed text-justify text-slate-800">
+                {section.content}
+              </p>
+            </div>
+          )}
+
+          {/* Subsections (for detailed SOPs) */}
+          {section.subsections && section.subsections.map((subsection, idx) => (
+            <div key={idx} className="mb-10">
+              {/* Section Header with Number Badge */}
+              <div className="flex items-center space-x-4 mb-6 pb-3 border-b-2 border-blue-200">
+                <div className="w-12 h-12 bg-gradient-to-br from-blue-900 to-blue-700 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg">
+                  <span className="text-white font-bold text-lg">{subsection.number}</span>
+                </div>
+                <h3 className="text-2xl font-bold text-blue-900 uppercase tracking-wide">{subsection.title}</h3>
+              </div>
+
+              {/* Content */}
+              {subsection.content && (
+                <div className="ml-16 mb-6">
+                  <p className="text-base leading-relaxed text-justify text-slate-800 whitespace-pre-line font-serif">
+                    {subsection.content}
+                  </p>
+                </div>
+              )}
+
+              {/* Bullet Points */}
+              {subsection.points && (
+                <ul className="ml-16 space-y-3">
+                  {subsection.points.map((point, pointIdx) => (
+                    <li key={pointIdx} className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-amber-500 rounded-full mt-2 flex-shrink-0"></div>
+                      <p className="text-base leading-relaxed text-slate-800 flex-1 font-serif">
+                        {point}
+                      </p>
+                    </li>
+                  ))}
+                </ul>
+              )}
+
+              {/* Nested subsections (like 4.1, 4.2 under section 4) */}
+              {subsection.subsections && subsection.subsections.map((nestedSub, nestedIdx) => (
+                <div key={nestedIdx} className="ml-16 mt-6 mb-6 bg-slate-50 rounded-xl p-6 border-l-4 border-blue-500">
+                  <h4 className="text-lg font-bold text-blue-800 mb-3 flex items-center space-x-2">
+                    <span className="bg-blue-900 text-white px-3 py-1 rounded-lg text-sm">{nestedSub.number}</span>
+                    <span>{nestedSub.title}</span>
+                  </h4>
+                  {nestedSub.content && (
+                    <p className="text-base leading-relaxed text-slate-700 whitespace-pre-line font-serif">
+                      {nestedSub.content}
+                    </p>
+                  )}
+                </div>
+              ))}
+
+              {/* Table support (for roles & responsibilities) */}
+              {subsection.table && (
+                <div className="ml-16 mt-6 overflow-hidden rounded-xl border-2 border-blue-200 shadow-lg">
+                  <table className="min-w-full">
+                    <thead>
+                      <tr className="bg-gradient-to-r from-blue-900 to-blue-800">
+                        {subsection.table.headers.map((header, hIdx) => (
+                          <th key={hIdx} className="px-6 py-4 text-left font-bold text-white text-sm uppercase tracking-wide">
+                            {header}
+                          </th>
                         ))}
                       </tr>
-                    ))}
-                  </tbody>
-                </table>
+                    </thead>
+                    <tbody>
+                      {subsection.table.rows.map((row, rIdx) => (
+                        <tr key={rIdx} className={`${rIdx % 2 === 0 ? 'bg-white' : 'bg-slate-50'} hover:bg-blue-50 transition-colors`}>
+                          {row.map((cell, cIdx) => (
+                            <td key={cIdx} className="px-6 py-4 text-slate-800 text-sm border-b border-slate-200">
+                              {cell}
+                            </td>
+                          ))}
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+
+        {/* Professional Footer */}
+        <div className="bg-gradient-to-r from-slate-800 to-slate-900 text-white">
+          <div className="px-12 py-6 border-t-4 border-amber-500">
+            <div className="grid grid-cols-3 gap-8 text-sm">
+              <div>
+                <p className="text-slate-400 text-xs mb-1">DOCUMENT REFERENCE</p>
+                <p className="font-semibold">{section.number}</p>
               </div>
-            )}
+              <div>
+                <p className="text-slate-400 text-xs mb-1">CLASSIFICATION</p>
+                <p className="font-semibold">Internal Use Only</p>
+              </div>
+              <div>
+                <p className="text-slate-400 text-xs mb-1">DOCUMENT STATUS</p>
+                <p className="font-semibold text-green-400">Active & Current</p>
+              </div>
+            </div>
+            <div className="mt-4 pt-4 border-t border-slate-700 flex items-center justify-between">
+              <div className="flex items-center space-x-2">
+                <CheckCircle className="w-4 h-4 text-green-400" />
+                <p className="text-xs text-slate-400">Digitally Signed & Approved by Board of Directors</p>
+              </div>
+              <p className="text-xs text-slate-400">© 2024 Koyili Hospital. All Rights Reserved.</p>
+            </div>
           </div>
-        ))}
+        </div>
       </div>
     );
   };
