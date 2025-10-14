@@ -5,9 +5,12 @@ import {
   ChevronRight, TrendingUp, CheckCircle, Shield, X, ChevronDown,
   Menu, ArrowLeft, Filter, Zap, Activity, Heart, Lock, LogOut, 
   Monitor, Globe, MessageCircle, MessageSquare, UserCheck, Smile, 
-  AlertTriangle, Gift, CheckSquare
+  AlertTriangle, Gift, CheckSquare, Mail
 } from 'lucide-react';
 import { byLawsData, sections as sectionsData, quickReferenceData, keyHighlights } from './byLawsData';
+
+// Google Fonts are loaded in index.html or via <link> tag
+// Fallback to system fonts if Google Fonts fail
 
 const HRByLaws = ({ setActiveModule }) => {
   const [activeSection, setActiveSection] = useState('dashboard');
