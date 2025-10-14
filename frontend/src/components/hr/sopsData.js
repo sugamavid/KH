@@ -7611,8 +7611,6 @@ Presented during Annual Day or special event`
       }
     ]
   },
-    content: 'Establishes transparent Employee Recognition Framework rewarding exemplary conduct, outstanding performance, and values-aligned behaviour through formal Award Nomination process.'
-  },
 
   // SECTION I: PAYROLL, COMPENSATION & ALLOWANCES
   sopI1: {
