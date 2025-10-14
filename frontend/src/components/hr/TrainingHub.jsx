@@ -787,7 +787,7 @@ const TrainingHub = ({ onClose, onNavigateToSection }) => {
                     onClick={() => setActiveView(view.id)}
                     className={`flex items-center gap-2 px-4 py-2 rounded-lg font-semibold transition-all ${
                       activeView === view.id
-                        ? 'bg-white text-red-700 shadow-lg'
+                        ? 'bg-white text-teal-700 shadow-lg'
                         : 'bg-white/20 text-white hover:bg-white/30'
                     }`}
                   >
