@@ -744,29 +744,29 @@ const TrainingHub = ({ onClose, onNavigateToSection }) => {
             <div className="grid grid-cols-5 gap-3 mb-4">
               <div className="bg-white/20 backdrop-blur rounded-lg p-3 text-center">
                 <div className="text-2xl font-bold text-white">{stats.completed}</div>
-                <div className="text-xs text-red-100">Completed</div>
+                <div className="text-xs text-teal-100">Completed</div>
               </div>
               <div className="bg-white/20 backdrop-blur rounded-lg p-3 text-center">
                 <div className="text-2xl font-bold text-white">{stats.inProgress}</div>
-                <div className="text-xs text-red-100">In Progress</div>
+                <div className="text-xs text-teal-100">In Progress</div>
               </div>
               <div className="bg-white/20 backdrop-blur rounded-lg p-3 text-center">
                 <div className="text-2xl font-bold text-white">{stats.notStarted}</div>
-                <div className="text-xs text-red-100">Not Started</div>
+                <div className="text-xs text-teal-100">Not Started</div>
               </div>
               <div className="bg-white/20 backdrop-blur rounded-lg p-3 text-center">
                 <div className="text-2xl font-bold text-white">{stats.mandatory}</div>
-                <div className="text-xs text-red-100">Mandatory</div>
+                <div className="text-xs text-teal-100">Mandatory</div>
               </div>
               <div className="bg-white/20 backdrop-blur rounded-lg p-3 text-center">
                 <div className="text-2xl font-bold text-white">{stats.certificates}</div>
-                <div className="text-xs text-red-100">Certificates</div>
+                <div className="text-xs text-teal-100">Certificates</div>
               </div>
             </div>
 
             {/* Search */}
             <div className="relative">
-              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-red-600" />
+              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-teal-600" />
               <input
                 type="text"
                 placeholder="Search trainings by title, instructor, or description..."
