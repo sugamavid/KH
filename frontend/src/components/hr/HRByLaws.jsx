@@ -18,63 +18,81 @@ const HRByLaws = ({ setActiveModule }) => {
   const [expandedSections, setExpandedSections] = useState({});
   const contentRef = useRef(null);
 
-  // Parse and render content - Check if already HTML or needs parsing
+  // Parse and render content as pure React JSX components
   const renderFormattedContent = (content) => {
-    if (!content) return '';
+    if (!content) return null;
     
-    // If content already contains HTML tags, return as-is
-    if (content.includes('<strong') || content.includes('<span') || content.includes('<br')) {
-      return content;
-    }
-    
-    // Otherwise parse the plain text content
     const lines = content.split('\n');
-    let html = '';
-    let i = 0;
+    const elements = [];
+    let key = 0;
     
-    while (i < lines.length) {
+    for (let i = 0; i < lines.length; i++) {
       const line = lines[i];
       const trimmedLine = line.trim();
       
       // Skip empty lines
-      if (!trimmedLine) {
-        i++;
-        continue;
-      }
+      if (!trimmedLine) continue;
       
       // Check for (a) **Title:** pattern
       const mainPointMatch = trimmedLine.match(/^\(([a-z])\)\s+\*\*(.*?)\*\*:?$/);
       if (mainPointMatch) {
-        html += `<br><br><strong style="display: block; font-size: 1.1rem; color: #0f172a; margin-bottom: 0.5rem;">(${mainPointMatch[1]}) ${mainPointMatch[2]}:</strong>`;
-        i++;
+        elements.push(
+          <div key={key++} style={{ marginTop: '1.5rem', marginBottom: '0.5rem', fontWeight: 'bold', fontSize: '1.1rem', color: '#0f172a' }}>
+            ({mainPointMatch[1]}) <strong>{mainPointMatch[2]}:</strong>
+          </div>
+        );
         continue;
       }
       
       // Check for (i), (ii), (iii) sub-points
       const subPointMatch = line.match(/^\s+((?:i{1,3}|iv|v|vi{0,3}|ix|x))\)\s+(.+)$/);
       if (subPointMatch) {
-        const text = subPointMatch[2].replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
-        html += `<br><span style="display: block; margin-left: 3rem; color: #334155; line-height: 1.75;"><strong style="color: #475569;">(${subPointMatch[1]})</strong> ${text}</span>`;
-        i++;
+        const text = subPointMatch[2];
+        const boldMatch = text.match(/\*\*(.*?)\*\*/g);
+        const parts = text.split(/\*\*(.*?)\*\*/);
+        
+        elements.push(
+          <div key={key++} style={{ marginLeft: '3rem', marginTop: '0.75rem', marginBottom: '0.75rem', color: '#334155', lineHeight: '1.75' }}>
+            <strong style={{ color: '#475569' }}>({subPointMatch[1]})</strong>{' '}
+            {parts.map((part, idx) => 
+              idx % 2 === 0 ? part : <strong key={idx}>{part}</strong>
+            )}
+          </div>
+        );
         continue;
       }
       
       // Check for bullets
       const bulletMatch = line.match(/^\s+•\s+(.+)$/);
       if (bulletMatch) {
-        const text = bulletMatch[1].replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
-        html += `<br><span style="display: block; margin-left: 2.5rem; color: #334155; line-height: 1.75;"><strong style="color: #d97706; font-size: 1.25rem;">• </strong>${text}</span>`;
-        i++;
+        const text = bulletMatch[1];
+        const parts = text.split(/\*\*(.*?)\*\*/);
+        
+        elements.push(
+          <div key={key++} style={{ marginLeft: '2.5rem', marginTop: '0.5rem', marginBottom: '0.5rem', color: '#334155', lineHeight: '1.75', display: 'flex', alignItems: 'flex-start' }}>
+            <strong style={{ color: '#d97706', fontSize: '1.25rem', marginRight: '0.75rem' }}>•</strong>
+            <span>
+              {parts.map((part, idx) => 
+                idx % 2 === 0 ? part : <strong key={idx}>{part}</strong>
+              )}
+            </span>
+          </div>
+        );
         continue;
       }
       
       // Regular text line
-      const text = trimmedLine.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
-      html += `<br><span style="display: block; color: #334155; line-height: 1.75;">${text}</span>`;
-      i++;
+      const parts = trimmedLine.split(/\*\*(.*?)\*\*/);
+      elements.push(
+        <div key={key++} style={{ color: '#334155', lineHeight: '1.75', marginBottom: '0.5rem' }}>
+          {parts.map((part, idx) => 
+            idx % 2 === 0 ? part : <strong key={idx}>{part}</strong>
+          )}
+        </div>
+      );
     }
     
-    return html;
+    return <div>{elements}</div>;
   };
 
   // Complete Navigation structure for all 30 sections (User's Original By-Laws)
