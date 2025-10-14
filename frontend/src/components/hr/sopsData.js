@@ -6711,7 +6711,189 @@ Example:
     title: 'Feedback Mechanisms (360° & Peer Review)',
     searchTerms: ['feedback', '360', 'peer', 'review', 'evaluation'],
     category: 'H. Performance Management',
-    content: 'Institutionalizes structured feedback systems including 360° reviews and peer assessments promoting continuous performance enhancement and team collaboration.'
+    subsections: [
+      {
+        number: '1',
+        title: 'OBJECTIVE',
+        content: 'To institutionalize structured, multi-source feedback systems including 360-degree reviews and peer assessments promoting continuous performance enhancement, self-awareness, team collaboration, and holistic development by gathering perspectives from supervisors, peers, subordinates, and internal customers.'
+      },
+      {
+        number: '2',
+        title: 'SCOPE',
+        content: 'Applicable to all employees. 360° feedback primarily for supervisors and managers. Peer review for all team members.'
+      },
+      {
+        number: '3',
+        title: '360-DEGREE FEEDBACK',
+        subsections: [
+          {
+            number: '3.1',
+            title: 'Concept and Purpose',
+            content: `360° Feedback: Multi-rater assessment where individual receives feedback from:
+• Supervisor (upward perspective)
+• Peers/Colleagues (horizontal perspective)
+• Subordinates/Team members (downward perspective)
+• Internal customers/Interdepartmental colleagues
+• Self-assessment for comparison
+
+Purpose:
+• Comprehensive view of performance and behavior
+• Identify blind spots (what others see that you don't)
+• Developmental, not punitive
+• Enhances self-awareness and emotional intelligence`
+          },
+          {
+            number: '3.2',
+            title: 'When 360° is Conducted',
+            content: `• Annually for all supervisors and managers
+• Before promotion to leadership role
+• As part of leadership development programs
+• On request for high-potential employees
+• Not linked to increment/bonus (purely developmental)`
+          },
+          {
+            number: '3.3',
+            title: 'Process',
+            content: `(i) Nomination of Raters (by employee and supervisor):
+    • 3-5 peers
+    • 3-5 subordinates (if applicable)
+    • 2-3 cross-functional colleagues
+    • 1 supervisor
+    • Self
+
+(ii) Confidential Survey (online via HRMS):
+    • Raters complete anonymous questionnaire
+    • Rate employee on competencies (1-5 scale)
+    • Open-ended feedback questions
+    • Anonymity ensured (except supervisor)
+
+(iii) Report Generation:
+    • Aggregated scores from all raters
+    • Comparison of self-rating vs others' ratings
+    • Strengths and development areas highlighted
+    • Confidential report shared only with employee and HR
+
+(iv) Feedback Discussion:
+    • Employee reviews report
+    • One-on-one session with HR or coach
+    • Create development action plan
+    • Not shared with supervisor (unless employee chooses to)`
+          },
+          {
+            number: '3.4',
+            title: '360° Competencies Assessed',
+            content: `Leadership Competencies:
+• Vision and strategic thinking
+• Decision-making
+• Communication
+• Team building and empowerment
+• Coaching and mentoring
+• Conflict management
+• Accountability
+• Adaptability
+
+Behavioral Attributes:
+• Integrity and ethics
+• Collaboration
+• Customer focus
+• Innovation
+• Emotional intelligence`
+          }
+        ]
+      },
+      {
+        number: '4',
+        title: 'PEER REVIEW PROCESS',
+        subsections: [
+          {
+            number: '4.1',
+            title: 'Purpose',
+            content: `• Supplement supervisor's assessment with team perspective
+• Encourage peer accountability
+• Recognize collaborative contributors
+• Identify team players vs solo workers`
+          },
+          {
+            number: '4.2',
+            title: 'When Conducted',
+            content: `• Quarterly or bi-annually for project teams
+• Post-project completion for cross-functional teams
+• Part of annual appraisal (10-20% weightage)`
+          },
+          {
+            number: '4.3',
+            title: 'Process',
+            content: `(i) Peer Nomination:
+    • Employee nominates 3-5 peers who have worked closely
+    • Supervisor approves nominations
+
+(ii) Peer Feedback Form:
+    • Simple rating scale (1-5) on teamwork, collaboration, reliability
+    • 2-3 open-ended questions
+    • Anonymous submission
+
+(iii) Aggregation:
+    • HR compiles peer feedback
+    • Average scores calculated
+    • Themes identified from qualitative comments
+
+(iv) Integration with Appraisal:
+    • Peer feedback considered in behavioral competency rating
+    • Supervisor discusses with employee during appraisal`
+          },
+          {
+            number: '4.4',
+            title: 'Peer Review Criteria',
+            content: `• Collaboration and teamwork
+• Reliability and meeting commitments
+• Knowledge sharing and helping others
+• Communication and responsiveness
+• Positive attitude and morale contribution`
+          }
+        ]
+      },
+      {
+        number: '5',
+        title: 'CONTINUOUS FEEDBACK CULTURE',
+        content: `Beyond formal reviews, promote:
+• Regular 1-on-1s (weekly/bi-weekly between supervisor and employee)
+• Real-time feedback (praise publicly, correct privately)
+• Feedback training for all managers
+• Feedback is a two-way street (employee can give upward feedback)
+• Recognition platforms for peer-to-peer appreciation`
+      },
+      {
+        number: '6',
+        title: 'ENSURING QUALITY FEEDBACK',
+        content: `Guidelines for raters:
+• Be specific and cite examples
+• Focus on observable behaviors, not personality
+• Balance positive and constructive feedback
+• Be honest but respectful
+• Avoid vague statements like "good worker"
+• No personal attacks or emotional venting
+
+HR monitors for:
+• Consistently harsh or lenient raters (outliers flagged)
+• Retaliation or malicious feedback
+• Coaching provided to raters giving poor-quality feedback`
+      },
+      {
+        number: '7',
+        title: 'CONFIDENTIALITY AND ETHICS',
+        content: `• All feedback confidential
+• No retaliation against raters
+• Anonymity protected (except supervisor feedback)
+• Feedback data securely stored
+• Used only for developmental purposes
+• Violation of confidentiality: Disciplinary action`
+      },
+      {
+        number: '8',
+        title: 'REFERENCE DOCUMENTS',
+        content: 'HR By-Laws (Performance Management), Annexure H.3.1: 360° Feedback Questionnaire, Annexure H.3.2: Peer Review Form'
+      }
+    ]
   },
 
   sopH4: {
@@ -6720,7 +6902,233 @@ Example:
     title: 'PIP (Performance Improvement Plan) Process',
     searchTerms: ['pip', 'performance', 'improvement', 'plan', 'remediation'],
     category: 'H. Performance Management',
-    content: 'Outlines structured and time-bound Performance Improvement Plan framework for employees whose performance falls short of expected standards.'
+    subsections: [
+      {
+        number: '1',
+        title: 'OBJECTIVE',
+        content: 'To outline a structured, fair, and time-bound Performance Improvement Plan (PIP) framework for employees whose performance falls below expected standards, providing clear expectations, support, and opportunity for improvement while protecting organizational interests and maintaining documentation for potential termination if improvement not achieved.'
+      },
+      {
+        number: '2',
+        title: 'SCOPE',
+        content: 'Applicable to employees with sustained performance deficiencies. PIP is corrective, not punitive, aiming for rehabilitation before termination.'
+      },
+      {
+        number: '3',
+        title: 'WHEN PIP IS INITIATED',
+        content: `PIP triggered when:
+• Year-end rating: "Needs Improvement" (2/5) or "Unsatisfactory" (1/5)
+• Consistent underperformance despite verbal/written warnings
+• Failure to meet goals for 2 consecutive quarters
+• Serious performance lapse (not misconduct - that's disciplinary)
+• Post-probation performance issues
+
+PIP NOT used for:
+• Misconduct or behavioral issues (use disciplinary process)
+• Attendance or punctuality problems (separate process)
+• First-time minor performance slip (counseling sufficient)`
+      },
+      {
+        number: '4',
+        title: 'PIP PROCESS',
+        subsections: [
+          {
+            number: '4.1',
+            title: 'Pre-PIP Discussion',
+            content: `Before formal PIP:
+(i) Supervisor conducts candid discussion with employee
+(ii) Clearly articulates performance gaps
+(iii) Explores reasons (skill gap, personal issues, role misfit)
+(iv) Gives opportunity for informal improvement (1-2 weeks)
+(v) If no improvement, proceed with formal PIP`
+          },
+          {
+            number: '4.2',
+            title: 'PIP Initiation',
+            content: `(i) Supervisor drafts PIP document (Annexure H.4.1):
+    • Performance gaps identified (specific, measurable)
+    • Expected standards clearly defined
+    • Improvement actions required
+    • Timeline (typically 60-90 days)
+    • Support/resources to be provided
+    • Consequences if goals not met
+
+(ii) PIP Meeting:
+    • Face-to-face meeting with employee
+    • HR present as witness
+    • PIP document explained clause by clause
+    • Employee can ask questions, provide input
+    • Both parties sign PIP document
+    • Copy given to employee
+
+(iii) HR Documentation:
+    • PIP logged in HRMS
+    • Email confirmation sent to employee
+    • File copy maintained`
+          },
+          {
+            number: '4.3',
+            title: 'PIP Duration',
+            content: `Standard Duration: 60-90 days
+
+Typical Structure:
+• Week 1-2: Initial coaching and clarification
+• Week 3-6: Regular monitoring (weekly check-ins)
+• Week 7-10: Mid-PIP review (formal assessment)
+• Week 11-13: Continued improvement and final assessment
+• End of Week 12-13: Final PIP review and decision`
+          },
+          {
+            number: '4.4',
+            title: 'PIP Goals and Metrics',
+            content: `PIP must include:
+• 3-5 specific improvement areas
+• Measurable success criteria for each
+• Timeline for each milestone
+• Evidence required to demonstrate improvement
+
+Example PIP Goal:
+┌─────────────────────────────────────────┐
+│ Gap: Report submission delays           │
+│ Expected: Submit all weekly reports by  │
+│          Friday 5 PM                    │
+│ Success Criteria: 100% on-time for 90  │
+│                   days (12 reports)     │
+│ Current: 50% on-time rate              │
+│ Support: Reminder system, time mgmt     │
+│          training                       │
+│ Measurement: Weekly tracking log        │
+└─────────────────────────────────────────┘`
+          },
+          {
+            number: '4.5',
+            title: 'Support During PIP',
+            content: `Supervisor and HR commit to:
+• Weekly one-on-one check-ins
+• Clear and timely feedback
+• Training or resources as needed
+• Mentoring or coaching
+• Adjustment of workload (if reasonable)
+• Fair evaluation without bias
+
+Employee responsibilities:
+• Actively work on improvement
+• Attend all check-in meetings
+• Seek clarification when needed
+• Document own progress
+• Maintain professional attitude`
+          },
+          {
+            number: '4.6',
+            title: 'Mid-PIP Review',
+            content: `At 30-45 days:
+• Formal mid-point assessment
+• Review progress on each goal
+• If good progress: Encourage to continue
+• If inadequate progress: Issue warning, intensify support
+• If no improvement: May recommend early termination (with HR and legal approval)
+
+Document mid-PIP review in writing`
+          },
+          {
+            number: '4.7',
+            title: 'Final PIP Review',
+            content: `At end of PIP period:
+(i) Supervisor assesses overall performance against PIP goals
+(ii) Three possible outcomes:
+
+    A. Successfully Completed PIP:
+       • All or most goals achieved
+       • Performance meets expectations
+       • PIP closed, employee continues in role
+       • Monitoring continues for 3-6 months
+       • Note: Rating may still be "Meets" (not automatic Exceeds)
+
+    B. Partial Improvement - PIP Extended:
+       • Some improvement but not sufficient
+       • Extend PIP by 30-45 days (one time only)
+       • Revised PIP document issued
+       • Final review at end of extension
+
+    C. PIP Failed - Termination:
+       • Inadequate or no improvement
+       • Recommend termination
+       • HR and Legal review documentation
+       • Termination letter issued
+
+(iii) Final PIP Report submitted to HR with recommendation
+(iv) HR reviews for fairness and due process
+(v) CHRO approves final decision`
+          }
+        ]
+      },
+      {
+        number: '5',
+        title: 'EMPLOYEE RIGHTS DURING PIP',
+        content: `• Right to fair evaluation
+• Right to support and resources promised
+• Right to ask questions and seek clarification
+• Right to provide rebuttal or additional context
+• Right to escalate to HR if supervisor being unfair
+• Not entitled to increment or promotion during PIP
+• Can resign during PIP (but must serve notice period)`
+      },
+      {
+        number: '6',
+        title: 'TERMINATION POST-PIP FAILURE',
+        content: `If PIP fails:
+(i) Termination letter issued citing:
+    • Performance deficiencies
+    • PIP provided with support
+    • Failure to meet PIP goals
+    • Termination effective after notice period (or pay in lieu)
+
+(ii) Full & Final Settlement processed
+
+(iii) Exit formalities completed
+
+(iv) Experience certificate: Neutral language (dates, designation, no detailed feedback)
+
+(v) Documentation retained for legal defense (in case of wrongful termination claim)`
+      },
+      {
+        number: '7',
+        title: 'POST-PIP SUCCESS MONITORING',
+        content: `If PIP successfully completed:
+• Monitoring period of 3-6 months
+• Monthly check-ins continue
+• Performance expectations remain clear
+• Relapse into underperformance: Immediate action (no second PIP usually)
+• If sustained improvement: Full rehabilitation, normal career progression resumes`
+      },
+      {
+        number: '8',
+        title: 'PIP BEST PRACTICES',
+        content: `• Be objective: Use data, facts, specific examples
+• Be fair: Consistent treatment across all employees
+• Document everything: Every meeting, feedback, evidence
+• Be supportive: Genuine intent to help employee improve (not gotcha)
+• Be timely: Don't delay PIP if performance clearly deficient
+• Be clear: No ambiguity in expectations
+• Involve HR: Don't conduct PIP in isolation`
+      },
+      {
+        number: '9',
+        title: 'COMMON PIP MISTAKES TO AVOID',
+        content: `• Vague goals ("improve attitude" - not measurable)
+• Unrealistic expectations (setting up for failure)
+• Lack of support (putting employee on PIP then ignoring)
+• Inconsistent evaluation (lenient mid-review, harsh final review)
+• Retaliation PIP (using PIP to punish employee for other reasons)
+• Insufficient documentation (no evidence to support failure)
+• Premature termination (not giving full PIP period)`
+      },
+      {
+        number: '10',
+        title: 'REFERENCE DOCUMENTS',
+        content: 'HR By-Laws (Performance Management - PIP Section), Annexure H.4.1: Performance Improvement Plan Template, Annexure H.4.2: PIP Monitoring Log'
+      }
+    ]
   },
 
   sopH5: {
