@@ -1206,7 +1206,127 @@ export const policyImplementationGuides = {
       'Induction training mandates (safety, compliance)'
     ]
   },
-  section4_probation: { policyName: 'Probation Period Management', byLawsSection: 'section4', category: 'HR Operations', status: 'detailed_guide_pending' },
+  // SECTION 4: PROBATION PERIOD MANAGEMENT
+  section4_probation: {
+    policyName: 'Probation Period Management',
+    byLawsSection: 'section4',
+    category: 'HR Operations',
+    implementationSteps: [
+      {
+        step: 1,
+        phase: 'Planning',
+        activity: 'Define Probation Policy',
+        details: 'Establish probation duration (typically 3-6 months), evaluation criteria, extension rules, and confirmation process',
+        responsibleCommittee: 'hr_committee',
+        responsibleIndividuals: ['HR Director', 'Department Heads'],
+        timeline: '1 week',
+        outputs: ['Probation policy document', 'Evaluation criteria', 'Timeline standards'],
+        checkpoints: ['Policy approved', 'Criteria clear and measurable', 'Process documented']
+      },
+      {
+        step: 2,
+        phase: 'Preparation',
+        activity: 'Create Evaluation Tools',
+        details: 'Develop probation evaluation forms, feedback templates, and assessment rubrics',
+        responsibleCommittee: 'hr_committee',
+        responsibleIndividuals: ['HR Director', 'Training Coordinator'],
+        timeline: '1 week',
+        outputs: ['Probation evaluation form', 'Monthly review template', 'Final assessment form'],
+        checkpoints: ['Forms comprehensive', 'Criteria aligned with job description', 'Easy to use']
+      },
+      {
+        step: 3,
+        phase: 'Implementation',
+        activity: 'Probation Commencement Meeting',
+        details: 'Initial meeting to explain probation terms, expectations, evaluation process, and support available',
+        responsibleCommittee: 'hr_committee',
+        responsibleIndividuals: ['Direct Supervisor', 'HR Officer'],
+        timeline: 'Day 1 or Week 1',
+        outputs: ['Probation terms acknowledgment', 'Goal setting document', 'Evaluation schedule'],
+        checkpoints: ['Employee understands terms', 'Goals set', 'Schedule communicated']
+      },
+      {
+        step: 4,
+        phase: 'Implementation',
+        activity: 'Monthly Progress Reviews',
+        details: 'Regular formal reviews to assess performance, provide feedback, and identify development needs',
+        responsibleCommittee: 'hr_committee',
+        responsibleIndividuals: ['Direct Supervisor', 'HR Support'],
+        timeline: 'Monthly during probation',
+        outputs: ['Monthly review reports', 'Feedback documentation', 'Development plans'],
+        checkpoints: ['Reviews conducted on time', 'Feedback documented', 'Issues addressed promptly']
+      },
+      {
+        step: 5,
+        phase: 'Implementation',
+        activity: 'Mid-Probation Assessment',
+        details: 'Formal mid-point evaluation to review progress and determine if probation is on track',
+        responsibleCommittee: 'hr_committee',
+        responsibleIndividuals: ['Department Head', 'HR Director'],
+        timeline: 'Month 2-3 (mid-point)',
+        outputs: ['Mid-probation assessment report', 'Decision on continuation/support needed'],
+        checkpoints: ['Assessment completed', 'Employee informed', 'Support provided if needed']
+      },
+      {
+        step: 6,
+        phase: 'Implementation',
+        activity: 'Final Probation Evaluation',
+        details: 'Comprehensive end-of-probation assessment covering all performance criteria',
+        responsibleCommittee: 'hr_committee',
+        responsibleIndividuals: ['Direct Supervisor', 'Department Head', 'HR Director'],
+        timeline: '2 weeks before probation end',
+        outputs: ['Final evaluation report', 'Recommendation (confirm/extend/terminate)', 'Documentation'],
+        checkpoints: ['Thorough evaluation', 'Justified recommendation', 'Documentation complete']
+      },
+      {
+        step: 7,
+        phase: 'Implementation',
+        activity: 'Confirmation or Extension Decision',
+        details: 'Management decision on confirmation, probation extension, or termination based on evaluation',
+        responsibleCommittee: 'hr_committee',
+        responsibleIndividuals: ['Department Head', 'HR Director', 'Administrative Director'],
+        timeline: '1 week before probation end',
+        outputs: ['Decision letter (confirmation/extension/termination)', 'Updated employment status'],
+        checkpoints: ['Decision timely', 'Employee informed', 'Records updated']
+      },
+      {
+        step: 8,
+        phase: 'Monitoring',
+        activity: 'Post-Confirmation Integration',
+        details: 'For confirmed employees, ensure smooth transition to regular employment with updated benefits',
+        responsibleCommittee: 'hr_committee',
+        responsibleIndividuals: ['HR Officer', 'Payroll'],
+        timeline: 'At confirmation',
+        outputs: ['Confirmation letter', 'Updated benefits', 'Permanent employee orientation'],
+        checkpoints: ['All benefits activated', 'Systems updated', 'Employee informed of rights']
+      }
+    ],
+    committeeInvolved: ['hr_committee'],
+    approvalChain: [
+      { level: 'Direct Supervisor', for: 'Monthly reviews and initial recommendation' },
+      { level: 'Department Head', for: 'Final evaluation and recommendation' },
+      { level: 'HR Director', for: 'Process compliance and documentation' },
+      { level: 'Administrative Director', for: 'Final confirmation decision' }
+    ],
+    criticalSuccess: [
+      'Clear expectations set from day one',
+      'Regular feedback and support',
+      'Fair and documented evaluation',
+      'Timely decision-making'
+    ],
+    risks: [
+      { risk: 'Inadequate feedback', mitigation: 'Structured monthly reviews, documentation requirements' },
+      { risk: 'Last-minute surprises', mitigation: 'Continuous feedback, mid-probation check, no surprises policy' },
+      { risk: 'Bias in evaluation', mitigation: 'Multiple evaluators, objective criteria, HR oversight' },
+      { risk: 'Missed deadlines', mitigation: 'Automated reminders, HR monitoring, clear timelines' }
+    ],
+    legalCompliance: [
+      'Labor law probation period limits',
+      'Due process in termination during probation',
+      'Documentation requirements',
+      'Notice period during probation'
+    ]
+  },
   section5_equal_opportunity: { policyName: 'Equal Opportunity and DEI', byLawsSection: 'section5', category: 'Compliance', status: 'detailed_guide_pending' },
   section6_code_conduct: { policyName: 'Code of Conduct and Ethics', byLawsSection: 'section6', category: 'Governance', status: 'detailed_guide_pending' },
   section9_training: { policyName: 'Training and Development', byLawsSection: 'section9', category: 'HR Development', status: 'detailed_guide_pending' },
