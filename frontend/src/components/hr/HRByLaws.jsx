@@ -507,9 +507,9 @@ const HRByLaws = ({ setActiveModule }) => {
               {section.content && !section.subsections && (
                 <div className="bg-white rounded-xl p-10 shadow-inner border-2 border-amber-200">
                   <div 
-                    className="text-lg leading-loose text-justify font-serif text-slate-800 tracking-wide whitespace-pre-line" 
-                    style={{lineHeight: '2'}}
-                    dangerouslySetInnerHTML={{ __html: section.content.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') }}
+                    className="text-lg leading-relaxed font-serif text-slate-800" 
+                    style={{lineHeight: '1.8'}}
+                    dangerouslySetInnerHTML={{ __html: formatContent(section.content) }}
                   />
                 </div>
               )}
@@ -523,9 +523,9 @@ const HRByLaws = ({ setActiveModule }) => {
                     </h3>
                   )}
                   <div 
-                    className="text-lg leading-loose text-justify font-serif text-slate-800 tracking-wide whitespace-pre-line" 
-                    style={{lineHeight: '2'}}
-                    dangerouslySetInnerHTML={{ __html: subsection.content.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') }}
+                    className="text-lg leading-relaxed font-serif text-slate-800" 
+                    style={{lineHeight: '1.8'}}
+                    dangerouslySetInnerHTML={{ __html: formatContent(subsection.content) }}
                   />
                 </div>
               ))}
