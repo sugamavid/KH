@@ -866,7 +866,12 @@ export const sections = [
   { id: 'section2', category: 'Foundational', title: 'Section 2: Recruitment and Employment', icon: 'Users', color: 'green' },
   { id: 'section3', category: 'Conduct & Ethics', title: 'Section 3: Code of Conduct', icon: 'Shield', color: 'red' },
   { id: 'section4', category: 'Conduct & Ethics', title: 'Section 4: Employee Rights and Responsibilities', icon: 'Award', color: 'purple' },
-  { id: 'section5', category: 'Conduct & Ethics', title: 'Section 5: Diversity, Equity, and Inclusion', icon: 'Heart', color: 'indigo' }
+  { id: 'section5', category: 'Conduct & Ethics', title: 'Section 5: Diversity, Equity, and Inclusion', icon: 'Heart', color: 'indigo' },
+  { id: 'section6', category: 'Patient Care', title: 'Section 6: Patient Interaction and Care Standards', icon: 'Activity', color: 'pink' },
+  { id: 'section7', category: 'HR Operations', title: 'Section 7: Attendance and Leave Policy', icon: 'Calendar', color: 'cyan' },
+  { id: 'section8', category: 'HR Operations', title: 'Section 8: Performance Management', icon: 'TrendingUp', color: 'orange' },
+  { id: 'section9', category: 'HR Operations', title: 'Section 9: Training and Development', icon: 'BookOpen', color: 'teal' },
+  { id: 'section10', category: 'HR Operations', title: 'Section 10: Remote Work and Flexible Scheduling', icon: 'Home', color: 'lime' }
 ];
 
 export const quickReferenceData = {
