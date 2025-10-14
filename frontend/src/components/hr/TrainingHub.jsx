@@ -683,7 +683,7 @@ const TrainingHub = ({ onClose, onNavigateToSection }) => {
             {/* Actions */}
             <div className="flex gap-3">
               {selectedTraining.status === 'not_started' ? (
-                <button className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors font-semibold">
+                <button className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition-colors font-semibold">
                   <PlayCircle className="w-5 h-5" />
                   Enroll in Training
                 </button>
