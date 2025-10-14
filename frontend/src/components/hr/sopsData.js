@@ -12600,7 +12600,7 @@ Disclosure:
       {
         number: '14',
         title: 'REFERENCE DOCUMENTS',
-        content: 'Mental Health Policy, EAP Policy (SOP L.1), Leave Policy, Wellness Policy, Anti-Harassment Policy (SOP M.5), Annexure L.4.1: Mental Health Resources List, Annexure L.4.2: Manager's Guide to Supporting Mental Health'
+        content: 'Mental Health Policy, EAP Policy (SOP L.1), Leave Policy, Wellness Policy, Anti-Harassment Policy (SOP M.5), Annexure L.4.1: Mental Health Resources List, Annexure L.4.2: Manager Guide to Supporting Mental Health'
       }
     ]
   },
