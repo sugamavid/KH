@@ -539,7 +539,10 @@ const HRByLaws = ({ setActiveModule }) => {
           </div>
           
           {/* Training Manager */}
-          <div className="bg-white border-2 border-orange-200 rounded-xl p-6 hover:shadow-lg hover:border-orange-400 transition-all cursor-pointer group">
+          <div 
+            onClick={() => setShowTrainingManager(true)}
+            className="bg-white border-2 border-orange-200 rounded-xl p-6 hover:shadow-lg hover:border-orange-400 transition-all cursor-pointer group"
+          >
             <div className="flex items-center gap-4 mb-4">
               <div className="p-3 bg-orange-100 rounded-lg group-hover:bg-orange-600 transition-colors">
                 <BookOpen className="w-7 h-7 text-orange-600 group-hover:text-white transition-colors" />
