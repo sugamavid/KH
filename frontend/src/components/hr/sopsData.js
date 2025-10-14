@@ -12352,7 +12352,257 @@ Employee/Insurance Pays:
     title: 'Mental Health Support & Referral Flow',
     searchTerms: ['mental', 'health', 'support', 'referral', 'counselling', 'wellness'],
     category: 'L. Wellness, Work-Life Balance & EAP',
-    content: 'Establishes comprehensive protocol for identifying, supporting, and referring employees requiring mental health assistance ensuring confidentiality and professional care.'
+    subsections: [
+      {
+        number: '1',
+        title: 'OBJECTIVE',
+        content: 'To establish comprehensive, stigma-free, and confidential protocol for identifying, supporting, and referring employees requiring mental health assistance ensuring timely intervention, professional care, confidentiality, reintegration support, and fostering a mentally healthy workplace culture that prioritizes psychological well-being alongside physical health.'
+      },
+      {
+        number: '2',
+        title: 'SCOPE',
+        content: 'Covers identification of mental health concerns, support mechanisms, referral pathways to professional mental health services, crisis intervention, return-to-work protocols, and organizational measures to promote mental health awareness. Applicable to all employees experiencing stress, anxiety, depression, burnout, trauma, or other mental health challenges.'
+      },
+      {
+        number: '3',
+        title: 'MENTAL HEALTH AWARENESS & DESTIGMATIZATION',
+        content: `Organizational Commitment:
+• Mental health is health - equal priority to physical health
+• No stigma or discrimination for mental health conditions
+• Safe space for employees to seek help
+• Leadership support and role modeling
+
+Awareness Initiatives:
+• World Mental Health Day observance (October 10)
+• Mental health awareness campaigns
+• Talks by psychologists/psychiatrists
+• Destigmatization messaging
+• Manager training: Recognizing and supporting mental health issues
+• Employee testimonials (with consent) to normalize seeking help`
+      },
+      {
+        number: '4',
+        title: 'IDENTIFYING MENTAL HEALTH CONCERNS',
+        subsections: [
+          {
+            number: '4.1',
+            title: 'Warning Signs',
+            content: `Behavioral:
+• Withdrawal from colleagues, isolation
+• Irritability, anger outbursts
+• Crying, emotional outbursts
+• Substance use increase (alcohol, smoking)
+
+Performance:
+• Decline in work quality
+• Increased absenteeism
+• Difficulty concentrating, forgetfulness
+• Missing deadlines repeatedly
+
+Physical:
+• Fatigue, lack of energy
+• Changes in appetite or sleep
+• Unexplained physical complaints (headaches, body ache)
+
+Verbal:
+• Expressions of hopelessness ("I can't cope", "What's the point?")
+• Talk of self-harm or suicide (IMMEDIATE red flag)`
+          },
+          {
+            number: '4.2',
+            title: 'Who Can Identify',
+            content: `• Self-awareness: Employee recognizes own struggle
+• Managers/Supervisors: Observe behavioral/performance changes
+• Colleagues: Notice friend or team member in distress
+• Occupational Health/HR: Through wellness interactions or consultations`
+          }
+        ]
+      },
+      {
+        number: '5',
+        title: 'SUPPORT PATHWAYS',
+        subsections: [
+          {
+            number: '5.1',
+            title: 'Level 1: Self-Help & Peer Support',
+            content: `For Mild Stress/Anxiety:
+• Self-care: Exercise, sleep, nutrition, hobbies
+• Peer support: Talking to trusted colleague or friend
+• Stress management techniques: Deep breathing, mindfulness apps
+• EAP resources: Self-help articles, webinars (SOP L.1)`
+          },
+          {
+            number: '5.2',
+            title: 'Level 2: EAP Counselling',
+            content: `For Moderate Issues:
+• Access Employee Assistance Program (SOP L.1)
+• Telephonic, online, or in-person counselling
+• 4-6 sessions with licensed counsellor
+• Confidential, no cost to employee
+• Addresses work stress, relationships, life adjustments`
+          },
+          {
+            number: '5.3',
+            title: 'Level 3: Referral to Psychiatrist/Psychologist',
+            content: `For Severe or Persistent Issues:
+• Depression, severe anxiety, bipolar disorder, PTSD
+• Suicidal ideation
+• Substance abuse disorders
+• Conditions requiring medication or intensive therapy
+
+Referral Source:
+• EAP counsellor recommends psychiatric consultation
+• Occupational Health Physician refers
+• Employee directly seeks (encouraged)
+
+Process:
+• Hospital provides list of empaneled psychiatrists/psychologists
+• Employee books appointment (hospital may assist)
+• Treatment (therapy, medication) as per professional recommendation`
+          },
+          {
+            number: '5.4',
+            title: 'Level 4: Hospitalization (Crisis)',
+            content: `For Acute Crisis:
+• Imminent risk of self-harm or suicide
+• Acute psychosis, severe mania
+• Severe depression with inability to function
+
+Action:
+• Immediate psychiatric evaluation
+• Hospitalization in psychiatric unit if needed
+• Family informed and involved
+• Hospital supports admission process
+• Follow-up care post-discharge`
+          }
+        ]
+      },
+      {
+        number: '6',
+        title: 'MANAGER'S ROLE IN SUPPORTING MENTAL HEALTH',
+        content: `Do's:
+• Create safe, non-judgmental space for conversation
+• Express concern: "I've noticed you seem stressed. Are you okay?"
+• Listen actively without offering medical advice
+• Suggest resources: EAP, occupational health
+• Offer workplace flexibility if feasible (deadline extensions, reduced workload temporarily)
+• Maintain confidentiality
+• Follow up periodically
+
+Don'ts:
+• Don't diagnose ("You seem depressed" → "You seem stressed")
+• Don't dismiss or minimize ("Just snap out of it", "Everyone has stress")
+• Don't gossip or share with colleagues
+• Don't force disclosure
+• Don't penalize for seeking help
+
+Training:
+• Managers receive Mental Health First Aid training
+• Recognizing signs, having supportive conversations, making referrals`
+      },
+      {
+        number: '7',
+        title: 'MENTAL HEALTH LEAVE',
+        content: `• Employees can take sick leave for mental health (same as physical illness)
+• Medical certificate from psychiatrist/psychologist if extended leave
+• HR and manager keep reason confidential (simply "medical leave")
+• No stigma or career impact
+• Job protected during medical leave (as per policy)
+• Return-to-work protocol followed (see below)`
+      },
+      {
+        number: '8',
+        title: 'RETURN-TO-WORK AFTER MENTAL HEALTH LEAVE',
+        content: `Process:
+(i) Employee submits fitness certificate from treating psychiatrist/psychologist
+(ii) Occupational Health reviews and may conduct interview
+(iii) Fitness for duty determined: "Fit" or "Fit with accommodations"
+(iv) Accommodations (if needed):
+    • Phased return (part-time initially, then full-time)
+    • Reduced workload temporarily
+    • Modified duties (avoid high-stress tasks initially)
+    • Flexible hours
+    • Regular check-ins with manager
+(v) Ongoing support: EAP counselling, occupational health follow-up
+(vi) Confidentiality maintained - team told employee returning from medical leave (no specifics)
+
+Goal: Successful reintegration and sustained recovery`
+      },
+      {
+        number: '9',
+        title: 'CRISIS INTERVENTION PROTOCOL',
+        content: `If Employee Expresses Suicidal Thoughts or Self-Harm Intent:
+(i) Take seriously - NEVER dismiss
+(ii) Do NOT leave person alone
+(iii) Ask directly: "Are you thinking of hurting yourself?" (asking doesn't increase risk)
+(iv) Call for immediate help:
+    • Occupational Health Doctor
+    • EAP crisis line (24/7)
+    • Emergency services (ambulance) if imminent danger
+    • Family member (with employee's consent if possible)
+(v) Stay with employee until professional help arrives
+(vi) Remove means of self-harm if present (medications, sharp objects)
+(vii) Psychiatric evaluation arranged urgently
+(viii) Hospitalization if needed
+
+Post-Crisis:
+• Employee provided with comprehensive support plan
+• Return-to-work only after full psychiatric clearance
+• Ongoing monitoring and support`
+      },
+      {
+        number: '10',
+        title: 'WORKPLACE ACCOMMODATIONS FOR MENTAL HEALTH',
+        content: `Reasonable accommodations provided (as per medical advice):
+• Flexible work hours or remote work option
+• Quiet workspace (reduced sensory overload)
+• Regular breaks
+• Modified job duties (temporarily avoid triggers)
+• Time off for therapy appointments
+• Workload adjustments
+• Supportive supervision (regular check-ins)
+
+Disclosure:
+• Employee not required to disclose diagnosis
+• Medical documentation sufficient ("requires accommodation for medical condition")
+• Accommodations confidential`
+      },
+      {
+        number: '11',
+        title: 'CONFIDENTIALITY & PRIVACY',
+        content: `• All mental health information strictly confidential
+• EAP, counsellors, psychiatrists bound by patient confidentiality
+• HR and managers not informed of diagnosis (only fitness status and accommodations needed)
+• No mention in performance reviews or personnel file (unless employee consents)
+• Colleagues not informed (employee's choice to share)
+• Breach of confidentiality = serious misconduct`
+      },
+      {
+        number: '12',
+        title: 'ORGANIZATIONAL MENTAL HEALTH INITIATIVES',
+        content: `• Stress management workshops
+• Resilience training
+• Mindfulness and meditation sessions (SOP L.2)
+• Work-life balance policies (SOP L.5)
+• Manageable workloads and realistic deadlines
+• Healthy work culture (no bullying, harassment - SOP M.5)
+• Open-door policy with HR for concerns
+• Mental health champions (trained employee volunteers)`
+      },
+      {
+        number: '13',
+        title: 'NO DISCRIMINATION POLICY',
+        content: `• No adverse action against employee for mental health condition
+• No impact on promotions, increments, or job security (if performance maintained with accommodations)
+• Discrimination based on mental health = violation of policy, subject to disciplinary action
+• Protected under disability laws (if applicable)`
+      },
+      {
+        number: '14',
+        title: 'REFERENCE DOCUMENTS',
+        content: 'Mental Health Policy, EAP Policy (SOP L.1), Leave Policy, Wellness Policy, Anti-Harassment Policy (SOP M.5), Annexure L.4.1: Mental Health Resources List, Annexure L.4.2: Manager's Guide to Supporting Mental Health'
+      }
+    ]
   },
 
   sopL5: {
