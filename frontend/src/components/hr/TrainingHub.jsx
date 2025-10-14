@@ -832,7 +832,7 @@ const TrainingHub = ({ onClose, onNavigateToSection }) => {
                   onClick={() => setSelectedType(type.id)}
                   className={`px-3 py-1.5 rounded-lg text-sm font-semibold whitespace-nowrap transition-all ${
                     selectedType === type.id
-                      ? 'bg-red-600 text-white shadow-lg'
+                      ? 'bg-teal-600 text-white shadow-lg'
                       : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
                   }`}
                 >
