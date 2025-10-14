@@ -524,7 +524,7 @@ const HRByLaws = ({ setActiveModule }) => {
                 <div key={idx} className="bg-white rounded-xl p-10 shadow-inner border-2 border-amber-200">
                   {subsection.title && (
                     <h3 className="text-2xl font-serif font-bold text-slate-900 mb-6 pb-3 border-b-2 border-amber-300">
-                      {subsection.title}
+                      {subsection.number} {subsection.title}
                     </h3>
                   )}
                   <div 
