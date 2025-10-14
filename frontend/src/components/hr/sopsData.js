@@ -10540,7 +10540,317 @@ Investigation: All security violations thoroughly investigated, with potential l
     title: 'Digital Device Allocation & Return Protocol',
     searchTerms: ['digital', 'device', 'allocation', 'laptop', 'mobile', 'equipment'],
     category: 'K. Technology Usage & Digital Security',
-    content: 'Defines standardised process for issuance, tracking, and return of digital devices ensuring institutional asset protection and continuity in operations.'
+    subsections: [
+      {
+        number: '1',
+        title: 'OBJECTIVE',
+        content: 'To establish standardized, transparent, and secure process for allocation, tracking, maintenance, and return of hospital-owned digital devices including laptops, desktops, tablets, mobile phones, and accessories ensuring optimal asset utilization, accountability, data security, and protection of institutional property throughout device lifecycle.'
+      },
+      {
+        number: '2',
+        title: 'SCOPE',
+        content: 'Covers all hospital-owned digital devices issued to employees for official use. Includes laptops, desktop computers, tablets, smartphones, mobile hotspots, printers, scanners, and peripherals (keyboards, mice, dongles). Applicable to all employees eligible for device allocation as per policy.'
+      },
+      {
+        number: '3',
+        title: 'DEVICE ALLOCATION ELIGIBILITY',
+        content: `(i) Mandatory Device Allocation:
+    • Senior Management (HODs, Directors)
+    • IT Department staff
+    • Doctors and Medical Officers (depending on role)
+    • Roles requiring mobility or remote work
+    • Data entry/administrative roles (desktop)
+
+(ii) Discretionary Allocation:
+    • Based on job requirement
+    • Approved by Department Head and IT
+    • Budget availability
+
+(iii) Ineligible:
+    • Roles not requiring computing devices
+    • Probationary period (may receive shared device)
+    • Contractual staff <6 months (unless critical role)`
+      },
+      {
+        number: '4',
+        title: 'DEVICE ALLOCATION PROCESS',
+        subsections: [
+          {
+            number: '4.1',
+            title: 'Request & Approval',
+            content: `(i) Request Initiation:
+    • Employee or Department Head submits Device Request Form (Annexure K.3.1)
+    • Justification: Why device is needed, role requirements
+    • Device type requested (laptop, desktop, tablet, mobile)
+
+(ii) Approval Workflow:
+    • Department Head approval (if employee initiated)
+    • IT Department review (technical feasibility, availability)
+    • Finance approval (budget allocation)
+    • CHRO/Admin approval (final authorization)
+
+(iii) Processing Time:
+    • New devices: 7-15 days (procurement if not in stock)
+    • Available devices: 1-3 days (configuration and handover)`
+          },
+          {
+            number: '4.2',
+            title: 'Device Configuration & Setup',
+            content: `IT Department prepares device:
+• Install standard operating system and software (Office, Antivirus, VPN, hospital applications)
+• Configure email and network access
+• Enable security features (encryption, firewall, screen lock)
+• Install tracking/MDM software
+• Apply asset tag and record serial number
+• Create device profile in IT asset register
+• Backup/imaging for quick restoration if needed`
+          },
+          {
+            number: '4.3',
+            title: 'Device Handover',
+            content: `(i) Formal Handover Process:
+    • Employee visits IT department with ID proof
+    • IT staff demonstrates device usage and security features
+    • Device Allocation Form (Annexure K.3.2) signed by employee
+    • Form includes:
+        - Device details (make, model, serial number, asset tag)
+        - Accessories issued (charger, bag, mouse, etc.)
+        - Employee acknowledgment of responsibilities
+        - Return conditions and penalties
+    • Copy retained by IT, HR, and employee
+    • Employee signature confirms receipt and acceptance of policy
+
+(ii) Device Details Recorded:
+    • Asset tag number
+    • Serial number/IMEI (for mobiles)
+    • Employee ID and name
+    • Allocation date
+    • Device condition (new/refurbished)
+    • Accessories issued
+    • Insurance/warranty details`
+          }
+        ]
+      },
+      {
+        number: '5',
+        title: 'EMPLOYEE RESPONSIBILITIES',
+        content: `(i) Device Care & Maintenance:
+    • Maintain device in good working condition
+    • Protect from damage, theft, water, extreme temperatures
+    • Use protective case/bag provided
+    • No eating/drinking near device
+    • Regular charging and battery care
+    • Report malfunctions to IT immediately
+
+(ii) Security Compliance:
+    • Strong password/biometric lock enabled
+    • Do not disable antivirus or security software
+    • Install updates promptly when notified
+    • No installation of unauthorized software
+    • No lending device to family/friends
+    • Physical security: Lock device when unattended
+
+(iii) Data Management:
+    • Work data stored on hospital servers/cloud (not local storage)
+    • Regular backups (automated or manual as per IT policy)
+    • No storing personal/illegal content
+    • No downloading pirated software/media
+
+(iv) Usage Restrictions:
+    • Device for official use only (reasonable personal use acceptable)
+    • No commercial use (personal business)
+    • No illegal activities
+    • Compliance with IT policies (SOP K.1, K.2)`
+      },
+      {
+        number: '6',
+        title: 'DEVICE TRACKING & INVENTORY',
+        content: `IT Asset Register maintained:
+• All devices tracked via Asset Management System
+• Fields: Asset ID, Device Type, Make/Model, Serial Number, Assigned To, Location, Status
+• Status categories: Active, Under Repair, Retired, Lost, Returned
+• Annual physical verification and audit
+• Reconciliation with finance records (depreciation, insurance)
+• Real-time tracking for mobile devices (GPS/MDM)`
+      },
+      {
+        number: '7',
+        title: 'DEVICE MAINTENANCE & SUPPORT',
+        subsections: [
+          {
+            number: '7.1',
+            title: 'Technical Support',
+            content: `• IT Helpdesk available for device issues (hardware, software, connectivity)
+• Raise ticket via helpdesk portal or phone
+• Response time: 4 hours for critical issues, 24 hours for non-critical
+• On-site support for desktops, remote support for laptops
+• Loaner device provided if repair time >48 hours`
+          },
+          {
+            number: '7.2',
+            title: 'Repairs & Replacements',
+            content: `Normal Wear & Tear (Hospital Covers):
+• Hardware failures due to normal usage
+• Battery degradation after warranty period
+• Screen issues, keyboard faults (non-accidental)
+• Repairs via authorized service centers
+• Replacement if repair cost >50% of device value
+
+Employee Negligence/Damage (Employee Pays):
+• Physical damage (dropped, liquid spill, cracked screen)
+• Lost accessories (charger, mouse)
+• Theft due to employee negligence (device left unattended)
+• Damage due to unauthorized modifications
+• Cost deducted from salary or full & final settlement
+
+Stolen/Lost Device:
+• Police FIR mandatory
+• IT disables device remotely (wipe data)
+• Investigation to determine liability
+• Insurance claim (if covered)
+• Employee may be liable for cost if negligence proven`
+          },
+          {
+            number: '7.3',
+            title: 'Device Upgrades',
+            content: `• Devices upgraded/replaced every 4-5 years (lifecycle policy)
+• Earlier upgrade if:
+    - Role change requiring better device
+    - Device obsolete and cannot support required applications
+    - Performance degradation impacting work
+• Upgrade requests reviewed by IT and management
+• Old device returned before new device issued`
+          }
+        ]
+      },
+      {
+        number: '8',
+        title: 'DEVICE RETURN PROCESS',
+        subsections: [
+          {
+            number: '8.1',
+            title: 'When to Return Device',
+            content: `• Resignation/termination
+• Transfer to role not requiring device
+• Device upgrade/replacement
+• End of project or temporary assignment
+• Extended leave (>3 months)
+• Disciplinary suspension`
+          },
+          {
+            number: '8.2',
+            title: 'Return Procedure',
+            content: `(i) Employee Preparation:
+    • Backup personal data (if any) - IT assistance available
+    • Remove personal files
+    • Log out of all accounts
+    • Return all accessories (charger, bag, mouse, cables)
+
+(ii) IT Department Receives Device:
+    • Physical inspection for damage
+    • Verify serial number and asset tag
+    • Check accessories (cross-verify with allocation form)
+    • IT wipes all data securely (factory reset, disk wipe)
+    • Device Return Acknowledgment Form (Annexure K.3.3) signed by employee and IT
+    • IT confirms "No Dues" for device to HR
+
+(iii) Clearance:
+    • Device return mandatory for Full & Final settlement
+    • Resignation acceptance conditional on device return
+    • Delays in return: Withholding of settlement amount`
+          },
+          {
+            number: '8.3',
+            title: 'Device Condition Assessment',
+            content: `Acceptable Condition:
+• Normal wear and tear (scratches, minor dents)
+• All functions working
+• Complete accessories
+
+Unacceptable Condition (Penalty/Deduction):
+• Cracked screen, broken hinges, missing keys
+• Device non-functional due to damage
+• Missing accessories (charger, etc.)
+• Lost device (full cost recovery)
+
+Penalty Amount:
+• Assessed based on damage and depreciated value
+• Deducted from final settlement
+• Employee can dispute assessment (review by IT Head)`
+          }
+        ]
+      },
+      {
+        number: '9',
+        title: 'LOST OR STOLEN DEVICE PROTOCOL',
+        content: `Immediate Actions:
+(i) Employee reports loss/theft to IT and Supervisor (within 24 hours)
+(ii) IT remotely locks and wipes device
+(iii) Police FIR filed (mandatory for theft)
+(iv) IT logs incident and investigates circumstances
+(v) Insurance claim initiated (if applicable)
+
+Liability:
+• Employee may bear partial or full cost if negligence established
+• No liability if theft despite reasonable precautions (e.g., locked car broken into)
+• Gross negligence (device left unattended in public): Full cost recovery
+• Determination by committee: IT Head, HR, Department Head`
+      },
+      {
+        number: '10',
+        title: 'MOBILE PHONE ALLOCATION',
+        content: `Eligibility:
+• Senior management, field staff, on-call duties
+• Corporate plan with hospital SIM card
+• Reimbursement model (employee uses own phone, hospital reimburses bill)
+
+Usage Policy:
+• Reasonable personal use allowed (corporate plans usually unlimited)
+• Excessive international calls require approval
+• Monthly bill review by finance
+• Lost SIM: Report to IT for blocking and replacement
+• Device return on separation (if hospital-provided phone)`
+      },
+      {
+        number: '11',
+        title: 'BYOD (BRING YOUR OWN DEVICE) POLICY',
+        content: `If hospital permits BYOD:
+• Employee uses personal device for work
+• Must register device with IT (MDM enrollment)
+• Security standards enforced (encryption, lock, antivirus)
+• Hospital data separate from personal data
+• Remote wipe capability for work data only
+• Device remains employee's property
+• No hardware support from hospital (employee responsibility)
+• Agreement signed acknowledging risks and responsibilities`
+      },
+      {
+        number: '12',
+        title: 'DISPOSAL & RECYCLING',
+        content: `Retired/Obsolete Devices:
+• IT securely wipes all data (DoD standard data destruction)
+• Devices evaluated for:
+    - Donation to charitable institutions
+    - Sale as scrap (after data destruction)
+    - Recycling via certified e-waste vendors
+• Certificate of Data Destruction obtained
+• Devices removed from asset register`
+      },
+      {
+        number: '13',
+        title: 'VIOLATIONS & PENALTIES',
+        content: `• Unauthorized sale/transfer of device: Termination + legal action
+• Intentional damage: Cost recovery + disciplinary action
+• Not returning device upon separation: Withheld settlement + police complaint if no response
+• Misuse (illegal activities): Termination + legal action
+• Repeated negligence: Written warnings, device revocation`
+      },
+      {
+        number: '14',
+        title: 'REFERENCE DOCUMENTS',
+        content: 'IT Asset Management Policy, IT Security Policy (SOP K.2), Annexure K.3.1: Device Request Form, Annexure K.3.2: Device Allocation Form, Annexure K.3.3: Device Return Acknowledgment Form'
+      }
+    ]
   },
 
   sopK4: {
