@@ -1996,7 +1996,51 @@ Once drafted, the policy shall be reviewed internally by:
     title: 'HRMS & Payroll System Access Creation',
     searchTerms: ['hrms', 'payroll', 'system', 'access', 'portal', 'login'],
     category: 'C. Onboarding & Access Control',
-    content: 'Ensures timely and secure provisioning of access credentials to HRMS and Payroll Portal enabling employees to manage personal records, attendance, leave, and payslips effectively.'
+    subsections: [
+      {
+        number: '1',
+        title: 'OBJECTIVE',
+        content: 'To establish a standardized process for timely and secure provisioning of HRMS and Payroll Portal access credentials to all employees, enabling self-service capabilities for attendance management, leave applications, payslip access, and personal data updates.'
+      },
+      {
+        number: '2',
+        title: 'SCOPE',
+        content: 'Applicable to all employees requiring access to HRMS/Payroll systems. Covers IT Department for access creation and HR Department for user management and access control policies.'
+      },
+      {
+        number: '3',
+        title: 'PROCEDURE',
+        subsections: [
+          {
+            number: '3.1',
+            title: 'Access Provisioning',
+            content: `(i) HR shall submit Access Request Form to IT within 1 working day of employee joining
+(ii) IT shall create user account with:
+    • Username: Employee ID or official email
+    • Temporary password (to be changed on first login)
+    • Role-based permissions: Employee (self-service), Manager (team management), HR Admin (full access)
+(iii) Login credentials shall be shared via official email within 2 working days
+(iv) Employee shall complete first login and password change during orientation`
+          },
+          {
+            number: '3.2',
+            title: 'Training and Support',
+            content: `(i) HR shall provide HRMS User Guide covering:
+    • Login process and password management
+    • Viewing attendance and leave balance
+    • Applying for leave and regularization
+    • Downloading payslips and tax documents
+    • Updating personal information
+(ii) IT Helpdesk shall provide ongoing support for system issues`
+          }
+        ]
+      },
+      {
+        number: '4',
+        title: 'REFERENCE DOCUMENTS',
+        content: 'IT Security Policy, HRMS User Manual, Annexure C.3.1: Access Request Form'
+      }
+    ]
   },
 
   sopC4: {
@@ -2005,7 +2049,63 @@ Once drafted, the policy shall be reviewed internally by:
     title: 'Policy Orientation & Confidentiality Briefing',
     searchTerms: ['policy', 'orientation', 'confidentiality', 'briefing', 'training'],
     category: 'C. Onboarding & Access Control',
-    content: 'Institutionalizes formal mechanism for orienting newly joined employees on hospital-wide policies, statutory obligations, ethical standards, and confidentiality expectations.'
+    subsections: [
+      {
+        number: '1',
+        title: 'OBJECTIVE',
+        content: 'To ensure all new employees are formally briefed on hospital policies, ethical standards, patient confidentiality, data protection, and professional conduct expectations to maintain institutional integrity and legal compliance.'
+      },
+      {
+        number: '2',
+        title: 'SCOPE',
+        content: 'Applicable to all employees during onboarding. Conducted by HR Department as part of general orientation program.'
+      },
+      {
+        number: '3',
+        title: 'PROCEDURE',
+        subsections: [
+          {
+            number: '3.1',
+            title: 'Policy Briefing Session',
+            content: `(i) HR shall conduct a dedicated Policy Orientation Session covering:
+    • Code of Conduct and Professional Ethics
+    • Patient Rights and Confidentiality (HIPAA-equivalent)
+    • Data Protection and Information Security
+    • Prevention of Sexual Harassment (POSH)
+    • Anti-Corruption and Conflict of Interest
+    • Social Media and External Communication Guidelines
+    • Whistleblower Policy and Grievance Redressal
+(ii) Session duration: 60-90 minutes with Q&A
+(iii) Presentation slides and policy documents shall be shared digitally`
+          },
+          {
+            number: '3.2',
+            title: 'Confidentiality Agreement',
+            content: `(i) All employees must sign a Confidentiality and Non-Disclosure Agreement covering:
+    • Patient medical records and health information
+    • Hospital proprietary information, processes, and trade secrets
+    • Financial data and strategic information
+    • Obligations during and post-employment
+(ii) Signed agreement shall be filed in personnel record
+(iii) Breach of confidentiality is a serious misconduct leading to termination and legal action`
+          },
+          {
+            number: '3.3',
+            title: 'Acknowledgment',
+            content: `(i) Employee shall sign Policy Acknowledgment Form confirming:
+    • Receipt and understanding of all policies
+    • Commitment to comply with institutional standards
+    • Awareness of consequences of policy violations
+(ii) Acknowledgment form shall be retained for audit and compliance verification`
+          }
+        ]
+      },
+      {
+        number: '4',
+        title: 'REFERENCE DOCUMENTS',
+        content: 'Employee Handbook, Code of Conduct, POSH Policy, Data Protection Policy, Annexure C.4.1: Confidentiality Agreement, Annexure C.4.2: Policy Acknowledgment Form'
+      }
+    ]
   },
 
   sopC5: {
@@ -2014,7 +2114,113 @@ Once drafted, the policy shall be reviewed internally by:
     title: 'Credentialing & Clinical Privileging',
     searchTerms: ['credentialing', 'privileging', 'clinical', 'medical', 'license'],
     category: 'C. Onboarding & Access Control',
-    content: 'Ensures all clinical personnel possess verified credentials and are granted clinical privileges in accordance with qualifications, experience, scope of practice, and hospital policy.'
+    subsections: [
+      {
+        number: '1',
+        title: 'OBJECTIVE',
+        content: 'To establish a rigorous credentialing and privileging process ensuring that all clinical personnel possess verified qualifications, valid licenses, and appropriate competencies before being granted clinical privileges, thereby safeguarding patient safety and institutional liability.'
+      },
+      {
+        number: '2',
+        title: 'SCOPE',
+        content: 'Applicable to all clinical staff including doctors, nurses, paramedics, technicians, and visiting consultants requiring clinical privileges. Managed by HR, Medical Administration, and Credentialing Committee.'
+      },
+      {
+        number: '3',
+        title: 'DEFINITIONS',
+        content: `• Credentialing: The process of verifying qualifications, experience, licenses, and professional standing
+• Clinical Privileging: The authorization to perform specific clinical procedures or provide patient care within defined scope
+• Scope of Practice: The extent of clinical activities an individual is permitted to perform based on credentials
+• Primary Source Verification: Direct confirmation of credentials from issuing authorities`
+      },
+      {
+        number: '4',
+        title: 'PROCEDURE',
+        subsections: [
+          {
+            number: '4.1',
+            title: 'Credential Submission',
+            content: `(i) Clinical staff must submit attested copies of:
+    • Medical/Nursing/Allied Health Degree Certificates
+    • Registration certificates (Medical Council, Nursing Council, state bodies)
+    • Specialty/Super-specialty certifications
+    • Valid practicing license
+    • Experience certificates and log books
+    • CME credits and continuing education records
+    • Malpractice insurance (if applicable)
+(ii) Documents shall be submitted before or on joining date`
+          },
+          {
+            number: '4.2',
+            title: 'Primary Source Verification',
+            content: `(i) HR/Medical Administration shall conduct primary source verification by:
+    • Contacting educational institutions to verify degrees
+    • Verifying registration with Medical/Nursing Councils online
+    • Checking license validity with state licensing authorities
+    • Conducting background checks and previous employment verification
+(ii) Verification shall be completed within 15 working days
+(iii) Any discrepancy shall be immediately escalated and appointment may be withheld`
+          },
+          {
+            number: '4.3',
+            title: 'Credentialing Committee Review',
+            content: `(i) A Credentialing Committee (comprising Medical Director, HODs, and Senior Clinicians) shall:
+    • Review submitted credentials and verification reports
+    • Assess qualifications against position requirements
+    • Evaluate past experience and clinical competency
+    • Recommend approval, conditional approval, or rejection
+(ii) Committee meeting shall be held bi-monthly or as needed`
+          },
+          {
+            number: '4.4',
+            title: 'Clinical Privilege Granting',
+            content: `(i) Based on credentials, the Medical Director shall grant specific clinical privileges:
+    • For Doctors: Admission rights, surgical privileges (specific procedures), prescription authority
+    • For Nurses: Medication administration, IV access, critical care procedures
+    • For Technicians: Diagnostic procedures, equipment operation
+(ii) Privileges shall be documented in Clinical Privilege Form specifying scope and limitations
+(iii) Temporary/Restricted privileges may be granted pending full verification or for probationary period`
+          },
+          {
+            number: '4.5',
+            title: 'Ongoing Monitoring and Revalidation',
+            content: `(i) Credentials shall be revalidated every 2 years including:
+    • License renewal verification
+    • CME compliance check
+    • Performance and incident review
+(ii) Any adverse events, complaints, or malpractice shall trigger privilege review
+(iii) Failure to maintain valid credentials shall result in immediate suspension of privileges`
+          }
+        ]
+      },
+      {
+        number: '5',
+        title: 'ROLES AND RESPONSIBILITIES',
+        table: {
+          headers: ['Position', 'Responsibility'],
+          rows: [
+            ['Clinical Staff', 'Submit complete and authentic credentials, maintain valid licenses'],
+            ['HR Department', 'Collect documents, coordinate verification, maintain credentialing files'],
+            ['Medical Administration', 'Conduct primary source verification, coordinate with credentialing committee'],
+            ['Credentialing Committee', 'Review credentials, assess competency, recommend privilege granting'],
+            ['Medical Director', 'Grant clinical privileges, approve scope of practice, monitor compliance']
+          ]
+        }
+      },
+      {
+        number: '6',
+        title: 'COMPLIANCE',
+        content: `• All clinical staff must have completed credentialing before patient contact
+• Credentialing files shall be maintained for NABH audits and regulatory inspections
+• Any lapse in license validity shall result in immediate suspension from clinical duties
+• False credentials shall lead to termination and legal action`
+      },
+      {
+        number: '7',
+        title: 'REFERENCE DOCUMENTS',
+        content: 'Medical Staff Bylaws, NABH Standards (HCO.6), Indian Medical Council Act, Annexure C.5.1: Credentialing Application Form, Annexure C.5.2: Clinical Privilege Form'
+      }
+    ]
   },
 
   // SECTION D: EMPLOYEE RECORDS & STATUTORY COMPLIANCE
