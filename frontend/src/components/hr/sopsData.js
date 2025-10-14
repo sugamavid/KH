@@ -3049,7 +3049,229 @@ Special Cases:
     title: 'Attendance Monitoring & Biometric Protocol',
     searchTerms: ['attendance', 'biometric', 'monitoring', 'punch', 'tracking'],
     category: 'E. Attendance & Shift Management',
-    content: 'Defines standardised process for recording, verifying, and managing employee attendance using biometric systems ensuring punctuality, transparency, and integration with payroll.'
+    subsections: [
+      {
+        number: '1',
+        title: 'OBJECTIVE',
+        content: 'To establish a transparent, automated, and accurate attendance recording system using biometric technology ensuring punctuality, accountability, proper payroll processing, and compliance with labour regulations while maintaining employee convenience and data security.'
+      },
+      {
+        number: '2',
+        title: 'SCOPE AND APPLICABILITY',
+        content: `This SOP applies to:
+• All employees of Koyili Hospital required to mark attendance through biometric systems
+• HR Department and IT Department responsible for system maintenance and monitoring
+• Payroll Team for attendance-payroll integration
+• Department Heads for attendance verification and regularization approvals`
+      },
+      {
+        number: '3',
+        title: 'DEFINITIONS',
+        content: `• Biometric Attendance System: An automated time-recording system using fingerprint, facial recognition, or iris scan for employee identification
+• Punch In/Out: The act of marking attendance at entry and exit using biometric device
+• Attendance Regularization: Post-facto correction of attendance records due to system errors or genuine missed punches
+• Grace Period: Permissible time window beyond shift start time without marking late (typically 10-15 minutes)
+• Half Day: Working less than full shift hours but more than half (e.g., 4-8 hours for 8-hour shift)
+• Absent: Failure to report for duty without authorized leave or prior intimation`
+      },
+      {
+        number: '4',
+        title: 'PROCEDURE',
+        subsections: [
+          {
+            number: '4.1',
+            title: 'Biometric Punch Protocol',
+            content: `(i) General Guidelines:
+    • Employees must punch In at shift start and punch Out at shift end
+    • Both In and Out punches are mandatory for attendance validation
+    • Finger must be placed flat on scanner until green light/beep confirmation
+    • Multiple punch attempts allowed in case of initial failure
+    • If biometric fails repeatedly, inform supervisor immediately for manual entry
+
+(ii) Punch Timings:
+    • In Punch: Within shift start time + grace period (e.g., 9:00 AM + 10 min grace = 9:10 AM)
+    • Out Punch: After completion of shift hours
+    • Lunch/Break punches: Not mandatory unless specified for shift workers
+    • Mid-shift exits (for personal work): Inform supervisor, punch out/in may be required
+
+(iii) Multiple Punches:
+    • If multiple In punches: First punch of the day is considered
+    • If multiple Out punches: Last punch of the day is considered
+    • Mid-day exits: Out-In pairs between first In and last Out are tracked but may not affect payroll unless policy-defined
+
+(iv) Forgotten/Missed Punch:
+    • Employee must immediately inform supervisor/HR within same day
+    • Submit Attendance Regularization Request (Annexure E.1.1) with justification
+    • Supervisor verifies presence through work records/CCTV/witness
+    • HR approves and manually marks attendance in system
+    • Frequent missed punches (>3 per month) may attract warning`
+          },
+          {
+            number: '4.2',
+            title: 'Attendance Status Calculation',
+            content: `(i) Present: Both In and Out punch recorded, working hours ≥ minimum required
+    • For 8-hour shift: Minimum 7.5 hours (after break deduction)
+    • For 12-hour shift: Minimum 11 hours
+    
+(ii) Late Coming:
+    • Punch In after grace period but within 30 minutes: Marked Late (minor)
+    • Punch In 30-60 minutes late: Marked Late (major) - may deduct half CL or issue warning
+    • Punch In >60 minutes late: May be marked Absent or Half Day (as per policy)
+    • Repeated late coming (>3 times/month): Disciplinary action
+
+(iii) Early Leaving:
+    • Punch Out before shift end but working hours ≥ minimum: Present
+    • Punch Out early with <minimum hours: Half Day or proportional deduction
+    • Early leave with prior approval: Marked as approved early exit (no deduction)
+
+(iv) Half Day:
+    • Working hours 4-7.5 hours (for 8-hour shift): Half Day
+    • Half Day salary = 50% of per-day salary
+    • May utilize half casual leave to convert to full day
+
+(v) Absent:
+    • No punch In/Out and no leave application: Absent (Loss of Pay)
+    • Absent without intimation >3 consecutive days: May trigger abandonment proceedings
+    • Absent LOP deduction: Full day's salary + allowances`
+          },
+          {
+            number: '4.3',
+            title: 'Shift-wise Attendance Rules',
+            content: `(i) General Shift (9 AM - 6 PM, 8 hours + 1 hour lunch):
+    • Grace period: 10 minutes (can punch till 9:10 AM)
+    • Minimum working hours: 7.5 hours (excluding lunch)
+    • Overtime: Work beyond 6:30 PM (after 30-min buffer)
+
+(ii) Rotating Shifts (for nurses, lab, emergency staff):
+    • Morning shift: 7 AM - 3 PM
+    • Evening shift: 3 PM - 11 PM  
+    • Night shift: 11 PM - 7 AM
+    • Punch within ±15 minutes of shift start is considered on-time
+    • Shift handover punch: Must punch out only after proper handover
+
+(iii) On-Call/Flexible:
+    • Doctors and senior management may have flexible attendance
+    • Physical presence verification through alternate means (logbook, OPD records)
+    • Minimum monthly attendance requirement: 90% of working days`
+          },
+          {
+            number: '4.4',
+            title: 'System Monitoring and Reporting',
+            content: `(i) Daily Monitoring:
+    • HR shall generate Daily Attendance Report by 11 AM
+    • Identify employees with missing punches or anomalies
+    • Send alerts to employees and supervisors for clarification
+    • Missing punches >2 hours past shift start trigger absence flag
+
+(ii) Weekly Review:
+    • Department-wise attendance summary shared with HODs
+    • Late coming/early leaving trends analysis
+    • Absenteeism patterns identification
+
+(iii) Monthly Reconciliation:
+    • Final attendance sheet prepared by 5th of following month
+    • All regularizations, leave adjustments incorporated
+    • Attendance locked for payroll processing
+    • Monthly attendance report shared with employees for verification
+    • Disputes raised within 3 days of report sharing
+
+(iv) Real-time Alerts:
+    • SMS/Email alert to employee on successful punch
+    • Alert to supervisor if team member absent without leave
+    • Alert to employee if punch missed for ongoing shift`
+          },
+          {
+            number: '4.5',
+            title: 'Attendance Regularization Process',
+            content: `(i) Eligible Scenarios for Regularization:
+    • Biometric device malfunction (verified by IT)
+    • Power outage during punch time
+    • On official duty outside premises (client visit, training)
+    • Forgot to punch but physically present (verified by supervisor)
+    • System error or network issue
+
+(ii) Regularization Procedure:
+    • Employee submits Attendance Regularization Request within 24 hours
+    • Mention date, actual In/Out time, reason for missed punch
+    • Attach supporting evidence: OD letter, travel bills, supervisor email
+    • Supervisor verifies and recommends approval
+    • HR reviews and approves/rejects within 2 working days
+    • Maximum 3 regularizations per month allowed; excess requires justification
+
+(iii) Ineligible Scenarios (will NOT be regularized):
+    • Deliberate avoidance of punch to hide late coming
+    • Already on leave but forgot to apply
+    • Casual negligence without genuine reason
+    • Repeated pattern of missed punches indicating non-compliance`
+          },
+          {
+            number: '4.6',
+            title: 'Special Attendance Scenarios',
+            content: `(i) Work From Home (if applicable):
+    • Employee marks attendance via HRMS portal (login-based)
+    • WFH approval obtained in advance; attendance counted as Present
+    • Deliverables and productivity tracked separately
+
+(ii) Official Duty Outside Hospital:
+    • OD (On Duty) marked in system after approval
+    • No biometric punch required
+    • OD approval must be obtained before travel
+
+(iii) Compensatory Off (for overtime/holiday work):
+    • Prior approval required
+    • CO day marked in system; attendance counted as Present on leave
+
+(iv) Medical Emergency/Sudden Illness:
+    • Inform supervisor immediately via call/message
+    • Apply leave within 24 hours
+    • Medical certificate required for absence >2 days
+    • Absence without leave application = Absent LOP`
+          }
+        ]
+      },
+      {
+        number: '5',
+        title: 'ROLES AND RESPONSIBILITIES',
+        table: {
+          headers: ['Position', 'Responsibility'],
+          rows: [
+            ['Employees', 'Punch In/Out accurately, maintain minimum attendance, apply regularization promptly'],
+            ['Supervisors', 'Monitor team attendance, verify regularization requests, address absenteeism'],
+            ['HR Department', 'Monitor daily attendance, process regularizations, generate reports, ensure policy compliance'],
+            ['IT Department', 'Maintain biometric devices, troubleshoot errors, ensure data backup and security'],
+            ['Payroll Team', 'Extract attendance data for salary processing, calculate LOP and deductions']
+          ]
+        }
+      },
+      {
+        number: '6',
+        title: 'SYSTEM MAINTENANCE AND BACKUP',
+        content: `• Biometric devices shall be cleaned and calibrated monthly by IT
+• Daily backup of attendance data at 11:59 PM
+• Cloud backup in addition to local server
+• Manual attendance register maintained as backup during system downtime
+• Annual audit of attendance data integrity and system accuracy
+• Device replacement if failure rate >5%`
+      },
+      {
+        number: '7',
+        title: 'DISCIPLINARY IMPLICATIONS',
+        content: `• Proxy punching (punching for another employee): Termination for both parties
+• Tampering with biometric system: Serious misconduct, termination
+• Repeated late coming (>5 times/month): Written warning, salary deduction
+• Frequent absenteeism without leave: Warning, loss of pay, termination (if continued)
+• Non-cooperation in attendance process: Disciplinary action as per Code of Conduct`
+      },
+      {
+        number: '8',
+        title: 'REFERENCE DOCUMENTS',
+        content: `• HR By-Laws (Attendance and Leave Policy)
+• Shops and Establishments Act (Working Hours regulations)
+• Biometric System User Manual
+• Annexure E.1.1: Attendance Regularization Request Form
+• Annexure E.1.2: Monthly Attendance Report Template`
+      }
+    ]
   },
 
   sopE2: {
@@ -3058,7 +3280,196 @@ Special Cases:
     title: 'Shift Roster Creation and Approval',
     searchTerms: ['shift', 'roster', 'schedule', 'duty', 'rotation'],
     category: 'E. Attendance & Shift Management',
-    content: 'Defines process of preparing, reviewing, and approving duty rosters ensuring optimal staffing, uninterrupted operations, compliance with labour norms, and employee wellbeing.'
+    subsections: [
+      {
+        number: '1',
+        title: 'OBJECTIVE',
+        content: 'To establish a systematic process for planning, creating, reviewing, and communicating employee shift rosters ensuring adequate staffing levels, operational continuity, compliance with labour laws, equitable work distribution, and work-life balance for all employees.'
+      },
+      {
+        number: '2',
+        title: 'SCOPE',
+        content: 'Applicable to all departments operating in shifts (nursing, emergency, lab, radiology, security, housekeeping). Managed by Department Heads with HR support.'
+      },
+      {
+        number: '3',
+        title: 'DEFINITIONS',
+        content: `• Shift Roster: A pre-planned schedule allocating employees to specific shifts over a defined period (weekly/monthly)
+• Shift Rotation: Periodic change of shift timings (morning-evening-night) for equitable distribution
+• Minimum Staffing: The legally mandated or operationally required minimum number of staff per shift
+• Weekly Off: Mandatory rest day as per labour law (at least one day per week)
+• Shift Swap: Voluntary exchange of shifts between two employees with mutual consent`
+      },
+      {
+        number: '4',
+        title: 'PROCEDURE',
+        subsections: [
+          {
+            number: '4.1',
+            title: 'Roster Planning Inputs',
+            content: `(i) Department Head shall consider:
+    • Total sanctioned strength and current headcount
+    • Employee availability (planned leaves, training)
+    • Skill mix requirements (seniors, juniors, specialists)
+    • Patient load and operational demand forecast
+    • Statutory compliance: Weekly offs, night shift limits for women, rest periods
+    • Employee preferences and constraints (to the extent feasible)
+    • Previous roster patterns to ensure rotation fairness
+
+(ii) Minimum Staffing Norms:
+    • ICU: Minimum 1 nurse per 2 patients per shift
+    • General ward: Minimum 1 nurse per 6-8 patients per shift
+    • Emergency: 24/7 coverage with minimum 2 doctors, 4 nurses
+    • Lab/Radiology: At least 2 technicians per shift
+    • Security: Minimum 2 guards per gate per shift`
+          },
+          {
+            number: '4.2',
+            title: 'Roster Preparation',
+            content: `(i) Timeline:
+    • Monthly roster: Prepared by 25th of previous month
+    • Weekly roster (for flexible departments): Prepared by previous Friday
+
+(ii) Roster Format:
+    • Employee-wise or Date-wise grid
+    • Shift codes: M (Morning), E (Evening), N (Night), O (Off), L (Leave), T (Training)
+    • Color coding: Green (Day), Orange (Evening), Blue (Night), Grey (Off)
+    • Include shift timings for clarity
+
+(iii) Roster Creation Tools:
+    • Excel template / HRMS roster module / Shift planning software
+    • Automated roster generation based on rules (if software available)
+    • Manual roster in absence of automation
+
+(iv) Roster Rules:
+    • Minimum 11-hour rest between consecutive shifts
+    • Maximum 6 consecutive working days; weekly off mandatory
+    • Night shift: Maximum 15 nights per month per employee
+    • No consecutive night-day shifts without rest
+    • Pregnant women: No night shifts (as per law)
+    • Equitable rotation: All staff should experience all shifts proportionately`
+          },
+          {
+            number: '4.3',
+            title: 'Roster Review and Approval',
+            content: `(i) Internal Department Review:
+    • Department Head reviews draft roster
+    • Verify minimum staffing for each shift
+    • Check compliance with labour laws and policy
+    • Identify any gaps or overburdened employees
+
+(ii) Employee Feedback (optional but recommended):
+    • Share draft roster 5 days before month-end
+    • Allow employees to raise genuine concerns (medical, family emergency)
+    • Consider requests if operationally feasible
+    • Final roster non-negotiable once approved
+
+(iii) HR Review:
+    • HR verifies compliance with:
+      - Weekly off allocation
+      - Night shift limits
+      - Leave integration
+      - Overtime implications
+    • HR approval required for rosters with deviations
+
+(iv) Final Approval:
+    • Department Head approves final roster
+    • Roster locked in HRMS (if applicable)
+    • Published to employees by 28th of previous month`
+          },
+          {
+            number: '4.4',
+            title: 'Roster Communication',
+            content: `(i) Publication Channels:
+    • Display on department notice board (physical copy)
+    • Upload to HRMS portal (digital access)
+    • Email to all team members
+    • WhatsApp group (for immediate visibility)
+    • SMS alerts for individual shift assignments
+
+(ii) Roster Acknowledgment:
+    • Employees must acknowledge viewing roster
+    • Any concerns raised within 2 days of publication
+    • Post-publication changes only for emergencies`
+          },
+          {
+            number: '4.5',
+            title: 'Mid-Month Roster Changes',
+            content: `(i) Permissible Reasons for Change:
+    • Sudden employee absence (illness, emergency)
+    • Staff shortage due to resignation/termination
+    • Unexpected surge in patient load
+    • Equipment breakdown requiring additional manpower
+
+(ii) Change Process:
+    • Department Head identifies need for change
+    • Find replacement through:
+      - Shift swap between willing employees
+      - Voluntary overtime by available staff
+      - Calling staff from off-day (with consent and double pay)
+    • Document change in Roster Amendment Register
+    • Inform affected employees immediately
+    • Update roster in system
+
+(iii) Emergency Roster Adjustments:
+    • In case of mass casualty, disaster, epidemic: Emergency roster activated
+    • All available staff may be called; normal roster suspended
+    • Compensatory offs provided post-crisis
+    • Overtime and incentives as per emergency policy`
+          },
+          {
+            number: '4.6',
+            title: 'Shift Swapping Protocol',
+            content: `(i) Shift Swap Request:
+    • Two employees mutually agree to exchange shifts
+    • Both submit written Shift Swap Request (Annexure E.2.1)
+    • Must maintain same skill level (senior-senior, junior-junior)
+    • Supervisor approval required
+    • Minimum 24 hours notice (except genuine emergencies)
+
+(ii) Approval Criteria:
+    • No impact on patient care or operations
+    • Both employees qualified for swapped shifts
+    • No overtime liability arising from swap
+    • Not exceeding individual shift limits (e.g., night shift cap)
+
+(iii) Rejection Reasons:
+    • Inadequate notice
+    • Skill mismatch
+    • One employee already overburdened
+    • Frequent swap requests indicating roster manipulation`
+          }
+        ]
+      },
+      {
+        number: '5',
+        title: 'ROLES AND RESPONSIBILITIES',
+        table: {
+          headers: ['Position', 'Responsibility'],
+          rows: [
+            ['Department Head', 'Prepare roster, ensure compliance, approve shift swaps, monitor staffing adequacy'],
+            ['HR Department', 'Review rosters for policy compliance, advise on labour law adherence, maintain records'],
+            ['Employees', 'Adhere to assigned shifts, inform about unavailability in advance, cooperate in emergencies'],
+            ['Shift In-charge', 'Ensure smooth handover, report any staffing shortage to HOD immediately']
+          ]
+        }
+      },
+      {
+        number: '6',
+        title: 'COMPLIANCE REQUIREMENTS',
+        content: `• Weekly off: Mandatory 1 day per week (can be compensatory off if worked)
+• Maximum working hours: 48 hours/week (can extend to 60 hours with overtime)
+• Rest between shifts: Minimum 11 hours mandatory
+• Night shift for women: Only with consent, safe transport, adequate security
+• Overtime payment: As per labour law (double pay for weekly off work)
+• Roster records: Maintain for 3 years for labour inspection`
+      },
+      {
+        number: '7',
+        title: 'REFERENCE DOCUMENTS',
+        content: 'Shops and Establishments Act, Factories Act (working hours), HR By-Laws, Annexure E.2.1: Shift Swap Request Form, Annexure E.2.2: Monthly Roster Template'
+      }
+    ]
   },
 
   sopE3: {
@@ -3067,7 +3478,208 @@ Special Cases:
     title: 'Half-Day, Short Leave & Late Entry Management',
     searchTerms: ['half-day', 'short', 'leave', 'late', 'entry', 'punctuality'],
     category: 'E. Attendance & Shift Management',
-    content: 'Implements structured protocol for managing short durations of absence, delayed reporting, and early departures through standardised definitions, documentation, and approval workflows.'
+    subsections: [
+      {
+        number: '1',
+        title: 'OBJECTIVE',
+        content: 'To define clear policies and procedures for managing short-duration absences, delayed reporting, and early departures ensuring operational continuity, fair treatment, accurate payroll processing, and maintaining workplace discipline while allowing reasonable flexibility for genuine needs.'
+      },
+      {
+        number: '2',
+        title: 'SCOPE',
+        content: 'Applicable to all employees across all categories. Managed by supervisors with HR oversight for policy compliance and payroll impact.'
+      },
+      {
+        number: '3',
+        title: 'DEFINITIONS AND POLICIES',
+        subsections: [
+          {
+            number: '3.1',
+            title: 'Late Entry',
+            content: `Definition: Reporting for duty after scheduled shift start time
+
+(i) Grace Period Late (0-10 minutes):
+    • Within grace period: No action, marked Present
+    • Acceptable 2-3 times per month without issue
+    • >5 times/month: Verbal counseling
+
+(ii) Minor Late (11-30 minutes):
+    • Marked as "Late (Minor)" in attendance
+    • First 2 occurrences/month: Warning
+    • 3rd occurrence: Deduct 0.25 CL (if available) or monetary deduction
+    • >3 occurrences: Written warning
+
+(iii) Major Late (31-60 minutes):
+    • Marked as "Late (Major)"
+    • Deduct 0.5 CL or proportional salary deduction
+    • Requires written explanation
+    • Repeated occurrences: Disciplinary action
+
+(iv) Very Late (>60 minutes):
+    • May be marked as Half Day or Absent (supervisor discretion)
+    • Deduct 1 CL or half-day salary
+    • Mandatory written explanation
+    • Pattern of delays: Performance appraisal impact
+
+Permissible Reasons (with prior intimation):
+• Medical emergency (self/family)
+• Vehicle breakdown with proof
+• Traffic jam/accident (news evidence)
+• Public transport delay (route-specific known issues)
+
+Non-Permissible Excuses:
+• Overslept / alarm didn't ring
+• Didn't feel like coming
+• Vague "personal reasons" without details
+• Repeated same excuse`
+          },
+          {
+            number: '3.2',
+            title: 'Short Leave',
+            content: `Definition: Authorized absence during working hours for personal work (1-3 hours)
+
+(i) Eligibility:
+    • Available to all confirmed employees
+    • Maximum 2 hours per occasion
+    • Maximum 2 short leaves per month
+    • Requires prior approval from supervisor
+
+(ii) Application Process:
+    • Submit Short Leave Request form or email
+    • Mention: Date, time (From-To), duration, reason
+    • Supervisor approves based on operational feasibility
+    • Must be applied before taking leave (except emergencies)
+
+(iii) Deduction Policy:
+    • No deduction for short leave (employee flexibility benefit)
+    • However, must compensate hours within same week (stay late or come early)
+    • If not compensated: Deduct proportional amount from salary
+    • Monthly total short leaves >4 hours: Deduct 0.5 day salary
+
+(iv) Common Use Cases:
+    • Doctor/dentist appointment
+    • Bank work (when not possible post-office hours)
+    • Government office work
+    • Child's school meeting
+    • Vehicle service/repair
+
+(v) Restrictions:
+    • Not available during critical operations (surgery, emergency cases)
+    • Advance notice required (except medical emergency)
+    • Cannot be clubbed with half-day leave
+    • Supervisor may deny if staffing insufficient`
+          },
+          {
+            number: '3.3',
+            title: 'Half-Day Leave',
+            content: `Definition: Working approximately half of the scheduled shift hours
+
+(i) Half-Day Types:
+    • First Half Leave: Absent till lunch, work post-lunch (e.g., join by 1 PM for 9-6 shift)
+    • Second Half Leave: Work till lunch, leave post-lunch (e.g., leave by 1 PM for 9-6 shift)
+
+(ii) Leave Deduction:
+    • Deduct 0.5 CL (if available)
+    • If no CL balance: Deduct 0.5 day salary (Loss of Pay)
+    • Half-day on weekly off/holiday: No comp off given
+
+(iii) Application:
+    • Advance application required (preferably 1 day prior)
+    • Emergency half-day: Inform supervisor by call/message before absence
+    • Apply leave retrospectively within 24 hours
+    • Approval at supervisor discretion
+
+(iv) Salary Calculation:
+    • Half-day present = 50% of per-day basic + 50% of per-day allowances
+    • Half-day absent = Deduct 50% of per-day gross salary
+    • No proportional increment in case of half-day on working day
+
+(v) Restrictions:
+    • Not advisable for critical staff (OT nurses, ICU, emergency)
+    • Maximum 4 half-days per month (beyond that, take full-day leave)
+    • Pattern of frequent half-days: Counseling and performance review`
+          },
+          {
+            number: '3.4',
+            title: 'Early Exit',
+            content: `Definition: Leaving before scheduled shift end time
+
+(i) Authorized Early Exit:
+    • Prior approval from supervisor
+    • Valid reason: Medical appointment, personal emergency, official work
+    • If working hours ≥7 hours (for 8-hour shift): Marked Present
+    • If working hours 4-7 hours: Half Day
+    • If working hours <4 hours: Absent or full-day leave
+
+(ii) Unauthorized Early Exit:
+    • Leaving without permission: Serious indiscipline
+    • Marked as Half Day or Absent depending on hours worked
+    • Warning issued
+    • Repeated unauthorized exits: Termination
+
+(iii) Compensation:
+    • Employee may request to compensate hours next day (with approval)
+    • Example: Leave 2 hours early today, come 2 hours early tomorrow
+    • Must be within same week
+    • Subject to operational feasibility`
+          }
+        ]
+      },
+      {
+        number: '4',
+        title: 'DOCUMENTATION AND APPROVAL WORKFLOW',
+        content: `(i) For Late Entry:
+    • >30 minutes late: Submit written explanation via email or form
+    • Supervisor reviews and decides on action
+    • HR monitors patterns for disciplinary review
+
+(ii) For Short Leave / Half Day / Early Exit:
+    • Employee submits request (in advance or retrospectively for emergency)
+    • Supervisor approves/rejects based on operational needs
+    • HR updates attendance system
+    • Payroll deductions reflected in next salary
+
+(iii) Record Keeping:
+    • All requests filed in employee attendance folder
+    • Digital records in HRMS
+    • Monthly summary of late/short leaves shared with employees`
+      },
+      {
+        number: '5',
+        title: 'ESCALATION AND DISCIPLINARY MATRIX',
+        content: `Frequency-based Progressive Discipline:
+
+Late Coming:
+• 3-5 lates/month: Verbal warning
+• 6-8 lates/month: Written warning, salary deduction
+• >8 lates/month: Suspension/termination proceedings
+
+Habitual Absenteeism (frequent half-days/short leaves):
+• Counseling by HR and supervisor
+• Performance appraisal impact
+• Potential transfer or role change
+• If no improvement: Termination for non-commitment
+
+Unauthorized Absence/Early Exit:
+• First instance: Severe warning
+• Second instance: Salary deduction + written warning
+• Third instance: Termination`
+      },
+      {
+        number: '6',
+        title: 'EMPLOYEE RESPONSIBILITIES',
+        content: `• Maintain punctuality as core professional responsibility
+• Inform supervisor immediately in case of unavoidable delay
+• Plan personal work during off-hours to minimize short leaves
+• Use leave facilities judiciously and not abuse flexibility
+• Accept accountability for patterns of indiscipline`
+      },
+      {
+        number: '7',
+        title: 'REFERENCE DOCUMENTS',
+        content: 'HR By-Laws (Attendance Policy), Code of Conduct, Annexure E.3.1: Short Leave Request Form, Annexure E.3.2: Late Entry Explanation Format'
+      }
+    ]
   },
 
   sopE4: {
@@ -3076,7 +3688,177 @@ Special Cases:
     title: 'Weekly Off and Holiday Calendar Issuance',
     searchTerms: ['weekly', 'off', 'holiday', 'calendar', 'rest', 'day'],
     category: 'E. Attendance & Shift Management',
-    content: 'Ensures proper scheduling and communication of employee weekly offs and public holidays through institution-wide calendar while maintaining seamless hospital operations.'
+    subsections: [
+      {
+        number: '1',
+        title: 'OBJECTIVE',
+        content: 'To establish a structured process for planning, communicating, and managing weekly offs and public holidays ensuring compliance with labour laws, operational continuity, employee rest and recuperation, and transparent communication of the annual holiday calendar.'
+      },
+      {
+        number: '2',
+        title: 'SCOPE',
+        content: 'Applicable to all employees. Managed by HR with inputs from department heads for operational scheduling.'
+      },
+      {
+        number: '3',
+        title: 'WEEKLY OFF POLICY',
+        subsections: [
+          {
+            number: '3.1',
+            title: 'Legal Compliance',
+            content: `As per Shops and Establishments Act:
+• Every employee is entitled to at least ONE day off in a week
+• Weekly off can be on any day (not necessarily Sunday)
+• For continuous process establishments (hospitals): Rotational weekly offs permissible
+• Employee must get 4 weekly offs in a month minimum
+• Working on weekly off: Requires compensatory off within 30 days OR overtime pay`
+          },
+          {
+            number: '3.2',
+            title: 'Weekly Off Allocation',
+            content: `(i) General/Administrative Staff (Monday-Friday, 5-day week):
+    • Weekly offs: Saturday and Sunday
+    • Fixed weekly offs
+
+(ii) Shift Workers (Nurses, Lab, Emergency, Security):
+    • Rotational weekly offs as per duty roster
+    • Minimum 4 offs per month
+    • Weekly off day may vary based on roster
+    • Scheduled in monthly roster
+
+(iii) Doctors and Consultants:
+    • Typically fixed weekly off (e.g., Sunday)
+    • Additional weekly off negotiable based on OPD schedule
+    • On-call duties may require availability on off-days (compensated separately)
+
+(iv) Support Staff (Housekeeping, Pantry):
+    • Rotational weekly offs based on operational needs
+    • Ensure adequate coverage on all days`
+          },
+          {
+            number: '3.3',
+            title: 'Working on Weekly Off',
+            content: `(i) When Required:
+    • Emergency staffing shortage
+    • Critical projects or deadlines
+    • Special events or drives (health camps, audits)
+    • Employee volunteers for extra income
+
+(ii) Approval Process:
+    • Department head requests employee to work on off-day
+    • Employee consent required (cannot be forced, except emergency)
+    • Approval from HR for overtime/comp off tracking
+
+(iii) Compensation:
+    • Option 1: Compensatory off within next 30 days (preferred)
+    • Option 2: Overtime payment at double rate (as per labour law)
+    • Comp off: Must be taken within validity, else encashed at basic rate
+    • Mark attendance as "WO-Worked" in system`
+          }
+        ]
+      },
+      {
+        number: '4',
+        title: 'HOLIDAY CALENDAR',
+        subsections: [
+          {
+            number: '4.1',
+            title: 'Annual Holiday List Preparation',
+            content: `(i) Timeline:
+    • Draft holiday list prepared by December 15th of previous year
+    • Published by December 31st for upcoming year
+
+(ii) Holiday Categories:
+    • National Holidays (Mandatory): Republic Day, Independence Day, Gandhi Jayanti (3 days)
+    • State Holidays: As per Kerala State Government gazette
+    • Festival Holidays: Diwali, Holi, Eid, Christmas, Onam, Vishu, etc.
+    • Hospital Foundation Day (optional)
+
+(iii) Holiday Count:
+    • General staff: ~12-15 holidays per year (excluding weekly offs)
+    • Shift workers (24x7 departments): Limited holidays; rotational offs
+
+(iv) Preparation Process:
+    • HR collates central government + state government holiday lists
+    • Adds any hospital-specific holidays (founders day, annual day)
+    • Finalizes list ensuring coverage for all major religions/communities
+    • Gets approval from management
+    • Publishes on intranet, notice boards, and employee portal`
+          },
+          {
+            number: '4.2',
+            title: 'Holiday Roster for 24x7 Departments',
+            content: `For departments that operate on holidays (Emergency, ICU, Lab):
+
+(i) Skeleton Staffing:
+    • Minimum required staff scheduled for duty
+    • Duty assignment as per shift roster
+    • Employees working on holiday get compensatory off
+
+(ii) Voluntary Duty:
+    • Request for volunteers to work on holidays
+    • Incentive: Comp off + holiday allowance/bonus
+    • Equitable rotation: Same employees don't work all holidays
+
+(iii) Compensatory Off for Holiday Duty:
+    • Working on gazetted holiday = 1 comp off within 30 days
+    • If comp off not availed: Encashed at basic rate
+    • Mark as "Holiday Worked" in attendance`
+          },
+          {
+            number: '4.3',
+            title: 'Restricted Holidays (Optional Holidays)',
+            content: `(i) Concept:
+    • Additional 3-5 holidays from which employee can choose 2-3 based on personal preference
+    • Useful for religious/regional festivals not in main calendar
+
+(ii) Examples:
+    • Various regional festivals
+    • Lesser-known religious observances
+    • Birthdays (some organizations offer birthday leave)
+
+(iii) Availing Restricted Holiday:
+    • Employee applies in advance (1 week notice)
+    • Subject to operational approval
+    • Deducted from restricted holiday quota
+    • Must be availed during the year (no carry forward)`
+          },
+          {
+            number: '4.4',
+            title: 'Sandwich Leave Policy',
+            content: `When holiday falls between two working days (e.g., Thursday holiday, Friday off):
+• Employees may take Friday as leave to create long weekend
+• Not mandatory to work; employee choice
+• If many apply, operational needs determine approval
+• Discourage habitual sandwich leave requests affecting work`
+          }
+        ]
+      },
+      {
+        number: '5',
+        title: 'COMMUNICATION OF CALENDAR',
+        content: `• Published on hospital intranet and HRMS portal
+• Physical copy displayed on notice boards
+• Email to all employees
+• Pocket calendar distributed to all staff (optional)
+• Mobile app notification (if HRMS app available)
+• Any mid-year changes (government amendments): Immediate communication via email and notice`
+      },
+      {
+        number: '6',
+        title: 'COMPLIANCE MONITORING',
+        content: `• HR maintains record of weekly offs and holidays granted
+• Monthly audit of compensatory offs availed vs. pending
+• Reminder to employees to avail comp offs before expiry
+• Labour inspection preparedness: Records available for verification
+• Annual report on holiday and weekly off compliance`
+      },
+      {
+        number: '7',
+        title: 'REFERENCE DOCUMENTS',
+        content: 'Shops and Establishments Act, Factories Act (weekly holidays provisions), Central Government Holiday List, State Government Holiday List, HR By-Laws, Annexure E.4.1: Annual Holiday Calendar Template'
+      }
+    ]
   },
 
   // SECTION F: LEAVE MANAGEMENT
