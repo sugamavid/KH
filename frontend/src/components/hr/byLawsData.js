@@ -4,76 +4,15 @@ export const byLawsData = {
     id: 'preamble',
     title: 'PREAMBLE',
     searchTerms: ['preamble', 'introduction', 'purpose', 'objectives'],
-    subsections: [
-      {
-        title: 'WHEREAS Clauses',
-        content: `**WHEREAS,** Koyili Hospital (hereinafter referred to as "the Hospital") is a multi-specialty healthcare institution established to provide quality medical care, treatment, and healthcare services to the community, committed to maintaining the highest standards of medical excellence, patient safety, and employee welfare;
+    content: `Koyili Hospital is dedicated to excellence in healthcare and fostering a workplace that upholds the highest standards of professionalism, integrity, and respect. Recognising that our employees are the cornerstone of our success, these Human Resource By-Laws have been crafted to establish clear and comprehensive guidelines that promote a positive, safe, and inclusive working environment.
 
-**AND WHEREAS,** the Hospital recognizes that its most valuable asset is its human capital - the dedicated doctors, nurses, paramedical staff, administrative personnel, and support workers who collectively deliver exceptional healthcare services;
+The purpose of these by-laws is to provide a structured framework for operational practices, employee rights, responsibilities, and hospital policies that support the growth and well-being of our staff and, by extension, enhance the quality of patient care. This document serves as a testament to the hospital's unwavering commitment to ethical conduct, regulatory compliance, and continuous improvement in all facets of hospital operations.
 
-**AND WHEREAS,** the Hospital is committed to fostering a work environment characterized by mutual respect, dignity, fairness, transparency, professional growth, and adherence to the highest ethical standards;
+These by-laws are designed to ensure transparency, consistency, and fairness in all interactions within the hospital. They align with applicable local and national laws, industry standards, and best practices, reinforcing the principles of accountability, teamwork, and innovation.
 
-**AND WHEREAS,** the Hospital operates in a highly regulated healthcare environment subject to numerous laws, regulations, and standards including but not limited to the Kerala Shops and Commercial Establishments Act, Industrial Employment (Standing Orders) Act, Clinical Establishments Act, Pre-Conception and Pre-Natal Diagnostic Techniques Act, Biomedical Waste Management Rules, Indian Medical Council Regulations, Indian Nursing Council Regulations, NABH standards, and various other central and state legislations;
+By adhering to these by-laws, Koyili Hospital aims to cultivate an environment where employees feel valued, empowered, and motivated to contribute to the hospital's mission of providing superior healthcare services. The shared commitment to these guiding principles will enable Koyili Hospital to maintain its reputation as a leader in patient care and an exemplary workplace.
 
-**AND WHEREAS,** it is essential to establish clear, comprehensive, and transparent policies and procedures governing all aspects of the employment relationship including recruitment, conditions of service, compensation, benefits, performance management, career development, discipline, grievance redressal, and separation;
-
-**AND WHEREAS,** these By-Laws are intended to provide clarity and consistency in Human Resources management, protect the legitimate rights and interests of both the Hospital and its employees, promote harmonious industrial relations, and ensure legal compliance;
-
-**AND WHEREAS,** the Board of Directors of Koyili Hospital, in exercise of the powers vested in them and after due deliberation and consultation with stakeholders, deems it necessary and expedient to formulate and adopt these Human Resources By-Laws;`
-      },
-      {
-        title: 'Enactment',
-        content: `**NOW THEREFORE,** the Board of Directors of Koyili Hospital hereby enacts, adopts, and promulgates these comprehensive Human Resources By-Laws to govern all employment relationships within the Hospital, to be effective from February 1, 2024, superseding all previous HR policies, circulars, and directives to the extent inconsistent with these By-Laws.`
-      },
-      {
-        title: 'SCOPE AND APPLICABILITY',
-        content: `These By-Laws shall apply to all employees of Koyili Hospital including permanent, probationary, contractual, temporary, part-time, and casual employees, as well as consultants, trainees, and interns, except where specifically stated otherwise.
-
-The By-Laws are binding on all employees from the date of their appointment or the effective date of these By-Laws, whichever is later.`
-      },
-      {
-        title: 'PURPOSE AND OBJECTIVES',
-        content: `The primary objectives of these By-Laws are to:
-
-(a) Establish clear terms and conditions of employment;
-
-(b) Define rights, responsibilities, and obligations of employees and management;
-
-(c) Promote a culture of excellence, integrity, and professionalism;
-
-(d) Ensure fair and equitable treatment of all employees;
-
-(e) Provide mechanisms for performance management, career development, and skill enhancement;
-
-(f) Establish transparent procedures for discipline, grievance redressal, and dispute resolution;
-
-(g) Ensure compliance with all applicable laws and regulations;
-
-(h) Foster employee engagement, satisfaction, and retention; and
-
-(i) Support the Hospital's mission of delivering world-class healthcare services.`
-      },
-      {
-        title: 'GUIDING PRINCIPLES',
-        content: `These By-Laws are founded on the following guiding principles:
-
-**Fairness and Equity** - Treating all employees with dignity and without discrimination;
-
-**Transparency** - Maintaining open, honest, and clear communication;
-
-**Meritocracy** - Recognizing and rewarding performance, competence, and contribution;
-
-**Legal Compliance** - Adhering strictly to all applicable laws and regulations;
-
-**Employee Welfare** - Promoting the physical, mental, and financial well-being of employees;
-
-**Patient-Centricity** - Ensuring all HR policies support excellent patient care;
-
-**Continuous Improvement** - Regularly reviewing and updating policies to reflect best practices; and
-
-**Mutual Respect** - Fostering a culture of respect between management and employees.`
-      }
-    ]
+These by-laws shall be regarded as a living document, subject to periodic review and revision to adapt to the evolving needs of the healthcare industry and the hospital community.`
   },
   section1: {
     id: 'section1',
