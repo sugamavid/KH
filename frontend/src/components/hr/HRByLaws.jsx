@@ -550,8 +550,10 @@ const HRByLaws = ({ setActiveModule }) => {
                   )}
                   <div 
                     className="text-lg font-serif text-slate-800"
-                    dangerouslySetInnerHTML={{ __html: renderFormattedContent(subsection.content) }}
-                  />
+                    style={{whiteSpace: 'pre-wrap'}}
+                  >
+                    {subsection.content}
+                  </div>
                 </div>
               ))}
               
