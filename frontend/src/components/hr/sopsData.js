@@ -14187,7 +14187,248 @@ Repeated violations: Cancellation of business license`
     title: 'Resignation Filing and Withdrawal Process',
     searchTerms: ['resignation', 'filing', 'withdrawal', 'notice', 'period'],
     category: 'N. Exit & Separation Management',
-    content: 'Defines formal process for employees to submit resignation, serve notice period, and procedures for withdrawal of resignation if applicable.'
+    subsections: [
+      {
+        number: '1',
+        title: 'OBJECTIVE',
+        content: 'To define formal, structured process for employees to voluntarily resign from employment, specify notice period requirements, resignation acceptance procedures, notice buyout provisions, and withdrawal mechanisms ensuring smooth transition, knowledge transfer, proper documentation, and amicable separation maintaining professional relationship.'
+      },
+      {
+        number: '2',
+        title: 'SCOPE',
+        content: 'Covers voluntary resignations by employees at all levels, notice period obligations, early release provisions, resignation withdrawal process, and counter-offer considerations. Applicable to all permanent employees. Does not cover terminations, retrenchments, or dismissals (handled separately).'
+      },
+      {
+        number: '3',
+        title: 'RESIGNATION PROCEDURE',
+        subsections: [
+          {
+            number: '3.1',
+            title: 'Formal Resignation Submission',
+            content: `Must be in Writing:
+• Resignation Letter (Annexure N.1.1) addressed to immediate supervisor or HR
+• Email submission acceptable (followed by signed hard copy)
+• Verbal resignation NOT valid (must be formalized in writing)
+
+Contents:
+• Date of submission
+• Employee name, designation, employee ID
+• Statement of resignation
+• Last working day (after notice period)
+• Brief reason (optional but encouraged)
+• Expression of gratitude (professional courtesy)
+• Contact details for post-exit communication
+
+Submission:
+• Hand over to supervisor and HR
+• Email to supervisor and hr@koyilihospital.com
+• Acknowledgment obtained`
+          },
+          {
+            number: '3.2',
+            title: 'Notice Period Requirements',
+            content: `As per Employment Contract and Policy:
+• Junior Staff (Grade 1-2): 30 days notice
+• Mid-Level (Grade 3-4): 60 days notice
+• Senior Management (Grade 5+): 90 days notice
+• Probationers: 15 days or as per appointment letter
+
+Notice Period Calculation:
+• Starts from date resignation accepted by employer
+• Working days counted (excludes weekly offs and public holidays - varies by policy)
+• OR calendar days (as per company policy)
+• Last working day = Date of submission + Notice period`
+          }
+        ]
+      },
+      {
+        number: '4',
+        title: 'RESIGNATION ACCEPTANCE',
+        content: `(i) Supervisor and HR review resignation
+(ii) Discussion with employee (exit conversation):
+    • Reason for leaving
+    • Any issues that can be addressed? (retention attempt)
+    • Counter-offer consideration (if employee is critical)
+(iii) If resignation stands:
+    • Resignation accepted formally by HR/Management
+    • Acceptance letter issued mentioning last working day
+(iv) Timeline: Acceptance within 3-7 working days of submission
+(v) Notice period countdown begins from acceptance date`
+      },
+      {
+        number: '5',
+        title: 'NOTICE PERIOD WAIVER / EARLY RELEASE',
+        subsections: [
+          {
+            number: '5.1',
+            title: 'Employee Request for Early Release',
+            content: `Employee may request shorter notice or immediate release:
+
+Grounds:
+• Personal emergency or family reasons
+• Joining new employer urgently (offer rescinded if delayed)
+• Health issues
+• Relocation
+
+Process:
+• Submit written request with justification
+• Management evaluates:
+    - Criticality of role
+    - Pending tasks and handover status
+    - Availability of replacement
+• Approval: HOD and HR
+• If approved: Revised last working day communicated
+• If denied: Employee must serve full notice or pay in lieu`
+          },
+          {
+            number: '5.2',
+            title: 'Employer Waiver (Early Release)',
+            content: `Management may release employee before notice period ends:
+• Non-critical role or replacement available
+• Handover completed satisfactorily
+• Mutual agreement
+• In best interest of organization
+
+Employee benefits:
+• No penalty for early release
+• Full & Final settlement as per entitled`
+          },
+          {
+            number: '5.3',
+            title: 'Notice Period Buyout (Payment in Lieu)',
+            content: `Employee pays salary for unserved notice period:
+
+Formula:
+Payment = (Basic + Allowances) ÷ 30 × Unserved days
+
+Example:
+• Monthly CTC: ₹60,000 (Basic ₹30,000)
+• Notice: 60 days, Employee wants to leave in 30 days
+• Unserved: 30 days
+• Buyout: ₹30,000 (approx.)
+
+Approval:
+• Request submitted in writing
+• Management approval required (may deny if critical role)
+• Payment made before last working day OR deducted from F&F`
+          }
+        ]
+      },
+      {
+        number: '6',
+        title: 'OBLIGATIONS DURING NOTICE PERIOD',
+        content: `Employee Must:
+• Continue normal duties with full commitment
+• Complete handover of responsibilities (SOP N.3)
+• Train replacement (if identified)
+• Document processes and knowledge
+• Return company assets
+• Not take new employment during notice period (unless released)
+• Maintain confidentiality and professionalism
+
+Employer Must:
+• Allow employee to fulfill obligations
+• Not assign unreasonable tasks
+• Permit leave encashment or resignation date adjustment (if policy allows)
+• Process exit formalities (SOP N.2, N.3, N.4)`
+      },
+      {
+        number: '7',
+        title: 'ABSCONDING DURING NOTICE PERIOD',
+        content: `If employee stops coming without intimation:
+• Treated as breach of contract
+• Show cause notice issued
+• If no response: Termination on record (instead of resignation)
+• Full & Final settlement: Dues adjusted for notice pay recovery
+• Experience/Relieving letter withheld or marked with termination
+• Negative impact on background verification for future employers`
+      },
+      {
+        number: '8',
+        title: 'RESIGNATION WITHDRAWAL',
+        subsections: [
+          {
+            number: '8.1',
+            title: 'Employee Withdrawal Request',
+            content: `Employee may withdraw resignation if:
+• Change of mind
+• Personal circumstances resolved
+• Counter-offer accepted
+
+Process:
+(i) Written request for withdrawal before last working day
+(ii) Management evaluates:
+    • Resignation acceptance already communicated?
+    • Replacement hired or in process?
+    • Trust and relationship intact?
+    • Business need for employee
+(iii) Approval:
+    • If early in notice period and no replacement: Likely approved
+    • If late or replacement hired: May be denied
+    • Decision at management discretion
+(iv) If approved: Withdrawal accepted, employee continues
+(v) If denied: Employee must leave as per resignation`
+          },
+          {
+            number: '8.2',
+            title: 'Impact of Withdrawal',
+            content: `If Withdrawal Approved:
+• Employee continues in same role
+• Resignation retracted formally
+• No adverse record (unless pattern of repeated resignations)
+• However, trust may be affected - future career growth consideration
+
+Best Practice:
+• Withdrawal discouraged unless exceptional circumstances
+• Reflect carefully before resigning`
+          }
+        ]
+      },
+      {
+        number: '9',
+        title: 'COUNTER-OFFER POLICY',
+        content: `When Valued Employee Resigns:
+• Manager or HR may make counter-offer:
+    - Salary increase
+    - Promotion
+    - Role change
+    - Better benefits
+    - Address grievances
+
+Considerations:
+• Counter-offer only for critical, high-performing employees
+• Assess: Why did employee decide to leave? Can issue be genuinely resolved?
+• If only money: Salary adjustment
+• If career growth: Promotion or new responsibilities
+• If work environment: Transfer or team change
+
+Risks:
+• Employee who resigned once may leave again
+• Sets precedent (others may resign to get raise)
+• Counter-offer sparingly and genuinely`
+      },
+      {
+        number: '10',
+        title: 'DOCUMENTATION',
+        content: `Maintained:
+• Resignation letter
+• Acceptance letter
+• Notice period waiver/buyout approval (if any)
+• Withdrawal request and decision (if any)
+• Handover documents (SOP N.3)
+• Exit interview (SOP N.2)
+• Clearance forms (SOP N.3)
+• Full & Final settlement (SOP N.4)
+• Relieving letter and experience certificate
+
+Retained in personnel file for 7 years`
+      },
+      {
+        number: '11',
+        title: 'REFERENCE DOCUMENTS',
+        content: 'HR By-Laws (Resignation & Notice Period Policy), Employment Contract, Annexure N.1.1: Resignation Letter Template, Annexure N.1.2: Resignation Acceptance Letter, Annexure N.1.3: Notice Buyout Request Form'
+      }
+    ]
   },
 
   sopN2: {
