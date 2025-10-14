@@ -468,7 +468,7 @@ const ReportGenerator = ({ onClose, onNavigateToSection }) => {
                         : 'border-slate-200 hover:border-slate-300'
                     }`}
                   >
-                    {format === 'pdf' && <FilePdf className="w-5 h-5" />}
+                    {format === 'pdf' && <FileText className="w-5 h-5" />}
                     {format === 'excel' && <FileSpreadsheet className="w-5 h-5" />}
                     {format === 'csv' && <File className="w-5 h-5" />}
                     <span className="font-semibold uppercase">{format}</span>
