@@ -940,6 +940,19 @@ const HRByLaws = ({ setActiveModule }) => {
         />
       )}
 
+      {/* Training Hub Modal */}
+      {showTrainingHub && (
+        <TrainingHub 
+          onClose={() => setShowTrainingHub(false)}
+          onNavigateToSection={(sectionId) => {
+            setActiveSection(sectionId);
+            if (contentRef.current) {
+              contentRef.current.scrollTop = 0;
+            }
+          }}
+        />
+      )}
+
       {/* Print Styles */}
       <style jsx>{`
         @media print {
