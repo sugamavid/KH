@@ -2085,7 +2085,7 @@ export const annexuresData = {
           },
           {
             title: 'Regulatory Reporting',
-            fields: ['Is this accident reportable to statutory authorities? Yes / No', '', 'If Yes, report to:', '☐ Factory Inspector (Factories Act)', '☐ ESI Corporation (if ESI-covered employee)', '☐ Labour Department', '☐ Pollution Control Board (if environmental incident)', '☐ Fire Department', '☐ Local Police (if criminal negligence suspected)', '', 'Reports filed with:', '1. Authority: ________ Date: ________', '2. Authority: ________ Date: ________', '', 'Reference numbers:', ''}
+            fields: ['Is this accident reportable to statutory authorities? Yes / No', '', 'If Yes, report to:', '☐ Factory Inspector (Factories Act)', '☐ ESI Corporation (if ESI-covered employee)', '☐ Labour Department', '☐ Pollution Control Board (if environmental incident)', '☐ Fire Department', '☐ Local Police (if criminal negligence suspected)', '', 'Reports filed with:', '1. Authority: ________ Date: ________', '2. Authority: ________ Date: ________', '', 'Reference numbers: ________']
           },
           {
             title: 'Cost of Accident',
