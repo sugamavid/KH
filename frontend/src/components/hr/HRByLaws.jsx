@@ -3,7 +3,9 @@ import {
   Home, Scale, BookOpen, FileText, Calendar, Clock, Users, 
   DollarSign, Award, AlertCircle, Download, Printer, Search,
   ChevronRight, TrendingUp, CheckCircle, Shield, X, ChevronDown,
-  Menu, ArrowLeft, Filter, Zap
+  Menu, ArrowLeft, Filter, Zap, Activity, Heart, Lock, LogOut, 
+  Monitor, Globe, MessageCircle, MessageSquare, UserCheck, Smile, 
+  AlertTriangle, Gift, CheckSquare
 } from 'lucide-react';
 import { byLawsData, quickReferenceData, keyHighlights } from './byLawsData';
 
