@@ -1,0 +1,200 @@
+sopM4: {
+    id: 'sopM4',
+    number: 'SOP M.4',
+    title: 'Appeals and Review Flow',
+    searchTerms: ['appeals', 'review', 'reconsideration', 'challenge'],
+    category: 'M. Grievance, Complaints & Redressal',
+    subsections: [
+      {
+        number: '1',
+        title: 'OBJECTIVE',
+        content: 'To define formal process for employees to appeal disciplinary decisions, grievance outcomes, or administrative actions ensuring right to reconsideration, fresh perspective, error correction, and fairness through structured appellate mechanism maintaining organizational justice.'
+      },
+      {
+        number: '2',
+        title: 'SCOPE',
+        content: 'Covers appeals against disciplinary actions, grievance resolution decisions, performance ratings, terminations, transfers, and other adverse employment decisions. Applicable to all employees with clearly defined appellate authorities and timelines.'
+      },
+      {
+        number: '3',
+        title: 'RIGHT TO APPEAL',
+        content: `Employees can appeal:
+• Disciplinary actions (warnings, suspension, demotion, termination)
+• Grievance redressal outcomes (if dissatisfied)
+• Performance appraisal ratings
+• Denial of promotion or increment
+• Forced transfer or demotion
+• Denial of benefits or entitlements
+
+Grounds for Appeal:
+• Procedural error or violation of natural justice
+• New evidence not considered earlier
+• Decision disproportionate to offense
+• Factual errors or misinterpretation
+• Bias or conflict of interest in original decision`
+      },
+      {
+        number: '4',
+        title: 'APPEAL FILING PROCESS',
+        content: `(i) Timeline:
+• Appeal filed within 7-15 working days of decision (varies by case type)
+• Late appeals: May be condoned if valid reason (illness, absence)
+
+(ii) Format:
+• Written appeal letter or form (Annexure M.4.1)
+• Address to appropriate appellate authority
+• Clearly state decision being appealed and grounds
+• Attach supporting documents or new evidence
+• Signed by employee
+
+(iii) Submission:
+• HR department (maintains appeal register)
+• Email or physical submission with acknowledgment`
+      },
+      {
+        number: '5',
+        title: 'APPELLATE AUTHORITIES',
+        content: `Level-wise appellate structure:
+
+Original Decision By → Appeal To:
+• Supervisor → Department Head
+• Department Head → HR Head / CHRO
+• HR Department → Senior Management
+• CHRO → CEO
+• CEO → Board / Governing Body (final)
+
+Principle: Appeal to next higher authority not involved in original decision`
+      },
+      {
+        number: '6',
+        title: 'APPEAL REVIEW PROCESS',
+        content: `(i) Acknowledgment (within 3 days)
+(ii) Record Review:
+    • Appellate authority reviews original case file
+    • Appeal grounds and new evidence
+    • Policies and procedures followed
+(iii) Fresh Perspective:
+    • Independent assessment
+    • Not bound by original decision but gives weight
+(iv) May conduct:
+    • Additional inquiries if needed
+    • Interviews with appellant or others
+    • Seek clarifications from original deciding authority
+(v) Decision:
+    • Uphold original decision
+    • Modify decision (reduced penalty, changed outcome)
+    • Overturn decision (appeal allowed)
+    • Remand for fresh inquiry (if serious procedural flaw)`
+      },
+      {
+        number: '7',
+        title: 'APPELLATE DECISION TIMELINE',
+        content: `• Decision within 15-30 working days of appeal
+• Complex cases: Up to 45 days
+• Delay: Employee informed with reasons
+• Pending appeal: Original decision implementation may be stayed (case-by-case)`
+      },
+      {
+        number: '8',
+        title: 'OUTCOME COMMUNICATION',
+        content: `• Decision communicated in writing
+• Reasons for upholding, modifying, or overturning
+• Revised action (if decision modified)
+• Finality: If no further appeal, decision is final
+• Implementation of revised decision (if appeal allowed)`
+      },
+      {
+        number: '9',
+        title: 'FINALITY OF DECISIONS',
+        content: `• Appeal to CEO/Board is final (no further internal appeal)
+• Employee can still approach external forums:
+    - Labor Commissioner
+    - Labor Court / Industrial Tribunal
+    - Civil Court (for contractual disputes)
+    - Ombudsman (if available)`
+      },
+      {
+        number: '10',
+        title: 'SPECIAL APPEAL PROVISIONS',
+        content: `Performance Appraisal Appeal:
+• Filed within 15 days of appraisal discussion
+• Appeal to next level manager or HR
+• Review of ratings and evidence
+• Rating may be revised if justified
+
+Termination Appeal:
+• Urgent review given priority
+• Detailed scrutiny of inquiry and evidence
+• High bar for overturning (must show serious flaw)
+• If reinstated: Back wages and continuity of service`
+      },
+      {
+        number: '11',
+        title: 'PROHIBITION OF REPEATED APPEALS',
+        content: `• Only one appeal per decision (to next level)
+• Cannot appeal same issue repeatedly to different authorities
+• Frivolous appeals discouraged
+• However, new grounds or evidence: May file fresh representation`
+      },
+      {
+        number: '12',
+        title: 'PROTECTION DURING APPEAL',
+        content: `• No retaliation for filing appeal
+• Pending appeal: Employee continues in role (unless suspended)
+• If termination appealed: May request stay of termination (authority decides)
+• Appeal filing does not prevent employer from implementing decision (unless stay granted)`
+      },
+      {
+        number: '13',
+        title: 'DOCUMENTATION',
+        content: `Maintained:
+• Appeal letter and grounds
+• Appellate authority review notes
+• Additional evidence or inquiries
+• Appellate decision letter
+• Implementation status
+• Retained with original case file`
+      },
+      {
+        number: '14',
+        title: 'REFERENCE DOCUMENTS',
+        content: 'Grievance & Appeals Policy, Disciplinary Policy, Performance Management Policy, Annexure M.4.1: Appeal Form, Annexure M.4.2: Appellate Decision Template'
+      }
+    ]
+  }
+
+sopM5: {
+    id: 'sopM5',
+    number: 'SOP M.5',
+    title: 'POSH Complaints & ICC Protocol',
+    searchTerms: ['posh', 'sexual', 'harassment', 'icc', 'complaints', 'committee'],
+    category: 'M. Grievance, Complaints & Redressal',
+    subsections: [
+      {
+        number: '1',
+        title: 'OBJECTIVE',
+        content: 'To establish comprehensive protocol for prevention, prohibition, redressal of sexual harassment at workplace in compliance with Prevention of Sexual Harassment (POSH) Act, 2013 through Internal Complaints Committee (ICC), ensuring safe, respectful workplace free from harassment, protecting complainant rights, and maintaining zero-tolerance culture.'
+      },
+      {
+        number: '2',
+        title: 'SCOPE',
+        content: 'Covers all employees, contractors, consultants, patients, visitors at hospital premises or work-related settings. Defines sexual harassment, complaint mechanism, ICC functioning, investigation, remedies, and preventive measures as mandated by law.'
+      },
+      {
+        number: '3',
+        title: 'LEGAL FRAMEWORK',
+        content: `• Sexual Harassment of Women at Workplace (Prevention, Prohibition and Redressal) Act, 2013
+• Mandatory for all establishments with 10+ employees
+• Criminal offense not to comply
+• Regular training and awareness mandatory`
+      },
+      {
+        number: '4',
+        title: 'DEFINITION OF SEXUAL HARASSMENT',
+        content: `Unwelcome sexually determined behavior, directly or by implication:
+(i) Physical contact and advances
+(ii) Demand or request for sexual favors
+(iii) Sexually colored remarks
+(iv) Showing pornography
+(v) Any other unwelcome physical, verbal, or non-verbal conduct of sexual nature
+
