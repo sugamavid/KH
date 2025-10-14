@@ -18,12 +18,12 @@ const HRByLaws = ({ setActiveModule }) => {
   const [expandedSections, setExpandedSections] = useState({});
   const contentRef = useRef(null);
 
-  // Parse and render content with SIMPLE line-by-line approach
+  // Parse and render content using HTML strings with proper block elements
   const renderFormattedContent = (content) => {
-    if (!content) return null;
+    if (!content) return '';
     
     const lines = content.split('\n');
-    const renderedLines = [];
+    let html = '';
     
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i];
@@ -38,25 +38,21 @@ const HRByLaws = ({ setActiveModule }) => {
       const mainWithContentMatch = trimmedLine.match(/^\(([a-z])\)\s+\*\*(.*?)\*\*:?\s+(.+)$/);
       if (mainWithContentMatch) {
         const text = mainWithContentMatch[3].replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
-        renderedLines.push(
-          <div key={i} className="mt-6 mb-4">
-            <div className="font-bold text-slate-900 text-lg mb-2">
-              ({mainWithContentMatch[1]}) <strong>{mainWithContentMatch[2]}:</strong>
-            </div>
-            <div className="text-slate-700 leading-relaxed ml-0" dangerouslySetInnerHTML={{ __html: text }} />
+        html += `<div style="margin-top: 1.5rem; margin-bottom: 1rem;">
+          <div style="font-weight: bold; font-size: 1.1rem; margin-bottom: 0.5rem;">
+            (${mainWithContentMatch[1]}) <strong>${mainWithContentMatch[2]}:</strong>
           </div>
-        );
+          <div style="color: #334155; line-height: 1.75;">${text}</div>
+        </div>`;
         continue;
       }
       
       // Check for (a) **Title:** pattern (title only on line)
       const mainPointMatch = trimmedLine.match(/^\(([a-z])\)\s+\*\*(.*?)\*\*:?$/);
       if (mainPointMatch) {
-        renderedLines.push(
-          <div key={i} className="font-bold text-slate-900 text-lg mt-6 mb-2">
-            ({mainPointMatch[1]}) <strong>{mainPointMatch[2]}:</strong>
-          </div>
-        );
+        html += `<div style="font-weight: bold; font-size: 1.1rem; margin-top: 1.5rem; margin-bottom: 0.5rem;">
+          (${mainPointMatch[1]}) <strong>${mainPointMatch[2]}:</strong>
+        </div>`;
         continue;
       }
       
@@ -64,12 +60,10 @@ const HRByLaws = ({ setActiveModule }) => {
       const subPointMatch = line.match(/^\s{4}\(([ivxl]+)\)\s+(.+)$/);
       if (subPointMatch) {
         const text = subPointMatch[2].replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
-        renderedLines.push(
-          <div key={i} className="ml-12 mt-2 mb-2 flex items-start">
-            <span className="font-semibold text-slate-700 mr-3 min-w-[3rem]">({subPointMatch[1]})</span>
-            <span className="text-slate-700 leading-relaxed flex-1" dangerouslySetInnerHTML={{ __html: text }} />
-          </div>
-        );
+        html += `<div style="margin-left: 3rem; margin-top: 0.5rem; margin-bottom: 0.5rem; display: flex;">
+          <span style="font-weight: 600; color: #475569; min-width: 3rem;">(${subPointMatch[1]})</span>
+          <span style="color: #334155; line-height: 1.75; flex: 1;">${text}</span>
+        </div>`;
         continue;
       }
       
@@ -77,23 +71,19 @@ const HRByLaws = ({ setActiveModule }) => {
       const bulletMatch = line.match(/^\s{4}•\s+(.+)$/);
       if (bulletMatch) {
         const text = bulletMatch[1].replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
-        renderedLines.push(
-          <div key={i} className="ml-8 mt-2 mb-2 flex items-start">
-            <span className="text-amber-600 font-bold text-xl mr-3">•</span>
-            <span className="text-slate-700 leading-relaxed flex-1" dangerouslySetInnerHTML={{ __html: text }} />
-          </div>
-        );
+        html += `<div style="margin-left: 2rem; margin-top: 0.5rem; margin-bottom: 0.5rem; display: flex;">
+          <span style="color: #d97706; font-weight: bold; font-size: 1.25rem; margin-right: 0.75rem;">•</span>
+          <span style="color: #334155; line-height: 1.75; flex: 1;">${text}</span>
+        </div>`;
         continue;
       }
       
       // Regular text line
       const text = trimmedLine.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
-      renderedLines.push(
-        <div key={i} className="text-slate-700 leading-relaxed mb-2 ml-0" dangerouslySetInnerHTML={{ __html: text }} />
-      );
+      html += `<div style="color: #334155; line-height: 1.75; margin-bottom: 0.5rem;">${text}</div>`;
     }
     
-    return <div className="space-y-1">{renderedLines}</div>;
+    return html;
   };
 
   // Complete Navigation structure for all 30 sections (User's Original By-Laws)
