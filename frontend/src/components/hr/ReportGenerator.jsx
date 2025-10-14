@@ -4,7 +4,7 @@ import {
   TrendingUp, CheckCircle, AlertCircle, BarChart, PieChart, Activity,
   Shield, BookOpen, Award, Target, Zap, RefreshCw, ChevronRight,
   Eye, Edit, Trash2, Plus, Settings, Mail, Send, FileSpreadsheet,
-  FilePdf, File, Printer, Share2, Star, ArrowRight, ChevronDown
+  File, Printer, Share2, Star, ArrowRight, ChevronDown
 } from 'lucide-react';
 
 const ReportGenerator = ({ onClose, onNavigateToSection }) => {
