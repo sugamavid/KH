@@ -3862,13 +3862,264 @@ Unauthorized Absence/Early Exit:
   },
 
   // SECTION F: LEAVE MANAGEMENT
+  // SECTION F: LEAVE MANAGEMENT
   sopF1: {
     id: 'sopF1',
     number: 'SOP F.1',
     title: 'Leave Application & Workflow Process',
     searchTerms: ['leave', 'application', 'workflow', 'approval', 'request'],
     category: 'F. Leave Management',
-    content: 'Establishes uniform and transparent process for applying, approving, tracking, and recording leave across all employee categories ensuring smooth workforce planning.'
+    subsections: [
+      {
+        number: '1',
+        title: 'OBJECTIVE',
+        content: 'To establish a uniform, transparent, and efficient process for applying, approving, tracking, and recording all types of leave across all employee categories ensuring smooth workforce planning, operational continuity, adequate staffing, and employee work-life balance.'
+      },
+      {
+        number: '2',
+        title: 'SCOPE AND APPLICABILITY',
+        content: `This SOP applies to:
+• All employees of Koyili Hospital across all departments and categories
+• All types of leave: Casual Leave, Sick Leave, Annual/Privilege Leave, Compensatory Off
+• Employees, Supervisors, HR Department, and Payroll Team involved in leave management
+• Both planned and unplanned leave scenarios (emergency leave covered in SOP F.2)`
+      },
+      {
+        number: '3',
+        title: 'DEFINITIONS',
+        content: `• Leave: Authorized absence from work with or without pay as per entitlement
+• Casual Leave (CL): Short-duration leave for personal work, illness (max 1-2 days typically)
+• Sick Leave (SL): Leave for illness or medical treatment with medical certificate (for >2 days)
+• Annual/Privilege Leave (AL/PL): Earned leave for rest and recreation, requires advance planning
+• Compensatory Off (CO): Leave granted for working on weekly off or holiday
+• Leave Balance: Available leave entitlement remaining for an employee
+• Leave Lapse: Unutilized leave that expires at end of year (policy-dependent)
+• Leave Carry Forward: Unutilized leave that transfers to next year (up to specified limit)
+• Leave Without Pay (LOP): Absence beyond available leave balance without salary`
+      },
+      {
+        number: '4',
+        title: 'LEAVE ENTITLEMENTS',
+        subsections: [
+          {
+            number: '4.1',
+            title: 'Standard Leave Entitlement Matrix',
+            content: `(i) Permanent Full-time Employees:
+    • Casual Leave: 12 days per year (1 day per month)
+    • Sick Leave: 12 days per year (with medical certificate if >2 consecutive days)
+    • Privilege/Annual Leave: 21 days per year (as per By-Laws)
+    • Total: 45 days annual leave entitlement
+
+(ii) Contractual Employees:
+    • Casual Leave: 8 days per year
+    • Sick Leave: 8 days per year
+    • No Privilege Leave (unless specified in contract)
+
+(iii) Probationary Employees:
+    • Casual Leave: Pro-rated based on joining month
+    • Sick Leave: Available from Day 1
+    • Privilege Leave: Accrues but can be availed only after confirmation
+
+(iv) Special Leaves (covered separately in SOP F.3):
+    • Maternity Leave: As per Maternity Benefit Act
+    • Paternity Leave: As per policy
+    • Bereavement Leave: As per policy
+    • Study Leave: As per approval
+
+(v) Leave Accrual:
+    • Casual Leave: Monthly accrual (1 per month)
+    • Sick Leave: Monthly accrual (1 per month)
+    • Privilege Leave: Monthly accrual (1.75 per month)
+    • Pro-rated for mid-year joiners`
+          },
+          {
+            number: '4.2',
+            title: 'Leave Carry Forward and Lapse Policy',
+            content: `(i) Casual Leave:
+    • Cannot be carried forward
+    • Lapses at end of calendar year
+    • Cannot be encashed
+
+(ii) Sick Leave:
+    • Can be accumulated without limit (for serious illness)
+    • Unlimited carry forward
+    • Cannot be encashed (except at retirement/resignation as per policy)
+
+(iii) Privilege Leave:
+    • Can be carried forward up to 30 days maximum
+    • Excess beyond 30 days lapses
+    • Can be encashed as per SOP F.4
+
+(iv) Compensatory Off:
+    • Must be availed within 30 days of accrual
+    • Cannot be carried forward beyond 30 days
+    • Encashed at basic rate if not availed`
+          }
+        ]
+      },
+      {
+        number: '5',
+        title: 'LEAVE APPLICATION PROCESS',
+        subsections: [
+          {
+            number: '5.1',
+            title: 'Advance Leave Application (Planned Leave)',
+            content: `(i) Application Timeline:
+    • Casual Leave (1-2 days): Minimum 2 days advance notice
+    • Casual Leave (>2 days): Minimum 5 days advance notice
+    • Privilege Leave: Minimum 15 days advance notice
+    • Long leave (>7 days): Minimum 30 days advance notice
+
+(ii) Application Submission:
+    • Log in to HRMS portal
+    • Navigate to Leave Application module
+    • Select leave type, from-to dates, number of days
+    • Enter reason for leave
+    • Select approver (immediate supervisor)
+    • Attach supporting documents if required
+    • Submit application
+
+(iii) Alternative: If HRMS not accessible:
+    • Fill physical Leave Application Form (Annexure F.1.1)
+    • Attach supporting documents
+    • Submit to supervisor with signature
+    • Supervisor forwards to HR after approval`
+          },
+          {
+            number: '5.2',
+            title: 'Leave Approval Workflow',
+            content: `(i) Level 1 - Immediate Supervisor:
+    • Receives leave application notification via email/HRMS
+    • Reviews leave request based on:
+      - Operational requirements and team availability
+      - Employee's leave balance
+      - Urgency and justification
+      - Leave pattern and frequency
+    • Actions: Approve / Reject / Recommend with comments
+    • Timeline: Respond within 2 working days
+
+(ii) Level 2 - Department Head (for leave >5 days):
+    • Receives application after supervisor approval
+    • Reviews for departmental impact
+    • Ensures adequate staffing coverage
+    • Approves/rejects with comments
+    • Timeline: Respond within 2 working days
+
+(iii) HR Verification:
+    • HR receives approved leave application
+    • Verifies leave balance in system
+    • If balance sufficient: Marks leave as approved and deducts from balance
+    • If balance insufficient: Flags for LOP or rejects
+    • Updates leave register and attendance system
+    • Sends confirmation to employee
+
+(iv) Final Status Communication:
+    • Employee receives approval/rejection notification via email/SMS
+    • Approved leave reflected in HRMS and attendance system
+    • Rejection includes reason and alternative suggestions`
+          },
+          {
+            number: '5.3',
+            title: 'Post-Leave Formalities',
+            content: `(i) Handover before leave:
+    • Employee prepares handover note listing pending work
+    • Shares with supervisor and colleague covering duties
+    • Provides contact information for emergencies
+
+(ii) Return from leave:
+    • Employee marks return in attendance system
+    • Submits Work Resumption Note (if leave >7 days)
+    • For sick leave >3 days: Submit medical certificate/fitness certificate
+    • HR updates leave records and attendance`
+          }
+        ]
+      },
+      {
+        number: '6',
+        title: 'LEAVE TRACKING AND RECORDS',
+        content: `(i) HRMS Leave Module:
+    • Real-time leave balance display for employees
+    • Leave application history
+    • Approval status tracking
+    • Monthly leave calendar
+
+(ii) Leave Register:
+    • Maintained by HR for all employees
+    • Employee-wise leave records
+    • Leave type, dates, duration, balance
+    • Approver details and approval date
+
+(iii) Monthly Leave Report:
+    • Generated by HR by 5th of following month
+    • Shared with department heads
+    • Department-wise leave summary
+    • Alerts for excessive leave patterns
+
+(iv) Annual Leave Statement:
+    • Provided to each employee by Jan 15th
+    • Opening balance, availed, closing balance
+    • Carry forward, lapsed, encashed details
+    • Used for income tax planning (LTA claims)`
+      },
+      {
+        number: '7',
+        title: 'LEAVE REJECTION AND APPEALS',
+        content: `(i) Grounds for Leave Rejection:
+    • Insufficient leave balance
+    • Operational requirements (critical staffing shortage)
+    • Excessive leave frequency (>5 CLs in a month)
+    • Leave during critical project/event
+    • Lack of advance notice
+    • Pattern of suspicious leave (e.g., extending weekends repeatedly)
+
+(ii) Appeal Process:
+    • Employee can appeal rejection to HR within 3 days
+    • HR reviews with Department Head
+    • If rejection unreasonable: Overrule and approve
+    • If rejection valid: Explain alternative options (LOP, adjust dates)
+    • Final decision by CHRO in disputed cases`
+      },
+      {
+        number: '8',
+        title: 'SPECIAL SCENARIOS',
+        content: `(i) Sandwiching Leave with Weekly Offs/Holidays:
+    • Allowed up to 2 times per year
+    • Excessive sandwiching may be questioned
+
+(ii) Leave during Notice Period:
+    • Casual leave allowed
+    • Privilege leave: Only if sufficient notice period remaining after leave
+    • No leave in last 15 days of notice period (unless emergency)
+
+(iii) Clubbing Different Leave Types:
+    • CL + PL can be clubbed for long leave
+    • Sick Leave cannot be clubbed with CL/PL intentionally
+    • Medical certificate required if sick leave exceeds 2 days even if clubbed
+
+(iv) Leave for Part-time Employees:
+    • Pro-rated based on work hours
+    • Minimum 0.5 day leave allowed`
+      },
+      {
+        number: '9',
+        title: 'ROLES AND RESPONSIBILITIES',
+        table: {
+          headers: ['Position', 'Responsibility'],
+          rows: [
+            ['Employee', 'Apply leave with adequate notice, ensure handover, submit medical certificates'],
+            ['Supervisor', 'Review and approve/reject leave based on operational needs within 2 days'],
+            ['Department Head', 'Approve long leaves (>5 days), ensure department coverage'],
+            ['HR Department', 'Verify leave balance, maintain records, process approvals, generate reports'],
+            ['Payroll Team', 'Process leave balance adjustments, LOP deductions as per HR records']
+          ]
+        }
+      },
+      {
+        number: '10',
+        title: 'REFERENCE DOCUMENTS',
+        content: 'HR By-Laws (Leave Policy), Shops and Establishments Act, Annexure F.1.1: Leave Application Form, Annexure F.1.2: Leave Register Format'
+      }
+    ]
   },
 
   sopF2: {
@@ -3877,7 +4128,206 @@ Unauthorized Absence/Early Exit:
     title: 'Emergency Leave Escalation Procedure',
     searchTerms: ['emergency', 'leave', 'escalation', 'urgent', 'unplanned'],
     category: 'F. Leave Management',
-    content: 'Formalizes standardised, time-sensitive protocol for reporting, documenting, and managing emergency leave scenarios ensuring minimal disruption to patient care and operations.'
+    subsections: [
+      {
+        number: '1',
+        title: 'OBJECTIVE',
+        content: 'To formalize a time-sensitive, standardized protocol for reporting, documenting, and managing emergency leave scenarios where advance application is not possible, ensuring minimal disruption to patient care, operational continuity, and compassionate support to employees in genuine emergencies.'
+      },
+      {
+        number: '2',
+        title: 'SCOPE',
+        content: 'Applicable to all employees facing genuine emergencies requiring immediate absence. Covers medical emergencies (self/family), accidents, sudden illness, bereavement, natural calamities.'
+      },
+      {
+        number: '3',
+        title: 'DEFINITION OF EMERGENCY LEAVE',
+        content: `Situations qualifying as emergency:
+• Sudden serious illness or injury (self or immediate family)
+• Hospitalization (self or immediate family member)
+• Death of immediate family member
+• Accident requiring immediate attention
+• Natural calamity affecting employee or family
+• Police/legal emergency requiring presence
+• Critical home emergency (fire, burglary, flood)
+
+Non-qualifying situations (should apply regular leave):
+• Routine doctor appointments
+• Planned family events
+• Pre-scheduled personal work
+• Minor ailments that can wait`
+      },
+      {
+        number: '4',
+        title: 'EMERGENCY LEAVE REPORTING PROCEDURE',
+        subsections: [
+          {
+            number: '4.1',
+            title: 'Immediate Intimation (Within 2 hours of shift start)',
+            content: `(i) Employee must inform:
+    • Immediate supervisor via phone call (preferred)
+    • Alternatively: WhatsApp/SMS if call not possible
+    • HR Department (if supervisor unreachable)
+    • Shift In-charge (for shift workers)
+
+(ii) Information to provide:
+    • Brief nature of emergency
+    • Expected duration of absence (1 day, 2-3 days, unknown)
+    • Whether in station or traveling
+    • Contact number for emergency callback
+
+(iii) Supervisor Action:
+    • Note down details
+    • Inform department head immediately
+    • Arrange backup/coverage for absent employee
+    • Confirm receipt of information to employee`
+          },
+          {
+            number: '4.2',
+            title: 'Formal Leave Application (Within 24 hours)',
+            content: `(i) Employee must:
+    • Apply leave through HRMS or email within 24 hours
+    • Select leave type: Emergency Leave / Sick Leave / Casual Leave
+    • Provide detailed reason for emergency
+    • Mention expected return date
+    • Attach preliminary supporting document (if available)
+
+(ii) If unable to apply within 24 hours (e.g., hospitalized):
+    • Family member or colleague can apply on behalf
+    • Employee applies immediately upon return/recovery
+    • Supporting documents mandatory in such cases`
+          },
+          {
+            number: '4.3',
+            title: 'Supporting Documentation (Within 3 days of return)',
+            content: `(i) Medical Emergency (Self):
+    • Doctor's prescription/consultation slip
+    • Medical bills/pharmacy bills
+    • Hospitalization discharge summary (if admitted)
+    • Fitness certificate for return to work
+
+(ii) Medical Emergency (Family):
+    • Medical documents of family member
+    • Hospitalization records
+    • Proof of relationship (if required)
+
+(iii) Bereavement:
+    • Death certificate
+    • Proof of relationship with deceased
+    • Newspaper obituary (if available)
+
+(iv) Accident:
+    • Police FIR copy (if vehicle accident)
+    • Medical treatment records
+    • Insurance claim documents
+
+(v) Other Emergencies:
+    • Police complaint/FIR (for theft, burglary)
+    • Government notices (for legal matters)
+    • Photos/evidence of calamity (for natural disasters)
+
+**Failure to submit supporting documents within 7 days:**
+• Leave may be converted to Loss of Pay (LOP)
+• Treated as unauthorized absence if documents not genuine`
+          }
+        ]
+      },
+      {
+        number: '5',
+        title: 'EMERGENCY LEAVE APPROVAL',
+        content: `(i) Immediate Provisional Approval:
+    • Supervisor grants provisional approval based on initial intimation
+    • Attendance marked as "Emergency Leave - Pending Documentation"
+    • No leave balance deduction at this stage
+
+(ii) Final Approval (after document submission):
+    • HR reviews supporting documents
+    • If documents genuine and emergency verified:
+      - Leave approved and deducted from appropriate leave balance (CL/SL/PL)
+      - If no balance: Marked as LOP with prior intimation to employee
+    • If documents insufficient or emergency doubtful:
+      - Employee counseled and warned
+      - Leave may be marked as LOP
+      - Repeated misuse leads to disciplinary action
+
+(iii) Escalation:
+    • Employee can appeal to HR if leave rejected
+    • HR Manager reviews with empathy in genuine cases
+    • CHRO final authority in disputed cases`
+      },
+      {
+        number: '6',
+        title: 'EXTENDED EMERGENCY LEAVE',
+        content: `(i) If emergency extends beyond initial intimation:
+    • Employee must update supervisor daily or every 2 days
+    • Provide updates on situation and expected return
+    • Submit interim medical reports/updates
+
+(ii) Long medical leave (>7 days):
+    • May require conversion to medical leave under insurance
+    • HR coordinates with employee for documentation
+    • Sick leave exhausted first, then other leaves, then LOP
+
+(iii) Indefinite emergency (serious illness, long hospitalization):
+    • Employee/family to submit weekly updates
+    • HR may grant extended leave with LOP after leave balance exhausted
+    • Job protection as per policy and applicable law`
+      },
+      {
+        number: '7',
+        title: 'OPERATIONAL CONTINGENCY DURING EMERGENCY LEAVE',
+        content: `(i) Immediate Supervisor:
+    • Reallocate critical work to team members
+    • Call backup staff if available
+    • Inform clients/patients of employee absence (if patient-facing role)
+    • May request on-call support from absent employee if feasible
+
+(ii) Department Head:
+    • Assess impact on operations
+    • Approve overtime or extra shift for coverage
+    • Coordinate with HR for temporary replacement if absence prolonged
+
+(iii) HR Department:
+    • Maintain emergency leave register
+    • Track patterns (frequent emergencies may indicate personal issues or abuse)
+    • Offer Employee Assistance Program (counseling) if needed
+    • Ensure compliance with labour laws on emergency leave`
+      },
+      {
+        number: '8',
+        title: 'ABUSE OF EMERGENCY LEAVE',
+        content: `(i) Red Flags:
+    • Frequent emergency leaves (>3 per quarter without genuine documents)
+    • Emergency leave always on Mondays/Fridays (extending weekends)
+    • Vague reasons without proper documentation
+    • Unreachable during emergency leave
+
+(ii) Disciplinary Action:
+    • First instance: Counseling and warning
+    • Second instance: Written warning, leave converted to LOP
+    • Third instance: Severe warning, may affect performance rating
+    • Continued abuse: Termination for misconduct
+
+(iii) Verification:
+    • HR may call to verify emergency
+    • Home visit or hospital visit by HR (in suspected abuse cases)
+    • Cross-check documents with hospitals/police stations`
+      },
+      {
+        number: '9',
+        title: 'COMPASSIONATE SUPPORT FOR GENUINE EMERGENCIES',
+        content: `• Hospital extends support through Employee Welfare Fund for serious medical emergencies
+• Advance salary or loan facility for hospitalization expenses
+• Counseling support through EAP for traumatic events
+• Flexibility in work hours post-return from emergency
+• Special consideration during performance appraisal if emergency affected work`
+      },
+      {
+        number: '10',
+        title: 'REFERENCE DOCUMENTS',
+        content: 'HR By-Laws (Leave Policy - Emergency Leave), Employee Welfare Policy, Annexure F.2.1: Emergency Leave Intimation Format, Annexure F.2.2: Emergency Leave Documentation Checklist'
+      }
+    ]
   },
 
   sopF3: {
