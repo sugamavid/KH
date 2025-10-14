@@ -333,61 +333,87 @@ const HRSOPs = ({ setActiveModule }) => {
     // Regular SOP with Blue Header
     return (
       <div className="bg-white shadow-sm">
-        {/* Professional Blue Header with Logo - NO Document Number */}
-        <div className="bg-gradient-to-r from-blue-900 to-blue-800 text-white px-16 py-8">
+        {/* Professional Blue Header with Logo - Reorganized */}
+        <div className="bg-gradient-to-r from-blue-900 to-blue-800 text-white px-16 py-6">
+          {/* Top Row: Hospital Logo and Metadata */}
           <div className="flex items-center justify-between mb-6">
             <div className="flex items-center space-x-6">
               {/* Hospital Logo */}
               <img 
                 src="https://customer-assets.emergentagent.com/job_project-hub-123/artifacts/mpnrrrfw_images.jpeg" 
                 alt="Koyili Hospital Logo" 
-                className="w-16 h-16 object-contain bg-white rounded-lg p-2"
+                className="w-20 h-20 object-contain bg-white rounded-lg p-2 shadow-lg"
               />
               <div>
-                <h1 className="text-2xl font-bold tracking-tight">KOYILI HOSPITAL</h1>
-                <p className="text-blue-200 text-sm">Human Resources Department</p>
+                <h1 className="text-3xl font-bold tracking-tight">KOYILI HOSPITAL</h1>
+                <p className="text-blue-200 text-sm mt-1">Human Resources Department</p>
+                <p className="text-blue-300 text-xs mt-0.5">Standard Operating Procedures</p>
               </div>
             </div>
-            <div className="text-right">
-              <div className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg border border-white/20">
-                <p className="text-xs text-blue-200">ISO 9001:2015 Certified</p>
+            <div className="text-right space-y-2">
+              <div className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg border border-white/20 inline-block">
+                <p className="text-xs text-blue-200">ISO 9001:2015 | NABH Accredited</p>
+              </div>
+              <div className="flex items-center justify-end space-x-4 text-xs text-blue-200">
+                <div className="flex items-center space-x-1">
+                  <span className="font-semibold">Doc #:</span>
+                  <span>{section.number}</span>
+                </div>
+                <div className="w-px h-4 bg-blue-600"></div>
+                <div className="flex items-center space-x-1">
+                  <span className="font-semibold">Version:</span>
+                  <span>3.0</span>
+                </div>
               </div>
             </div>
           </div>
           
-          {/* SOP Title - Clean without Document Number */}
-          <div className="border-t border-blue-700 pt-6">
-            <h2 className="text-2xl font-bold text-white mb-2">{section.title}</h2>
-            {section.category && (
-              <p className="text-blue-200 text-sm">{section.category}</p>
-            )}
+          {/* SOP Title Section - Clean and Prominent */}
+          <div className="border-t-2 border-blue-700/50 pt-6">
+            <div className="flex items-baseline justify-between">
+              <div className="flex-1">
+                <div className="flex items-baseline space-x-4 mb-2">
+                  <span className="text-amber-400 font-bold text-lg">{section.number}</span>
+                  <h2 className="text-2xl font-bold text-white">{section.title}</h2>
+                </div>
+                <div className="flex items-center space-x-4 text-xs text-blue-300">
+                  <div className="flex items-center space-x-1">
+                    <Clock className="w-3 h-3" />
+                    <span>Effective: 01 Jan 2024</span>
+                  </div>
+                  <div className="w-px h-3 bg-blue-600"></div>
+                  <div className="flex items-center space-x-1">
+                    <CheckCircle className="w-3 h-3 text-green-400" />
+                    <span>Status: Active</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
-        {/* Document Metadata */}
-        <div className="bg-white px-16 py-4 border-b border-slate-200">
+        {/* Document Metadata Bar - Simplified */}
+        <div className="bg-slate-50 px-16 py-3 border-b border-slate-300">
           <div className="flex items-center justify-between text-xs">
-            <div className="flex items-center space-x-8">
-              <div>
-                <span className="text-slate-500">Version:</span>
-                <span className="text-slate-900 font-semibold ml-2">3.0</span>
+            <div className="flex items-center space-x-6 text-slate-600">
+              <div className="flex items-center space-x-2">
+                <span className="font-semibold text-slate-900">Scope:</span>
+                <span>Hospital-wide</span>
               </div>
-              <div>
-                <span className="text-slate-500">Effective:</span>
-                <span className="text-slate-900 font-semibold ml-2">01 Jan 2024</span>
+              <div className="w-px h-4 bg-slate-300"></div>
+              <div className="flex items-center space-x-2">
+                <span className="font-semibold text-slate-900">Owner:</span>
+                <span>HR Department</span>
               </div>
-              <div>
-                <span className="text-slate-500">Review:</span>
-                <span className="text-slate-900 font-semibold ml-2">01 Jan 2025</span>
-              </div>
-              <div>
-                <span className="text-slate-500">Owner:</span>
-                <span className="text-slate-900 font-semibold ml-2">HR Department</span>
+              <div className="w-px h-4 bg-slate-300"></div>
+              <div className="flex items-center space-x-2">
+                <span className="font-semibold text-slate-900">Next Review:</span>
+                <span>01 Jan 2025</span>
               </div>
             </div>
-            <div>
-              <span className="text-slate-500">Status:</span>
-              <span className="text-green-700 font-semibold ml-2">Active</span>
+            <div className="flex items-center space-x-2">
+              <span className="text-slate-500">Classification:</span>
+              <span className="bg-amber-100 text-amber-800 px-2 py-1 rounded text-xs font-semibold">Internal Use Only</span>
             </div>
           </div>
         </div>
