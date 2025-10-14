@@ -1,0 +1,32 @@
+TOTAL_SECTIONS:62
+PREAMBLE_LENGTH:1670
+SECTION:1|Preliminary
+SECTION:2|Recruitment and Employment
+SECTION:3|Code of Conduct
+SECTION:15|Data Protection and Confidentiality.
+SECTION:4|Employee Rights and Responsibilities
+SECTION:15|Data Protection and Confidentiality.
+SECTION:7|Attendance and Leave Policy.
+SECTION:12|Grievances Redressal Mechanism.
+SECTION:5|Diversity, Equity, and Inclusion (DEI)
+SECTION:6|Patient Interaction and Care Standards (for Clinical Staff)
+SECTION:14|Disciplinary Actions and Compliance.
+SECTION:7|Attendance and Leave Policy
+SECTION:14|Disciplinary Actions and Compliance.
+SECTION:8|Performance Management
+SECTION:14|Disciplinary Actions and Compliance.
+SECTION:9|Training and Development
+SECTION:10|Remote Work and Flexible Scheduling
+SECTION:15|Data Protection and Confidentiality.
+SECTION:11|Compensation and Benefits
+SECTION:8|Performance Management.
+SECTION:7|Attendance and Leave Policy, including annual, sick, maternity/ paternity, and compassionate leave.
+SECTION:12|Grievance Redressal Mechanism
+SECTION:14|Disciplinary Actions and Compliance.
+SECTION:13|Workplace Health and Safety
+SECTION:14|Disciplinary Actions and Compliance.
+SECTION:14|Disciplinary Actions and Compliance
+SECTION:3|Code of Conduct.
+SECTION:13|Workplace Health and Safety, shall be grounds for disciplinary action.
+SECTION:15|Data Protection and Confidentiality.
+SECTION:7|Attendance and Leave Policy, shall be grounds for progressive disciplinary action.
