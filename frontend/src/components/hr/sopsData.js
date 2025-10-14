@@ -5009,7 +5009,186 @@ Example:
     title: 'Dress Code Enforcement (Clinical/Non Clinical)',
     searchTerms: ['dress', 'code', 'uniform', 'attire', 'appearance'],
     category: 'G. Code of Conduct & Disciplinary Control',
-    content: 'Ensures professional, hygienic, and standardised appearance across all departments by prescribing and enforcing clear dress code for clinical and non-clinical personnel.'
+    subsections: [
+      {
+        number: '1',
+        title: 'OBJECTIVE',
+        content: 'To ensure professional, hygienic, and standardized appearance across all departments by prescribing and consistently enforcing clear dress code guidelines for clinical and non-clinical personnel, thereby promoting institutional identity, patient confidence, infection control, and workplace decorum.'
+      },
+      {
+        number: '2',
+        title: 'SCOPE',
+        content: 'Applicable to all employees, contractors, consultants, and visitors on hospital premises. Covers dress code standards for clinical staff, administrative personnel, support staff, and special situations.'
+      },
+      {
+        number: '3',
+        title: 'DRESS CODE STANDARDS',
+        subsections: [
+          {
+            number: '3.1',
+            title: 'Clinical Staff (Doctors, Nurses, Paramedics)',
+            content: `(i) Uniforms:
+    • Doctors: White coat (full sleeves) with hospital logo, name badge
+      - Beneath coat: Formal shirt/trousers or hospital-provided scrubs
+      - No jeans, t-shirts, or casual wear beneath coat
+    • Nurses: Hospital-issued uniform (color-coded by department)
+      - ICU/OT: Scrubs (green/blue), cap mandatory
+      - General wards: Standard nursing uniform with apron
+      - Name badge visible at all times
+    • Lab Technicians: Lab coat, closed shoes, hairnet if required
+    • Radiology Staff: Radiation protection apron over uniform
+
+(ii) Footwear:
+    • Closed, comfortable shoes (no open-toe sandals, flip-flops, high heels >2 inches)
+    • White or black color preferred
+    • Non-slippery soles for OT and critical areas
+
+(iii) Personal Grooming:
+    • Hair: Neat, tied back if long (mandatory in OT, ICU)
+    • Nails: Short, clean, no nail polish in patient care areas
+    • Jewelry: Minimal (wedding ring, small earrings only; no dangling jewelry)
+    • Perfume: Mild or no strong fragrances (patient sensitivity)
+    • Facial Hair: Well-groomed beard/mustache (mandatory clean-shaven for OT staff)
+
+(iv) Hygiene:
+    • Daily laundered uniforms
+    • Personal hygiene maintained (body odor, oral hygiene)
+    • Handwashing as per infection control protocols`
+          },
+          {
+            number: '3.2',
+            title: 'Administrative/Non-Clinical Staff',
+            content: `(i) Dress Code:
+    • Business formal or business casual attire
+    • Men: Formal shirt + trousers, optional tie
+    • Women: Formal shirt/blouse + trousers/skirt/saree
+    • No jeans, t-shirts, shorts, sleeveless tops
+    • Footwear: Formal shoes (no sports shoes, flip-flops)
+
+(ii) Colors and Style:
+    • Solid or subtle patterns preferred
+    • No flashy colors or party wear
+    • Conservative, professional attire
+
+(iii) Grooming:
+    • Professional appearance maintained
+    • Jewelry: Moderate and tasteful
+    • Makeup: Subtle (for women)
+    • ID card worn visibly`
+          },
+          {
+            number: '3.3',
+            title: 'Support Staff (Housekeeping, Security, Pantry)',
+            content: `(i) Hospital-issued uniforms mandatory
+(ii) Color-coded for identification:
+    • Housekeeping: Green/blue uniform
+    • Security: Khaki/blue uniform with cap
+    • Pantry/Cafeteria: White uniform with hairnet
+(iii) Uniforms changed daily
+(iv) ID card and designation badge visible`
+          },
+          {
+            number: '3.4',
+            title: 'Special Situations',
+            content: `(i) Friday Casuals (if applicable):
+    • Smart casuals allowed on Fridays for non-clinical staff
+    • No patient-facing roles
+    • Still professional (no ripped jeans, graphic tees)
+
+(ii) Religious/Cultural Attire:
+    • Allowed if it meets hygiene and safety standards
+    • Head coverings (hijab, turban) allowed but secured properly
+    • Must not interfere with patient care or safety
+
+(iii) Pregnancy:
+    • Maternity uniforms provided
+    • Comfortable footwear allowed`
+          }
+        ]
+      },
+      {
+        number: '4',
+        title: 'DRESS CODE VIOLATIONS AND ENFORCEMENT',
+        subsections: [
+          {
+            number: '4.1',
+            title: 'Common Violations',
+            content: `• Not wearing uniform or ID card
+• Inappropriate casual wear (jeans, shorts, t-shirts in non-casual zones)
+• Open footwear in clinical areas
+• Excessive jewelry or accessories
+• Unkempt hair or unhygienic appearance
+• Strong perfume causing patient discomfort
+• Torn, stained, or ill-fitted uniform`
+          },
+          {
+            number: '4.2',
+            title: 'Enforcement Mechanism',
+            content: `(i) Monitoring:
+    • Supervisors conduct daily checks
+    • Security at entry gate monitors compliance
+    • Surprise inspections by HR or Admin
+
+(ii) First Violation:
+    • Verbal warning by supervisor
+    • Employee counseled on dress code policy
+    • Expected to comply immediately
+
+(iii) Second Violation (within 3 months):
+    • Written warning issued
+    • Documented in personnel file
+    • Meeting with HR to discuss compliance
+
+(iv) Third Violation:
+    • Suspension for 1 day without pay
+    • Final warning issued
+    • Further violation may lead to termination
+
+(v) Serious Violation (patient complaint or safety hazard):
+    • Immediate action (sent home to change)
+    • Formal disciplinary proceedings`
+          },
+          {
+            number: '4.3',
+            title: 'Dress Code Inspection',
+            content: `(i) Daily Inspection:
+    • By shift in-charge or department head
+    • Feedback given immediately
+
+(ii) Monthly Audit:
+    • HR conducts random dress code compliance audit
+    • Department-wise compliance report generated
+    • Non-compliance patterns addressed
+
+(iii) Photographic Evidence:
+    • For serious violations, photos taken (with employee consent) for documentation
+    • Used in disciplinary proceedings if needed`
+          }
+        ]
+      },
+      {
+        number: '5',
+        title: 'UNIFORM ISSUANCE AND MAINTENANCE',
+        content: `• Uniforms issued to clinical and support staff as per SOP C.2
+• Annual replacement policy
+• Responsibility of employee to maintain uniform hygiene
+• Lost or damaged uniform replaced at employee cost (unless normal wear and tear)
+• Hospital provides laundry service for uniforms (if policy permits)`
+      },
+      {
+        number: '6',
+        title: 'TRAINING AND AWARENESS',
+        content: `• Dress code policy briefed during orientation
+• Annual refresher during staff meetings
+• Dress code posters displayed at entry points and changing rooms
+• Compliance celebrated; best-dressed department recognition (optional)`
+      },
+      {
+        number: '7',
+        title: 'REFERENCE DOCUMENTS',
+        content: 'HR By-Laws (Dress Code Policy), Code of Conduct, Infection Control Policy, Annexure G.1.1: Dress Code Compliance Checklist'
+      }
+    ]
   },
 
   sopG2: {
@@ -5018,7 +5197,225 @@ Example:
     title: 'Ethical Conduct & Monitoring Protocol',
     searchTerms: ['ethical', 'conduct', 'monitoring', 'integrity', 'values'],
     category: 'G. Code of Conduct & Disciplinary Control',
-    content: 'Establishes standardised framework promoting and enforcing ethical behaviour ensuring integrity, professionalism, and patient-centred care while maintaining institutional reputation.'
+    subsections: [
+      {
+        number: '1',
+        title: 'OBJECTIVE',
+        content: 'To establish a standardized framework promoting and enforcing ethical behavior among all employees ensuring integrity, professionalism, patient-centered care, transparency, and accountability while maintaining institutional reputation and compliance with ethical standards.'
+      },
+      {
+        number: '2',
+        title: 'SCOPE',
+        content: 'Applicable to all employees, consultants, and associates. Covers patient care ethics, professional conduct, financial integrity, data protection, and interpersonal behavior.'
+      },
+      {
+        number: '3',
+        title: 'CORE ETHICAL PRINCIPLES',
+        content: `(i) Patient-Centric Care:
+    • Patient welfare is paramount
+    • Informed consent for all procedures
+    • Respect patient dignity, privacy, and autonomy
+    • Non-discrimination based on religion, caste, gender, economic status
+
+(ii) Professional Integrity:
+    • Honesty in all professional dealings
+    • No falsification of records or reports
+    • Adherence to clinical protocols and evidence-based practice
+    • Continuous professional development
+
+(iii) Confidentiality:
+    • Patient medical information strictly confidential
+    • No unauthorized disclosure
+    • Data protection as per law
+
+(iv) Transparency:
+    • Clear communication with patients and families
+    • Transparent billing and treatment costs
+    • No hidden charges or kickbacks
+
+(v) Accountability:
+    • Accept responsibility for decisions and actions
+    • Report errors or near-misses promptly
+    • No blame culture; focus on learning`
+      },
+      {
+        number: '4',
+        title: 'ETHICAL CONDUCT IN CLINICAL PRACTICE',
+        subsections: [
+          {
+            number: '4.1',
+            title: 'Patient Care Ethics',
+            content: `(i) Informed Consent:
+    • Explain diagnosis, treatment options, risks, benefits
+    • Obtain written consent before procedures
+    • Respect patient's right to refuse treatment
+
+(ii) Patient Privacy:
+    • Examinations in private settings
+    • Discussions in confidential spaces
+    • Patient records secured
+
+(iii) Appropriate Treatment:
+    • No unnecessary tests or procedures
+    • Evidence-based clinical decisions
+    • Second opinions encouraged
+
+(iv) End-of-Life Care:
+    • Respect patient wishes (advance directives)
+    • No futile treatments against patient/family wishes
+    • Compassionate palliative care`
+          },
+          {
+            number: '4.2',
+            title: 'Financial Ethics',
+            content: `(i) No Unethical Practices:
+    • No commission or kickback from diagnostics, pharmacies, implant companies
+    • No inappropriate referrals for financial gain
+    • Transparent billing
+
+(ii) Conflict of Interest:
+    • Declare if financial interest in referral centers
+    • No gifts or favors from pharmaceutical companies beyond permissible limits
+    • Participation in industry-sponsored events disclosed
+
+(iii) Billing Integrity:
+    • Accurate billing; no overcharging
+    • Itemized bills provided
+    • Cashless/insurance claims processed fairly`
+          },
+          {
+            number: '4.3',
+            title: 'Research Ethics',
+            content: `(i) If hospital conducts research:
+    • Ethics Committee approval mandatory
+    • Informed consent from research participants
+    • No coercion; voluntary participation
+    • Data anonymized and confidential
+
+(ii) Publication Ethics:
+    • No plagiarism or data fabrication
+    • Authorship credits fairly assigned
+    • Conflicts of interest disclosed`
+          }
+        ]
+      },
+      {
+        number: '5',
+        title: 'ETHICAL CONDUCT IN WORKPLACE',
+        content: `(i) Professional Behavior:
+    • Respectful communication with colleagues
+    • No harassment (sexual, verbal, psychological)
+    • Collaborative teamwork
+    • No gossip or rumor-mongering
+
+(ii) Respect for Hierarchy:
+    • Professional disagreement is healthy
+    • No insubordination or disrespect
+    • Escalate concerns through proper channels
+
+(iii) Work Ethics:
+    • Punctuality and attendance discipline
+    • No misuse of hospital resources
+    • No personal work during office hours (except emergency)
+    • Honesty in reporting work and time
+
+(iv) Data Integrity:
+    • No falsification of documents or records
+    • Accurate reporting in forms, registers, and systems
+    • No manipulation of data for personal gain`
+      },
+      {
+        number: '6',
+        title: 'ETHICAL MONITORING MECHANISMS',
+        subsections: [
+          {
+            number: '6.1',
+            title: 'Ethics Committee',
+            content: `(i) Hospital Ethics Committee constituted:
+    • Members: Senior doctors, nurses, admin, legal advisor, patient advocate
+    • Meets quarterly or as needed
+
+(ii) Functions:
+    • Review ethical dilemmas and complaints
+    • Provide guidance on complex clinical cases
+    • Investigate ethical violations
+    • Recommend policy improvements`
+          },
+          {
+            number: '6.2',
+            title: 'Monitoring Tools',
+            content: `(i) Patient Feedback:
+    • Patient satisfaction surveys
+    • Complaints and grievances reviewed
+    • Exit interviews
+
+(ii) Peer Review:
+    • Clinical case discussions
+    • Morbidity and mortality meetings
+    • Quality audits
+
+(iii) Financial Audits:
+    • Regular billing audits
+    • Kickback detection systems
+    • Whistleblower mechanism
+
+(iv) Ethical Audits:
+    • Random audit of patient records for informed consent
+    • Review of prescription patterns
+    • Vendor and supplier relationships reviewed`
+          },
+          {
+            number: '6.3',
+            title: 'Whistleblower Protection',
+            content: `(i) Employees encouraged to report unethical practices
+(ii) Anonymous reporting channel (email, hotline)
+(iii) No retaliation against whistleblowers
+(iv) Confidentiality maintained
+(v) Protection from adverse employment actions`
+          }
+        ]
+      },
+      {
+        number: '7',
+        title: 'ETHICAL VIOLATIONS AND CONSEQUENCES',
+        content: `(i) Minor Violations (first time):
+    • Counseling by Ethics Committee
+    • Corrective training
+    • Warning documented
+
+(ii) Moderate Violations (repeated minor or single moderate):
+    • Written warning
+    • Monetary penalty or salary deduction
+    • Temporary suspension of privileges
+
+(iii) Serious Violations:
+    • Suspension pending inquiry
+    • Termination of employment
+    • Reporting to Medical/Nursing Council (if applicable)
+    • Legal action (for fraud, patient harm)
+
+Examples of Serious Violations:
+• Acceptance of bribes or kickbacks
+• Falsification of medical records
+• Patient harm due to negligence or ethical breach
+• Sexual harassment
+• Theft or fraud`
+      },
+      {
+        number: '8',
+        title: 'ETHICS TRAINING',
+        content: `• Mandatory ethics training during orientation
+• Annual refresher on ethical conduct
+• Case-based ethics discussions in department meetings
+• Access to ethics resources and guidelines
+• Ethics hotline for consultation on ethical dilemmas`
+      },
+      {
+        number: '9',
+        title: 'REFERENCE DOCUMENTS',
+        content: 'Code of Ethics for Healthcare Professionals, Medical Council of India/National Medical Commission Guidelines, Indian Nursing Council Code of Ethics, HR By-Laws, NABH Standards on Patient Rights'
+      }
+    ]
   },
 
   sopG3: {
@@ -5027,7 +5424,227 @@ Example:
     title: 'Conflict of Interest Declaration',
     searchTerms: ['conflict', 'interest', 'declaration', 'disclosure', 'coi'],
     category: 'G. Code of Conduct & Disciplinary Control',
-    content: 'Establishes transparent system for declaration, monitoring, and mitigation of actual or perceived conflicts of interest to uphold institutional integrity and clinical neutrality.'
+    subsections: [
+      {
+        number: '1',
+        title: 'OBJECTIVE',
+        content: 'To establish a transparent system for mandatory declaration, systematic monitoring, and effective mitigation of actual or perceived conflicts of interest ensuring clinical neutrality, institutional integrity, and patient trust in decision-making processes.'
+      },
+      {
+        number: '2',
+        title: 'SCOPE',
+        content: 'Applicable to all clinical staff (doctors, nurses, pharmacists), procurement and administrative personnel involved in vendor selection, and management involved in strategic decisions.'
+      },
+      {
+        number: '3',
+        title: 'DEFINITION OF CONFLICT OF INTEREST',
+        content: `Conflict of Interest (COI) exists when:
+• Personal, financial, or professional interests could potentially influence professional judgment or institutional decisions
+
+Types of COI:
+(i) Financial COI:
+    • Ownership in diagnostic centers, pharmacies, medical equipment companies
+    • Consultant/advisor role for pharmaceutical/device companies
+    • Receipt of gifts, honoraria, or payments from industry
+
+(ii) Professional COI:
+    • Employment or consultancy with competing hospitals
+    • Membership on competing institution's board
+    • Research funded by companies whose products are used/prescribed
+
+(iii) Personal COI:
+    • Family member ownership in related businesses
+    • Personal relationships affecting professional decisions
+    • Accepting favors or benefits from vendors/patients`
+      },
+      {
+        number: '4',
+        title: 'CONFLICT OF INTEREST DECLARATION PROCESS',
+        subsections: [
+          {
+            number: '4.1',
+            title: 'Mandatory Declaration Timeline',
+            content: `(i) At Joining:
+    • All employees must complete COI Declaration Form (Annexure G.3.1)
+    • During onboarding process
+    • Updated in personnel file
+
+(ii) Annual Declaration:
+    • Every January, all employees submit updated COI declaration
+    • Declare any new conflicts that arose during previous year
+    • Nil declaration if no conflicts
+
+(iii) Event-Based Declaration:
+    • Immediate declaration when new conflict arises
+    • Before participating in procurement decisions
+    • Before joining external boards or consultancies
+    • Before accepting industry sponsorships`
+          },
+          {
+            number: '4.2',
+            title: 'What to Declare',
+            content: `(i) Financial Interests:
+    • Ownership/partnership in:
+      - Diagnostic labs, pathology centers
+      - Pharmacies or pharmaceutical companies
+      - Medical equipment suppliers
+      - Health insurance companies
+    • Shareholding in healthcare companies (above threshold)
+    • Consulting fees or honoraria from industry
+
+(ii) Professional Relationships:
+    • Advisory board memberships
+    • Speaking engagements sponsored by industry
+    • Research grants from pharmaceutical/device companies
+    • Part-time practice or consultancy elsewhere
+
+(iii) Family Interests:
+    • Immediate family (spouse, children, parents) ownership in healthcare businesses
+    • Family employed by vendors, competitors, or related entities
+
+(iv) Gifts and Hospitality:
+    • Gifts exceeding ₹5,000 from vendors/pharmaceutical companies
+    • Travel sponsorships for conferences
+    • Hospitality (dinners, entertainment) from industry`
+          },
+          {
+            number: '4.3',
+            title: 'Declaration Form Submission',
+            content: `(i) COI Declaration Form includes:
+    • Type of interest (financial, professional, personal)
+    • Nature and extent of interest
+    • Entity/company name
+    • Duration/timeframe
+    • Potential impact on hospital duties
+
+(ii) Submission:
+    • Submit to HR Department
+    • Confidential handling
+    • Reviewed by Ethics Committee or COI Review Panel
+
+(iii) Acknowledgment:
+    • HR acknowledges receipt
+    • Employee receives copy of declaration`
+          }
+        ]
+      },
+      {
+        number: '5',
+        title: 'CONFLICT OF INTEREST REVIEW AND MANAGEMENT',
+        subsections: [
+          {
+            number: '5.1',
+            title: 'COI Review Panel',
+            content: `(i) Composition:
+    • CHRO (Chair)
+    • Medical Director
+    • Ethics Committee representative
+    • Legal Advisor (if needed)
+
+(ii) Functions:
+    • Review all COI declarations
+    • Assess severity and impact
+    • Recommend mitigation measures
+    • Monitor compliance`
+          },
+          {
+            number: '5.2',
+            title: 'Assessment of COI',
+            content: `(i) Low Risk COI:
+    • No significant impact on clinical or business decisions
+    • Example: Speaking at conference with travel sponsorship
+    • Action: Disclosed, recorded, no restrictions
+
+(ii) Medium Risk COI:
+    • Potential influence on decisions
+    • Example: Family member owns diagnostic lab; employee refers patients
+    • Action: Mitigation plan required (e.g., mandatory second opinion, disclosure to patient)
+
+(iii) High Risk COI:
+    • Direct impact on institutional interests or patient care
+    • Example: Employee owns pharmacy and prescribes from own pharmacy
+    • Action: Prohibition or divestment required; may restrict duties`
+          },
+          {
+            number: '5.3',
+            title: 'Mitigation Strategies',
+            content: `(i) Disclosure:
+    • Inform patients of potential conflict
+    • Transparency in referrals
+
+(ii) Recusal:
+    • Abstain from decisions involving conflicted interest
+    • Example: Not participate in vendor selection if family owns vendor company
+
+(iii) Supervision:
+    • Additional oversight on decisions
+    • Second opinion mandatory
+
+(iv) Divestment:
+    • Sell or transfer conflicting ownership
+    • Required for high-risk COI
+
+(v) Restriction of Duties:
+    • Remove from procurement committee
+    • Limit prescribing authority (for pharmaceutical COI)`
+          }
+        ]
+      },
+      {
+        number: '6',
+        title: 'SPECIFIC COI SCENARIOS',
+        content: `(i) Doctor Ownership in Diagnostic Lab:
+    • Declare ownership
+    • Must refer to multiple labs (not exclusively own lab)
+    • Inform patient of ownership interest
+    • No kickbacks for referrals
+
+(ii) Pharmaceutical Company Relationships:
+    • Industry-sponsored CMEs allowed if transparently disclosed
+    • Gifts above ₹5,000 not accepted
+    • Research grants declared and approved by Ethics Committee
+    • No influence on prescribing patterns
+
+(iii) Employment with Competitor:
+    • Part-time practice at another hospital declared
+    • No sharing of confidential information
+    • No soliciting patients for other institution
+
+(iv) Vendor Relationships:
+    • Family or personal relationships with vendors declared
+    • Not participate in procurement decisions
+    • Arm's-length transactions ensured`
+      },
+      {
+        number: '7',
+        title: 'NON-DISCLOSURE OR FALSE DECLARATION',
+        content: `(i) Consequences:
+    • Failure to declare or false declaration is serious misconduct
+    • Disciplinary action: Warning to termination
+    • Financial penalties if monetary benefit obtained
+    • Reporting to professional councils
+    • Legal action for fraud
+
+(ii) Discovery of Undisclosed COI:
+    • Investigation initiated
+    • Immediate suspension of conflicted duties
+    • Inquiry to determine intent and impact
+    • Retrospective review of decisions made under COI`
+      },
+      {
+        number: '8',
+        title: 'RECORD KEEPING AND AUDIT',
+        content: `• COI declarations maintained in secure, confidential database
+• Annual COI summary report to management
+• Random audits of prescribing patterns, referrals, and vendor relationships
+• Public disclosure of institutional COI policy (not individual declarations)`
+      },
+      {
+        number: '9',
+        title: 'REFERENCE DOCUMENTS',
+        content: 'Code of Conduct, Ethics Policy, Indian Medical Council (Professional Conduct) Regulations, Annexure G.3.1: Conflict of Interest Declaration Form'
+      }
+    ]
   },
 
   sopG4: {
