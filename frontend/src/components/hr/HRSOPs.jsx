@@ -5,7 +5,7 @@ import {
   ChevronRight, CheckCircle, X, Menu, ArrowLeft, Zap, Clock, Scale,
   Target, GitBranch, TrendingUp, Activity, GraduationCap, BarChart3
 } from 'lucide-react';
-import { sopsData, sopsQuickRef } from '../../data/sopsData';
+import { sopsData, sopsQuickRef } from './sopsData';
 
 // Import SOP Tools
 import SOPProcedureWizard from './SOPProcedureWizard';
