@@ -371,6 +371,367 @@ const ComplianceTracker = ({ onClose, onNavigateToSection, onOpenPolicyImplement
     );
   };
 
+  const renderChecklist = () => (
+    <div className="space-y-6">
+      <div className="bg-blue-50 border-2 border-blue-200 rounded-xl p-5">
+        <p className="text-blue-800 text-sm">
+          <strong>Compliance Checklist:</strong> Track completion of requirements for each By-Laws section. 
+          Check off items as they are completed and add evidence/notes.
+        </p>
+      </div>
+
+      <div className="space-y-4">
+        {complianceSections.filter(s => s.status !== 'compliant').map(section => (
+          <div key={section.id} className="bg-white border-2 border-slate-200 rounded-xl p-6">
+            <div className="flex items-center justify-between mb-4">
+              <div>
+                <h4 className="text-lg font-bold text-slate-900">{section.name}</h4>
+                <div className="text-sm text-slate-600">
+                  {section.completed} of {section.requirements} requirements completed
+                </div>
+              </div>
+              <div className="text-right">
+                <div className="text-2xl font-bold text-green-700">{section.compliance}%</div>
+                <div className="text-xs text-slate-600">Compliance</div>
+              </div>
+            </div>
+
+            <div className="w-full h-2 bg-slate-200 rounded-full overflow-hidden mb-4">
+              <div
+                className="h-full bg-green-600 transition-all duration-500"
+                style={{ width: `${section.compliance}%` }}
+              />
+            </div>
+
+            <div className="space-y-2">
+              {Array.from({ length: section.requirements }).map((_, idx) => {
+                const isCompleted = idx < section.completed;
+                return (
+                  <label
+                    key={idx}
+                    className={`flex items-center gap-3 p-3 rounded-lg border-2 transition-all cursor-pointer ${
+                      isCompleted 
+                        ? 'bg-green-50 border-green-200' 
+                        : 'bg-white border-slate-200 hover:border-green-300'
+                    }`}
+                  >
+                    <input
+                      type="checkbox"
+                      checked={isCompleted}
+                      readOnly
+                      className="w-5 h-5 text-green-600 rounded focus:ring-2 focus:ring-green-500"
+                    />
+                    <div className="flex-1">
+                      <div className={`font-semibold ${isCompleted ? 'text-green-900' : 'text-slate-900'}`}>
+                        Requirement {idx + 1}: Sample compliance requirement
+                      </div>
+                      <div className="text-xs text-slate-600 mt-0.5">
+                        Due: 2024-10-{15 + idx}
+                      </div>
+                    </div>
+                    {isCompleted && <CheckCircle className="w-5 h-5 text-green-600" />}
+                  </label>
+                );
+              })}
+            </div>
+
+            <button
+              onClick={() => onNavigateToSection && onNavigateToSection(section.id)}
+              className="mt-4 w-full px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold"
+            >
+              View Full Section in By-Laws
+            </button>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+
+  const renderViolations = () => (
+    <div className="space-y-6">
+      {/* Filter */}
+      <div className="flex gap-4">
+        <button className="px-4 py-2 bg-red-100 text-red-700 rounded-lg font-semibold">
+          All ({violations.length})
+        </button>
+        <button className="px-4 py-2 bg-slate-100 text-slate-700 rounded-lg font-semibold hover:bg-slate-200">
+          Critical ({violations.filter(v => v.severity === 'critical').length})
+        </button>
+        <button className="px-4 py-2 bg-slate-100 text-slate-700 rounded-lg font-semibold hover:bg-slate-200">
+          Open ({violations.filter(v => v.status === 'open').length})
+        </button>
+        <button className="px-4 py-2 bg-slate-100 text-slate-700 rounded-lg font-semibold hover:bg-slate-200">
+          In Progress ({violations.filter(v => v.status === 'in-progress').length})
+        </button>
+      </div>
+
+      {/* Violations List */}
+      <div className="space-y-3">
+        {violations.map(violation => {
+          const severityColor = getSeverityColor(violation.severity);
+          const isExpanded = expandedViolation === violation.id;
+
+          return (
+            <div
+              key={violation.id}
+              className={`bg-white border-2 rounded-xl overflow-hidden transition-all ${
+                violation.severity === 'critical' ? 'border-red-300' : 'border-slate-200'
+              }`}
+            >
+              <div
+                onClick={() => setExpandedViolation(isExpanded ? null : violation.id)}
+                className="p-5 cursor-pointer hover:bg-slate-50 transition-colors"
+              >
+                <div className="flex items-start justify-between mb-3">
+                  <div className="flex-1">
+                    <div className="flex items-center gap-3 mb-2">
+                      <span className="font-mono text-sm font-bold text-slate-600">{violation.id}</span>
+                      <span className={`px-3 py-1 bg-${severityColor}-100 text-${severityColor}-700 rounded-full text-xs font-bold`}>
+                        {violation.severity.toUpperCase()}
+                      </span>
+                      <span className={`px-3 py-1 rounded-full text-xs font-bold ${
+                        violation.status === 'open' ? 'bg-red-100 text-red-700' :
+                        violation.status === 'in-progress' ? 'bg-blue-100 text-blue-700' :
+                        'bg-green-100 text-green-700'
+                      }`}>
+                        {violation.status.toUpperCase().replace('-', ' ')}
+                      </span>
+                    </div>
+                    <h5 className="text-lg font-bold text-slate-900 mb-1">{violation.title}</h5>
+                    <div className="text-sm text-slate-600">{violation.section}</div>
+                  </div>
+                  {isExpanded ? (
+                    <ChevronDown className="w-6 h-6 text-slate-400" />
+                  ) : (
+                    <ChevronRight className="w-6 h-6 text-slate-400" />
+                  )}
+                </div>
+
+                <div className="flex items-center gap-6 text-sm">
+                  <div className="flex items-center gap-2 text-slate-600">
+                    <Clock className="w-4 h-4" />
+                    <span>Reported: {violation.reportedDate}</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-red-700 font-semibold">
+                    <AlertCircle className="w-4 h-4" />
+                    <span>Due: {violation.dueDate}</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-slate-600">
+                    <Users className="w-4 h-4" />
+                    <span>{violation.assignedTo}</span>
+                  </div>
+                </div>
+              </div>
+
+              {isExpanded && (
+                <div className="px-5 pb-5 border-t border-slate-200 pt-4 bg-slate-50">
+                  <div className="mb-4">
+                    <h6 className="font-bold text-slate-900 mb-2">Description</h6>
+                    <p className="text-slate-700 leading-relaxed">{violation.description}</p>
+                  </div>
+
+                  {violation.resolvedDate && (
+                    <div className="mb-4 p-3 bg-green-50 border border-green-200 rounded-lg">
+                      <div className="flex items-center gap-2 text-green-800 font-semibold">
+                        <CheckCircle className="w-5 h-5" />
+                        <span>Resolved on {violation.resolvedDate}</span>
+                      </div>
+                    </div>
+                  )}
+
+                  <div className="flex gap-3">
+                    <button className="flex-1 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold">
+                      Update Status
+                    </button>
+                    <button className="flex-1 px-4 py-2 bg-slate-200 text-slate-700 rounded-lg hover:bg-slate-300 transition-colors font-semibold">
+                      Add Comment
+                    </button>
+                    <button 
+                      onClick={() => onNavigateToSection && onNavigateToSection(violation.section.toLowerCase().replace(' ', '_'))}
+                      className="flex-1 px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors font-semibold"
+                    >
+                      View Section
+                    </button>
+                  </div>
+                </div>
+              )}
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+
+  const renderCalendar = () => {
+    const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    
+    return (
+      <div className="space-y-6">
+        <div className="flex items-center justify-between">
+          <h4 className="text-xl font-bold text-slate-900">Compliance Calendar - 2024</h4>
+          <div className="flex gap-2">
+            <button className="px-4 py-2 bg-blue-100 text-blue-700 rounded-lg font-semibold hover:bg-blue-200">
+              Today
+            </button>
+            <button className="px-4 py-2 bg-slate-100 text-slate-700 rounded-lg font-semibold hover:bg-slate-200">
+              Export
+            </button>
+          </div>
+        </div>
+
+        {/* Upcoming Events */}
+        <div className="bg-white border-2 border-slate-200 rounded-xl p-6">
+          <h5 className="text-lg font-bold text-slate-900 mb-4">Upcoming Events</h5>
+          <div className="space-y-3">
+            {upcomingAudits.map((audit, idx) => (
+              <div key={idx} className="flex items-center gap-4 p-4 bg-blue-50 border border-blue-200 rounded-lg">
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-blue-700">{audit.date.split('-')[2]}</div>
+                  <div className="text-xs text-blue-600 font-semibold">{months[parseInt(audit.date.split('-')[1]) - 1]}</div>
+                </div>
+                <div className="flex-1">
+                  <div className="font-bold text-slate-900">{audit.section}</div>
+                  <div className="text-sm text-slate-600">{audit.type}</div>
+                </div>
+                <div className="text-right">
+                  <div className="text-sm font-semibold text-slate-700">{audit.auditor}</div>
+                  <div className="text-xs text-slate-500">Auditor</div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Month View */}
+        <div className="bg-white border-2 border-slate-200 rounded-xl p-6">
+          <div className="grid grid-cols-7 gap-2 mb-4">
+            {['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].map(day => (
+              <div key={day} className="text-center font-bold text-slate-600 text-sm py-2">
+                {day}
+              </div>
+            ))}
+          </div>
+          <div className="grid grid-cols-7 gap-2">
+            {Array.from({ length: 35 }).map((_, idx) => {
+              const day = idx - 2;
+              const hasEvent = [13, 20, 22, 25, 28, 30].includes(day);
+              
+              return (
+                <div
+                  key={idx}
+                  className={`aspect-square p-2 border rounded-lg text-center ${
+                    day < 1 || day > 31
+                      ? 'bg-slate-50 text-slate-300'
+                      : hasEvent
+                      ? 'bg-blue-50 border-blue-300 cursor-pointer hover:bg-blue-100'
+                      : 'bg-white border-slate-200 hover:bg-slate-50'
+                  }`}
+                >
+                  {day > 0 && day <= 31 && (
+                    <>
+                      <div className="font-semibold text-slate-900">{day}</div>
+                      {hasEvent && (
+                        <div className="w-2 h-2 bg-blue-600 rounded-full mx-auto mt-1"></div>
+                      )}
+                    </>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+    );
+  };
+
+  const renderReports = () => (
+    <div className="space-y-6">
+      {/* Report Templates */}
+      <div className="bg-white border-2 border-slate-200 rounded-xl p-6">
+        <h4 className="text-lg font-bold text-slate-900 mb-4">Quick Reports</h4>
+        <div className="grid grid-cols-3 gap-4">
+          <button className="p-4 bg-green-50 border-2 border-green-200 rounded-xl hover:bg-green-100 transition-all text-left">
+            <Download className="w-6 h-6 text-green-600 mb-2" />
+            <div className="font-bold text-slate-900">Overall Compliance</div>
+            <div className="text-xs text-slate-600 mt-1">Full compliance report</div>
+          </button>
+          <button className="p-4 bg-red-50 border-2 border-red-200 rounded-xl hover:bg-red-100 transition-all text-left">
+            <AlertTriangle className="w-6 h-6 text-red-600 mb-2" />
+            <div className="font-bold text-slate-900">Violations Summary</div>
+            <div className="text-xs text-slate-600 mt-1">Active violations report</div>
+          </button>
+          <button className="p-4 bg-blue-50 border-2 border-blue-200 rounded-xl hover:bg-blue-100 transition-all text-left">
+            <Calendar className="w-6 h-6 text-blue-600 mb-2" />
+            <div className="font-bold text-slate-900">Audit Schedule</div>
+            <div className="text-xs text-slate-600 mt-1">Upcoming audits report</div>
+          </button>
+        </div>
+      </div>
+
+      {/* Compliance Trends */}
+      <div className="bg-white border-2 border-slate-200 rounded-xl p-6">
+        <h4 className="text-lg font-bold text-slate-900 mb-4">Compliance Trends</h4>
+        <div className="space-y-4">
+          <div>
+            <div className="flex items-center justify-between mb-2">
+              <span className="text-sm font-semibold text-slate-700">Q1 2024</span>
+              <span className="text-sm font-bold text-green-700">87%</span>
+            </div>
+            <div className="w-full h-3 bg-slate-200 rounded-full overflow-hidden">
+              <div className="h-full bg-green-600" style={{ width: '87%' }}></div>
+            </div>
+          </div>
+          <div>
+            <div className="flex items-center justify-between mb-2">
+              <span className="text-sm font-semibold text-slate-700">Q2 2024</span>
+              <span className="text-sm font-bold text-green-700">90%</span>
+            </div>
+            <div className="w-full h-3 bg-slate-200 rounded-full overflow-hidden">
+              <div className="h-full bg-green-600" style={{ width: '90%' }}></div>
+            </div>
+          </div>
+          <div>
+            <div className="flex items-center justify-between mb-2">
+              <span className="text-sm font-semibold text-slate-700">Q3 2024</span>
+              <span className="text-sm font-bold text-green-700">{avgCompliance}%</span>
+            </div>
+            <div className="w-full h-3 bg-slate-200 rounded-full overflow-hidden">
+              <div className="h-full bg-green-600" style={{ width: `${avgCompliance}%` }}></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Category Performance */}
+      <div className="bg-white border-2 border-slate-200 rounded-xl p-6">
+        <h4 className="text-lg font-bold text-slate-900 mb-4">Performance by Category</h4>
+        <div className="space-y-3">
+          {[
+            { name: 'HR Operations', compliance: 92, count: 7 },
+            { name: 'Safety & Compliance', compliance: 85, count: 4 },
+            { name: 'Governance', compliance: 96, count: 6 },
+            { name: 'Conduct & Ethics', compliance: 97, count: 3 },
+            { name: 'Employee Relations', compliance: 79, count: 2 }
+          ].map(cat => (
+            <div key={cat.name} className="flex items-center gap-4">
+              <div className="w-40 font-semibold text-slate-700 text-sm">{cat.name}</div>
+              <div className="flex-1">
+                <div className="w-full h-2 bg-slate-200 rounded-full overflow-hidden">
+                  <div 
+                    className={`h-full ${cat.compliance >= 90 ? 'bg-green-600' : cat.compliance >= 75 ? 'bg-orange-500' : 'bg-red-600'}`}
+                    style={{ width: `${cat.compliance}%` }}
+                  ></div>
+                </div>
+              </div>
+              <div className="w-16 text-right font-bold text-slate-900">{cat.compliance}%</div>
+              <div className="w-20 text-right text-xs text-slate-600">{cat.count} sections</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+
   return (
     <>
       <div className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4">
