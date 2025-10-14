@@ -12060,7 +12060,290 @@ Annual Wellness Report:
     title: 'Health Screening & Doctor on Call Framework',
     searchTerms: ['health', 'screening', 'doctor', 'call', 'medical', 'checkup'],
     category: 'L. Wellness, Work-Life Balance & EAP',
-    content: 'Establishes formalized framework for routine and emergency health screening and access to Doctor-on-Call service ensuring proactive care and occupational health safety.'
+    subsections: [
+      {
+        number: '1',
+        title: 'OBJECTIVE',
+        content: 'To establish formalized framework for routine and emergency health screening, preventive health assessments, and immediate access to Doctor-on-Call service ensuring proactive employee healthcare, early disease detection, occupational health safety, emergency medical response, and compliance with Factories Act and healthcare regulations.'
+      },
+      {
+        number: '2',
+        title: 'SCOPE',
+        content: 'Covers mandatory and voluntary health screenings for all employees, pre-employment medical examinations, periodic health checks, occupational health surveillance, emergency medical services, and Doctor-on-Call availability for medical consultations and emergencies during work hours.'
+      },
+      {
+        number: '3',
+        title: 'HEALTH SCREENING PROGRAMS',
+        subsections: [
+          {
+            number: '3.1',
+            title: 'Pre-Employment Medical Examination',
+            content: `Mandatory for All New Joiners:
+• Conducted before joining or within first week
+• Determines fitness for duty and job role
+
+Tests Include:
+• General physical examination
+• Blood tests: CBC, blood sugar, HIV, HBsAg (Hepatitis B)
+• Chest X-ray (for TB screening)
+• Vision and hearing test (for specific roles)
+• Drug screening (if policy mandates)
+• Psychological assessment (for specific roles)
+
+Conducted By:
+• Occupational Health Physician or empaneled clinic
+
+Fitness Certificate:
+• "Fit" / "Fit with restrictions" / "Temporarily unfit" / "Permanently unfit"
+• Joining conditional on "Fit" status
+• Restrictions documented (e.g., "Fit but avoid night shifts due to medical condition")`
+          },
+          {
+            number: '3.2',
+            title: 'Annual Health Screening (Voluntary but Encouraged)',
+            content: `• Offered to all employees once a year (as part of wellness program)
+• Comprehensive health check-up package
+
+Includes:
+• Complete Blood Count (CBC)
+• Lipid profile (cholesterol)
+• Blood sugar (fasting and PP)
+• Liver function test (LFT)
+• Kidney function test (KFT)
+• Thyroid profile (if indicated)
+• Blood pressure and BMI
+• ECG (for age >40 or risk factors)
+• General physician consultation
+
+Reports:
+• Confidentially shared with employee
+• Recommendations for follow-up or lifestyle changes`
+          },
+          {
+            number: '3.3',
+            title: 'Role-Specific Health Surveillance',
+            content: `Mandatory for Employees in Specific Roles (Factories Act/Occupational Health):
+
+(i) Radiation Workers (Radiology, Cath Lab):
+    • TLD badge monitoring (radiation exposure)
+    • Quarterly blood tests
+    • Annual eye check-up
+
+(ii) Healthcare Workers (Nursing, Lab):
+    • Annual Hepatitis B immunity check
+    • TB screening
+    • Vaccination status review
+
+(iii) Housekeeping/Sanitation:
+    • Annual health screening for infectious diseases
+    • Skin and respiratory health check
+
+(iv) Night Shift Workers:
+    • Sleep disorder assessment
+    • Cardiovascular health monitoring
+
+(v) Employees Exposed to Chemicals:
+    • Lung function tests
+    • Skin allergy tests`
+          },
+          {
+            number: '3.4',
+            title: 'Post-Illness Return-to-Work Medical Clearance',
+            content: `Required After:
+• Extended medical leave (>30 days)
+• Hospitalization for serious illness
+• Mental health leave
+• Surgery or major medical procedure
+• Infectious disease (TB, COVID-19, Hepatitis)
+
+Process:
+• Employee submits medical documents from treating physician
+• Occupational Health Physician reviews
+• Fitness assessment conducted
+• Clearance certificate issued: "Fit to resume" or "Fit with modified duties"
+• Gradual return-to-work plan if needed (phased return)`
+          }
+        ]
+      },
+      {
+        number: '4',
+        title: 'DOCTOR-ON-CALL SERVICE',
+        subsections: [
+          {
+            number: '4.1',
+            title: 'Availability',
+            content: `• Doctor available on hospital premises during work hours (8 AM - 6 PM, Mon-Sat)
+• Emergency on-call doctor 24/7 (can be reached via phone)
+• Occupational Health Physician or General Physician
+• Emergency room doctor available for critical cases`
+          },
+          {
+            number: '4.2',
+            title: 'Services Provided',
+            content: `(i) Minor Illness & Injury:
+    • Fever, cold, headache, body ache
+    • Minor cuts, bruises, sprains
+    • First aid and wound dressing
+    • Medication (OTC or prescription from hospital pharmacy)
+
+(ii) Medical Consultation:
+    • Health concerns, chronic disease management advice
+    • Prescription refills (for ongoing conditions)
+    • Medical fitness queries
+    • Pre-existing condition management guidance
+
+(iii) Emergency Response:
+    • Cardiac arrest, stroke, seizure
+    • Severe injuries (accidents)
+    • Acute breathlessness, chest pain
+    • Stabilization and transfer to emergency dept (if needed)
+
+(iv) Preventive Health Counselling:
+    • Lifestyle advice (diet, exercise, stress management)
+    • Vaccination guidance
+    • Health screening interpretation`
+          },
+          {
+            number: '4.3',
+            title: 'How to Access Doctor-on-Call',
+            content: `Walk-In:
+• Visit Occupational Health Clinic (location: [specify])
+• No appointment needed for emergencies
+• Token system for consultations
+
+Emergency Call:
+• Call hospital operator or security: Extension XXXX
+• For medical emergencies: "Code Blue" announcement
+
+Referral:
+• Supervisor can refer employee if unwell or injured
+• Direct escort to clinic`
+          },
+          {
+            number: '4.4',
+            title: 'Medical Records',
+            content: `• Every consultation documented
+• Confidential medical records maintained
+• Only accessed by occupational health team
+• Not shared with HR/management without employee consent (except fitness certification)`
+          }
+        ]
+      },
+      {
+        number: '5',
+        title: 'OCCUPATIONAL HEALTH CLINIC',
+        content: `Facilities:
+• Consultation room with doctor
+• First aid station
+• Examination couch
+• Basic medical equipment (BP apparatus, glucometer, thermometer, pulse oximeter)
+• Emergency medicines and first aid kit
+• Stretcher and wheelchair
+• Privacy screens for examination
+
+Staffing:
+• Occupational Health Physician (part-time or full-time)
+• Occupational Health Nurse
+• First aid trained staff (security, HR)`
+      },
+      {
+        number: '6',
+        title: 'EMERGENCY MEDICAL RESPONSE',
+        subsections: [
+          {
+            number: '6.1',
+            title: 'On-Site Emergency Protocol',
+            content: `If Employee Suffers Medical Emergency:
+(i) Call for help immediately (security, supervisor, colleagues)
+(ii) Dial hospital emergency: Extension XXXX or "Code Blue"
+(iii) Doctor and emergency team rush to location
+(iv) Assess and provide immediate care (CPR, oxygen, AED if needed)
+(v) Stabilize patient
+(vi) Transfer to emergency department or call ambulance if required
+(vii) Notify family and HR
+(viii) Incident documented`
+          },
+          {
+            number: '6.2',
+            title: 'Ambulance & Hospital Transfer',
+            content: `• Hospital ambulance available for employee emergencies
+• Transfer to hospital ER for advanced care
+• Hospital bears cost for occupational injuries/illnesses
+• Personal medical emergencies: Employee/family pays (or insurance)
+• Supervisor or HR accompanies employee`
+          }
+        ]
+      },
+      {
+        number: '7',
+        title: 'VACCINATION & IMMUNIZATION',
+        content: `Mandatory Vaccinations (for applicable roles):
+• Hepatitis B: Healthcare workers
+• Tetanus: All employees (updated every 10 years)
+• Flu vaccine: Recommended annually for all
+• COVID-19 and boosters: As per government guidelines
+
+Process:
+• Vaccination camps organized
+• Free of cost for employees
+• Records maintained in personnel file`
+      },
+      {
+        number: '8',
+        title: 'OCCUPATIONAL INJURY & ILLNESS',
+        content: `Occupational Injury:
+• Injury sustained at workplace or during work
+• Immediate medical attention by doctor
+• Treatment at hospital (free of cost)
+• Incident report filed (SOP on workplace safety)
+• Compensation as per ESI Act or Workmen's Compensation Act
+
+Occupational Illness:
+• Disease contracted due to work exposure (e.g., TB in healthcare worker)
+• Medical investigation and diagnosis
+• Treatment and rehabilitation
+• Compensation and benefits as per law`
+      },
+      {
+        number: '9',
+        title: 'HEALTH DATA CONFIDENTIALITY',
+        content: `• All employee health data is strictly confidential
+• Access limited to occupational health team
+• Not disclosed to HR, managers, or colleagues without consent
+• Aggregate data (anonymized) used for wellness planning
+• Compliance with medical ethics and data privacy laws`
+      },
+      {
+        number: '10',
+        title: 'COST & INSURANCE',
+        content: `Free Services (Hospital Covers):
+• Pre-employment medical
+• Annual health screening (wellness program)
+• Doctor-on-call consultations
+• Minor illness/injury treatment
+• Occupational injury/illness treatment
+• Vaccinations (mandatory and recommended)
+
+Employee/Insurance Pays:
+• Personal medical conditions requiring specialized treatment
+• Advanced diagnostics beyond screening package
+• Hospitalization for non-occupational illness (insurance or self-pay)`
+      },
+      {
+        number: '11',
+        title: 'HEALTH EDUCATION & AWARENESS',
+        content: `• Periodic health talks by doctor
+• First aid training for employees
+• CPR and AED training
+• Health bulletins and posters
+• Integration with wellness programs (SOP L.2)`
+      },
+      {
+        number: '12',
+        title: 'REFERENCE DOCUMENTS',
+        content: 'Occupational Health Policy, Factories Act 1948, ESI Act, Workmen Compensation Act, Wellness Policy (SOP L.2), Annexure L.3.1: Medical Fitness Certificate Format, Annexure L.3.2: Health Screening Report Template'
+      }
+    ]
   },
 
   sopL4: {
