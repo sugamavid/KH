@@ -469,6 +469,18 @@ const HRByLaws = ({ setActiveModule }) => {
           {/* Enhanced Content Area with Subsections */}
           <div className="p-16 bg-gradient-to-b from-amber-50 to-white">
             <div className="max-w-4xl mx-auto space-y-10">
+              {/* Render direct content if no subsections */}
+              {section.content && !section.subsections && (
+                <div className="bg-white rounded-xl p-10 shadow-inner border-2 border-amber-200">
+                  <div 
+                    className="text-lg leading-loose text-justify font-serif text-slate-800 tracking-wide whitespace-pre-line" 
+                    style={{lineHeight: '2'}}
+                    dangerouslySetInnerHTML={{ __html: section.content.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') }}
+                  />
+                </div>
+              )}
+              
+              {/* Render subsections if they exist */}
               {section.subsections && section.subsections.map((subsection, idx) => (
                 <div key={idx} className="bg-white rounded-xl p-10 shadow-inner border-2 border-amber-200">
                   {subsection.title && (
