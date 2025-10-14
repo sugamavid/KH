@@ -8887,7 +8887,228 @@ Role-Specific Refreshers:
     title: 'Clinical Competency Validation Protocol',
     searchTerms: ['clinical', 'competency', 'validation', 'skills', 'assessment'],
     category: 'J. Training, Certification & Development',
-    content: 'Establishes systematic framework for assessing, documenting, and validating clinical competencies ensuring patient safety and continual skill upgradation.'
+    subsections: [
+      {
+        number: '1',
+        title: 'OBJECTIVE',
+        content: 'To establish rigorous, evidence-based, and standardized framework for assessing, validating, documenting, and maintaining clinical competencies of medical and paramedical staff ensuring patient safety, quality care delivery, regulatory compliance, and continuous professional development.'
+      },
+      {
+        number: '2',
+        title: 'SCOPE',
+        content: 'Applicable to all clinical staff including doctors, nurses, allied health professionals (physiotherapists, lab technicians, radiology technicians, OT technicians), and any role directly involved in patient care. Covers initial competency assessment, periodic revalidation, and skill maintenance.'
+      },
+      {
+        number: '3',
+        title: 'CLINICAL COMPETENCIES FRAMEWORK',
+        content: `(i) Technical Competencies:
+    • Clinical procedures (IV cannulation, catheterization, wound care, etc.)
+    • Equipment operation (ventilators, monitors, infusion pumps)
+    • Diagnostic skills (ECG interpretation, X-ray reading)
+    • Emergency response (BLS, ACLS, crash cart management)
+
+(ii) Knowledge Competencies:
+    • Clinical protocols and guidelines
+    • Pharmacology and medication safety
+    • Infection control practices
+    • Patient safety standards
+
+(iii) Behavioral Competencies:
+    • Patient communication and empathy
+    • Teamwork and collaboration
+    • Professional ethics
+    • Documentation and record-keeping`
+      },
+      {
+        number: '4',
+        title: 'COMPETENCY VALIDATION STAGES',
+        subsections: [
+          {
+            number: '4.1',
+            title: 'Initial Competency Assessment (At Hiring)',
+            content: `• Conducted during onboarding before independent practice
+• Assessment methods:
+    - Written test (knowledge-based MCQs)
+    - Practical demonstration (skill-based)
+    - Simulation-based assessment
+    - Observed practice under supervision
+• Conducted by Department Head/Senior Clinical Staff/Assessor
+• Minimum passing score: 80% for clinical roles
+• Failed candidates: Remedial training and reassessment
+• Only after passing: Authorization to perform procedures independently`
+          },
+          {
+            number: '4.2',
+            title: 'Annual Competency Revalidation',
+            content: `• Conducted annually for all clinical staff
+• Ensures skill maintenance and knowledge updates
+• Random sampling of competencies assessed each year
+• Assessment scheduled during annual training calendar
+• Records updated in personnel files
+• Non-compliance: Retraining mandatory`
+          },
+          {
+            number: '4.3',
+            title: 'Competency Assessment for New Procedures/Equipment',
+            content: `• When new technology, equipment, or procedure introduced
+• Training provided followed by competency validation
+• Until validated: Not authorized to use independently
+• Supervised practice until competency demonstrated`
+          },
+          {
+            number: '4.4',
+            title: 'Remedial Competency Assessment',
+            content: `• Triggered by:
+    - Clinical incident or near-miss attributed to skill gap
+    - Supervisor concerns about performance
+    - Return from long leave (>3 months)
+    - Change in clinical role/department
+• Focused assessment on specific competency in question
+• Remedial training and re-assessment until competent`
+          }
+        ]
+      },
+      {
+        number: '5',
+        title: 'COMPETENCY ASSESSMENT METHODS',
+        subsections: [
+          {
+            number: '5.1',
+            title: 'Written Examination',
+            content: `• Multiple-choice questions (MCQs)
+• Case-based scenarios
+• Protocol and guideline questions
+• Minimum passing: 80%
+• Conducted via paper-based or online assessment`
+          },
+          {
+            number: '5.2',
+            title: 'Practical Demonstration',
+            content: `• Candidate performs procedure under observation
+• Assessor uses competency checklist (Annexure J.3.1)
+• Evaluated on:
+    - Technique accuracy
+    - Safety measures
+    - Infection control adherence
+    - Patient communication
+    - Speed and efficiency
+• Scored on defined criteria (e.g., 1-5 scale)
+• Video recording for documentation (with consent)`
+          },
+          {
+            number: '5.3',
+            title: 'Simulation-Based Assessment',
+            content: `• Using mannequins, simulation labs, or virtual reality
+• High-fidelity simulation for emergency scenarios
+• Examples:
+    - CPR on mannequin
+    - Ventilator management simulation
+    - Surgical procedure simulation
+• Objective scoring via simulation software or assessor`
+          },
+          {
+            number: '5.4',
+            title: 'Observed Clinical Practice',
+            content: `• Direct observation during actual patient care
+• Senior clinician observes and evaluates
+• Real-world assessment of competency application
+• Feedback provided immediately
+• Multiple observations for comprehensive assessment`
+          },
+          {
+            number: '5.5',
+            title: 'Portfolio-Based Assessment',
+            content: `• Review of log books, case records, procedures performed
+• Evidence of continuous learning (CME attendance, publications)
+• Reflective practice documentation
+• Peer feedback and patient feedback`
+          }
+        ]
+      },
+      {
+        number: '6',
+        title: 'COMPETENCY VALIDATION PROCESS',
+        content: `(i) Identification of competencies to be assessed (based on role)
+(ii) Scheduling assessment sessions (HR coordinates)
+(iii) Pre-notification to candidates (1 week prior)
+(iv) Assessment conducted by certified assessors
+(v) Scoring and evaluation using standardized criteria
+(vi) Results communicated to candidate
+(vii) Pass: Certificate issued, competency recorded
+(viii) Fail: Remedial plan, retraining, and re-assessment
+(ix) Documentation in personnel file and HRMS
+(x) MIS report to management`
+      },
+      {
+        number: '7',
+        title: 'COMPETENCY ASSESSORS',
+        content: `• Senior clinical staff trained as competency assessors
+• Qualifications:
+    - Minimum 5 years clinical experience
+    - Completed "Train the Trainer" program
+    - Clinical expertise in relevant area
+• Assessor list maintained by HR
+• Inter-rater reliability ensured through calibration sessions`
+      },
+      {
+        number: '8',
+        title: 'COMPETENCY LEVELS & AUTHORIZATION',
+        content: `Level 1 - Supervised Practice:
+• Can perform under direct supervision only
+• New joiners, trainees, or post-remedial training
+
+Level 2 - Independent Practice:
+• Can perform procedures independently
+• Standard competency validated
+• Most staff operate at this level
+
+Level 3 - Expert/Trainer:
+• Can train and assess others
+• Advanced competency demonstrated
+• Senior staff, department trainers
+
+Authorization matrix maintained specifying what each staff member is authorized to perform independently`
+      },
+      {
+        number: '9',
+        title: 'COMPETENCY RECORDS & DOCUMENTATION',
+        content: `• Individual Competency Profile maintained for each clinical staff
+• Records include:
+    - Competencies assessed and dates
+    - Assessment scores and results
+    - Certificates and validations
+    - Training received
+    - Authorization level
+• Stored in HRMS and personnel file
+• Updated after each assessment
+• Accessible to Department Head and HR
+• Audit trail for accreditation and inspections`
+      },
+      {
+        number: '10',
+        title: 'NON-COMPLIANCE & CONSEQUENCES',
+        content: `• Mandatory participation in competency validation
+• Failure to attend: Rescheduled, but persistent non-compliance escalated
+• Failed assessment: Not authorized for independent practice until re-validated
+• Practicing beyond authorization level: Serious misconduct
+• Patient safety incident due to incompetence: Disciplinary action + mandatory retraining`
+      },
+      {
+        number: '11',
+        title: 'CONTINUOUS IMPROVEMENT',
+        content: `• Annual review of competency framework
+• Update competencies based on new guidelines/technology
+• Assessor training and calibration
+• Analysis of common competency gaps
+• Targeted training programs to address gaps
+• Benchmarking with best practices and accreditation standards`
+      },
+      {
+        number: '12',
+        title: 'REFERENCE DOCUMENTS',
+        content: 'NABH Standards, Clinical Establishment Act, Professional Council Guidelines (NMC, INC), HR By-Laws (Training Policy), Annexure J.3.1: Competency Assessment Checklist, Annexure J.3.2: Competency Validation Certificate, Annexure J.3.3: Individual Competency Profile'
+      }
+    ]
   },
 
   sopJ4: {
