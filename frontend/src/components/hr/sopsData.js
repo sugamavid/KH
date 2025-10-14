@@ -14437,7 +14437,210 @@ Retained in personnel file for 7 years`
     title: 'Exit Interview & Feedback Review Process',
     searchTerms: ['exit', 'interview', 'feedback', 'review', 'separation'],
     category: 'N. Exit & Separation Management',
-    content: 'Establishes structured process for conducting exit interviews, collecting feedback, and analyzing separation trends for organizational improvement.'
+    subsections: [
+      {
+        number: '1',
+        title: 'OBJECTIVE',
+        content: 'To establish structured process for conducting exit interviews, collecting candid feedback from departing employees, analyzing separation trends, identifying organizational improvement areas, and leveraging exit insights for retention strategies, workplace enhancements, and continuous organizational development.'
+      },
+      {
+        number: '2',
+        title: 'SCOPE',
+        content: 'Covers all voluntary resignations, retirements, and mutually agreed separations. Includes exit interview scheduling, questioning methodology, feedback documentation, data analysis, and action planning. Applicable to all departing employees with emphasis on confidentiality and constructive feedback.'
+      },
+      {
+        number: '3',
+        title: 'PURPOSE OF EXIT INTERVIEW',
+        content: `• Understand real reasons for departure
+• Identify systemic issues (management, culture, compensation, growth)
+• Gather suggestions for improvement
+• Assess employee experience and satisfaction
+• Identify retention risk factors
+• Maintain positive relationship with alumni
+• Obtain insights for organizational development`
+      },
+      {
+        number: '4',
+        title: 'EXIT INTERVIEW PROCESS',
+        subsections: [
+          {
+            number: '4.1',
+            title: 'Scheduling',
+            content: `Timing:
+• Scheduled in last week of employment (after handover mostly complete)
+• OR on last working day
+• Sufficient time allocated (45-60 minutes)
+
+Conducted By:
+• HR representative (not direct supervisor - ensures candidness)
+• For senior roles: CHRO or external consultant
+
+Mode:
+• In-person (preferred) - allows observation of body language
+• Video call (for remote employees)
+• Written questionnaire (if interview not possible)
+
+Invitation:
+• Email/calendar invite sent with brief explanation
+• Voluntary participation (encouraged but not mandatory)
+• Confidentiality assured`
+          },
+          {
+            number: '4.2',
+            title: 'Interview Environment',
+            content: `• Private, comfortable setting (meeting room, not open area)
+• Informal, conversational tone
+• Non-judgmental, empathetic approach
+• Assurance of confidentiality (feedback aggregated, not attributed)
+• Permission to take notes or record (with consent)`
+          }
+        ]
+      },
+      {
+        number: '5',
+        title: 'EXIT INTERVIEW QUESTIONNAIRE',
+        content: `Key Topics (Annexure N.2.1):
+
+(i) Reason for Leaving:
+• Primary reason: Better opportunity, relocation, personal, compensation, growth, management, work-life balance, etc.
+• What triggered decision to look for new job?
+• What could have retained you?
+
+(ii) Job Satisfaction:
+• Overall satisfaction with role and responsibilities
+• Were expectations met when you joined?
+• Best aspects of the job
+• Challenges faced
+
+(iii) Management & Supervision:
+• Relationship with supervisor
+• Feedback and support received
+• Recognition and appreciation
+
+(iv) Work Environment & Culture:
+• Team dynamics and collaboration
+• Organizational culture
+• Work-life balance
+• Stress levels
+
+(v) Compensation & Benefits:
+• Satisfaction with salary, benefits
+• Comparison with market (if comfortable sharing)
+
+(vi) Career Development:
+• Growth opportunities provided
+• Training and skill development
+• Promotion prospects
+
+(vii) Suggestions for Improvement:
+• What should organization start doing?
+• What should organization stop doing?
+• What should organization continue doing?
+• Advice for successor
+
+(viii) Future Relationship:
+• Open to staying in touch (alumni network)?
+• Would you recommend hospital as employer?
+• Would you consider returning (boomerang)?`
+      },
+      {
+        number: '6',
+        title: 'CONDUCTING THE INTERVIEW',
+        content: `Do's:
+• Start with rapport building
+• Ask open-ended questions
+• Listen actively, probe gently for details
+• Remain neutral, do not defend organization
+• Thank for honesty and contributions
+• Assure feedback will be used constructively
+
+Don'ts:
+• Don't argue or take feedback personally
+• Don't make promises that can't be kept
+• Don't pressure for information if employee reluctant
+• Don't gossip or share feedback inappropriately`
+      },
+      {
+        number: '7',
+        title: 'DOCUMENTATION',
+        content: `• Exit interview form completed (Annexure N.2.1)
+• Key points and verbatim quotes noted
+• Ratings/scores (if rating scale used)
+• Interviewer observations and impressions
+• Filed in personnel file and HR database
+• Data entered into exit analytics system`
+      },
+      {
+        number: '8',
+        title: 'CONFIDENTIALITY & ANONYMITY',
+        content: `• Individual feedback kept confidential
+• Names not disclosed to managers or colleagues
+• Aggregated trends and themes shared with management
+• Exception: Serious allegations (harassment, fraud) investigated further with due process
+• Alumni network: Consent taken before adding to database`
+      },
+      {
+        number: '9',
+        title: 'FEEDBACK ANALYSIS',
+        content: `HR Analytics:
+(i) Quantitative Analysis:
+    • Exit reasons categorized and counted
+    • Attrition rate by department, role, tenure, manager
+    • Voluntary vs involuntary turnover
+    • Trends over time
+
+(ii) Qualitative Analysis:
+    • Recurring themes in feedback
+    • Specific manager or department issues
+    • Systemic problems (e.g., "lack of growth opportunities" mentioned repeatedly)
+
+(iii) Benchmarking:
+    • Compare with industry attrition rates
+    • Identify departments with high attrition (red flag)`
+      },
+      {
+        number: '10',
+        title: 'ACTION PLANNING',
+        content: `Quarterly Exit Review Meeting:
+• HR presents exit data and insights to senior management
+• Key findings and trends discussed
+• Root cause analysis for high attrition areas
+• Action plans developed:
+    - Manager training (if people management issue)
+    - Compensation review (if market mismatch)
+    - Career path clarity (if growth concern)
+    - Work-life balance initiatives
+• Accountability assigned
+• Follow-up in next quarter`
+      },
+      {
+        number: '11',
+        title: 'CONTINUOUS IMPROVEMENT',
+        content: `Exit Insights Used For:
+• Retention strategy refinement
+• Employee value proposition enhancement
+• Manager effectiveness programs
+• Organizational culture initiatives
+• Compensation benchmarking
+• Onboarding improvements (unmet expectations highlight)
+• Succession planning (anticipate departures)`
+      },
+      {
+        number: '12',
+        title: 'ALUMNI ENGAGEMENT',
+        content: `Maintaining Positive Relations:
+• Alumni network (LinkedIn group, database)
+• Periodic communication (newsletters, event invites)
+• Boomerang hiring (welcoming back former employees)
+• Referrals (alumni referring candidates)
+• Brand ambassadors (positive word-of-mouth)`
+      },
+      {
+        number: '13',
+        title: 'REFERENCE DOCUMENTS',
+        content: 'Exit Management Policy, Retention Strategy, Annexure N.2.1: Exit Interview Questionnaire, Annexure N.2.2: Exit Data Dashboard Template'
+      }
+    ]
   },
 
   sopN3: {
