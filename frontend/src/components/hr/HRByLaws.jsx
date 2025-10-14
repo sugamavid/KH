@@ -1072,6 +1072,20 @@ const HRByLaws = ({ setActiveModule }) => {
         />
       )}
 
+      {/* Document Generator Modal */}
+      {showDocumentGenerator && (
+        <DocumentGenerator 
+          onClose={() => setShowDocumentGenerator(false)}
+          onNavigateToSection={(sectionId) => {
+            setActiveSection(sectionId);
+            setShowDocumentGenerator(false);
+            if (contentRef.current) {
+              contentRef.current.scrollTop = 0;
+            }
+          }}
+        />
+      )}
+
       {/* Print Styles */}
       <style jsx>{`
         @media print {
