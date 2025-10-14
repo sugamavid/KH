@@ -4,30 +4,76 @@ export const byLawsData = {
     id: 'preamble',
     title: 'PREAMBLE',
     searchTerms: ['preamble', 'introduction', 'purpose', 'objectives'],
-    content: `WHEREAS, Koyili Hospital (hereinafter referred to as "the Hospital") is a multi-specialty healthcare institution established to provide quality medical care, treatment, and healthcare services to the community, committed to maintaining the highest standards of medical excellence, patient safety, and employee welfare;
+    subsections: [
+      {
+        title: 'WHEREAS Clauses',
+        content: `**WHEREAS,** Koyili Hospital (hereinafter referred to as "the Hospital") is a multi-specialty healthcare institution established to provide quality medical care, treatment, and healthcare services to the community, committed to maintaining the highest standards of medical excellence, patient safety, and employee welfare;
 
-AND WHEREAS, the Hospital recognizes that its most valuable asset is its human capital - the dedicated doctors, nurses, paramedical staff, administrative personnel, and support workers who collectively deliver exceptional healthcare services;
+**AND WHEREAS,** the Hospital recognizes that its most valuable asset is its human capital - the dedicated doctors, nurses, paramedical staff, administrative personnel, and support workers who collectively deliver exceptional healthcare services;
 
-AND WHEREAS, the Hospital is committed to fostering a work environment characterized by mutual respect, dignity, fairness, transparency, professional growth, and adherence to the highest ethical standards;
+**AND WHEREAS,** the Hospital is committed to fostering a work environment characterized by mutual respect, dignity, fairness, transparency, professional growth, and adherence to the highest ethical standards;
 
-AND WHEREAS, the Hospital operates in a highly regulated healthcare environment subject to numerous laws, regulations, and standards including but not limited to the Kerala Shops and Commercial Establishments Act, Industrial Employment (Standing Orders) Act, Clinical Establishments Act, Pre-Conception and Pre-Natal Diagnostic Techniques Act, Biomedical Waste Management Rules, Indian Medical Council Regulations, Indian Nursing Council Regulations, NABH standards, and various other central and state legislations;
+**AND WHEREAS,** the Hospital operates in a highly regulated healthcare environment subject to numerous laws, regulations, and standards including but not limited to the Kerala Shops and Commercial Establishments Act, Industrial Employment (Standing Orders) Act, Clinical Establishments Act, Pre-Conception and Pre-Natal Diagnostic Techniques Act, Biomedical Waste Management Rules, Indian Medical Council Regulations, Indian Nursing Council Regulations, NABH standards, and various other central and state legislations;
 
-AND WHEREAS, it is essential to establish clear, comprehensive, and transparent policies and procedures governing all aspects of the employment relationship including recruitment, conditions of service, compensation, benefits, performance management, career development, discipline, grievance redressal, and separation;
+**AND WHEREAS,** it is essential to establish clear, comprehensive, and transparent policies and procedures governing all aspects of the employment relationship including recruitment, conditions of service, compensation, benefits, performance management, career development, discipline, grievance redressal, and separation;
 
-AND WHEREAS, these By-Laws are intended to provide clarity and consistency in Human Resources management, protect the legitimate rights and interests of both the Hospital and its employees, promote harmonious industrial relations, and ensure legal compliance;
+**AND WHEREAS,** these By-Laws are intended to provide clarity and consistency in Human Resources management, protect the legitimate rights and interests of both the Hospital and its employees, promote harmonious industrial relations, and ensure legal compliance;
 
-AND WHEREAS, the Board of Directors of Koyili Hospital, in exercise of the powers vested in them and after due deliberation and consultation with stakeholders, deems it necessary and expedient to formulate and adopt these Human Resources By-Laws;
+**AND WHEREAS,** the Board of Directors of Koyili Hospital, in exercise of the powers vested in them and after due deliberation and consultation with stakeholders, deems it necessary and expedient to formulate and adopt these Human Resources By-Laws;`
+      },
+      {
+        title: 'Enactment',
+        content: `**NOW THEREFORE,** the Board of Directors of Koyili Hospital hereby enacts, adopts, and promulgates these comprehensive Human Resources By-Laws to govern all employment relationships within the Hospital, to be effective from February 1, 2024, superseding all previous HR policies, circulars, and directives to the extent inconsistent with these By-Laws.`
+      },
+      {
+        title: 'SCOPE AND APPLICABILITY',
+        content: `These By-Laws shall apply to all employees of Koyili Hospital including permanent, probationary, contractual, temporary, part-time, and casual employees, as well as consultants, trainees, and interns, except where specifically stated otherwise.
 
-NOW THEREFORE, the Board of Directors of Koyili Hospital hereby enacts, adopts, and promulgates these comprehensive Human Resources By-Laws to govern all employment relationships within the Hospital, to be effective from February 1, 2024, superseding all previous HR policies, circulars, and directives to the extent inconsistent with these By-Laws.
+The By-Laws are binding on all employees from the date of their appointment or the effective date of these By-Laws, whichever is later.`
+      },
+      {
+        title: 'PURPOSE AND OBJECTIVES',
+        content: `The primary objectives of these By-Laws are to:
 
-SCOPE AND APPLICABILITY:
-These By-Laws shall apply to all employees of Koyili Hospital including permanent, probationary, contractual, temporary, part-time, and casual employees, as well as consultants, trainees, and interns, except where specifically stated otherwise. The By-Laws are binding on all employees from the date of their appointment or the effective date of these By-Laws, whichever is later.
+(a) Establish clear terms and conditions of employment;
 
-PURPOSE AND OBJECTIVES:
-The primary objectives of these By-Laws are to: (a) establish clear terms and conditions of employment; (b) define rights, responsibilities, and obligations of employees and management; (c) promote a culture of excellence, integrity, and professionalism; (d) ensure fair and equitable treatment of all employees; (e) provide mechanisms for performance management, career development, and skill enhancement; (f) establish transparent procedures for discipline, grievance redressal, and dispute resolution; (g) ensure compliance with all applicable laws and regulations; (h) foster employee engagement, satisfaction, and retention; and (i) support the Hospital's mission of delivering world-class healthcare services.
+(b) Define rights, responsibilities, and obligations of employees and management;
 
-GUIDING PRINCIPLES:
-These By-Laws are founded on the following guiding principles: Fairness and Equity - treating all employees with dignity and without discrimination; Transparency - maintaining open, honest, and clear communication; Meritocracy - recognizing and rewarding performance, competence, and contribution; Legal Compliance - adhering strictly to all applicable laws and regulations; Employee Welfare - promoting the physical, mental, and financial well-being of employees; Patient-Centricity - ensuring all HR policies support excellent patient care; Continuous Improvement - regularly reviewing and updating policies to reflect best practices; and Mutual Respect - fostering a culture of respect between management and employees.`
+(c) Promote a culture of excellence, integrity, and professionalism;
+
+(d) Ensure fair and equitable treatment of all employees;
+
+(e) Provide mechanisms for performance management, career development, and skill enhancement;
+
+(f) Establish transparent procedures for discipline, grievance redressal, and dispute resolution;
+
+(g) Ensure compliance with all applicable laws and regulations;
+
+(h) Foster employee engagement, satisfaction, and retention; and
+
+(i) Support the Hospital's mission of delivering world-class healthcare services.`
+      },
+      {
+        title: 'GUIDING PRINCIPLES',
+        content: `These By-Laws are founded on the following guiding principles:
+
+**Fairness and Equity** - Treating all employees with dignity and without discrimination;
+
+**Transparency** - Maintaining open, honest, and clear communication;
+
+**Meritocracy** - Recognizing and rewarding performance, competence, and contribution;
+
+**Legal Compliance** - Adhering strictly to all applicable laws and regulations;
+
+**Employee Welfare** - Promoting the physical, mental, and financial well-being of employees;
+
+**Patient-Centricity** - Ensuring all HR policies support excellent patient care;
+
+**Continuous Improvement** - Regularly reviewing and updating policies to reflect best practices; and
+
+**Mutual Respect** - Fostering a culture of respect between management and employees.`
+      }
+    ]
   },
   section1: {
     id: 'section1',
