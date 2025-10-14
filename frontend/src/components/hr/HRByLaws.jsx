@@ -507,7 +507,10 @@ const HRByLaws = ({ setActiveModule }) => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {/* Policy Implementation */}
-          <div className="bg-white border-2 border-blue-200 rounded-xl p-6 hover:shadow-lg hover:border-blue-400 transition-all cursor-pointer group">
+          <div 
+            onClick={() => setShowPolicyImplementation(true)}
+            className="bg-white border-2 border-blue-200 rounded-xl p-6 hover:shadow-lg hover:border-blue-400 transition-all cursor-pointer group"
+          >
             <div className="flex items-center gap-4 mb-4">
               <div className="p-3 bg-blue-100 rounded-lg group-hover:bg-blue-600 transition-colors">
                 <Zap className="w-7 h-7 text-blue-600 group-hover:text-white transition-colors" />
