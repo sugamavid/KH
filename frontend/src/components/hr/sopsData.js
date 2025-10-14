@@ -12845,7 +12845,289 @@ Action:
     title: 'Filing & Escalation of Grievances',
     searchTerms: ['grievance', 'filing', 'escalation', 'complaint', 'issue'],
     category: 'M. Grievance, Complaints & Redressal',
-    content: 'Establishes formal mechanism for employees to file grievances and defines clear escalation pathways ensuring timely and fair resolution.'
+    subsections: [
+      {
+        number: '1',
+        title: 'OBJECTIVE',
+        content: 'To establish formal, accessible, and transparent mechanism for employees to file grievances, define clear escalation pathways, ensure timely and fair resolution, protect employee rights, maintain organizational justice, and foster a culture of open communication and trust.'
+      },
+      {
+        number: '2',
+        title: 'SCOPE',
+        content: 'Covers all types of employee grievances including workplace issues, policy concerns, interpersonal conflicts, harassment, discrimination, unfair treatment, compensation disputes, and working conditions. Applicable to all employees across all levels with protection against retaliation.'
+      },
+      {
+        number: '3',
+        title: 'DEFINITION OF GRIEVANCE',
+        content: `A grievance is any dissatisfaction, complaint, or concern raised by an employee regarding:
+• Work conditions, environment, or safety
+• Compensation, benefits, or allowances
+• Performance evaluation or promotion
+• Interpersonal conflicts with colleagues or supervisors
+• Alleged unfair treatment or discrimination
+• Harassment or bullying
+• Policy interpretation or application
+• Disciplinary action
+• Any other employment-related matter causing distress
+
+Grievances can be individual or collective (group of employees with common concern)`
+      },
+      {
+        number: '4',
+        title: 'PRINCIPLES OF GRIEVANCE HANDLING',
+        content: `• Accessibility: Easy for employees to raise concerns
+• Confidentiality: Privacy maintained (except where investigation requires disclosure)
+• No Retaliation: Protection from adverse action for raising grievance
+• Timely Resolution: Defined timelines at each stage
+• Fairness & Impartiality: Objective investigation and decision
+• Natural Justice: Opportunity to be heard for all parties
+• Documentation: Written record of grievance and resolution`
+      },
+      {
+        number: '5',
+        title: 'GRIEVANCE FILING CHANNELS',
+        subsections: [
+          {
+            number: '5.1',
+            title: 'Informal Resolution (Encouraged First Step)',
+            content: `• Employee discusses concern directly with immediate supervisor
+• Many issues resolved through open communication
+• No formal documentation required
+• Quick resolution (within 1-2 days)
+• If unresolved or uncomfortable to approach supervisor, proceed to formal grievance`
+          },
+          {
+            number: '5.2',
+            title: 'Formal Grievance Filing',
+            content: `Methods to File:
+(i) Written Submission:
+    • Grievance Form (Annexure M.1.1) submitted to HR
+    • Describe issue, parties involved, dates, desired resolution
+    • Supporting documents attached (if any)
+
+(ii) Email:
+    • Email to: grievance@koyilihospital.com
+    • Subject: "Grievance - [Your Name] - [Brief Issue]"
+    • Detailed description in email body
+
+(iii) Grievance Box:
+    • Physical grievance box at HR office or common area
+    • Anonymous submissions accepted (though follow-up may be limited)
+
+(iv) HR Walk-In:
+    • In-person meeting with HR representative
+    • HR assists in documenting grievance
+
+(v) Online Portal:
+    • HRMS grievance module (if available)
+    • Log in and submit grievance electronically`
+          },
+          {
+            number: '5.3',
+            title: 'Anonymous Grievances',
+            content: `• Accepted via grievance box or anonymous email
+• Investigated if sufficient details provided
+• Limitation: Cannot seek clarifications or update grievant
+• For serious issues (harassment, fraud): Anonymous reporting encouraged with Whistle-blower protection`
+          }
+        ]
+      },
+      {
+        number: '6',
+        title: 'GRIEVANCE ESCALATION LEVELS',
+        subsections: [
+          {
+            number: '6.1',
+            title: 'Level 1: Immediate Supervisor',
+            content: `• Employee raises concern with direct supervisor (informal or formal)
+• Supervisor attempts resolution through discussion, clarification, or corrective action
+• Timeline: 3-5 working days
+• If resolved: Issue closed, documented
+• If unresolved or supervisor is subject of grievance: Escalate to Level 2`
+          },
+          {
+            number: '6.2',
+            title: 'Level 2: Department Head / HOD',
+            content: `• Grievance escalated to Department Head
+• HOD reviews grievance, speaks with employee and supervisor
+• May conduct preliminary inquiry
+• Timeline: 7-10 working days
+• If resolved: Issue closed, documented, communicated to employee
+• If unresolved or HOD is subject: Escalate to Level 3`
+          },
+          {
+            number: '6.3',
+            title: 'Level 3: HR Department',
+            content: `• Grievance submitted to HR (directly or escalated)
+• HR conducts formal investigation
+• Interviews involved parties, reviews evidence
+• May involve Grievance Redressal Committee (SOP M.2)
+• Timeline: 15-20 working days
+• HR recommends resolution to management
+• If policy-related: HR clarifies or recommends policy change
+• If disciplinary action needed: Proceeds per SOP M.3
+• If unresolved or HR conflict of interest: Escalate to Level 4`
+          },
+          {
+            number: '6.4',
+            title: 'Level 4: Senior Management / CHRO',
+            content: `• Grievance escalated to CHRO or Senior Management
+• Review of HR investigation and recommendations
+• Final decision on resolution
+• Timeline: 10-15 working days from escalation
+• Decision communicated in writing to employee
+• Implementation monitored by HR`
+          },
+          {
+            number: '6.5',
+            title: 'Level 5: CEO / Board (Exceptional Cases)',
+            content: `• For grievances against CHRO or senior management
+• Or when all levels exhausted without satisfactory resolution
+• Employee requests review by CEO or Board
+• Final authority, decision is binding
+• Rare cases only`
+          }
+        ]
+      },
+      {
+        number: '7',
+        title: 'GRIEVANCE HANDLING PROCESS',
+        content: `(i) Acknowledgment:
+    • Grievance acknowledged within 2 working days of receipt
+    • Reference number assigned
+    • Expected timeline communicated
+
+(ii) Investigation:
+    • Fact-finding by appropriate authority (supervisor, HR, committee)
+    • Interviews with grievant, respondent (if any), witnesses
+    • Review of documents, policies, records
+    • Confidentiality maintained
+
+(iii) Resolution:
+    • Decision based on facts, policies, and fairness
+    • Options: Issue resolved, corrective action, policy clarification, no action (if unfounded)
+    • Decision documented with rationale
+
+(iv) Communication:
+    • Decision communicated to grievant in writing
+    • Explanation provided
+    • If appeal available, process mentioned
+
+(v) Implementation:
+    • Corrective actions implemented
+    • Follow-up to ensure resolution sustained
+
+(vi) Closure:
+    • Grievance formally closed
+    • Records maintained`
+      },
+      {
+        number: '8',
+        title: 'TIMELINES FOR RESOLUTION',
+        content: `• Level 1 (Supervisor): 3-5 working days
+• Level 2 (HOD): 7-10 working days
+• Level 3 (HR): 15-20 working days
+• Level 4 (Senior Management): 10-15 working days
+• Total maximum: 30-40 working days for complex cases
+
+Extensions:
+• If investigation requires more time, employee informed
+• Maximum extension: 15 additional days with justification
+• Regular updates provided to employee`
+      },
+      {
+        number: '9',
+        title: 'TYPES OF RESOLUTIONS',
+        content: `(i) Grievance Upheld:
+    • Employee's concern found valid
+    • Corrective action taken (policy change, compensation adjustment, disciplinary action against offender, transfer, etc.)
+
+(ii) Grievance Partially Upheld:
+    • Some aspects valid, some not
+    • Partial resolution or compromise
+
+(iii) Grievance Not Upheld:
+    • After investigation, grievance found unfounded or insufficient evidence
+    • Explanation provided to employee
+    • No adverse action against employee for raising grievance (unless proven malicious)
+
+(iv) Mediation/Settlement:
+    • Parties agree to mutually acceptable solution
+    • Common in interpersonal conflicts`
+      },
+      {
+        number: '10',
+        title: 'PROTECTION AGAINST RETALIATION',
+        content: `• No employee shall be penalized, harassed, or discriminated against for raising a genuine grievance
+• Retaliation includes:
+    - Adverse performance reviews
+    - Denial of promotion or increment
+    - Transfer to undesirable location
+    - Increased scrutiny or hostility
+    - Termination or disciplinary action
+• Retaliation is serious misconduct, subject to disciplinary action
+• If employee feels retaliated against, can file separate grievance or escalate`
+      },
+      {
+        number: '11',
+        title: 'CONFIDENTIALITY',
+        content: `• Grievance details shared only on need-to-know basis
+• Identity of grievant protected (unless investigation requires disclosure)
+• Anonymous grievances: Identity not sought
+• Records stored securely
+• Gossip or disclosure of grievance details by staff: Misconduct`
+      },
+      {
+        number: '12',
+        title: 'MALICIOUS OR FRIVOLOUS GRIEVANCES',
+        content: `• Genuine grievances encouraged; no penalty even if not upheld
+• However, intentionally false or malicious grievances (to harm someone) are misconduct
+• Investigation will determine intent
+• If proven malicious: Disciplinary action against grievant
+• Burden of proof on employer to prove malice`
+      },
+      {
+        number: '13',
+        title: 'APPEAL PROCESS',
+        content: `• If employee dissatisfied with grievance resolution, can appeal (SOP M.4)
+• Appeal filed within 7 days of decision
+• Next higher authority reviews
+• Fresh perspective or new evidence considered`
+      },
+      {
+        number: '14',
+        title: 'DOCUMENTATION & RECORDS',
+        content: `Maintained:
+• Grievance form or letter
+• Investigation notes and interview records
+• Evidence and supporting documents
+• Decision letter and rationale
+• Appeal (if any) and outcome
+• Records retained for 3 years minimum (legal requirement)
+• Used for trend analysis and policy improvement`
+      },
+      {
+        number: '15',
+        title: 'GRIEVANCE TREND ANALYSIS',
+        content: `• HR reviews grievances quarterly
+• Identifies recurring issues (e.g., specific department, policy gap)
+• Recommends systemic changes
+• Reports to management
+• Proactive measures to prevent grievances`
+      },
+      {
+        number: '16',
+        title: 'SPECIAL GRIEVANCES',
+        content: `• Sexual Harassment: Handled via POSH ICC (SOP M.5), not general grievance mechanism
+• Whistleblower complaints (fraud, unethical conduct): Separate whistleblower policy
+• Collective grievances (union/group): May involve collective bargaining process`
+      },
+      {
+        number: '17',
+        title: 'REFERENCE DOCUMENTS',
+        content: 'Grievance Redressal Policy, Industrial Disputes Act, HR By-Laws, Annexure M.1.1: Grievance Form, Annexure M.1.2: Grievance Register, Annexure M.1.3: Grievance Acknowledgment Template'
+      }
+    ]
   },
 
   sopM2: {
