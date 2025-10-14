@@ -379,7 +379,10 @@ const HRByLaws = ({ setActiveModule }) => {
           </div>
           
           {/* Audit Assistant */}
-          <div className="group bg-gradient-to-br from-teal-500 to-teal-600 rounded-xl p-6 text-white hover:shadow-2xl transition-all transform hover:-translate-y-1 cursor-pointer">
+          <div 
+            onClick={() => setShowAuditAssistant(true)}
+            className="group bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl p-6 text-white hover:shadow-2xl transition-all transform hover:-translate-y-1 cursor-pointer"
+          >
             <div className="w-14 h-14 bg-white/20 rounded-xl flex items-center justify-center mb-4 backdrop-blur">
               <CheckCircle className="w-8 h-8" />
             </div>
