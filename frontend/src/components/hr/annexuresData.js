@@ -514,11 +514,240 @@ export const annexuresData = {
     searchTerms: ['performance', 'appraisal', 'evaluation'],
     category: 'Performance Management',
     forms: [
-      { name: 'Self-Appraisal Form', code: 'PERF-001', description: 'Annual self-assessment' },
-      { name: 'Supervisor Assessment Form', code: 'PERF-002', description: 'Manager evaluation' },
-      { name: 'Goal Setting Template', code: 'PERF-003', description: 'Annual goals and KPIs' },
-      { name: 'Performance Improvement Plan', code: 'PERF-004', description: 'PIP documentation' },
-      { name: '360 Degree Feedback Form', code: 'PERF-005', description: 'Peer and stakeholder feedback' }
+      { 
+        name: 'Self-Appraisal Form', 
+        code: 'PERF-001', 
+        description: 'Annual self-assessment and achievement documentation',
+        sections: [
+          {
+            title: 'Employee Information',
+            fields: ['Employee Name', 'Employee ID', 'Department', 'Designation', 'Reporting Manager', 'Review Period: From ___ To ___', 'Date of Joining', 'Time in Current Role']
+          },
+          {
+            title: 'Key Responsibilities',
+            fields: ['List your primary job responsibilities during the review period:', '1. Responsibility 1', '2. Responsibility 2', '3. Responsibility 3', '4. Responsibility 4', '5. Responsibility 5']
+          },
+          {
+            title: 'Goals Achievement',
+            fields: ['For each goal set at the beginning of the year, provide:', 'Goal 1: [Description]', '  - Target: [Quantifiable target]', '  - Achievement: [% or status]', '  - Evidence/Impact: [Specific results]', '  - Self-Rating: (1-5)', '', 'Goal 2: [Description]', '  - Target:', '  - Achievement:', '  - Evidence/Impact:', '  - Self-Rating:', '', '[Repeat for all goals]']
+          },
+          {
+            title: 'Key Achievements',
+            fields: ['List significant achievements beyond set goals:', '1. Achievement/Project: [Name]', '   Impact: [Business impact, cost savings, quality improvement]', '   Recognition: [Any awards/appreciation received]', '', '2. Achievement/Project:', '   Impact:', '   Recognition:', '', '3. Additional contributions (process improvements, innovations, etc.)']
+          },
+          {
+            title: 'Competency Self-Assessment',
+            fields: ['Rate yourself on the following competencies (1-5 scale):', '', 'Technical/Functional Skills:', '  - Job-specific technical knowledge: ___', '  - Quality of work output: ___', '  - Efficiency and productivity: ___', '', 'Behavioral Competencies:', '  - Communication skills: ___', '  - Team collaboration: ___', '  - Problem-solving ability: ___', '  - Initiative and ownership: ___', '  - Adaptability to change: ___', '  - Time management: ___', '', 'Leadership (if applicable):', '  - Team management: ___', '  - Decision making: ___', '  - People development: ___']
+          },
+          {
+            title: 'Challenges and Support Needed',
+            fields: ['What challenges did you face during the review period?', 'What support or resources would have helped you perform better?', 'Any organizational/system barriers affecting performance?']
+          },
+          {
+            title: 'Training and Development',
+            fields: ['Training programs attended during the year:', '  - Training 1: [Name and dates]', '  - Training 2:', '', 'Certifications obtained:', '', 'Skills developed:', '', 'Areas where you need further training/development:']
+          },
+          {
+            title: 'Goals for Next Year',
+            fields: ['Proposed goals for the upcoming year:', 'Goal 1: [SMART goal description]', 'Goal 2:', 'Goal 3:', '', 'Career aspirations and development areas:', 'Short-term (1 year):', 'Long-term (3-5 years):']
+          },
+          {
+            title: 'Overall Self-Rating',
+            fields: ['Overall performance rating (1-5):', '1 - Needs Improvement', '2 - Below Expectations', '3 - Meets Expectations', '4 - Exceeds Expectations', '5 - Outstanding', '', 'Your Self-Rating: ___', 'Justification for rating:']
+          },
+          {
+            title: 'Employee Declaration',
+            fields: ['I confirm that the information provided is accurate and complete.', 'Employee Signature: ________', 'Date: ________']
+          }
+        ],
+        instructions: 'Complete this form honestly and provide specific examples. Use quantifiable metrics where possible. Submit to your reporting manager 1 week before appraisal discussion.',
+        approvalRequired: 'Self-submission to Manager',
+        processingTime: 'Review within 2 weeks'
+      },
+      { 
+        name: 'Supervisor Assessment Form', 
+        code: 'PERF-002', 
+        description: 'Manager evaluation of employee performance',
+        sections: [
+          {
+            title: 'Employee Details',
+            fields: ['Employee Name', 'Employee ID', 'Department', 'Designation', 'Review Period', 'Supervisor Name', 'Supervisor Designation']
+          },
+          {
+            title: 'Goals Achievement Assessment',
+            fields: ['Review each goal set for the employee:', 'Goal 1: [Description]', '  - Target: [Original target]', '  - Employee Self-Rating: ___', '  - Supervisor Rating: ___', '  - Comments: [Specific feedback on achievement]', '', 'Goal 2:', '  - Target:', '  - Employee Self-Rating: ___', '  - Supervisor Rating: ___', '  - Comments:', '', '[Continue for all goals]']
+          },
+          {
+            title: 'Competency Assessment',
+            fields: ['Rate the employee on following competencies (1-5):', '', 'Technical/Functional Competencies:', '  - Job knowledge and expertise: ___', '  - Quality of work: ___', '  - Productivity and efficiency: ___', '  - Attention to detail: ___', '  - Innovation and creativity: ___', '', 'Behavioral Competencies:', '  - Communication (written and verbal): ___', '  - Team collaboration: ___', '  - Customer orientation: ___', '  - Problem-solving: ___', '  - Initiative and ownership: ___', '  - Reliability and dependability: ___', '  - Adaptability: ___', '', 'Leadership (if applicable):', '  - Team management: ___', '  - Decision making: ___', '  - Strategic thinking: ___', '  - People development: ___']
+          },
+          {
+            title: 'Strengths',
+            fields: ['List key strengths demonstrated by the employee:', '1.', '2.', '3.', 'Specific examples of strengths in action:']
+          },
+          {
+            title: 'Areas for Improvement',
+            fields: ['Identify areas where employee needs to improve:', '1.', '2.', '3.', 'Specific examples and suggestions for improvement:']
+          },
+          {
+            title: 'Training and Development Recommendations',
+            fields: ['Recommended training programs for skill enhancement:', 'Technical skills training:', 'Soft skills development:', 'Leadership development (if applicable):', '', 'Career development path recommended:']
+          },
+          {
+            title: 'Overall Performance Rating',
+            fields: ['Employee Self-Rating: ___', 'Supervisor Rating: ___', '', 'Rating Scale:', '1 - Unsatisfactory (Immediate improvement required)', '2 - Needs Improvement (Below expectations)', '3 - Meets Expectations (Satisfactory performance)', '4 - Exceeds Expectations (Consistently above standards)', '5 - Outstanding (Exceptional performance)', '', 'Justification for rating:', '', 'Recommendation: Promotion / Increment / Training / PIP / No Change']
+          },
+          {
+            title: 'Goals for Next Year',
+            fields: ['Goals agreed for the next review period:', 'Goal 1: [SMART goal]', 'Goal 2:', 'Goal 3:', 'Goal 4:', 'Goal 5:', '', 'Development plan for employee:', 'Timeline for goal review: Quarterly / Half-yearly']
+          },
+          {
+            title: 'Supervisor Comments',
+            fields: ['Additional comments or feedback:', '', '', '', 'Supervisor Signature: ________', 'Date: ________']
+          }
+        ],
+        instructions: 'Complete after reviewing employee self-appraisal. Provide specific, actionable feedback with examples. Discuss ratings and feedback with employee before finalizing.',
+        approvalRequired: 'Department Head, HR Review',
+        processingTime: 'Complete within 2 weeks of receiving self-appraisal'
+      },
+      { 
+        name: 'Goal Setting Template', 
+        code: 'PERF-003', 
+        description: 'Annual goals and KPIs documentation',
+        sections: [
+          {
+            title: 'Employee Information',
+            fields: ['Employee Name', 'Employee ID', 'Department', 'Designation', 'Review Year', 'Manager Name']
+          },
+          {
+            title: 'Goal Setting Instructions',
+            fields: ['Goals should be SMART:', 'S - Specific (clear and well-defined)', 'M - Measurable (quantifiable metrics)', 'A - Achievable (realistic within resources)', 'R - Relevant (aligned with organizational objectives)', 'T - Time-bound (clear timeline)', '', 'Set 3-5 key goals for the year covering:', '  - Core job responsibilities (60-70%)', '  - Developmental goals (20-30%)', '  - Organizational initiatives (10-20%)']
+          },
+          {
+            title: 'Goal 1',
+            fields: ['Goal Description:', 'Aligned to Organizational Objective:', 'Specific Target/Deliverable:', 'Success Metrics (KPIs):', 'Timeline: Start Date ___ | Target Date ___', 'Resources Required:', 'Weightage: ___% (of total goals)', 'Review Frequency: Monthly / Quarterly']
+          },
+          {
+            title: 'Goal 2',
+            fields: ['Goal Description:', 'Aligned to Organizational Objective:', 'Specific Target/Deliverable:', 'Success Metrics (KPIs):', 'Timeline:', 'Resources Required:', 'Weightage: ___%']
+          },
+          {
+            title: 'Goal 3',
+            fields: ['Goal Description:', 'Aligned to Organizational Objective:', 'Specific Target/Deliverable:', 'Success Metrics (KPIs):', 'Timeline:', 'Resources Required:', 'Weightage: ___%']
+          },
+          {
+            title: 'Goal 4 (Optional)',
+            fields: ['Goal Description:', 'Success Metrics:', 'Timeline:', 'Weightage: ___%']
+          },
+          {
+            title: 'Goal 5 (Optional)',
+            fields: ['Goal Description:', 'Success Metrics:', 'Timeline:', 'Weightage: ___%']
+          },
+          {
+            title: 'Development Goals',
+            fields: ['Skill Development Target 1:', '  - Current proficiency level:', '  - Target proficiency level:', '  - Action plan:', '', 'Skill Development Target 2:', '  - Current proficiency:', '  - Target proficiency:', '  - Action plan:']
+          },
+          {
+            title: 'Support and Resources',
+            fields: ['What support do you need from your manager?', 'Training requirements:', 'Tools/technology needs:', 'Cross-functional collaboration required:']
+          },
+          {
+            title: 'Agreement and Signatures',
+            fields: ['Employee confirms understanding and acceptance of goals:', 'Employee Signature: ________ Date: ____', '', 'Manager confirms goals are SMART and achievable:', 'Manager Signature: ________ Date: ____']
+          }
+        ],
+        instructions: 'Complete during performance appraisal cycle or at beginning of year. Goals to be reviewed quarterly and updated as needed with manager approval.',
+        approvalRequired: 'Manager, Department Head',
+        processingTime: 'Finalize within appraisal period'
+      },
+      { 
+        name: 'Performance Improvement Plan', 
+        code: 'PERF-004', 
+        description: 'PIP documentation for underperformance',
+        sections: [
+          {
+            title: 'Employee Information',
+            fields: ['Employee Name', 'Employee ID', 'Department', 'Designation', 'Reporting Manager', 'PIP Start Date', 'PIP Review Date', 'PIP End Date (typically 30-90 days)']
+          },
+          {
+            title: 'Performance Concerns',
+            fields: ['Areas of underperformance (specific and measurable):', '1. Performance Gap:', '   Current Performance:', '   Expected Standard:', '   Gap/Deficiency:', '', '2. Performance Gap:', '   Current Performance:', '   Expected Standard:', '   Gap/Deficiency:', '', '3. Additional concerns (attendance, conduct, quality):']
+          },
+          {
+            title: 'Impact of Underperformance',
+            fields: ['Impact on team:', 'Impact on department goals:', 'Impact on customers/patients:', 'Impact on quality/safety standards:']
+          },
+          {
+            title: 'Improvement Expectations',
+            fields: ['Specific, measurable improvement targets:', 'Expectation 1:', '  - Measurable target:', '  - Timeline:', '', 'Expectation 2:', '  - Measurable target:', '  - Timeline:', '', 'Expectation 3:', '  - Measurable target:', '  - Timeline:']
+          },
+          {
+            title: 'Support and Resources',
+            fields: ['Support provided by manager:', '  - Coaching sessions: [Frequency]', '  - Training programs: [Details]', '  - Mentoring: [Mentor name if applicable]', '  - Additional resources:', '', 'Employee responsibilities:', '  - Self-study requirements:', '  - Practice/application areas:', '  - Documentation/reporting expectations:']
+          },
+          {
+            title: 'Review and Monitoring',
+            fields: ['Weekly check-ins: Every [day] at [time]', 'Bi-weekly progress reviews: [Dates]', 'Mid-PIP formal review: [Date]', 'Final PIP review: [Date]', '', 'Progress tracking method:', 'Documentation requirements:']
+          },
+          {
+            title: 'Consequences',
+            fields: ['If improvement targets are met:', '  - PIP closure and return to normal performance management', '  - Recognition of improvement effort', '', 'If improvement targets are not met:', '  - PIP extension for [X] days (if close to target)', '  - Demotion/role change (if suitable alternative exists)', '  - Termination of employment (as per By-Laws)', '', 'Employee has been informed of potential consequences: Yes / No']
+          },
+          {
+            title: 'Employee Acknowledgment',
+            fields: ['I acknowledge that I have been informed of performance concerns and improvement expectations.', 'I understand the support provided and my responsibilities.', 'I am aware of the timeline and consequences.', 'I commit to making the required improvements.', '', 'Employee Signature: ________ Date: ____', 'Employee Comments (optional):']
+          },
+          {
+            title: 'Manager Confirmation',
+            fields: ['I confirm that performance concerns have been clearly communicated.', 'I commit to providing stated support and conducting regular reviews.', '', 'Manager Signature: ________ Date: ____']
+          },
+          {
+            title: 'HR Acknowledgment',
+            fields: ['PIP reviewed for compliance with policies and fairness.', 'HR Signature: ________ Date: ____']
+          }
+        ],
+        instructions: 'PIP is a formal process. Document all meetings and progress. Provide fair opportunity for improvement. Consult HR before initiating PIP.',
+        approvalRequired: 'Manager, Department Head, HR',
+        processingTime: 'PIP duration: 30-90 days typically'
+      },
+      { 
+        name: '360 Degree Feedback Form', 
+        code: 'PERF-005', 
+        description: 'Peer and stakeholder feedback for comprehensive assessment',
+        sections: [
+          {
+            title: 'Feedback Provider Information',
+            fields: ['Your Name (Optional for peer feedback)', 'Your Department', 'Your Relationship with Employee: (Peer / Reportee / Internal Customer / Cross-functional Colleague)', 'Feedback is: Confidential / Anonymous']
+          },
+          {
+            title: 'Employee Being Reviewed',
+            fields: ['Employee Name', 'Department', 'Designation', 'Review Period']
+          },
+          {
+            title: 'Competency Ratings',
+            fields: ['Rate the employee on following (1-5 scale, or N/A if not applicable):', '', 'Communication:', '  - Clarity in communication: ___', '  - Active listening: ___', '  - Responsiveness to queries: ___', '', 'Collaboration:', '  - Team player attitude: ___', '  - Cooperation and support: ___', '  - Conflict resolution: ___', '', 'Professionalism:', '  - Reliability and dependability: ___', '  - Meeting commitments: ___', '  - Professional conduct: ___', '', 'Technical/Functional:', '  - Job knowledge demonstrated: ___', '  - Quality of work output: ___', '  - Problem-solving ability: ___', '', 'Leadership (if applicable):', '  - Provides clear direction: ___', '  - Motivates and supports team: ___', '  - Decision-making: ___']
+          },
+          {
+            title: 'Strengths',
+            fields: ['What are the employee\'s key strengths?', '1.', '2.', '3.', 'Specific example where you observed these strengths:']
+          },
+          {
+            title: 'Areas for Development',
+            fields: ['What areas could the employee improve?', '1.', '2.', '3.', 'Constructive suggestions for improvement:']
+          },
+          {
+            title: 'Additional Comments',
+            fields: ['Any other feedback or comments:', '', '', '', 'Would you want to work with this person again? Yes / No / Neutral']
+          },
+          {
+            title: 'Feedback Provider Signature',
+            fields: ['Signature (if not anonymous): ________', 'Date: ________']
+          }
+        ],
+        instructions: '360 feedback is developmental, not punitive. Provide honest, constructive feedback. Focus on behaviors, not personality. Give specific examples where possible.',
+        approvalRequired: 'HR compiles and anonymizes feedback',
+        processingTime: 'Compiled within 2 weeks of collection'
+      }
     ]
   },
   annex5: {
