@@ -8657,7 +8657,228 @@ Low Priority (As resources permit):
     title: 'Induction & Refresher Training Program Calendar',
     searchTerms: ['induction', 'refresher', 'training', 'calendar', 'schedule'],
     category: 'J. Training, Certification & Development',
-    content: 'Establishes structured framework for conducting Induction and Refresher Training Programs ensuring familiarity with institutional values, protocols, and competencies.'
+    subsections: [
+      {
+        number: '1',
+        title: 'OBJECTIVE',
+        content: 'To institutionalize structured, comprehensive, and mandatory Induction Training for new employees and periodic Refresher Training for existing staff ensuring orientation to organizational culture, policies, safety protocols, clinical standards, and continuous competency maintenance.'
+      },
+      {
+        number: '2',
+        title: 'SCOPE',
+        content: 'Covers all new joiners (medical, paramedical, administrative, technical, support staff) for induction training and all existing employees for mandatory refresher training. Includes general orientation, department-specific training, and statutory compliance refreshers.'
+      },
+      {
+        number: '3',
+        title: 'INDUCTION TRAINING PROGRAM',
+        subsections: [
+          {
+            number: '3.1',
+            title: 'Timing & Duration',
+            content: `• Conducted within first week of joining (Day 1-3 typically)
+• Duration: 2-3 days (8-16 hours total)
+• Attendance mandatory before department deployment
+• Certificate issued upon completion`
+          },
+          {
+            number: '3.2',
+            title: 'Induction Training Modules',
+            content: `Day 1: Organizational Orientation (4 hours)
+• Welcome address by HR/Senior Management
+• Hospital history, vision, mission, values
+• Organizational structure and departments
+• Key policies and by-laws overview
+• Code of conduct and ethics
+• POSH awareness
+• Dress code and grooming standards
+
+Day 2: Safety & Compliance Training (4 hours)
+• Fire safety and evacuation procedures
+• Infection control and hand hygiene
+• Biomedical waste management (color coding)
+• Occupational health and safety
+• Emergency protocols and disaster management
+• Incident reporting mechanism
+• Patient rights and confidentiality (HIPAA/data privacy)
+
+Day 3: Operational & Administrative Training (4 hours)
+• HRMS and attendance system training
+• Payroll process and salary structure
+• Leave and attendance policies
+• Performance management system
+• IT systems, email, communication tools
+• ID card, access control, security protocols
+• Canteen, transport, and employee facilities
+
+Department-Specific Induction (Day 4-5):
+• Department orientation by HOD/Supervisor
+• Job role and responsibilities
+• Department SOPs and workflows
+• Equipment and tools training
+• Team introduction and buddy assignment
+• Shadowing senior staff (on-the-job training)`
+          },
+          {
+            number: '3.3',
+            title: 'Induction Delivery Methods',
+            content: `• Classroom sessions: By HR, Safety Officer, Department Heads
+• Videos and presentations
+• Hands-on demonstrations (e.g., fire extinguisher use)
+• Facility tours (departments, emergency exits, key areas)
+• Interactive Q&A sessions
+• E-learning modules (where applicable)
+• Assessments/quizzes to test understanding`
+          },
+          {
+            number: '3.4',
+            title: 'Induction Training Schedule',
+            content: `• Conducted bi-weekly or monthly (based on intake batch)
+• HR maintains master induction calendar
+• New joiners grouped into batches for efficiency
+• Individual induction if urgent deployment required
+• Makeup sessions for missed participants`
+          },
+          {
+            number: '3.5',
+            title: 'Induction Training Assessment',
+            content: `• Post-induction quiz/test (MCQ format)
+• Minimum 70% passing score
+• Failed participants: Re-training and retest
+• Feedback form from new joiners
+• Certificate issued on successful completion
+• Records maintained in personnel files`
+          }
+        ]
+      },
+      {
+        number: '4',
+        title: 'REFRESHER TRAINING PROGRAM',
+        subsections: [
+          {
+            number: '4.1',
+            title: 'Purpose & Frequency',
+            content: `• Reinforce critical knowledge and skills
+• Update on policy/procedure changes
+• Maintain statutory compliance
+• Prevent skill decay and knowledge obsolescence
+• Frequency: Annually or as mandated by regulation/accreditation`
+          },
+          {
+            number: '4.2',
+            title: 'Mandatory Refresher Training Topics',
+            content: `Annual Refreshers (All Employees):
+• Fire safety and emergency evacuation (Annual)
+• Infection control and hand hygiene (Annual)
+• Biomedical waste management (Annual)
+• POSH awareness (Annual)
+• Patient safety and quality protocols (Annual)
+• Code of conduct refresher (Annual)
+
+Role-Specific Refreshers:
+• BLS (Basic Life Support) - Every 2 years for clinical staff
+• ACLS (Advanced Cardiac Life Support) - Every 2 years for ICU/Emergency staff
+• Clinical competency updates - As per NABH/medical council requirements
+• Equipment handling refreshers - When new versions deployed`
+          },
+          {
+            number: '4.3',
+            title: 'Refresher Training Schedule',
+            content: `• HR prepares annual refresher training calendar
+• Batch-wise training to minimize operational disruption
+• Scheduled during lean hours or designated training days
+• Typical schedule:
+    - Q1 (Apr-Jun): Fire safety, Infection control
+    - Q2 (Jul-Sep): Biomedical waste, Patient safety
+    - Q3 (Oct-Dec): POSH, Code of conduct
+    - Q4 (Jan-Mar): BLS/ACLS, Clinical refreshers
+• Makeup sessions for absentees`
+          },
+          {
+            number: '4.4',
+            title: 'Refresher Training Delivery',
+            content: `• Classroom sessions: 1-2 hours per topic
+• E-learning modules (self-paced)
+• Practical drills (fire evacuation, CPR)
+• Expert speakers/trainers
+• Interactive case studies and discussions
+• Video-based learning
+• Simulation-based training (for clinical skills)`
+          },
+          {
+            number: '4.5',
+            title: 'Refresher Training Tracking',
+            content: `• Attendance register maintained
+• Sign-in sheets for each session
+• E-learning completion tracked via LMS
+• Training records updated in HRMS
+• Non-compliance escalated to HODs
+• 100% compliance target for mandatory refreshers
+• Monthly compliance reports to management`
+          }
+        ]
+      },
+      {
+        number: '5',
+        title: 'TRAINING CALENDAR MANAGEMENT',
+        content: `• HR maintains master training calendar (Annexure J.2.1)
+• Includes induction batches and refresher schedules
+• Published quarterly and shared with all departments
+• Updated dynamically for ad-hoc training needs
+• Reminders sent 1 week prior to scheduled training
+• Attendance rosters pre-prepared
+• Training venues booked in advance`
+      },
+      {
+        number: '6',
+        title: 'TRAINING EFFECTIVENESS EVALUATION',
+        content: `(i) Immediate Feedback:
+    • Post-training feedback forms (Annexure J.2.2)
+    • Trainer effectiveness rating
+    • Content relevance and clarity
+    • Logistics and facilities rating
+
+(ii) Knowledge Assessment:
+    • Pre-test and post-test for knowledge gain
+    • Passing criteria (70% minimum)
+    • Retraining for low scores
+
+(iii) On-the-Job Application:
+    • Supervisors observe skill application
+    • Behavior change and compliance tracking
+    • Incident reduction (e.g., infection rates post-IC training)
+
+(iv) Annual Review:
+    • Training effectiveness metrics analyzed
+    • Improvements incorporated in next year's program`
+      },
+      {
+        number: '7',
+        title: 'NON-COMPLIANCE CONSEQUENCES',
+        content: `• Attendance at induction and mandatory refreshers is compulsory
+• Non-attendance without valid reason:
+    - First instance: Written reminder
+    - Second instance: Warning letter
+    - Persistent non-compliance: Disciplinary action
+    - May impact performance rating and increments
+• Critical compliance (e.g., BLS for ICU nurse): Deployment restrictions until compliant`
+      },
+      {
+        number: '8',
+        title: 'DOCUMENTATION & RECORDS',
+        content: `• Induction and refresher training attendance registers
+• Training material and presentations archived
+• Assessment scores and certificates
+• Feedback forms and evaluation reports
+• Individual training records in personnel files
+• MIS reports for management and accreditation audits
+• Records retained for 5 years minimum`
+      },
+      {
+        number: '9',
+        title: 'REFERENCE DOCUMENTS',
+        content: 'HR By-Laws (Training Policy), NABH Training Standards, Fire Safety Act, Bio-Medical Waste Management Rules, POSH Act, Annexure J.2.1: Annual Training Calendar, Annexure J.2.2: Training Feedback Form, Annexure J.2.3: Induction Training Checklist'
+      }
+    ]
   },
 
   sopJ3: {
