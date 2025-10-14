@@ -471,28 +471,9 @@ const HRSOPs = ({ setActiveModule }) => {
       </div>
     );
   };
-            
-            <div className="relative z-10">
-              <div className="flex items-start justify-between mb-8">
-                {/* Hospital Logo and Name */}
-                <div className="flex items-center space-x-4">
-                  {/* Stylized Logo */}
-                  <div className="relative">
-                    <div className="w-20 h-20 bg-gradient-to-br from-amber-400 to-amber-600 rounded-2xl flex items-center justify-center shadow-2xl transform hover:scale-105 transition-transform">
-                      <div className="text-center">
-                        <div className="text-3xl font-black text-blue-950">K</div>
-                        <div className="text-xs font-bold text-blue-900 -mt-1">H</div>
-                      </div>
-                    </div>
-                    {/* Medical cross accent */}
-                    <div className="absolute -top-1 -right-1 w-6 h-6 bg-red-500 rounded-full flex items-center justify-center shadow-lg">
-                      <span className="text-white text-xs font-bold">+</span>
-                    </div>
-                  </div>
-                  <div>
-                    <h1 className="text-4xl font-black tracking-tight mb-1 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
-                      KOYILI HOSPITAL
-                    </h1>
+
+  // Main render
+  return (
                     <p className="text-blue-200 text-sm font-semibold">Pallikkunnu, Talap, Kannur, Kerala</p>
                     <p className="text-blue-300 text-xs mt-1">📞 +91-XXXX-XXXXXX | 📧 info@koyilihospital.com</p>
                   </div>
