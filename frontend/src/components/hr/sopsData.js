@@ -5653,7 +5653,281 @@ Types of COI:
     title: 'Reporting & Action on Misconduct',
     searchTerms: ['misconduct', 'reporting', 'action', 'disciplinary', 'violation'],
     category: 'G. Code of Conduct & Disciplinary Control',
-    content: 'Establishes transparent mechanism for reporting, investigating, and acting upon employee misconduct to maintain discipline, patient safety, and institutional reputation.'
+    subsections: [
+      {
+        number: '1',
+        title: 'OBJECTIVE',
+        content: 'To establish a transparent, fair, and effective mechanism for reporting, investigating, and acting upon employee misconduct ensuring workplace discipline, patient safety, institutional reputation, and a culture of accountability while protecting the rights of both complainants and accused.'
+      },
+      {
+        number: '2',
+        title: 'SCOPE',
+        content: 'Applicable to all employees. Covers all forms of misconduct from minor infractions to serious offenses. Applies to reporting, inquiry, and disciplinary action processes.'
+      },
+      {
+        number: '3',
+        title: 'CATEGORIES OF MISCONDUCT',
+        subsections: [
+          {
+            number: '3.1',
+            title: 'Minor Misconduct',
+            content: `• Late coming (occasional)
+• Casual dress code violation
+• Minor negligence in work
+• Informal use of mobile during work hours
+• Minor breaches of hospital rules without patient harm
+
+Consequence: Verbal warning, counseling`
+          },
+          {
+            number: '3.2',
+            title: 'Moderate Misconduct',
+            content: `• Repeated late coming or absenteeism
+• Insubordination or disrespect to superiors
+• Negligence causing operational delays
+• Misuse of hospital property
+• Violation of safety protocols
+• Unprofessional behavior with colleagues/patients
+
+Consequence: Written warning, salary deduction, suspension`
+          },
+          {
+            number: '3.3',
+            title: 'Serious/Gross Misconduct',
+            content: `• Patient safety compromise or clinical negligence
+• Theft, fraud, or financial misconduct
+• Harassment (sexual, verbal, psychological)
+• Intoxication on duty
+• Falsification of records or documents
+• Unauthorized disclosure of confidential information
+• Violence or threat of violence
+• Acceptance of bribes or kickbacks
+• Gross insubordination
+
+Consequence: Suspension, termination, legal action`
+          }
+        ]
+      },
+      {
+        number: '4',
+        title: 'MISCONDUCT REPORTING MECHANISMS',
+        subsections: [
+          {
+            number: '4.1',
+            title: 'Internal Reporting Channels',
+            content: `(i) Direct Reporting:
+    • Report to immediate supervisor
+    • Report to Department Head
+    • Report to HR Department
+
+(ii) Formal Complaint:
+    • Written complaint via email or physical form
+    • Misconduct Complaint Form (Annexure G.4.1)
+    • Details: Date, time, nature of misconduct, witnesses, evidence
+
+(iii) Anonymous Reporting:
+    • Anonymous hotline or email (for whistleblowing)
+    • Grievance box at designated locations
+    • No retaliation against anonymous reporters`
+          },
+          {
+            number: '4.2',
+            title: 'Mandatory Reporting',
+            content: `Certain misconducts MUST be reported immediately:
+• Patient safety incidents
+• Sexual harassment
+• Violence or threat
+• Theft or fraud
+• Substance abuse on duty
+• Any illegal activity
+
+Failure to report known serious misconduct: Disciplinary action`
+          },
+          {
+            number: '4.3',
+            title: 'Protection for Reporters',
+            content: `• Confidentiality maintained to extent possible
+• No retaliation against complainant
+• False or malicious complaints: Action against complainant
+• Balanced approach: Fair to both parties`
+          }
+        ]
+      },
+      {
+        number: '5',
+        title: 'MISCONDUCT INVESTIGATION PROCESS',
+        subsections: [
+          {
+            number: '5.1',
+            title: 'Preliminary Assessment',
+            content: `(i) HR receives complaint
+(ii) Initial assessment within 2 working days:
+    • Determine severity
+    • Assess credibility of complaint
+    • Decide: Informal resolution vs Formal inquiry
+
+(iii) Minor issues: Resolved through counseling
+(iv) Moderate to serious: Formal inquiry initiated`
+          },
+          {
+            number: '5.2',
+            title: 'Formal Inquiry Process',
+            content: `(i) Inquiry Committee Constitution:
+    • For moderate misconduct: Department Head + HR
+    • For serious misconduct: CHRO + Legal Advisor + Senior Manager (unbiased)
+
+(ii) Show Cause Notice (SOP D.DISC-001):
+    • Issued to accused within 5 days of complaint
+    • Details of allegations
+    • Opportunity to explain within 7 days
+
+(iii) Statement Recording:
+    • Complainant statement
+    • Accused statement and explanation
+    • Witness statements
+    • Documentary evidence reviewed
+
+(iv) Investigation:
+    • Site inspection (if applicable)
+    • Review of CCTV footage, records, emails
+    • Cross-verification of facts
+    • Timeline reconstruction
+
+(v) Inquiry Report:
+    • Findings: Proved / Not Proved / Partially Proved
+    • Recommended action
+    • Submitted to management within 30 days`
+          },
+          {
+            number: '5.3',
+            title: 'Rights of Accused',
+            content: `• Presumption of innocence until proven guilty
+• Right to be informed of allegations
+• Right to submit written explanation
+• Right to present evidence and call witnesses
+• Right to be heard in person
+• Right to seek representation (colleague or union rep)
+• No coerced confession
+• Fair and unbiased inquiry`
+          },
+          {
+            number: '5.4',
+            title: 'Interim Measures Pending Inquiry',
+            content: `For serious allegations:
+• Suspension without pay (or with reduced pay as per law)
+• Transfer to non-sensitive role
+• Restriction from patient contact
+• Revocation of access to sensitive data/systems
+• Continued until inquiry concludes`
+          }
+        ]
+      },
+      {
+        number: '6',
+        title: 'DISCIPLINARY ACTIONS',
+        subsections: [
+          {
+            number: '6.1',
+            title: 'Progressive Discipline Framework',
+            content: `(i) First Offense (minor):
+    • Verbal warning
+    • Counseling
+
+(ii) Second Offense (minor):
+    • Written warning
+    • Documented in file
+
+(iii) Third Offense (minor) or First Moderate:
+    • Final written warning
+    • Salary deduction or suspension (1-3 days)
+
+(iv) Serious/Gross Misconduct or Repeated Moderate:
+    • Suspension (with or without pay)
+    • Demotion
+    • Termination`
+          },
+          {
+            number: '6.2',
+            title: 'Specific Disciplinary Actions',
+            content: `(i) Verbal Warning:
+    • Documented in supervisor's notes
+    • Valid for 6 months
+
+(ii) Written Warning:
+    • Formal letter outlining misconduct
+    • Valid for 12 months
+    • Affects performance appraisal
+
+(iii) Final Written Warning:
+    • Last chance before termination
+    • Valid for 18-24 months
+    • Any further misconduct: Termination
+
+(iv) Suspension:
+    • Without pay: Pending inquiry for serious misconduct
+    • With pay: If law requires or pending external investigation
+    • Duration: Until inquiry completion (typically 15-30 days)
+
+(v) Salary Deduction:
+    • Up to 1 month's salary or proportional deduction
+    • As penalty for financial misconduct
+
+(vi) Demotion:
+    • Reduction in designation and responsibilities
+    • Salary reduction (as per law)
+
+(vii) Termination:
+    • Immediate termination for gross misconduct
+    • Notice period waived
+    • No severance pay (if misconduct proven)
+    • Experience certificate with limited details`
+          },
+          {
+            number: '6.3',
+            title: 'Communication of Disciplinary Action',
+            content: `• Disciplinary action communicated in writing
+• Reasons stated clearly
+• Right to appeal mentioned
+• Copy to employee, personnel file, department head
+• Effective date of action specified`
+          }
+        ]
+      },
+      {
+        number: '7',
+        title: 'APPEAL PROCESS',
+        content: `(i) Employee can appeal disciplinary decision to CHRO within 7 days
+(ii) Appeal must state grounds (procedural unfairness, new evidence, disproportionate action)
+(iii) CHRO reviews with fresh perspective
+(iv) Decision: Uphold / Modify / Overturn
+(v) CHRO decision is final (internal)
+(vi) Legal recourse available to employee (labor court, civil court)`
+      },
+      {
+        number: '8',
+        title: 'RECORD KEEPING',
+        content: `• All misconduct complaints documented
+• Inquiry reports and evidence securely filed
+• Disciplinary action records maintained in personnel file
+• Confidential handling
+• Available for labour inspections or legal proceedings
+• Records retained as per retention policy (typically 7 years post-separation)`
+      },
+      {
+        number: '9',
+        title: 'TRAINING AND AWARENESS',
+        content: `• Code of Conduct training during orientation
+• Annual refresher on acceptable behavior
+• Misconduct reporting channels communicated
+• Zero-tolerance policy emphasized for serious misconduct
+• Case studies discussed (anonymized) for learning`
+      },
+      {
+        number: '10',
+        title: 'REFERENCE DOCUMENTS',
+        content: 'Code of Conduct, HR By-Laws (Disciplinary Policy), Industrial Employment (Standing Orders) Act, Annexure G.4.1: Misconduct Complaint Form, Annexure D.DISC-001: Show Cause Notice Template'
+      }
+    ]
   },
 
   sopG5: {
@@ -5662,7 +5936,281 @@ Types of COI:
     title: 'Intoxication, Behavioural Checks & Fitness to Work',
     searchTerms: ['intoxication', 'behavioural', 'fitness', 'work', 'substance'],
     category: 'G. Code of Conduct & Disciplinary Control',
-    content: 'Safeguards safety and professional environment by establishing standards for identifying, addressing, and managing cases related to substance intoxication or unfitness for duty.'
+    subsections: [
+      {
+        number: '1',
+        title: 'OBJECTIVE',
+        content: 'To safeguard patient safety, workplace safety, and professional environment by establishing clear standards, detection mechanisms, and response protocols for identifying, addressing, and managing cases related to substance intoxication, behavioral issues, or unfitness for duty.'
+      },
+      {
+        number: '2',
+        title: 'SCOPE',
+        content: 'Applicable to all employees, especially those in patient-facing, safety-critical, or operational roles. Covers alcohol, drugs, medication-induced impairment, and behavioral/mental fitness issues.'
+      },
+      {
+        number: '3',
+        title: 'ZERO-TOLERANCE POLICY',
+        content: `Hospital maintains ZERO TOLERANCE for:
+• Reporting to work under influence of alcohol or drugs
+• Consumption of alcohol or drugs on hospital premises (except prescribed medication)
+• Possession, sale, or distribution of illegal substances on premises
+• Impaired judgment or behavior endangering patients or colleagues
+
+Exception: Prescribed medications (must be disclosed to supervisor if affecting alertness)`
+      },
+      {
+        number: '4',
+        title: 'FITNESS TO WORK STANDARDS',
+        subsections: [
+          {
+            number: '4.1',
+            title: 'Physical and Mental Fitness',
+            content: `Employees must report for duty:
+• Physically fit and alert
+• Mentally stable and capable of sound judgment
+• Free from intoxication or impairment
+• Able to perform duties safely and effectively
+
+Unfit for work situations:
+• Under influence of alcohol or drugs
+• Suffering from acute illness affecting alertness (high fever, severe pain)
+• Severe emotional distress (recent trauma, bereavement) affecting function
+• Medication side effects causing drowsiness or impaired reflexes`
+          },
+          {
+            number: '4.2',
+            title: 'Pre-Employment and Periodic Medical Checks',
+            content: `(i) Pre-Employment:
+    • Medical examination including fitness certificate
+    • Declaration of chronic illnesses or medications
+    • Substance abuse screening (if policy permits)
+
+(ii) Periodic Health Checks:
+    • Annual health check for all employees
+    • Fitness reassessment post-long illness
+    • Random or cause-based substance screening (as per policy and law)`
+          }
+        ]
+      },
+      {
+        number: '5',
+        title: 'INTOXICATION DETECTION AND REPORTING',
+        subsections: [
+          {
+            number: '5.1',
+            title: 'Signs of Intoxication or Impairment',
+            content: `Physical Signs:
+• Smell of alcohol on breath or body
+• Slurred speech
+• Unsteady gait or lack of coordination
+• Red or glassy eyes
+• Excessive sweating or tremors
+
+Behavioral Signs:
+• Erratic or aggressive behavior
+• Confusion or disorientation
+• Excessive drowsiness or lethargy
+• Inappropriate emotional responses
+• Poor judgment or decision-making
+
+Performance Issues:
+• Errors in work or patient care
+• Inability to follow instructions
+• Delayed response or slow reflexes`
+          },
+          {
+            number: '5.2',
+            title: 'Reporting Mechanism',
+            content: `(i) Immediate Supervisor:
+    • If signs of intoxication observed, inform supervisor immediately
+    • Do not allow employee to continue patient care or safety-critical work
+
+(ii) Security and HR:
+    • Security alerted for potential incident management
+    • HR informed for documentation and next steps
+
+(iii) Colleague Responsibility:
+    • Duty to report impaired colleague (patient safety paramount)
+    • No cover-up or enabling
+    • Confidential reporting channel available`
+          },
+          {
+            number: '5.3',
+            title: 'Immediate Action',
+            content: `(i) Remove from Duty:
+    • Employee immediately relieved from duty
+    • Taken to a safe, private location (HR office or medical room)
+    • Not allowed to leave premises until assessment
+
+(ii) Assessment:
+    • Occupational health physician or senior medical staff assesses
+    • Visual examination and interaction
+    • Breathalyzer test (if available and consented)
+    • Urine or blood test (if consented and situation warrants)
+
+(iii) Documentation:
+    • Incident report prepared
+    • Witness statements recorded
+    • Test results documented
+    • Photos/videos (if behavior extreme and consent obtained)`
+          }
+        ]
+      },
+      {
+        number: '6',
+        title: 'SUBSTANCE TESTING PROTOCOL',
+        subsections: [
+          {
+            number: '6.1',
+            title: 'When Testing is Conducted',
+            content: `(i) Cause-Based Testing:
+    • Reasonable suspicion of intoxication
+    • Post-incident (after accident, error, patient safety event)
+    • Return to work after rehabilitation
+
+(ii) Random Testing (if policy permits):
+    • For safety-critical roles (drivers, OT staff, ICU nurses)
+    • Announced random testing policy
+    • Fair and unbiased selection
+
+(iii) Pre-Employment Testing (if policy permits):
+    • As part of medical examination
+    • Particularly for safety-critical roles`
+          },
+          {
+            number: '6.2',
+            title: 'Testing Procedure',
+            content: `(i) Consent:
+    • Employee consent obtained in writing
+    • Refusal to consent: Treated as admission or grounds for action
+
+(ii) Testing Methods:
+    • Breathalyzer for alcohol
+    • Urine test for drugs
+    • Blood test (if urine test inconclusive or refused)
+
+(iii) Chain of Custody:
+    • Sample collected by medical professional
+    • Sealed and labeled
+    • Sent to approved lab
+    • Results documented and secured
+
+(iv) Result Communication:
+    • Results shared with employee first
+    • Positive result: Counseling and next steps discussed
+    • Negative result: Apology if wrongly suspected; return to work`
+          },
+          {
+            number: '6.3',
+            title: 'Confidentiality',
+            content: `• Test results strictly confidential
+• Shared only with HR, medical officer, and management (need-to-know basis)
+• Not disclosed to colleagues or public
+• Used only for employment-related decisions`
+          }
+        ]
+      },
+      {
+        number: '7',
+        title: 'CONSEQUENCES OF INTOXICATION',
+        subsections: [
+          {
+            number: '7.1',
+            title: 'First Offense',
+            content: `• Immediate suspension pending inquiry
+• Mandatory counseling or Employee Assistance Program (EAP)
+• Written warning
+• Return to work after fitness certificate
+• May require monitoring period (3-6 months)
+• Random testing during monitoring period`
+          },
+          {
+            number: '7.2',
+            title: 'Second Offense',
+            content: `• Suspension without pay
+• Mandatory rehabilitation program (employee pays cost)
+• Final written warning
+• Demotion or transfer to non-critical role
+• Extended monitoring period`
+          },
+          {
+            number: '7.3',
+            title: 'Third Offense or Severe First Offense',
+            content: `• Termination of employment
+• No notice period or severance
+• Reporting to professional council (if applicable)
+• Legal action if patient harm or property damage occurred`
+          },
+          {
+            number: '7.4',
+            title: 'Severe First Offense',
+            content: `(Immediate termination without rehabilitation opportunity)
+• Patient harm due to intoxication
+• Violence or severe behavioral issue
+• Possession or distribution of illegal drugs
+• Driving hospital vehicle under influence
+• Intoxication during surgery or critical procedure`
+          }
+        ]
+      },
+      {
+        number: '8',
+        title: 'SUPPORT AND REHABILITATION',
+        content: `(i) Employee Assistance Program (EAP):
+    • Confidential counseling for substance abuse
+    • Referral to rehabilitation centers
+    • Support for mental health issues
+
+(ii) Voluntary Disclosure:
+    • Employee with substance abuse problem can voluntarily seek help
+    • Hospital provides support and time off for treatment
+    • Job protection during rehabilitation (first time)
+    • No disciplinary action if disclosed before intoxication on duty
+
+(iii) Rehabilitation Leave:
+    • Leave granted for rehabilitation program
+    • May be unpaid or use available leave
+    • Return to work with fitness certificate
+    • Gradual return with monitoring`
+      },
+      {
+        number: '9',
+        title: 'BEHAVIORAL ISSUES AND MENTAL FITNESS',
+        content: `(i) Behavioral Red Flags:
+    • Sudden mood swings or aggression
+    • Withdrawal or isolation
+    • Deteriorating work quality
+    • Frequent conflicts with colleagues
+    • Suicidal ideation or self-harm indicators
+
+(ii) Mental Fitness Concerns:
+    • Acute stress or trauma affecting judgment
+    • Diagnosed mental health condition not managed
+    • Medication side effects affecting alertness
+
+(iii) Response:
+    • Compassionate approach
+    • Referral to EAP or mental health professional
+    • Temporary adjustment of duties (if safe)
+    • Medical leave for treatment
+    • Fitness certificate before return
+    • No stigma or discrimination`
+      },
+      {
+        number: '10',
+        title: 'TRAINING AND AWARENESS',
+        content: `• Substance abuse and mental health awareness sessions
+• Supervisor training on recognizing signs of intoxication or impairment
+• EAP information shared regularly
+• De-stigmatization of seeking help
+• Annual policy reminder`
+      },
+      {
+        number: '11',
+        title: 'REFERENCE DOCUMENTS',
+        content: 'Code of Conduct, Workplace Safety Policy, Employee Assistance Program Policy, Annexure G.5.1: Fitness to Work Declaration, Annexure G.5.2: Substance Testing Consent Form'
+      }
+    ]
   },
 
   // SECTION H: PERFORMANCE MANAGEMENT
