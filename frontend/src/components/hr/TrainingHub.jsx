@@ -719,7 +719,7 @@ const TrainingHub = ({ onClose, onNavigateToSection }) => {
       <div className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4">
         <div className="bg-white rounded-2xl shadow-2xl max-w-7xl w-full max-h-[90vh] overflow-hidden flex flex-col">
           {/* Header */}
-          <div className="bg-gradient-to-r from-red-600 to-red-700 px-8 py-6">
+          <div className="bg-gradient-to-r from-teal-600 to-teal-700 px-8 py-6">
             <div className="flex items-center justify-between mb-4">
               <div className="flex items-center gap-3">
                 <div className="w-14 h-14 bg-white/20 backdrop-blur rounded-xl flex items-center justify-center">
@@ -729,7 +729,7 @@ const TrainingHub = ({ onClose, onNavigateToSection }) => {
                   <h2 className="text-3xl font-bold text-white" style={{ fontFamily: "'Inter', sans-serif" }}>
                     Training Hub
                   </h2>
-                  <p className="text-red-100">Professional development and skill enhancement center</p>
+                  <p className="text-teal-100">Professional development and skill enhancement center</p>
                 </div>
               </div>
               <button
