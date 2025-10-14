@@ -159,3 +159,133 @@ Compliance: All contracts reviewed by HR and legal counsel.`
         }
       ]
     }
+,
+    {
+      section: 'Section 3',
+      title: 'Code of Conduct',
+      searchTerms: ['code', 'conduct', 'ethics', 'behavior', 'professional'],
+      icon: 'Shield',
+      color: 'red',
+      subsections: [
+        {
+          number: '3.1',
+          title: 'Professional Ethics',
+          content: `• Commitment to Ethical Standards: All employees required to adhere to highest standards of ethics, maintaining integrity, honesty, and professionalism.
+• Respect and Dignity: Every employee shall respect the dignity, rights, and privacy of patients and colleagues. Harassment, discrimination, or bullying strictly prohibited.
+• Confidentiality: Employees must protect confidential information related to patients, hospital operations, and fellow employees.`
+        },
+        {
+          number: '3.2',
+          title: 'Dress Code',
+          content: `• General Appearance: All employees required to maintain neat, clean, and professional appearance.
+• Specific Requirements for Clinical Staff: Designated uniforms or scrubs appropriate to department and role. ID badges must be worn visibly.
+• Non-Clinical and Administrative Staff: Business casual or formal attire as defined in hospital dress policy.`
+        },
+        {
+          number: '3.3',
+          title: 'Behavioural Expectations',
+          content: `• Professional Interactions: Maintain courteous, respectful, and positive interactions with all.
+• Prohibition of Unprofessional Conduct: Disruptive behaviour, offensive language, or insubordination prohibited.
+• Use of Hospital Property: All employees shall use hospital property responsibly. Theft, damage, or misuse subject to disciplinary action.`
+        },
+        {
+          number: '3.4',
+          title: 'Conflict of Interest',
+          content: `• Definition and Disclosure: Employees must disclose any actual, potential, or perceived conflicts of interest.
+• Prohibited Activities: No outside employment that competes with hospital interests. No acceptance of gifts that could influence professional judgment.
+• Compliance and Monitoring: Regular review of disclosures. Non-disclosure treated as breach of trust.`
+        }
+      ]
+    },
+    {
+      section: 'Section 4',
+      title: 'Employee Rights and Responsibilities',
+      searchTerms: ['rights', 'responsibilities', 'duties', 'obligations'],
+      icon: 'Award',
+      color: 'purple',
+      subsections: [
+        {
+          number: '4.1',
+          title: 'Right to Fair Treatment',
+          content: `• Non-Discriminatory Workplace: All employees have right to be treated with fairness and respect, free from discrimination or harassment.
+• Right to a Safe Working Environment: Hospital committed to providing safe and secure environment. Employees can report unsafe conditions without reprisal.
+• Right to Fair Compensation: Employees entitled to fair compensation in accordance with employment agreement and applicable laws.`
+        },
+        {
+          number: '4.2',
+          title: 'Confidentiality Obligation',
+          content: `• Duty to Maintain Confidentiality: Employees obligated to protect patient information, hospital records, and proprietary data.
+• Protection of Patient Information: Comply with healthcare privacy laws and hospital policies.
+• Handling of Sensitive Information: Exercise caution with sensitive information. Follow proper security measures.`
+        },
+        {
+          number: '4.3',
+          title: 'Duty of Care',
+          content: `• Adherence to Professional Standards: Perform duties with due diligence and care.
+• Accountability for Actions: Each employee accountable for their conduct and decisions.
+• Continuous Improvement: Engage in continuous learning to enhance professional skills.`
+        },
+        {
+          number: '4.4',
+          title: 'Workplace Conduct and Responsibilities',
+          content: `• Compliance with Hospital Policies: Adhere to all hospital policies and procedures.
+• Punctuality and Attendance: Maintain punctuality and regular attendance.
+• Professional Communication: Conduct all communication in professional and respectful manner.
+• Collaboration and Teamwork: Collaborate effectively with colleagues.`
+        },
+        {
+          number: '4.5',
+          title: 'Right to Raise Concerns and Grievances',
+          content: `• Reporting Issues and Concerns: Employees have right to raise concerns without fear of retaliation.
+• Grievance Redressal Mechanism: Access to fair and transparent grievance mechanism.`
+        },
+        {
+          number: '4.6',
+          title: 'Rights to Professional Development',
+          content: `• Access to Training and Education: Right to access professional development programs.
+• Support for Career Advancement: Equal opportunities for advancement based on performance and qualifications.`
+        }
+      ]
+    },
+    {
+      section: 'Section 5',
+      title: 'Diversity, Equity, and Inclusion (DEI)',
+      searchTerms: ['diversity', 'equity', 'inclusion', 'dei', 'equal opportunity'],
+      icon: 'Heart',
+      color: 'indigo',
+      subsections: [
+        {
+          number: '5.1',
+          title: 'Diversity Commitment',
+          content: `• Promotion of Diversity: Hospital dedicated to fostering diverse workplace where individuals from varied backgrounds are valued.
+• Inclusion of Marginalised Groups: Actively seek to include individuals from marginalised and underrepresented communities.
+• Diversity in Leadership: Encourage diverse representation in leadership roles.`
+        },
+        {
+          number: '5.2',
+          title: 'Inclusion Programs',
+          content: `• Inclusive Workplace Practices: Develop practices that promote inclusive environment where all feel belonging.
+• Cultural Competency Training: Mandatory training on cultural competency and awareness.
+• Supportive Policies: Establish policies supporting work-life balance and diverse needs.`
+        },
+        {
+          number: '5.3',
+          title: 'Non-Discrimination Policy',
+          content: `• Prohibition of Discrimination: Zero-tolerance policy towards any act of discrimination.
+• Reporting and Resolution: Employees can report concerns. Reports investigated promptly with confidentiality.`
+        },
+        {
+          number: '5.4',
+          title: 'Equity in Employment Practices',
+          content: `• Equitable Hiring and Promotion: Recruitment and promotion processes designed to be free from bias.
+• Pay Equity: Regular reviews to ensure fair compensation across all demographics.`
+        },
+        {
+          number: '5.5',
+          title: 'Support and Advocacy',
+          content: `• Employee Resource Groups (ERGs): Support formation of ERGs for employees to connect and advocate.
+• Advocacy Programs: Implement programs to raise awareness of DEI importance.
+• Periodic Reviews and Assessments: Regular assessments of DEI practices for continuous improvement.`
+        }
+      ]
+    }
