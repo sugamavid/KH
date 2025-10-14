@@ -18,41 +18,65 @@ const HRByLaws = ({ setActiveModule }) => {
   const [expandedSections, setExpandedSections] = useState({});
   const contentRef = useRef(null);
 
-  // Format content - now handling both HTML and plain text
-  const formatContent = (content) => {
-    if (!content) return '';
+  // Parse and render content as React components
+  const renderFormattedContent = (content) => {
+    if (!content) return null;
     
-    // If content already contains HTML tags, return as-is
-    if (content.includes('<div') || content.includes('<ul')) {
-      return content;
-    }
+    const lines = content.split('\n').filter(line => line.trim());
+    const elements = [];
     
-    // Otherwise, apply text formatting (for legacy content)
-    let formatted = content
-      .replace(/\*\*(.*?)\*\*/g, '<strong class="font-bold">$1</strong>')
-      .split('\n')
-      .map(line => {
-        if (line.match(/^\([a-z]\)\s+/)) {
-          const match = line.match(/^\(([a-z])\)\s+(.*)/);
-          return `<div class="mt-6 mb-3"><span class="inline-block font-bold text-slate-900 mr-2">(${match[1]})</span><span class="font-semibold">${match[2]}</span></div>`;
-        }
-        else if (line.match(/^\s{4}\(([ivxl]+)\)\s+/)) {
-          const match = line.match(/^\s{4}\(([ivxl]+)\)\s+(.*)/);
-          return `<div class="ml-8 mt-3 mb-2"><span class="inline-block font-semibold text-slate-700 mr-2">(${match[1]})</span><span>${match[2]}</span></div>`;
-        }
-        else if (line.match(/^\s{4}•\s+/)) {
-          const match = line.match(/^\s{4}•\s+(.*)/);
-          return `<div class="ml-8 mt-2 mb-2 flex items-start"><span class="text-amber-600 mr-3 mt-1">•</span><span class="flex-1">${match[1]}</span></div>`;
-        }
-        else if (line.trim()) {
-          return `<p class="mb-2">${line.trim()}</p>`;
-        }
-        return '';
-      })
-      .filter(line => line)
-      .join('');
+    lines.forEach((line, index) => {
+      const trimmedLine = line.trim();
+      
+      // Main points: (a), (b), (c), (d)
+      const mainPointMatch = trimmedLine.match(/^\(([a-z])\)\s+\*\*(.*?)\*\*:?\s*(.*)/);
+      if (mainPointMatch) {
+        elements.push(
+          <div key={`main-${index}`} className="mt-6 mb-3">
+            <span className="font-bold text-slate-900 text-lg">({mainPointMatch[1]}) </span>
+            <span className="font-bold text-slate-900">{mainPointMatch[2]}:</span>
+            {mainPointMatch[3] && <span className="ml-1">{mainPointMatch[3]}</span>}
+          </div>
+        );
+        return;
+      }
+      
+      // Sub-points: (i), (ii), (iii) - check for leading spaces
+      const subPointMatch = line.match(/^\s{4}\(([ivxl]+)\)\s+(.*)/);
+      if (subPointMatch) {
+        const text = subPointMatch[2].replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+        elements.push(
+          <div key={`sub-${index}`} className="ml-8 mt-3 mb-2">
+            <span className="font-semibold text-slate-700">({subPointMatch[1]}) </span>
+            <span dangerouslySetInnerHTML={{ __html: text }} />
+          </div>
+        );
+        return;
+      }
+      
+      // Bullets: • - check for leading spaces
+      const bulletMatch = line.match(/^\s{4}•\s+(.*)/);
+      if (bulletMatch) {
+        const text = bulletMatch[1].replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+        elements.push(
+          <div key={`bullet-${index}`} className="ml-8 mt-2 mb-2 flex items-start">
+            <span className="text-amber-600 mr-3 mt-1 font-bold">•</span>
+            <span className="flex-1" dangerouslySetInnerHTML={{ __html: text }} />
+          </div>
+        );
+        return;
+      }
+      
+      // Regular paragraph
+      if (trimmedLine) {
+        const text = trimmedLine.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+        elements.push(
+          <p key={`p-${index}`} className="mb-3 text-slate-700" dangerouslySetInnerHTML={{ __html: text }} />
+        );
+      }
+    });
     
-    return formatted;
+    return <div className="space-y-1">{elements}</div>;
   };
 
   // Complete Navigation structure for all 30 sections (User's Original By-Laws)
