@@ -18,6 +18,38 @@ const HRByLaws = ({ setActiveModule }) => {
   const [expandedSections, setExpandedSections] = useState({});
   const contentRef = useRef(null);
 
+  // Format content with proper HTML structure
+  const formatContent = (content) => {
+    if (!content) return '';
+    
+    let formatted = content
+      // Handle bold text
+      .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+      
+      // Handle (a), (b), (c), (d) - main points with line break before
+      .replace(/\n\(([a-z])\)\s+/g, '\n\n<div class="mt-4"><span class="font-bold text-slate-900">($1)</span> ')
+      .replace(/\(([a-z])\)\s+/g, '<div class="mt-4"><span class="font-bold text-slate-900">($1)</span> ')
+      
+      // Handle (i), (ii), (iii), (iv) - sub-points with indentation
+      .replace(/\n\s{4}\(([ivxl]+)\)\s+/g, '\n<div class="ml-8 mt-2"><span class="font-semibold text-slate-700">($1)</span> ')
+      .replace(/\s{4}\(([ivxl]+)\)\s+/g, '<div class="ml-8 mt-2"><span class="font-semibold text-slate-700">($1)</span> ')
+      
+      // Handle bullets •
+      .replace(/\n\s{4}•\s+/g, '\n<div class="ml-8 mt-2 flex"><span class="mr-2">•</span><span>')
+      .replace(/\s{4}•\s+/g, '<div class="ml-8 mt-2 flex"><span class="mr-2">•</span><span>')
+      
+      // Close divs at line breaks
+      .replace(/\n\n/g, '</span></div>\n\n')
+      .replace(/\n(?=<div)/g, '</span></div>\n');
+    
+    // Ensure all divs are closed
+    if ((formatted.match(/<div/g) || []).length > (formatted.match(/<\/div>/g) || []).length) {
+      formatted += '</span></div>';
+    }
+    
+    return formatted;
+  };
+
   // Complete Navigation structure for all 30 sections (User's Original By-Laws)
   const navigation = [
     { id: 'dashboard', title: 'Dashboard', icon: Home, category: 'Overview' },
