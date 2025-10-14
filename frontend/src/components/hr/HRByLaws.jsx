@@ -16,6 +16,7 @@ const HRByLaws = ({ setActiveModule }) => {
   const [showSearch, setShowSearch] = useState(false);
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
   const [expandedSections, setExpandedSections] = useState({});
+  const [isPrintMode, setIsPrintMode] = useState(false);
   const contentRef = useRef(null);
 
   // Parse and render content with explicit line breaks and bold conversion
