@@ -9977,7 +9977,248 @@ Succession focus on Box [3] and [2]`
     title: 'Employee Use of Internet, Email & Communication Tools',
     searchTerms: ['internet', 'email', 'communication', 'tools', 'usage', 'policy'],
     category: 'K. Technology Usage & Digital Security',
-    content: 'Defines responsible and secure use of internet, email services, and internal communication tools ensuring professional conduct, confidentiality, and cybersecurity compliance.'
+    subsections: [
+      {
+        number: '1',
+        title: 'OBJECTIVE',
+        content: 'To establish clear, enforceable, and security-conscious guidelines for appropriate, responsible, and professional use of institutional internet access, email systems, and communication tools ensuring data security, regulatory compliance, productivity, prevention of misuse, and protection of hospital reputation and digital assets.'
+      },
+      {
+        number: '2',
+        title: 'SCOPE',
+        content: 'Covers all employees, contractors, temporary staff, and vendors with access to hospital IT infrastructure including internet, email (institutional accounts), intranet, communication tools (chat, video conferencing), cloud services, and digital collaboration platforms. Applies to hospital-owned devices and personal devices used for work (BYOD).'
+      },
+      {
+        number: '3',
+        title: 'INTERNET USAGE POLICY',
+        subsections: [
+          {
+            number: '3.1',
+            title: 'Acceptable Internet Use',
+            content: `Permitted:
+• Work-related research and information gathering
+• Professional development and learning
+• Business communication and collaboration
+• Access to clinical databases, medical journals, guidelines
+• Hospital-approved cloud services and applications
+• Reasonable personal use during breaks (limited duration)
+
+Examples: Medical literature search, patient care guidelines, professional email, hospital intranet, approved healthcare portals`
+          },
+          {
+            number: '3.2',
+            title: 'Prohibited Internet Activities',
+            content: `Strictly Prohibited:
+• Accessing, downloading, or distributing illegal, obscene, or offensive content (pornography, hate speech, violence)
+• Piracy (illegal downloads of software, movies, music)
+• Gambling or betting websites
+• Hacking, phishing, or attempting to breach security systems
+• Accessing competitor or unauthorized external systems
+• Excessive personal browsing during work hours
+• Streaming videos/music for entertainment (bandwidth consumption)
+• Social media abuse (defaming hospital, patients, colleagues)
+• Cryptocurrency mining
+• Downloading unauthorized software or browser extensions
+• Clicking on suspicious links or pop-ups
+
+Consequences: Disciplinary action, potential termination, legal action for serious violations`
+          },
+          {
+            number: '3.3',
+            title: 'Monitoring & Compliance',
+            content: `• Hospital reserves right to monitor internet usage
+• Logs maintained for security and compliance
+• Automated filters block inappropriate websites
+• Excessive personal use flagged and reported to supervisor
+• Investigations conducted for suspected misuse
+• No expectation of privacy on institutional network`
+          }
+        ]
+      },
+      {
+        number: '4',
+        title: 'EMAIL USAGE POLICY',
+        subsections: [
+          {
+            number: '4.1',
+            title: 'Official Email Account',
+            content: `• Every employee provided with institutional email: firstname.lastname@koyilihospital.com
+• Official communication MUST use institutional email only
+• Personal email (Gmail, Yahoo) not to be used for official work
+• Email is property of hospital, not individual
+• Access may be revoked upon separation`
+          },
+          {
+            number: '4.2',
+            title: 'Email Communication Guidelines',
+            content: `Do's:
+• Use professional language and tone
+• Clear and concise subject lines
+• Appropriate salutations and signatures
+• Email signature with designation and contact details
+• Reply promptly (within 24-48 hours for business emails)
+• Use CC and BCC appropriately
+• Mark sensitive emails as "Confidential"
+
+Don'ts:
+• Sending spam or chain emails
+• Mass forwarding of jokes, memes, or non-work content
+• Using ALL CAPS (perceived as shouting)
+• Sharing confidential patient or employee information without authorization
+• Forwarding emails to personal accounts
+• Auto-forwarding institutional emails to external accounts
+• Clicking on suspicious attachments or links (phishing risk)`
+          },
+          {
+            number: '4.3',
+            title: 'Email Security Protocols',
+            content: `• Strong passwords (updated every 90 days)
+• Two-factor authentication (2FA) enabled
+• Never share email credentials
+• Log out from shared computers
+• Report suspicious emails to IT immediately
+• Do not open attachments from unknown senders
+• Verify sender before clicking links
+• Encrypt emails containing sensitive data (password-protected attachments)`
+          },
+          {
+            number: '4.4',
+            title: 'Personal Use of Email',
+            content: `• Limited personal use acceptable during breaks
+• No bulk personal correspondence
+• No commercial or business solicitations
+• Personal emails subject to same monitoring policy`
+          },
+          {
+            number: '4.5',
+            title: 'Email Retention & Archival',
+            content: `• Emails archived as per data retention policy
+• Critical business emails must be retained
+• Regular cleanup of inbox encouraged (delete unnecessary emails)
+• Automatic archival after 2 years
+• Legal hold: Emails preserved for litigation or investigations`
+          }
+        ]
+      },
+      {
+        number: '5',
+        title: 'COMMUNICATION TOOLS USAGE',
+        subsections: [
+          {
+            number: '5.1',
+            title: 'Approved Communication Platforms',
+            content: `Hospital-approved tools:
+• Microsoft Teams / Slack (internal chat and collaboration)
+• Zoom / Google Meet (video conferencing)
+• Hospital intranet and portal
+• Official WhatsApp groups (if approved by management)
+• Project management tools (Asana, Trello - if authorized)
+
+Usage Guidelines:
+• Use only approved platforms for work communication
+• Maintain professionalism in all messages
+• No offensive language, harassment, or bullying
+• Respect "Do Not Disturb" and after-hours boundaries
+• Work-related content only in official groups`
+          },
+          {
+            number: '5.2',
+            title: 'Instant Messaging Guidelines',
+            content: `• Professional tone maintained at all times
+• Quick responses expected during work hours
+• Use status indicators (Available, Busy, Away)
+• Avoid gossip or unprofessional discussions
+• No forwarding of confidential information via chat
+• Screen capture of important decisions/approvals
+• Messages may be audited for compliance`
+          },
+          {
+            number: '5.3',
+            title: 'Video Conferencing Etiquette',
+            content: `• Join on time, mute when not speaking
+• Professional attire and background
+• Camera on (unless bandwidth issue or approved otherwise)
+• No multitasking (checking phone, other work)
+• Record meetings only with consent of participants
+• Recordings stored securely, deleted after retention period`
+          }
+        ]
+      },
+      {
+        number: '6',
+        title: 'SOCIAL MEDIA POLICY',
+        content: `Personal Social Media Use:
+• Employees free to use personal social media on own time
+• Do not post confidential hospital information
+• Do not share patient information (HIPAA/privacy violation)
+• Do not post photos/videos from hospital premises without permission
+• Do not defame hospital, colleagues, or patients
+• Clearly state "views are my own" if discussing healthcare topics
+
+Hospital Social Media Accounts:
+• Only authorized personnel can post on official hospital accounts
+• All posts reviewed by Marketing/Communications team
+• Guidelines provided separately for social media ambassadors
+
+Violations: Disciplinary action including termination, legal action for defamation or privacy breach`
+      },
+      {
+        number: '7',
+        title: 'DATA SECURITY & CONFIDENTIALITY',
+        content: `• Never share patient data via unsecured channels
+• Use hospital-approved file sharing (encrypted)
+• No uploading of institutional data to personal cloud (Dropbox, Google Drive)
+• Confidential documents password-protected
+• Dispose of printed confidential documents via shredding
+• Report data breaches or losses immediately (SOP K.5)`
+      },
+      {
+        number: '8',
+        title: 'BRING YOUR OWN DEVICE (BYOD) POLICY',
+        content: `If using personal device for work:
+• Register device with IT department
+• Install hospital-approved security apps (MDM - Mobile Device Management)
+• Keep device updated with latest security patches
+• Strong passcode/biometric lock mandatory
+• Hospital reserves right to wipe corporate data remotely if device lost/stolen
+• Personal data remains private, only work data monitored
+• Prohibited if device security standards not met`
+      },
+      {
+        number: '9',
+        title: 'VIOLATIONS & CONSEQUENCES',
+        content: `Minor Violations (First offense):
+• Excessive personal internet use → Verbal warning
+• Unprofessional email → Counseling
+
+Moderate Violations:
+• Repeated policy violations → Written warning
+• Inappropriate social media post → Warning + removal of post
+
+Serious Violations (Subject to immediate termination):
+• Accessing illegal/obscene content
+• Data breach or sharing confidential information
+• Harassment or bullying via communication tools
+• Malicious activity (hacking, spreading malware)
+• Defamation of hospital or colleagues
+
+Legal Action:
+• Data theft, privacy violations, illegal activities → Police complaint, civil/criminal proceedings`
+      },
+      {
+        number: '10',
+        title: 'EMPLOYEE ACKNOWLEDGMENT',
+        content: `• All employees must sign IT Usage Policy Acknowledgment Form (Annexure K.1.1) during onboarding
+• Annual refresher training on IT security and acceptable use
+• Policy violations investigated by IT and HR
+• Acceptance of policy mandatory for IT access`
+      },
+      {
+        number: '11',
+        title: 'REFERENCE DOCUMENTS',
+        content: 'IT Security Policy, Data Privacy Policy, HIPAA Guidelines, Social Media Policy, Annexure K.1.1: IT Usage Policy Acknowledgment Form'
+      }
+    ]
   },
 
   sopK2: {
