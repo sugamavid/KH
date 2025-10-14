@@ -282,27 +282,76 @@ const HRSOPs = ({ setActiveModule }) => {
           )}
         </div>
 
+        {/* Simple content (for SOPs without subsections) */}
+        {section.content && !section.subsections && (
+          <div className="prose max-w-none">
+            <p className="text-base leading-relaxed text-justify font-serif text-slate-800">
+              {section.content}
+            </p>
+          </div>
+        )}
+
+        {/* Subsections (for detailed SOPs) */}
         {section.subsections && section.subsections.map((subsection, idx) => (
-          <div key={idx} className="mb-8 ml-6">
-            <h4 className="text-lg font-serif font-bold text-slate-900 mb-3">
+          <div key={idx} className="mb-8">
+            <h4 className="text-lg font-serif font-bold text-slate-900 mb-3 bg-slate-100 px-4 py-2 rounded">
               {subsection.number} {subsection.title}
             </h4>
             {subsection.content && (
-              <p className="text-base leading-relaxed text-justify font-serif text-slate-800 mb-4">
-                {subsection.content}
-              </p>
+              <div className="ml-6 mb-4">
+                <p className="text-base leading-relaxed text-justify font-serif text-slate-800 whitespace-pre-line">
+                  {subsection.content}
+                </p>
+              </div>
             )}
             {subsection.points && (
-              <ol className="space-y-3 ml-8">
+              <ul className="space-y-2 ml-10 list-disc">
                 {subsection.points.map((point, pointIdx) => (
-                  <li key={pointIdx} className="text-base leading-relaxed text-justify font-serif text-slate-800 relative pl-6">
-                    <span className="absolute left-0 font-bold text-slate-600">
-                      {pointIdx + 1}.
-                    </span>
+                  <li key={pointIdx} className="text-base leading-relaxed text-justify font-serif text-slate-800">
                     {point}
                   </li>
                 ))}
-              </ol>
+              </ul>
+            )}
+            {/* Nested subsections (like 4.1, 4.2 under section 4) */}
+            {subsection.subsections && subsection.subsections.map((nestedSub, nestedIdx) => (
+              <div key={nestedIdx} className="ml-8 mt-4 mb-4">
+                <h5 className="text-md font-serif font-semibold text-slate-800 mb-2">
+                  {nestedSub.number} {nestedSub.title}
+                </h5>
+                {nestedSub.content && (
+                  <p className="text-base leading-relaxed text-justify font-serif text-slate-700 ml-4 whitespace-pre-line">
+                    {nestedSub.content}
+                  </p>
+                )}
+              </div>
+            ))}
+            {/* Table support (for roles & responsibilities) */}
+            {subsection.table && (
+              <div className="ml-6 mt-4 overflow-x-auto">
+                <table className="min-w-full border-collapse border border-slate-300">
+                  <thead>
+                    <tr className="bg-slate-100">
+                      {subsection.table.headers.map((header, hIdx) => (
+                        <th key={hIdx} className="border border-slate-300 px-4 py-2 text-left font-bold text-slate-900">
+                          {header}
+                        </th>
+                      ))}
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {subsection.table.rows.map((row, rIdx) => (
+                      <tr key={rIdx} className={rIdx % 2 === 0 ? 'bg-white' : 'bg-slate-50'}>
+                        {row.map((cell, cIdx) => (
+                          <td key={cIdx} className="border border-slate-300 px-4 py-2 text-slate-800">
+                            {cell}
+                          </td>
+                        ))}
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
             )}
           </div>
         ))}
