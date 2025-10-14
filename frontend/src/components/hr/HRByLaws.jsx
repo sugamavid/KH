@@ -587,12 +587,15 @@ const HRByLaws = ({ setActiveModule }) => {
           </div>
           
           {/* Reporting Dashboard */}
-          <div className="bg-white border-2 border-teal-200 rounded-xl p-6 hover:shadow-lg hover:border-teal-400 transition-all cursor-pointer group">
+          <div 
+            onClick={() => setShowReportingDashboard(true)}
+            className="bg-white border-2 border-red-200 rounded-xl p-6 hover:shadow-lg hover:border-red-400 transition-all cursor-pointer group"
+          >
             <div className="flex items-center gap-4 mb-4">
-              <div className="p-3 bg-teal-100 rounded-lg group-hover:bg-teal-600 transition-colors">
-                <TrendingUp className="w-7 h-7 text-teal-600 group-hover:text-white transition-colors" />
+              <div className="p-3 bg-red-100 rounded-lg group-hover:bg-red-600 transition-colors">
+                <BarChart className="w-7 h-7 text-red-600 group-hover:text-white transition-colors" />
               </div>
-              <h3 className="text-lg font-bold text-slate-900 group-hover:text-teal-600 transition-colors">Reporting Dashboard</h3>
+              <h3 className="text-lg font-bold text-slate-900 group-hover:text-red-600 transition-colors">Reporting Dashboard</h3>
             </div>
             <p className="text-slate-600 text-sm leading-relaxed">Generate comprehensive reports and analytics</p>
           </div>
