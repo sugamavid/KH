@@ -10859,7 +10859,263 @@ Usage Policy:
     title: 'Remote Work Monitoring & Task Logging',
     searchTerms: ['remote', 'work', 'monitoring', 'wfh', 'task', 'logging'],
     category: 'K. Technology Usage & Digital Security',
-    content: 'Establishes structured protocol for monitoring remote work activities, tracking task completion, and ensuring productivity and accountability during remote assignments.'
+    subsections: [
+      {
+        number: '1',
+        title: 'OBJECTIVE',
+        content: 'To establish structured, transparent, and technology-enabled framework for monitoring remote work activities, tracking task completion, ensuring productivity, maintaining accountability, and balancing organizational objectives with employee autonomy during work-from-home or remote work arrangements.'
+      },
+      {
+        number: '2',
+        title: 'SCOPE',
+        content: 'Applicable to all employees approved for remote work arrangements including work-from-home, hybrid work, field work, or remote assignments. Covers task logging requirements, productivity monitoring tools, communication expectations, performance tracking, and compliance with remote work policies.'
+      },
+      {
+        number: '3',
+        title: 'REMOTE WORK ELIGIBILITY & APPROVAL',
+        content: `Eligible Roles:
+• IT staff, administrative roles, back-office functions
+• Roles not requiring physical presence (non-clinical typically)
+• Approved on case-by-case basis
+
+Approval Process:
+• Employee submits Remote Work Request (Annexure K.4.1)
+• Supervisor evaluates feasibility
+• HR and IT review infrastructure needs
+• Management approval
+• Trial period (1-3 months) before permanent arrangement
+
+Prerequisites:
+• Reliable internet connection (min 10 Mbps)
+• Dedicated workspace at home
+• Laptop/desktop provided by hospital
+• VPN access configured
+• Availability during work hours`
+      },
+      {
+        number: '4',
+        title: 'REMOTE WORK EXPECTATIONS',
+        subsections: [
+          {
+            number: '4.1',
+            title: 'Work Hours & Availability',
+            content: `• Standard work hours apply (e.g., 9 AM - 6 PM)
+• Employee must be available and responsive during work hours
+• Flexibility permitted (within limits) with supervisor approval
+• Status indicators on communication tools (Teams, Slack) must reflect availability
+• Core hours: Mandatory availability for all (e.g., 10 AM - 4 PM)`
+          },
+          {
+            number: '4.2',
+            title: 'Communication & Responsiveness',
+            content: `• Respond to emails, calls, messages within 2 hours during work hours
+• Attend all scheduled meetings (video on preferred)
+• Daily check-in with team/supervisor (morning brief)
+• Use communication tools actively (Teams, email)
+• Escalate issues promptly
+• No "ghosting" or prolonged unavailability without notice`
+          },
+          {
+            number: '4.3',
+            title: 'Deliverables & Output',
+            content: `• Output-based performance (focus on results, not hours)
+• Meet deadlines and quality standards
+• Regular progress updates to supervisor
+• Work plans and milestones agreed upon
+• Documentation of work completed`
+          }
+        ]
+      },
+      {
+        number: '5',
+        title: 'TASK LOGGING SYSTEM',
+        subsections: [
+          {
+            number: '5.1',
+            title: 'Daily Task Logging Requirement',
+            content: `Mandatory for all remote workers:
+• Log tasks at start and end of day
+• Task logging tool: HRMS, Project Management Software (Asana, Trello), or Excel sheet (Annexure K.4.2)
+
+Task Log Entries Include:
+• Date
+• Task description
+• Time spent (hours)
+• Status (Completed, In Progress, Pending)
+• Remarks/notes
+• Challenges faced (if any)
+
+Frequency:
+• Daily task log: Submitted by end of day (6 PM)
+• Weekly summary: Compiled and sent to supervisor every Friday`
+          },
+          {
+            number: '5.2',
+            title: 'Task Categorization',
+            content: `Tasks categorized by type:
+• Priority tasks (urgent, high-impact)
+• Routine tasks (regular responsibilities)
+• Meetings and collaboration
+• Training and learning
+• Administrative work
+
+Helps in workload analysis and productivity assessment`
+          },
+          {
+            number: '5.3',
+            title: 'Time Tracking (Optional/Role-Based)',
+            content: `For roles requiring precise time tracking:
+• Time tracking software (Toggl, Clockify, Hubstaff)
+• Start/stop timer for tasks
+• Automated reports generated
+• Used for billing (if client-facing roles) or productivity analysis
+• Employee informed and consents to time tracking`
+          }
+        ]
+      },
+      {
+        number: '6',
+        title: 'PRODUCTIVITY MONITORING TOOLS',
+        subsections: [
+          {
+            number: '6.1',
+            title: 'Activity Monitoring Software (If Deployed)',
+            content: `Hospital may use monitoring tools (transparently communicated):
+• Application usage tracking (what software used, duration)
+• Website activity (work-related vs non-work sites)
+• Screenshot capture (random or scheduled - with prior notice)
+• Keyboard/mouse activity (idle time detection)
+
+Privacy & Transparency:
+• Monitoring disclosed to employees upfront
+• Personal devices: Monitoring only on work profile (if MDM)
+• Monitoring during work hours only (not after hours)
+• Data used for productivity assessment, not micromanagement
+• Employees sign consent form (Annexure K.4.3)`
+          },
+          {
+            number: '6.2',
+            title: 'Video Calls & Virtual Check-Ins',
+            content: `• Daily stand-up meetings (15-30 min team sync)
+• Weekly one-on-one with supervisor
+• Camera-on expectation (unless bandwidth issues)
+• Random check-in calls (not excessive)
+• Virtual coffee chats for team bonding`
+          },
+          {
+            number: '6.3',
+            title: 'Collaboration Tool Analytics',
+            content: `Passive monitoring via tool usage:
+• Teams/Slack: Message activity, meeting attendance
+• Email: Response time, volume
+• Project tools: Task completion, updates
+• Not intrusive, part of normal system logs`
+          }
+        ]
+      },
+      {
+        number: '7',
+        title: 'PERFORMANCE EVALUATION',
+        content: `Remote workers evaluated on:
+• Quality and timeliness of deliverables
+• Task completion rates
+• Communication and responsiveness
+• Attendance (virtual meetings, availability)
+• Team collaboration
+• Goal achievement (KPIs defined)
+
+Not penalized for:
+• Different work styles (flexible scheduling within policy)
+• Lack of visibility (if output is good)
+
+Periodic reviews:
+• Monthly performance check-ins
+• Quarterly formal review
+• Annual appraisal (same process as office-based)`
+      },
+      {
+        number: '8',
+        title: 'ATTENDANCE & LEAVE MANAGEMENT',
+        content: `• Remote work doesn't mean unlimited flexibility
+• Attendance marked via HRMS or biometric (if hybrid)
+• Full-day remote work = full attendance credit
+• Half-day work requires prior approval
+• Leave requests follow standard process (SOP F.1)
+• Unplanned absence: Notify supervisor immediately
+• Medical emergencies: Inform and submit documentation`
+      },
+      {
+        number: '9',
+        title: 'REMOTE WORK CHALLENGES & SUPPORT',
+        content: `Common Challenges:
+• Connectivity issues: IT provides mobile hotspot or reimbursement
+• Power outages: Flexibility given with prior notice
+• Home distractions: Employee responsible for workspace management
+• Isolation: Regular team engagement activities
+
+IT Support:
+• VPN troubleshooting
+• Software installation and updates
+• Hardware issues: Loaner device or on-site visit if needed`
+      },
+      {
+        number: '10',
+        title: 'HYBRID WORK MODEL',
+        content: `If hospital allows hybrid (partial remote, partial office):
+• Fixed schedule (e.g., Mon-Wed office, Thu-Fri remote)
+• Or flexible (minimum X days in office per week)
+• Office days used for meetings, collaboration, team activities
+• Remote days for focused individual work
+• Calendar updated with location (office/remote)
+• Supervisor approval for schedule changes`
+      },
+      {
+        number: '11',
+        title: 'COMPLIANCE & SECURITY',
+        content: `• Comply with all IT security policies (SOP K.1, K.2)
+• Use VPN for accessing hospital systems
+• No public Wi-Fi for sensitive work
+• Physical security of device at home
+• Confidential documents not left unattended
+• No screen sharing in public spaces (coffee shops, etc.)
+• Report security incidents immediately (SOP K.5)`
+      },
+      {
+        number: '12',
+        title: 'REMOTE WORK POLICY VIOLATIONS',
+        content: `Minor Violations:
+• Delayed task logs: Reminder
+• Occasional unavailability without notice: Verbal warning
+
+Moderate Violations:
+• Consistent non-responsiveness: Written warning
+• Poor task completion: Performance improvement plan
+• Not logging tasks regularly: Remote work privilege revoked temporarily
+
+Serious Violations (Termination grounds):
+• Fraudulent task logs (falsifying work hours)
+• Working another job during hospital work hours
+• Security breach due to negligence
+• Gross non-performance`
+      },
+      {
+        number: '13',
+        title: 'REMOTE WORK REVIEW & REVOCATION',
+        content: `• Remote work arrangement reviewed quarterly
+• Supervisor can revoke if:
+    - Productivity decline
+    - Communication issues
+    - Business needs change (role requires office presence)
+    - Policy violations
+• Employee given reasonable notice (2 weeks) to transition back to office
+• Appeal process available via HR`
+      },
+      {
+        number: '14',
+        title: 'REFERENCE DOCUMENTS',
+        content: 'Remote Work Policy, IT Security Policy (SOP K.2), Attendance Policy (SOP E.1), Annexure K.4.1: Remote Work Request Form, Annexure K.4.2: Daily Task Log Template, Annexure K.4.3: Monitoring Consent Form'
+      }
+    ]
   },
 
   sopK5: {
