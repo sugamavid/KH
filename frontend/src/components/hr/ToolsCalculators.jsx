@@ -397,20 +397,23 @@ const ToolsCalculators = () => {
             </button>
             <div className="bg-white rounded-xl p-4 border-2 border-slate-200 shadow-sm">
               <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-3">
-                {tools.map((tool) => (
-                  <button
-                    key={tool.id}
-                    onClick={() => setActiveTool(tool.id)}
-                    className={`flex flex-col items-center p-3 rounded-lg font-semibold transition-all ${
-                      activeTool === tool.id
-                        ? `bg-${tool.color}-600 text-white shadow-lg`
-                        : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
-                    }`}
-                  >
-                    <tool.icon className="w-6 h-6 mb-1" />
-                    <span className="text-xs text-center">{tool.label}</span>
-                  </button>
-                ))}
+                {tools.map((tool) => {
+                  const colors = getColorClasses(tool.color);
+                  return (
+                    <button
+                      key={tool.id}
+                      onClick={() => setActiveTool(tool.id)}
+                      className={`flex flex-col items-center p-3 rounded-lg font-semibold transition-all ${
+                        activeTool === tool.id
+                          ? `${colors.activeBg} ${colors.activeText} shadow-lg`
+                          : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+                      }`}
+                    >
+                      <tool.icon className="w-6 h-6 mb-1" />
+                      <span className="text-xs text-center">{tool.label}</span>
+                    </button>
+                  );
+                })}
               </div>
             </div>
           </div>
