@@ -1110,6 +1110,20 @@ const HRByLaws = ({ setActiveModule }) => {
         />
       )}
 
+      {/* Reporting Dashboard Modal */}
+      {showReportingDashboard && (
+        <ReportingDashboard 
+          onClose={() => setShowReportingDashboard(false)}
+          onNavigateToSection={(sectionId) => {
+            setActiveSection(sectionId);
+            setShowReportingDashboard(false);
+            if (contentRef.current) {
+              contentRef.current.scrollTop = 0;
+            }
+          }}
+        />
+      )}
+
       {/* Print Styles */}
       <style jsx>{`
         @media print {
