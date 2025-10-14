@@ -18,69 +18,64 @@ const HRByLaws = ({ setActiveModule }) => {
   const [expandedSections, setExpandedSections] = useState({});
   const contentRef = useRef(null);
 
-  // Parse and render content using HTML strings with proper block elements
+  // Parse and render content - FIXED to handle actual content format
   const renderFormattedContent = (content) => {
     if (!content) return '';
     
     const lines = content.split('\n');
     let html = '';
+    let i = 0;
     
-    for (let i = 0; i < lines.length; i++) {
+    while (i < lines.length) {
       const line = lines[i];
       const trimmedLine = line.trim();
       
       // Skip empty lines
       if (!trimmedLine) {
+        i++;
         continue;
       }
       
-      // Check for (a) **Title:** pattern with content on same line
-      const mainWithContentMatch = trimmedLine.match(/^\(([a-z])\)\s+\*\*(.*?)\*\*:?\s+(.+)$/);
-      if (mainWithContentMatch) {
-        const text = mainWithContentMatch[3].replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
-        html += `<div style="margin-top: 1.5rem; margin-bottom: 1rem;">
-          <div style="font-weight: bold; font-size: 1.1rem; margin-bottom: 0.5rem;">
-            (${mainWithContentMatch[1]}) <strong>${mainWithContentMatch[2]}:</strong>
-          </div>
-          <div style="color: #334155; line-height: 1.75;">${text}</div>
-        </div>`;
-        continue;
-      }
-      
-      // Check for (a) **Title:** pattern (title only on line)
+      // Check for (a) **Title:** pattern (title on its own line, content follows)
       const mainPointMatch = trimmedLine.match(/^\(([a-z])\)\s+\*\*(.*?)\*\*:?$/);
       if (mainPointMatch) {
-        html += `<div style="font-weight: bold; font-size: 1.1rem; margin-top: 1.5rem; margin-bottom: 0.5rem;">
-          (${mainPointMatch[1]}) <strong>${mainPointMatch[2]}:</strong>
+        html += `<div style="margin-top: 1.5rem; margin-bottom: 0.75rem;">
+          <span style="font-weight: bold; font-size: 1.1rem; color: #0f172a;">
+            (${mainPointMatch[1]}) <strong>${mainPointMatch[2]}:</strong>
+          </span>
         </div>`;
+        i++;
         continue;
       }
       
-      // Check for (i), (ii), (iii) sub-points with indentation
-      const subPointMatch = line.match(/^\s{4}\(([ivxl]+)\)\s+(.+)$/);
+      // Check for (i), (ii), (iii) sub-points with leading spaces
+      const subPointMatch = line.match(/^\s+((?:i{1,3}|iv|v|vi{0,3}|ix|x))\)\s+(.+)$/);
       if (subPointMatch) {
         const text = subPointMatch[2].replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
-        html += `<div style="margin-left: 3rem; margin-top: 0.5rem; margin-bottom: 0.5rem; display: flex;">
-          <span style="font-weight: 600; color: #475569; min-width: 3rem;">(${subPointMatch[1]})</span>
+        html += `<div style="margin-left: 3rem; margin-top: 0.75rem; margin-bottom: 0.75rem; display: flex; align-items: flex-start;">
+          <span style="font-weight: 600; color: #475569; margin-right: 0.75rem; min-width: 2.5rem;">(${subPointMatch[1]})</span>
           <span style="color: #334155; line-height: 1.75; flex: 1;">${text}</span>
         </div>`;
+        i++;
         continue;
       }
       
-      // Check for bullets with indentation
-      const bulletMatch = line.match(/^\s{4}•\s+(.+)$/);
+      // Check for bullets with leading spaces
+      const bulletMatch = line.match(/^\s+•\s+(.+)$/);
       if (bulletMatch) {
         const text = bulletMatch[1].replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
-        html += `<div style="margin-left: 2rem; margin-top: 0.5rem; margin-bottom: 0.5rem; display: flex;">
-          <span style="color: #d97706; font-weight: bold; font-size: 1.25rem; margin-right: 0.75rem;">•</span>
+        html += `<div style="margin-left: 2.5rem; margin-top: 0.5rem; margin-bottom: 0.5rem; display: flex; align-items: flex-start;">
+          <span style="color: #d97706; font-weight: bold; font-size: 1.25rem; margin-right: 0.75rem; line-height: 1.75;">•</span>
           <span style="color: #334155; line-height: 1.75; flex: 1;">${text}</span>
         </div>`;
+        i++;
         continue;
       }
       
-      // Regular text line
+      // Regular text line (content after a main point)
       const text = trimmedLine.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
-      html += `<div style="color: #334155; line-height: 1.75; margin-bottom: 0.5rem;">${text}</div>`;
+      html += `<div style="color: #334155; line-height: 1.75; margin-bottom: 0.5rem; margin-left: 0rem;">${text}</div>`;
+      i++;
     }
     
     return html;
