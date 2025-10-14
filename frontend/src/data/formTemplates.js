@@ -237,6 +237,273 @@ export const formTemplates = {
       },
     ],
   },
+
+  trainingNomination: {
+    code: 'ANX-D-1',
+    title: 'Training Nomination Form',
+    category: 'Training',
+    sections: [
+      {
+        title: 'Employee & Training Details',
+        fields: [
+          { id: 'employeeId', label: 'Employee ID', type: 'text', required: true },
+          { id: 'employeeName', label: 'Employee Name', type: 'text', required: true },
+          { id: 'designation', label: 'Designation', type: 'text', required: true },
+          { id: 'department', label: 'Department', type: 'text', required: true },
+          { id: 'trainingTitle', label: 'Training Program Name', type: 'text', required: true },
+          { id: 'trainingProvider', label: 'Training Provider/Organizer', type: 'text', required: true },
+          { id: 'trainingType', label: 'Training Type', type: 'select', required: true, options: ['Internal', 'External', 'Online', 'Workshop', 'Conference', 'Certification Course'] },
+          { id: 'fromDate', label: 'Start Date', type: 'date', required: true },
+          { id: 'toDate', label: 'End Date', type: 'date', required: true },
+          { id: 'location', label: 'Training Location', type: 'text', required: true },
+          { id: 'cost', label: 'Training Cost (INR)', type: 'text', placeholder: 'Enter total cost' },
+          { id: 'justification', label: 'Training Justification', type: 'textarea', required: true, rows: 4, placeholder: 'Why is this training necessary? How will it benefit your role?' },
+        ],
+      },
+    ],
+  },
+
+  incidentReport: {
+    code: 'ANX-G-2',
+    title: 'Incident Report Form',
+    category: 'Compliance',
+    sections: [
+      {
+        title: 'Reporter Information',
+        fields: [
+          { id: 'reporterName', label: 'Your Name', type: 'text', required: true },
+          { id: 'reporterDesignation', label: 'Your Designation', type: 'text', required: true },
+          { id: 'reporterDepartment', label: 'Your Department', type: 'text', required: true },
+          { id: 'reportDate', label: 'Report Date', type: 'date', required: true },
+        ],
+      },
+      {
+        title: 'Incident Details',
+        fields: [
+          { id: 'incidentType', label: 'Type of Incident', type: 'select', required: true, options: [
+            'Workplace Accident',
+            'Near Miss',
+            'Safety Hazard',
+            'Equipment Malfunction',
+            'Security Breach',
+            'Policy Violation',
+            'Other'
+          ]},
+          { id: 'incidentDate', label: 'Incident Date', type: 'date', required: true },
+          { id: 'incidentTime', label: 'Incident Time', type: 'text', required: true, placeholder: 'HH:MM' },
+          { id: 'location', label: 'Location of Incident', type: 'text', required: true },
+          { id: 'personsInvolved', label: 'Persons Involved', type: 'textarea', rows: 2, placeholder: 'Names and designations' },
+          { id: 'witnesses', label: 'Witnesses', type: 'textarea', rows: 2, placeholder: 'Names and contact information' },
+          { id: 'description', label: 'Detailed Description', type: 'textarea', required: true, rows: 6, placeholder: 'Describe what happened in detail' },
+          { id: 'injuries', label: 'Any Injuries?', type: 'radio', required: true, options: ['Yes', 'No'] },
+          { id: 'medicalAttention', label: 'Medical Attention Required?', type: 'radio', options: ['Yes', 'No'] },
+          { id: 'actionTaken', label: 'Immediate Action Taken', type: 'textarea', rows: 3, placeholder: 'What actions were taken immediately after the incident?' },
+          { id: 'evidence', label: 'Upload Evidence (Photos, Documents)', type: 'file', accept: 'image/*,.pdf' },
+        ],
+      },
+    ],
+  },
+
+  salaryCertificate: {
+    code: 'ANX-H-2',
+    title: 'Salary Certificate Request',
+    category: 'Certificates',
+    sections: [
+      {
+        title: 'Employee Information',
+        fields: [
+          { id: 'employeeId', label: 'Employee ID', type: 'text', required: true },
+          { id: 'fullName', label: 'Full Name', type: 'text', required: true },
+          { id: 'designation', label: 'Designation', type: 'text', required: true },
+          { id: 'department', label: 'Department', type: 'text', required: true },
+          { id: 'dateOfJoining', label: 'Date of Joining', type: 'date', required: true },
+        ],
+      },
+      {
+        title: 'Certificate Requirements',
+        fields: [
+          { id: 'purpose', label: 'Purpose of Certificate', type: 'select', required: true, options: [
+            'Loan Application',
+            'Visa Processing',
+            'Rental Agreement',
+            'Credit Card Application',
+            'Other Official Purpose'
+          ]},
+          { id: 'addressedTo', label: 'To be Addressed To', type: 'text', required: true, placeholder: 'e.g., Bank Name, Embassy' },
+          { id: 'includeBreakup', label: 'Include Salary Breakup?', type: 'radio', required: true, options: ['Yes', 'No'] },
+          { id: 'numberOfCopies', label: 'Number of Copies Required', type: 'select', required: true, options: ['1', '2', '3', '4', '5'] },
+          { id: 'urgency', label: 'Urgency', type: 'select', required: true, options: ['Standard (3 days)', 'Urgent (1 day - Additional charges may apply)'] },
+        ],
+      },
+    ],
+  },
+
+  overtimeAuthorization: {
+    code: 'ANX-I-1',
+    title: 'Overtime Authorization Form',
+    category: 'Operations',
+    sections: [
+      {
+        title: 'Employee & Overtime Details',
+        fields: [
+          { id: 'employeeId', label: 'Employee ID', type: 'text', required: true },
+          { id: 'employeeName', label: 'Employee Name', type: 'text', required: true },
+          { id: 'designation', label: 'Designation', type: 'text', required: true },
+          { id: 'department', label: 'Department', type: 'text', required: true },
+          { id: 'overtimeDate', label: 'Date of Overtime', type: 'date', required: true },
+          { id: 'fromTime', label: 'From Time', type: 'text', required: true, placeholder: 'HH:MM' },
+          { id: 'toTime', label: 'To Time', type: 'text', required: true, placeholder: 'HH:MM' },
+          { id: 'totalHours', label: 'Total Hours', type: 'text', required: true, placeholder: 'Auto-calculated' },
+          { id: 'reason', label: 'Reason for Overtime', type: 'textarea', required: true, rows: 4, placeholder: 'Explain why overtime is necessary' },
+          { id: 'workDescription', label: 'Work to be Performed', type: 'textarea', required: true, rows: 3, placeholder: 'Describe the tasks/activities' },
+          { id: 'compensation', label: 'Compensation Type', type: 'radio', required: true, options: ['Overtime Pay', 'Compensatory Off'] },
+        ],
+      },
+    ],
+  },
+
+  transferRequest: {
+    code: 'ANX-I-2',
+    title: 'Transfer Request Form',
+    category: 'Operations',
+    sections: [
+      {
+        title: 'Current Details',
+        fields: [
+          { id: 'employeeId', label: 'Employee ID', type: 'text', required: true },
+          { id: 'employeeName', label: 'Full Name', type: 'text', required: true },
+          { id: 'currentDesignation', label: 'Current Designation', type: 'text', required: true },
+          { id: 'currentDepartment', label: 'Current Department', type: 'text', required: true },
+          { id: 'dateOfJoining', label: 'Date of Joining Current Role', type: 'date', required: true },
+        ],
+      },
+      {
+        title: 'Transfer Request Details',
+        fields: [
+          { id: 'transferType', label: 'Type of Transfer', type: 'select', required: true, options: [
+            'Department Transfer',
+            'Shift Change',
+            'Location Transfer',
+            'Role Change'
+          ]},
+          { id: 'requestedDepartment', label: 'Requested Department', type: 'text', required: true },
+          { id: 'requestedShift', label: 'Requested Shift (if applicable)', type: 'select', options: ['Day Shift', 'Night Shift', 'Rotating'] },
+          { id: 'preferredDate', label: 'Preferred Transfer Date', type: 'date', required: true },
+          { id: 'reason', label: 'Reason for Transfer Request', type: 'textarea', required: true, rows: 5, placeholder: 'Explain why you are requesting this transfer' },
+          { id: 'relevantSkills', label: 'Relevant Skills/Experience', type: 'textarea', rows: 3, placeholder: 'Skills that make you suitable for the requested position' },
+        ],
+      },
+    ],
+  },
+
+  grievanceComplaint: {
+    code: 'ANX-G-3',
+    title: 'Grievance Complaint Form',
+    category: 'Compliance',
+    sections: [
+      {
+        title: 'Complainant Information',
+        fields: [
+          { id: 'employeeId', label: 'Employee ID', type: 'text', required: true },
+          { id: 'name', label: 'Your Name', type: 'text', required: true },
+          { id: 'designation', label: 'Designation', type: 'text', required: true },
+          { id: 'department', label: 'Department', type: 'text', required: true },
+          { id: 'contactNumber', label: 'Contact Number', type: 'tel', required: true },
+          { id: 'email', label: 'Email Address', type: 'email', required: true },
+        ],
+      },
+      {
+        title: 'Grievance Details',
+        fields: [
+          { id: 'grievanceType', label: 'Type of Grievance', type: 'select', required: true, options: [
+            'Workplace Harassment',
+            'Discrimination',
+            'Unfair Treatment',
+            'Safety Concern',
+            'Policy Violation',
+            'Payment/Benefits Issue',
+            'Other'
+          ]},
+          { id: 'dateOfIncident', label: 'Date of Incident/Issue', type: 'date', required: true },
+          { id: 'personsConcerned', label: 'Person(s) Concerned', type: 'textarea', rows: 2, placeholder: 'Names and designations (if applicable)' },
+          { id: 'detailedComplaint', label: 'Detailed Description of Grievance', type: 'textarea', required: true, rows: 8, placeholder: 'Provide a complete and accurate description of the issue' },
+          { id: 'witnesses', label: 'Witnesses (if any)', type: 'textarea', rows: 2, placeholder: 'Names and contact information' },
+          { id: 'previousAttempts', label: 'Previous Attempts to Resolve', type: 'textarea', rows: 3, placeholder: 'Have you tried to resolve this issue before? If yes, please describe' },
+          { id: 'expectedResolution', label: 'Expected Resolution', type: 'textarea', required: true, rows: 3, placeholder: 'What outcome are you seeking?' },
+          { id: 'supportingDocuments', label: 'Supporting Documents/Evidence', type: 'file', accept: '.pdf,image/*', acceptedFormats: 'PDF, Images' },
+          { id: 'confidentiality', label: 'Request confidential handling', type: 'checkbox', text: 'I request that this grievance be handled with strict confidentiality' },
+        ],
+      },
+    ],
+  },
 };
+
+// Scenario-based form suggestions
+export const formScenarios = [
+  {
+    id: 'joining',
+    title: "I'm Joining the Hospital",
+    icon: '👋',
+    description: 'New employee onboarding forms',
+    color: 'from-green-500 to-emerald-600',
+    forms: ['employmentApplication', 'backgroundVerification', 'joiningForm']
+  },
+  {
+    id: 'leave',
+    title: "I Need Time Off",
+    icon: '🌴',
+    description: 'Leave application and approval',
+    color: 'from-blue-500 to-cyan-600',
+    forms: ['leaveApplication', 'medicalCertificate']
+  },
+  {
+    id: 'performance',
+    title: "Performance Review",
+    icon: '⭐',
+    description: 'Appraisal and goal setting',
+    color: 'from-purple-500 to-pink-600',
+    forms: ['performanceAppraisal', 'goalSetting']
+  },
+  {
+    id: 'leaving',
+    title: "I'm Planning to Leave",
+    icon: '👋',
+    description: 'Resignation and exit process',
+    color: 'from-orange-500 to-red-600',
+    forms: ['resignationLetter', 'exitInterview']
+  },
+  {
+    id: 'incident',
+    title: "Report an Issue",
+    icon: '⚠️',
+    description: 'Incidents and grievances',
+    color: 'from-red-500 to-rose-600',
+    forms: ['incidentReport', 'grievanceComplaint']
+  },
+  {
+    id: 'certificate',
+    title: "I Need a Certificate",
+    icon: '📜',
+    description: 'Official certificates and letters',
+    color: 'from-amber-500 to-yellow-600',
+    forms: ['salaryCertificate', 'experienceCertificate']
+  },
+  {
+    id: 'training',
+    title: "Training & Development",
+    icon: '📚',
+    description: 'Training nominations and feedback',
+    color: 'from-indigo-500 to-blue-600',
+    forms: ['trainingNomination', 'trainingFeedback']
+  },
+  {
+    id: 'operations',
+    title: "Work Related Requests",
+    icon: '⚙️',
+    description: 'Overtime, transfers, equipment',
+    color: 'from-gray-500 to-slate-600',
+    forms: ['overtimeAuthorization', 'transferRequest']
+  },
+];
 
 export default formTemplates;
