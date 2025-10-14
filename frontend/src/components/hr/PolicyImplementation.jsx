@@ -716,6 +716,618 @@ const PolicyImplementation = ({ onClose, onNavigateToSection }) => {
     </div>
   );
 
+  const renderImplementationWizard = () => {
+    const policiesWithGuides = allPolicies.filter(p => p.implementationSteps);
+
+    // Wizard Step 1: Policy Selection
+    if (wizardStep === 1) {
+      return (
+        <div className="space-y-6">
+          <div className="bg-gradient-to-r from-purple-600 to-purple-700 rounded-xl p-8 text-white">
+            <div className="flex items-center gap-4 mb-4">
+              <div className="w-16 h-16 bg-white/20 backdrop-blur rounded-xl flex items-center justify-center">
+                <Zap className="w-10 h-10" />
+              </div>
+              <div>
+                <h3 className="text-3xl font-bold">Implementation Wizard</h3>
+                <p className="text-purple-100">Step-by-step guided implementation process</p>
+              </div>
+            </div>
+            <p className="text-purple-100 leading-relaxed">
+              This wizard will guide you through the complete implementation process for any By-Laws policy.
+              Select a policy below to begin the structured implementation journey.
+            </p>
+          </div>
+
+          <div>
+            <h4 className="text-xl font-bold text-slate-900 mb-4">Step 1: Select Policy to Implement</h4>
+            <div className="grid grid-cols-2 gap-4">
+              {policiesWithGuides.map(policy => (
+                <div
+                  key={policy.id}
+                  onClick={() => {
+                    setSelectedWizardPolicy(policy);
+                    setWizardStep(2);
+                    setCompletedSteps([]);
+                    setStepProgress({});
+                  }}
+                  className="bg-white border-2 border-slate-200 rounded-xl p-6 hover:border-purple-400 hover:shadow-lg transition-all cursor-pointer group"
+                >
+                  <div className="flex items-start justify-between mb-3">
+                    <h5 className="font-bold text-slate-900 group-hover:text-purple-700 transition-colors flex-1">
+                      {policy.policyName}
+                    </h5>
+                    <PlayCircle className="w-6 h-6 text-purple-600 flex-shrink-0" />
+                  </div>
+                  <div className="flex items-center gap-3 mb-3">
+                    <span className="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-xs font-semibold">
+                      {policy.category}
+                    </span>
+                    <span className="text-sm text-slate-600">
+                      {policy.implementationSteps.length} steps
+                    </span>
+                  </div>
+                  <div className="text-sm text-slate-600">
+                    Click to start implementation →
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      );
+    }
+
+    // Wizard Step 2+: Implementation Process
+    if (!selectedWizardPolicy) return null;
+
+    const totalSteps = selectedWizardPolicy.implementationSteps.length;
+    const completedCount = completedSteps.length;
+    const progressPercent = (completedCount / totalSteps) * 100;
+
+    return (
+      <div className="space-y-6">
+        {/* Header with Progress */}
+        <div className="bg-white border-2 border-purple-200 rounded-xl p-6">
+          <div className="flex items-center justify-between mb-4">
+            <div>
+              <h3 className="text-2xl font-bold text-slate-900">{selectedWizardPolicy.policyName}</h3>
+              <p className="text-slate-600">Implementation in Progress</p>
+            </div>
+            <button
+              onClick={() => {
+                setWizardStep(1);
+                setSelectedWizardPolicy(null);
+                setCompletedSteps([]);
+                setStepProgress({});
+              }}
+              className="px-4 py-2 bg-slate-100 text-slate-700 rounded-lg hover:bg-slate-200 transition-colors font-semibold"
+            >
+              ← Change Policy
+            </button>
+          </div>
+
+          {/* Progress Bar */}
+          <div className="mb-4">
+            <div className="flex items-center justify-between mb-2">
+              <span className="text-sm font-bold text-slate-700">Overall Progress</span>
+              <span className="text-sm font-bold text-purple-700">
+                {completedCount} / {totalSteps} Steps Complete ({Math.round(progressPercent)}%)
+              </span>
+            </div>
+            <div className="w-full h-3 bg-slate-200 rounded-full overflow-hidden">
+              <div
+                className="h-full bg-gradient-to-r from-purple-500 to-purple-600 transition-all duration-500"
+                style={{ width: `${progressPercent}%` }}
+              />
+            </div>
+          </div>
+
+          {/* Wizard Steps Navigation */}
+          <div className="flex gap-2">
+            {[
+              { step: 2, label: 'Roadmap', icon: GitBranch },
+              { step: 3, label: 'Execute Steps', icon: ClipboardCheck },
+              { step: 4, label: 'Track Progress', icon: TrendingUp },
+              { step: 5, label: 'Resources', icon: FileText },
+              { step: 6, label: 'Summary', icon: Award }
+            ].map(({ step, label, icon: Icon }) => (
+              <button
+                key={step}
+                onClick={() => setWizardStep(step)}
+                className={`flex-1 flex items-center justify-center gap-2 px-4 py-3 rounded-lg font-semibold transition-all ${
+                  wizardStep === step
+                    ? 'bg-purple-600 text-white shadow-lg'
+                    : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
+                }`}
+              >
+                <Icon className="w-4 h-4" />
+                <span className="hidden lg:inline">{label}</span>
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* Step 2: Roadmap */}
+        {wizardStep === 2 && (
+          <div className="space-y-4">
+            <h4 className="text-xl font-bold text-slate-900 flex items-center gap-2">
+              <GitBranch className="w-6 h-6 text-purple-600" />
+              Implementation Roadmap
+            </h4>
+            <div className="bg-blue-50 border-2 border-blue-200 rounded-xl p-5">
+              <p className="text-blue-800 text-sm">
+                <strong>Overview:</strong> This roadmap shows all implementation steps in sequence. Each step includes
+                activities, responsible parties, timelines, and expected outputs.
+              </p>
+            </div>
+            
+            <div className="space-y-3">
+              {selectedWizardPolicy.implementationSteps.map((step, idx) => (
+                <div
+                  key={idx}
+                  className={`border-2 rounded-xl overflow-hidden transition-all ${
+                    completedSteps.includes(idx)
+                      ? 'border-green-300 bg-green-50'
+                      : 'border-slate-200 bg-white'
+                  }`}
+                >
+                  <div className="p-5">
+                    <div className="flex items-start gap-4">
+                      <div className={`flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center font-bold ${
+                        completedSteps.includes(idx)
+                          ? 'bg-green-600 text-white'
+                          : 'bg-purple-600 text-white'
+                      }`}>
+                        {completedSteps.includes(idx) ? (
+                          <CheckCircle className="w-6 h-6" />
+                        ) : (
+                          step.step
+                        )}
+                      </div>
+                      <div className="flex-1">
+                        <div className="flex items-start justify-between mb-2">
+                          <div>
+                            <h5 className="text-lg font-bold text-slate-900">{step.activity}</h5>
+                            <p className="text-sm text-slate-600">{step.details}</p>
+                          </div>
+                          <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-lg text-xs font-bold whitespace-nowrap ml-2">
+                            {step.phase}
+                          </span>
+                        </div>
+                        
+                        <div className="grid grid-cols-2 gap-4 mt-4">
+                          <div className="bg-slate-50 rounded-lg p-3">
+                            <div className="text-xs font-bold text-slate-600 mb-1">Timeline</div>
+                            <div className="text-sm font-semibold text-slate-900 flex items-center gap-1">
+                              <Clock className="w-4 h-4 text-slate-600" />
+                              {step.timeline}
+                            </div>
+                          </div>
+                          <div className="bg-slate-50 rounded-lg p-3">
+                            <div className="text-xs font-bold text-slate-600 mb-1">Responsible</div>
+                            <div className="text-sm font-semibold text-slate-900 flex items-center gap-1">
+                              <UserCheck className="w-4 h-4 text-slate-600" />
+                              {step.responsibleIndividuals[0]}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Step 3: Execute Steps */}
+        {wizardStep === 3 && (
+          <div className="space-y-4">
+            <h4 className="text-xl font-bold text-slate-900 flex items-center gap-2">
+              <ClipboardCheck className="w-6 h-6 text-purple-600" />
+              Execute Implementation Steps
+            </h4>
+            
+            <div className="space-y-4">
+              {selectedWizardPolicy.implementationSteps.map((step, idx) => {
+                const isCompleted = completedSteps.includes(idx);
+                const isExpanded = expandedStep === idx;
+                
+                return (
+                  <div
+                    key={idx}
+                    className={`border-2 rounded-xl overflow-hidden ${
+                      isCompleted ? 'border-green-300 bg-green-50' : 'border-slate-200 bg-white'
+                    }`}
+                  >
+                    <div
+                      onClick={() => setExpandedStep(isExpanded ? null : idx)}
+                      className="p-5 cursor-pointer hover:bg-slate-50 transition-colors"
+                    >
+                      <div className="flex items-center gap-4">
+                        <div className={`flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center font-bold ${
+                          isCompleted ? 'bg-green-600 text-white' : 'bg-purple-600 text-white'
+                        }`}>
+                          {isCompleted ? <CheckCircle className="w-6 h-6" /> : step.step}
+                        </div>
+                        <div className="flex-1">
+                          <h5 className="text-lg font-bold text-slate-900">{step.activity}</h5>
+                          <p className="text-sm text-slate-600">{step.phase} Phase • {step.timeline}</p>
+                        </div>
+                        {isExpanded ? (
+                          <ChevronDown className="w-6 h-6 text-slate-400" />
+                        ) : (
+                          <ChevronRight className="w-6 h-6 text-slate-400" />
+                        )}
+                      </div>
+                    </div>
+
+                    {isExpanded && (
+                      <div className="px-5 pb-5 space-y-4 border-t border-slate-200">
+                        <div className="pt-4">
+                          <h6 className="font-bold text-slate-900 mb-2">Details</h6>
+                          <p className="text-slate-700 leading-relaxed">{step.details}</p>
+                        </div>
+
+                        <div>
+                          <h6 className="font-bold text-slate-900 mb-2">Responsible Parties</h6>
+                          <div className="flex flex-wrap gap-2">
+                            {step.responsibleIndividuals.map((person, i) => (
+                              <span key={i} className="px-3 py-1 bg-blue-100 text-blue-700 rounded-lg text-sm font-semibold">
+                                {person}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
+
+                        <div>
+                          <h6 className="font-bold text-slate-900 mb-2">Expected Outputs ({step.outputs.length})</h6>
+                          <ul className="space-y-1">
+                            {step.outputs.map((output, i) => (
+                              <li key={i} className="flex items-center gap-2 text-sm text-slate-700">
+                                <FileText className="w-4 h-4 text-blue-600" />
+                                {output}
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+
+                        <div>
+                          <h6 className="font-bold text-slate-900 mb-2">Checkpoints ({step.checkpoints.length})</h6>
+                          <div className="space-y-2">
+                            {step.checkpoints.map((checkpoint, i) => {
+                              const checkKey = `${idx}-${i}`;
+                              const isChecked = stepProgress[checkKey] || false;
+                              
+                              return (
+                                <label
+                                  key={i}
+                                  className="flex items-center gap-3 p-3 bg-white rounded-lg border border-slate-200 hover:border-purple-300 cursor-pointer transition-colors"
+                                >
+                                  <input
+                                    type="checkbox"
+                                    checked={isChecked}
+                                    onChange={(e) => {
+                                      setStepProgress(prev => ({
+                                        ...prev,
+                                        [checkKey]: e.target.checked
+                                      }));
+                                    }}
+                                    className="w-5 h-5 text-purple-600 rounded focus:ring-2 focus:ring-purple-500"
+                                  />
+                                  <span className="text-sm text-slate-700">{checkpoint}</span>
+                                </label>
+                              );
+                            })}
+                          </div>
+                        </div>
+
+                        <div className="pt-2">
+                          {isCompleted ? (
+                            <button
+                              onClick={() => setCompletedSteps(prev => prev.filter(s => s !== idx))}
+                              className="w-full px-4 py-3 bg-slate-200 text-slate-700 rounded-lg hover:bg-slate-300 transition-colors font-semibold"
+                            >
+                              Mark as Incomplete
+                            </button>
+                          ) : (
+                            <button
+                              onClick={() => {
+                                if (!completedSteps.includes(idx)) {
+                                  setCompletedSteps(prev => [...prev, idx]);
+                                }
+                              }}
+                              className="w-full px-4 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors font-semibold flex items-center justify-center gap-2"
+                            >
+                              <CheckCircle className="w-5 h-5" />
+                              Mark Step as Complete
+                            </button>
+                          )}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        )}
+
+        {/* Step 4: Track Progress */}
+        {wizardStep === 4 && (
+          <div className="space-y-6">
+            <h4 className="text-xl font-bold text-slate-900 flex items-center gap-2">
+              <TrendingUp className="w-6 h-6 text-purple-600" />
+              Progress Tracking Dashboard
+            </h4>
+
+            {/* Stats */}
+            <div className="grid grid-cols-4 gap-4">
+              <div className="bg-purple-50 border-2 border-purple-200 rounded-xl p-5">
+                <div className="text-3xl font-bold text-purple-900 mb-1">{totalSteps}</div>
+                <div className="text-sm font-semibold text-purple-700">Total Steps</div>
+              </div>
+              <div className="bg-green-50 border-2 border-green-200 rounded-xl p-5">
+                <div className="text-3xl font-bold text-green-900 mb-1">{completedCount}</div>
+                <div className="text-sm font-semibold text-green-700">Completed</div>
+              </div>
+              <div className="bg-orange-50 border-2 border-orange-200 rounded-xl p-5">
+                <div className="text-3xl font-bold text-orange-900 mb-1">{totalSteps - completedCount}</div>
+                <div className="text-sm font-semibold text-orange-700">Remaining</div>
+              </div>
+              <div className="bg-blue-50 border-2 border-blue-200 rounded-xl p-5">
+                <div className="text-3xl font-bold text-blue-900 mb-1">{Math.round(progressPercent)}%</div>
+                <div className="text-sm font-semibold text-blue-700">Progress</div>
+              </div>
+            </div>
+
+            {/* Phase Breakdown */}
+            <div className="bg-white border-2 border-slate-200 rounded-xl p-6">
+              <h5 className="text-lg font-bold text-slate-900 mb-4">Progress by Phase</h5>
+              {['Planning', 'Preparation', 'Implementation', 'Monitoring', 'Communication'].map(phase => {
+                const phaseSteps = selectedWizardPolicy.implementationSteps.filter(s => s.phase === phase);
+                const phaseCompleted = phaseSteps.filter((_, idx) => 
+                  completedSteps.includes(selectedWizardPolicy.implementationSteps.indexOf(phaseSteps[idx]))
+                ).length;
+                const phasePercent = phaseSteps.length > 0 ? (phaseCompleted / phaseSteps.length) * 100 : 0;
+
+                return phaseSteps.length > 0 && (
+                  <div key={phase} className="mb-4 last:mb-0">
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="font-semibold text-slate-700">{phase}</span>
+                      <span className="text-sm text-slate-600">
+                        {phaseCompleted} / {phaseSteps.length} steps
+                      </span>
+                    </div>
+                    <div className="w-full h-2 bg-slate-200 rounded-full overflow-hidden">
+                      <div
+                        className="h-full bg-purple-600 transition-all duration-500"
+                        style={{ width: `${phasePercent}%` }}
+                      />
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+
+            {/* Step Status List */}
+            <div className="bg-white border-2 border-slate-200 rounded-xl p-6">
+              <h5 className="text-lg font-bold text-slate-900 mb-4">All Steps Status</h5>
+              <div className="space-y-2">
+                {selectedWizardPolicy.implementationSteps.map((step, idx) => (
+                  <div
+                    key={idx}
+                    className={`flex items-center gap-3 p-3 rounded-lg ${
+                      completedSteps.includes(idx) ? 'bg-green-50' : 'bg-slate-50'
+                    }`}
+                  >
+                    {completedSteps.includes(idx) ? (
+                      <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0" />
+                    ) : (
+                      <Clock className="w-5 h-5 text-orange-500 flex-shrink-0" />
+                    )}
+                    <div className="flex-1">
+                      <div className="font-semibold text-slate-900">{step.activity}</div>
+                      <div className="text-xs text-slate-600">{step.phase} • {step.timeline}</div>
+                    </div>
+                    <span className={`px-3 py-1 rounded-full text-xs font-bold ${
+                      completedSteps.includes(idx)
+                        ? 'bg-green-200 text-green-800'
+                        : 'bg-orange-200 text-orange-800'
+                    }`}>
+                      {completedSteps.includes(idx) ? 'Complete' : 'Pending'}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Step 5: Resources */}
+        {wizardStep === 5 && (
+          <div className="space-y-6">
+            <h4 className="text-xl font-bold text-slate-900 flex items-center gap-2">
+              <FileText className="w-6 h-6 text-purple-600" />
+              Resources & Templates
+            </h4>
+
+            <div className="bg-blue-50 border-2 border-blue-200 rounded-xl p-5">
+              <p className="text-blue-800 text-sm">
+                <strong>Resource Library:</strong> Below are all outputs, templates, and documents required for 
+                implementing this policy. Use these as guides for your implementation process.
+              </p>
+            </div>
+
+            {/* All Outputs */}
+            <div className="bg-white border-2 border-slate-200 rounded-xl p-6">
+              <h5 className="text-lg font-bold text-slate-900 mb-4">Required Outputs & Templates</h5>
+              <div className="grid grid-cols-2 gap-3">
+                {selectedWizardPolicy.implementationSteps.flatMap(step => 
+                  step.outputs.map((output, idx) => (
+                    <div key={`${step.step}-${idx}`} className="flex items-center gap-3 p-4 bg-slate-50 rounded-lg border border-slate-200">
+                      <FileText className="w-5 h-5 text-blue-600 flex-shrink-0" />
+                      <div className="flex-1">
+                        <div className="font-semibold text-slate-900 text-sm">{output}</div>
+                        <div className="text-xs text-slate-600">Step {step.step}: {step.activity}</div>
+                      </div>
+                      <Download className="w-4 h-4 text-slate-400" />
+                    </div>
+                  ))
+                )}
+              </div>
+            </div>
+
+            {/* Committee & Authority Info */}
+            {selectedWizardPolicy.committeeInvolved && (
+              <div className="bg-white border-2 border-slate-200 rounded-xl p-6">
+                <h5 className="text-lg font-bold text-slate-900 mb-4">Involved Committees</h5>
+                <div className="grid grid-cols-2 gap-3">
+                  {selectedWizardPolicy.committeeInvolved.map(committeeId => {
+                    const committee = committeesDatabase[committeeId];
+                    return committee && (
+                      <div
+                        key={committeeId}
+                        onClick={() => {
+                          setSelectedCommittee(committee);
+                        }}
+                        className="flex items-center gap-3 p-4 bg-purple-50 rounded-lg border-2 border-purple-200 hover:border-purple-400 cursor-pointer transition-all"
+                      >
+                        <Users className="w-6 h-6 text-purple-600 flex-shrink-0" />
+                        <div className="flex-1">
+                          <div className="font-bold text-slate-900">{committee.name}</div>
+                          <div className="text-xs text-slate-600">{committee.composition.length} members</div>
+                        </div>
+                        <Eye className="w-4 h-4 text-purple-600" />
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            )}
+
+            {/* Approval Chain */}
+            {selectedWizardPolicy.approvalChain && (
+              <div className="bg-white border-2 border-slate-200 rounded-xl p-6">
+                <h5 className="text-lg font-bold text-slate-900 mb-4">Approval Chain</h5>
+                <div className="space-y-3">
+                  {selectedWizardPolicy.approvalChain.map((approval, idx) => (
+                    <div key={idx} className="flex items-start gap-4 p-4 bg-orange-50 rounded-lg border border-orange-200">
+                      <div className="flex-shrink-0 w-8 h-8 bg-orange-600 text-white rounded-full flex items-center justify-center font-bold text-sm">
+                        {idx + 1}
+                      </div>
+                      <div className="flex-1">
+                        <div className="font-bold text-slate-900">{approval.level}</div>
+                        <div className="text-sm text-slate-600">{approval.for}</div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+        )}
+
+        {/* Step 6: Summary */}
+        {wizardStep === 6 && (
+          <div className="space-y-6">
+            <h4 className="text-xl font-bold text-slate-900 flex items-center gap-2">
+              <Award className="w-6 h-6 text-purple-600" />
+              Implementation Summary & Report
+            </h4>
+
+            {/* Completion Status */}
+            <div className={`rounded-xl p-8 text-white ${
+              progressPercent === 100
+                ? 'bg-gradient-to-r from-green-600 to-green-700'
+                : 'bg-gradient-to-r from-orange-500 to-orange-600'
+            }`}>
+              <div className="flex items-center gap-4 mb-4">
+                {progressPercent === 100 ? (
+                  <CheckCircle className="w-16 h-16" />
+                ) : (
+                  <Clock className="w-16 h-16" />
+                )}
+                <div>
+                  <h3 className="text-3xl font-bold mb-1">
+                    {progressPercent === 100 ? 'Implementation Complete!' : 'Implementation In Progress'}
+                  </h3>
+                  <p className="text-lg opacity-90">
+                    {progressPercent === 100
+                      ? 'All implementation steps have been completed successfully.'
+                      : `${completedCount} of ${totalSteps} steps completed (${Math.round(progressPercent)}%)`
+                    }
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Critical Success Factors */}
+            <div className="bg-white border-2 border-green-200 rounded-xl p-6">
+              <h5 className="text-lg font-bold text-green-900 mb-4 flex items-center gap-2">
+                <Target className="w-5 h-5" />
+                Critical Success Factors
+              </h5>
+              <ul className="space-y-2">
+                {selectedWizardPolicy.criticalSuccess?.map((factor, idx) => (
+                  <li key={idx} className="flex items-start gap-2 text-slate-700">
+                    <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                    {factor}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Risk Mitigation */}
+            {selectedWizardPolicy.risks && selectedWizardPolicy.risks.length > 0 && (
+              <div className="bg-white border-2 border-orange-200 rounded-xl p-6">
+                <h5 className="text-lg font-bold text-orange-900 mb-4 flex items-center gap-2">
+                  <AlertTriangle className="w-5 h-5" />
+                  Risk Management
+                </h5>
+                <div className="space-y-3">
+                  {selectedWizardPolicy.risks.map((risk, idx) => (
+                    <div key={idx} className="bg-orange-50 rounded-lg p-4">
+                      <div className="font-bold text-orange-900 mb-1">Risk: {risk.risk}</div>
+                      <div className="text-sm text-orange-800">
+                        <strong>Mitigation:</strong> {risk.mitigation}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Actions */}
+            <div className="grid grid-cols-2 gap-4">
+              <button className="flex items-center justify-center gap-2 px-6 py-4 bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition-colors font-bold">
+                <Download className="w-5 h-5" />
+                Download Implementation Report
+              </button>
+              <button className="flex items-center justify-center gap-2 px-6 py-4 bg-slate-600 text-white rounded-xl hover:bg-slate-700 transition-colors font-bold">
+                <Printer className="w-5 h-5" />
+                Print Summary
+              </button>
+            </div>
+
+            {progressPercent < 100 && (
+              <div className="bg-yellow-50 border-2 border-yellow-200 rounded-xl p-5">
+                <div className="flex items-start gap-3">
+                  <AlertTriangle className="w-5 h-5 text-yellow-700 flex-shrink-0 mt-0.5" />
+                  <div className="text-sm text-yellow-800">
+                    <strong>Note:</strong> Implementation is not yet complete. Return to "Execute Steps" to finish 
+                    remaining tasks before final sign-off.
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
+        )}
+      </div>
+    );
+  };
+
   return (
     <>
       <div className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4">
