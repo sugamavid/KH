@@ -7,7 +7,7 @@ import {
   Monitor, Globe, MessageCircle, MessageSquare, UserCheck, Smile, 
   AlertTriangle, Gift, CheckSquare
 } from 'lucide-react';
-import { byLawsData, quickReferenceData, keyHighlights } from './byLawsData';
+import { byLawsData, sections as sectionsData, quickReferenceData, keyHighlights } from './byLawsData';
 
 const HRByLaws = ({ setActiveModule }) => {
   const [activeSection, setActiveSection] = useState('dashboard');
