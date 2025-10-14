@@ -312,23 +312,26 @@ const ToolsCalculators = () => {
             <div>
               <h2 className="text-2xl font-bold text-slate-900 mb-6">Available Calculators</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                {tools.map((tool) => (
-                  <button
-                    key={tool.id}
-                    onClick={() => setActiveTool(tool.id)}
-                    className={`bg-white rounded-xl p-6 border-2 border-${tool.color}-200 hover:border-${tool.color}-400 hover:shadow-lg transition-all text-left group`}
-                  >
-                    <div className={`w-14 h-14 rounded-lg bg-${tool.color}-100 flex items-center justify-center mb-4 group-hover:bg-${tool.color}-600 transition-colors`}>
-                      <tool.icon className={`w-8 h-8 text-${tool.color}-600 group-hover:text-white transition-colors`} />
-                    </div>
-                    <h3 className="text-lg font-bold text-slate-900 mb-2">{tool.label}</h3>
-                    <p className="text-sm text-slate-600">{tool.desc}</p>
-                    <div className="mt-4 flex items-center text-sm font-semibold text-blue-600">
-                      Open Calculator
-                      <TrendingUp className="w-4 h-4 ml-1" />
-                    </div>
-                  </button>
-                ))}
+                {tools.map((tool) => {
+                  const colors = getColorClasses(tool.color);
+                  return (
+                    <button
+                      key={tool.id}
+                      onClick={() => setActiveTool(tool.id)}
+                      className={`bg-white rounded-xl p-6 border-2 ${colors.border} ${colors.hoverBorder} hover:shadow-lg transition-all text-left group`}
+                    >
+                      <div className={`w-14 h-14 rounded-lg ${colors.bg} flex items-center justify-center mb-4 ${colors.hoverBg} transition-colors`}>
+                        <tool.icon className={`w-8 h-8 ${colors.text} ${colors.hoverText} transition-colors`} />
+                      </div>
+                      <h3 className="text-lg font-bold text-slate-900 mb-2">{tool.label}</h3>
+                      <p className="text-sm text-slate-600">{tool.desc}</p>
+                      <div className="mt-4 flex items-center text-sm font-semibold text-blue-600">
+                        Open Calculator
+                        <TrendingUp className="w-4 h-4 ml-1" />
+                      </div>
+                    </button>
+                  );
+                })}
               </div>
             </div>
 
