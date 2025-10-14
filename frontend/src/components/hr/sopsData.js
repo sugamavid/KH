@@ -14649,7 +14649,236 @@ Don'ts:
     title: 'Departmental Clearance & Asset Return',
     searchTerms: ['clearance', 'asset', 'return', 'handover', 'exit'],
     category: 'N. Exit & Separation Management',
-    content: 'Defines comprehensive clearance process ensuring proper handover of responsibilities, return of institutional assets, and closure of access rights.'
+    subsections: [
+      {
+        number: '1',
+        title: 'OBJECTIVE',
+        content: 'To define comprehensive clearance process ensuring proper handover of responsibilities, return of all institutional assets, closure of access rights, recovery of dues, completion of departmental formalities, and smooth transition before employee separation ensuring no loss to organization and facilitating Full & Final settlement.'
+      },
+      {
+        number: '2',
+        title: 'SCOPE',
+        content: 'Covers all departing employees (resignation, termination, retirement). Includes knowledge transfer, responsibility handover, return of physical and digital assets, access revocation, financial clearances, and sign-offs from all relevant departments. Mandatory before issuance of relieving letter and F&F settlement.'
+      },
+      {
+        number: '3',
+        title: 'CLEARANCE INITIATION',
+        content: `• Triggered upon resignation acceptance or separation notice
+• HR issues Clearance Form (Annexure N.3.1) to employee
+• Employee responsible for obtaining clearances from all listed departments
+• Timeline: To be completed before last working day`
+      },
+      {
+        number: '4',
+        title: 'HANDOVER OF RESPONSIBILITIES',
+        subsections: [
+          {
+            number: '4.1',
+            title: 'Knowledge Transfer',
+            content: `Employee Must Document:
+• Ongoing projects and their status
+• Pending tasks and deadlines
+• Key contacts (internal and external)
+• Processes and workflows
+• Passwords and access details (for shared systems)
+• Files location (physical and digital)
+• Lessons learned and recommendations
+
+Format:
+• Handover Note (Annexure N.3.2)
+• Process documentation
+• Project status reports`
+          },
+          {
+            number: '4.2',
+            title: 'Training Replacement',
+            content: `• If replacement identified, dedicate time for training
+• Shadow and observe (1-2 weeks if possible)
+• Answer questions and clarify doubts
+• Provide contact for post-exit queries (if willing)`
+          },
+          {
+            number: '4.3',
+            title: 'Departmental Handover',
+            content: `• Formal handover meeting with supervisor, replacement (if any), and team
+• Review handover documents
+• Supervisor acknowledges receipt and completeness
+• Any gaps identified and addressed
+• Supervisor signs clearance form (Department Clearance section)`
+          }
+        ]
+      },
+      {
+        number: '5',
+        title: 'ASSET RETURN',
+        subsections: [
+          {
+            number: '5.1',
+            title: 'IT Assets (SOP K.3)',
+            content: `Return to IT Department:
+• Laptop, desktop, tablet, mobile phone
+• Chargers, cables, accessories (mouse, keyboard, bag)
+• USB drives, external hard drives
+• Dongles, adapters
+• Any other IT equipment
+
+Process:
+• IT verifies asset tag and serial number
+• Physical inspection for damage
+• Data wiped securely by IT
+• Return acknowledgment form signed
+• IT clears employee on clearance form`
+          },
+          {
+            number: '5.2',
+            title: 'ID Card & Access Cards',
+            content: `Return to Security / Admin:
+• Employee ID card
+• Access cards (parking, building entry)
+• Locker keys
+• Any other security badges
+
+Security ensures:
+• Physical cards surrendered
+• Access to building/systems deactivated
+• Clearance provided`
+          },
+          {
+            number: '5.3',
+            title: 'Books, Files & Stationery',
+            content: `Return to Department / Library:
+• Office files and documents
+• Library books
+• Technical manuals
+• Stationery items (if significant)
+
+Handover to supervisor or designated person`
+          },
+          {
+            number: '5.4',
+            title: 'Uniform & PPE',
+            content: `If Applicable:
+• Uniforms (laundered)
+• Personal Protective Equipment
+• Lab coats, scrubs (for clinical staff)
+
+Return to Admin/Stores`
+          },
+          {
+            number: '5.5',
+            title: 'Company Vehicle (If Provided)',
+            content: `• Company car or bike returned to Admin
+• Fuel tank filled
+• Documents (RC, insurance) handed over
+• Physical condition checked
+• Any damage: Cost recovered`
+          },
+          {
+            number: '5.6',
+            title: 'Credit Cards & Expense Accounts',
+            content: `• Company credit card surrendered to Finance
+• Pending expense claims submitted and settled
+• Outstanding advances returned`
+          }
+        ]
+      },
+      {
+        number: '6',
+        title: 'DIGITAL ACCESS REVOCATION',
+        content: `IT Department Disables:
+• Email account (archived for 90 days, then deleted)
+• HRMS, payroll systems
+• Intranet, file servers
+• VPN access
+• Application-specific logins
+• Biometric access (if used for attendance/entry)
+
+Timeline:
+• Access disabled on last working day evening or next day
+• Critical systems: Immediate revocation post-exit`
+      },
+      {
+        number: '7',
+        title: 'DEPARTMENTAL CLEARANCES',
+        content: `Employee obtains sign-off from:
+
+(i) Immediate Supervisor / HOD:
+• Handover completed
+• No pending tasks or deliverables
+• Knowledge transfer done
+
+(ii) IT Department:
+• All IT assets returned
+• Access revoked
+• No dues (damaged equipment cost, if any)
+
+(iii) Finance Department:
+• Expense reimbursements settled
+• Advances cleared
+• No outstanding loans or dues
+
+(iv) HR Department:
+• Exit interview completed
+• Personnel file documents submitted (if any)
+• Policy violations checked (e.g., bond, notice period compliance)
+
+(v) Admin / Security:
+• ID card and keys returned
+• No pending items
+
+(vi) Library (if applicable):
+• Books returned
+
+(vii) Transport / Facilities (if applicable):
+• Vehicle returned, parking pass surrendered
+
+Each department signs clearance form certifying "No Dues"`
+      },
+      {
+        number: '8',
+        title: 'CLEARANCE VERIFICATION',
+        content: `• Employee submits completed clearance form to HR
+• HR verifies all signatures obtained
+• Any pending clearance: Employee contacted to complete
+• Clearance mandatory for F&F processing
+• If clearance incomplete: F&F delayed or dues deducted`
+      },
+      {
+        number: '9',
+        title: 'DUES RECOVERY',
+        content: `If Employee Owes Money:
+• Notice period shortfall (not served or not paid)
+• Damaged or lost assets
+• Unrecovered loans or advances
+• Training bond amount (if applicable)
+• Any other dues
+
+Recovery:
+• Deducted from Full & Final settlement
+• If F&F insufficient: Employee pays balance
+• Legal action if significant amount and employee uncooperative`
+      },
+      {
+        number: '10',
+        title: 'POST-EXIT ACCESS',
+        content: `Restricted:
+• No entry to premises without visitor pass and approval
+• Email forwarding set up temporarily (if needed for business continuity)
+• Personal belongings: Collected before last day or within 7 days with permission`
+      },
+      {
+        number: '11',
+        title: 'TIMELINE',
+        content: `• Clearance process: Initiated upon resignation acceptance
+• Completion: Before last working day
+• Delays: F&F settlement delayed proportionately`
+      },
+      {
+        number: '12',
+        title: 'REFERENCE DOCUMENTS',
+        content: 'Exit Management Policy, IT Asset Return Policy (SOP K.3), Annexure N.3.1: Departmental Clearance Form, Annexure N.3.2: Handover Note Template'
+      }
+    ]
   },
 
   sopN4: {
