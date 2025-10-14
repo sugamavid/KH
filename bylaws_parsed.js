@@ -1511,19 +1511,24 @@ Recommendations for policy updates shall be submitted to the hospital administra
         content: `Employee feedback on compensation and benefits shall be collected through surveys and meetings to identify potential areas for enhancement.
 Suggestions and feedback shall be considered in the review process to maintain a competitive and supportive benefits program.`
       },
+    ]
+  },
+
+  section12: {
+    section: 'Section 12',
+    title: 'Grievance Redressal Mechanism',
+    searchTerms: ["grievance", "redressal", "mechanism"],
+    icon: 'MessageSquare',
+    color: 'red',
+    subsections: [
       {
-        number: '11.29',
-        title: 'Amended Section 12: Grievance Redressal Mechanism',
-        content: ``
-      },
-      {
-        number: '11.30',
+        number: '12.1',
         title: 'Objective of the Grievance Mechanism',
         content: `Koyili Hospital is committed to maintaining a positive work environment where employees can voice concerns and have their grievances addressed in a fair and timely manner.
 The grievance redressal mechanism aims to provide a structured approach for resolving workplace issues and fostering harmonious relationships among staff, while proactively addressing concerns to prevent unnecessary escalations or external interventions.`
       },
       {
-        number: '11.31',
+        number: '12.2',
         title: 'Scope of Grievances',
         content: `The grievance redressal mechanism shall cover issues related to workplace conditions, interpersonal conflicts, discrimination,
 harassment, unfair treatment, and any other concern affecting an employee’s work environment.
@@ -1531,147 +1536,147 @@ Matters related to salary disputes, promotions, and benefits shall also fall wit
 In cases involving labor disputes or concerns from employee unions, the grievance mechanism shall function in coordination with the Internal Dispute Resolution Team (detailed below) to facilitate transparent and efficient resolution.`
       },
       {
-        number: '11.32',
+        number: '12.3',
         title: 'Reporting Procedures',
         content: `Employees who wish to file a grievance must submit a formal written complaint to their immediate supervisor or the HR department.
 If the grievance involves the immediate supervisor, employees may escalate the complaint directly to HR or a designated grievance officer.
 For cases involving complex or sensitive disputes (e.g., union matters or potential disciplinary actions), employees may directly approach the Internal Dispute Resolution Team to ensure objectivity and procedural integrity.`
       },
       {
-        number: '11.33',
+        number: '12.4',
         title: 'Initial Review and Acknowledgment',
         content: `The HR department shall acknowledge receipt of the grievance within three (3) working days and initiate a preliminary review to determine the appropriate course of action.
 The employee shall be informed of the estimated timeline for addressing the grievance and any immediate steps being taken.
 Notification of Rights: Employees filing grievances shall be informed of their rights, including the right to fair treatment, confidentiality, and freedom from retaliation throughout the grievance process.`
       },
       {
-        number: '11.34',
+        number: '12.5',
         title: 'Grievance Resolution Process',
         content: ``
       },
       {
-        number: '11.35',
+        number: '12.6',
         title: 'Investigation and Fact-Finding',
         content: `A designated grievance officer or HR representative shall conduct a thorough investigation, which may include interviews with the complainant, involved parties, and any witnesses.
 All investigations shall be conducted with confidentiality, fairness, and impartiality to ensure an unbiased outcome.
 Internal Dispute Resolution Team: In cases involving collective grievances or union-reported issues, an Internal Dispute Resolution Team comprising representatives from HR, management, and union representatives (if applicable) shall work collaboratively to resolve the matter internally.`
       },
       {
-        number: '11.36',
+        number: '12.7',
         title: 'Resolution and Decision',
         content: `Upon completion of the investigation, the HR department or grievance officer shall issue a written report outlining the findings and recommended actions.
 The final decision on the grievance, including any corrective measures or disciplinary actions, shall be communicated to the employee and relevant parties within fifteen (15) working days from the initiation of the investigation.`
       },
       {
-        number: '11.37',
+        number: '12.8',
         title: 'Right to Appeal',
         content: `If the employee is dissatisfied with the outcome, they have the right to appeal the decision within ten (10) working days of receiving the resolution notice.
 Appeals shall be reviewed by a senior HR committee or an independent review panel, with a final decision provided within twenty (20) working days of the appeal submission.`
       },
       {
-        number: '11.38',
+        number: '12.9',
         title: 'Confidentiality and Non-Retaliation',
         content: ``
       },
       {
-        number: '11.39',
+        number: '12.10',
         title: 'Confidential Handling of Grievances',
         content: `All grievances shall be handled with the utmost confidentiality to protect the privacy of the employees involved.
 Records of grievances and related investigations shall be securely maintained by the HR department, accessible only to authorised personnel.`
       },
       {
-        number: '11.40',
+        number: '12.11',
         title: 'Non-Retaliation Policy',
         content: `Koyili Hospital strictly prohibits any form of retaliation against employees who raise grievances/ participate in an investigation.
 Employees found engaging in retaliatory behaviour shall be subject to disciplinary action as outlined in Section 14: Disciplinary Actions and Compliance.`
       },
       {
-        number: '11.41',
+        number: '12.12',
         title: 'Mediation Services',
         content: ``
       },
       {
-        number: '11.42',
+        number: '12.13',
         title: 'Voluntary Mediation',
         content: `In cases where interpersonal conflicts or non-severe disputes arise, employees may opt for voluntary mediation services facilitated by trained HR personnel or external mediators.
 Mediation aims to provide an informal platform for parties to resolve conflicts through open communication and mutual agreement.`
       },
       {
-        number: '11.43',
+        number: '12.14',
         title: 'Mediation Process',
         content: `The mediation process shall be initiated with the consent of all parties involved and conducted in a neutral and supportive environment.
 Agreements reached during mediation shall be documented and signed by all participants, and compliance with the agreement shall be monitored by HR.`
       },
       {
-        number: '11.44',
+        number: '12.15',
         title: 'Preventive Measures and Internal Dispute Resolution Framework',
         content: ``
       },
       {
-        number: '11.45',
+        number: '12.16',
         title: 'Internal Dispute Resolution Team (IDRT)',
         content: `An Internal Dispute Resolution Team (IDRT) shall be established to proactively address labor concerns, prevent escalation, and facilitate fair internal resolution.
 The IDRT shall comprise representatives from HR, management, and union or employee representatives as needed.`
       },
       {
-        number: '11.46',
+        number: '12.17',
         title: 'Escalation Prevention',
         content: `The IDRT shall work to prevent labor disputes from escalating to external bodies by offering structured resolution pathways internally.
 The team shall provide mediation and negotiation sessions with both management and union representatives, where applicable, to resolve concerns collaboratively.`
       },
       {
-        number: '11.47',
+        number: '12.18',
         title: 'Proactive Communication',
         content: `Regular meetings shall be scheduled with union representatives to address employee concerns, fostering an open dialogue and minimising risks of collective grievances or unauthorised strikes.
 HR will actively communicate with employees about grievance procedures and resolution channels to encourage use of legitimate, non-disruptive pathways for issue resolution.`
       },
       {
-        number: '11.48',
+        number: '12.19',
         title: 'Employee Feedback and Engagement',
         content: ``
       },
       {
-        number: '11.49',
+        number: '12.20',
         title: 'Feedback Channels',
         content: `Koyili Hospital encourages employees to provide feedback on workplace policies, procedures, and conditions through regular surveys, feedback forms, and suggestion boxes.
 Feedback shall be reviewed by the HR department and relevant committees to identify trends, address concerns, and improve employee engagement.`
       },
       {
-        number: '11.50',
+        number: '12.21',
         title: 'Town Hall Meetings and Open Forums',
         content: `Periodic town hall meetings and open forums shall be held to facilitate direct communication between hospital management and employees.
 These sessions shall serve as a platform for employees to raise concerns, ask questions, and receive updates on hospital policies and initiatives.`
       },
       {
-        number: '11.51',
+        number: '12.22',
         title: 'Support for Employee Well-being',
         content: ``
       },
       {
-        number: '11.52',
+        number: '12.23',
         title: 'Counselling Services',
         content: `Employees experiencing stress, emotional difficulties, or work- related issues shall have access to confidential counselling services as part of the hospital’s Employee Assistance Program (EAP).
 Counselling sessions shall be provided at no cost and conducted by qualified mental health professionals.`
       },
       {
-        number: '11.53',
+        number: '12.24',
         title: 'Conflict Resolution Workshops',
         content: `The hospital shall conduct workshops and training sessions focused on conflict resolution, effective communication, and interpersonal skills to help employees manage and prevent workplace conflicts.
 Participation in such workshops shall be encouraged for all staff to promote a collaborative and harmonious work environment.`
       },
       {
-        number: '11.54',
+        number: '12.25',
         title: 'Monitoring and Review of Grievance Policies',
         content: ``
       },
       {
-        number: '11.55',
+        number: '12.26',
         title: 'Regular Policy Reviews',
         content: `The grievance policy and related procedures shall be reviewed periodically by the HR department to ensure they remain effective, fair, and compliant with applicable laws and regulations.
 Recommendations for policy updates shall be submitted to hospital administration for approval and communicated to employees once implemented.`
       },
       {
-        number: '11.56',
+        number: '12.27',
         title: 'Grievance Metrics and Reporting',
         content: `The HR department shall maintain records and statistics on grievances filed, resolved, and pending to identify patterns and potential areas for policy improvement.
 Annual reports summarising grievance metrics shall be presented to hospital leadership to support transparency and continuous improvement in employee relations.`
@@ -4840,6 +4845,7 @@ export const sections = [
   { id: 'section9', category: 'HR Operations', title: 'Section 9: Training and Development', icon: 'BookOpen', color: 'lime' },
   { id: 'section10', category: 'HR Operations', title: 'Section 10: Remote Work and Flexible Scheduling', icon: 'Home', color: 'blue' },
   { id: 'section11', category: 'HR Operations', title: 'Section 11: Compensation and Benefits', icon: 'DollarSign', color: 'green' },
+  { id: 'section12', category: 'HR Operations', title: 'Section 12: Grievance Redressal Mechanism', icon: 'MessageSquare', color: 'red' },
   { id: 'section13', category: 'Health & Safety', title: 'Section 13: Workplace Health and Safety', icon: 'Shield', color: 'purple' },
   { id: 'section14', category: 'Compliance', title: 'Section 14: Disciplinary Actions and Compliance', icon: 'AlertCircle', color: 'indigo' },
   { id: 'section15', category: 'Compliance', title: 'Section 15: Data Protection and Confidentiality', icon: 'Lock', color: 'pink' },
