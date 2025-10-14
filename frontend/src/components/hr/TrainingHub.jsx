@@ -811,7 +811,7 @@ const TrainingHub = ({ onClose, onNavigateToSection }) => {
                     onClick={() => setSelectedCategory(cat.id)}
                     className={`flex items-center gap-2 px-3 py-1.5 rounded-lg text-sm font-semibold whitespace-nowrap transition-all ${
                       selectedCategory === cat.id
-                        ? 'bg-red-600 text-white shadow-lg'
+                        ? 'bg-teal-600 text-white shadow-lg'
                         : 'bg-white text-slate-600 hover:bg-slate-100 border border-slate-200'
                     }`}
                   >
