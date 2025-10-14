@@ -23,29 +23,35 @@ const HRByLaws = ({ setActiveModule }) => {
     if (!content) return '';
     
     let formatted = content
-      // Handle bold text
-      .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+      // First, handle bold text
+      .replace(/\*\*(.*?)\*\*/g, '<strong class="font-bold">$1</strong>')
       
-      // Handle (a), (b), (c), (d) - main points with line break before
-      .replace(/\n\(([a-z])\)\s+/g, '\n\n<div class="mt-4"><span class="font-bold text-slate-900">($1)</span> ')
-      .replace(/\(([a-z])\)\s+/g, '<div class="mt-4"><span class="font-bold text-slate-900">($1)</span> ')
-      
-      // Handle (i), (ii), (iii), (iv) - sub-points with indentation
-      .replace(/\n\s{4}\(([ivxl]+)\)\s+/g, '\n<div class="ml-8 mt-2"><span class="font-semibold text-slate-700">($1)</span> ')
-      .replace(/\s{4}\(([ivxl]+)\)\s+/g, '<div class="ml-8 mt-2"><span class="font-semibold text-slate-700">($1)</span> ')
-      
-      // Handle bullets •
-      .replace(/\n\s{4}•\s+/g, '\n<div class="ml-8 mt-2 flex"><span class="mr-2">•</span><span>')
-      .replace(/\s{4}•\s+/g, '<div class="ml-8 mt-2 flex"><span class="mr-2">•</span><span>')
-      
-      // Close divs at line breaks
-      .replace(/\n\n/g, '</span></div>\n\n')
-      .replace(/\n(?=<div)/g, '</span></div>\n');
-    
-    // Ensure all divs are closed
-    if ((formatted.match(/<div/g) || []).length > (formatted.match(/<\/div>/g) || []).length) {
-      formatted += '</span></div>';
-    }
+      // Split into lines for better processing
+      .split('\n')
+      .map(line => {
+        // Main points (a), (b), (c), (d) - at start of line
+        if (line.match(/^\([a-z]\)\s+/)) {
+          const match = line.match(/^\(([a-z])\)\s+(.*)/);
+          return `<div class="mt-6 mb-3"><span class="inline-block font-bold text-slate-900 mr-2">(${match[1]})</span><span class="font-semibold">${match[2]}</span></div>`;
+        }
+        // Sub-points (i), (ii), (iii) - indented
+        else if (line.match(/^\s{4}\(([ivxl]+)\)\s+/)) {
+          const match = line.match(/^\s{4}\(([ivxl]+)\)\s+(.*)/);
+          return `<div class="ml-8 mt-3 mb-2"><span class="inline-block font-semibold text-slate-700 mr-2">(${match[1]})</span><span>${match[2]}</span></div>`;
+        }
+        // Bullets - indented
+        else if (line.match(/^\s{4}•\s+/)) {
+          const match = line.match(/^\s{4}•\s+(.*)/);
+          return `<div class="ml-8 mt-2 mb-2 flex items-start"><span class="text-amber-600 mr-3 mt-1">•</span><span class="flex-1">${match[1]}</span></div>`;
+        }
+        // Regular paragraph
+        else if (line.trim()) {
+          return `<p class="mb-2">${line.trim()}</p>`;
+        }
+        return '';
+      })
+      .filter(line => line)  // Remove empty lines
+      .join('');
     
     return formatted;
   };
