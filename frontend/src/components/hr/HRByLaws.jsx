@@ -28,6 +28,7 @@ const HRByLaws = ({ setActiveModule }) => {
   const [showComplianceCenter, setShowComplianceCenter] = useState(false);
   const [showPolicyManager, setShowPolicyManager] = useState(false);
   const [showTrainingHub, setShowTrainingHub] = useState(false);
+  const [showAuditAssistant, setShowAuditAssistant] = useState(false);
   const contentRef = useRef(null);
 
   // Professional Legal Document Formatter
