@@ -12479,7 +12479,7 @@ Action:
       },
       {
         number: '6',
-        title: 'MANAGER'S ROLE IN SUPPORTING MENTAL HEALTH',
+        title: 'MANAGER ROLE IN SUPPORTING MENTAL HEALTH',
         content: `Do's:
 • Create safe, non-judgmental space for conversation
 • Express concern: "I've noticed you seem stressed. Are you okay?"
