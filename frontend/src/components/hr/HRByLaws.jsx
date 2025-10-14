@@ -1053,6 +1053,20 @@ const HRByLaws = ({ setActiveModule }) => {
         />
       )}
 
+      {/* Training Manager Modal */}
+      {showTrainingManager && (
+        <TrainingManager 
+          onClose={() => setShowTrainingManager(false)}
+          onNavigateToSection={(sectionId) => {
+            setActiveSection(sectionId);
+            setShowTrainingManager(false);
+            if (contentRef.current) {
+              contentRef.current.scrollTop = 0;
+            }
+          }}
+        />
+      )}
+
       {/* Print Styles */}
       <style jsx>{`
         @media print {
