@@ -4336,7 +4336,260 @@ Non-qualifying situations (should apply regular leave):
     title: 'Special Leaves (Maternity, Paternity, Study, Bereavement)',
     searchTerms: ['maternity', 'paternity', 'study', 'bereavement', 'special', 'leave'],
     category: 'F. Leave Management',
-    content: 'Establishes structured process for applying, approving, and recording special category leaves in accordance with statutory entitlements and institutional policy.'
+    subsections: [
+      {
+        number: '1',
+        title: 'OBJECTIVE',
+        content: 'To establish structured, empathetic, and legally compliant processes for applying, approving, and recording special category leaves including maternity, paternity, study, bereavement, and other exceptional leave types, ensuring employee welfare while maintaining operational efficiency.'
+      },
+      {
+        number: '2',
+        title: 'SCOPE',
+        content: 'Applicable to all eligible employees as per statutory requirements and hospital policy. Covers special leave types beyond regular casual, sick, and privilege leave.'
+      },
+      {
+        number: '3',
+        title: 'MATERNITY LEAVE',
+        subsections: [
+          {
+            number: '3.1',
+            title: 'Eligibility and Entitlement',
+            content: `(i) As per Maternity Benefit Act, 1961:
+    • Applicable to all women employees
+    • For first two children: 26 weeks (approximately 6 months)
+    • For third child onwards: 12 weeks
+    • Includes pre-natal and post-natal leave
+
+(ii) Eligibility Conditions:
+    • Employee must have worked for at least 80 days in the 12 months immediately preceding expected delivery date
+    • Applicable to full-time and contractual women employees
+    • Payment: Full salary during maternity leave
+
+(iii) Distribution:
+    • Pre-natal leave: Up to 8 weeks before expected delivery
+    • Post-natal leave: Remaining weeks after delivery (minimum 18 weeks for first two children)
+    • Flexible distribution with doctor's advice`
+          },
+          {
+            number: '3.2',
+            title: 'Application Process',
+            content: `(i) Initial Intimation (as soon as pregnancy confirmed):
+    • Inform supervisor and HR verbally
+    • Allows for early planning and workload adjustment
+
+(ii) Formal Application (at least 8 weeks before expected delivery):
+    • Submit Maternity Leave Application Form (Annexure F.3.1)
+    • Attach medical documents:
+      - Doctor's certificate confirming pregnancy
+      - Expected Date of Delivery (EDD)
+      - Antenatal checkup records
+    • Mention preferred leave start date
+    • Provide emergency contact details
+
+(iii) HR Processing:
+    • Verify eligibility (80 days work requirement)
+    • Calculate leave period and salary continuity
+    • Coordinate with payroll for uninterrupted payment
+    • Issue Maternity Leave Sanction Letter`
+          },
+          {
+            number: '3.3',
+            title: 'During Maternity Leave',
+            content: `(i) Employee must submit:
+    • Birth certificate of child within 60 days of delivery
+    • Medical discharge summary
+    • If complications: Extended leave with medical certificate
+
+(ii) Hospital Support:
+    • Salary credited as per normal schedule
+    • Medical insurance coverage for delivery (as per policy)
+    • Option for work-from-home for specific roles (if feasible)
+
+(iii) Flexible Return:
+    • Employee can return earlier with medical fitness certificate
+    • Option to extend leave using earned leave (if available)
+    • Option for gradual return (part-time for 1-2 months) - subject to approval`
+          },
+          {
+            number: '3.4',
+            title: 'Post-Return Support',
+            content: `(i) Nursing Breaks (as per Maternity Benefit Act):
+    • Two breaks of 15 minutes each during working hours for nursing
+    • Applicable until child is 15 months old
+    • Paid breaks
+
+(ii) Work-Life Balance:
+    • Flexible work hours (if operationally feasible)
+    • Preference for day shifts (no night shifts) for nursing mothers
+    • Provision of creche/daycare (if hospital provides)
+
+(iii) Job Protection:
+    • No termination during maternity leave or within 6 months post-delivery
+    • Return to same position or equivalent role
+    • No adverse impact on performance ratings due to maternity leave`
+          }
+        ]
+      },
+      {
+        number: '4',
+        title: 'PATERNITY LEAVE',
+        subsections: [
+          {
+            number: '4.1',
+            title: 'Eligibility and Entitlement',
+            content: `(i) Paternity Leave Entitlement:
+    • 5 working days of paid leave for male employees
+    • Applicable for birth of child or adoption
+    • Can be availed within 30 days of childbirth/adoption
+
+(ii) Eligibility:
+    • All male permanent employees
+    • Minimum 6 months service
+    • Applicable for first two children (as per policy)`
+          },
+          {
+            number: '4.2',
+            title: 'Application Process',
+            content: `(i) Application:
+    • Apply at least 1 week before expected delivery date
+    • Attach: Doctor's certificate with expected delivery date
+
+(ii) Post-Birth:
+    • Submit birth certificate within 15 days
+    • Leave can be availed in one stretch or split (with approval)
+
+(iii) HR Processing:
+    • Approve leave
+    • Ensure no salary deduction
+    • Update leave records`
+          }
+        ]
+      },
+      {
+        number: '5',
+        title: 'BEREAVEMENT LEAVE (COMPASSIONATE LEAVE)',
+        subsections: [
+          {
+            number: '5.1',
+            title: 'Entitlement',
+            content: `(i) Leave Duration:
+    • Death of immediate family member (spouse, parents, children, siblings): 5 days
+    • Death of close relative (in-laws, grandparents): 3 days
+    • Additional leave can be availed from earned leave or LOP
+
+(ii) Payment:
+    • Paid leave (not deducted from leave balance)
+
+(iii) Flexibility:
+    • Can be extended if travel involved (interstate/international)
+    • Compassionate consideration for rituals and ceremonies`
+          },
+          {
+            number: '5.2',
+            title: 'Application',
+            content: `(i) Immediate Intimation:
+    • Inform supervisor via call/message immediately
+    • Formal leave application within 3 days of return
+
+(ii) Documentation:
+    • Death certificate
+    • Proof of relationship (if required)
+    • Travel tickets (if claiming travel time)
+
+(iii) HR Support:
+    • Compassionate approval without rigid documentation initially
+    • Employee Assistance Program counseling offered
+    • Financial support from Employee Welfare Fund (if applicable)`
+          }
+        ]
+      },
+      {
+        number: '6',
+        title: 'STUDY LEAVE',
+        subsections: [
+          {
+            number: '6.1',
+            title: 'Eligibility and Entitlement',
+            content: `(i) Purpose:
+    • Pursuing higher education/professional courses relevant to job
+    • Attending conferences, workshops, certifications
+
+(ii) Eligibility:
+    • Permanent employees with minimum 3 years service
+    • Course approved by hospital as beneficial to role
+
+(iii) Duration:
+    • Short courses: Up to 15 days per year
+    • Long courses (degrees): Up to 6 months (with bond agreement)
+
+(iv) Payment:
+    • Paid leave if course sponsored by hospital
+    • Unpaid leave if self-sponsored (unless otherwise approved)`
+          },
+          {
+            number: '6.2',
+            title: 'Application Process',
+            content: `(i) Application (at least 2 months in advance):
+    • Submit Study Leave Request with course details
+    • Attach: Course brochure, admission letter, fee structure
+    • Justify relevance to current role and hospital benefit
+
+(ii) Approval:
+    • Department Head recommends
+    • CHRO approves after reviewing benefit to hospital
+    • Bond agreement signed for long-term courses (serve 2-3 years post-course or refund fees)
+
+(iii) Post-Course:
+    • Submit course completion certificate
+    • Share learnings with team/department
+    • Apply new skills in work`
+          }
+        ]
+      },
+      {
+        number: '7',
+        title: 'OTHER SPECIAL LEAVES',
+        content: `(i) Marriage Leave:
+    • 5 days paid leave for employee's own marriage
+    • Can be clubbed with annual leave for honeymoon
+    • Apply 1 month in advance with marriage invitation
+
+(ii) Adoption Leave:
+    • Similar to maternity leave for adopting mothers
+    • 12 weeks for child below 3 months age
+    • Documents: Adoption certificate
+
+(iii) Miscarriage/Medical Termination of Pregnancy:
+    • 6 weeks paid leave as per Maternity Benefit Act
+    • Medical certificate required
+
+(iv) Election Duty Leave:
+    • Paid leave for employees assigned election duty by government
+    • Government order/certificate required
+
+(v) Blood Donation Leave:
+    • 1 day leave for blood donation
+    • Certificate from blood bank required
+
+(vi) Quarantine Leave (Epidemic/Pandemic):
+    • As per government guidelines
+    • Medical certificate or government order required
+    • Salary continuity as per policy`
+      },
+      {
+        number: '8',
+        title: 'DOCUMENTATION AND RECORDS',
+        content: `• All special leaves recorded separately in HRMS and leave register
+• Statutory compliance reports maintained for labour inspections
+• Medical certificates and legal documents filed in personnel records
+• Annual summary of special leaves for audit and policy review`
+      },
+      {
+        number: '9',
+        title: 'REFERENCE DOCUMENTS',
+        content: 'Maternity Benefit Act 1961, HR By-Laws, Annexure F.3.1: Maternity Leave Application, Annexure F.3.2: Paternity Leave Application, Annexure F.3.3: Study Leave Application'
+      }
+    ]
   },
 
   sopF4: {
@@ -4345,7 +4598,182 @@ Non-qualifying situations (should apply regular leave):
     title: 'Leave Encashment Process',
     searchTerms: ['leave', 'encashment', 'cash', 'payment', 'settlement'],
     category: 'F. Leave Management',
-    content: 'Defines standardised, fair, and legally compliant procedure for encashment of eligible accumulated leave ensuring transparency and financial accuracy.'
+    subsections: [
+      {
+        number: '1',
+        title: 'OBJECTIVE',
+        content: 'To define a standardized, fair, and legally compliant procedure for encashment of eligible accumulated leave ensuring transparency, financial accuracy, and employee motivation while balancing organizational cash flow and rest requirements.'
+      },
+      {
+        number: '2',
+        title: 'SCOPE',
+        content: 'Applicable to permanent employees with accumulated leave balances eligible for encashment as per HR By-Laws. Covers privilege leave, compensatory off, and encashment at separation.'
+      },
+      {
+        number: '3',
+        title: 'LEAVE ENCASHMENT ELIGIBILITY',
+        subsections: [
+          {
+            number: '3.1',
+            title: 'Privilege Leave Encashment (During Service)',
+            content: `(i) Eligibility Criteria:
+    • Employee must have completed minimum 5 years of continuous service
+    • Minimum accumulated PL balance: 15 days
+    • Can encash maximum 50% of accumulated PL (balance must retain minimum 15 days)
+    • Encashment allowed once per year (typically December)
+
+(ii) Restrictions:
+    • Casual Leave and Sick Leave cannot be encashed during service
+    • Only confirmed permanent employees eligible
+    • Probationers and contractual staff not eligible`
+          },
+          {
+            number: '3.2',
+            title: 'Leave Encashment at Separation',
+            content: `(i) At Retirement/Resignation/Termination:
+    • All accumulated Privilege Leave encashed
+    • Accumulated Sick Leave encashed (as per policy - typically 50%)
+    • Compensatory Off (if any) encashed
+    • Casual Leave NOT encashed (lapses)
+
+(ii) Maximum Limit:
+    • Maximum encashment: 30 days PL + applicable SL
+    • Excess leave beyond limit lapses (no payment)
+
+(iii) Payment Timeline:
+    • Included in Full & Final Settlement
+    • Paid along with final salary (within 30-45 days of last working day)`
+          },
+          {
+            number: '3.3',
+            title: 'Compensatory Off Encashment',
+            content: `(i) CO must be availed within 30 days of accrual
+(ii) If not availed within 30 days: Automatically encashed
+(iii) Encashment rate: Basic salary per day
+(iv) Payment in next month's salary`
+          }
+        ]
+      },
+      {
+        number: '4',
+        title: 'LEAVE ENCASHMENT CALCULATION',
+        subsections: [
+          {
+            number: '4.1',
+            title: 'Calculation Formula',
+            content: `Leave Encashment Amount = (Basic Salary / 30) × Number of Days Encashed
+
+Components Included:
+• Basic Salary only (allowances NOT included)
+• Per day salary = Monthly Basic / 30
+
+Example:
+• Monthly Basic Salary: ₹30,000
+• Per day rate: ₹30,000 / 30 = ₹1,000
+• Leave days encashed: 15 days
+• Encashment amount: 15 × ₹1,000 = ₹15,000`
+          },
+          {
+            number: '4.2',
+            title: 'Tax Implications',
+            content: `(i) Leave encashment during service:
+    • Fully taxable as salary income
+    • TDS deducted as per employee's tax slab
+    • Added to Form 16 for IT return
+
+(ii) Leave encashment at retirement:
+    • Exempt up to ₹3,00,000 (as per Income Tax Act)
+    • Excess amount is taxable
+    • Calculated based on 10 months average salary and accumulated leave
+    • Special calculation for tax exemption limit
+
+(iii) Leave encashment at resignation (before retirement):
+    • Fully taxable (no exemption)
+    • TDS deducted at applicable rates`
+          }
+        ]
+      },
+      {
+        number: '5',
+        title: 'LEAVE ENCASHMENT APPLICATION PROCESS',
+        subsections: [
+          {
+            number: '5.1',
+            title: 'During Service (Annual Encashment)',
+            content: `(i) Notification:
+    • HR issues circular in November announcing leave encashment window
+    • Deadline: 15th December
+
+(ii) Application:
+    • Employee checks leave balance in HRMS
+    • Submits Leave Encashment Request Form (Annexure F.4.1)
+    • Mention number of days to encash (within limits)
+    • Supervisor approval not required (HR processes directly)
+
+(iii) HR Processing:
+    • Verify eligibility (service years, minimum balance)
+    • Calculate encashment amount
+    • Deduct encashed days from leave balance
+    • Forward to payroll for payment
+
+(iv) Payment:
+    • Processed with December salary or special payment in January
+    • Separate salary component: "Leave Encashment"
+    • TDS deducted as applicable`
+          },
+          {
+            number: '5.2',
+            title: 'At Separation',
+            content: `(i) Automatic Processing:
+    • HR automatically calculates leave encashment during F&F settlement
+    • No application required from employee
+
+(ii) Calculation:
+    • Leave balance as on last working day
+    • Encashment as per formula
+    • Included in Full & Final Settlement statement
+
+(iii) Payment:
+    • Along with final dues within 30-45 days
+    • Separate line item in F&F statement`
+          }
+        ]
+      },
+      {
+        number: '6',
+        title: 'LEAVE ENCASHMENT POLICY RULES',
+        content: `(i) Encouragement to Avail Leave:
+    • Hospital encourages employees to avail leaves for rest and health
+    • Encashment should be exception, not norm
+    • Excessive leave accumulation monitored and counseled
+
+(ii) Operational Considerations:
+    • Hospital may limit total encashment requests in a year (budget constraints)
+    • First-come-first-serve or pro-rata if applications exceed budget
+
+(iii) Leave Balance Post-Encashment:
+    • Employee must retain minimum 15 days PL balance post-encashment
+    • Ensures leave available for emergencies
+
+(iv) No Advance Encashment:
+    • Cannot encash future leave accruals
+    • Only accumulated past leave eligible`
+      },
+      {
+        number: '7',
+        title: 'RECORD KEEPING',
+        content: `• Leave Encashment Register maintained by HR
+• Employee-wise encashment history
+• Financial year-wise encashment reports for budget planning
+• Tax deduction certificates provided to employees
+• Audit trail for compliance verification`
+      },
+      {
+        number: '8',
+        title: 'REFERENCE DOCUMENTS',
+        content: 'HR By-Laws (Leave Encashment Policy), Income Tax Act (Leave Encashment Exemption), Annexure F.4.1: Leave Encashment Request Form'
+      }
+    ]
   },
 
   sopF5: {
@@ -4354,7 +4782,224 @@ Non-qualifying situations (should apply regular leave):
     title: 'Leave Without Pay (LOP) Tracking & Approval',
     searchTerms: ['lop', 'leave', 'without', 'pay', 'unpaid', 'absence'],
     category: 'F. Leave Management',
-    content: 'Defines structured process for approval, tracking, and recording of Leave Without Pay ensuring clarity in payroll deductions and workforce availability.'
+    subsections: [
+      {
+        number: '1',
+        title: 'OBJECTIVE',
+        content: 'To define a structured, fair, and transparent process for approval, tracking, and recording of Leave Without Pay (LOP) ensuring clarity in payroll deductions, workforce availability tracking, and maintaining employee-employer trust when paid leave balances are exhausted.'
+      },
+      {
+        number: '2',
+        title: 'SCOPE',
+        content: 'Applicable to all employees who have exhausted paid leave balances or require extended leave beyond available entitlements. Covers voluntary and involuntary LOP scenarios.'
+      },
+      {
+        number: '3',
+        title: 'DEFINITION AND TYPES OF LOP',
+        subsections: [
+          {
+            number: '3.1',
+            title: 'What is LOP?',
+            content: `• Leave Without Pay (LOP): Absence from work without salary for that period
+• Applied when employee has no paid leave balance available
+• Salary deducted proportionally for LOP days
+• Statutory deductions (PF, ESI) continue unless LOP exceeds threshold`
+          },
+          {
+            number: '3.2',
+            title: 'Types of LOP',
+            content: `(i) Voluntary LOP:
+    • Employee applies for LOP knowing leave balance is exhausted
+    • Personal reasons, extended travel, family commitments
+    • Requires advance approval
+
+(ii) Involuntary LOP:
+    • Unauthorized absence (absent without leave application)
+    • Leave application rejected but employee still absent
+    • Late coming or early leaving beyond grace period
+    • Automatically marked as LOP by HR
+
+(iii) LOP due to Disciplinary Action:
+    • Suspension without pay pending inquiry
+    • Penalty for misconduct`
+          }
+        ]
+      },
+      {
+        number: '4',
+        title: 'LOP APPLICATION AND APPROVAL PROCESS',
+        subsections: [
+          {
+            number: '4.1',
+            title: 'Voluntary LOP Application',
+            content: `(i) Pre-Application Check:
+    • Employee checks leave balance in HRMS
+    • Realizes paid leave insufficient for desired duration
+    • Decides to apply for LOP
+
+(ii) Application Process:
+    • Submit Leave Application in HRMS
+    • Select Leave Type: "Leave Without Pay"
+    • Mention dates, duration, and reason
+    • Acknowledge understanding of salary deduction
+    • Minimum advance notice: 15 days (for LOP >3 days)
+
+(iii) Approval Workflow:
+    • Supervisor reviews based on:
+      - Operational requirements
+      - Duration of absence
+      - Frequency of LOP requests
+      - Employee's work record
+    • Department Head approval required for LOP >7 days
+    • HR verifies leave balance and LOP eligibility
+
+(iv) Approval Criteria:
+    • Valid reason (family emergency, personal commitments)
+    • Adequate notice period
+    • No critical operations disrupted
+    • Not frequent LOP requester
+    • Willingness to accept salary deduction`
+          },
+          {
+            number: '4.2',
+            title: 'Involuntary LOP Marking',
+            content: `(i) Scenarios leading to automatic LOP:
+    • Absent without leave application
+    • Leave application rejected but employee absent
+    • Late by >60 minutes (may be marked LOP or half-day)
+    • Overstay beyond approved leave without extension
+
+(ii) HR Action:
+    • Mark attendance as "LOP" in system
+    • Send notification to employee and supervisor
+    • Employee can submit explanation/regularization within 3 days
+    • If explanation accepted: Convert LOP to approved leave (if balance available)
+    • If explanation rejected: LOP stands, salary deducted`
+          }
+        ]
+      },
+      {
+        number: '5',
+        title: 'LOP SALARY CALCULATION AND DEDUCTION',
+        subsections: [
+          {
+            number: '5.1',
+            title: 'Salary Deduction Formula',
+            content: `LOP Deduction = (Gross Monthly Salary / Total Days in Month) × LOP Days
+
+Example:
+• Gross Monthly Salary: ₹50,000
+• Month: January (31 days)
+• LOP Days: 3 days
+• Per day salary: ₹50,000 / 31 = ₹1,612.90
+• Total LOP deduction: 3 × ₹1,612.90 = ₹4,838.70
+• Salary paid: ₹50,000 - ₹4,838.70 = ₹45,161.30`
+          },
+          {
+            number: '5.2',
+            title: 'Components Affected by LOP',
+            content: `(i) Salary Components Deducted:
+    • Basic Salary: Proportional deduction
+    • HRA: Proportional deduction
+    • All Allowances: Proportional deduction
+    • Gross Salary reduced proportionally
+
+(ii) Statutory Deductions:
+    • PF Contribution: Deducted on reduced gross (salary after LOP)
+    • ESI Contribution: Deducted on reduced gross (if applicable)
+    • Professional Tax: Deducted as per slab (on reduced salary)
+    • Income Tax/TDS: Calculated on reduced annual salary projection
+
+(iii) Impact on Benefits:
+    • Leave Accrual: No leave accrues for LOP days
+    • Example: 5 days LOP in a month = Leave accrues for only 25-26 days (not full month)
+    • Increment/Bonus: Excessive LOP may affect performance rating
+    • Service Continuity: Excessive LOP (>30 days in a year) may be questioned`
+          },
+          {
+            number: '5.3',
+            title: 'LOP Reflection in Payslip',
+            content: `• Separate line item in payslip: "LOP Deduction" or "Loss of Pay"
+• Number of LOP days mentioned
+• Deduction amount shown
+• Net salary after deduction displayed
+• Employee can verify calculation`
+          }
+        ]
+      },
+      {
+        number: '6',
+        title: 'LOP TRACKING AND MONITORING',
+        content: `(i) HRMS Tracking:
+    • Real-time LOP marking in attendance system
+    • Employee-wise LOP history
+    • Monthly LOP report generated
+
+(ii) Department-wise Monitoring:
+    • Department heads receive monthly LOP report
+    • Identify employees with frequent LOP
+    • Counsel employees to manage leave better
+
+(iii) HR Analytics:
+    • Track LOP trends across organization
+    • High LOP may indicate low employee morale or personal issues
+    • Offer support through Employee Assistance Program
+
+(iv) Flags and Alerts:
+    • LOP >10 days in a month: Alert to supervisor
+    • LOP >20 days in a year: Alert to HR for counseling
+    • LOP during probation: May affect confirmation`
+      },
+      {
+        number: '7',
+        title: 'LOP APPROVAL GUIDELINES',
+        content: `(i) When to Approve LOP:
+    • Genuine personal/family reasons
+    • Extended medical treatment (beyond sick leave balance)
+    • Employee willing to accept salary loss
+    • Operational coverage arranged
+    • Not a pattern of absenteeism
+
+(ii) When to Reject LOP:
+    • Critical staffing shortage
+    • Frequent LOP requests indicating poor planning
+    • Suspicious pattern (always before/after holidays)
+    • Employee has pending work/commitments
+    • Lack of adequate notice
+
+(iii) Maximum LOP Allowed:
+    • Generally no fixed limit, but:
+    • >30 days LOP in a year: Requires CHRO approval
+    • >60 days LOP in a year: May be asked to resign (unless medical/compassionate)
+    • Continuous LOP >15 days: Requires strong justification`
+      },
+      {
+        number: '8',
+        title: 'LOP AND EMPLOYEE RECORDS',
+        content: `• LOP days recorded in attendance register
+• LOP history maintained in HRMS
+• Impact on service record:
+  - Excessive LOP: Noted in performance appraisal
+  - May affect promotion eligibility
+  - Noted in experience certificate (if excessive)
+• Legal compliance: LOP records available for labour inspections`
+      },
+      {
+        number: '9',
+        title: 'EMPLOYEE SUPPORT FOR LOP AVOIDANCE',
+        content: `• HR encourages employees to plan leave in advance
+• Counseling for employees with frequent LOP
+• Leave balance reminders sent quarterly
+• Option to borrow against future leave accrual (supervisor approval)
+• Flexible work arrangements to avoid LOP (work from home, adjusted hours)
+• Advance salary or loan in case of financial hardship requiring extended absence`
+      },
+      {
+        number: '10',
+        title: 'REFERENCE DOCUMENTS',
+        content: 'HR By-Laws (Leave Policy - LOP Section), Payroll Policy, Annexure F.5.1: LOP Request Form, Annexure F.5.2: Monthly LOP Report Template'
+      }
+    ]
   },
 
   // SECTION G: CODE OF CONDUCT & DISCIPLINARY CONTROL
