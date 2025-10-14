@@ -244,12 +244,233 @@ const HRSOPs = ({ setActiveModule }) => {
 
     if (sectionId === 'preamble') {
       return (
-        <div className="bg-white rounded-3xl shadow-2xl overflow-hidden border-2 border-amber-500">
-          {/* Premium Document Header with Logo */}
-          <div className="relative bg-gradient-to-br from-blue-950 via-blue-900 to-blue-800 text-white px-12 py-10">
-            {/* Decorative corner elements */}
-            <div className="absolute top-0 right-0 w-64 h-64 bg-amber-500 opacity-5 rounded-full -mr-32 -mt-32"></div>
-            <div className="absolute bottom-0 left-0 w-48 h-48 bg-blue-400 opacity-5 rounded-full -ml-24 -mb-24"></div>
+        <div className="bg-white shadow-sm border border-slate-200">
+          {/* Clean Professional Header */}
+          <div className="border-b-4 border-blue-900 bg-white px-16 py-8">
+            <div className="flex items-center justify-between mb-6">
+              <div className="flex items-center space-x-6">
+                {/* Simple Professional Logo */}
+                <div className="w-16 h-16 border-2 border-blue-900 flex items-center justify-center bg-blue-900">
+                  <span className="text-white font-bold text-2xl">KH</span>
+                </div>
+                <div>
+                  <h1 className="text-2xl font-bold text-slate-900 tracking-tight">KOYILI HOSPITAL</h1>
+                  <p className="text-sm text-slate-600 mt-0.5">Pallikkunnu, Talap, Kannur - 670 002, Kerala, India</p>
+                </div>
+              </div>
+              <div className="text-right text-xs text-slate-600">
+                <p>ISO 9001:2015 Certified</p>
+                <p>NABH Accredited</p>
+              </div>
+            </div>
+            <div className="border-t border-slate-200 pt-4">
+              <p className="text-xs uppercase tracking-widest text-slate-500">Human Resources Department</p>
+              <h2 className="text-lg font-semibold text-slate-900 mt-1">Standard Operating Procedures</h2>
+            </div>
+          </div>
+
+          {/* Title */}
+          <div className="px-16 py-12 border-b border-slate-200">
+            <h3 className="text-3xl font-bold text-slate-900 mb-2">{section.title}</h3>
+            <p className="text-sm text-slate-600">Document Type: Foundational Policy Document</p>
+          </div>
+
+          {/* Content */}
+          <div className="px-16 py-12">
+            <p className="text-base leading-relaxed text-slate-800 text-justify">
+              {section.content}
+            </p>
+          </div>
+
+          {/* Clean Footer */}
+          <div className="border-t border-slate-200 px-16 py-6 bg-slate-50">
+            <div className="grid grid-cols-4 gap-8 text-xs text-slate-600">
+              <div>
+                <p className="font-semibold text-slate-900">Version</p>
+                <p>3.0</p>
+              </div>
+              <div>
+                <p className="font-semibold text-slate-900">Effective Date</p>
+                <p>01 January 2024</p>
+              </div>
+              <div>
+                <p className="font-semibold text-slate-900">Approved By</p>
+                <p>Board of Directors</p>
+              </div>
+              <div>
+                <p className="font-semibold text-slate-900">Classification</p>
+                <p>Internal Use Only</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      );
+    }
+
+    // Professional SOP Layout
+    return (
+      <div className="bg-white shadow-sm border border-slate-200">
+        {/* Clean Header */}
+        <div className="border-b-4 border-blue-900 bg-white">
+          <div className="px-16 py-6">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center space-x-4">
+                <div className="w-12 h-12 border-2 border-blue-900 flex items-center justify-center bg-blue-900">
+                  <span className="text-white font-bold text-lg">KH</span>
+                </div>
+                <div>
+                  <h1 className="text-lg font-bold text-slate-900">KOYILI HOSPITAL</h1>
+                  <p className="text-xs text-slate-600">Human Resources Department</p>
+                </div>
+              </div>
+              <div className="text-right text-xs text-slate-600">
+                <p className="font-semibold text-slate-900">Document No.</p>
+                <p>{section.number}</p>
+              </div>
+            </div>
+          </div>
+          
+          {/* Title Section */}
+          <div className="px-16 py-6 border-t border-slate-200 bg-slate-50">
+            <h2 className="text-2xl font-bold text-slate-900 mb-2">{section.title}</h2>
+            {section.category && (
+              <p className="text-sm text-slate-600">Category: {section.category}</p>
+            )}
+          </div>
+        </div>
+
+        {/* Metadata Bar */}
+        <div className="bg-white px-16 py-4 border-b border-slate-200">
+          <div className="grid grid-cols-5 gap-6 text-xs">
+            <div>
+              <p className="text-slate-500 uppercase tracking-wider mb-1">Version</p>
+              <p className="text-slate-900 font-semibold">3.0</p>
+            </div>
+            <div>
+              <p className="text-slate-500 uppercase tracking-wider mb-1">Effective</p>
+              <p className="text-slate-900 font-semibold">01 Jan 2024</p>
+            </div>
+            <div>
+              <p className="text-slate-500 uppercase tracking-wider mb-1">Review</p>
+              <p className="text-slate-900 font-semibold">01 Jan 2025</p>
+            </div>
+            <div>
+              <p className="text-slate-500 uppercase tracking-wider mb-1">Owner</p>
+              <p className="text-slate-900 font-semibold">HR Department</p>
+            </div>
+            <div>
+              <p className="text-slate-500 uppercase tracking-wider mb-1">Status</p>
+              <p className="text-green-700 font-semibold">Active</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Content */}
+        <div className="px-16 py-12">
+          {/* Simple content */}
+          {section.content && !section.subsections && (
+            <p className="text-base leading-relaxed text-slate-800">
+              {section.content}
+            </p>
+          )}
+
+          {/* Subsections */}
+          {section.subsections && section.subsections.map((subsection, idx) => (
+            <div key={idx} className="mb-12">
+              {/* Section Header */}
+              <div className="mb-6 pb-2 border-b-2 border-slate-900">
+                <div className="flex items-baseline space-x-3">
+                  <span className="text-xl font-bold text-blue-900 min-w-[3rem]">{subsection.number}</span>
+                  <h3 className="text-xl font-bold text-slate-900 uppercase">{subsection.title}</h3>
+                </div>
+              </div>
+
+              {/* Content */}
+              {subsection.content && (
+                <div className="mb-6 pl-14">
+                  <p className="text-base leading-relaxed text-slate-800 whitespace-pre-line">
+                    {subsection.content}
+                  </p>
+                </div>
+              )}
+
+              {/* Bullet Points */}
+              {subsection.points && (
+                <ul className="pl-14 space-y-2 mb-6">
+                  {subsection.points.map((point, pointIdx) => (
+                    <li key={pointIdx} className="flex items-start">
+                      <span className="text-blue-900 mr-3 mt-1.5">•</span>
+                      <p className="text-base leading-relaxed text-slate-800 flex-1">
+                        {point}
+                      </p>
+                    </li>
+                  ))}
+                </ul>
+              )}
+
+              {/* Nested subsections */}
+              {subsection.subsections && subsection.subsections.map((nestedSub, nestedIdx) => (
+                <div key={nestedIdx} className="pl-14 mb-6 border-l-2 border-slate-300 ml-2">
+                  <div className="pl-6">
+                    <h4 className="text-base font-bold text-slate-900 mb-3">
+                      {nestedSub.number} {nestedSub.title}
+                    </h4>
+                    {nestedSub.content && (
+                      <p className="text-base leading-relaxed text-slate-800 whitespace-pre-line">
+                        {nestedSub.content}
+                      </p>
+                    )}
+                  </div>
+                </div>
+              ))}
+
+              {/* Tables */}
+              {subsection.table && (
+                <div className="pl-14 mb-6">
+                  <table className="min-w-full border border-slate-300">
+                    <thead>
+                      <tr className="bg-slate-900">
+                        {subsection.table.headers.map((header, hIdx) => (
+                          <th key={hIdx} className="px-6 py-3 text-left text-sm font-semibold text-white border-r border-slate-700 last:border-r-0">
+                            {header}
+                          </th>
+                        ))}
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {subsection.table.rows.map((row, rIdx) => (
+                        <tr key={rIdx} className={`${rIdx % 2 === 0 ? 'bg-white' : 'bg-slate-50'} border-b border-slate-300`}>
+                          {row.map((cell, cIdx) => (
+                            <td key={cIdx} className="px-6 py-3 text-sm text-slate-800 border-r border-slate-200 last:border-r-0">
+                              {cell}
+                            </td>
+                          ))}
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+
+        {/* Footer */}
+        <div className="border-t-4 border-blue-900 bg-slate-50 px-16 py-6">
+          <div className="flex items-center justify-between text-xs text-slate-600">
+            <div className="space-y-0.5">
+              <p className="font-semibold text-slate-900">Document Reference: {section.number}</p>
+              <p>Classification: Internal Use Only • Status: Active & Current</p>
+            </div>
+            <div className="text-right space-y-0.5">
+              <p>© 2024 Koyili Hospital</p>
+              <p>All Rights Reserved</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  };
             
             <div className="relative z-10">
               <div className="flex items-start justify-between mb-8">
