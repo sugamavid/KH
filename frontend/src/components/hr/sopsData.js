@@ -1053,7 +1053,175 @@ Once drafted, the policy shall be reviewed internally by:
     title: 'Candidate Evaluation Documentation',
     searchTerms: ['evaluation', 'documentation', 'assessment', 'interview', 'records'],
     category: 'B. Recruitment, Selection & Appointment',
-    content: 'Formalizes process of recording, maintaining, and securing all evaluation records associated with candidate assessments during recruitment.'
+    subsections: [
+      {
+        number: '1',
+        title: 'OBJECTIVE',
+        content: 'This SOP formalizes the process of recording, maintaining, and securing all evaluation records associated with candidate assessments during recruitment. The objective is to ensure structured documentation, support hiring decisions with evidence, enable audit trails, and protect the organization from legal disputes.'
+      },
+      {
+        number: '2',
+        title: 'SCOPE AND APPLICABILITY',
+        content: `This SOP applies to:
+• All recruitment-related documentation from job posting to candidate selection
+• Resume screening records, interview evaluation forms, test results, reference check reports, and panel decisions
+• The HR Department, interview panel members, and recruitment agencies
+• All positions across all departments and employment categories`
+      },
+      {
+        number: '3',
+        title: 'DEFINITIONS',
+        content: `• Evaluation Documentation: Written records of candidate assessments at various recruitment stages
+• Screening Notes: Comments and scores recorded during resume screening
+• Interview Evaluation Form: Standardized form used by panelists to assess and score candidates
+• Assessment Records: Results from technical tests, psychometric assessments, or skill demonstrations
+• Selection Rationale: Documented reasoning for selecting or rejecting a candidate
+• Candidate File: Complete dossier containing all documents related to a candidate's application
+• Retention Period: Duration for which recruitment records must be maintained as per policy or law`
+      },
+      {
+        number: '4',
+        title: 'PROCEDURE',
+        subsections: [
+          {
+            number: '4.1',
+            title: 'Creation of Candidate Files',
+            content: `(i) Upon receipt of application, HR shall create a Candidate File including:
+    • Application form or resume
+    • Cover letter (if provided)
+    • Unique Application ID
+    • Source of application (portal, referral, walk-in)
+    • Date and time of receipt
+(ii) Files may be physical folders or digital folders in the Applicant Tracking System (ATS)
+(iii) Each file shall be named with format: [Position Code]_[Candidate Name]_[Application ID]
+(iv) Access to candidate files shall be restricted to authorized HR personnel and interview panel members only`
+          },
+          {
+            number: '4.2',
+            title: 'Screening Documentation',
+            content: `(i) During resume screening (SOP B.4), screener shall document:
+    • Screening Matrix scores (essential criteria: Pass/Fail, preferred criteria: 0-10)
+    • Comments on candidate suitability
+    • Reasons for shortlisting or rejection
+    • Screener name and date
+(ii) Screening notes shall be added to the candidate file
+(iii) For rejected candidates, rejection reason codes shall be used:
+    • Code 1: Does not meet minimum qualifications
+    • Code 2: Insufficient experience
+    • Code 3: Salary expectations misaligned
+    • Code 4: Notice period incompatible
+    • Code 5: Location constraint
+    • Code 6: Other (specify)`
+          },
+          {
+            number: '4.3',
+            title: 'Interview Evaluation Documentation',
+            content: `(i) Each interview panel member shall complete Interview Evaluation Form (Annexure B.5.1) for every candidate including:
+    • Candidate details and position applied
+    • Interview date, time, and panel members
+    • Evaluation criteria and scoring:
+        A. Technical/Functional Skills (0-10)
+        B. Communication Skills (0-10)
+        C. Behavioral Competencies (0-10)
+        D. Cultural Fit (0-10)
+        E. Overall Impression (0-10)
+    • Specific strengths observed
+    • Areas of concern or improvement
+    • Recommendation: Selected / Reserve / Rejected
+    • Panelist signature and date
+(ii) All panelists shall complete forms independently before discussing as a group
+(iii) Forms shall be collected by HR immediately after interviews
+(iv) Interview summary notes capturing panel discussion and consensus shall be documented by Panel Chairperson`
+          },
+          {
+            number: '4.4',
+            title: 'Assessment and Test Records',
+            content: `(i) For positions requiring technical tests, skill assessments, or psychometric tests:
+    • Test question papers or assessment tools used
+    • Candidate responses or submissions
+    • Evaluator comments and scores
+    • Pass/fail status or percentile ranking
+    • Test date, duration, and evaluator name
+(ii) All test materials shall be securely stored and not shared with candidates
+(iii) Test results shall be added to candidate file with analysis report`
+          },
+          {
+            number: '4.5',
+            title: 'Selection Decision Documentation',
+            content: `(i) Final selection meeting shall be documented with:
+    • Meeting date and participants
+    • Summary of all candidates interviewed
+    • Comparative analysis of top candidates
+    • Selection rationale for chosen candidate(s)
+    • Reserve candidates identified
+    • Approval signatures (Department Head, HR Head, CEO as applicable)
+(ii) For rejected candidates after interview:
+    • Reason for non-selection (specific feedback)
+    • Whether candidate is suitable for other roles
+    • Database retention recommendation (1 year / 6 months / discard)
+(iii) Selection Decision Memo shall be signed by all approving authorities and filed`
+          },
+          {
+            number: '4.6',
+            title: 'File Consolidation and Archival',
+            content: `(i) Upon completion of recruitment cycle, HR shall consolidate complete candidate file with:
+    • All screening, interview, and assessment records
+    • Selection decision documentation
+    • BGV reports (for selected candidates)
+    • Offer letter copy and acceptance (for selected candidates)
+(ii) Files shall be categorized:
+    • Category A: Selected and joined candidates - Retain for 7 years (transfer to personnel file)
+    • Category B: Selected but offer declined/didn't join - Retain for 3 years
+    • Category C: Shortlisted but not selected (reserve candidates) - Retain for 2 years
+    • Category D: Rejected after interview - Retain for 1 year
+    • Category E: Rejected at screening - Retain for 6 months
+(iii) Physical files shall be stored in locked cabinets with access logs
+(iv) Digital files shall be stored in secure ATS with role-based access and audit logs`
+          }
+        ]
+      },
+      {
+        number: '5',
+        title: 'ROLES AND RESPONSIBILITIES',
+        table: {
+          headers: ['Position', 'Responsibility'],
+          rows: [
+            ['HR Recruitment Team', 'Create candidate files, collect evaluation forms, consolidate documentation, archive records'],
+            ['Interview Panel Members', 'Complete evaluation forms accurately, provide detailed feedback, sign forms'],
+            ['Panel Chairperson', 'Document panel discussions, consolidate scores, prepare selection rationale'],
+            ['HR Head', 'Review documentation quality, ensure compliance, approve archival and disposal'],
+            ['IT/ATS Administrator', 'Maintain digital repository, ensure data security, generate access audit logs']
+          ]
+        }
+      },
+      {
+        number: '6',
+        title: 'COMPLIANCE AND RECORD-KEEPING',
+        content: `• All recruitment documentation shall be treated as confidential and accessible only to authorized personnel
+• Evaluation forms must be complete, legible, and signed - incomplete forms shall be returned to panelists
+• Any alteration or backdating of evaluation records is strictly prohibited and subject to disciplinary action
+• Candidate data shall be handled as per Data Privacy and Protection Policy - no unauthorized disclosure
+• Monthly Documentation Audits shall verify:
+    • Completeness of candidate files
+    • Proper filing and categorization
+    • Timely archival of closed requisitions
+    • Access log reviews for security breaches
+• Retention periods shall be strictly observed - premature disposal or indefinite retention both non-compliant
+• In case of legal disputes or grievances, relevant candidate files shall be preserved beyond normal retention until case closure`
+      },
+      {
+        number: '7',
+        title: 'REFERENCE DOCUMENTS',
+        content: `• Koyili Hospital HR By-Laws (Section 3: Recruitment Records)
+• SOP B.4: Resume Screening & Shortlisting
+• SOP B.5: Interview Scheduling & Panel Process
+• SOP B.7: Background Verification
+• Annexure B.5.1: Interview Evaluation Form
+• Annexure B.6.1: Selection Decision Memo Template
+• Data Privacy and Protection Policy
+• Document Retention and Disposal Policy`
+      }
+    ]
   },
 
   sopB7: {
