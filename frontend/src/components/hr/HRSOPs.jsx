@@ -472,7 +472,6 @@ const HRSOPs = ({ setActiveModule }) => {
     );
   };
 
-  // Main render
   return (
                     <p className="text-blue-200 text-sm font-semibold">Pallikkunnu, Talap, Kannur, Kerala</p>
                     <p className="text-blue-300 text-xs mt-1">📞 +91-XXXX-XXXXXX | 📧 info@koyilihospital.com</p>
