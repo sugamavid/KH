@@ -6220,7 +6220,235 @@ Performance Issues:
     title: 'Annual Goal Setting & KPI Process',
     searchTerms: ['goal', 'setting', 'kpi', 'objectives', 'targets', 'performance'],
     category: 'H. Performance Management',
-    content: 'Institutes formal mechanism for setting annual performance goals and KPIs ensuring role clarity, measurable targets, and alignment with institutional vision.'
+    subsections: [
+      {
+        number: '1',
+        title: 'OBJECTIVE',
+        content: 'To institute a formal, transparent, and collaborative mechanism for setting annual performance goals and Key Performance Indicators (KPIs) ensuring role clarity, measurable targets, alignment with institutional vision, and creating a foundation for fair performance evaluation and career development.'
+      },
+      {
+        number: '2',
+        title: 'SCOPE',
+        content: 'Applicable to all employees from junior staff to senior management. Covers goal-setting timelines, methodologies, documentation, and review processes.'
+      },
+      {
+        number: '3',
+        title: 'GOAL SETTING FRAMEWORK',
+        subsections: [
+          {
+            number: '3.1',
+            title: 'SMART Goals Methodology',
+            content: `All goals must be SMART:
+• Specific: Clearly defined, not vague
+• Measurable: Quantifiable metrics or observable outcomes
+• Achievable: Realistic given resources and constraints
+• Relevant: Aligned with role, department, and hospital objectives
+• Time-bound: Defined completion timeline
+
+Example:
+❌ Poor Goal: "Improve patient satisfaction"
+✅ SMART Goal: "Achieve patient satisfaction score of 85% or above in quarterly surveys by December 2024"`
+          },
+          {
+            number: '3.2',
+            title: 'Types of Goals',
+            content: `(i) Performance Goals (60-70% weightage):
+    • Quantitative targets (admissions, procedures, revenue)
+    • Quality metrics (error rates, patient outcomes)
+    • Efficiency targets (turnaround time, bed occupancy)
+
+(ii) Developmental Goals (20-30% weightage):
+    • Skill enhancement (certifications, training)
+    • Process improvements or projects
+    • Innovation or quality initiatives
+
+(iii) Behavioral Goals (10-20% weightage):
+    • Teamwork and collaboration
+    • Adherence to values and ethics
+    • Leadership and mentoring`
+          }
+        ]
+      },
+      {
+        number: '4',
+        title: 'GOAL SETTING PROCESS',
+        subsections: [
+          {
+            number: '4.1',
+            title: 'Annual Goal Setting Cycle',
+            content: `Timeline:
+• January 1-15: Departmental goals cascaded from hospital strategic plan
+• January 15-31: Individual goal-setting discussions between employee and supervisor
+• By February 15: Goals finalized and documented in HRMS
+• By February 28: HR approval and goal lock-in
+
+Process:
+(i) Hospital Strategic Goals announced by management
+(ii) Department Heads break down into department goals
+(iii) Supervisors meet with each team member to discuss individual goals
+(iv) Employee proposes draft goals aligned with department objectives
+(v) Supervisor and employee collaboratively finalize goals
+(vi) Goals documented in Performance Management System
+(vii) Both parties sign off on goals`
+          },
+          {
+            number: '4.2',
+            title: 'Goal Setting Discussion',
+            content: `Supervisor and Employee jointly discuss:
+• Review of previous year's performance
+• Discussion of role expectations for current year
+• Identification of 4-6 key goals (not more than 8)
+• Definition of success criteria for each goal
+• Resources and support needed
+• Challenges and mitigation plans
+
+Supervisor's Role:
+• Ensure goals align with department objectives
+• Challenge unrealistic or too-easy goals
+• Provide clarity on priorities
+• Commit to providing resources and support
+
+Employee's Role:
+• Come prepared with self-proposed goals
+• Seek clarification on expectations
+• Highlight development needs
+• Commit to achieving goals`
+          },
+          {
+            number: '4.3',
+            title: 'Goal Documentation',
+            content: `Goal documentation in HRMS includes:
+• Goal statement (SMART format)
+• Key Performance Indicator (KPI) / Success Metric
+• Baseline (current state)
+• Target (desired outcome)
+• Timeline / Milestones
+• Weightage (% contribution to overall rating)
+• Dependencies / Resources required
+
+Example Goal Card:
+┌────────────────────────────────────────┐
+│ Goal: Reduce patient waiting time     │
+│ KPI: Average OPD wait time            │
+│ Baseline: 45 minutes                  │
+│ Target: 30 minutes or less            │
+│ Timeline: Achieve by Q4 2024          │
+│ Weightage: 20%                        │
+│ Milestone: Q2 - 40 min, Q3 - 35 min  │
+└────────────────────────────────────────┘`
+          }
+        ]
+      },
+      {
+        number: '5',
+        title: 'MID-YEAR GOAL REVIEW',
+        content: `Timeline: June-July
+
+Purpose:
+• Assess progress on goals
+• Identify obstacles and course-correct
+• Revise goals if business priorities changed
+• Provide interim feedback
+
+Process:
+• Employee prepares self-assessment of goal progress
+• Supervisor reviews and provides feedback
+• Goals may be adjusted (add/remove/modify) with HR approval
+• Updated goals documented in HRMS`
+      },
+      {
+        number: '6',
+        title: 'GOAL CATEGORIES BY ROLE',
+        subsections: [
+          {
+            number: '6.1',
+            title: 'Clinical Staff (Doctors, Nurses)',
+            content: `Sample KPIs:
+• Patient outcomes: Recovery rates, complication rates
+• Patient satisfaction scores
+• Clinical compliance: Adherence to protocols
+• Bed turnover rates
+• Infection control metrics
+• Continuing medical education (CME) credits`
+          },
+          {
+            number: '6.2',
+            title: 'Administrative Staff',
+            content: `Sample KPIs:
+• Process efficiency: Turnaround time for approvals
+• Accuracy: Error rates in documentation
+• Cost savings or revenue enhancement
+• Project completion within timeline and budget
+• Customer (internal/external) satisfaction`
+          },
+          {
+            number: '6.3',
+            title: 'Support Staff',
+            content: `Sample KPIs:
+• Service quality scores (housekeeping cleanliness, food quality)
+• Response time (maintenance requests)
+• Compliance rates (safety protocols)
+• Attendance and punctuality
+• Zero-incident targets (safety, hygiene)`
+          },
+          {
+            number: '6.4',
+            title: 'Management/Supervisors',
+            content: `Sample KPIs:
+• Team performance (aggregate team goals achievement)
+• Employee retention and engagement scores
+• Budget adherence
+• Process improvement initiatives
+• Leadership effectiveness (360° feedback scores)`
+          }
+        ]
+      },
+      {
+        number: '7',
+        title: 'GOAL REVISION AND ADJUSTMENTS',
+        content: `Goals can be revised mid-year if:
+• Business priorities change significantly
+• Role or responsibilities change
+• External factors beyond employee's control (e.g., pandemic)
+• Goal becomes irrelevant or impossible
+
+Process:
+• Employee or supervisor proposes revision with justification
+• Both parties discuss and agree
+• HR approves revision (to prevent manipulation)
+• Revised goal documented with reason in HRMS
+• Original goal retained for audit trail`
+      },
+      {
+        number: '8',
+        title: 'GOAL ACHIEVEMENT MEASUREMENT',
+        content: `At year-end appraisal, each goal rated as:
+• Exceeded (120%+): Significantly surpassed target
+• Achieved (100-119%): Met or slightly exceeded target
+• Partially Achieved (70-99%): Made progress but fell short
+• Not Achieved (<70%): Minimal progress
+
+Overall Performance Rating:
+• Weighted average of all goal ratings
+• Behavioral/Values component added
+• Final rating: Outstanding / Exceeds / Meets / Needs Improvement / Unsatisfactory`
+      },
+      {
+        number: '9',
+        title: 'LINKAGE TO REWARDS',
+        content: `Goal achievement impacts:
+• Annual increment: Higher achievement = higher increment
+• Performance bonus: Linked to goal achievement %
+• Promotion eligibility: Consistent high performers considered
+• Recognition programs: Top performers awarded
+• Career development: High performers get priority for training and growth opportunities`
+      },
+      {
+        number: '10',
+        title: 'REFERENCE DOCUMENTS',
+        content: 'HR By-Laws (Performance Management Policy), Hospital Strategic Plan, Annexure H.1.1: Goal Setting Template, Annexure H.1.2: KPI Library for Various Roles'
+      }
+    ]
   },
 
   sopH2: {
@@ -6229,7 +6457,252 @@ Performance Issues:
     title: 'Mid-Year & Year-End Appraisals',
     searchTerms: ['appraisal', 'review', 'evaluation', 'performance', 'assessment'],
     category: 'H. Performance Management',
-    content: 'Establishes standardised process for conducting Mid-Year and Year-End Performance Appraisals enabling objective evaluation of deliverables, conduct, and alignment with KPIs.'
+    subsections: [
+      {
+        number: '1',
+        title: 'OBJECTIVE',
+        content: 'To establish a standardized, fair, and transparent process for conducting Mid-Year Check-in and Year-End Performance Appraisals enabling objective evaluation of goal achievement, behavioral competencies, and overall contribution while facilitating meaningful feedback, recognition, and development planning.'
+      },
+      {
+        number: '2',
+        title: 'SCOPE',
+        content: 'Applicable to all confirmed employees. Covers appraisal timelines, rating scales, calibration, and linkage to compensation and career decisions.'
+      },
+      {
+        number: '3',
+        title: 'APPRAISAL CYCLE',
+        subsections: [
+          {
+            number: '3.1',
+            title: 'Mid-Year Check-In (Informal Review)',
+            content: `Timeline: June-July
+
+Purpose:
+• Progress check on annual goals
+• Early course correction
+• Interim feedback
+• Not a formal rating; developmental focus
+
+Process:
+(i) Employee completes self-assessment (progress on goals)
+(ii) One-on-one discussion with supervisor (30-60 minutes)
+(iii) Identify obstacles and support needed
+(iv) Adjust goals if necessary (with HR approval)
+(v) Document key discussion points in HRMS`
+          },
+          {
+            number: '3.2',
+            title: 'Year-End Performance Appraisal',
+            content: `Timeline: December-January
+
+Purpose:
+• Comprehensive evaluation of annual performance
+• Formal rating that impacts increment, bonus, promotion
+• Recognition of achievements
+• Identification of development needs
+
+Process:
+(i) Self-Appraisal (Dec 1-15):
+    • Employee completes self-assessment in HRMS
+    • Rate own performance on each goal
+    • Provide evidence of achievements
+    • Highlight challenges faced
+    • Suggest development areas
+
+(ii) Manager Appraisal (Dec 16-31):
+    • Supervisor reviews employee's self-appraisal
+    • Rates employee on each goal independently
+    • Adds qualitative feedback
+    • Recommends overall rating
+
+(iii) Appraisal Discussion (Jan 1-15):
+    • Face-to-face meeting (60-90 minutes)
+    • Discussion of achievements and gaps
+    • Supervisor shares rating and feedback
+    • Development plan discussed
+    • Employee can provide rebuttal if disagrees
+
+(iv) Normalization & Calibration (Jan 15-25):
+    • Department Head reviews all appraisals in team
+    • Ensures fairness and consistency
+    • Calibration meeting to avoid rating inflation/deflation
+    • May adjust ratings for equity
+
+(v) HR Review & Final Rating (Jan 25-31):
+    • HR reviews for policy compliance and fairness
+    • Final ratings approved
+    • Ratings locked in HRMS
+
+(vi) Communication (February):
+    • Formal appraisal letters issued
+    • Increment and bonus communicated (if applicable)`
+          }
+        ]
+      },
+      {
+        number: '4',
+        title: 'PERFORMANCE RATING SCALE',
+        content: `5-Point Rating Scale:
+
+5 - Outstanding (Top 5-10%):
+• Consistently exceeded all goals
+• Demonstrated exceptional leadership/innovation
+• Role model for others
+
+4 - Exceeds Expectations (15-20%):
+• Exceeded most goals
+• Went beyond job requirements
+• Significant value addition
+
+3 - Meets Expectations (60-70%):
+• Met all or most goals
+• Performed job duties competently
+• Reliable and consistent performer
+
+2 - Needs Improvement (5-10%):
+• Met some goals but fell short on others
+• Performance gaps identified
+• Requires support and improvement
+
+1 - Unsatisfactory (<5%):
+• Failed to meet most goals
+• Serious performance deficiencies
+• May lead to termination or PIP
+
+Forced Distribution (if policy requires):
+• Prevents rating inflation
+• Ensures differentiation
+• Example: Max 10% can be rated Outstanding, min 5% as Needs Improvement`
+      },
+      {
+        number: '5',
+        title: 'APPRAISAL COMPONENTS',
+        subsections: [
+          {
+            number: '5.1',
+            title: 'Goal Achievement (70% weightage)',
+            content: `• Each goal rated individually
+• Weighted average of all goal ratings
+• Evidence-based assessment (data, metrics, outcomes)
+• Both quantitative and qualitative factors considered`
+          },
+          {
+            number: '5.2',
+            title: 'Behavioral Competencies (20% weightage)',
+            content: `Assessed based on hospital values:
+• Patient-centricity
+• Teamwork and collaboration
+• Integrity and ethics
+• Communication skills
+• Initiative and ownership
+• Adaptability
+
+Rating: 1-5 scale for each competency`
+          },
+          {
+            number: '5.3',
+            title: 'Leadership/Managerial Skills (10% weightage - for supervisors)',
+            content: `• Team management and mentoring
+• Decision-making
+• Conflict resolution
+• Resource optimization
+• Strategic thinking`
+          }
+        ]
+      },
+      {
+        number: '6',
+        title: 'APPRAISAL DISCUSSION - BEST PRACTICES',
+        content: `Supervisor should:
+• Prepare thoroughly (review documentation, metrics)
+• Create comfortable, private environment
+• Start with positive feedback
+• Use specific examples (not vague statements)
+• Focus on facts and behaviors, not personality
+• Listen actively to employee's perspective
+• Be open to discussion, not just delivering verdict
+• End with actionable development plan
+• Document key points discussed
+
+Employee should:
+• Come prepared with self-assessment and evidence
+• Be open to feedback (don't be defensive)
+• Ask clarifying questions
+• Discuss career aspirations
+• Request specific support for development
+• Sign appraisal form (signing = acknowledgment, not agreement)`
+      },
+      {
+        number: '7',
+        title: 'ADDRESSING RATING DISAGREEMENTS',
+        content: `If employee disagrees with rating:
+(i) Discuss openly during appraisal meeting
+(ii) Employee can add rebuttal comments in appraisal form
+(iii) Department Head reviews disagreement
+(iv) If still unresolved, escalate to HR for mediation
+(v) CHRO decision is final (internal)
+(vi) Employee can file formal grievance if believes process was unfair
+
+HR ensures:
+• Process was followed
+• Rating is based on documented evidence
+• No bias or discrimination
+• Comparable employees rated fairly`
+      },
+      {
+        number: '8',
+        title: 'LINKAGE TO COMPENSATION',
+        content: `Performance Rating → Rewards Matrix:
+
+Rating 5 (Outstanding): 
+• Increment: 15-20%
+• Bonus: 100-150% of target
+• Spot awards, recognition
+• Fast-track promotion consideration
+
+Rating 4 (Exceeds):
+• Increment: 10-15%
+• Bonus: 80-100% of target
+• Considered for promotion
+
+Rating 3 (Meets):
+• Increment: 5-10%
+• Bonus: 50-80% of target
+• Standard career progression
+
+Rating 2 (Needs Improvement):
+• Increment: 0-5%
+• Bonus: 0-30% of target
+• PIP (Performance Improvement Plan)
+• No promotion
+
+Rating 1 (Unsatisfactory):
+• No increment
+• No bonus
+• PIP (mandatory)
+• Termination if no improvement post-PIP`
+      },
+      {
+        number: '9',
+        title: 'DEVELOPMENT PLANNING',
+        content: `Post-appraisal, create Individual Development Plan (IDP):
+• Identify skill/knowledge gaps
+• Define development objectives for next year
+• Assign training, mentoring, or stretch assignments
+• Timeline and milestones
+• Review IDP quarterly
+
+Example:
+• Gap: Weak data analysis skills
+• Action: Enroll in Excel advanced course by Q2
+• Support: Sponsor training fee, allow 2 days off for course`
+      },
+      {
+        number: '10',
+        title: 'REFERENCE DOCUMENTS',
+        content: 'HR By-Laws (Performance Management Policy), Annexure H.2.1: Self-Appraisal Form, Annexure H.2.2: Manager Appraisal Form, Annexure H.2.3: Individual Development Plan Template'
+      }
+    ]
   },
 
   sopH3: {
