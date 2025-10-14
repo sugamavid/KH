@@ -17,6 +17,7 @@ import AuditAssistant from './AuditAssistant';
 import RiskMonitor from './RiskMonitor';
 import ReportGenerator from './ReportGenerator';
 import PolicyImplementation from './PolicyImplementation';
+import ComplianceTracker from './ComplianceTracker';
 
 const HRByLaws = ({ setActiveModule }) => {
   const [activeSection, setActiveSection] = useState('dashboard');
@@ -35,6 +36,7 @@ const HRByLaws = ({ setActiveModule }) => {
   const [showRiskMonitor, setShowRiskMonitor] = useState(false);
   const [showReportGenerator, setShowReportGenerator] = useState(false);
   const [showPolicyImplementation, setShowPolicyImplementation] = useState(false);
+  const [showComplianceTracker, setShowComplianceTracker] = useState(false);
   const contentRef = useRef(null);
 
   // Professional Legal Document Formatter
