@@ -1742,11 +1742,380 @@ export const annexuresData = {
     searchTerms: ['statutory', 'legal', 'compliance'],
     category: 'Compliance',
     forms: [
-      { name: 'Form 11 (PF)', code: 'STAT-001', description: 'PF registration form' },
-      { name: 'Form 16 Template', code: 'STAT-002', description: 'TDS certificate' },
-      { name: 'Form I-9 (Identity)', code: 'STAT-003', description: 'Identity verification' },
-      { name: 'POSH Complaint Form', code: 'STAT-004', description: 'Sexual harassment complaint' },
-      { name: 'Accident Report Form', code: 'STAT-005', description: 'Workplace accident reporting' }
+      { 
+        name: 'Form 11 (PF)', 
+        code: 'STAT-001', 
+        description: 'EPF registration form for new employees',
+        sections: [
+          {
+            title: 'Form 11 - EPF Declaration',
+            fields: ['EMPLOYEES\' PROVIDENT FUNDS SCHEME, 1952', 'DECLARATION AND NOMINATION FORM', '', 'For PF Account Number (to be allotted by employer)']
+          },
+          {
+            title: 'Part A - Employee Details',
+            fields: ['1. Full Name (in BLOCK LETTERS): ________', '2. Father\'s / Husband\'s Name: ________', '3. Date of Birth: ________ (DD/MM/YYYY)', '4. Gender: Male / Female / Transgender', '5. Email ID (Personal): ________', '6. Mobile Number: ________', '7. Aadhaar Number: ________ (Mandatory)', '8. PAN Number: ________ (if available)', '9. Universal Account Number (UAN): ________ (if previously allotted)', '', '10. Marital Status: Married / Unmarried']
+          },
+          {
+            title: 'Part B - Address Details',
+            fields: ['Permanent Address:', 'House No./Street: ________', 'Village/Town/City: ________', 'Post Office: ________', 'District: ________', 'State: ________', 'PIN Code: ________', '', 'Present Address (if different from permanent):', 'House No./Street: ________', 'Village/Town/City: ________', 'Post Office: ________', 'District: ________', 'State: ________', 'PIN Code: ________']
+          },
+          {
+            title: 'Part C - Bank Account Details',
+            fields: ['Bank Name: ________', 'Branch Name: ________', 'Account Number: ________', 'IFSC Code: ________', '', 'Account Type: Savings / Current', '', 'Note: This account will be used for PF withdrawal/transfer', '', 'Attach: Cancelled cheque or Bank passbook first page copy']
+          },
+          {
+            title: 'Part D - Previous Employment Details',
+            fields: ['Were you a member of Employees\' Provident Fund Scheme in your previous employment?', '☐ Yes', '☐ No', '☐ Do not know', '', 'If YES:', 'Previous PF Account Number: ________', 'Previous UAN: ________', 'Previous Employer Name: ________', 'Previous Employer PF Code: ________', 'Date of Exit: ________', 'Scheme Certificate Number: ________', '', 'Do you wish to transfer previous PF balance?', '☐ Yes (Attach Scheme Certificate or submit transfer request online)', '☐ No']
+          },
+          {
+            title: 'Part E - Family Details',
+            fields: ['(As per EPF Scheme 1952)', '', 'Spouse:', 'Name: ________', 'Date of Birth: ________', 'Aadhaar Number: ________', '', 'Children:', '1. Name: ________ DOB: ________ Gender: ________ Aadhaar: ________', '2. Name: ________ DOB: ________ Gender: ________ Aadhaar: ________', '3. Name: ________ DOB: ________ Gender: ________ Aadhaar: ________', '4. Name: ________ DOB: ________ Gender: ________ Aadhaar: ________', '', 'Parents (if dependent):', 'Father\'s Name: ________ DOB: ________ Dependent: Yes / No', 'Mother\'s Name: ________ DOB: ________ Dependent: Yes / No']
+          },
+          {
+            title: 'Part F - Nomination (As per Para 61(1) of EPF Scheme)',
+            fields: ['I hereby nominate the following person(s) to receive PF amount in the event of my death:', '', 'Nominee 1:', 'Name: ________', 'Address: ________', '', 'City: ________ State: ________ PIN: ________', 'Relationship: ________', 'Date of Birth: ________', 'Age: ________ years', 'Share of accumulation: _______%', 'Aadhaar Number: ________', '', 'If nominee is minor (below 18 years):', 'Guardian Name: ________', 'Guardian Address: ________', 'Guardian Relationship to minor: ________', 'Guardian Aadhaar: ________', '', 'Nominee 2 (if applicable):', 'Name: ________', 'Address: ________', 'Relationship: ________', 'Date of Birth: ________', 'Share of accumulation: _______%', 'Aadhaar Number: ________', '', 'Total allocation: _____% (must be 100%)']
+          },
+          {
+            title: 'Part G - International Worker Details',
+            fields: ['(Complete only if you are international worker)', '', 'Nationality: ________', 'Passport Number: ________', 'Country of Origin: ________', 'Covered under Social Security Agreement: Yes / No', '', 'If Yes, which country agreement: ________']
+          },
+          {
+            title: 'Part H - Higher Pension Option',
+            fields: ['(Under Para 11(3) of EPS 1995 - if eligible)', '', 'Do you wish to contribute to EPS on salary exceeding ₹15,000?', '☐ Yes', '☐ No', '', 'Note: If yes, both employee and employer contribution on excess salary will be remitted to Pension Fund']
+          },
+          {
+            title: 'Part I - Declarations',
+            fields: ['I hereby declare that:', '', '1. The information provided above is true and correct', '2. I have read and understood the provisions of EPF & MP Act 1952', '3. I authorize the employer to deduct PF contribution from my salary', '4. I have provided correct Aadhaar and bank details', '5. I will update EPFO portal with any changes in my details', '6. I understand that providing false information is an offence', '7. The nominee(s) mentioned are my family members as defined in the Act', '', 'Date: ________', 'Place: ________', '', 'Employee Signature: ________']
+          },
+          {
+            title: 'Part J - Employer Certificate',
+            fields: ['Certificate by Employer:', '', 'Employee Name: ________', 'Employee ID: ________', 'Date of Joining: ________', 'Designation: ________', 'Department: ________', '', 'PF Account Number allotted: ________', 'UAN allotted/linked: ________', '', 'This is to certify that above details have been verified.', '', 'Employer PF Code Number: ________', 'Establishment Name: Koyili Hospital', '', 'Employer Signature: ________', 'Name: ________', 'Designation: ________', 'Date: ________', 'Seal: ________']
+          },
+          {
+            title: 'Documents to be Attached',
+            fields: ['☐ Aadhaar Card copy (mandatory)', '☐ PAN Card copy', '☐ Cancelled cheque or Bank passbook copy', '☐ Previous employment PF details/Scheme Certificate (if applicable)', '☐ Passport size photograph (2 copies)', '☐ Date of birth proof', '☐ Address proof', '☐ Passport copy (for international workers)']
+          }
+        ],
+        instructions: 'Submit within 1 month of joining. Form 11 is mandatory for PF enrollment. Ensure Aadhaar and bank account details are correct. UAN will be allotted/activated. Also update same information on EPFO portal.',
+        approvalRequired: 'HR & PF Admin',
+        processingTime: '15-30 days for UAN activation'
+      },
+      { 
+        name: 'Form 16 Template', 
+        code: 'STAT-002', 
+        description: 'TDS certificate issued by employer',
+        sections: [
+          {
+            title: 'Form 16 - TDS Certificate',
+            fields: ['PART A & PART B', 'CERTIFICATE UNDER SECTION 203 OF THE INCOME-TAX ACT, 1961', 'FOR TAX DEDUCTED AT SOURCE FROM INCOME CHARGEABLE UNDER THE HEAD "SALARIES"']
+          },
+          {
+            title: 'Part A - Employer Details',
+            fields: ['Name and Address of the Employer:', 'KOYILI HOSPITAL', '[Full Address]', 'Kannur, Kerala', '', 'TAN (Tax Deduction Account Number): ________', 'PAN of Employer: ________']
+          },
+          {
+            title: 'Part A - Employee Details',
+            fields: ['Name of Employee: ________', 'PAN of Employee: ________', 'Employee Code/ID: ________', 'Designation: ________', 'Department: ________', '', 'Financial Year: ____-____', 'Assessment Year: ____-____']
+          },
+          {
+            title: 'Part A - Summary of Tax Deducted',
+            fields: ['Quarter-wise TDS Details:', '', 'Quarter 1 (April to June):', 'Receipt Numbers: ________', 'TDS Deposited: ₹ ________', 'Date of deposit: ________', '', 'Quarter 2 (July to September):', 'Receipt Numbers: ________', 'TDS Deposited: ₹ ________', 'Date of deposit: ________', '', 'Quarter 3 (October to December):', 'Receipt Numbers: ________', 'TDS Deposited: ₹ ________', 'Date of deposit: ________', '', 'Quarter 4 (January to March):', 'Receipt Numbers: ________', 'TDS Deposited: ₹ ________', 'Date of deposit: ________', '', 'Total TDS Deposited: ₹ ________']
+          },
+          {
+            title: 'Part B - Gross Salary Details',
+            fields: ['1. Salary Details:', '(a) Gross Salary:', '  (i) Basic Salary: ₹ ________', '  (ii) Dearness Allowance (DA): ₹ ________', '  (iii) House Rent Allowance (HRA): ₹ ________', '  (iv) Special Allowance: ₹ ________', '  (v) Medical Allowance: ₹ ________', '  (vi) Conveyance Allowance: ₹ ________', '  (vii) Other Allowances: ₹ ________', '  (viii) Bonus: ₹ ________', '  (ix) Performance Incentive: ₹ ________', '', 'Total Gross Salary: ₹ ________']
+          },
+          {
+            title: 'Part B - Less: Allowances to extent exempt u/s 10',
+            fields: ['2. Exemptions under Section 10:', '(a) House Rent Allowance (HRA) u/s 10(13A): ₹ ________', '(b) Conveyance Allowance u/s 10(14): ₹ ________ (max ₹19,200)', '(c) Medical Allowance u/s 10(14): ₹ ________', '(d) Other allowances u/s 10: ₹ ________', '', 'Total Exemptions: ₹ ________']
+          },
+          {
+            title: 'Part B - Balance Salary',
+            fields: ['3. Balance (Gross Salary - Exemptions): ₹ ________']
+          },
+          {
+            title: 'Part B - Deductions under Section 16',
+            fields: ['4. Deductions under Section 16:', '(a) Standard Deduction u/s 16(ia): ₹ 50,000', '(b) Entertainment Allowance u/s 16(ii): ₹ ________', '(c) Professional Tax u/s 16(iii): ₹ ________', '', 'Total Deductions u/s 16: ₹ ________']
+          },
+          {
+            title: 'Part B - Income Chargeable under Salaries',
+            fields: ['5. Income chargeable under the head "Salaries":', '(Balance Salary - Deductions u/s 16)', '', 'Total: ₹ ________']
+          },
+          {
+            title: 'Part B - Other Income Reported',
+            fields: ['6. Other Income Reported by Employee:', '(a) Interest on Savings Account: ₹ ________', '(b) Interest on Fixed Deposits: ₹ ________', '(c) Rental Income: ₹ ________', '(d) Other sources: ₹ ________', '', 'Total Other Income: ₹ ________']
+          },
+          {
+            title: 'Part B - Gross Total Income',
+            fields: ['7. Gross Total Income (5 + 6): ₹ ________']
+          },
+          {
+            title: 'Part B - Deductions under Chapter VI-A',
+            fields: ['8. Deductions under Chapter VI-A:', '', '(a) Section 80C: ₹ ________ (Max ₹1,50,000)', '  - LIC Premium', '  - PPF', '  - ELSS', '  - Home Loan Principal', '  - Tuition Fees', '  - EPF/VPF', '', '(b) Section 80CCD(1B) - NPS: ₹ ________ (Max ₹50,000)', '', '(c) Section 80D - Medical Insurance:', '  Self/Family: ₹ ________ (Max ₹25,000)', '  Parents: ₹ ________ (Max ₹25,000/₹50,000)', '', '(d) Section 80E - Education Loan Interest: ₹ ________', '', '(e) Section 80G - Donations: ₹ ________', '', '(f) Section 24(b) - Home Loan Interest: ₹ ________ (Max ₹2,00,000)', '', '(g) Section 80TTA - Interest on Savings: ₹ ________ (Max ₹10,000)', '', 'Total Deductions: ₹ ________']
+          },
+          {
+            title: 'Part B - Total Income',
+            fields: ['9. Total Income (7 - 8): ₹ ________', '', 'Rounded off to nearest ₹10: ₹ ________']
+          },
+          {
+            title: 'Part B - Tax Calculation',
+            fields: ['10. Tax on Total Income:', '', 'Chosen Tax Regime: Old / New', '', 'Tax Slab Application:', '', 'If Old Regime:', 'Up to ₹2,50,000: Nil', '₹2,50,001 to ₹5,00,000 @ 5%: ₹ ________', '₹5,00,001 to ₹10,00,000 @ 20%: ₹ ________', 'Above ₹10,00,000 @ 30%: ₹ ________', '', 'Total Tax: ₹ ________', '', 'Add: Health & Education Cess @ 4%: ₹ ________', '', 'Tax Liability: ₹ ________']
+          },
+          {
+            title: 'Part B - Relief under Section 89',
+            fields: ['11. Relief under Section 89 (if applicable): ₹ ________', '', '(For arrears, family pension, etc.)']
+          },
+          {
+            title: 'Part B - Net Tax Payable',
+            fields: ['12. Tax Payable after relief (10 - 11): ₹ ________', '', 'Rounded to nearest ₹10: ₹ ________']
+          },
+          {
+            title: 'Part B - TDS Verification',
+            fields: ['13. Total TDS Deducted (from Part A): ₹ ________', '', '14. Tax Payable / (Refundable):', 'Tax Liability: ₹ ________', 'Less: TDS Deducted: ₹ ________', '', 'Balance Tax Payable / (Refund): ₹ ________', '', 'Status:', '☐ Tax fully deducted', '☐ Additional tax payable by employee', '☐ Excess TDS - refund due']
+          },
+          {
+            title: 'Employer Verification',
+            fields: ['This is to certify that:', '', '1. The above particulars are true and correct', '2. TDS has been deducted and deposited as per provisions of Income Tax Act', '3. Quarterly TDS returns have been filed', '', 'Place: ________', 'Date: ________', '', 'Signature of Person Responsible:', 'Name: ________', 'Designation: Finance Manager / Authorized Signatory', '', 'Full Name of the person responsible for deduction of tax:', 'Name: ________', 'Designation: ________', '', 'Official Seal of Employer']
+          },
+          {
+            title: 'Notes for Employee',
+            fields: ['1. Use this Form 16 for filing Income Tax Return', '2. Verify PAN, name, and TDS amount in Form 26AS', '3. Claim additional deductions in ITR if not declared to employer', '4. Report discrepancies to HR immediately', '5. Keep this certificate safe for future reference', '6. This is system-generated certificate and valid without signature']
+          }
+        ],
+        instructions: 'Form 16 issued by employer after end of financial year (by June 15th). Verify all details against salary slips and Form 26AS. Use for ITR filing. Contact HR for corrections.',
+        approvalRequired: 'Issued by Employer',
+        processingTime: 'Issued by June 15th annually'
+      },
+      { 
+        name: 'Form I-9 (Identity)', 
+        code: 'STAT-003', 
+        description: 'Identity and eligibility verification form',
+        sections: [
+          {
+            title: 'Form I-9 - Employment Eligibility Verification',
+            fields: ['(For verification of identity and eligibility to work)', '', 'Form Number: I-9-________', 'Date: ________']
+          },
+          {
+            title: 'Section 1 - Employee Information (To be completed by employee)',
+            fields: ['1. Full Legal Name:', 'Last/Surname: ________', 'First/Given Name: ________', 'Middle Initial/Name: ________', '', '2. Other names used (if any): ________', '', '3. Date of Birth (DD/MM/YYYY): ________', '', '4. Address:', 'House No./Street: ________', 'City: ________', 'State: ________', 'PIN Code: ________', '', '5. Email Address: ________', '6. Mobile Number: ________']
+          },
+          {
+            title: 'Section 2 - Citizenship/Immigration Status',
+            fields: ['I am (check one):', '☐ A citizen of India', '☐ A non-citizen national of India', '☐ A foreign national with work authorization', '', 'If foreign national:', 'Nationality: ________', 'Passport Number: ________', 'Visa Type: ________', 'Visa Validity: From ________ To ________', 'Work Permit Number: ________', 'Work Permit Validity: ________']
+          },
+          {
+            title: 'Section 3 - Identity Documents Provided',
+            fields: ['List A - Documents that establish both identity and employment authorization:', '', 'Document 1:', '☐ Aadhaar Card', 'Aadhaar Number: ________', 'Issuing Authority: UIDAI', '', 'Document 2:', '☐ Passport', 'Passport Number: ________', 'Issuing Authority: Government of India', 'Issue Date: ________', 'Expiry Date: ________', '', 'List B - Documents that establish identity:', '', '☐ PAN Card', 'PAN Number: ________', '', '☐ Voter ID Card', 'EPIC Number: ________', '', '☐ Driving License', 'License Number: ________', 'State: ________', 'Expiry Date: ________', '', 'List C - Documents that establish employment authorization:', '', '☐ Birth Certificate', 'Certificate Number: ________', 'Issuing Authority: ________', '', '☐ School/College Certificate with DOB', '', '☐ Domicile Certificate', 'Certificate Number: ________']
+          },
+          {
+            title: 'Section 4 - Educational Qualification Verification',
+            fields: ['Highest Qualification: ________', '', 'Certificate/Degree Name: ________', 'University/Board: ________', 'Year of Passing: ________', 'Registration/Roll Number: ________', '', 'Professional Registration (if applicable):', 'Registration Body: ________', 'Registration Number: ________', 'Valid until: ________']
+          },
+          {
+            title: 'Section 5 - Employment History Verification',
+            fields: ['Previous Employer 1:', 'Company Name: ________', 'Designation: ________', 'Employment Period: From ________ To ________', 'Reason for Leaving: ________', '', 'Reference Contact:', 'Name: ________', 'Designation: ________', 'Phone: ________', 'Email: ________', '', 'Previous Employer 2:', 'Company Name: ________', 'Designation: ________', 'Employment Period: From ________ To ________', 'Relieving Letter attached: Yes / No']
+          },
+          {
+            title: 'Section 6 - Background Verification Consent',
+            fields: ['I authorize Koyili Hospital to conduct background verification including:', '☐ Identity verification', '☐ Address verification', '☐ Educational qualification verification', '☐ Employment history verification', '☐ Criminal record check', '☐ Credit history check (if applicable)', '☐ Professional license verification', '☐ Reference checks', '', 'I consent to the hospital contacting previous employers, educational institutions, and references.']
+          },
+          {
+            title: 'Section 7 - Police Verification',
+            fields: ['Police verification required: Yes / No', '', 'If Yes:', 'Local Police Station: ________', 'Police Station Address: ________', '', 'Police Verification Certificate:', 'Certificate Number: ________', 'Issue Date: ________', 'Valid Until: ________', '', 'Status: Verification in Progress / Completed / Not Required']
+          },
+          {
+            title: 'Section 8 - Medical Fitness Verification',
+            fields: ['Medical examination conducted: Yes / No', '', 'Medical Center Name: ________', 'Date of Examination: ________', '', 'Medical Fitness Status:', '☐ Fit for all duties', '☐ Fit with restrictions', '☐ Unfit', '', 'Medical Certificate Number: ________', 'Validity Period: ________', '', 'Vaccinations (if required):', '☐ COVID-19 (fully vaccinated)', '☐ Hepatitis B (for healthcare staff)', '☐ Other: ________']
+          },
+          {
+            title: 'Section 9 - Court Records/Litigation Check',
+            fields: ['Any ongoing/past criminal litigation? Yes / No', '', 'If Yes:', 'Nature of case: ________', 'Court Name: ________', 'Case Number: ________', 'Status: ________', '', 'Any pending civil litigation? Yes / No', 'Details: ________', '', 'Any disciplinary action by previous employer? Yes / No', 'Details: ________']
+          },
+          {
+            title: 'Section 10 - Employee Declaration',
+            fields: ['I hereby declare that:', '', '1. All information provided is true, complete, and correct', '2. Documents submitted are genuine and not forged', '3. I have not suppressed any material information', '4. I understand that false information may lead to:', '   - Rejection of application', '   - Termination if employed', '   - Legal action', '5. I authorize verification of all information provided', '6. I will provide additional documents if requested', '7. I understand this verification is mandatory for employment', '', 'Place: ________', 'Date: ________', '', 'Employee Signature: ________']
+          },
+          {
+            title: 'Section 11 - Employer Verification (For HR use only)',
+            fields: ['Verification conducted by: ________', 'Designation: ________', 'Date of verification: ________', '', 'Documents Verified:', '☐ Aadhaar - Original seen: Yes / No', '☐ PAN Card - Original seen: Yes / No', '☐ Educational Certificates - Original seen: Yes / No', '☐ Experience Letters - Original seen: Yes / No', '☐ Passport - Original seen: Yes / No (if applicable)', '', 'Background Verification:', '☐ Identity verification: Clear / Discrepancy', '☐ Address verification: Clear / Discrepancy', '☐ Education verification: Clear / Discrepancy', '☐ Employment verification: Clear / Discrepancy', '☐ Criminal record check: Clear / Discrepancy', '', 'Verification Status: Complete / Incomplete / In Progress', '', 'Remarks:', '', '', 'Overall Status:', '☐ Verified and Approved', '☐ Verification Pending', '☐ Discrepancies Found - Refer to CHRO', '', 'Verified by:', 'Name: ________', 'Designation: ________', 'Date: ________', 'Signature: ________']
+          },
+          {
+            title: 'Section 12 - Final Approval',
+            fields: ['Background Verification Report reviewed: Yes', 'All documents verified: Yes / No', '', 'Approved for employment: Yes / No / Conditional', '', 'Conditions (if any):', '', '', 'HR Manager:', 'Name: ________', 'Signature: ________', 'Date: ________']
+          }
+        ],
+        instructions: 'Complete within 3 days of joining. Bring original documents for verification. Copies will be retained by HR. Background verification may take 2-4 weeks. Employment subject to clear verification.',
+        approvalRequired: 'HR verification and approval',
+        processingTime: '2-4 weeks for complete verification'
+      },
+      { 
+        name: 'POSH Complaint Form', 
+        code: 'STAT-004', 
+        description: 'Sexual harassment complaint form (POSH Act compliance)',
+        sections: [
+          {
+            title: 'POSH Complaint Form',
+            fields: ['COMPLAINT UNDER THE SEXUAL HARASSMENT OF WOMEN AT WORKPLACE', '(PREVENTION, PROHIBITION AND REDRESSAL) ACT, 2013', '', 'CONFIDENTIAL', '', 'Complaint Number: POSH-________ (to be allotted by ICC)', 'Date of Receipt: ________']
+          },
+          {
+            title: 'Complainant Details',
+            fields: ['Name of Complainant: ________', '(Name can be withheld if requested)', '', 'Employee ID (if employee): ________', 'Department: ________', 'Designation: ________', '', 'If Non-Employee:', 'Relationship with organization:', '☐ Consultant', '☐ Intern', '☐ Vendor/Contractor', '☐ Patient/Visitor', '☐ Other: ________', '', 'Contact Details:', 'Mobile Number: ________', 'Email Address: ________', 'Preferred mode of contact: Phone / Email / In-person', '', 'Preferred language for communication: ________']
+          },
+          {
+            title: 'Respondent Details',
+            fields: ['Name of Respondent (accused): ________', '', 'Employee ID (if employee): ________', 'Department: ________', 'Designation: ________', '', 'If Non-Employee:', '☐ Consultant', '☐ Vendor/Contractor', '☐ Client', '☐ Patient/Visitor', '☐ Other: ________', '', 'Relationship with complainant:', '☐ Supervisor', '☐ Colleague', '☐ Subordinate', '☐ Client', '☐ No professional relationship', '☐ Other: ________']
+          },
+          {
+            title: 'Nature of Complaint',
+            fields: ['Type of Sexual Harassment (check all that apply):', '', '☐ Physical contact and advances', '☐ Demand or request for sexual favors', '☐ Sexually colored remarks', '☐ Showing pornography or sexually explicit material', '☐ Any other unwelcome physical, verbal, or non-verbal conduct of sexual nature', '☐ Eve-teasing', '☐ Innuendos and taunts', '☐ Gender-based insults or sexist remarks', '☐ Unwelcome touching', '☐ Stalking', '☐ Sounds or gestures of sexual nature', '☐ Display of sexually explicit pictures/posters', '☐ Forcible physical touch or molestation', '☐ Physical confinement', '☐ Threat of sexual nature', '', 'Severity:', '☐ Minor incident', '☐ Moderate', '☐ Severe', '☐ Extremely severe / criminal in nature']
+          },
+          {
+            title: 'Details of Incident',
+            fields: ['Incident 1:', 'Date of Incident: ________', 'Time: ________', 'Location/Place: ________', '', 'Detailed description of what happened:', '', '', '', '', '', '', '', 'Was this the first incident? Yes / No', '', 'If No, previous incidents:', 'Previous incidents occurred on (dates): ________', 'Were previous incidents reported? Yes / No', 'If yes, to whom: ________']
+          },
+          {
+            title: 'Additional Incidents',
+            fields: ['Incident 2 (if applicable):', 'Date: ________', 'Description: ', '', '', '', 'Incident 3 (if applicable):', 'Date: ________', 'Description: ', '', '', '']
+          },
+          {
+            title: 'Impact on Complainant',
+            fields: ['How has this incident affected you?', '', '☐ Mental trauma/stress', '☐ Anxiety/depression', '☐ Unable to concentrate on work', '☐ Physical health issues', '☐ Fear and intimidation', '☐ Humiliation', '☐ Career impact', '☐ Contemplating resignation', '☐ Other: ________', '', 'Have you sought any support?', '☐ Counseling', '☐ Medical help', '☐ Legal advice', '☐ Informal complaint', '☐ None']
+          },
+          {
+            title: 'Witnesses (if any)',
+            fields: ['Were there any witnesses?', 'Yes / No', '', 'If Yes:', 'Witness 1:', 'Name: ________', 'Designation/Relationship: ________', 'Contact: ________', 'What did they witness: ________', '', 'Witness 2:', 'Name: ________', 'Designation/Relationship: ________', 'Contact: ________', '', 'Witness 3:', 'Name: ________', 'Designation/Relationship: ________', 'Contact: ________']
+          },
+          {
+            title: 'Evidence/Supporting Documents',
+            fields: ['Do you have any evidence?', 'Yes / No', '', 'Type of evidence:', '☐ Email communications', '☐ Text messages/WhatsApp chats', '☐ Audio recording', '☐ Video recording', '☐ Photographs', '☐ Written notes', '☐ CCTV footage', '☐ Social media communications', '☐ Other: ________', '', 'Documents attached:', '1.', '2.', '3.', '', 'Note: All evidence will be kept confidential']
+          },
+          {
+            title: 'Previous Actions Taken',
+            fields: ['Did you try to resolve this informally? Yes / No', '', 'If Yes, what actions did you take?', '', '', '', 'Did you report to:', '☐ Immediate supervisor', '☐ HR Department', '☐ Any other authority', '', 'Response received: ________', '', 'Are you satisfied with the response? Yes / No']
+          },
+          {
+            title: 'Relief Sought',
+            fields: ['What resolution/action do you expect?', '', '☐ Written apology from respondent', '☐ Warning to respondent', '☐ Transfer of respondent to another location/department', '☐ Suspension of respondent', '☐ Termination of respondent', '☐ Restraining order (no contact)', '☐ Compensation for mental trauma', '☐ Counseling support', '☐ Protection from retaliation', '☐ Criminal proceedings', '☐ Other: ________', '', 'Detailed description of relief sought:', '', '']
+          },
+          {
+            title: 'Interim Relief Required',
+            fields: ['Do you need any immediate interim relief pending inquiry?', '', '☐ Transfer to another department/location', '☐ Change of reporting manager', '☐ Grant leave for specific period', '☐ Restrain respondent from contacting/approaching', '☐ Counseling support', '☐ Other: ________']
+          },
+          {
+            title: 'Confidentiality Request',
+            fields: ['Confidentiality is maintained by law. However, please specify:', '', 'Can your identity be disclosed to respondent for fair inquiry? Yes / No', '', 'Note: For fair inquiry, respondent will be informed of charges. Complete anonymity may not be possible, but all information will be treated confidentially.']
+          },
+          {
+            title: 'Complainant\'s Declaration',
+            fields: ['I hereby declare that:', '', '1. The complaint is being made in good faith', '2. All information provided is true to the best of my knowledge', '3. I have not made this complaint with malicious intent', '4. I am willing to cooperate in the inquiry process', '5. I understand that providing false information may lead to action against me', '6. I understand my rights under POSH Act 2013', '7. I have the right to file police complaint for criminal acts', '', 'I understand that:', '- This complaint will be handled by Internal Complaints Committee (ICC)', '- Inquiry will be conducted confidentially and impartially', '- I am protected from retaliation', '- Report will be submitted within 90 days', '- Strict action will be taken against proven harassment', '', 'Place: ________', 'Date: ________', '', 'Complainant Signature: ________', '(Can be anonymous if requested)']
+          },
+          {
+            title: 'Acknowledgment by ICC',
+            fields: ['Complaint received on: ________', 'Complaint Number: POSH-________', 'Received by (ICC Member): ________', '', 'Preliminary Assessment:', '☐ Falls under POSH Act', '☐ Does not fall under POSH Act', '☐ Needs clarification', '', 'Priority: High / Medium / Low', '', 'ICC Meeting scheduled on: ________', '', 'Interim relief granted:', '☐ Yes', '☐ No', '☐ Under consideration', '', 'Details of interim relief: ________', '', 'ICC Chairperson:', 'Name: ________', 'Signature: ________', 'Date: ________']
+          },
+          {
+            title: 'Inquiry Process (For ICC Use)',
+            fields: ['Inquiry constituted on: ________', '', 'Inquiry Committee Members:', '1. ________ (Chairperson)', '2. ________', '3. ________', '4. ________ (External member - if applicable)', '', 'Notice issued to respondent on: ________', 'Respondent reply received on: ________', '', 'Witness statements recorded:', '1. ________ on ________', '2. ________ on ________', '3. ________ on ________', '', 'Evidence examined:', '', '', 'Inquiry report submitted on: ________', '', 'Findings:', '☐ Complaint proved', '☐ Complaint not proved', '☐ Partially proved', '', 'Recommended Action:', '', '', '', 'Report submitted to Employer on: ________']
+          },
+          {
+            title: 'Final Action (For Employer)',
+            fields: ['Action taken based on ICC report:', '', '', 'Date of implementation: ________', '', 'Complainant informed on: ________', 'Respondent informed on: ________', '', 'Case Status: Closed / Appeal Filed / Under Review', '', 'Authorized Signatory:', 'Name: ________', 'Designation: ________', 'Date: ________']
+          },
+          {
+            title: 'Important Information',
+            fields: ['Know Your Rights:', '', '1. Right to file complaint within 3 months of incident (extendable to 6 months)', '2. Right to confidentiality', '3. Right to be heard and present evidence', '4. Right to protection from retaliation', '5. Right to interim relief', '6. Right to appeal', '7. Right to legal representation', '8. Right to file police complaint for criminal offenses', '', 'ICC Contact Details:', 'Chairperson: ________', 'Email: ________', 'Phone: ________', 'Location: ________', '', 'Helpline: ________', '', 'External Support:', 'Local Police Women\'s Cell: ________', 'National Commission for Women: 7827170170', 'Women Helpline: 181']
+          }
+        ],
+        instructions: 'File complaint with Internal Complaints Committee (ICC) within 3 months of incident. Complaint can be made anonymously. ICC will maintain confidentiality. Inquiry will be completed within 90 days. Complainant protected from retaliation. For criminal offenses, file police complaint.',
+        approvalRequired: 'ICC investigation and employer action',
+        processingTime: '90 days for inquiry completion as per POSH Act'
+      },
+      { 
+        name: 'Accident Report Form', 
+        code: 'STAT-005', 
+        description: 'Workplace accident/incident reporting',
+        sections: [
+          {
+            title: 'Workplace Accident/Incident Report Form',
+            fields: ['ACCIDENT/INCIDENT REPORT', '(As per Factories Act 1948, OSH regulations, and ESI Act 1948)', '', 'Report Number: ACC-________', 'Date of Report: ________', 'Time of Report: ________']
+          },
+          {
+            title: 'Type of Event',
+            fields: ['This report is for:', '☐ Accident (injury occurred)', '☐ Near-miss (no injury but potential for harm)', '☐ Dangerous occurrence', '☐ Occupational illness', '☐ Property damage', '☐ Fire/explosion', '☐ Other: ________', '', 'Severity Level:', '☐ Fatal', '☐ Serious/Major injury', '☐ Minor injury', '☐ First aid case', '☐ Near-miss', '☐ Property damage only']
+          },
+          {
+            title: 'Injured Person Details',
+            fields: ['Name of injured person: ________', 'Employee ID (if employee): ________', 'Age: ________ years', 'Gender: Male / Female / Other', '', 'Department: ________', 'Designation: ________', 'Nature of Employment:', '☐ Permanent employee', '☐ Contract worker', '☐ Trainee/Intern', '☐ Vendor/Contractor staff', '☐ Visitor', '☐ Patient/Attendant', '', 'Experience in current role: ________ years ________ months', 'Experience in similar work: ________ years', '', 'Contact Details:', 'Mobile: ________', 'Emergency Contact Name: ________', 'Emergency Contact Number: ________']
+          },
+          {
+            title: 'Accident Details',
+            fields: ['Date of Accident: ________', 'Time of Accident: ________', 'Shift: Morning / Evening / Night', '', 'Location of Accident:', 'Department/Area: ________', 'Specific location: ________', 'Floor/Building: ________', '', 'Activity being performed at time of accident:', '', '', '', 'Was the person authorized for this activity? Yes / No', 'Was required training provided? Yes / No', 'Was PPE (Personal Protective Equipment) being used? Yes / No / Not Required']
+          },
+          {
+            title: 'Description of Accident',
+            fields: ['Detailed description of how the accident occurred:', '', '', '', '', '', '', '', 'What happened immediately before the accident?', '', '', '', 'What happened immediately after the accident?', '', '']
+          },
+          {
+            title: 'Nature of Injury',
+            fields: ['Type of Injury:', '☐ Cut/Laceration', '☐ Bruise/Contusion', '☐ Fracture', '☐ Sprain/Strain', '☐ Burn (Heat/Chemical/Electrical)', '☐ Electric shock', '☐ Foreign body in eye', '☐ Needle stick injury', '☐ Slip/Trip/Fall', '☐ Hit by falling object', '☐ Chemical exposure', '☐ Biological exposure', '☐ Inhalation injury', '☐ Back injury', '☐ Head injury', '☐ Multiple injuries', '☐ Other: ________', '', 'Body Part(s) Affected:', '☐ Head', '☐ Eye', '☐ Face', '☐ Neck', '☐ Shoulder', '☐ Arm', '☐ Hand/Fingers', '☐ Chest', '☐ Abdomen', '☐ Back', '☐ Leg', '☐ Knee', '☐ Foot/Toes', '☐ Multiple body parts', '', 'Severity of Injury:', '☐ First aid only', '☐ Medical treatment (no time off)', '☐ Restricted work', '☐ Lost time injury (days off work)', '☐ Permanent partial disability', '☐ Permanent total disability', '☐ Fatality']
+          },
+          {
+            title: 'Immediate Action Taken',
+            fields: ['First aid provided: Yes / No', 'First aid provided by: ________', 'Time of first aid: ________', '', 'Medical attention required: Yes / No', '', 'If Yes:', 'Treated at: ', '☐ On-site medical center', '☐ Hospital casualty', '☐ Hospital admission', '', 'Hospital Name: ________', 'Time of arrival at hospital: ________', 'Ambulance used: Yes / No', '', 'Treatment provided:', '', '', '', 'Hospitalization required: Yes / No', 'If Yes, expected duration: ________ days', '', 'Current status of injured person:', '☐ Returned to work', '☐ On medical leave', '☐ Hospitalized', '☐ Deceased']
+          },
+          {
+            title: 'Witnesses',
+            fields: ['Were there any witnesses? Yes / No', '', 'Witness 1:', 'Name: ________', 'Employee ID: ________', 'Designation: ________', 'Contact: ________', 'Statement:', '', '', '', 'Witness 2:', 'Name: ________', 'Employee ID: ________', 'Statement:', '', '', '']
+          },
+          {
+            title: 'Equipment/Tools Involved',
+            fields: ['Was any equipment/tool/machine involved? Yes / No', '', 'If Yes:', 'Equipment Name: ________', 'Equipment ID/Tag Number: ________', 'Make and Model: ________', '', 'Equipment condition before accident:', '☐ Good working condition', '☐ Faulty/defective', '☐ Under maintenance', '☐ Not maintained properly', '', 'Last maintenance date: ________', 'Last safety inspection date: ________', '', 'Was safety guard/device in place? Yes / No', 'Was lockout/tagout followed (if applicable)? Yes / No', '', 'Equipment sealed after accident: Yes / No']
+          },
+          {
+            title: 'Chemical/Biological/Radiation Exposure',
+            fields: ['(Complete only if exposure incident)', '', 'Substance involved: ________', 'Chemical name/formula: ________', 'Quantity/Concentration: ________', '', 'Route of exposure:', '☐ Inhalation', '☐ Skin contact', '☐ Eye contact', '☐ Ingestion', '☐ Injection/Puncture', '', 'MSDS (Material Safety Data Sheet) available: Yes / No', 'Was required PPE used? Yes / No', '', 'Decontamination done: Yes / No', 'Medical surveillance initiated: Yes / No']
+          },
+          {
+            title: 'Root Cause Analysis',
+            fields: ['Immediate cause of accident:', '', '', '', 'Underlying causes (check all that apply):', '☐ Inadequate training', '☐ Lack of supervision', '☐ Failure to follow SOP', '☐ Equipment failure', '☐ Poor maintenance', '☐ Inadequate PPE', '☐ Time pressure/rushing', '☐ Fatigue', '☐ Poor housekeeping', '☐ Inadequate lighting', '☐ Slippery floor', '☐ Lack of safety guards', '☐ Communication failure', '☐ Inadequate risk assessment', '☐ Other: ________', '', 'Contributing factors:', '', '', '', 'Human factors:', '☐ Error/mistake', '☐ Violation of safety rule', '☐ Lack of awareness', '☐ Complacency', '☐ Physical capability issue', '', 'System factors:', '☐ Inadequate procedure', '☐ Lack of procedure', '☐ Inadequate equipment', '☐ Design deficiency', '☐ Organizational factors']
+          },
+          {
+            title: 'Corrective Actions Required',
+            fields: ['Immediate corrective actions taken:', '1.', '2.', '3.', '', 'Short-term corrective actions (within 1 week):', '1.', '2.', '3.', '', 'Long-term corrective actions (within 1 month):', '1.', '2.', '3.', '', 'Preventive measures to avoid recurrence:', '1.', '2.', '3.', '', 'Responsible person for each action:', 'Action 1 - Owner: ________ Target date: ________', 'Action 2 - Owner: ________ Target date: ________', 'Action 3 - Owner: ________ Target date: ________']
+          },
+          {
+            title: 'Regulatory Reporting',
+            fields: ['Is this accident reportable to statutory authorities? Yes / No', '', 'If Yes, report to:', '☐ Factory Inspector (Factories Act)', '☐ ESI Corporation (if ESI-covered employee)', '☐ Labour Department', '☐ Pollution Control Board (if environmental incident)', '☐ Fire Department', '☐ Local Police (if criminal negligence suspected)', '', 'Reports filed with:', '1. Authority: ________ Date: ________', '2. Authority: ________ Date: ________', '', 'Reference numbers:', ''}
+          },
+          {
+            title: 'Cost of Accident',
+            fields: ['(For record and analysis)', '', 'Direct costs:', 'Medical expenses: ₹ ________', 'Property damage: ₹ ________', 'Equipment repair/replacement: ₹ ________', '', 'Indirect costs:', 'Lost production time: ________ hours', 'Investigation time: ________ hours', 'Training/retraining cost: ₹ ________', '', 'Estimated total cost: ₹ ________']
+          },
+          {
+            title: 'Reported By',
+            fields: ['Name: ________', 'Designation: ________', 'Department: ________', 'Contact: ________', '', 'Signature: ________', 'Date: ________']
+          },
+          {
+            title: 'Immediate Supervisor Review',
+            fields: ['Supervisor Name: ________', 'Designation: ________', '', 'Comments:', '', '', '', 'Was safety procedure followed? Yes / No', 'Was training adequate? Yes / No', 'Corrective actions agreed: Yes / No', '', 'Signature: ________', 'Date: ________']
+          },
+          {
+            title: 'Safety Officer Investigation',
+            fields: ['Investigation conducted by: ________', 'Date of investigation: ________', '', 'Site inspection done: Yes / No', 'Photographs taken: Yes / No', 'Statements recorded: Yes / No', 'Equipment examined: Yes / No', '', 'Investigation findings:', '', '', '', '', 'Root cause identified: ________', '', 'Recommendations:', '1.', '2.', '3.', '', 'Classification:', '☐ Preventable', '☐ Partially preventable', '☐ Not preventable', '', 'Safety Officer Name: ________', 'Signature: ________', 'Date: ________']
+          },
+          {
+            title: 'Management Review',
+            fields: ['Reviewed by:', 'Department Head: ________ Date: ________', 'HR Manager: ________ Date: ________', 'Safety Committee: ________ Date: ________', '', 'Actions approved:', '☐ All recommended actions approved', '☐ Partial approval', '☐ Modified actions', '', 'Budget allocated for corrective actions: ₹ ________', '', 'Follow-up audit scheduled on: ________', '', 'Final Approval:', 'Name: ________', 'Designation: ________', 'Signature: ________', 'Date: ________']
+          },
+          {
+            title: 'Closure',
+            fields: ['All corrective actions completed: Yes / No', 'Completion date: ________', '', 'Effectiveness of actions verified: Yes / No', 'Verification date: ________', 'Verified by: ________', '', 'Lessons learned communicated to:', '☐ Department', '☐ All employees', '☐ Safety committee', '☐ Management', '', 'Case closed on: ________', 'Closed by: ________', '', 'Final Report filed: Yes', 'Copy provided to:', '☐ Employee', '☐ Department', '☐ HR', '☐ Safety file', '☐ Regulatory authority']
+          }
+        ],
+        instructions: 'Report all accidents/incidents immediately to supervisor and Safety Officer. Fatal/serious accidents must be reported to statutory authorities within 24 hours. Investigation must be completed within 72 hours. Maintain confidentiality. Use for learning and prevention.',
+        approvalRequired: 'Supervisor, Safety Officer, Management',
+        processingTime: 'Immediate reporting, investigation within 72 hours'
+      }
     ]
   }
 };
