@@ -18,6 +18,7 @@ const HRByLaws = ({ setActiveModule }) => {
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
   const [expandedSections, setExpandedSections] = useState({});
   const [isPrintMode, setIsPrintMode] = useState(false);
+  const [showGovernanceWizard, setShowGovernanceWizard] = useState(false);
   const contentRef = useRef(null);
 
   // Professional Legal Document Formatter
