@@ -973,10 +973,266 @@ export const annexuresData = {
     searchTerms: ['grievance', 'complaint', 'disciplinary'],
     category: 'Employee Relations',
     forms: [
-      { name: 'Grievance Form', code: 'GRV-001', description: 'File employee grievance' },
-      { name: 'Show Cause Notice Template', code: 'DISC-001', description: 'Disciplinary notice' },
-      { name: 'Explanation Letter Format', code: 'DISC-002', description: 'Employee response format' },
-      { name: 'Warning Letter Template', code: 'DISC-003', description: 'Verbal/written warning' }
+      { 
+        name: 'Grievance Form', 
+        code: 'GRV-001', 
+        description: 'File employee grievance or complaint',
+        sections: [
+          {
+            title: 'Employee Information',
+            fields: ['Employee Name', 'Employee ID', 'Department', 'Designation', 'Date of Joining', 'Contact Number', 'Email Address', 'Grievance Filing Date']
+          },
+          {
+            title: 'Nature of Grievance',
+            fields: ['Category of Grievance:', '☐ Working Conditions', '☐ Compensation/Benefits', '☐ Work Allocation/Assignment', '☐ Career Growth/Promotion', '☐ Transfer/Posting', '☐ Discrimination/Harassment', '☐ Supervisor/Management Issues', '☐ Safety Concerns', '☐ Policy Implementation', '☐ Colleague Behavior', '☐ Other (please specify): _______']
+          },
+          {
+            title: 'Detailed Description of Grievance',
+            fields: ['Please provide detailed description of your grievance:', '', '', '', 'When did this issue occur? (Date/Period):', 'Where did this incident take place?', 'Is this a recurring issue? Yes / No', 'If yes, frequency: _______', '', 'Persons involved (if any):', 'Name(s):', 'Designation(s):', 'Department(s):']
+          },
+          {
+            title: 'Impact of Grievance',
+            fields: ['How has this issue affected you?', '☐ Mental/emotional stress', '☐ Physical health impact', '☐ Work performance affected', '☐ Career advancement hindered', '☐ Financial loss', '☐ Professional reputation', '☐ Workplace relationships', '☐ Other: _______', '', 'Severity Level: High / Medium / Low']
+          },
+          {
+            title: 'Previous Actions Taken',
+            fields: ['Have you tried to resolve this issue before? Yes / No', '', 'If yes, what steps did you take?', '', '', 'Did you discuss with immediate supervisor? Yes / No', 'Supervisor response/action:', '', '', 'Did you discuss with HR informally? Yes / No', 'HR response:', '', '']
+          },
+          {
+            title: 'Supporting Evidence',
+            fields: ['Do you have supporting documents/evidence? Yes / No', '', 'Type of evidence:', '☐ Email communications', '☐ Written documents', '☐ Photographs', '☐ Witness statements', '☐ Audio/Video recordings', '☐ Other: _______', '', 'List of documents attached:', '', '', 'Witnesses (if any):', 'Name(s) and contact details:']
+          },
+          {
+            title: 'Desired Resolution',
+            fields: ['What resolution/action do you expect?', '', '', '', 'Would you prefer mediation? Yes / No', 'Are you willing to discuss with the concerned party? Yes / No', 'Timeline expected for resolution: Immediate / Within 1 week / Within 1 month']
+          },
+          {
+            title: 'Confidentiality Request',
+            fields: ['Do you want this grievance to be kept confidential? Yes / No', 'Can we disclose your identity to investigate? Yes / No / Partial', '', 'Note: Some investigations may require disclosure of identity for fair hearing.']
+          },
+          {
+            title: 'Employee Declaration',
+            fields: ['I declare that:', '1. The information provided is true and accurate to the best of my knowledge', '2. I have not filed this grievance with malicious intent', '3. I am willing to cooperate in the investigation', '4. I understand that false complaints may lead to disciplinary action', '', 'Employee Signature: ________ Date: ____']
+          },
+          {
+            title: 'Acknowledgment by HR',
+            fields: ['Grievance received on: ________', 'Grievance Reference Number: GRV-______', 'Received by (HR): ________', 'Acknowledged to employee: Yes / No', 'Expected resolution timeline: ________ days', '', 'HR Signature: ________ Date: ____']
+          },
+          {
+            title: 'Investigation & Resolution (For HR Use)',
+            fields: ['Investigation initiated on: ________', 'Investigating Officer: ________', 'Statements recorded from:', '- Employee:', '- Concerned party:', '- Witnesses:', '', 'Investigation findings:', '', '', 'Action taken:', '', '', 'Resolution date: ________', 'Employee informed on: ________', 'Grievance status: Resolved / Partially Resolved / Under Review / Escalated', '', 'HR Manager Signature: ________ Date: ____']
+          }
+        ],
+        instructions: 'Submit to HR Department confidentially. Grievances will be investigated impartially. Retaliation against grievance filing is strictly prohibited. Resolution timeline: 15-30 days depending on complexity.',
+        approvalRequired: 'HR Investigation',
+        processingTime: '15-30 days'
+      },
+      { 
+        name: 'Show Cause Notice Template', 
+        code: 'DISC-001', 
+        description: 'Disciplinary notice for misconduct',
+        sections: [
+          {
+            title: 'Notice Header',
+            fields: ['KOYILI HOSPITAL', 'SHOW CAUSE NOTICE', '', 'Notice No: SCN-________', 'Date: ________', '', 'CONFIDENTIAL']
+          },
+          {
+            title: 'To',
+            fields: ['Employee Name: ________', 'Employee ID: ________', 'Designation: ________', 'Department: ________']
+          },
+          {
+            title: 'Subject',
+            fields: ['Subject: Show Cause Notice for [Type of Misconduct]']
+          },
+          {
+            title: 'Notice Body',
+            fields: ['Dear [Employee Name],', '', 'This is to inform you that the Management has taken serious note of the following incident(s)/misconduct:']
+          },
+          {
+            title: 'Charges/Allegations',
+            fields: ['1. Nature of Misconduct:', '   ☐ Unauthorized absence', '   ☐ Late coming/early leaving', '   ☐ Insubordination', '   ☐ Negligence of duty', '   ☐ Violation of safety rules', '   ☐ Breach of confidentiality', '   ☐ Misuse of hospital property', '   ☐ Unprofessional conduct', '   ☐ Patient safety compromise', '   ☐ Fraudulent activity', '   ☐ Other: _______', '', '2. Specific Details of Incident:', 'Date of Incident: ________', 'Time: ________', 'Location: ________', '', '3. Description of Misconduct:', '', '', '', '', '4. Evidence/Witnesses:', 'Supporting documents: ________', 'Witness statements: ________', 'Supervisor report: ________']
+          },
+          {
+            title: 'Policy Violation',
+            fields: ['Your actions constitute violation of:', '- Employment Contract Clause: ________', '- HR By-Laws Section: ________', '- Hospital Policy: ________', '- Code of Conduct: ________', '', 'This conduct is considered: Gross Misconduct / Misconduct / Minor Infraction']
+          },
+          {
+            title: 'Previous Warnings',
+            fields: ['Previous disciplinary record:', 'Verbal Warning dated: ________ (if any)', 'Written Warning dated: ________ (if any)', 'Suspension dated: ________ (if any)', '', 'Despite previous warning(s), the misconduct has been repeated/continued.']
+          },
+          {
+            title: 'Show Cause Requirement',
+            fields: ['You are hereby required to submit a written explanation within **[X] working days** from receipt of this notice, stating:', '', '1. Why disciplinary action should not be taken against you', '2. Your version of the incident with supporting evidence', '3. Any mitigating circumstances', '4. Steps you will take to prevent recurrence', '', 'Your explanation should be submitted to:', 'Name: ________ (HR Manager/Designated Officer)', 'Department: Human Resources', 'Email: ________']
+          },
+          {
+            title: 'Consequences of Non-Response',
+            fields: ['Please note:', '- Failure to respond within stipulated time will be considered as admission of charges', '- Disciplinary action may be taken ex-parte without further notice', '- Possible actions include: warning, suspension, salary deduction, demotion, or termination', '- You have the right to seek representation from internal committee']
+          },
+          {
+            title: 'Rights of Employee',
+            fields: ['You have the right to:', '1. Submit written explanation', '2. Present your case before disciplinary committee', '3. Provide documentary evidence', '4. Call witnesses in your defense', '5. Seek representation (as per policy)', '', 'A fair and impartial inquiry will be conducted before any final decision.']
+          },
+          {
+            title: 'Interim Measures',
+            fields: ['Pending investigation:', '☐ You are suspended from duty with/without pay', '☐ You are transferred to [Department]', '☐ You will work under supervision', '☐ Access to [systems/areas] is restricted', '☐ No interim action', '', 'Effective from: ________']
+          },
+          {
+            title: 'Issued By',
+            fields: ['', '[Name]', '[Designation]', 'Human Resources Department', 'For Koyili Hospital', '', 'Date: ________', 'Signature: ________']
+          },
+          {
+            title: 'Acknowledgment of Receipt',
+            fields: ['I acknowledge receipt of this Show Cause Notice on [Date].', '', 'Employee Signature: ________', 'Date: ________', '', 'OR', '', 'Delivered by: ________ (if employee refuses to sign)', 'Witness 1: ________ Signature: ________', 'Witness 2: ________ Signature: ________']
+          }
+        ],
+        instructions: 'Issue after preliminary investigation. Provide reasonable time to respond (typically 3-7 days). Maintain confidentiality. Document delivery and acknowledgment. Conduct fair inquiry before final action.',
+        approvalRequired: 'Department Head, HR Manager, Legal (if gross misconduct)',
+        processingTime: 'Issue after incident investigation'
+      },
+      { 
+        name: 'Explanation Letter Format', 
+        code: 'DISC-002', 
+        description: 'Employee response to show cause notice',
+        sections: [
+          {
+            title: 'Letter Header',
+            fields: ['Date: ________', '', 'To:', '[Name of Issuing Authority]', '[Designation]', 'Human Resources Department', 'Koyili Hospital']
+          },
+          {
+            title: 'Subject',
+            fields: ['Subject: Explanation in response to Show Cause Notice No. ________ dated ________']
+          },
+          {
+            title: 'Reference',
+            fields: ['Ref: Show Cause Notice No: SCN-________', 'Date of Notice: ________', 'Employee Name: ________', 'Employee ID: ________', 'Designation: ________', 'Department: ________']
+          },
+          {
+            title: 'Opening',
+            fields: ['Dear Sir/Madam,', '', 'I am writing in response to the Show Cause Notice issued to me on [Date] regarding [brief mention of allegation].', '', 'I respectfully submit my explanation as follows:']
+          },
+          {
+            title: 'Acknowledgment of Receipt',
+            fields: ['I acknowledge receipt of the Show Cause Notice dated ________ on ________.', '', 'I have understood the charges/allegations mentioned in the notice.']
+          },
+          {
+            title: 'Your Version of Events',
+            fields: ['Regarding the incident on [Date]:', '', 'My version of what transpired is as follows:', '', '', '', '', '', 'I would like to clarify the following points:', '1.', '2.', '3.']
+          },
+          {
+            title: 'Response to Specific Charges',
+            fields: ['Addressing each charge mentioned in the notice:', '', 'Charge 1: [Restate charge]', 'My response: ', '', '', '', 'Charge 2: [Restate charge]', 'My response: ', '', '', '', '(Continue for all charges)']
+          },
+          {
+            title: 'Mitigating Circumstances',
+            fields: ['I would like to bring to your attention the following circumstances:', '', '', '', '', 'Factors beyond my control:', '', '', '', 'My past record: (mention clean record, years of service, previous commendations if applicable)']
+          },
+          {
+            title: 'Supporting Evidence',
+            fields: ['In support of my explanation, I am attaching the following documents:', '1.', '2.', '3.', '', 'Witness statements (if any):', 'Name: ________ Designation: ________ Contact: ________', 'Name: ________ Designation: ________ Contact: ________']
+          },
+          {
+            title: 'Acceptance of Mistake (if applicable)',
+            fields: ['(Use this section only if acknowledging partial/full mistake)', '', 'I accept that [describe what went wrong].', '', 'However, this was not intentional and occurred due to [reason].', '', 'I assure you that this was an isolated incident and not reflective of my character or work ethic.']
+          },
+          {
+            title: 'Action Plan / Assurance',
+            fields: ['I would like to assure you that:', '', '1. I will be more careful/diligent in future', '2. I will undergo any additional training if required', '3. I will strictly adhere to hospital policies and procedures', '4. This will not be repeated', '', 'Steps I propose to take:', '', '', '']
+          },
+          {
+            title: 'Request for Leniency',
+            fields: ['Considering:', '- My [X] years of service with the hospital', '- My clean disciplinary record', '- The circumstances mentioned above', '- My sincere regret for any inconvenience caused', '', 'I humbly request you to consider my explanation and take a lenient view of the matter.']
+          },
+          {
+            title: 'Request for Personal Hearing',
+            fields: ['I would appreciate an opportunity to present my case in person before the disciplinary committee.', '', 'I am available on [mention dates/times] for a personal hearing if deemed necessary.']
+          },
+          {
+            title: 'Closing',
+            fields: ['I trust that my explanation will be given due consideration. I remain committed to my duties and to upholding the values of Koyili Hospital.', '', 'Thank you for your understanding.', '', 'Respectfully,', '', '[Your Name]', '[Employee ID]', '[Designation]', '[Department]', '[Contact Number]', '[Email Address]', '', 'Date: ________', 'Signature: ________']
+          },
+          {
+            title: 'Enclosures',
+            fields: ['List of documents attached:', '1.', '2.', '3.']
+          }
+        ],
+        instructions: 'Submit within stipulated timeline (usually 3-7 days). Be honest, factual, and professional. Avoid emotional language. Provide evidence if available. Maintain respectful tone. Keep a copy for your records.',
+        approvalRequired: 'Submit to HR as per notice',
+        processingTime: 'Submit as per deadline in Show Cause Notice'
+      },
+      { 
+        name: 'Warning Letter Template', 
+        code: 'DISC-003', 
+        description: 'Verbal or written warning for misconduct',
+        sections: [
+          {
+            title: 'Letter Header',
+            fields: ['KOYILI HOSPITAL', '[TYPE: VERBAL WARNING / WRITTEN WARNING / FINAL WARNING]', '', 'Warning Letter No: WL-________', 'Date: ________', '', 'CONFIDENTIAL']
+          },
+          {
+            title: 'To',
+            fields: ['Employee Name: ________', 'Employee ID: ________', 'Designation: ________', 'Department: ________']
+          },
+          {
+            title: 'Subject',
+            fields: ['Subject: [Type] Warning for [Nature of Misconduct]']
+          },
+          {
+            title: 'Opening',
+            fields: ['Dear [Employee Name],', '', 'This letter serves as a [VERBAL / WRITTEN / FINAL] warning regarding your conduct/performance at Koyili Hospital.']
+          },
+          {
+            title: 'Incident Details',
+            fields: ['Date of Incident/Issue: ________', 'Time (if applicable): ________', 'Location: ________', '', 'Description of misconduct/issue:', '', '', '', '', 'This incident involved: (check applicable)', '☐ Violation of hospital policy', '☐ Breach of code of conduct', '☐ Performance deficiency', '☐ Attendance/punctuality issue', '☐ Insubordination', '☐ Patient care concern', '☐ Safety violation', '☐ Other: _______']
+          },
+          {
+            title: 'Policy/Standard Violated',
+            fields: ['Your conduct/performance falls short of expected standards as outlined in:', '- Employment Contract: Clause ________', '- HR By-Laws: Section ________', '- Hospital Policy: ________', '- Department SOP: ________', '- Code of Conduct: Article ________']
+          },
+          {
+            title: 'Previous Discussions',
+            fields: ['This matter was discussed with you on:', 'Date: ________ by [Supervisor Name]', '', 'Verbal counseling was provided on: ________ (if applicable)', '', 'Previous warning (if any):', 'Date: ________ Type: Verbal / Written', '', 'Despite previous counseling/warning, the issue has persisted.']
+          },
+          {
+            title: 'Expected Standards',
+            fields: ['You are expected to:', '1.', '2.', '3.', '4.', '', 'These expectations are in line with your job responsibilities and hospital policies.']
+          },
+          {
+            title: 'Warning Statement',
+            fields: ['This constitutes a [FIRST / SECOND / FINAL] warning.', '', 'You are hereby warned that:', '', '1. Any repetition of this conduct will lead to further disciplinary action', '', '2. Continued non-compliance may result in:', '   - Suspension (with/without pay)', '   - Demotion', '   - Salary deduction', '   - Termination of employment', '', '3. This warning will remain on your personnel file for [X] months/years', '', '4. It may affect your performance appraisal, increment, and promotion']
+          },
+          {
+            title: 'Improvement Plan',
+            fields: ['To correct this situation, you must:', '', 'Immediate actions:', '1.', '2.', '3.', '', 'Ongoing improvements:', '1.', '2.', '', 'Your performance/conduct will be monitored for the next [X] months.', '', 'Review meeting scheduled on: ________']
+          },
+          {
+            title: 'Support Offered',
+            fields: ['The Hospital is willing to support you through:', '☐ Additional training', '☐ Counseling', '☐ Mentoring', '☐ Clear communication of expectations', '☐ Regular feedback sessions', '', 'Please contact [Name, Designation] for assistance.']
+          },
+          {
+            title: 'Warning Validity',
+            fields: ['This warning is valid for: [X] months from date of issue', '', 'If no further incidents occur during this period, this warning will be removed from your active record (but may remain in permanent file as per policy).']
+          },
+          {
+            title: 'Right to Respond',
+            fields: ['You have the right to submit a written response to this warning within [X] days.', '', 'Submit response to:', '[Name]', '[Designation]', 'Email: ________']
+          },
+          {
+            title: 'Issued By',
+            fields: ['', '[Name]', '[Designation]', 'Department: ________', '', 'Reviewed and approved by:', '[HR Manager Name]', 'Human Resources Department', '', 'Date: ________', 'Signatures: ________________']
+          },
+          {
+            title: 'Acknowledgment of Receipt',
+            fields: ['I acknowledge receipt of this warning letter and understand its contents.', '', 'I understand that:', '1. This warning will remain on my file', '2. Further misconduct may lead to termination', '3. I have the right to submit a written response', '4. I can seek clarification from HR', '', 'Employee Signature: ________ Date: ________', '', 'OR', '', 'Employee refused to sign / unavailable', 'Delivered by: ________ Date: ________', 'Witness 1: ________ Signature: ________', 'Witness 2: ________ Signature: ________']
+          },
+          {
+            title: 'HR Record',
+            fields: ['Copy placed in employee personal file: Yes', 'Warning logged in HMIS: Yes', 'Supervisor informed: Yes', 'Follow-up review date: ________', '', 'HR Documentation Date: ________', 'Signed: ________']
+          }
+        ],
+        instructions: 'Issue after proper investigation and giving employee opportunity to explain. Maintain professional, factual tone. Document delivery. Provide copy to employee, file, and supervisor. Schedule follow-up review.',
+        approvalRequired: 'Supervisor/Manager, HR Manager',
+        processingTime: 'Issue after investigation and show cause response'
+      }
     ]
   },
   annex8: {
