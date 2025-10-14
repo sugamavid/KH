@@ -1030,6 +1030,24 @@ const HRByLaws = ({ setActiveModule }) => {
         />
       )}
 
+      {/* Compliance Tracker Modal */}
+      {showComplianceTracker && (
+        <ComplianceTracker 
+          onClose={() => setShowComplianceTracker(false)}
+          onNavigateToSection={(sectionId) => {
+            setActiveSection(sectionId);
+            setShowComplianceTracker(false);
+            if (contentRef.current) {
+              contentRef.current.scrollTop = 0;
+            }
+          }}
+          onOpenPolicyImplementation={() => {
+            setShowComplianceTracker(false);
+            setShowPolicyImplementation(true);
+          }}
+        />
+      )}
+
       {/* Print Styles */}
       <style jsx>{`
         @media print {
