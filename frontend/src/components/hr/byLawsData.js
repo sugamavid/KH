@@ -77,4 +77,85 @@ i. In instances where departmental policies or specific departmental guidelines 
 ii. Any additional policies or procedures adopted at the departmental or unit level must conform to these By-Laws and shall serve only as supplemental guidance.`
         }
       ]
+    },
+    {
+      section: 'Section 2',
+      title: 'Recruitment and Employment',
+      searchTerms: ['recruitment', 'employment', 'hiring', 'selection', 'contracts'],
+      icon: 'Users',
+      color: 'green',
+      subsections: [
+        {
+          number: '2.1',
+          title: 'Recruitment Policy',
+          content: `Equal Employment Opportunity:
+• Non-Discrimination: Koyili Hospital is committed to providing equal employment opportunities and prohibits discrimination based on race, colour, religion, gender, marital status, nationality, disability, age, or any other characteristic protected under Indian law. All employment decisions, including hiring, promotions, transfers, and compensation, shall be made solely on the basis of merit, qualifications, and the operational needs of the hospital.
+• Diversity and Inclusion: Koyili Hospital promotes a culture of inclusivity and respects diversity in all forms, including but not limited to cultural, linguistic, gender, and socio-economic diversity.
+• Accessibility: Reasonable accommodations shall be made for applicants with disabilities throughout the recruitment process and during their tenure.
+
+Recruitment Process:
+• Job Advertising and Sourcing: Job openings shall be advertised through approved channels to ensure transparency and accessibility.
+• Selection and Screening: Fair and consistent selection process including written assessments, skill tests, background checks, and panel interviews.
+• Background Verification: Comprehensive background check including verification of educational qualifications, past employment, and references.
+• Medical Examination: All prospective employees must undergo a pre-employment medical examination.
+
+Probation and Confirmation:
+• Probationary Period: All new employees shall undergo a probationary period of six (6) months.
+• Extension of Probation: May be extended for additional period not exceeding three (3) months.
+• Confirmation of Employment: Upon successful completion, employee shall receive written confirmation.`
+        },
+        {
+          number: '2.2',
+          title: 'Equal Opportunity Employment',
+          content: `Koyili Hospital is dedicated to providing a workplace where all individuals are treated with fairness and respect.
+
+• Prohibition of Discrimination: Discrimination based on race, colour, religion, gender, sexual orientation, marital status, national origin, age, disability, or any protected characteristic is strictly prohibited.
+• Merit-Based Decisions: All employment decisions based on objective criteria such as qualifications, skills, experience, and performance.
+• Diversity and Inclusion Initiatives: Active promotion of diverse workforce and inclusive culture.
+• Reasonable Accommodations: Provided for individuals with disabilities in accordance with legal requirements.
+• Reporting and Non-Retaliation: Strict non-retaliation policy for employees who report concerns in good faith.`
+        },
+        {
+          number: '2.3',
+          title: 'Selection Process',
+          content: `The selection process is designed to identify the most qualified candidates who align with the hospital's values.
+
+• Job Analysis and Description: Thorough job analysis conducted prior to recruitment.
+• Sourcing and Advertising: Job vacancies advertised through appropriate channels.
+• Application Screening: Applications screened against defined job requirements.
+• Interviews: Structured interviews conducted by trained panels.
+• Assessments: Technical tests, psychometric evaluations, or practical demonstrations as needed.
+• Reference Checks: Professional references contacted to verify candidate information.
+• Background and Verification Checks: Comprehensive checks including education and employment history.
+• Offer of Employment: Formal offer extended with terms and conditions clearly outlined.
+• Onboarding: Comprehensive onboarding process to familiarize new hires with policies and procedures.`
+        },
+        {
+          number: '2.4',
+          title: 'Employment Contracts',
+          content: `All individuals engaged with Koyili Hospital will have terms of employment clearly defined through formal contracts.
+
+Types of Employment Contracts:
+• Permanent Contracts: For full-time, ongoing positions
+• Fixed-Term Contracts: For positions with specific duration
+• Contractual/Agency Staff Agreements: With third-party agencies
+• Casual/On-Call Contracts: For staff engaged on as-needed basis
+
+Key Contractual Elements:
+• Job Title and Description
+• Reporting Structure
+• Compensation and Benefits
+• Working Hours and Schedule
+• Probationary Period
+• Leave Entitlements
+• Notice Period
+• Confidentiality and Intellectual Property
+• Code of Conduct and Policy Adherence
+• Termination Clauses
+• Governing Law
+
+Contractual Amendments: Must be in writing and agreed upon by both parties.
+Compliance: All contracts reviewed by HR and legal counsel.`
+        }
+      ]
     }
