@@ -193,14 +193,14 @@ const HRSOPs = ({ setActiveModule }) => {
       <div>
         <h2 className="text-xl font-bold text-slate-900 mb-4">Quick Reference Guide</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {Object.entries(sopsQuickRef).map(([key, items]) => (
+          {Object.entries(sopsQuickRef).map(([key, refData]) => (
             <div key={key} className="bg-white rounded-xl p-5 border border-slate-200 shadow-sm hover:shadow-md transition-all">
-              <h3 className="font-bold text-slate-900 mb-3 capitalize">{key} Process</h3>
+              <h3 className="font-bold text-slate-900 mb-3">{refData.title}</h3>
               <ul className="space-y-2">
-                {items.map((item, idx) => (
+                {refData.steps.map((step, idx) => (
                   <li key={idx} className="text-sm text-slate-700 flex items-start">
                     <ChevronRight className="w-4 h-4 text-slate-400 mr-1 flex-shrink-0 mt-0.5" />
-                    <span>{item}</span>
+                    <span>{step}</span>
                   </li>
                 ))}
               </ul>
