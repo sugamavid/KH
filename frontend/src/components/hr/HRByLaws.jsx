@@ -886,6 +886,19 @@ const HRByLaws = ({ setActiveModule }) => {
         />
       )}
 
+      {/* Authority Finder Modal */}
+      {showAuthorityFinder && (
+        <AuthorityFinder 
+          onClose={() => setShowAuthorityFinder(false)}
+          onNavigateToSection={(sectionId) => {
+            setActiveSection(sectionId);
+            if (contentRef.current) {
+              contentRef.current.scrollTop = 0;
+            }
+          }}
+        />
+      )}
+
       {/* Print Styles */}
       <style jsx>{`
         @media print {
