@@ -13136,7 +13136,302 @@ Extensions:
     title: 'Grievance Redressal Committee Functioning',
     searchTerms: ['grievance', 'redressal', 'committee', 'resolution', 'hearing'],
     category: 'M. Grievance, Complaints & Redressal',
-    content: 'Defines composition, functioning, and procedures of Grievance Redressal Committee ensuring impartial investigation and resolution of employee grievances.'
+    subsections: [
+      {
+        number: '1',
+        title: 'OBJECTIVE',
+        content: 'To define composition, functioning, powers, and procedures of Grievance Redressal Committee ensuring impartial, transparent, and fair investigation and resolution of employee grievances through structured, multi-stakeholder approach maintaining organizational justice and employee trust.'
+      },
+      {
+        number: '2',
+        title: 'SCOPE',
+        content: 'Covers establishment, composition, terms of reference, operating procedures, decision-making process, and reporting mechanisms of Grievance Redressal Committee. Applicable to grievances escalated to committee level, typically complex, sensitive, or unresolved cases.'
+      },
+      {
+        number: '3',
+        title: 'NEED FOR GRIEVANCE COMMITTEE',
+        content: `• Provides formal, structured forum for grievance resolution
+• Ensures impartiality through multi-member composition
+• Brings diverse perspectives (management, employee representatives, HR)
+• Demonstrates organizational commitment to employee welfare
+• Required by law in certain establishments (Industrial Disputes Act)`
+      },
+      {
+        number: '4',
+        title: 'COMMITTEE COMPOSITION',
+        subsections: [
+          {
+            number: '4.1',
+            title: 'Membership',
+            content: `Grievance Redressal Committee consists of:
+(i) Chairperson:
+    • Senior Management representative (e.g., CHRO, COO)
+    • Not directly involved in the grievance
+    • Final authority on committee decisions
+
+(ii) Management Representatives (2-3 members):
+    • Department Heads or Senior Managers
+    • Rotational membership (1-2 year terms)
+    • Represent management perspective
+
+(iii) Employee Representatives (2-3 members):
+    • Elected or nominated from employee body
+    • Represent employee interests
+    • Ideally from different departments and levels
+    • Terms: 1-2 years
+
+(iv) HR Representative (Ex-officio Member):
+    • HR Manager or designee
+    • Provides policy guidance and administrative support
+    • Non-voting or equal voting member (as per policy)
+
+(v) External Member (Optional):
+    • Independent expert (lawyer, mediator, HR consultant)
+    • For complex or sensitive cases
+    • Ensures objectivity
+
+Total Members: 5-7 typically`
+          },
+          {
+            number: '4.2',
+            title: 'Eligibility & Selection',
+            content: `Management Representatives:
+• Nominated by senior management
+• Senior employees with good judgment and integrity
+
+Employee Representatives:
+• Nominations invited from employees
+• Election or selection by HR and management
+• Criteria: Good standing, respected by peers, unbiased
+
+Terms:
+• Membership for 1-2 years (renewable)
+• Continuity maintained (staggered terms)
+
+Disqualification:
+• Conflict of interest in specific case: Member recuses
+• Misconduct or bias: Removed from committee`
+          }
+        ]
+      },
+      {
+        number: '5',
+        title: 'TERMS OF REFERENCE',
+        content: `Committee's Mandate:
+• Hear and investigate employee grievances referred by HR
+• Conduct inquiries and interviews
+• Review evidence and documents
+• Make recommendations for resolution
+• Ensure fair and impartial process
+• Maintain confidentiality
+• Submit reports to management
+
+Grievances Typically Referred to Committee:
+• Complex or sensitive grievances
+• Grievances against managers or HODs
+• Inter-departmental conflicts
+• Policy interpretation disputes
+• Cases where HR investigation inconclusive
+• Collective grievances`
+      },
+      {
+        number: '6',
+        title: 'COMMITTEE MEETINGS',
+        subsections: [
+          {
+            number: '6.1',
+            title: 'Meeting Frequency',
+            content: `• Regular meetings: Monthly or bi-monthly
+• Special meetings: As needed when grievance filed
+• Quorum: Minimum 50% members (including Chairperson or designee)
+• Decisions: Majority vote
+• Chairperson has casting vote in tie`
+          },
+          {
+            number: '6.2',
+            title: 'Meeting Agenda',
+            content: `(i) Review of new grievances received
+(ii) Status update on ongoing investigations
+(iii) Presentation of investigation findings
+(iv) Hearing of parties (if scheduled)
+(v) Deliberation and decision-making
+(vi) Follow-up on implemented resolutions
+(vii) Trend analysis and policy recommendations`
+          },
+          {
+            number: '6.3',
+            title: 'Documentation',
+            content: `• Meeting minutes maintained
+• Attendance recorded
+• Decisions documented with rationale
+• Signed by Chairperson and Members
+• Filed securely by HR`
+          }
+        ]
+      },
+      {
+        number: '7',
+        title: 'GRIEVANCE INVESTIGATION PROCESS',
+        subsections: [
+          {
+            number: '7.1',
+            title: 'Case Assignment',
+            content: `• Grievance referred to committee by HR
+• Chairperson assigns case to investigation sub-committee (2-3 members) or full committee reviews
+• Investigation plan prepared`
+          },
+          {
+            number: '7.2',
+            title: 'Fact-Finding',
+            content: `(i) Document Review:
+    • Grievance letter and supporting documents
+    • Relevant policies, records, emails
+    • Previous related grievances or incidents
+
+(ii) Interviews:
+    • Grievant (employee who filed)
+    • Respondent (if grievance against someone)
+    • Witnesses
+    • Supervisor, HOD (for context)
+
+(iii) Site Visit (if needed):
+    • Inspect work area or conditions (for environment/safety grievances)
+
+(iv) Confidentiality:
+    • Interviews conducted in private
+    • Information shared on need-to-know basis`
+          },
+          {
+            number: '7.3',
+            title: 'Hearing Process',
+            content: `If formal hearing required:
+(i) Notice to parties (5-7 days advance)
+(ii) Hearing date, time, venue communicated
+(iii) Parties can be accompanied by colleague (not lawyer, unless policy permits)
+(iv) Grievant presents case, evidence, witnesses
+(v) Respondent presents defense, evidence, witnesses
+(vi) Committee members ask questions
+(vii) Cross-examination allowed (controlled by Chairperson)
+(viii) Committee deliberates in private
+(ix) Hearing recorded (minutes or audio, as per policy)`
+          }
+        ]
+      },
+      {
+        number: '8',
+        title: 'DECISION-MAKING',
+        content: `(i) Committee deliberates based on:
+    • Facts and evidence
+    • Applicable policies and laws
+    • Principles of natural justice and fairness
+    • Organizational precedents
+
+(ii) Decision types:
+    • Grievance upheld: Recommendations for corrective action
+    • Grievance partially upheld: Partial resolution
+    • Grievance dismissed: Insufficient evidence or unfounded
+    • Mediated settlement: Parties agree to resolution
+
+(iii) Decision by majority vote
+(iv) Dissenting opinion recorded (if any)
+(v) Decision documented with rationale`
+      },
+      {
+        number: '9',
+        title: 'COMMITTEE RECOMMENDATIONS',
+        content: `Committee recommends to management:
+• Finding: Grievance upheld / partially upheld / dismissed
+• Rationale and supporting evidence
+• Recommended actions:
+    - Policy clarification or change
+    - Corrective action (compensation, transfer, training)
+    - Disciplinary action against offender (if applicable)
+    - No action (if unfounded)
+• Implementation timeline
+• Follow-up mechanism
+
+Management:
+• Reviews recommendations
+• Typically accepts (committee decision carries weight)
+• Can seek clarification or additional investigation
+• Final decision rests with management (committee is advisory)`
+      },
+      {
+        number: '10',
+        title: 'COMMUNICATION OF DECISION',
+        content: `• Decision communicated in writing to grievant within 5-7 days
+• Summary of findings
+• Outcome (upheld/dismissed)
+• Actions to be taken (if any)
+• Appeal rights mentioned
+• Respondent also informed (if applicable)`
+      },
+      {
+        number: '11',
+        title: 'IMPLEMENTATION & FOLLOW-UP',
+        content: `• HR ensures recommended actions implemented
+• Timeline monitored
+• Follow-up with grievant after 30/60 days (issue resolved satisfactorily?)
+• If non-compliance, escalated to senior management`
+      },
+      {
+        number: '12',
+        title: 'CONFIDENTIALITY & ETHICS',
+        content: `Committee Members Must:
+• Maintain strict confidentiality
+• Be impartial and objective
+• Avoid conflicts of interest (recuse if personal involvement)
+• Respect dignity of all parties
+• Not discuss case outside committee
+• Focus on facts, not biases or assumptions
+
+Breach of confidentiality or bias: Removal from committee + disciplinary action`
+      },
+      {
+        number: '13',
+        title: 'POWERS OF COMMITTEE',
+        content: `• Summon employees for interviews
+• Call for documents and records
+• Visit work sites
+• Seek expert opinions
+• Recommend disciplinary action (decision by management)
+• Recommend policy changes
+
+Limitations:
+• Advisory body (not executive authority)
+• Cannot impose punishment directly
+• Cannot override management decisions (except in statutory matters)`
+      },
+      {
+        number: '14',
+        title: 'REPORTING',
+        content: `Quarterly Reports:
+• Number of grievances received and resolved
+• Nature of grievances (categories)
+• Average resolution time
+• Trends and patterns
+• Recommendations for systemic improvements
+• Submitted to CEO/Board
+
+Annual Report:
+• Comprehensive analysis
+• Policy recommendations
+• Training needs identified`
+      },
+      {
+        number: '15',
+        title: 'TRAINING FOR COMMITTEE MEMBERS',
+        content: `• Orientation on grievance handling, investigation techniques, interview skills
+• Training on natural justice, bias-free decision-making
+• Understanding of labor laws and HR policies
+• Conducted annually or when new members join`
+      },
+      {
+        number: '16',
+        title: 'REFERENCE DOCUMENTS',
+        content: 'Grievance Redressal Policy, Industrial Disputes Act, Natural Justice Principles, Annexure M.2.1: Committee Charter, Annexure M.2.2: Hearing Procedure Guidelines, Annexure M.2.3: Decision Template'
+      }
+    ]
   },
 
   sopM3: {
