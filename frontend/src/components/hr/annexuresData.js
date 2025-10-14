@@ -1467,11 +1467,272 @@ export const annexuresData = {
     searchTerms: ['administration', 'general', 'miscellaneous'],
     category: 'Administration',
     forms: [
-      { name: 'ID Card Request Form', code: 'ADM-001', description: 'New/replacement ID card' },
-      { name: 'Loan Request Form', code: 'ADM-002', description: 'Employee loan request' },
-      { name: 'Address Change Form', code: 'ADM-003', description: 'Update personal details' },
-      { name: 'Nomination Form', code: 'ADM-004', description: 'Insurance/PF nomination' },
-      { name: 'NOC Request Template', code: 'ADM-005', description: 'No objection certificate' }
+      { 
+        name: 'ID Card Request Form', 
+        code: 'ADM-001', 
+        description: 'New or replacement ID card request',
+        sections: [
+          {
+            title: 'Employee Information',
+            fields: ['Employee Name', 'Employee ID', 'Department', 'Designation', 'Date of Joining', 'Contact Number', 'Email Address']
+          },
+          {
+            title: 'Request Type',
+            fields: ['Type of Request:', '☐ New ID Card (for new joiners)', '☐ Replacement - Lost', '☐ Replacement - Damaged', '☐ Replacement - Information Update', '☐ Duplicate Card (for multiple access points)', '☐ Temporary Card (for visitors/consultants)']
+          },
+          {
+            title: 'Details for New ID Card',
+            fields: ['(Complete only if requesting new card)', 'Blood Group', 'Emergency Contact Name', 'Emergency Contact Number', 'Recent passport-size photograph attached: Yes / No', 'ID Card required for:', '☐ Office access', '☐ Attendance marking', '☐ Cafeteria', '☐ Library', '☐ Parking', '☐ Other: _______']
+          },
+          {
+            title: 'Details for Replacement Card',
+            fields: ['(Complete only if requesting replacement)', 'Previous Card Number:', 'Date of Issue:', 'Reason for replacement:', '', 'If Lost:', 'Date of Loss:', 'Location where lost:', 'FIR filed: Yes / No (if applicable)', 'FIR Number: ________ (if filed)', '', 'If Damaged:', 'Nature of damage:', 'Damaged card to be returned: Yes / No', '', 'If Information Update:', 'Information to be updated:', '☐ Name change', '☐ Photo update', '☐ Designation change', '☐ Department change', '☐ Emergency contact update', 'Supporting documents attached: Yes / No']
+          },
+          {
+            title: 'Biometric/Access Details',
+            fields: ['Biometric registration completed: Yes / No / Not Applicable', 'Access areas required:', '☐ Main entrance', '☐ Department floor', '☐ Server room', '☐ Medical records', '☐ Pharmacy', '☐ OT complex', '☐ ICU', '☐ Administrative block', '☐ Parking', '☐ Other: _______']
+          },
+          {
+            title: 'Card Collection Details',
+            fields: ['Preferred collection date: ________', 'Will collect personally: Yes / No', 'If No, authorized person:', 'Name: ________', 'Relationship/Designation: ________', 'ID proof of authorized person attached: Yes / No']
+          },
+          {
+            title: 'Charges (if applicable)',
+            fields: ['First ID Card: Free', 'Replacement (Lost): ₹ 200', 'Replacement (Damaged): ₹ 100', 'Duplicate Card: ₹ 200', 'Update (Name/Photo): Free (with supporting documents)', '', 'Amount to be paid: ₹ ________', 'Payment method: Cash / Payroll Deduction']
+          },
+          {
+            title: 'Declaration',
+            fields: ['I declare that:', '1. Information provided is correct', '2. I will use the ID card only for authorized purposes', '3. I will not transfer or lend my ID card to anyone', '4. I will return the ID card upon termination of employment', '5. Loss of card will be reported immediately', '', 'Employee Signature: ________ Date: ____']
+          },
+          {
+            title: 'Approvals',
+            fields: ['Immediate Supervisor:', 'Signature: ________ Date: ____', '', 'Admin Department (ID card issuance):', 'Card Number issued: ________', 'Biometric registration: Complete / Pending', 'Access activated: Yes / No', 'Signature: ________ Date: ____', '', 'Card issued to employee on: ________', 'Employee Signature (acknowledgment): ________']
+          }
+        ],
+        instructions: 'Submit to Admin Department. For lost cards, FIR may be required for sensitive access areas. Attach photograph and supporting documents. Replacement charges may apply.',
+        approvalRequired: 'Supervisor, Admin',
+        processingTime: '3-5 business days'
+      },
+      { 
+        name: 'Loan Request Form', 
+        code: 'ADM-002', 
+        description: 'Employee loan request',
+        sections: [
+          {
+            title: 'Employee Information',
+            fields: ['Employee Name', 'Employee ID', 'Department', 'Designation', 'Date of Joining', 'Employment Type: Permanent / Contract', 'Current Monthly Salary (Gross): ₹ ________', 'Monthly Take-home Salary: ₹ ________', 'PF Number', 'Bank Account Number', 'IFSC Code']
+          },
+          {
+            title: 'Loan Request Details',
+            fields: ['Type of Loan:', '☐ Personal Loan', '☐ Medical Emergency Loan', '☐ Education Loan (Self/Children)', '☐ Home Renovation Loan', '☐ Vehicle Loan', '☐ Festival Advance', '☐ Marriage Loan (Self/Children)', '☐ Other: _______', '', 'Loan Amount Requested: ₹ ________', 'Loan Amount in words: ________', '', 'Purpose of Loan (detailed):', '', '', '']
+          },
+          {
+            title: 'Loan Eligibility Check',
+            fields: ['Years of service: ________ years ________ months', 'Minimum eligibility: 2 years (for major loans)', '', 'Current outstanding loans:', 'Previous loan amount: ₹ ________ (if any)', 'Amount repaid: ₹ ________', 'Outstanding balance: ₹ ________', '', 'Maximum eligibility:', '- Personal loan: Up to 3 months salary', '- Medical/Emergency: Up to 6 months salary', '- Education loan: Up to ₹2,00,000', '- Marriage loan: Up to ₹3,00,000', '', 'Eligible for current request: Yes / No']
+          },
+          {
+            title: 'Repayment Plan',
+            fields: ['Proposed repayment tenure: ________ months', 'Maximum allowed: 36 months (or service remaining, whichever is lower)', '', 'Monthly installment: ₹ ________', 'Interest rate: ___% per annum (as per policy)', '', 'Repayment schedule:', 'Start month: ________', 'End month: ________', '', 'Monthly salary deduction authorized: Yes / No', '', 'Total amount to be repaid: ₹ ________ (Principal + Interest)']
+          },
+          {
+            title: 'Supporting Documents',
+            fields: ['Documents attached:', '☐ Medical bills/prescriptions (for medical loan)', '☐ Admission letter/fee structure (for education loan)', '☐ Marriage invitation/booking receipts (for marriage loan)', '☐ Property documents/estimate (for home loan)', '☐ Vehicle quotation/booking (for vehicle loan)', '☐ Other supporting documents', '', 'List of documents:', '1.', '2.', '3.']
+          },
+          {
+            title: 'Guarantor Details',
+            fields: ['(Required for loans above ₹50,000)', '', 'Guarantor 1:', 'Name: ________', 'Employee ID: ________', 'Designation: ________', 'Department: ________', 'Relationship with applicant: Colleague / Supervisor / Other', 'Contact Number: ________', 'Signature: ________', '', 'Guarantor 2:', 'Name: ________', 'Employee ID: ________', 'Designation: ________', 'Department: ________', 'Relationship with applicant: Colleague / Supervisor / Other', 'Contact Number: ________', 'Signature: ________']
+          },
+          {
+            title: 'Terms and Conditions',
+            fields: ['I understand and accept that:', '1. Loan is subject to approval and fund availability', '2. Interest will be charged as per hospital policy', '3. Monthly installment will be deducted from salary', '4. If I resign/terminate, full outstanding will be deducted from final settlement', '5. If outstanding exceeds final settlement, I will pay the balance', '6. Delay in repayment may affect future loan eligibility', '7. Hospital reserves right to modify terms with notice', '8. Loan cannot be transferred to another party', '9. Early repayment allowed without penalty', '10. This loan is not transferable across group hospitals/companies']
+          },
+          {
+            title: 'Employee Declaration',
+            fields: ['I hereby declare that:', '1. Information provided is true and accurate', '2. I will repay the loan as per agreed schedule', '3. I authorize salary deduction for repayment', '4. I have disclosed all existing loans', '5. Loan amount will be used only for stated purpose', '', 'Employee Signature: ________ Date: ____']
+          },
+          {
+            title: 'Approvals',
+            fields: ['Immediate Supervisor Recommendation:', 'Comments:', 'Signature: ________ Date: ____', '', 'HR Verification:', '☐ Eligibility verified', '☐ Service period confirmed', '☐ Outstanding loans checked', '☐ Guarantor details verified', 'HR Signature: ________ Date: ____', '', 'Finance Approval:', 'Loan amount approved: ₹ ________', 'Repayment tenure: ________ months', 'Interest rate: ___% per annum', 'Monthly deduction: ₹ ________', 'Loan disbursement date: ________', 'Finance Signature: ________ Date: ____', '', 'CHRO Approval (for loans > ₹1,00,000):', 'Signature: ________ Date: ____']
+          }
+        ],
+        instructions: 'Submit at least 15 days before fund requirement. Attach all supporting documents. Guarantors required for loans above ₹50,000. Subject to fund availability and management approval.',
+        approvalRequired: 'Supervisor, HR, Finance, CHRO (for large loans)',
+        processingTime: '15-30 days'
+      },
+      { 
+        name: 'Address Change Form', 
+        code: 'ADM-003', 
+        description: 'Update personal contact details',
+        sections: [
+          {
+            title: 'Employee Information',
+            fields: ['Employee Name', 'Employee ID', 'Department', 'Designation', 'Date of Request']
+          },
+          {
+            title: 'Type of Update',
+            fields: ['Select information to be updated:', '☐ Current/Correspondence Address', '☐ Permanent Address', '☐ Contact Number (Mobile)', '☐ Alternate Contact Number', '☐ Email Address (Personal)', '☐ Emergency Contact Details', '☐ Family Details', '☐ Name Change', '☐ Marital Status Change', '☐ Other: _______']
+          },
+          {
+            title: 'Current Information on Record',
+            fields: ['Current Address:', '', '', 'City: ________ State: ________ PIN: ________', '', 'Permanent Address:', '', '', 'City: ________ State: ________ PIN: ________', '', 'Mobile Number: ________', 'Alternate Number: ________', 'Personal Email: ________', '', 'Emergency Contact:', 'Name: ________', 'Relationship: ________', 'Contact: ________']
+          },
+          {
+            title: 'New/Updated Information',
+            fields: ['New Current/Correspondence Address:', '', '', 'City: ________ State: ________ PIN: ________', 'Landmark: ________', 'Is this also your permanent address? Yes / No', '', 'If No, New Permanent Address:', '', '', 'City: ________ State: ________ PIN: ________', '', 'New Mobile Number: ________', 'New Alternate Number: ________', 'New Personal Email: ________', '', 'Updated Emergency Contact:', 'Name: ________', 'Relationship: ________', 'Contact: ________', 'Alternate Emergency Contact:', 'Name: ________', 'Relationship: ________', 'Contact: ________']
+          },
+          {
+            title: 'Name Change Details',
+            fields: ['(Complete only if updating name)', '', 'Old Name: ________', 'New Name: ________', '', 'Reason for name change:', '☐ Marriage', '☐ Divorce', '☐ Legal name correction', '☐ Religious conversion', '☐ Other: _______', '', 'Effective date of name change: ________', '', 'Supporting documents attached:', '☐ Marriage certificate', '☐ Gazette notification', '☐ Affidavit', '☐ Court order', '☐ Updated Aadhaar', '☐ Updated PAN', '☐ Passport (if applicable)']
+          },
+          {
+            title: 'Marital Status Change',
+            fields: ['(Complete only if marital status changed)', '', 'Previous Status: Single / Married / Divorced / Widowed', 'New Status: Single / Married / Divorced / Widowed', '', 'Effective date: ________', '', 'If married:', 'Spouse Name: ________', 'Marriage Date: ________', 'Marriage certificate attached: Yes / No', '', 'If divorced/widowed:', 'Date: ________', 'Supporting document attached: Yes / No', '', 'Update required in:', '☐ Medical insurance', '☐ PF nomination', '☐ Gratuity nomination', '☐ Leave records']
+          },
+          {
+            title: 'Documents to be Updated',
+            fields: ['Select records to be updated:', '☐ Employee master data', '☐ Salary records', '☐ PF account', '☐ Medical insurance', '☐ ID card', '☐ Email distribution lists', '☐ Payroll', '☐ Income tax records', '☐ Attendance system', '☐ Emergency contact database', '☐ All official records']
+          },
+          {
+            title: 'Supporting Documents Checklist',
+            fields: ['Attach relevant documents:', '☐ Address proof (Aadhaar/Passport/Voter ID/Utility bill)', '☐ PAN card (if name change)', '☐ Marriage certificate (if applicable)', '☐ Gazette notification (if name change)', '☐ Affidavit (if name change)', '☐ Rental agreement (if new address)', '☐ Previous ID proof showing old information']
+          },
+          {
+            title: 'Reason for Update',
+            fields: ['Reason for information change:', '☐ Relocation', '☐ Marriage', '☐ Divorce', '☐ Permanent shift', '☐ Change of contact number', '☐ Correction in records', '☐ Other: _______', '', 'Brief description (if needed):']
+          },
+          {
+            title: 'Employee Declaration',
+            fields: ['I declare that:', '1. All information provided is correct and accurate', '2. Supporting documents attached are genuine', '3. I have informed my department of this change', '4. Official communication should be sent to new address/contact', '5. I will update PF/insurance portals separately if required', '', 'Employee Signature: ________ Date: ____']
+          },
+          {
+            title: 'HR Processing',
+            fields: ['Documents verified: Yes / No / Partial', 'Updated in HRIS: Yes / Date: ________', 'Updated in Payroll: Yes / Date: ________', 'Updated in PF records: Yes / Date: ________', 'Updated in Insurance: Yes / Date: ________', 'ID card reissue required: Yes / No', 'Other departments notified: Yes / No', '', 'Processed by:', 'HR Executive Name: ________', 'Date of update: ________', 'Signature: ________']
+          }
+        ],
+        instructions: 'Submit within 15 days of change. Attach address proof or relevant documents. Updates will reflect in next payroll cycle. Inform department for official correspondence.',
+        approvalRequired: 'HR verification',
+        processingTime: '5-7 business days'
+      },
+      { 
+        name: 'Nomination Form', 
+        code: 'ADM-004', 
+        description: 'PF, Insurance, and Gratuity nomination',
+        sections: [
+          {
+            title: 'Employee Information',
+            fields: ['Employee Name', 'Employee ID', 'Department', 'Designation', 'Date of Joining', 'Date of Birth', 'Marital Status: Single / Married / Divorced / Widowed', 'PF Number', 'UAN Number', 'PAN Number', 'Aadhaar Number']
+          },
+          {
+            title: 'Nomination Type',
+            fields: ['This nomination is for:', '☐ Provident Fund (PF)', '☐ Gratuity', '☐ Group Life Insurance', '☐ Group Medical Insurance', '☐ Accidental Death Insurance', '☐ All of the above', '', 'Type of Nomination:', '☐ Fresh Nomination (first time)', '☐ Change in Nomination', '☐ Addition of Nominee', '☐ Deletion of Nominee']
+          },
+          {
+            title: 'Nominee 1 - Details',
+            fields: ['Full Name: ________', 'Date of Birth: ________', 'Age: ________ years', 'Relationship with Employee:', '☐ Spouse', '☐ Son', '☐ Daughter', '☐ Father', '☐ Mother', '☐ Brother', '☐ Sister', '☐ Other dependent: _______', '', 'Address: ', '', '', 'City: ________ State: ________ PIN: ________', 'Aadhaar Number: ________', 'Contact Number: ________', '', 'Percentage of share: _______%', '', 'If nominee is minor (below 18 years):', 'Guardian Name: ________', 'Guardian Relationship: ________', 'Guardian Address: ', '', '', 'Guardian Aadhaar: ________']
+          },
+          {
+            title: 'Nominee 2 - Details',
+            fields: ['(Optional - if multiple nominees)', '', 'Full Name: ________', 'Date of Birth: ________', 'Age: ________ years', 'Relationship with Employee: ________', '', 'Address: ', '', '', 'City: ________ State: ________ PIN: ________', 'Aadhaar Number: ________', 'Contact Number: ________', '', 'Percentage of share: _______%', '', 'If nominee is minor:', 'Guardian Name: ________', 'Guardian Relationship: ________', 'Guardian Address: ________', 'Guardian Aadhaar: ________']
+          },
+          {
+            title: 'Nominee 3 - Details',
+            fields: ['(Optional)', '', 'Full Name: ________', 'Date of Birth: ________', 'Age: ________ years', 'Relationship with Employee: ________', '', 'Address: ________', '', 'City: ________ State: ________ PIN: ________', 'Aadhaar Number: ________', 'Contact Number: ________', '', 'Percentage of share: _______%', '', 'Total percentage allocation: _____% (must total 100%)']
+          },
+          {
+            title: 'Family Details (for PF)',
+            fields: ['(As per EPF regulations - mandatory)', '', 'Spouse:', 'Name: ________', 'Date of Birth: ________', 'Aadhaar: ________', '', 'Children:', '1. Name: ________ DOB: ________ Aadhaar: ________', '2. Name: ________ DOB: ________ Aadhaar: ________', '3. Name: ________ DOB: ________ Aadhaar: ________', '', 'Father:', 'Name: ________', 'Date of Birth: ________', 'Aadhaar: ________', 'Dependent on employee: Yes / No', '', 'Mother:', 'Name: ________', 'Date of Birth: ________', 'Aadhaar: ________', 'Dependent on employee: Yes / No']
+          },
+          {
+            title: 'Medical Insurance Dependent Nomination',
+            fields: ['(For medical insurance coverage)', '', 'Dependents to be covered:', '☐ Self (employee)', '☐ Spouse: Name ________', '☐ Child 1: Name ________ DOB ________', '☐ Child 2: Name ________ DOB ________', '☐ Child 3: Name ________ DOB ________', '☐ Father: Name ________ DOB ________', '☐ Mother: Name ________ DOB ________', '', 'Maximum dependents allowed: As per policy', 'Premium deduction: As per policy', '', 'Documents required for each dependent:', '☐ Birth certificate (for children)', '☐ Marriage certificate (for spouse)', '☐ Aadhaar card', '☐ Photographs']
+          },
+          {
+            title: 'Previous Nomination (if any)',
+            fields: ['Have you made a previous nomination? Yes / No', '', 'If Yes:', 'Date of previous nomination: ________', 'Previous nominee name(s): ________', '', 'Reason for change:', '☐ Marriage', '☐ Birth of child', '☐ Divorce', '☐ Death of previous nominee', '☐ Change of preference', '☐ Other: _______']
+          },
+          {
+            title: 'Supporting Documents Attached',
+            fields: ['☐ Age proof of nominee(s) (Birth certificate/Aadhaar/School certificate)', '☐ Relationship proof (Marriage certificate/Birth certificate)', '☐ Aadhaar card of nominee(s)', '☐ Guardian documents (if nominee is minor)', '☐ Passport-size photograph of nominee(s)', '☐ Cancelled cheque/Bank details (for insurance)', '☐ Divorce decree (if applicable)', '☐ Death certificate (if replacing deceased nominee)']
+          },
+          {
+            title: 'Declaration by Employee',
+            fields: ['I hereby declare that:', '', '1. The information provided is true and correct', '2. The nominee(s) mentioned are my legal heirs/dependents', '3. I understand that this nomination supersedes all previous nominations', '4. In case of minor nominee, I have appointed a guardian', '5. I will inform HR of any changes in family circumstances', '6. I understand that nomination can be changed by submitting fresh form', '7. Nomination is made as per EPF Act 1952, Payment of Gratuity Act 1972, and Insurance regulations', '8. Percentage allocation totals 100%', '', 'Place: ________', 'Date: ________', '', 'Employee Signature: ________']
+          },
+          {
+            title: 'Witness Details',
+            fields: ['(Required for PF nomination)', '', 'Witness 1:', 'Name: ________', 'Designation: ________', 'Employee ID: ________', 'Signature: ________', '', 'Witness 2:', 'Name: ________', 'Designation: ________', 'Employee ID: ________', 'Signature: ________']
+          },
+          {
+            title: 'HR Acknowledgment',
+            fields: ['Nomination received on: ________', 'Updated in PF records: Yes / Date: ________', 'Updated in Gratuity records: Yes / Date: ________', 'Updated in Insurance: Yes / Date: ________', 'Updated in HRIS: Yes / Date: ________', 'Employee provided copy: Yes', '', 'Documents verified by:', 'HR Executive Name: ________', 'Signature: ________', 'Date: ________']
+          }
+        ],
+        instructions: 'Submit within 30 days of joining or within 30 days of change in family status. Attach all supporting documents. Keep a copy for your records. Update in EPFO portal separately for PF.',
+        approvalRequired: 'HR verification and update',
+        processingTime: '7-10 business days'
+      },
+      { 
+        name: 'NOC Request Template', 
+        code: 'ADM-005', 
+        description: 'No Objection Certificate for various purposes',
+        sections: [
+          {
+            title: 'Employee Information',
+            fields: ['Employee Name', 'Employee ID', 'Department', 'Designation', 'Date of Joining', 'Current Employment Status: Permanent / Contract / Probation', 'Contact Number', 'Email Address']
+          },
+          {
+            title: 'Purpose of NOC',
+            fields: ['NOC required for:', '☐ Passport Application/Renewal', '☐ Visa Application', '☐ Higher Education/Studies', '☐ Part-time Course/Training', '☐ Professional Certification', '☐ Renting/Leasing Property', '☐ Loan Application (Bank/Financial)', '☐ Vehicle Registration', '☐ Court/Legal Proceedings', '☐ Government Application', '☐ Professional Membership', '☐ Speaking Engagement/Conference', '☐ Publication of Research Paper', '☐ Part-time Work/Consultancy', '☐ Other: _______', '', 'Detailed purpose:', '', '']
+          },
+          {
+            title: 'NOC Validity Details',
+            fields: ['NOC required from: ________ (date)', 'NOC required until: ________ (date)', 'Duration: ________ months', '', 'Is this a one-time requirement? Yes / No', '', 'Issuing authority/organization requiring NOC:', 'Name: ________', 'Address: ________', 'Purpose description: ________']
+          },
+          {
+            title: 'Impact on Employment',
+            fields: ['Will this activity affect your work schedule? Yes / No', '', 'If Yes:', 'Expected time commitment: ________ hours per week', 'Will you take leave? Yes / No', 'Type of leave: Casual / Annual / Unpaid', '', 'Conflict of interest declaration:', 'Does this activity involve:', '☐ Competitor organization', '☐ Similar industry', '☐ Confidential information use', '☐ Hospital time/resources', '☐ None of the above', '', 'I declare no conflict of interest: Yes / No']
+          },
+          {
+            title: 'Higher Education/Training Details',
+            fields: ['(Complete only if NOC for studies)', '', 'Course/Program Name: ________', 'Institution Name: ________', 'Course Duration: ________ years/months', 'Course Type: Full-time / Part-time / Distance / Online', '', 'Schedule:', 'Days: ________', 'Timing: ________', 'Will it affect working hours? Yes / No', '', 'Relevance to current role:', '', '', 'Will Hospital benefit from this education? Yes / No', 'If Yes, how: ________']
+          },
+          {
+            title: 'Part-time Work/Consultancy Details',
+            fields: ['(Complete only if NOC for additional work)', '', 'Organization Name: ________', 'Nature of Work: ________', 'Time commitment: ________ hours per week', 'Compensation: Yes / No / Pro-bono', '', 'Justification for additional work:', '', '', 'Assurance that it will not:', '☐ Affect primary employment', '☐ Use hospital resources', '☐ Involve conflict of interest', '☐ Breach confidentiality', '☐ Compete with hospital services']
+          },
+          {
+            title: 'Publication/Research Details',
+            fields: ['(Complete only if NOC for publication)', '', 'Title of Paper/Publication: ________', 'Journal/Conference Name: ________', 'Co-authors (if any): ________', '', 'Does it involve hospital data? Yes / No', 'If Yes:', 'Patient data anonymized: Yes / No', 'Ethics committee approval obtained: Yes / No', 'Approval date: ________', '', 'Hospital affiliation to be mentioned: Yes / No']
+          },
+          {
+            title: 'Supporting Documents',
+            fields: ['Documents attached:', '☐ Course admission letter (for education)', '☐ Invitation letter (for conference)', '☐ Offer letter (for consultancy)', '☐ Passport copy (for visa/passport NOC)', '☐ Loan application form', '☐ Property agreement', '☐ Legal notice/court summons', '☐ Other: _______', '', 'List all attached documents:', '1.', '2.', '3.']
+          },
+          {
+            title: 'Employee Undertaking',
+            fields: ['I hereby undertake that:', '', '1. Information provided is true and correct', '2. The activity will not interfere with my primary employment', '3. I will not use hospital resources for this purpose', '4. I will maintain confidentiality of hospital information', '5. There is no conflict of interest', '6. I will inform if circumstances change', '7. I will complete this activity within specified timeline', '8. I will continue to fulfill my job responsibilities', '9. I will obtain separate approvals if activity parameters change', '10. I will immediately inform if NOC becomes invalid', '', 'Employee Signature: ________ Date: ____']
+          },
+          {
+            title: 'Supervisor Recommendation',
+            fields: ['Immediate Supervisor Comments:', '', 'Does this activity conflict with work responsibilities? Yes / No', '', 'Impact on department operations: None / Minor / Significant', '', 'Recommendation: Approve / Approve with conditions / Not recommended', '', 'Conditions (if any):', '', '', 'Supervisor Name: ________', 'Designation: ________', 'Signature: ________ Date: ____']
+          },
+          {
+            title: 'Department Head Approval',
+            fields: ['Comments:', '', '', 'Approved: Yes / No / With conditions', '', 'Conditions:', '', '', 'Department Head Name: ________', 'Signature: ________ Date: ____']
+          },
+          {
+            title: 'HR Review',
+            fields: ['HR Comments:', '', 'Policy compliance checked: Yes / No', 'Confidentiality risk: Low / Medium / High', 'Conflict of interest: None / Potential / Actual', '', 'HR Recommendation: Issue NOC / Reject / Refer to CHRO', '', 'HR Manager Name: ________', 'Signature: ________ Date: ____']
+          },
+          {
+            title: 'Final Authorization',
+            fields: ['(For CHRO or authorized signatory)', '', 'NOC Approved: Yes / No', 'Valid from: ________', 'Valid until: ________', '', 'Special conditions/remarks:', '', '', '', 'Authorized Signatory:', 'Name: ________', 'Designation: ________', 'Date: ________', 'Signature and Stamp: ________']
+          }
+        ],
+        instructions: 'Submit at least 15 days before requirement. Clearly state purpose and duration. Attach supporting documents. NOC issued only after proper approvals. Separate NOC required for different purposes.',
+        approvalRequired: 'Supervisor, Department Head, HR, CHRO (for sensitive matters)',
+        processingTime: '7-15 business days'
+      }
     ]
   },
   annex10: {
