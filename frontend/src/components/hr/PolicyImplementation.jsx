@@ -1380,13 +1380,7 @@ const PolicyImplementation = ({ onClose, onNavigateToSection }) => {
             {activeView === 'policies' && renderPolicyLibrary()}
             {activeView === 'committees' && renderCommittees()}
             {activeView === 'authorities' && renderAuthorityMatrix()}
-            {activeView === 'wizard' && (
-              <div className="text-center py-12">
-                <Zap className="w-16 h-16 text-slate-300 mx-auto mb-4" />
-                <p className="text-slate-600 font-medium">Implementation Wizard</p>
-                <p className="text-sm text-slate-500 mt-1">Step-by-step guided implementation - Coming Soon</p>
-              </div>
-            )}
+            {activeView === 'wizard' && renderImplementationWizard()}
           </div>
         </div>
       </div>
