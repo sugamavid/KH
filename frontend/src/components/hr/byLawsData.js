@@ -94,32 +94,18 @@ These By-Laws are applicable to all individuals engaged in any capacity with Koy
       {
         number: '2.1',
         title: 'Recruitment Policy',
-        content: `<div class="space-y-4">
-<div class="mt-4">
-  <span class="font-bold text-slate-900">(a) **Equal Opportunity Employer:**</span>
-  <ul class="ml-8 mt-2 space-y-2">
-    <li class="flex items-start"><span class="text-amber-600 mr-3">•</span><span>Koyili Hospital is committed to being an equal opportunity employer, ensuring that recruitment and selection processes are fair, transparent, and free from discrimination based on race, gender, religion, caste, age, disability, or any other protected characteristic.</span></li>
-    <li class="flex items-start"><span class="text-amber-600 mr-3">•</span><span>The hospital shall actively promote diversity and inclusion in its workforce, recognising the value of varied perspectives and backgrounds in delivering quality healthcare.</span></li>
-  </ul>
-</div>
+        content: `(a) **Equal Opportunity Employer:**
+    • Koyili Hospital is committed to being an equal opportunity employer, ensuring that recruitment and selection processes are fair, transparent, and free from discrimination based on race, gender, religion, caste, age, disability, or any other protected characteristic.
+    • The hospital shall actively promote diversity and inclusion in its workforce, recognising the value of varied perspectives and backgrounds in delivering quality healthcare.
 
-<div class="mt-4">
-  <span class="font-bold text-slate-900">(b) **Recruitment Process:**</span>
-  <ul class="ml-8 mt-2 space-y-2">
-    <li class="flex items-start"><span class="text-amber-600 mr-3">•</span><span>All vacancies shall be advertised internally and externally, as appropriate, through job portals, the hospital's website, and other relevant channels to attract a diverse pool of qualified candidates.</span></li>
-    <li class="flex items-start"><span class="text-amber-600 mr-3">•</span><span>The HR department shall oversee the recruitment process, ensuring compliance with hospital policies and applicable employment laws.</span></li>
-    <li class="flex items-start"><span class="text-amber-600 mr-3">•</span><span>Selection shall be based on merit, qualifications, experience, and suitability for the role, as assessed through structured interviews, skill tests, and reference checks.</span></li>
-  </ul>
-</div>
+(b) **Recruitment Process:**
+    • All vacancies shall be advertised internally and externally, as appropriate, through job portals, the hospital's website, and other relevant channels to attract a diverse pool of qualified candidates.
+    • The HR department shall oversee the recruitment process, ensuring compliance with hospital policies and applicable employment laws.
+    • Selection shall be based on merit, qualifications, experience, and suitability for the role, as assessed through structured interviews, skill tests, and reference checks.
 
-<div class="mt-4">
-  <span class="font-bold text-slate-900">(c) **Job Descriptions and Specifications:**</span>
-  <ul class="ml-8 mt-2 space-y-2">
-    <li class="flex items-start"><span class="text-amber-600 mr-3">•</span><span>Clear and detailed job descriptions shall be prepared for all positions, outlining key responsibilities, required qualifications, skills, and reporting relationships.</span></li>
-    <li class="flex items-start"><span class="text-amber-600 mr-3">•</span><span>Job specifications shall be reviewed periodically to ensure alignment with evolving hospital needs and industry standards.</span></li>
-  </ul>
-</div>
-</div>`
+(c) **Job Descriptions and Specifications:**
+    • Clear and detailed job descriptions shall be prepared for all positions, outlining key responsibilities, required qualifications, skills, and reporting relationships.
+    • Job specifications shall be reviewed periodically to ensure alignment with evolving hospital needs and industry standards.`
       },
       {
         number: '2.2',
