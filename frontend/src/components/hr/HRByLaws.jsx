@@ -13,6 +13,7 @@ const HRByLaws = ({ setActiveModule }) => {
   const [searchResults, setSearchResults] = useState([]);
   const [showSearch, setShowSearch] = useState(false);
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
+  const [expandedSections, setExpandedSections] = useState({});
   const contentRef = useRef(null);
 
   // Complete Navigation structure for all 30 sections
