@@ -92,6 +92,58 @@ const ToolsCalculators = () => {
     return overtime;
   };
 
+  const calculateGratuity = () => {
+    // Gratuity = (Last drawn salary × 15 × Years of service) / 26
+    const salary = parseFloat(lastDrawnSalary) || 0;
+    const years = parseFloat(yearsOfService) || 0;
+    const gratuity = (salary * 15 * years) / 26;
+    return gratuity;
+  };
+
+  const calculateNoticePay = () => {
+    const totalDays = parseFloat(noticePeriodDays) || 0;
+    const served = parseFloat(daysServed) || 0;
+    const daily = parseFloat(dailySalary) || 0;
+    const remainingDays = Math.max(0, totalDays - served);
+    const noticePay = remainingDays * daily;
+    return { remainingDays, noticePay };
+  };
+
+  const calculatePF = () => {
+    const basic = parseFloat(pfBasicSalary) || 0;
+    const months = parseFloat(pfMonths) || 0;
+    const employeeContribution = basic * 0.12; // 12% employee contribution
+    const employerContribution = basic * 0.12; // 12% employer contribution
+    const monthlyTotal = employeeContribution + employerContribution;
+    const totalPF = monthlyTotal * months;
+    return {
+      employeeMonthly: employeeContribution,
+      employerMonthly: employerContribution,
+      monthlyTotal,
+      totalPF
+    };
+  };
+
+  const calculateLoanEligibility = () => {
+    const income = parseFloat(monthlyIncome) || 0;
+    const emi = parseFloat(existingEmi) || 0;
+    const tenure = parseFloat(loanTenure) || 12;
+    
+    // Maximum EMI can be 50% of monthly income
+    const maxEmi = income * 0.5;
+    const availableEmi = maxEmi - emi;
+    
+    // Assuming 10% annual interest rate
+    const monthlyRate = 0.10 / 12;
+    const eligibleAmount = availableEmi * ((Math.pow(1 + monthlyRate, tenure) - 1) / (monthlyRate * Math.pow(1 + monthlyRate, tenure)));
+    
+    return {
+      maxEmi,
+      availableEmi,
+      eligibleAmount: Math.max(0, eligibleAmount)
+    };
+  };
+
   return (
     <div className="p-6 space-y-6">
       {/* Header */}
