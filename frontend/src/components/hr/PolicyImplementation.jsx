@@ -8,9 +8,13 @@ import {
   Download, Printer, Eye, ChevronDown, List, GitBranch
 } from 'lucide-react';
 
+import { committeesDatabase, authorityLevels, policyImplementationGuides } from '../../data/policyImplementationData';
+
 const PolicyImplementation = ({ onClose, onNavigateToSection }) => {
-  const [activePhase, setActivePhase] = useState('planning');
+  const [activeView, setActiveView] = useState('policies'); // policies, committees, authorities, guides
   const [selectedPolicy, setSelectedPolicy] = useState(null);
+  const [selectedCommittee, setSelectedCommittee] = useState(null);
+  const [expandedStep, setExpandedStep] = useState(null);
 
   // Implementation projects
   const projects = [
