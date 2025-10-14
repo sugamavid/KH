@@ -1669,7 +1669,162 @@ Once drafted, the policy shall be reviewed internally by:
     title: 'Orientation Program (HR & Departmental)',
     searchTerms: ['orientation', 'induction', 'onboarding', 'training', 'introduction'],
     category: 'C. Onboarding & Access Control',
-    content: 'Ensures structured and meaningful induction process for newly joined employees through comprehensive orientation covering HR policies, organizational values, statutory obligations, and department-specific workflows.'
+    subsections: [
+      {
+        number: '1',
+        title: 'OBJECTIVE',
+        content: 'To establish a structured, comprehensive, and standardized orientation program for all newly joined employees ensuring smooth organizational integration, cultural assimilation, policy awareness, and operational readiness. The orientation aims to reduce onboarding time, improve employee confidence, and ensure compliance with institutional and regulatory requirements.'
+      },
+      {
+        number: '2',
+        title: 'SCOPE AND APPLICABILITY',
+        content: `This SOP applies to:
+• All newly appointed employees including doctors, nurses, paramedical staff, administrative personnel, technical staff, and contractual workers
+• The HR Department responsible for conducting general orientation
+• Department Heads and designated Departmental Trainers responsible for department-specific induction
+• All departments and units of Koyili Hospital across all locations`
+      },
+      {
+        number: '3',
+        title: 'DEFINITIONS',
+        content: `• Orientation: A formal structured program introducing new employees to the organization's mission, culture, policies, and operational framework
+• General/HR Orientation: Organization-wide induction covering HR policies, benefits, compliance, and institutional procedures
+• Departmental Orientation: Unit-specific induction covering workflows, SOPs, equipment, and role-specific responsibilities
+• Orientation Checklist: A documented record tracking completion of orientation activities and acknowledgments
+• Buddy System: Assignment of an experienced employee to guide and support a new joiner during the initial period`
+      },
+      {
+        number: '4',
+        title: 'PROCEDURE',
+        subsections: [
+          {
+            number: '4.1',
+            title: 'Pre-Orientation Preparation',
+            content: `(i) HR shall prepare an Orientation Schedule and notify the new employee via email at least 3 days before the joining date
+(ii) Orientation Materials shall be prepared including:
+    • Welcome Kit (ID card holder, hospital brochure, policy handbook)
+    • Orientation Agenda
+    • HR Policy Manual
+    • Code of Conduct and Ethics Policy
+    • Safety and Infection Control Guidelines
+    • Confidentiality and Data Protection Policy
+(iii) HR shall coordinate with IT, Administration, and respective Department Heads to ensure readiness of workstation, access credentials, and departmental induction plan`
+          },
+          {
+            number: '4.2',
+            title: 'Day 1: HR General Orientation (Duration: 3-4 hours)',
+            content: `(i) Welcome and Introduction (30 minutes)
+    • Welcome address by HR Manager or Senior HR Executive
+    • Overview of Koyili Hospital: History, Vision, Mission, Values
+    • Introduction to organizational structure and key leadership
+    • Tour of hospital premises (main areas, cafeteria, rest rooms, emergency exits)
+
+(ii) HR Policies and Employment Terms (60 minutes)
+    • Review of Appointment Letter and Employment Contract
+    • Explanation of probation period, confirmation process
+    • Working hours, attendance, biometric system, shift policies
+    • Leave policy: Types of leaves, entitlements, application process
+    • Salary structure: Components, deductions, payroll cycle, salary slip access
+    • Statutory benefits: EPF, ESI, gratuity, insurance coverage
+
+(iii) Code of Conduct and Compliance (45 minutes)
+    • Code of Conduct and Disciplinary Policy
+    • Prevention of Sexual Harassment (POSH) Policy
+    • Patient Rights and Confidentiality (HIPAA-equivalent standards)
+    • Dress code and professional appearance expectations
+    • Anti-corruption and conflict of interest policy
+    • Social media and communication guidelines
+
+(iv) Safety, Security and Infection Control (45 minutes)
+    • Fire safety and emergency evacuation procedures
+    • Biomedical waste management and infection control protocols
+    • Personal protective equipment (PPE) usage
+    • Incident reporting and occupational health procedures
+    • Security protocols and visitor management
+
+(v) Documentation and Formalities (30 minutes)
+    • Collection of pending documents (if any)
+    • Signing of confidentiality agreement, code of conduct acknowledgment
+    • Completion of PF/ESI nomination forms
+    • Bank account and salary details verification
+    • Issue of ID card, uniform (if applicable), and locker access`
+          },
+          {
+            number: '4.3',
+            title: 'Day 1-2: Departmental Orientation (Duration: Full day)',
+            content: `(i) The employee shall be handed over to the respective Department Head or designated Departmental Trainer for role-specific induction
+(ii) Departmental Orientation shall cover:
+    • Introduction to department team members and hierarchy
+    • Department goals, key performance indicators, and responsibilities
+    • Detailed walkthrough of department-specific SOPs and workflows
+    • Training on equipment, software, and tools used in the department
+    • Review of job description, key deliverables, and performance expectations
+    • Explanation of reporting structure and communication protocols
+    • Introduction to internal customers and interdepartmental coordination
+(iii) Buddy Assignment: A senior team member shall be assigned as a "Buddy" to provide ongoing guidance and support for the first 30 days`
+          },
+          {
+            number: '4.4',
+            title: 'Week 1: Follow-Up and Hands-On Training',
+            content: `(i) Days 3-7: Practical hands-on training under supervision
+    • Shadowing experienced staff members
+    • Gradual exposure to actual responsibilities
+    • Practice sessions on key tasks and systems
+    • Feedback sessions with supervisor
+(ii) HR Check-In: HR shall conduct a brief check-in call or meeting on Day 3 or Day 5 to:
+    • Address any initial concerns or queries
+    • Verify completion of documentation
+    • Ensure access to all systems and facilities
+    • Collect feedback on orientation experience`
+          },
+          {
+            number: '4.5',
+            title: 'End of Month 1: Orientation Completion Review',
+            content: `(i) The Department Head and assigned Buddy shall assess the new employee's orientation progress
+(ii) A formal Orientation Completion Meeting shall be conducted covering:
+    • Review of completed orientation checklist
+    • Assessment of employee's understanding and readiness
+    • Discussion of any challenges faced and support needed
+    • Setting of performance goals for probation period
+(iii) Orientation Completion Certificate shall be issued and filed in the employee's personnel record`
+          }
+        ]
+      },
+      {
+        number: '5',
+        title: 'ROLES AND RESPONSIBILITIES',
+        table: {
+          headers: ['Position', 'Responsibility'],
+          rows: [
+            ['HR Department', 'Plan and conduct general HR orientation, prepare materials, coordinate logistics, track completion'],
+            ['Department Head', 'Conduct or arrange departmental orientation, assign buddy, monitor integration'],
+            ['Departmental Trainer/Buddy', 'Provide hands-on training, guidance, and day-to-day support to new employee'],
+            ['New Employee', 'Actively participate, complete all orientation activities, seek clarifications, sign acknowledgments']
+          ]
+        }
+      },
+      {
+        number: '6',
+        title: 'COMPLIANCE AND RECORD-KEEPING',
+        content: `• Orientation Attendance Register and Orientation Checklists shall be maintained by HR for all employees
+• Signed acknowledgments of policy understanding and code of conduct shall be filed in personnel records
+• Orientation feedback forms shall be collected and analyzed for continuous improvement
+• Orientation completion records shall be available for NABH audits and internal quality reviews
+• All orientation materials and presentations shall be version-controlled and updated annually`
+      },
+      {
+        number: '7',
+        title: 'REFERENCE DOCUMENTS',
+        content: `• Koyili Hospital HR By-Laws
+• Employee Handbook
+• Code of Conduct and Ethics Policy
+• POSH Policy
+• Fire Safety and Emergency Evacuation Plan
+• Infection Control and Biomedical Waste Management Policy
+• Annexure C.1.1: Orientation Checklist
+• Annexure C.1.2: Orientation Feedback Form`
+      }
+    ]
   },
 
   sopC2: {
