@@ -351,7 +351,10 @@ const HRByLaws = ({ setActiveModule }) => {
           </div>
           
           {/* Policy Manager */}
-          <div className="group bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl p-6 text-white hover:shadow-2xl transition-all transform hover:-translate-y-1 cursor-pointer">
+          <div 
+            onClick={() => setShowPolicyManager(true)}
+            className="group bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl p-6 text-white hover:shadow-2xl transition-all transform hover:-translate-y-1 cursor-pointer"
+          >
             <div className="w-14 h-14 bg-white/20 rounded-xl flex items-center justify-center mb-4 backdrop-blur">
               <CheckSquare className="w-8 h-8" />
             </div>
