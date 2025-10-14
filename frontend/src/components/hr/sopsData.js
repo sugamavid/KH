@@ -11550,7 +11550,254 @@ Retention: Minimum 7 years (legal and audit requirements)`
     title: 'EAP Access (Employee Assistance Program)',
     searchTerms: ['eap', 'employee', 'assistance', 'program', 'counselling', 'wellness'],
     category: 'L. Wellness, Work-Life Balance & EAP',
-    content: 'Provides structured framework for employees to confidentially access professional counselling, mental health, and wellness support through institutionalized EAP.'
+    subsections: [
+      {
+        number: '1',
+        title: 'OBJECTIVE',
+        content: 'To provide structured, confidential, and professional Employee Assistance Program (EAP) enabling employees and their families to access counselling, mental health support, stress management, financial guidance, and wellness resources ensuring holistic well-being, improved productivity, reduced absenteeism, and a supportive organizational culture.'
+      },
+      {
+        number: '2',
+        title: 'SCOPE',
+        content: 'Covers all permanent employees and their immediate family members (spouse, children, dependent parents). Includes counselling for personal, professional, emotional, financial, and family issues. Services offered confidentially through third-party EAP providers or in-house counsellors.'
+      },
+      {
+        number: '3',
+        title: 'EAP SERVICES OFFERED',
+        content: `(i) Mental Health & Emotional Support:
+    • Stress, anxiety, depression management
+    • Work-life balance concerns
+    • Burnout prevention and recovery
+    • Grief and loss counselling
+    • Anger management
+
+(ii) Personal & Family Counselling:
+    • Marital and relationship issues
+    • Parenting challenges
+    • Family conflicts
+    • Substance abuse support
+    • Elder care concerns
+
+(iii) Financial & Legal Guidance:
+    • Debt management and financial planning
+    • Legal consultation (basic)
+    • Tax guidance
+    • Retirement planning
+
+(iv) Career & Professional Development:
+    • Career counselling
+    • Workplace conflict resolution
+    • Performance stress management
+    • Work adjustment issues
+
+(v) Health & Wellness:
+    • Nutrition and diet counselling
+    • Fitness and exercise guidance
+    • Lifestyle management
+    • Sleep disorder support
+    • Chronic illness management support`
+      },
+      {
+        number: '4',
+        title: 'ACCESSING EAP SERVICES',
+        subsections: [
+          {
+            number: '4.1',
+            title: 'EAP Provider Contact',
+            content: `Hospital has partnered with: [EAP Provider Name]
+
+24/7 Helpline: 1800-XXX-XXXX (Toll-Free)
+Email: eap@koyilihospital.com
+Website/App: www.eapprovider.com (login with employee ID)
+
+Alternative:
+In-house Counsellor: Available on appointment (if applicable)
+HR Wellness Coordinator: wellness@koyilihospital.com`
+          },
+          {
+            number: '4.2',
+            title: 'How to Access',
+            content: `(i) Telephonic Counselling:
+    • Call EAP helpline
+    • Provide employee ID for verification
+    • Brief intake assessment
+    • Connect with counsellor immediately or schedule call
+    • Sessions: 30-45 minutes
+
+(ii) In-Person Counselling:
+    • Request appointment via phone/email/portal
+    • Visit EAP provider's office or hospital counselling room
+    • Sessions scheduled as per availability
+    • Typical: 4-6 sessions covered per issue per year
+
+(iii) Online/Video Counselling:
+    • Book session via EAP app/website
+    • Video call with licensed counsellor
+    • Convenient for remote employees or privacy
+
+(iv) Chat/Email Support:
+    • Text-based counselling for non-urgent matters
+    • Response within 24-48 hours`
+          },
+          {
+            number: '4.3',
+            title: 'Eligibility & Usage Limits',
+            content: `• All permanent employees eligible (from day 1)
+• Immediate family members included
+• Contractual employees (>1 year service)
+
+Usage Limits:
+• Up to 6-8 counselling sessions per issue per year (hospital-sponsored)
+• Financial/legal consultation: 1-2 hours per year
+• Unlimited access to helpline and resources
+• Extended sessions: Employee pays or insurance covers (if applicable)`
+          }
+        ]
+      },
+      {
+        number: '5',
+        title: 'CONFIDENTIALITY & PRIVACY',
+        content: `Absolute Confidentiality Guaranteed:
+• EAP sessions are 100% confidential
+• Hospital/HR has NO access to session content or personal details
+• EAP provider shares only:
+    - Utilization statistics (anonymized)
+    - Number of sessions utilized
+    - NO individual names or case details
+• Employee's identity protected
+• Sessions not recorded (unless employee consents)
+
+Exceptions (Legal/Safety):
+• Imminent risk of self-harm or suicide → Emergency intervention
+• Abuse of child or vulnerable adult → Mandatory reporting
+• Court order → Legal compliance
+• Even in these cases, minimal information shared`
+      },
+      {
+        number: '6',
+        title: 'REFERRAL TO EAP',
+        subsections: [
+          {
+            number: '6.1',
+            title: 'Self-Referral',
+            content: `• Employee voluntarily seeks EAP support
+• No approval needed from supervisor or HR
+• Direct contact with EAP provider
+• Most common and encouraged method`
+          },
+          {
+            number: '6.2',
+            title: 'Manager Referral',
+            content: `When to Suggest EAP:
+• Manager observes employee distress, performance decline, behavioral changes
+• Employee shares personal challenges affecting work
+• After critical incident (patient death, workplace accident)
+
+How to Suggest:
+• Private, compassionate conversation
+• "We have EAP services that might help. Would you like information?"
+• Provide EAP contact details
+• No pressure, employee's choice
+• Manager CANNOT force EAP usage (except formal referral below)`
+          },
+          {
+            number: '6.3',
+            title: 'Formal/Mandatory Referral',
+            content: `Rare, only in specific situations:
+• Part of disciplinary action (e.g., anger management issue)
+• Return-to-work after medical leave (fitness assessment)
+• Post-critical incident (trauma counselling strongly recommended)
+• Substance abuse suspicion (as condition of continued employment)
+
+Process:
+• HR issues formal referral letter
+• Employee must attend initial EAP session
+• EAP provides fitness-for-duty or compliance report to HR (no personal details)
+• Further sessions voluntary`
+          }
+        ]
+      },
+      {
+        number: '7',
+        title: 'EAP AWARENESS & PROMOTION',
+        content: `Hospital promotes EAP through:
+• Induction training: EAP services introduced to new joiners
+• Posters and flyers in break rooms, notice boards
+• Email campaigns and newsletters
+• Wellness month events
+• Intranet resources and FAQs
+• Manager training: How to support employees and suggest EAP
+• Periodic EAP awareness sessions by provider
+
+Message: "It's okay to seek help. EAP is here for you."`
+      },
+      {
+        number: '8',
+        title: 'EAP UTILIZATION TRACKING (ANONYMIZED)',
+        content: `HR receives quarterly reports from EAP provider:
+• Total number of employees who accessed EAP
+• Types of issues (categories only, e.g., stress, family, financial)
+• Session utilization rates
+• Employee satisfaction scores
+• No individual identification
+
+Purpose:
+• Assess EAP program effectiveness
+• Identify organizational stressors (high utilization = potential systemic issue)
+• Justify EAP investment
+• Plan wellness interventions`
+      },
+      {
+        number: '9',
+        title: 'INTEGRATION WITH OTHER WELLNESS PROGRAMS',
+        content: `EAP complements:
+• Health screening programs (SOP L.3)
+• Wellness camps (SOP L.2)
+• Mental health initiatives (SOP L.4)
+• Work-life balance policies (SOP L.5)
+
+Holistic Approach: EAP addresses psychological/emotional, while other programs focus on physical/preventive health`
+      },
+      {
+        number: '10',
+        title: 'COST & FUNDING',
+        content: `• Hospital fully funds EAP services
+• No cost to employee for covered sessions
+• Sessions beyond limit: Employee pays or uses insurance
+• Family members: Covered under employee's quota
+• Return on Investment: Reduced absenteeism, improved productivity, employee retention`
+      },
+      {
+        number: '11',
+        title: 'CRISIS INTERVENTION',
+        content: `For immediate mental health crises:
+• Employee experiencing severe distress, suicidal thoughts, panic attack
+• Call EAP crisis line immediately (24/7)
+• If physical danger: Call emergency services first (ambulance, police)
+• EAP provides immediate tele-counselling
+• Referral to psychiatrist or hospital if needed
+• Follow-up support arranged
+
+Manager/HR Role:
+• Stay with employee until help arrives
+• Maintain calm and supportive presence
+• Respect confidentiality post-crisis`
+      },
+      {
+        number: '12',
+        title: 'FEEDBACK & IMPROVEMENT',
+        content: `• Employees complete post-session feedback (anonymous)
+• EAP provider reviews satisfaction scores
+• HR and EAP conduct annual program review
+• Employee suggestions welcomed
+• Continuous improvement of services and accessibility`
+      },
+      {
+        number: '13',
+        title: 'REFERENCE DOCUMENTS',
+        content: 'EAP Policy, Mental Health Support Policy (SOP L.4), Wellness Policy, Annexure L.1.1: EAP Services Brochure, Annexure L.1.2: EAP Contact Card'
+      }
+    ]
   },
 
   sopL2: {
