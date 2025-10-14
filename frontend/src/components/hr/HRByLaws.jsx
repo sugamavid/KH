@@ -18,123 +18,82 @@ const HRByLaws = ({ setActiveModule }) => {
   const [expandedSections, setExpandedSections] = useState({});
   const contentRef = useRef(null);
 
-  // Parse and render content as React components with proper formatting
+  // Parse and render content with SIMPLE line-by-line approach
   const renderFormattedContent = (content) => {
     if (!content) return null;
     
     const lines = content.split('\n');
-    const elements = [];
-    let currentMainPoint = null;
-    let currentBullets = [];
-    let collectingMainPointContent = false;
+    const renderedLines = [];
     
-    const flushCurrentGroup = () => {
-      if (currentMainPoint) {
-        elements.push(
-          <div key={`group-${elements.length}`} className="mb-6">
-            {currentMainPoint}
-            {currentBullets.length > 0 && (
-              <div className="ml-6 mt-3 space-y-3">
-                {currentBullets}
-              </div>
-            )}
-          </div>
-        );
-        currentMainPoint = null;
-        currentBullets = [];
-        collectingMainPointContent = false;
-      }
-    };
-    
-    lines.forEach((line, index) => {
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i];
       const trimmedLine = line.trim();
       
-      // Empty line - flush current group
+      // Skip empty lines
       if (!trimmedLine) {
-        flushCurrentGroup();
-        return;
+        continue;
       }
       
-      // Main points: (a) **Title:** (title on same line as marker)
-      const mainPointWithContentMatch = trimmedLine.match(/^\(([a-z])\)\s+\*\*(.*?)\*\*:?\s*(.*)$/);
-      if (mainPointWithContentMatch && mainPointWithContentMatch[3]) {
-        flushCurrentGroup();
-        const text = mainPointWithContentMatch[3].replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
-        currentMainPoint = (
-          <div key={`main-${index}`} className="mb-2">
-            <div className="font-bold text-slate-900 text-base mb-2">
-              <span className="inline-block mr-2">({mainPointWithContentMatch[1]})</span>
-              <span>{mainPointWithContentMatch[2]}:</span>
+      // Check for (a) **Title:** pattern with content on same line
+      const mainWithContentMatch = trimmedLine.match(/^\(([a-z])\)\s+\*\*(.*?)\*\*:?\s+(.+)$/);
+      if (mainWithContentMatch) {
+        const text = mainWithContentMatch[3].replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+        renderedLines.push(
+          <div key={i} className="mt-6 mb-4">
+            <div className="font-bold text-slate-900 text-lg mb-2">
+              ({mainWithContentMatch[1]}) <strong>{mainWithContentMatch[2]}:</strong>
             </div>
-            <div className="text-slate-700 leading-relaxed" dangerouslySetInnerHTML={{ __html: text }} />
+            <div className="text-slate-700 leading-relaxed ml-0" dangerouslySetInnerHTML={{ __html: text }} />
           </div>
         );
-        return;
+        continue;
       }
       
-      // Main points: (a) **Title:** (title only, content on next lines)
+      // Check for (a) **Title:** pattern (title only on line)
       const mainPointMatch = trimmedLine.match(/^\(([a-z])\)\s+\*\*(.*?)\*\*:?$/);
       if (mainPointMatch) {
-        flushCurrentGroup();
-        currentMainPoint = (
-          <div key={`main-${index}`} className="font-bold text-slate-900 text-base mb-2">
-            <span className="inline-block mr-2">({mainPointMatch[1]})</span>
-            <span>{mainPointMatch[2]}:</span>
+        renderedLines.push(
+          <div key={i} className="font-bold text-slate-900 text-lg mt-6 mb-2">
+            ({mainPointMatch[1]}) <strong>{mainPointMatch[2]}:</strong>
           </div>
         );
-        collectingMainPointContent = true;
-        return;
+        continue;
       }
       
-      // Sub-points with indentation: (i), (ii), (iii)
-      const subPointMatch = line.match(/^\s{4}\(([ivxl]+)\)\s+(.*)/);
+      // Check for (i), (ii), (iii) sub-points with indentation
+      const subPointMatch = line.match(/^\s{4}\(([ivxl]+)\)\s+(.+)$/);
       if (subPointMatch) {
         const text = subPointMatch[2].replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
-        currentBullets.push(
-          <div key={`sub-${index}`} className="ml-6 flex items-start mb-2">
-            <span className="font-semibold text-slate-700 mr-2 min-w-[2rem]">({subPointMatch[1]})</span>
-            <span className="text-slate-700 leading-relaxed" dangerouslySetInnerHTML={{ __html: text }} />
+        renderedLines.push(
+          <div key={i} className="ml-12 mt-2 mb-2 flex items-start">
+            <span className="font-semibold text-slate-700 mr-3 min-w-[3rem]">({subPointMatch[1]})</span>
+            <span className="text-slate-700 leading-relaxed flex-1" dangerouslySetInnerHTML={{ __html: text }} />
           </div>
         );
-        collectingMainPointContent = false;
-        return;
+        continue;
       }
       
-      // Bullets with indentation: •
-      const bulletMatch = line.match(/^\s{4}•\s+(.*)/);
+      // Check for bullets with indentation
+      const bulletMatch = line.match(/^\s{4}•\s+(.+)$/);
       if (bulletMatch) {
         const text = bulletMatch[1].replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
-        currentBullets.push(
-          <div key={`bullet-${index}`} className="flex items-start gap-3">
-            <span className="text-amber-600 font-bold text-xl leading-none mt-0.5">•</span>
-            <span className="flex-1 text-slate-700 leading-relaxed" dangerouslySetInnerHTML={{ __html: text }} />
+        renderedLines.push(
+          <div key={i} className="ml-8 mt-2 mb-2 flex items-start">
+            <span className="text-amber-600 font-bold text-xl mr-3">•</span>
+            <span className="text-slate-700 leading-relaxed flex-1" dangerouslySetInnerHTML={{ __html: text }} />
           </div>
         );
-        collectingMainPointContent = false;
-        return;
+        continue;
       }
       
-      // Regular text line - could be continuation of main point or standalone
-      if (trimmedLine) {
-        const text = trimmedLine.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
-        
-        if (collectingMainPointContent && currentMainPoint) {
-          // This is content for the current main point
-          currentBullets.push(
-            <div key={`content-${index}`} className="text-slate-700 leading-relaxed mb-2" dangerouslySetInnerHTML={{ __html: text }} />
-          );
-        } else {
-          flushCurrentGroup();
-          elements.push(
-            <p key={`p-${index}`} className="mb-4 text-slate-700 leading-relaxed" dangerouslySetInnerHTML={{ __html: text }} />
-          );
-        }
-      }
-    });
+      // Regular text line
+      const text = trimmedLine.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+      renderedLines.push(
+        <div key={i} className="text-slate-700 leading-relaxed mb-2 ml-0" dangerouslySetInnerHTML={{ __html: text }} />
+      );
+    }
     
-    flushCurrentGroup(); // Flush any remaining group
-    
-    return <div className="space-y-2">{elements}</div>;
+    return <div className="space-y-1">{renderedLines}</div>;
   };
 
   // Complete Navigation structure for all 30 sections (User's Original By-Laws)
