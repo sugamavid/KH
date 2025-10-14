@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { Calculator, DollarSign, Calendar, Clock, Percent, TrendingUp, FileText, Download } from 'lucide-react';
+import { Calculator, DollarSign, Calendar, Clock, Percent, TrendingUp, FileText, Download, Gift, Bell, Briefcase, Users, PiggyBank } from 'lucide-react';
 
 const ToolsCalculators = () => {
-  const [activeTool, setActiveTool] = useState('salary');
+  const [activeTool, setActiveTool] = useState(null);
   
   // Salary Calculator State
   const [basicSalary, setBasicSalary] = useState('');
@@ -19,12 +19,34 @@ const ToolsCalculators = () => {
   // Overtime Calculator State
   const [hourlyRate, setHourlyRate] = useState('');
   const [overtimeHours, setOvertimeHours] = useState('');
+  
+  // Gratuity Calculator State
+  const [lastDrawnSalary, setLastDrawnSalary] = useState('');
+  const [yearsOfService, setYearsOfService] = useState('');
+  
+  // Notice Period Calculator State
+  const [noticePeriodDays, setNoticePeriodDays] = useState('');
+  const [daysServed, setDaysServed] = useState('');
+  const [dailySalary, setDailySalary] = useState('');
+  
+  // PF Calculator State
+  const [pfBasicSalary, setPfBasicSalary] = useState('');
+  const [pfMonths, setPfMonths] = useState('');
+  
+  // Loan Eligibility Calculator State
+  const [monthlyIncome, setMonthlyIncome] = useState('');
+  const [existingEmi, setExistingEmi] = useState('');
+  const [loanTenure, setLoanTenure] = useState('');
 
   const tools = [
-    { id: 'salary', label: 'Salary Calculator', icon: DollarSign, color: 'blue' },
-    { id: 'leave', label: 'Leave Calculator', icon: Calendar, color: 'green' },
-    { id: 'tax', label: 'Tax Calculator', icon: Percent, color: 'purple' },
-    { id: 'overtime', label: 'Overtime Calculator', icon: Clock, color: 'orange' },
+    { id: 'salary', label: 'Salary Calculator', icon: DollarSign, color: 'blue', desc: 'Calculate gross & net salary' },
+    { id: 'leave', label: 'Leave Calculator', icon: Calendar, color: 'green', desc: 'Track leave balance' },
+    { id: 'tax', label: 'Tax Calculator', icon: Percent, color: 'purple', desc: 'Estimate income tax' },
+    { id: 'overtime', label: 'Overtime Calculator', icon: Clock, color: 'orange', desc: 'Calculate overtime pay' },
+    { id: 'gratuity', label: 'Gratuity Calculator', icon: Gift, color: 'teal', desc: 'Calculate gratuity amount' },
+    { id: 'notice', label: 'Notice Period', icon: Bell, color: 'red', desc: 'Calculate notice pay' },
+    { id: 'pf', label: 'PF Calculator', icon: PiggyBank, color: 'indigo', desc: 'Calculate provident fund' },
+    { id: 'loan', label: 'Loan Eligibility', icon: Briefcase, color: 'amber', desc: 'Check loan eligibility' },
   ];
 
   const calculateNetSalary = () => {
