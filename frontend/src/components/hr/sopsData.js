@@ -10227,7 +10227,311 @@ Legal Action:
     title: 'Password Management & IT Security Policy',
     searchTerms: ['password', 'security', 'it', 'policy', 'cybersecurity'],
     category: 'K. Technology Usage & Digital Security',
-    content: 'Establishes secure protocols for password creation, usage, update, and protection ensuring protection of patient data, hospital records, and institutional assets.'
+    subsections: [
+      {
+        number: '1',
+        title: 'OBJECTIVE',
+        content: 'To establish robust, enforceable, and industry-standard password management and IT security protocols ensuring protection of hospital information systems, patient data, employee records, institutional assets, prevention of unauthorized access, cyber threats, and compliance with data privacy regulations and healthcare security standards.'
+      },
+      {
+        number: '2',
+        title: 'SCOPE',
+        content: 'Applicable to all employees, contractors, and third-party vendors with access to hospital IT systems, applications, databases, email accounts, medical records systems (EMR/EHR), HRMS, financial systems, and any institutional digital assets. Covers password creation, usage, storage, sharing, and security protocols.'
+      },
+      {
+        number: '3',
+        title: 'PASSWORD CREATION STANDARDS',
+        subsections: [
+          {
+            number: '3.1',
+            title: 'Password Complexity Requirements',
+            content: `Minimum Requirements:
+• Length: Minimum 12 characters (recommended 16+)
+• Complexity:
+    - At least 1 uppercase letter (A-Z)
+    - At least 1 lowercase letter (a-z)
+    - At least 1 number (0-9)
+    - At least 1 special character (!@#$%^&*)
+• No dictionary words or common patterns
+• No personal information (name, DOB, employee ID)
+
+Examples:
+✓ Acceptable: K@yili2025$Hosp!tal
+✗ Unacceptable: password123, Koyili2025, JohnDoe@1990`
+          },
+          {
+            number: '3.2',
+            title: 'Password Uniqueness',
+            content: `• Different passwords for different systems
+• Do not reuse same password across multiple accounts
+• Do not reuse previous passwords (system prevents last 5 passwords)
+• Unique password for high-risk systems (email, EMR, financial systems)`
+          },
+          {
+            number: '3.3',
+            title: 'Prohibited Passwords',
+            content: `Never use:
+• Common passwords: password, 123456, admin, hospital, koyili
+• Personal info: Name, DOB, spouse/children names, phone number
+• Sequential characters: abc123, qwerty, 111111
+• Hospital name or variations: Koyili123, Hospital@2025
+• Keyboard patterns: asdfgh, 1qaz2wsx`
+          }
+        ]
+      },
+      {
+        number: '4',
+        title: 'PASSWORD MANAGEMENT PRACTICES',
+        subsections: [
+          {
+            number: '4.1',
+            title: 'Password Expiry & Change Policy',
+            content: `• Mandatory password change every 90 days
+• System prompts user 7 days before expiry
+• After expiry: Forced password change upon next login
+• Emergency password reset: IT helpdesk with identity verification
+
+Critical System Passwords (Email, EMR, Financial):
+• Change every 60 days
+• Immediate change if suspected compromise`
+          },
+          {
+            number: '4.2',
+            title: 'Password Storage',
+            content: `Do's:
+• Use approved password manager (e.g., LastPass, 1Password) if authorized
+• Store securely in encrypted format
+• Use password vault for shared passwords (IT-managed)
+
+Don'ts:
+• Writing passwords on paper, sticky notes, or desk
+• Storing in plain text files (Word, Excel, Notepad)
+• Saving in browser (unless device is secured and personal)
+• Sharing via email, chat, or messaging apps
+• Storing in phone notes without encryption`
+          },
+          {
+            number: '4.3',
+            title: 'Password Sharing - STRICTLY PROHIBITED',
+            content: `• NEVER share your password with anyone (colleagues, supervisors, IT staff)
+• Each user must have unique credentials
+• Shared account usage prohibited (except authorized shared systems with audit trails)
+• IT will NEVER ask for your password
+• Phishing attempts common - be vigilant
+
+Exception: Authorized shared accounts (e.g., department email) must have multiple authorized users with logging`
+          },
+          {
+            number: '4.4',
+            title: 'Multi-Factor Authentication (MFA / 2FA)',
+            content: `Mandatory for:
+• Email accounts
+• Remote access (VPN, remote desktop)
+• Administrative accounts
+• Access to patient data systems (EMR/EHR)
+• Financial systems
+
+Methods:
+• SMS OTP (One-Time Password)
+• Authenticator app (Google Authenticator, Microsoft Authenticator)
+• Biometric (fingerprint, face recognition)
+• Hardware tokens (for highly privileged accounts)
+
+Setup:
+• IT department assists in MFA setup during onboarding
+• Backup codes provided and stored securely`
+          }
+        ]
+      },
+      {
+        number: '5',
+        title: 'ACCOUNT SECURITY PROTOCOLS',
+        subsections: [
+          {
+            number: '5.1',
+            title: 'Login Security',
+            content: `• Lock computer when away from desk (Windows+L or Ctrl+Alt+Del)
+• Automatic screen lock after 5 minutes of inactivity
+• Log out from applications when finished
+• Never save passwords on shared/public computers
+• Close all applications before leaving workstation`
+          },
+          {
+            number: '5.2',
+            title: 'Account Lockout Policy',
+            content: `• 3 failed login attempts: Account temporarily locked (15 minutes)
+• 5 failed attempts: Account locked, IT intervention required
+• Prevents brute-force attacks
+• IT investigates repeated failed attempts`
+          },
+          {
+            number: '5.3',
+            title: 'Privileged Accounts (Admin Rights)',
+            content: `• Granted only to IT staff and authorized personnel
+• Separate admin accounts (not used for daily work)
+• Enhanced monitoring and audit trails
+• Quarterly access review
+• Admin password changes every 30 days`
+          },
+          {
+            number: '5.4',
+            title: 'Dormant Account Management',
+            content: `• Accounts inactive for 90 days: Flagged for review
+• Inactive 180 days: Disabled automatically
+• Departing employees: Accounts disabled on last working day
+• Reactivation requires manager approval and IT verification`
+          }
+        ]
+      },
+      {
+        number: '6',
+        title: 'IT SECURITY PROTOCOLS',
+        subsections: [
+          {
+            number: '6.1',
+            title: 'Endpoint Security',
+            content: `All devices (laptops, desktops, tablets) must have:
+• Antivirus/Anti-malware software (updated automatically)
+• Firewall enabled
+• Operating system updates installed promptly
+• Full disk encryption (BitLocker, FileVault)
+• Screen lock with password/biometric
+• Remote wipe capability (for mobile devices)`
+          },
+          {
+            number: '6.2',
+            title: 'Network Security',
+            content: `• Access hospital network only via authorized methods
+• VPN mandatory for remote access
+• No connecting to public/unsecured Wi-Fi for work
+• Guest Wi-Fi separate from internal network
+• Network monitoring for suspicious activity`
+          },
+          {
+            number: '6.3',
+            title: 'USB & External Media Policy',
+            content: `• USB drives and external hard drives scanned for malware before use
+• No unauthorized USB devices (IT-approved only)
+• Encrypted USB drives for sensitive data transfer
+• No personal USB drives on hospital computers
+• CD/DVD usage restricted and logged`
+          },
+          {
+            number: '6.4',
+            title: 'Software Installation',
+            content: `• Only IT-approved software may be installed
+• No downloading software from internet without IT approval
+• No pirated or unlicensed software
+• Regular software audits conducted
+• Request software installation via IT helpdesk ticket`
+          }
+        ]
+      },
+      {
+        number: '7',
+        title: 'PHISHING & SOCIAL ENGINEERING AWARENESS',
+        content: `Common Threats:
+• Phishing emails: Fake emails pretending to be from bank, IT, management
+• Spear phishing: Targeted emails to specific individuals
+• Vishing: Phone calls impersonating IT or authority
+• Smishing: SMS-based phishing
+
+Red Flags:
+• Urgent requests for password or sensitive information
+• Emails from unknown or suspicious senders
+• Links that don't match displayed URL (hover to check)
+• Spelling/grammar errors in official-looking emails
+• Requests to bypass normal procedures
+• Unexpected attachments
+
+Response:
+• Do not click links or open attachments if suspicious
+• Verify sender via separate communication channel
+• Report to IT security immediately (security@koyilihospital.com)
+• IT conducts periodic phishing simulation tests for awareness`
+      },
+      {
+        number: '8',
+        title: 'REMOTE WORK & BYOD SECURITY',
+        content: `For employees working remotely or using personal devices:
+• VPN mandatory for accessing hospital systems
+• Secure home Wi-Fi (WPA3 encryption, strong password)
+• No public Wi-Fi for sensitive work
+• Personal devices registered with IT (MDM enrollment)
+• Separation of personal and work data
+• Compliance with all security policies
+• Physical security of devices (lock laptop when unattended at home)`
+      },
+      {
+        number: '9',
+        title: 'PASSWORD RESET PROCEDURE',
+        content: `Self-Service Reset (if enabled):
+• Use "Forgot Password" option
+• Answer security questions or receive OTP
+• Create new password complying with standards
+
+IT Helpdesk Reset:
+• Contact IT helpdesk (extension XXXX)
+• Identity verification required (Employee ID, DOB, last 4 digits of phone)
+• Temporary password issued
+• Mandatory change on first login
+
+Emergency After-Hours:
+• Contact on-call IT support
+• Enhanced verification required
+• Incident logged and reviewed`
+      },
+      {
+        number: '10',
+        title: 'SECURITY INCIDENT REPORTING',
+        content: `Report immediately if:
+• Password compromised or suspected breach
+• Account accessed without authorization
+• Suspicious login activity notifications
+• Lost or stolen device containing work data
+• Phishing attempt or malware infection
+• Any security concern
+
+Reporting:
+• Email: security@koyilihospital.com
+• Phone: IT helpdesk
+• IT Security Response Team investigates
+• No penalty for genuine reporting (encouraged)`
+      },
+      {
+        number: '11',
+        title: 'VIOLATIONS & CONSEQUENCES',
+        content: `Policy Violations:
+• Password sharing: Written warning to suspension
+• Weak passwords: Counseling + forced change
+• Not locking workstation: Warning
+• Multiple policy violations: Disciplinary action
+
+Serious Violations (Termination grounds):
+• Intentional security breach
+• Selling/sharing access credentials
+• Hacking or attempting unauthorized access
+• Installing malware or causing data breach
+• Gross negligence leading to security incident
+
+Investigation: All security violations thoroughly investigated, with potential legal action for criminal activity`
+      },
+      {
+        number: '12',
+        title: 'TRAINING & AWARENESS',
+        content: `• Annual IT security training mandatory for all employees
+• New joiners: Security training during induction
+• Phishing awareness campaigns quarterly
+• Security tips and alerts via email
+• Posters and reminders in work areas
+• Refresher training for repeat violators`
+      },
+      {
+        number: '13',
+        title: 'REFERENCE DOCUMENTS',
+        content: 'IT Security Policy, Data Privacy Policy, Acceptable Use Policy (SOP K.1), Cybersecurity Breach Protocol (SOP K.5), HIPAA Security Rule, ISO 27001 Standards, Annexure K.2.1: Password Policy Acknowledgment Form'
+      }
+    ]
   },
 
   sopK3: {
