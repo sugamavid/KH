@@ -606,6 +606,344 @@ const ToolsCalculators = () => {
           </div>
         </div>
       )}
+
+      {/* Gratuity Calculator */}
+      {activeTool === 'gratuity' && (
+        <div className="bg-white rounded-xl p-6 border-2 border-slate-200 shadow-sm">
+          <div className="flex items-center mb-6">
+            <div className="w-12 h-12 rounded-lg bg-teal-100 flex items-center justify-center mr-4">
+              <Gift className="w-6 h-6 text-teal-600" />
+            </div>
+            <div>
+              <h2 className="text-2xl font-bold text-slate-900">Gratuity Calculator</h2>
+              <p className="text-sm text-slate-600">Calculate gratuity amount (Payment of Gratuity Act, 1972)</p>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="space-y-4">
+              <div>
+                <label className="block text-sm font-semibold text-slate-700 mb-2">Last Drawn Salary (₹)</label>
+                <input
+                  type="number"
+                  value={lastDrawnSalary}
+                  onChange={(e) => setLastDrawnSalary(e.target.value)}
+                  placeholder="Enter last drawn salary"
+                  className="w-full px-4 py-3 border-2 border-slate-200 rounded-lg focus:outline-none focus:border-teal-500"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-semibold text-slate-700 mb-2">Years of Service</label>
+                <input
+                  type="number"
+                  value={yearsOfService}
+                  onChange={(e) => setYearsOfService(e.target.value)}
+                  placeholder="Enter years of service"
+                  className="w-full px-4 py-3 border-2 border-slate-200 rounded-lg focus:outline-none focus:border-teal-500"
+                />
+              </div>
+              <div className="bg-slate-50 rounded-lg p-4">
+                <h4 className="font-semibold text-slate-900 mb-2">Calculation Formula</h4>
+                <p className="text-sm text-slate-600 mb-2">Gratuity = (Last Salary × 15 × Years) / 26</p>
+                <p className="text-xs text-slate-500">Note: Minimum 5 years of service required</p>
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-br from-teal-50 to-cyan-50 rounded-lg p-6 border-2 border-teal-200">
+              <h3 className="text-lg font-bold text-slate-900 mb-4">Gratuity Amount</h3>
+              <div className="space-y-4">
+                <div className="text-center p-6 bg-white rounded-lg">
+                  <p className="text-sm text-slate-600 mb-2">Total Gratuity</p>
+                  <p className="text-4xl font-bold text-teal-600">₹{calculateGratuity().toLocaleString()}</p>
+                </div>
+                <div className="bg-white rounded-lg p-4 space-y-2">
+                  <div className="flex justify-between">
+                    <span className="text-sm font-semibold text-slate-700">Last Salary</span>
+                    <span className="text-sm font-bold text-slate-900">₹{parseFloat(lastDrawnSalary || 0).toLocaleString()}</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-sm font-semibold text-slate-700">Years of Service</span>
+                    <span className="text-sm font-bold text-slate-900">{yearsOfService || 0} years</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-sm font-semibold text-slate-700">Per Year Amount</span>
+                    <span className="text-sm font-bold text-teal-600">₹{(calculateGratuity() / (parseFloat(yearsOfService) || 1)).toLocaleString()}</span>
+                  </div>
+                </div>
+                {parseFloat(yearsOfService) < 5 && yearsOfService !== '' && (
+                  <div className="bg-red-50 border-2 border-red-200 rounded-lg p-3">
+                    <p className="text-sm text-red-600 font-semibold">⚠️ Service period less than 5 years</p>
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Notice Period Calculator */}
+      {activeTool === 'notice' && (
+        <div className="bg-white rounded-xl p-6 border-2 border-slate-200 shadow-sm">
+          <div className="flex items-center mb-6">
+            <div className="w-12 h-12 rounded-lg bg-red-100 flex items-center justify-center mr-4">
+              <Bell className="w-6 h-6 text-red-600" />
+            </div>
+            <div>
+              <h2 className="text-2xl font-bold text-slate-900">Notice Period Calculator</h2>
+              <p className="text-sm text-slate-600">Calculate notice pay for unserved period</p>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="space-y-4">
+              <div>
+                <label className="block text-sm font-semibold text-slate-700 mb-2">Notice Period (Days)</label>
+                <input
+                  type="number"
+                  value={noticePeriodDays}
+                  onChange={(e) => setNoticePeriodDays(e.target.value)}
+                  placeholder="Enter notice period days"
+                  className="w-full px-4 py-3 border-2 border-slate-200 rounded-lg focus:outline-none focus:border-red-500"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-semibold text-slate-700 mb-2">Days Served</label>
+                <input
+                  type="number"
+                  value={daysServed}
+                  onChange={(e) => setDaysServed(e.target.value)}
+                  placeholder="Enter days served"
+                  className="w-full px-4 py-3 border-2 border-slate-200 rounded-lg focus:outline-none focus:border-red-500"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-semibold text-slate-700 mb-2">Daily Salary (₹)</label>
+                <input
+                  type="number"
+                  value={dailySalary}
+                  onChange={(e) => setDailySalary(e.target.value)}
+                  placeholder="Enter daily salary"
+                  className="w-full px-4 py-3 border-2 border-slate-200 rounded-lg focus:outline-none focus:border-red-500"
+                />
+              </div>
+              <div className="bg-slate-50 rounded-lg p-4">
+                <h4 className="font-semibold text-slate-900 mb-2">Calculation Formula</h4>
+                <p className="text-sm text-slate-600">Notice Pay = (Total Days - Served Days) × Daily Salary</p>
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-br from-red-50 to-rose-50 rounded-lg p-6 border-2 border-red-200">
+              <h3 className="text-lg font-bold text-slate-900 mb-4">Notice Pay Calculation</h3>
+              <div className="space-y-4">
+                <div className="text-center p-6 bg-white rounded-lg">
+                  <p className="text-sm text-slate-600 mb-2">Total Notice Pay</p>
+                  <p className="text-4xl font-bold text-red-600">₹{calculateNoticePay().noticePay.toLocaleString()}</p>
+                  <p className="text-sm text-slate-500 mt-2">for {calculateNoticePay().remainingDays} days</p>
+                </div>
+                <div className="bg-white rounded-lg p-4 space-y-2">
+                  <div className="flex justify-between">
+                    <span className="text-sm font-semibold text-slate-700">Total Notice Period</span>
+                    <span className="text-sm font-bold text-slate-900">{noticePeriodDays || 0} days</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-sm font-semibold text-slate-700">Days Served</span>
+                    <span className="text-sm font-bold text-green-600">{daysServed || 0} days</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-sm font-semibold text-slate-700">Remaining Days</span>
+                    <span className="text-sm font-bold text-red-600">{calculateNoticePay().remainingDays} days</span>
+                  </div>
+                  <div className="border-t-2 border-slate-200 pt-2 mt-2">
+                    <div className="flex justify-between">
+                      <span className="text-sm font-semibold text-slate-700">Daily Salary</span>
+                      <span className="text-sm font-bold text-slate-900">₹{parseFloat(dailySalary || 0).toLocaleString()}</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* PF Calculator */}
+      {activeTool === 'pf' && (
+        <div className="bg-white rounded-xl p-6 border-2 border-slate-200 shadow-sm">
+          <div className="flex items-center mb-6">
+            <div className="w-12 h-12 rounded-lg bg-indigo-100 flex items-center justify-center mr-4">
+              <PiggyBank className="w-6 h-6 text-indigo-600" />
+            </div>
+            <div>
+              <h2 className="text-2xl font-bold text-slate-900">Provident Fund Calculator</h2>
+              <p className="text-sm text-slate-600">Calculate EPF contributions (Employee Provident Fund)</p>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="space-y-4">
+              <div>
+                <label className="block text-sm font-semibold text-slate-700 mb-2">Basic Salary (₹)</label>
+                <input
+                  type="number"
+                  value={pfBasicSalary}
+                  onChange={(e) => setPfBasicSalary(e.target.value)}
+                  placeholder="Enter basic salary"
+                  className="w-full px-4 py-3 border-2 border-slate-200 rounded-lg focus:outline-none focus:border-indigo-500"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-semibold text-slate-700 mb-2">Number of Months</label>
+                <input
+                  type="number"
+                  value={pfMonths}
+                  onChange={(e) => setPfMonths(e.target.value)}
+                  placeholder="Enter number of months"
+                  className="w-full px-4 py-3 border-2 border-slate-200 rounded-lg focus:outline-none focus:border-indigo-500"
+                />
+              </div>
+              <div className="bg-slate-50 rounded-lg p-4">
+                <h4 className="font-semibold text-slate-900 mb-2">PF Contribution Rates</h4>
+                <div className="text-sm text-slate-600 space-y-1">
+                  <p>• Employee Contribution: 12% of Basic</p>
+                  <p>• Employer Contribution: 12% of Basic</p>
+                  <p>• Total Monthly: 24% of Basic</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-lg p-6 border-2 border-indigo-200">
+              <h3 className="text-lg font-bold text-slate-900 mb-4">PF Calculation</h3>
+              <div className="space-y-4">
+                <div className="text-center p-6 bg-white rounded-lg border-2 border-indigo-300">
+                  <p className="text-sm text-slate-600 mb-2">Total PF Accumulated</p>
+                  <p className="text-4xl font-bold text-indigo-600">₹{calculatePF().totalPF.toLocaleString()}</p>
+                </div>
+                <div className="bg-white rounded-lg p-4 space-y-3">
+                  <h4 className="font-semibold text-slate-900 mb-2">Monthly Breakdown</h4>
+                  <div className="flex justify-between">
+                    <span className="text-sm font-semibold text-slate-700">Employee (12%)</span>
+                    <span className="text-sm font-bold text-blue-600">₹{calculatePF().employeeMonthly.toLocaleString()}</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-sm font-semibold text-slate-700">Employer (12%)</span>
+                    <span className="text-sm font-bold text-green-600">₹{calculatePF().employerMonthly.toLocaleString()}</span>
+                  </div>
+                  <div className="border-t-2 border-slate-200 pt-2">
+                    <div className="flex justify-between">
+                      <span className="text-sm font-bold text-slate-900">Monthly Total (24%)</span>
+                      <span className="text-sm font-bold text-indigo-600">₹{calculatePF().monthlyTotal.toLocaleString()}</span>
+                    </div>
+                  </div>
+                  <div className="border-t-2 border-slate-200 pt-2">
+                    <div className="flex justify-between">
+                      <span className="text-sm font-semibold text-slate-700">Duration</span>
+                      <span className="text-sm font-bold text-slate-900">{pfMonths || 0} months</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Loan Eligibility Calculator */}
+      {activeTool === 'loan' && (
+        <div className="bg-white rounded-xl p-6 border-2 border-slate-200 shadow-sm">
+          <div className="flex items-center mb-6">
+            <div className="w-12 h-12 rounded-lg bg-amber-100 flex items-center justify-center mr-4">
+              <Briefcase className="w-6 h-6 text-amber-600" />
+            </div>
+            <div>
+              <h2 className="text-2xl font-bold text-slate-900">Loan Eligibility Calculator</h2>
+              <p className="text-sm text-slate-600">Calculate maximum eligible loan amount</p>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="space-y-4">
+              <div>
+                <label className="block text-sm font-semibold text-slate-700 mb-2">Monthly Income (₹)</label>
+                <input
+                  type="number"
+                  value={monthlyIncome}
+                  onChange={(e) => setMonthlyIncome(e.target.value)}
+                  placeholder="Enter monthly income"
+                  className="w-full px-4 py-3 border-2 border-slate-200 rounded-lg focus:outline-none focus:border-amber-500"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-semibold text-slate-700 mb-2">Existing EMI (₹)</label>
+                <input
+                  type="number"
+                  value={existingEmi}
+                  onChange={(e) => setExistingEmi(e.target.value)}
+                  placeholder="Enter existing EMI"
+                  className="w-full px-4 py-3 border-2 border-slate-200 rounded-lg focus:outline-none focus:border-amber-500"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-semibold text-slate-700 mb-2">Loan Tenure (Months)</label>
+                <input
+                  type="number"
+                  value={loanTenure}
+                  onChange={(e) => setLoanTenure(e.target.value)}
+                  placeholder="Enter loan tenure"
+                  className="w-full px-4 py-3 border-2 border-slate-200 rounded-lg focus:outline-none focus:border-amber-500"
+                />
+              </div>
+              <div className="bg-slate-50 rounded-lg p-4">
+                <h4 className="font-semibold text-slate-900 mb-2">Calculation Assumptions</h4>
+                <div className="text-sm text-slate-600 space-y-1">
+                  <p>• Interest Rate: 10% per annum</p>
+                  <p>• Max EMI: 50% of income</p>
+                  <p>• Available EMI = Max EMI - Existing EMI</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-br from-amber-50 to-yellow-50 rounded-lg p-6 border-2 border-amber-200">
+              <h3 className="text-lg font-bold text-slate-900 mb-4">Loan Eligibility</h3>
+              <div className="space-y-4">
+                <div className="text-center p-6 bg-white rounded-lg border-2 border-amber-300">
+                  <p className="text-sm text-slate-600 mb-2">Eligible Loan Amount</p>
+                  <p className="text-4xl font-bold text-amber-600">₹{calculateLoanEligibility().eligibleAmount.toLocaleString()}</p>
+                </div>
+                <div className="bg-white rounded-lg p-4 space-y-3">
+                  <div className="flex justify-between">
+                    <span className="text-sm font-semibold text-slate-700">Monthly Income</span>
+                    <span className="text-sm font-bold text-slate-900">₹{parseFloat(monthlyIncome || 0).toLocaleString()}</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-sm font-semibold text-slate-700">Max EMI (50%)</span>
+                    <span className="text-sm font-bold text-green-600">₹{calculateLoanEligibility().maxEmi.toLocaleString()}</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-sm font-semibold text-slate-700">Existing EMI</span>
+                    <span className="text-sm font-bold text-red-600">₹{parseFloat(existingEmi || 0).toLocaleString()}</span>
+                  </div>
+                  <div className="border-t-2 border-slate-200 pt-2">
+                    <div className="flex justify-between">
+                      <span className="text-sm font-bold text-slate-900">Available EMI</span>
+                      <span className="text-sm font-bold text-amber-600">₹{calculateLoanEligibility().availableEmi.toLocaleString()}</span>
+                    </div>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-sm font-semibold text-slate-700">Loan Tenure</span>
+                    <span className="text-sm font-bold text-slate-900">{loanTenure || 0} months</span>
+                  </div>
+                </div>
+                {calculateLoanEligibility().availableEmi <= 0 && monthlyIncome !== '' && (
+                  <div className="bg-red-50 border-2 border-red-200 rounded-lg p-3">
+                    <p className="text-sm text-red-600 font-semibold">⚠️ No loan eligibility - reduce existing EMI</p>
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+      </div>
     </div>
   );
 };
