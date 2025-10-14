@@ -1,4 +1,4 @@
-// KOYILI HOSPITAL - HUMAN RESOURCE BY-LAWS (User's Original Content - Batch 1: Sections 1-5)
+// KOYILI HOSPITAL - HUMAN RESOURCE BY-LAWS (User's Original Content)
 
 export const byLawsData = {
   preamble: {
@@ -16,18 +16,17 @@ By adhering to these by-laws, Koyili Hospital aims to cultivate an environment w
 These by-laws shall be regarded as a living document, subject to periodic review and revision to adapt to the evolving needs of the healthcare industry and the hospital community.`
   },
 
-  sections: [
-    {
-      section: 'Section 1',
-      title: 'Preliminary',
-      searchTerms: ['preliminary', 'title', 'objective', 'applicability', 'scope', 'commencement'],
-      icon: 'FileText',
-      color: 'blue',
-      subsections: [
-        {
-          number: '1.1',
-          title: 'Short Title, Extent and Commencement',
-          content: `(a) Short Title:
+  section1: {
+    section: 'Section 1',
+    title: 'Preliminary',
+    searchTerms: ['preliminary', 'title', 'objective', 'applicability', 'scope', 'commencement'],
+    icon: 'FileText',
+    color: 'blue',
+    subsections: [
+      {
+        number: '1.1',
+        title: 'Short Title, Extent and Commencement',
+        content: `(a) Short Title:
 These by-laws may be cited as the "Koyili Hospital Human Resource By-Laws" (hereinafter referred to as "the By-Laws").
 
 (b) Extent:
@@ -38,11 +37,11 @@ ii. These By-Laws govern every department, including but not limited to patient 
 i. The By-Laws shall take effect immediately upon their approval and notification by the Board of Directors or equivalent authoritative body of Koyili Hospital.
 ii. Amendments or revisions to the By-Laws shall be implemented following a review and approval process conducted by the designated HR Compliance Committee and authorised by the Board. All amendments shall be communicated to the employees in writing or electronically within thirty (30) days of their approval.
 iii. Any subsequent policy or internal guideline must align with these By-Laws and shall be considered subordinate to them in case of any inconsistencies.`
-        },
-        {
-          number: '1.2',
-          title: 'Objective',
-          content: `(a) Purpose of the By-Laws:
+      },
+      {
+        number: '1.2',
+        title: 'Objective',
+        content: `(a) Purpose of the By-Laws:
 i. To provide a structured framework of human resource policies and standards aimed at fostering a professional, respectful, and legally compliant workplace that upholds Koyili Hospital's values of healthcare excellence.
 ii. To promote consistency in HR practices, ensuring equitable treatment of all employees and adherence to lawful and ethical standards in hospital operations.
 
@@ -52,11 +51,11 @@ ii. Accountability and Responsibility: Define clear expectations regarding perfo
 iii. Compliance with Laws and Regulations: Ensure that all HR practices comply with Indian labour laws, healthcare regulations, and relevant statutory obligations to minimise legal risk.
 iv. Employee Welfare and Development: Support employee welfare through programs for professional growth, health and safety, and personal development.
 v. Patient-Centred Focus: Reinforce the commitment of all employees to uphold patient dignity, confidentiality, and care standards as per hospital guidelines and ethical healthcare practices.`
-        },
-        {
-          number: '1.3',
-          title: 'Applicability',
-          content: `(a) Scope of Applicability:
+      },
+      {
+        number: '1.3',
+        title: 'Applicability',
+        content: `(a) Scope of Applicability:
 i. These By-Laws are applicable to all individuals engaged in any capacity with Koyili Hospital, irrespective of their employment status, position, or job nature, including:
     • Permanent Staff: Full-time employees who hold a confirmed position within the hospital.
     • Probationary Staff: Employees currently undergoing probation with the prospect of confirmation based on performance.
@@ -75,20 +74,21 @@ iii. Any person found violating the By-Laws may be subject to disciplinary actio
 (c) Supremacy of the By-Laws:
 i. In instances where departmental policies or specific departmental guidelines conflict with these By-Laws, the provisions contained herein shall prevail unless otherwise directed by hospital administration.
 ii. Any additional policies or procedures adopted at the departmental or unit level must conform to these By-Laws and shall serve only as supplemental guidance.`
-        }
-      ]
-    },
-    {
-      section: 'Section 2',
-      title: 'Recruitment and Employment',
-      searchTerms: ['recruitment', 'employment', 'hiring', 'selection', 'contracts'],
-      icon: 'Users',
-      color: 'green',
-      subsections: [
-        {
-          number: '2.1',
-          title: 'Recruitment Policy',
-          content: `Equal Employment Opportunity:
+      }
+    ]
+  },
+
+  section2: {
+    section: 'Section 2',
+    title: 'Recruitment and Employment',
+    searchTerms: ['recruitment', 'employment', 'hiring', 'selection', 'contracts'],
+    icon: 'Users',
+    color: 'green',
+    subsections: [
+      {
+        number: '2.1',
+        title: 'Recruitment Policy',
+        content: `Equal Employment Opportunity:
 • Non-Discrimination: Koyili Hospital is committed to providing equal employment opportunities and prohibits discrimination based on race, colour, religion, gender, marital status, nationality, disability, age, or any other characteristic protected under Indian law. All employment decisions, including hiring, promotions, transfers, and compensation, shall be made solely on the basis of merit, qualifications, and the operational needs of the hospital.
 • Diversity and Inclusion: Koyili Hospital promotes a culture of inclusivity and respects diversity in all forms, including but not limited to cultural, linguistic, gender, and socio-economic diversity.
 • Accessibility: Reasonable accommodations shall be made for applicants with disabilities throughout the recruitment process and during their tenure.
@@ -103,22 +103,22 @@ Probation and Confirmation:
 • Probationary Period: All new employees shall undergo a probationary period of six (6) months.
 • Extension of Probation: May be extended for additional period not exceeding three (3) months.
 • Confirmation of Employment: Upon successful completion, employee shall receive written confirmation.`
-        },
-        {
-          number: '2.2',
-          title: 'Equal Opportunity Employment',
-          content: `Koyili Hospital is dedicated to providing a workplace where all individuals are treated with fairness and respect.
+      },
+      {
+        number: '2.2',
+        title: 'Equal Opportunity Employment',
+        content: `Koyili Hospital is dedicated to providing a workplace where all individuals are treated with fairness and respect.
 
 • Prohibition of Discrimination: Discrimination based on race, colour, religion, gender, sexual orientation, marital status, national origin, age, disability, or any protected characteristic is strictly prohibited.
 • Merit-Based Decisions: All employment decisions based on objective criteria such as qualifications, skills, experience, and performance.
 • Diversity and Inclusion Initiatives: Active promotion of diverse workforce and inclusive culture.
 • Reasonable Accommodations: Provided for individuals with disabilities in accordance with legal requirements.
 • Reporting and Non-Retaliation: Strict non-retaliation policy for employees who report concerns in good faith.`
-        },
-        {
-          number: '2.3',
-          title: 'Selection Process',
-          content: `The selection process is designed to identify the most qualified candidates who align with the hospital's values.
+      },
+      {
+        number: '2.3',
+        title: 'Selection Process',
+        content: `The selection process is designed to identify the most qualified candidates who align with the hospital's values.
 
 • Job Analysis and Description: Thorough job analysis conducted prior to recruitment.
 • Sourcing and Advertising: Job vacancies advertised through appropriate channels.
@@ -129,11 +129,11 @@ Probation and Confirmation:
 • Background and Verification Checks: Comprehensive checks including education and employment history.
 • Offer of Employment: Formal offer extended with terms and conditions clearly outlined.
 • Onboarding: Comprehensive onboarding process to familiarize new hires with policies and procedures.`
-        },
-        {
-          number: '2.4',
-          title: 'Employment Contracts',
-          content: `All individuals engaged with Koyili Hospital will have terms of employment clearly defined through formal contracts.
+      },
+      {
+        number: '2.4',
+        title: 'Employment Contracts',
+        content: `All individuals engaged with Koyili Hospital will have terms of employment clearly defined through formal contracts.
 
 Types of Employment Contracts:
 • Permanent Contracts: For full-time, ongoing positions
@@ -156,208 +156,150 @@ Key Contractual Elements:
 
 Contractual Amendments: Must be in writing and agreed upon by both parties.
 Compliance: All contracts reviewed by HR and legal counsel.`
-        }
-      ]
-    }
-,
-    {
-      section: 'Section 3',
-      title: 'Code of Conduct',
-      searchTerms: ['code', 'conduct', 'ethics', 'behavior', 'professional'],
-      icon: 'Shield',
-      color: 'red',
-      subsections: [
-        {
-          number: '3.1',
-          title: 'Professional Ethics',
-          content: `• Commitment to Ethical Standards: All employees required to adhere to highest standards of ethics, maintaining integrity, honesty, and professionalism.
+      }
+    ]
+  },
+
+  section3: {
+    section: 'Section 3',
+    title: 'Code of Conduct',
+    searchTerms: ['code', 'conduct', 'ethics', 'behavior', 'professional'],
+    icon: 'Shield',
+    color: 'red',
+    subsections: [
+      {
+        number: '3.1',
+        title: 'Professional Ethics',
+        content: `• Commitment to Ethical Standards: All employees required to adhere to highest standards of ethics, maintaining integrity, honesty, and professionalism.
 • Respect and Dignity: Every employee shall respect the dignity, rights, and privacy of patients and colleagues. Harassment, discrimination, or bullying strictly prohibited.
 • Confidentiality: Employees must protect confidential information related to patients, hospital operations, and fellow employees.`
-        },
-        {
-          number: '3.2',
-          title: 'Dress Code',
-          content: `• General Appearance: All employees required to maintain neat, clean, and professional appearance.
+      },
+      {
+        number: '3.2',
+        title: 'Dress Code',
+        content: `• General Appearance: All employees required to maintain neat, clean, and professional appearance.
 • Specific Requirements for Clinical Staff: Designated uniforms or scrubs appropriate to department and role. ID badges must be worn visibly.
 • Non-Clinical and Administrative Staff: Business casual or formal attire as defined in hospital dress policy.`
-        },
-        {
-          number: '3.3',
-          title: 'Behavioural Expectations',
-          content: `• Professional Interactions: Maintain courteous, respectful, and positive interactions with all.
+      },
+      {
+        number: '3.3',
+        title: 'Behavioural Expectations',
+        content: `• Professional Interactions: Maintain courteous, respectful, and positive interactions with all.
 • Prohibition of Unprofessional Conduct: Disruptive behaviour, offensive language, or insubordination prohibited.
 • Use of Hospital Property: All employees shall use hospital property responsibly. Theft, damage, or misuse subject to disciplinary action.`
-        },
-        {
-          number: '3.4',
-          title: 'Conflict of Interest',
-          content: `• Definition and Disclosure: Employees must disclose any actual, potential, or perceived conflicts of interest.
+      },
+      {
+        number: '3.4',
+        title: 'Conflict of Interest',
+        content: `• Definition and Disclosure: Employees must disclose any actual, potential, or perceived conflicts of interest.
 • Prohibited Activities: No outside employment that competes with hospital interests. No acceptance of gifts that could influence professional judgment.
 • Compliance and Monitoring: Regular review of disclosures. Non-disclosure treated as breach of trust.`
-        }
-      ]
-    },
-    {
-      section: 'Section 4',
-      title: 'Employee Rights and Responsibilities',
-      searchTerms: ['rights', 'responsibilities', 'duties', 'obligations'],
-      icon: 'Award',
-      color: 'purple',
-      subsections: [
-        {
-          number: '4.1',
-          title: 'Right to Fair Treatment',
-          content: `• Non-Discriminatory Workplace: All employees have right to be treated with fairness and respect, free from discrimination or harassment.
+      }
+    ]
+  },
+
+  section4: {
+    section: 'Section 4',
+    title: 'Employee Rights and Responsibilities',
+    searchTerms: ['rights', 'responsibilities', 'duties', 'obligations'],
+    icon: 'Award',
+    color: 'purple',
+    subsections: [
+      {
+        number: '4.1',
+        title: 'Right to Fair Treatment',
+        content: `• Non-Discriminatory Workplace: All employees have right to be treated with fairness and respect, free from discrimination or harassment.
 • Right to a Safe Working Environment: Hospital committed to providing safe and secure environment. Employees can report unsafe conditions without reprisal.
 • Right to Fair Compensation: Employees entitled to fair compensation in accordance with employment agreement and applicable laws.`
-        },
-        {
-          number: '4.2',
-          title: 'Confidentiality Obligation',
-          content: `• Duty to Maintain Confidentiality: Employees obligated to protect patient information, hospital records, and proprietary data.
+      },
+      {
+        number: '4.2',
+        title: 'Confidentiality Obligation',
+        content: `• Duty to Maintain Confidentiality: Employees obligated to protect patient information, hospital records, and proprietary data.
 • Protection of Patient Information: Comply with healthcare privacy laws and hospital policies.
 • Handling of Sensitive Information: Exercise caution with sensitive information. Follow proper security measures.`
-        },
-        {
-          number: '4.3',
-          title: 'Duty of Care',
-          content: `• Adherence to Professional Standards: Perform duties with due diligence and care.
+      },
+      {
+        number: '4.3',
+        title: 'Duty of Care',
+        content: `• Adherence to Professional Standards: Perform duties with due diligence and care.
 • Accountability for Actions: Each employee accountable for their conduct and decisions.
 • Continuous Improvement: Engage in continuous learning to enhance professional skills.`
-        },
-        {
-          number: '4.4',
-          title: 'Workplace Conduct and Responsibilities',
-          content: `• Compliance with Hospital Policies: Adhere to all hospital policies and procedures.
+      },
+      {
+        number: '4.4',
+        title: 'Workplace Conduct and Responsibilities',
+        content: `• Compliance with Hospital Policies: Adhere to all hospital policies and procedures.
 • Punctuality and Attendance: Maintain punctuality and regular attendance.
 • Professional Communication: Conduct all communication in professional and respectful manner.
 • Collaboration and Teamwork: Collaborate effectively with colleagues.`
-        },
-        {
-          number: '4.5',
-          title: 'Right to Raise Concerns and Grievances',
-          content: `• Reporting Issues and Concerns: Employees have right to raise concerns without fear of retaliation.
+      },
+      {
+        number: '4.5',
+        title: 'Right to Raise Concerns and Grievances',
+        content: `• Reporting Issues and Concerns: Employees have right to raise concerns without fear of retaliation.
 • Grievance Redressal Mechanism: Access to fair and transparent grievance mechanism.`
-        },
-        {
-          number: '4.6',
-          title: 'Rights to Professional Development',
-          content: `• Access to Training and Education: Right to access professional development programs.
+      },
+      {
+        number: '4.6',
+        title: 'Rights to Professional Development',
+        content: `• Access to Training and Education: Right to access professional development programs.
 • Support for Career Advancement: Equal opportunities for advancement based on performance and qualifications.`
-        }
-      ]
-    },
-    {
-      section: 'Section 5',
-      title: 'Diversity, Equity, and Inclusion (DEI)',
-      searchTerms: ['diversity', 'equity', 'inclusion', 'dei', 'equal opportunity'],
-      icon: 'Heart',
-      color: 'indigo',
-      subsections: [
-        {
-          number: '5.1',
-          title: 'Diversity Commitment',
-          content: `• Promotion of Diversity: Hospital dedicated to fostering diverse workplace where individuals from varied backgrounds are valued.
+      }
+    ]
+  },
+
+  section5: {
+    section: 'Section 5',
+    title: 'Diversity, Equity, and Inclusion (DEI)',
+    searchTerms: ['diversity', 'equity', 'inclusion', 'dei', 'equal opportunity'],
+    icon: 'Heart',
+    color: 'indigo',
+    subsections: [
+      {
+        number: '5.1',
+        title: 'Diversity Commitment',
+        content: `• Promotion of Diversity: Hospital dedicated to fostering diverse workplace where individuals from varied backgrounds are valued.
 • Inclusion of Marginalised Groups: Actively seek to include individuals from marginalised and underrepresented communities.
 • Diversity in Leadership: Encourage diverse representation in leadership roles.`
-        },
-        {
-          number: '5.2',
-          title: 'Inclusion Programs',
-          content: `• Inclusive Workplace Practices: Develop practices that promote inclusive environment where all feel belonging.
+      },
+      {
+        number: '5.2',
+        title: 'Inclusion Programs',
+        content: `• Inclusive Workplace Practices: Develop practices that promote inclusive environment where all feel belonging.
 • Cultural Competency Training: Mandatory training on cultural competency and awareness.
 • Supportive Policies: Establish policies supporting work-life balance and diverse needs.`
-        },
-        {
-          number: '5.3',
-          title: 'Non-Discrimination Policy',
-          content: `• Prohibition of Discrimination: Zero-tolerance policy towards any act of discrimination.
+      },
+      {
+        number: '5.3',
+        title: 'Non-Discrimination Policy',
+        content: `• Prohibition of Discrimination: Zero-tolerance policy towards any act of discrimination.
 • Reporting and Resolution: Employees can report concerns. Reports investigated promptly with confidentiality.`
-        },
-        {
-          number: '5.4',
-          title: 'Equity in Employment Practices',
-          content: `• Equitable Hiring and Promotion: Recruitment and promotion processes designed to be free from bias.
+      },
+      {
+        number: '5.4',
+        title: 'Equity in Employment Practices',
+        content: `• Equitable Hiring and Promotion: Recruitment and promotion processes designed to be free from bias.
 • Pay Equity: Regular reviews to ensure fair compensation across all demographics.`
-        },
-        {
-          number: '5.5',
-          title: 'Support and Advocacy',
-          content: `• Employee Resource Groups (ERGs): Support formation of ERGs for employees to connect and advocate.
+      },
+      {
+        number: '5.5',
+        title: 'Support and Advocacy',
+        content: `• Employee Resource Groups (ERGs): Support formation of ERGs for employees to connect and advocate.
 • Advocacy Programs: Implement programs to raise awareness of DEI importance.
 • Periodic Reviews and Assessments: Regular assessments of DEI practices for continuous improvement.`
-        }
-      ]
-    }
-,
-    {
-      section: 'Section 6',
-      title: 'Patient Interaction and Care Standards (for Clinical Staff)',
-      searchTerms: ['patient', 'care', 'clinical', 'standards', 'interaction'],
-      icon: 'Activity',
-      color: 'pink',
-      content: 'Detailed standards for patient interaction will be added in next batch'
-    },
-    {
-      section: 'Section 7',
-      title: 'Attendance and Leave Policy',
-      searchTerms: ['attendance', 'leave', 'policy', 'vacation', 'sick'],
-      icon: 'Calendar',
-      color: 'yellow',
-      content: 'Detailed attendance and leave policies will be added in next batch'
-    },
-    {
-      section: 'Section 8',
-      title: 'Working Hours and Overtime',
-      searchTerms: ['working', 'hours', 'overtime', 'schedule', 'shift'],
-      icon: 'Clock',
-      color: 'teal',
-      content: 'Working hours and overtime policies will be added in next batch'
-    },
-    {
-      section: 'Section 9',
-      title: 'Compensation, Payroll and Benefits',
-      searchTerms: ['compensation', 'payroll', 'benefits', 'salary', 'pay'],
-      icon: 'DollarSign',
-      color: 'green',
-      content: 'Compensation and benefits details will be added in next batch'
-    },
-    {
-      section: 'Section 10',
-      title: 'Performance Management',
-      searchTerms: ['performance', 'management', 'appraisal', 'review', 'evaluation'],
-      icon: 'TrendingUp',
-      color: 'blue',
-      content: 'Performance management details will be added in next batch'
-    }
-  ]
+      }
+    ]
+  }
 };
 
-export const keyHighlights = [
-  {
-    section: 'Code of Conduct',
-    highlight: 'Zero tolerance for harassment, discrimination, or misconduct',
-    icon: 'Shield',
-    color: 'red'
-  },
-  {
-    section: 'Leave Policy',
-    highlight: 'Medical certificate required for sick leave exceeding 3 days',
-    icon: 'Calendar',
-    color: 'blue'
-  },
-  {
-    section: 'Disciplinary Procedures',
-    highlight: 'Principles of natural justice followed in all proceedings',
-    icon: 'Scale',
-    color: 'purple'
-  },
-  {
-    section: 'Grievance Redressal',
-    highlight: 'All grievances acknowledged within 3 working days',
-    icon: 'AlertCircle',
-    color: 'orange'
-  }
+export const sections = [
+  { id: 'preamble', category: 'Introduction', title: 'Preamble', icon: 'Scale', color: 'amber' },
+  { id: 'section1', category: 'Foundational', title: 'Section 1: Preliminary', icon: 'FileText', color: 'blue' },
+  { id: 'section2', category: 'Foundational', title: 'Section 2: Recruitment and Employment', icon: 'Users', color: 'green' },
+  { id: 'section3', category: 'Conduct & Ethics', title: 'Section 3: Code of Conduct', icon: 'Shield', color: 'red' },
+  { id: 'section4', category: 'Conduct & Ethics', title: 'Section 4: Employee Rights and Responsibilities', icon: 'Award', color: 'purple' },
+  { id: 'section5', category: 'Conduct & Ethics', title: 'Section 5: Diversity, Equity, and Inclusion', icon: 'Heart', color: 'indigo' }
 ];
 
 export const quickReferenceData = {
@@ -389,3 +331,30 @@ export const quickReferenceData = {
     'Confirmation: Upon satisfactory performance'
   ]
 };
+
+export const keyHighlights = [
+  {
+    section: 'Code of Conduct',
+    highlight: 'Zero tolerance for harassment, discrimination, or misconduct',
+    icon: 'Shield',
+    color: 'red'
+  },
+  {
+    section: 'Leave Policy',
+    highlight: 'Medical certificate required for sick leave exceeding 3 days',
+    icon: 'Calendar',
+    color: 'blue'
+  },
+  {
+    section: 'Disciplinary Procedures',
+    highlight: 'Principles of natural justice followed in all proceedings',
+    icon: 'Scale',
+    color: 'purple'
+  },
+  {
+    section: 'Grievance Redressal',
+    highlight: 'All grievances acknowledged within 3 working days',
+    icon: 'AlertCircle',
+    color: 'orange'
+  }
+];
