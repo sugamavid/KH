@@ -28,20 +28,17 @@ These by-laws shall be regarded as a living document, subject to periodic review
       {
         number: '1.1',
         title: 'Short Title, Extent and Commencement',
-        content: `(a) **Short Title:**
-These by-laws may be cited as the "Koyili Hospital Human Resource By-Laws" (hereinafter referred to as "the By-Laws").
+        content: `<strong style="display: block; margin-bottom: 0.5rem;">(a) Short Title:</strong>
+<span style="display: block; margin-bottom: 1rem;">These by-laws may be cited as the "Koyili Hospital Human Resource By-Laws" (hereinafter referred to as "the By-Laws").</span>
 
-(b) **Extent:**
-    (i) The By-Laws extend to all branches, facilities, and operational areas under the administration of Koyili Hospital, whether located on the primary premises or off-site, and are applicable across the entire network of Koyili Hospital's operations.
-    
-    (ii) These By-Laws govern every department, including but not limited to patient care units, administrative offices, research facilities, support services, and auxiliary units.
+<strong style="display: block; margin-bottom: 0.5rem;">(b) Extent:</strong>
+<span style="display: block; margin-left: 2rem; margin-bottom: 0.5rem;"><strong>(i)</strong> The By-Laws extend to all branches, facilities, and operational areas under the administration of Koyili Hospital, whether located on the primary premises or off-site, and are applicable across the entire network of Koyili Hospital's operations.</span>
+<span style="display: block; margin-left: 2rem; margin-bottom: 1rem;"><strong>(ii)</strong> These By-Laws govern every department, including but not limited to patient care units, administrative offices, research facilities, support services, and auxiliary units.</span>
 
-(c) **Commencement:**
-    (i) The By-Laws shall take effect immediately upon their approval and notification by the Board of Directors or equivalent authoritative body of Koyili Hospital.
-    
-    (ii) Amendments or revisions to the By-Laws shall be implemented following a review and approval process conducted by the designated HR Compliance Committee and authorised by the Board. All amendments shall be communicated to the employees in writing or electronically within thirty (30) days of their approval.
-    
-    (iii) Any subsequent policy or internal guideline must align with these By-Laws and shall be considered subordinate to them in case of any inconsistencies.`
+<strong style="display: block; margin-bottom: 0.5rem;">(c) Commencement:</strong>
+<span style="display: block; margin-left: 2rem; margin-bottom: 0.5rem;"><strong>(i)</strong> The By-Laws shall take effect immediately upon their approval and notification by the Board of Directors or equivalent authoritative body of Koyili Hospital.</span>
+<span style="display: block; margin-left: 2rem; margin-bottom: 0.5rem;"><strong>(ii)</strong> Amendments or revisions to the By-Laws shall be implemented following a review and approval process conducted by the designated HR Compliance Committee and authorised by the Board. All amendments shall be communicated to the employees in writing or electronically within thirty (30) days of their approval.</span>
+<span style="display: block; margin-left: 2rem;"><strong>(iii)</strong> Any subsequent policy or internal guideline must align with these By-Laws and shall be considered subordinate to them in case of any inconsistencies.</span>`
       },
       {
         number: '1.2',
