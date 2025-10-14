@@ -12611,7 +12611,231 @@ Disclosure:
     title: 'Work-Life Balance Support Initiatives',
     searchTerms: ['work', 'life', 'balance', 'support', 'initiatives', 'wellness'],
     category: 'L. Wellness, Work-Life Balance & EAP',
-    content: 'Institutionalizes various initiatives and policies supporting employee work-life balance promoting overall wellness, job satisfaction, and organizational productivity.'
+    subsections: [
+      {
+        number: '1',
+        title: 'OBJECTIVE',
+        content: 'To institutionalize policies, initiatives, and cultural practices that support employee work-life balance promoting overall wellness, job satisfaction, reduced burnout, improved productivity, and organizational commitment by enabling employees to fulfill professional responsibilities while maintaining personal well-being and family commitments.'
+      },
+      {
+        number: '2',
+        title: 'SCOPE',
+        content: 'Covers organizational policies, flexible work arrangements, leave provisions, family support programs, time management initiatives, and cultural practices that facilitate work-life balance. Applicable to all employees with considerations for role requirements and operational feasibility.'
+      },
+      {
+        number: '3',
+        title: 'CORE WORK-LIFE BALANCE PRINCIPLES',
+        content: `• Right to personal time: Work is important, but not everything
+• Boundaries respected: No expectation of 24/7 availability (except on-call roles)
+• Family comes first (emergencies): Hospital supports employees during personal crises
+• Sustainable work culture: Long hours and burnout not rewarded
+• Flexibility where feasible: One-size doesn't fit all
+• Trust and autonomy: Focus on output, not micromanagement`
+      },
+      {
+        number: '4',
+        title: 'FLEXIBLE WORK ARRANGEMENTS',
+        subsections: [
+          {
+            number: '4.1',
+            title: 'Flexible Working Hours',
+            content: `Where Applicable (Non-Shift Roles):
+• Core hours (e.g., 10 AM - 4 PM): Mandatory presence
+• Flexible start/end (e.g., start 8-10 AM, finish 5-7 PM)
+• Helps employees manage personal commitments (school drop-off, appointments)
+• Supervisor approval required
+• Trial basis, reviewed for performance impact`
+          },
+          {
+            number: '4.2',
+            title: 'Work from Home / Remote Work',
+            content: `• Applicable for eligible roles (SOP K.4)
+• Hybrid model: Few days office, few days remote
+• Full remote for special circumstances (pregnancy, elder care, medical)
+• Approval based on role feasibility and performance
+• Technology and security compliance mandatory`
+          },
+          {
+            number: '4.3',
+            title: 'Compressed Work Week',
+            content: `• Work full-time hours in fewer days (e.g., 4 days x 10 hours = 40 hours)
+• Extra day off for personal pursuits
+• Limited to specific roles and with approval
+• Pilot basis, evaluated for sustainability`
+          },
+          {
+            number: '4.4',
+            title: 'Part-Time Work Options',
+            content: `For employees seeking reduced hours:
+• New parents (post-maternity/paternity leave) transitioning back
+• Employees pursuing higher education
+• Senior employees phasing into retirement
+• Pro-rated salary and benefits
+• Converted to part-time role with mutual agreement`
+          }
+        ]
+      },
+      {
+        number: '5',
+        title: 'LEAVE PROVISIONS SUPPORTING WORK-LIFE BALANCE',
+        content: `(Detailed in Leave Management SOPs - Section F)
+
+• Adequate annual leave (CL, SL, PL)
+• Maternity leave: 26 weeks (as per law)
+• Paternity leave: 5-7 days
+• Parental leave: Additional time for child care
+• Sabbatical leave: For long-term personal projects (unpaid, if policy permits)
+• Bereavement leave: Time to grieve family loss
+• Special leave: For family emergencies (medical, etc.)
+• Encourage leave utilization: Unused leave leads to burnout`
+      },
+      {
+        number: '6',
+        title: 'FAMILY SUPPORT PROGRAMS',
+        subsections: [
+          {
+            number: '6.1',
+            title: 'Childcare Support',
+            content: `• On-site crèche/daycare (if hospital has facility)
+• Childcare subsidy or reimbursement (policy-dependent)
+• Nursing mothers: Private room for breastfeeding/pumping
+• Flexible hours for parents during school hours
+• Emergency child care leave`
+          },
+          {
+            number: '6.2',
+            title: 'Elder Care Support',
+            content: `• Flexible hours for employees caring for aging parents
+• EAP elder care counselling and resources
+• Special leave for medical emergencies of dependents
+• Information sessions on elder care resources`
+          },
+          {
+            number: '6.3',
+            title: 'Family Events',
+            content: `• Hospital family day: Employees bring families to hospital
+• Children's events (annual day, summer camp)
+• Family inclusion in wellness programs (SOP L.2)
+• Builds sense of community and belonging`
+          }
+        ]
+      },
+      {
+        number: '7',
+        title: 'TIME MANAGEMENT & WORKLOAD MANAGEMENT',
+        content: `• Realistic deadlines and manageable workloads
+• Training on time management and prioritization
+• Discourage glorification of overwork ("I worked 12 hours" not a badge of honor)
+• Encourage delegation and team collaboration
+• Regular workload reviews by managers
+• Saying "no" to unreasonable demands supported (within reason)`
+      },
+      {
+        number: '8',
+        title: 'AFTER-HOURS COMMUNICATION POLICY',
+        content: `• Respect boundaries: No expectation to respond to emails/calls after work hours (except emergencies)
+• Avoid scheduling meetings early morning or late evening unless necessary
+• On-call staff: Clear on-call schedule and compensation
+• Email etiquette: "No need to reply now" if sending after hours
+• Weekends and holidays: Only urgent matters
+• Manager sets example: Don't email team at 11 PM`
+      },
+      {
+        number: '9',
+        title: 'PAID TIME OFF (PTO) ENCOURAGEMENT',
+        content: `• Managers encourage employees to use leave
+• No "leave shaming" culture
+• Unused leave doesn't mean dedication (may indicate burnout or poor delegation)
+• Mandatory leave for senior roles (succession planning test)
+• Blackout dates minimized (operational needs balanced with employee rights)`
+      },
+      {
+        number: '10',
+        title: 'WELLNESS BREAKS & RECREATION',
+        content: `• Adequate lunch breaks (45-60 minutes)
+• Short breaks encouraged (coffee, walk, stretch)
+• Recreation room (if available): Games, books, relaxation
+• Wellness activities during work hours (yoga, meditation - SOP L.2)
+• Social events and team outings (quarterly/annually)
+• "No laptop during lunch" encouraged`
+      },
+      {
+        number: '11',
+        title: 'CAREER & PERSONAL DEVELOPMENT BALANCE',
+        content: `• Support for employees pursuing higher education (flexible hours, study leave)
+• Training and courses during work hours (not always after-hours)
+• Sabbaticals for personal growth (policy-dependent)
+• Career breaks: Option to take extended unpaid leave and return (for travel, personal projects)`
+      },
+      {
+        number: '12',
+        title: 'MANAGER ACCOUNTABILITY',
+        content: `Managers Expected To:
+• Model work-life balance (don't overwork visibly)
+• Respect employee personal time
+• Discourage presenteeism (being at work but unproductive)
+• Support flexible arrangements where feasible
+• Monitor team for burnout signs
+• Not reward overwork (quality over quantity)
+
+Manager Performance:
+• Evaluated on team well-being and retention, not just output`
+      },
+      {
+        number: '13',
+        title: 'ORGANIZATIONAL CULTURE SHIFTS',
+        content: `From:
+• "Work is life" → "Work enables life"
+• "Always available" → "Available during work hours"
+• "Face time matters" → "Results matter"
+• "Burnout is normal" → "Burnout is preventable"
+
+Leadership Role:
+• Senior management champions work-life balance
+• Policies backed by action (not just on paper)
+• Regular pulse checks: Employee wellness surveys
+• Open dialogue on stressors and solutions`
+      },
+      {
+        number: '14',
+        title: 'WORK-LIFE BALANCE SURVEY & FEEDBACK',
+        content: `• Annual employee satisfaction survey includes work-life balance questions
+• Feedback on policies and suggestions
+• Anonymous concerns addressed
+• Continuous improvement based on employee needs`
+      },
+      {
+        number: '15',
+        title: 'SUPPORT DURING LIFE EVENTS',
+        content: `Hospital supports employees during major life events:
+• Marriage: Marriage leave
+• Childbirth: Extended maternity/paternity leave, phased return
+• Illness (self/family): Medical leave, flexibility
+• Bereavement: Time and space to grieve
+• Relocation: Transfer support, relocation assistance
+• Personal crisis: EAP, compassionate leave`
+      },
+      {
+        number: '16',
+        title: 'MONITORING & EVALUATION',
+        content: `Metrics Tracked:
+• Average working hours per week
+• Leave utilization rates (low = potential issue)
+• Attrition linked to work-life balance (exit interview data)
+• Burnout indicators (sick leave frequency, EAP utilization)
+• Employee engagement scores
+
+Action:
+• Data reviewed quarterly
+• Interventions for departments with issues
+• Policy adjustments based on trends`
+      },
+      {
+        number: '17',
+        title: 'REFERENCE DOCUMENTS',
+        content: 'Flexible Work Policy, Remote Work Policy (SOP K.4), Leave Policy (Section F), Wellness Policy, EAP Policy (SOP L.1), Annexure L.5.1: Work-Life Balance Guidelines Handbook'
+      }
+    ]
   },
 
   // SECTION M: GRIEVANCE, COMPLAINTS & REDRESSAL
