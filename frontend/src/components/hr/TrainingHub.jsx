@@ -526,7 +526,7 @@ const TrainingHub = ({ onClose, onNavigateToSection }) => {
           {training.status === 'not_started' ? (
             <button
               onClick={(e) => e.stopPropagation()}
-              className="flex-1 flex items-center justify-center gap-2 px-3 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors text-sm font-semibold"
+              className="flex-1 flex items-center justify-center gap-2 px-3 py-2 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition-colors text-sm font-semibold"
             >
               <PlayCircle className="w-4 h-4" />
               Enroll Now
