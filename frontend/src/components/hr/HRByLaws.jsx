@@ -11,6 +11,7 @@ import { byLawsData, sections as sectionsData, quickReferenceData, keyHighlights
 import GovernanceWizard from './GovernanceWizard';
 import AuthorityFinder from './AuthorityFinder';
 import ComplianceCenter from './ComplianceCenter';
+import PolicyManager from './PolicyManager';
 
 const HRByLaws = ({ setActiveModule }) => {
   const [activeSection, setActiveSection] = useState('dashboard');
