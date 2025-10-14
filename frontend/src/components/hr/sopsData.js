@@ -9634,7 +9634,340 @@ HR reviews expiry dashboard monthly and follows up`
     title: 'Leadership Development & Succession Planning',
     searchTerms: ['leadership', 'development', 'succession', 'planning', 'talent'],
     category: 'J. Training, Certification & Development',
-    content: 'Establishes structured framework for identifying, developing, and retaining future leaders while ensuring continuity in key roles through formal succession planning.'
+    subsections: [
+      {
+        number: '1',
+        title: 'OBJECTIVE',
+        content: 'To establish structured, strategic, and proactive framework for identifying high-potential talent, developing leadership competencies, creating robust leadership pipeline, and ensuring business continuity through formal succession planning for critical roles thereby securing organizational sustainability and minimizing risks of talent gaps.'
+      },
+      {
+        number: '2',
+        title: 'SCOPE',
+        content: 'Covers identification and development of future leaders at all management levels, succession planning for key positions (HODs, senior management, specialists), talent retention strategies, and career progression pathways. Applicable to high-potential employees across all departments.'
+      },
+      {
+        number: '3',
+        title: 'LEADERSHIP DEVELOPMENT FRAMEWORK',
+        subsections: [
+          {
+            number: '3.1',
+            title: 'Leadership Competency Model',
+            content: `Core Leadership Competencies Required:
+(i) Strategic Thinking:
+    • Vision and strategic planning
+    • Business acumen
+    • Decision-making under uncertainty
+
+(ii) People Management:
+    • Team building and motivation
+    • Coaching and mentoring
+    • Performance management
+    • Conflict resolution
+
+(iii) Operational Excellence:
+    • Resource management
+    • Process improvement
+    • Problem-solving and innovation
+
+(iv) Communication & Influence:
+    • Effective communication
+    • Stakeholder management
+    • Change management
+    • Negotiation skills
+
+(v) Personal Leadership:
+    • Emotional intelligence
+    • Resilience and adaptability
+    • Ethics and integrity
+    • Continuous learning mindset`
+          },
+          {
+            number: '3.2',
+            title: 'Leadership Development Levels',
+            content: `(i) First-Time Managers (Team Leaders, Supervisors):
+    • Focus: Transition from individual contributor to manager
+    • Training: Basic supervision, delegation, feedback, time management
+
+(ii) Mid-Level Leaders (Managers, Assistant HODs):
+    • Focus: Strategic thinking, cross-functional collaboration
+    • Training: Advanced people management, strategic planning, budgeting
+
+(iii) Senior Leaders (HODs, Department Heads):
+    • Focus: Organizational leadership, vision setting
+    • Training: Executive leadership, organizational development, board-level communication
+
+(iv) Executive Leadership (CEO, COO, CMO):
+    • Focus: Strategic direction, governance, stakeholder management
+    • Training: Executive programs, advanced strategy, healthcare policy`
+          }
+        ]
+      },
+      {
+        number: '4',
+        title: 'HIGH-POTENTIAL (HiPo) IDENTIFICATION',
+        subsections: [
+          {
+            number: '4.1',
+            title: 'HiPo Identification Criteria',
+            content: `An employee is considered high-potential if they demonstrate:
+• Consistent high performance (rating 4-5 for 2+ years)
+• Leadership traits (takes initiative, influences others)
+• Learning agility (quick to learn and adapt)
+• Aspiration (desire for leadership roles)
+• Emotional intelligence and interpersonal skills
+• Technical/functional expertise in their domain`
+          },
+          {
+            number: '4.2',
+            title: 'HiPo Identification Process',
+            content: `Annual Talent Review Process:
+(i) Performance Data Review:
+    • HR compiles performance ratings, feedback, achievements
+
+(ii) Manager Nominations:
+    • Managers nominate high-potential employees
+    • Provide justification and evidence
+
+(iii) Talent Review Committee:
+    • Composed of HODs, CHRO, CEO
+    • Reviews nominations
+    • Assesses against HiPo criteria
+    • Finalizes HiPo list
+
+(iv) Assessment Centers (Optional):
+    • Structured assessment for leadership potential
+    • Psychometric tests, case studies, group exercises
+    • External assessors for objectivity
+
+(v) Communication:
+    • HiPo status communicated confidentially to identified employees
+    • Development plan discussion`
+          },
+          {
+            number: '4.3',
+            title: 'HiPo Pool',
+            content: `• Maintained as confidential talent database
+• Categorized by level: Future Supervisors, Future Managers, Future HODs
+• Reviewed and updated annually
+• Typical size: 10-15% of workforce`
+          }
+        ]
+      },
+      {
+        number: '5',
+        title: 'LEADERSHIP DEVELOPMENT PROGRAMS',
+        subsections: [
+          {
+            number: '5.1',
+            title: 'Individual Development Plans (IDPs)',
+            content: `• Each HiPo receives personalized IDP (Annexure J.6.1)
+• Developed jointly by employee, manager, and HR
+• Components:
+    - Career goals (short-term and long-term)
+    - Competency gaps identified
+    - Development actions (training, projects, mentoring)
+    - Timeline and milestones
+    - Progress review mechanism
+• Reviewed quarterly and updated annually`
+          },
+          {
+            number: '5.2',
+            title: 'Leadership Training Programs',
+            content: `(i) Internal Programs:
+    • First-Time Manager Program (1-2 days)
+    • Advanced Leadership Program (3-5 days)
+    • Executive Leadership Program (modular, 6 months)
+
+(ii) External Programs:
+    • Executive education at premier institutes (IIMs, ISB)
+    • Healthcare leadership certifications
+    • International conferences and workshops
+
+(iii) Online Learning:
+    • LinkedIn Learning, Coursera leadership courses
+    • Harvard ManageMentor modules
+    • Self-paced learning with assigned topics`
+          },
+          {
+            number: '5.3',
+            title: 'Stretch Assignments & Job Rotations',
+            content: `• High-impact projects beyond current role scope
+• Cross-functional project teams
+• Acting roles (temporary leadership positions)
+• Job rotations (6-12 months in different department)
+• Special task forces and committees
+• Builds breadth of experience and organizational perspective`
+          },
+          {
+            number: '5.4',
+            title: 'Mentoring & Coaching',
+            content: `• Each HiPo assigned a senior leader as mentor
+• Mentor-mentee pairing based on development needs
+• Structured mentoring program:
+    - Monthly one-on-one meetings
+    - Career guidance and advice
+    - Networking and visibility
+    - Confidential sounding board
+• External executive coaching for senior HiPos (optional)`
+          },
+          {
+            number: '5.5',
+            title: 'Exposure & Visibility',
+            content: `• Participation in management meetings (as observer)
+• Presentations to senior management
+• Representation in inter-departmental committees
+• Attendance at board meetings (for senior HiPos)
+• External networking events and conferences
+• Builds confidence and executive presence`
+          }
+        ]
+      },
+      {
+        number: '6',
+        title: 'SUCCESSION PLANNING',
+        subsections: [
+          {
+            number: '6.1',
+            title: 'Critical Positions Identification',
+            content: `Critical positions requiring succession planning:
+• Executive leadership: CEO, COO, CMO, CFO, CHRO
+• Clinical leadership: HODs, Senior Consultants
+• Operational leadership: Department Heads, Managers
+• Specialized roles: Lab Head, Radiology Head, ICU In-charge
+
+Criticality criteria:
+• High impact on operations or patient care
+• Difficult to replace (niche skills)
+• Long lead time to develop successor
+• Strategic importance`
+          },
+          {
+            number: '6.2',
+            title: 'Succession Planning Process',
+            content: `(i) Position Analysis:
+    • For each critical position, define:
+        - Key responsibilities
+        - Required competencies
+        - Success factors
+
+(ii) Readiness Assessment:
+    • Identify potential successors from HiPo pool
+    • Assess readiness level:
+        - Ready Now (can take over immediately)
+        - Ready in 1-2 years (with development)
+        - Ready in 3-5 years (long-term pipeline)
+
+(iii) Succession Plan Creation:
+    • Primary successor identified
+    • Secondary/backup successor(s) identified
+    • Development plan for each successor
+    • Risk mitigation for no successor (external hiring plan)
+
+(iv) Documentation:
+    • Succession Plan Document (Annexure J.6.2)
+    • Confidential, reviewed by senior management
+    • Updated annually or when position changes`
+          },
+          {
+            number: '6.3',
+            title: 'Nine-Box Grid Talent Mapping',
+            content: `Performance vs Potential Matrix:
+
+                    Low Potential   Medium Potential   High Potential
+High Performance    [1] Stars in    [2] Core Players   [3] Future Leaders
+                    current role    (solid performers)  (HiPos)
+                    
+Medium Performance  [4] Reassess    [5] Majority       [6] Rough Diamonds
+                    fit             (average)          (needs coaching)
+                    
+Low Performance     [7] Exit        [8] Improvement    [9] Wrong Role
+                    (low contrib.)  Plan Needed        (reassign?)
+
+Succession focus on Box [3] and [2]`
+          },
+          {
+            number: '6.4',
+            title: 'Succession Readiness Reviews',
+            content: `• Conducted annually during talent review
+• Executive committee reviews succession plans
+• Assesses bench strength (number of ready successors)
+• Identifies succession gaps and risks
+• Approves development actions and timelines
+• May involve Board for CEO succession`
+          }
+        ]
+      },
+      {
+        number: '7',
+        title: 'RETENTION STRATEGIES FOR HiPos & SUCCESSORS',
+        content: `• Competitive compensation and faster increments
+• Special recognition and awards
+• Increased responsibility and autonomy
+• Career path clarity and visibility
+• Opportunities for external exposure
+• Engagement by senior leadership
+• Flexible work arrangements (where applicable)
+• Retention bonuses for critical roles
+• Transparent communication on career progression`
+      },
+      {
+        number: '8',
+        title: 'EMERGENCY SUCCESSION (CONTINGENCY)',
+        content: `• For sudden departures (resignation, medical emergency, death)
+• Interim arrangement:
+    - Acting role assigned to deputy/senior team member
+    - Maximum 3-6 months
+• Accelerated development for successor
+• Or external hiring initiated
+• Business continuity plans activated`
+      },
+      {
+        number: '9',
+        title: 'MONITORING & EVALUATION',
+        content: `(i) Quarterly IDP Progress Reviews:
+    • HiPo and manager review progress
+    • HR monitors completion of development actions
+
+(ii) Annual Talent Review:
+    • HiPo pool refreshed
+    • Promotions and movements tracked
+    • Succession plan effectiveness assessed
+
+(iii) Leadership Development Metrics:
+    • % critical positions with identified successors (Target: 100%)
+    • % HiPos promoted (indicator of program success)
+    • Time to fill critical roles (reduced with succession planning)
+    • HiPo retention rate (Target: >90%)
+    • Leadership training hours per HiPo`
+      },
+      {
+        number: '10',
+        title: 'CONFIDENTIALITY & COMMUNICATION',
+        content: `• Succession plans are CONFIDENTIAL
+• Not shared with employees to avoid:
+    - Entitlement mentality
+    - Demotivation if not selected
+    - Complacency
+• Only shared with senior management and Board
+• HiPo status communicated to individual and manager
+• Development opportunities provided without revealing succession plan`
+      },
+      {
+        number: '11',
+        title: 'GOVERNANCE',
+        content: `• Talent Review Committee oversees leadership development
+• Chaired by CEO/CHRO
+• Meets annually (minimum)
+• Reviews HiPo nominations, succession plans, retention risks
+• Approves development investments
+• Reports to Board on succession readiness for critical roles`
+      },
+      {
+        number: '12',
+        title: 'REFERENCE DOCUMENTS',
+        content: 'HR By-Laws (Talent Management Policy), Leadership Competency Framework, Annexure J.6.1: Individual Development Plan Template, Annexure J.6.2: Succession Plan Document, Annexure J.6.3: Nine-Box Grid Talent Map'
+      }
+    ]
   },
 
   // SECTION K: TECHNOLOGY USAGE & DIGITAL SECURITY
