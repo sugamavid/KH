@@ -22,61 +22,91 @@ const HRByLaws = ({ setActiveModule }) => {
   const renderFormattedContent = (content) => {
     if (!content) return null;
     
-    const lines = content.split('\n').filter(line => line.trim());
+    const lines = content.split('\n');
     const elements = [];
+    let currentSection = null;
+    let sectionBullets = [];
+    
+    const flushSection = () => {
+      if (currentSection && sectionBullets.length > 0) {
+        elements.push(
+          <div key={`section-${elements.length}`} className="mb-4">
+            {currentSection}
+            <div className="ml-8 mt-2 space-y-2">
+              {sectionBullets}
+            </div>
+          </div>
+        );
+        sectionBullets = [];
+        currentSection = null;
+      } else if (currentSection) {
+        elements.push(currentSection);
+        currentSection = null;
+      }
+    };
     
     lines.forEach((line, index) => {
       const trimmedLine = line.trim();
       
-      // Main points: (a), (b), (c), (d)
-      const mainPointMatch = trimmedLine.match(/^\(([a-z])\)\s+\*\*(.*?)\*\*:?\s*(.*)/);
+      // Skip empty lines
+      if (!trimmedLine) {
+        flushSection();
+        return;
+      }
+      
+      // Main points: (a), (b), (c), (d) with **Title:**
+      const mainPointMatch = trimmedLine.match(/^\(([a-z])\)\s+\*\*(.*?)\*\*:?$/);
       if (mainPointMatch) {
-        elements.push(
-          <div key={`main-${index}`} className="mt-6 mb-3">
+        flushSection();
+        currentSection = (
+          <div key={`main-${index}`} className="mt-5 mb-2">
             <span className="font-bold text-slate-900 text-lg">({mainPointMatch[1]}) </span>
-            <span className="font-bold text-slate-900">{mainPointMatch[2]}:</span>
-            {mainPointMatch[3] && <span className="ml-1">{mainPointMatch[3]}</span>}
+            <span className="font-bold text-slate-900 text-lg">{mainPointMatch[2]}:</span>
           </div>
         );
         return;
       }
       
-      // Sub-points: (i), (ii), (iii) - check for leading spaces
+      // Sub-points: (i), (ii), (iii)
       const subPointMatch = line.match(/^\s{4}\(([ivxl]+)\)\s+(.*)/);
       if (subPointMatch) {
+        flushSection();
         const text = subPointMatch[2].replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
         elements.push(
-          <div key={`sub-${index}`} className="ml-8 mt-3 mb-2">
-            <span className="font-semibold text-slate-700">({subPointMatch[1]}) </span>
-            <span dangerouslySetInnerHTML={{ __html: text }} />
+          <div key={`sub-${index}`} className="ml-12 mt-2 mb-2">
+            <span className="font-semibold text-slate-700 text-base">({subPointMatch[1]}) </span>
+            <span className="text-slate-700" dangerouslySetInnerHTML={{ __html: text }} />
           </div>
         );
         return;
       }
       
-      // Bullets: • - check for leading spaces
+      // Bullets: •
       const bulletMatch = line.match(/^\s{4}•\s+(.*)/);
       if (bulletMatch) {
         const text = bulletMatch[1].replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
-        elements.push(
-          <div key={`bullet-${index}`} className="ml-8 mt-2 mb-2 flex items-start">
-            <span className="text-amber-600 mr-3 mt-1 font-bold">•</span>
-            <span className="flex-1" dangerouslySetInnerHTML={{ __html: text }} />
+        sectionBullets.push(
+          <div key={`bullet-${index}`} className="flex items-start">
+            <span className="text-amber-600 mr-3 mt-0.5 font-bold text-lg">•</span>
+            <span className="flex-1 text-slate-700" dangerouslySetInnerHTML={{ __html: text }} />
           </div>
         );
         return;
       }
       
-      // Regular paragraph
+      // Regular text (continuation or standalone)
       if (trimmedLine) {
+        flushSection();
         const text = trimmedLine.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
         elements.push(
-          <p key={`p-${index}`} className="mb-3 text-slate-700" dangerouslySetInnerHTML={{ __html: text }} />
+          <p key={`p-${index}`} className="mb-3 text-slate-700 leading-relaxed" dangerouslySetInnerHTML={{ __html: text }} />
         );
       }
     });
     
-    return <div className="space-y-1">{elements}</div>;
+    flushSection(); // Flush any remaining section
+    
+    return <div>{elements}</div>;
   };
 
   // Complete Navigation structure for all 30 sections (User's Original By-Laws)
