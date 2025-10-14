@@ -9377,7 +9377,255 @@ Note: Limits subject to management discretion and budget availability`
     title: 'Certificate Recording & Training Tracker',
     searchTerms: ['certificate', 'recording', 'training', 'tracker', 'documentation'],
     category: 'J. Training, Certification & Development',
-    content: 'Ensures systematic collection, validation, recording, and tracking of all training-related certificates maintaining robust compliance trail and enabling audits.'
+    subsections: [
+      {
+        number: '1',
+        title: 'OBJECTIVE',
+        content: 'To ensure systematic, accurate, and comprehensive collection, validation, recording, tracking, and archival of all training-related certificates, credentials, licenses, and competency records maintaining robust compliance trail, enabling audits, facilitating accreditation, and supporting career development planning.'
+      },
+      {
+        number: '2',
+        title: 'SCOPE',
+        content: 'Covers all training certificates including induction, internal training, external courses, professional certifications, licenses, competency validations, CME credits, and refresher training records. Applicable to all employees across all categories.'
+      },
+      {
+        number: '3',
+        title: 'TYPES OF TRAINING RECORDS',
+        content: `(i) Mandatory Induction & Refresher Training:
+    • Induction training certificate
+    • Fire safety, infection control refreshers
+    • POSH, biomedical waste training
+    • Annual compliance training
+
+(ii) Professional Licenses & Registrations:
+    • Medical Council registration (doctors)
+    • Nursing Council registration (nurses)
+    • Professional body memberships
+    • License renewal records
+
+(iii) Clinical Certifications:
+    • BLS, ACLS, PALS, ATLS certificates
+    • Specialty certifications
+    • Competency validation records
+
+(iv) External Training & Courses:
+    • Workshop/conference certificates
+    • Professional certifications (Six Sigma, PMP, etc.)
+    • Academic degrees/diplomas
+    • Online course completion certificates
+
+(v) CME (Continuing Medical Education):
+    • CME credits and certificates
+    • Conference attendance certificates
+    • Journal club and case discussion records
+
+(vi) On-the-Job Training:
+    • Equipment training records
+    • Process training sign-offs
+    • Shadowing and mentorship logs`
+      },
+      {
+        number: '4',
+        title: 'CERTIFICATE COLLECTION PROCESS',
+        subsections: [
+          {
+            number: '4.1',
+            title: 'At Hiring Stage',
+            content: `• Candidates submit copies of educational certificates, professional licenses, prior training certificates
+• HR verifies authenticity (contact issuing authority if needed)
+• Original certificates verified during document verification
+• Certified copies retained in personnel file
+• Digital copies uploaded to HRMS`
+          },
+          {
+            number: '4.2',
+            title: 'During Employment',
+            content: `Internal Training:
+• Training coordinator collects attendance registers
+• Certificates auto-generated post-assessment
+• Distributed and recorded in HRMS
+
+External Training:
+• Employee submits certificate copy to HR within 15 days
+• HR verifies with training provider if needed
+• Recorded in training tracker
+
+License Renewals:
+• Employees responsible to renew professional licenses
+• Submit renewed license copy to HR immediately
+• HR tracks expiry dates and sends reminders`
+          },
+          {
+            number: '4.3',
+            title: 'Validation & Verification',
+            content: `• HR verifies certificate authenticity:
+    - Check issuing authority credentials
+    - Verify certificate number (if applicable)
+    - Cross-check with training provider/institution
+    - For critical certifications: Email/call verification
+
+• Fraudulent certificates: Serious misconduct, termination`
+          }
+        ]
+      },
+      {
+        number: '5',
+        title: 'TRAINING TRACKER SYSTEM',
+        subsections: [
+          {
+            number: '5.1',
+            title: 'Training Tracker Database',
+            content: `Maintained in HRMS or Excel (Annexure J.5.1)
+
+Fields Captured:
+• Employee ID, Name, Department, Designation
+• Training Name/Topic
+• Training Type (Induction, Internal, External, Certification)
+• Training Date / Duration
+• Training Provider/Vendor
+• Certificate Number
+• Validity/Expiry Date (if applicable)
+• Renewal Due Date
+• Training Hours/Credits
+• Assessment Score (if applicable)
+• Certificate Copy (digital link/file)
+• Remarks`
+          },
+          {
+            number: '5.2',
+            title: 'Individual Training Profile',
+            content: `Each employee has a Training Profile containing:
+• All training attended (chronological)
+• Certificates and credentials held
+• Competencies validated
+• CME credits accumulated
+• Upcoming mandatory refreshers
+• Training hours (YTD and cumulative)
+
+Accessible to:
+• Employee (view own profile)
+• Manager/HOD (view team profiles)
+• HR (full access for all employees)`
+          },
+          {
+            number: '5.3',
+            title: 'Expiry & Renewal Tracking',
+            content: `Critical for:
+• Professional licenses (must be current)
+• BLS/ACLS certifications (valid for 2 years)
+• Safety certifications
+
+Auto-Alerts System:
+• 90 days before expiry: Alert to employee and manager
+• 60 days before expiry: Second reminder
+• 30 days before expiry: Escalation to HR and HOD
+• Expired: Employee restricted from practice/role until renewed
+
+HR reviews expiry dashboard monthly and follows up`
+          }
+        ]
+      },
+      {
+        number: '6',
+        title: 'TRAINING RECORD DOCUMENTATION',
+        subsections: [
+          {
+            number: '6.1',
+            title: 'Physical Records',
+            content: `• Certificate copies filed in personnel files
+• Organized chronologically
+• Indexed for easy retrieval
+• Stored securely in HR vault
+• Retained for duration of employment + 5 years post-exit`
+          },
+          {
+            number: '6.2',
+            title: 'Digital Records',
+            content: `• All certificates scanned and uploaded to HRMS
+• Searchable database
+• Backup on cloud/server
+• Access control: HR and authorized personnel only
+• Version control for renewed certificates`
+          }
+        ]
+      },
+      {
+        number: '7',
+        title: 'TRAINING MIS REPORTS',
+        content: `HR generates periodic reports:
+
+(i) Training Compliance Report:
+    • % employees completed mandatory training
+    • Pending/non-compliant employees list
+    • Department-wise compliance
+
+(ii) Certificate Expiry Report:
+    • Licenses/certifications expiring in next 90 days
+    • Expired certificates (urgent action needed)
+
+(iii) Training Hours Report:
+    • Total training hours per employee/department
+    • Average training hours per FTE
+    • Training investment per employee
+
+(iv) Training Calendar vs Actual:
+    • Planned vs executed training
+    • Attendance rates
+    • Cancelled or rescheduled sessions
+
+(v) Audit-Ready Reports:
+    • For NABH, ISO, statutory audits
+    • Complete training records with certificates`
+      },
+      {
+        number: '8',
+        title: 'EMPLOYEE SELF-SERVICE',
+        content: `Via HRMS Portal:
+• Employees can view their training history
+• Download their certificates
+• Check upcoming mandatory training
+• Submit external training certificates
+• Request training transcript (for job applications, higher studies)`
+      },
+      {
+        number: '9',
+        title: 'TRAINING TRANSCRIPT ISSUANCE',
+        content: `• Employee requests training transcript from HR
+• HR generates official transcript (Annexure J.5.2)
+• Contains: All training attended, dates, hours, certificates
+• Signed and stamped by HR
+• Issued for: Job applications, visa, higher education, licensure
+• Processing time: 3-5 working days`
+      },
+      {
+        number: '10',
+        title: 'AUDIT & COMPLIANCE',
+        content: `• Training records critical for:
+    - NABH accreditation (training documentation mandatory)
+    - ISO certification audits
+    - Regulatory inspections
+    - Legal disputes (proof of training provided)
+
+• HR maintains audit-ready files
+• Random audits conducted quarterly
+• Discrepancies rectified immediately
+• 100% training documentation target`
+      },
+      {
+        number: '11',
+        title: 'CONFIDENTIALITY & DATA SECURITY',
+        content: `• Training records contain sensitive personal data
+• Access restricted to authorized HR personnel
+• Digital systems password-protected
+• No unauthorized sharing of training records
+• Compliance with data privacy regulations`
+      },
+      {
+        number: '12',
+        title: 'REFERENCE DOCUMENTS',
+        content: 'HR By-Laws (Training Policy), NABH Training Documentation Standards, Data Privacy Policy, Annexure J.5.1: Training Tracker Template, Annexure J.5.2: Training Transcript Format'
+      }
+    ]
   },
 
   sopJ6: {
