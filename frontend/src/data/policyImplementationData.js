@@ -1327,11 +1327,634 @@ export const policyImplementationGuides = {
       'Notice period during probation'
     ]
   },
-  section5_equal_opportunity: { policyName: 'Equal Opportunity and DEI', byLawsSection: 'section5', category: 'Compliance', status: 'detailed_guide_pending' },
-  section6_code_conduct: { policyName: 'Code of Conduct and Ethics', byLawsSection: 'section6', category: 'Governance', status: 'detailed_guide_pending' },
-  section9_training: { policyName: 'Training and Development', byLawsSection: 'section9', category: 'HR Development', status: 'detailed_guide_pending' },
-  section10_remote_work: { policyName: 'Remote Work and Flexibility', byLawsSection: 'section10', category: 'HR Operations', status: 'detailed_guide_pending' },
-  section11_compensation: { policyName: 'Compensation and Benefits', byLawsSection: 'section11', category: 'HR Operations', status: 'detailed_guide_pending' },
+  // SECTION 5: EQUAL OPPORTUNITY & DEI
+  section5_equal_opportunity: {
+    policyName: 'Equal Opportunity and Diversity, Equity & Inclusion (DEI)',
+    byLawsSection: 'section5',
+    category: 'Compliance',
+    implementationSteps: [
+      {
+        step: 1,
+        phase: 'Planning',
+        activity: 'Develop DEI Policy Framework',
+        details: 'Create comprehensive policy covering equal opportunity, non-discrimination, diversity promotion, and inclusion practices',
+        responsibleCommittee: 'hr_committee',
+        responsibleIndividuals: ['HR Director', 'DEI Coordinator', 'Legal Advisor'],
+        timeline: '2-3 weeks',
+        outputs: ['DEI policy document', 'Anti-discrimination policy', 'Reasonable accommodation policy', 'DEI goals'],
+        checkpoints: ['Policy comprehensive', 'Legal compliance verified', 'Board approval obtained']
+      },
+      {
+        step: 2,
+        phase: 'Planning',
+        activity: 'Conduct DEI Baseline Assessment',
+        details: 'Assess current diversity metrics, identify gaps, conduct climate survey, analyze practices',
+        responsibleCommittee: 'hr_committee',
+        responsibleIndividuals: ['DEI Coordinator', 'HR Analytics', 'External Consultant'],
+        timeline: '3-4 weeks',
+        outputs: ['DEI metrics report', 'Gap analysis', 'Climate survey results', 'Baseline data'],
+        checkpoints: ['Data collected', 'Analysis complete', 'Gaps identified']
+      },
+      {
+        step: 3,
+        phase: 'Preparation',
+        activity: 'DEI Training Program Development',
+        details: 'Create training modules on unconscious bias, inclusive leadership, cultural competence, harassment prevention',
+        responsibleCommittee: 'hr_committee',
+        responsibleIndividuals: ['DEI Coordinator', 'Training Team', 'External Trainer'],
+        timeline: '2-3 weeks',
+        outputs: ['Training modules', 'Workshop materials', 'E-learning courses', 'Assessment tools'],
+        checkpoints: ['Content comprehensive', 'Interactive and engaging', 'Pilot tested']
+      },
+      {
+        step: 4,
+        phase: 'Implementation',
+        activity: 'Mandatory DEI Training Rollout',
+        details: 'Train all employees and management on DEI principles, unconscious bias, and inclusive practices',
+        responsibleCommittee: 'hr_committee',
+        responsibleIndividuals: ['DEI Coordinator', 'Training Team', 'Department Heads'],
+        timeline: '2-3 months',
+        outputs: ['Training completion records', 'Assessment scores', 'Feedback reports'],
+        checkpoints: ['100% staff trained', 'Understanding verified', 'Feedback positive']
+      },
+      {
+        step: 5,
+        phase: 'Implementation',
+        activity: 'Inclusive Recruitment Practices',
+        details: 'Implement blind screening, diverse interview panels, inclusive job descriptions, targeted outreach',
+        responsibleCommittee: 'hr_committee',
+        responsibleIndividuals: ['HR Director', 'Recruitment Team'],
+        timeline: 'Ongoing',
+        outputs: ['Inclusive job description templates', 'Diverse candidate pools', 'Panel diversity metrics'],
+        checkpoints: ['Practices implemented', 'Diversity in candidates improved', 'Bias minimized']
+      },
+      {
+        step: 6,
+        phase: 'Implementation',
+        activity: 'Establish Complaint Mechanism',
+        details: 'Set up confidential channels for discrimination complaints, harassment reports, and bias concerns',
+        responsibleCommittee: 'hr_committee',
+        responsibleIndividuals: ['HR Director', 'DEI Coordinator', 'Legal Advisor'],
+        timeline: '1-2 weeks',
+        outputs: ['Complaint channels', 'Investigation process', 'Resolution procedures'],
+        checkpoints: ['Channels accessible', 'Process clear', 'Confidentiality assured']
+      },
+      {
+        step: 7,
+        phase: 'Monitoring',
+        activity: 'Regular DEI Metrics Tracking',
+        details: 'Monitor diversity metrics across hiring, promotion, retention, pay equity, and representation',
+        responsibleCommittee: 'hr_committee',
+        responsibleIndividuals: ['DEI Coordinator', 'HR Analytics'],
+        timeline: 'Quarterly',
+        outputs: ['DEI dashboards', 'Quarterly reports', 'Trend analysis'],
+        checkpoints: ['Metrics tracked', 'Progress measured', 'Issues identified']
+      },
+      {
+        step: 8,
+        phase: 'Monitoring',
+        activity: 'DEI Initiatives & Programs',
+        details: 'Launch employee resource groups, mentorship programs, cultural events, awareness campaigns',
+        responsibleCommittee: 'hr_committee',
+        responsibleIndividuals: ['DEI Coordinator', 'Employee Representatives'],
+        timeline: 'Ongoing',
+        outputs: ['ERGs established', 'Events calendar', 'Program participation metrics'],
+        checkpoints: ['Programs active', 'Engagement strong', 'Culture improving']
+      }
+    ],
+    committeeInvolved: ['hr_committee', 'board_of_directors'],
+    approvalChain: [
+      { level: 'DEI Coordinator', for: 'Program implementation and monitoring' },
+      { level: 'HR Director', for: 'Policy enforcement and complaint handling' },
+      { level: 'Administrative Director', for: 'Resource allocation and support' },
+      { level: 'Board of Directors', for: 'DEI goals and policy approval' }
+    ],
+    criticalSuccess: [
+      'Inclusive organizational culture',
+      'Diverse workforce at all levels',
+      'Zero tolerance for discrimination',
+      'Positive employee sentiment on inclusion'
+    ],
+    risks: [
+      { risk: 'Tokenism', mitigation: 'Genuine commitment, measurable goals, accountability' },
+      { risk: 'Resistance to change', mitigation: 'Education, leadership buy-in, gradual cultural shift' },
+      { risk: 'Complaint mishandling', mitigation: 'Clear process, trained investigators, confidentiality' }
+    ],
+    legalCompliance: [
+      'Equal Employment Opportunity laws',
+      'Anti-discrimination regulations',
+      'Reasonable accommodation requirements',
+      'Harassment prevention mandates'
+    ]
+  },
+
+  // SECTION 6: CODE OF CONDUCT & ETHICS
+  section6_code_conduct: {
+    policyName: 'Code of Conduct and Professional Ethics',
+    byLawsSection: 'section6',
+    category: 'Governance',
+    implementationSteps: [
+      {
+        step: 1,
+        phase: 'Planning',
+        activity: 'Develop Comprehensive Code of Conduct',
+        details: 'Create detailed code covering professional behavior, ethics, integrity, conflicts of interest, and values',
+        responsibleCommittee: 'ethics_committee',
+        responsibleIndividuals: ['Ethics Officer', 'HR Director', 'Legal Advisor', 'Senior Management'],
+        timeline: '3-4 weeks',
+        outputs: ['Code of Conduct document', 'Ethics guidelines', 'Values statement', 'Behavioral standards'],
+        checkpoints: ['Comprehensive coverage', 'Clear and understandable', 'Board approval obtained']
+      },
+      {
+        step: 2,
+        phase: 'Preparation',
+        activity: 'Ethics Training Program',
+        details: 'Develop training on ethical decision-making, professional standards, conflict resolution, reporting mechanisms',
+        responsibleCommittee: 'ethics_committee',
+        responsibleIndividuals: ['Ethics Officer', 'Training Coordinator'],
+        timeline: '2 weeks',
+        outputs: ['Training modules', 'Case studies', 'Decision-making frameworks', 'Assessment tools'],
+        checkpoints: ['Training engaging', 'Scenarios realistic', 'Clear guidance provided']
+      },
+      {
+        step: 3,
+        phase: 'Implementation',
+        activity: 'Mandatory Ethics Training',
+        details: 'Train all employees on code of conduct, ethical standards, reporting obligations, and consequences',
+        responsibleCommittee: 'ethics_committee',
+        responsibleIndividuals: ['Ethics Officer', 'HR Team', 'Department Heads'],
+        timeline: '1-2 months',
+        outputs: ['Training completion records', 'Signed acknowledgments', 'Assessment scores'],
+        checkpoints: ['100% staff trained', 'Understanding verified', 'Acknowledgments signed']
+      },
+      {
+        step: 4,
+        phase: 'Implementation',
+        activity: 'Establish Reporting Channels',
+        details: 'Set up confidential ethics hotline, reporting portal, and whistleblower protection mechanisms',
+        responsibleCommittee: 'ethics_committee',
+        responsibleIndividuals: ['Ethics Officer', 'IT Support', 'Legal Advisor'],
+        timeline: '2 weeks',
+        outputs: ['Reporting channels', 'Whistleblower policy', 'Investigation procedures', 'Protection mechanisms'],
+        checkpoints: ['Channels operational', 'Confidentiality assured', 'Protection guaranteed']
+      },
+      {
+        step: 5,
+        phase: 'Implementation',
+        activity: 'Conflict of Interest Management',
+        details: 'Implement disclosure requirements, assessment process, and mitigation strategies',
+        responsibleCommittee: 'ethics_committee',
+        responsibleIndividuals: ['Ethics Officer', 'Department Heads'],
+        timeline: 'Ongoing',
+        outputs: ['Disclosure forms', 'COI register', 'Mitigation plans', 'Approval records'],
+        checkpoints: ['Disclosures submitted', 'Conflicts identified', 'Mitigation effective']
+      },
+      {
+        step: 6,
+        phase: 'Monitoring',
+        activity: 'Ethics Violation Investigation',
+        details: 'Investigate reported violations, conduct fair hearings, determine consequences, implement corrective actions',
+        responsibleCommittee: 'ethics_committee',
+        responsibleIndividuals: ['Ethics Committee', 'HR Director', 'Legal Advisor'],
+        timeline: 'As needed (15-30 days per case)',
+        outputs: ['Investigation reports', 'Hearing records', 'Disciplinary decisions', 'Corrective actions'],
+        checkpoints: ['Fair investigation', 'Due process followed', 'Appropriate consequences']
+      },
+      {
+        step: 7,
+        phase: 'Monitoring',
+        activity: 'Regular Ethics Audits',
+        details: 'Conduct periodic audits of ethical practices, compliance with code, and culture assessment',
+        responsibleCommittee: 'ethics_committee',
+        responsibleIndividuals: ['Ethics Officer', 'Internal Audit', 'External Auditor'],
+        timeline: 'Annually',
+        outputs: ['Audit reports', 'Compliance assessment', 'Culture survey', 'Improvement recommendations'],
+        checkpoints: ['Audit thorough', 'Issues identified', 'Actions implemented']
+      },
+      {
+        step: 8,
+        phase: 'Monitoring',
+        activity: 'Annual Code Review',
+        details: 'Review and update code of conduct based on new regulations, incidents, and best practices',
+        responsibleCommittee: 'ethics_committee',
+        responsibleIndividuals: ['Ethics Officer', 'Legal Advisor', 'Management'],
+        timeline: 'Annually',
+        outputs: ['Updated code', 'Change summary', 'Communication plan'],
+        checkpoints: ['Review complete', 'Updates necessary', 'Re-training planned']
+      }
+    ],
+    committeeInvolved: ['ethics_committee', 'board_of_directors'],
+    approvalChain: [
+      { level: 'Ethics Officer', for: 'Day-to-day guidance and minor violations' },
+      { level: 'Ethics Committee', for: 'Investigations and major violations' },
+      { level: 'HR Director', for: 'Disciplinary actions' },
+      { level: 'Administrative Director', for: 'Senior staff violations' },
+      { level: 'Board of Directors', for: 'Code approval and executive violations' }
+    ],
+    criticalSuccess: [
+      'Strong ethical culture',
+      'High trust and integrity',
+      'Open reporting without fear',
+      'Consistent enforcement'
+    ],
+    risks: [
+      { risk: 'Fear of retaliation', mitigation: 'Strong whistleblower protection, anonymity, anti-retaliation policy' },
+      { risk: 'Selective enforcement', mitigation: 'Consistent application, documented decisions, oversight' },
+      { risk: 'Code not followed', mitigation: 'Regular training, leadership modeling, consequences for violations' }
+    ],
+    legalCompliance: [
+      'Professional ethics standards (medical, nursing)',
+      'Whistleblower protection laws',
+      'Conflict of interest regulations',
+      'Healthcare ethics requirements'
+    ]
+  },
+
+  // SECTION 9: TRAINING & DEVELOPMENT
+  section9_training: {
+    policyName: 'Training and Professional Development',
+    byLawsSection: 'section9',
+    category: 'HR Development',
+    implementationSteps: [
+      {
+        step: 1,
+        phase: 'Planning',
+        activity: 'Training Needs Analysis',
+        details: 'Assess organizational and individual training needs through performance reviews, skill gaps, regulatory requirements',
+        responsibleCommittee: 'hr_committee',
+        responsibleIndividuals: ['Training Coordinator', 'Department Heads', 'HR Director'],
+        timeline: '2-3 weeks (annually)',
+        outputs: ['Training needs report', 'Skill gap analysis', 'Priority areas', 'Budget estimates'],
+        checkpoints: ['All departments assessed', 'Needs prioritized', 'Budget prepared']
+      },
+      {
+        step: 2,
+        phase: 'Planning',
+        activity: 'Annual Training Plan',
+        details: 'Develop comprehensive training calendar covering mandatory, technical, and soft skills training',
+        responsibleCommittee: 'hr_committee',
+        responsibleIndividuals: ['Training Coordinator', 'Department Heads'],
+        timeline: '2 weeks',
+        outputs: ['Annual training calendar', 'Budget allocation', 'Resource requirements', 'Success metrics'],
+        checkpoints: ['Plan comprehensive', 'Budget approved', 'Calendar published']
+      },
+      {
+        step: 3,
+        phase: 'Preparation',
+        activity: 'Training Program Development',
+        details: 'Create or source training programs - in-house, external, online, certifications',
+        responsibleCommittee: 'hr_committee',
+        responsibleIndividuals: ['Training Coordinator', 'Subject Matter Experts', 'External Providers'],
+        timeline: '4-6 weeks',
+        outputs: ['Training materials', 'Trainer arrangements', 'Venue bookings', 'E-learning setup'],
+        checkpoints: ['Quality content', 'Trainers qualified', 'Logistics arranged']
+      },
+      {
+        step: 4,
+        phase: 'Implementation',
+        activity: 'Mandatory Training Delivery',
+        details: 'Conduct all mandatory training - safety, infection control, compliance, ethics, emergency response',
+        responsibleCommittee: 'hr_committee',
+        responsibleIndividuals: ['Training Coordinator', 'Subject Experts', 'External Trainers'],
+        timeline: 'Ongoing throughout year',
+        outputs: ['Training sessions', 'Attendance records', 'Assessment results', 'Certificates'],
+        checkpoints: ['100% completion', 'Assessments passed', 'Records maintained']
+      },
+      {
+        step: 5,
+        phase: 'Implementation',
+        activity: 'Technical Skills Training',
+        details: 'Role-specific technical training, equipment use, new procedures, system updates',
+        responsibleCommittee: 'hr_committee',
+        responsibleIndividuals: ['Department Heads', 'Technical Trainers'],
+        timeline: 'Ongoing',
+        outputs: ['Technical training records', 'Competency assessments', 'Certifications'],
+        checkpoints: ['Skills acquired', 'Competency verified', 'Safe practice ensured']
+      },
+      {
+        step: 6,
+        phase: 'Implementation',
+        activity: 'Leadership Development',
+        details: 'Programs for supervisors and managers on leadership, people management, decision-making',
+        responsibleCommittee: 'hr_committee',
+        responsibleIndividuals: ['Training Coordinator', 'External Leadership Coach'],
+        timeline: 'Quarterly cohorts',
+        outputs: ['Leadership programs', 'Coaching sessions', 'Action plans', 'Leadership assessments'],
+        checkpoints: ['Managers trained', 'Skills improved', 'Leadership pipeline strong']
+      },
+      {
+        step: 7,
+        phase: 'Implementation',
+        activity: 'Continuous Education Support',
+        details: 'Support for external certifications, professional memberships, conferences, higher education',
+        responsibleCommittee: 'hr_committee',
+        responsibleIndividuals: ['HR Director', 'Department Heads'],
+        timeline: 'Ongoing',
+        outputs: ['Sponsorship approvals', 'Study leave grants', 'Reimbursements', 'Knowledge sharing sessions'],
+        checkpoints: ['Opportunities provided', 'ROI ensured', 'Knowledge transferred']
+      },
+      {
+        step: 8,
+        phase: 'Monitoring',
+        activity: 'Training Effectiveness Evaluation',
+        details: 'Assess training impact through feedback, performance improvement, behavior change, ROI analysis',
+        responsibleCommittee: 'hr_committee',
+        responsibleIndividuals: ['Training Coordinator', 'Department Heads'],
+        timeline: 'Post-training and quarterly',
+        outputs: ['Evaluation reports', 'Feedback analysis', 'Performance metrics', 'ROI assessment'],
+        checkpoints: ['Feedback collected', 'Impact measured', 'Improvements identified']
+      },
+      {
+        step: 9,
+        phase: 'Monitoring',
+        activity: 'Training Records Management',
+        details: 'Maintain comprehensive records of all training, certifications, assessments for compliance and career development',
+        responsibleCommittee: 'hr_committee',
+        responsibleIndividuals: ['Training Coordinator', 'HR Records'],
+        timeline: 'Ongoing',
+        outputs: ['Training database', 'Individual training records', 'Compliance reports', 'Transcript system'],
+        checkpoints: ['All training recorded', 'Records accessible', 'Compliance demonstrated']
+      }
+    ],
+    committeeInvolved: ['hr_committee'],
+    approvalChain: [
+      { level: 'Department Head', for: 'Department training needs and nominations' },
+      { level: 'Training Coordinator', for: 'Training program selection and scheduling' },
+      { level: 'HR Director', for: 'Training budget and policy' },
+      { level: 'Administrative Director', for: 'Major training investments' }
+    ],
+    criticalSuccess: [
+      'Comprehensive training coverage',
+      'High competency levels',
+      'Continuous learning culture',
+      'Regulatory compliance maintained'
+    ],
+    risks: [
+      { risk: 'Training not applied', mitigation: 'Action plans, supervisor follow-up, performance linkage' },
+      { risk: 'Budget constraints', mitigation: 'Prioritization, in-house training, online options' },
+      { risk: 'Low attendance', mitigation: 'Mandatory requirements, convenient scheduling, manager support' }
+    ],
+    legalCompliance: [
+      'Mandatory training requirements (safety, infection control)',
+      'Professional continuing education requirements',
+      'Certification maintenance',
+      'Documentation for regulatory inspections'
+    ]
+  },
+
+  // SECTION 10: REMOTE WORK & FLEXIBILITY
+  section10_remote_work: {
+    policyName: 'Remote Work and Flexible Work Arrangements',
+    byLawsSection: 'section10',
+    category: 'HR Operations',
+    implementationSteps: [
+      {
+        step: 1,
+        phase: 'Planning',
+        activity: 'Define Remote Work Policy',
+        details: 'Establish eligibility, types of arrangements (full remote, hybrid, flexible hours), approval process, and requirements',
+        responsibleCommittee: 'hr_committee',
+        responsibleIndividuals: ['HR Director', 'IT Head', 'Department Heads'],
+        timeline: '2-3 weeks',
+        outputs: ['Remote work policy', 'Eligibility criteria', 'Equipment policy', 'Security guidelines'],
+        checkpoints: ['Policy comprehensive', 'IT requirements defined', 'Board approval obtained']
+      },
+      {
+        step: 2,
+        phase: 'Preparation',
+        activity: 'Technology Infrastructure Setup',
+        details: 'Implement VPN, collaboration tools, video conferencing, secure access, remote desktop solutions',
+        responsibleCommittee: 'hr_committee',
+        responsibleIndividuals: ['IT Head', 'IT Security Officer', 'Procurement'],
+        timeline: '4-6 weeks',
+        outputs: ['VPN access', 'Collaboration platform', 'Video conferencing', 'Help desk support'],
+        checkpoints: ['Infrastructure tested', 'Security verified', 'User training ready']
+      },
+      {
+        step: 3,
+        phase: 'Preparation',
+        activity: 'Equipment and Setup',
+        details: 'Provide laptops, internet support, ergonomic guidance, home office setup assistance',
+        responsibleCommittee: 'hr_committee',
+        responsibleIndividuals: ['IT Support', 'Facilities', 'HR Officer'],
+        timeline: '2-4 weeks per employee',
+        outputs: ['Equipment issued', 'Setup completed', 'Testing done', 'Inventory updated'],
+        checkpoints: ['Equipment adequate', 'Setup functional', 'Connectivity verified']
+      },
+      {
+        step: 4,
+        phase: 'Implementation',
+        activity: 'Remote Work Agreement',
+        details: 'Sign formal agreement covering expectations, hours, availability, communication, performance standards',
+        responsibleCommittee: 'hr_committee',
+        responsibleIndividuals: ['HR Officer', 'Department Head', 'Employee'],
+        timeline: 'Before remote work starts',
+        outputs: ['Signed agreement', 'Schedule defined', 'Contact information', 'Emergency procedures'],
+        checkpoints: ['Agreement clear', 'Expectations aligned', 'Documentation complete']
+      },
+      {
+        step: 5,
+        phase: 'Implementation',
+        activity: 'Communication Protocols',
+        details: 'Establish clear communication expectations, regular check-ins, team meetings, reporting structures',
+        responsibleCommittee: 'hr_committee',
+        responsibleIndividuals: ['Department Head', 'Team Leaders'],
+        timeline: 'Ongoing',
+        outputs: ['Communication schedule', 'Meeting calendars', 'Response time expectations', 'Escalation paths'],
+        checkpoints: ['Protocols clear', 'Regular communication maintained', 'Team cohesion strong']
+      },
+      {
+        step: 6,
+        phase: 'Implementation',
+        activity: 'Performance Management for Remote Workers',
+        details: 'Output-based evaluation, regular check-ins, goal tracking, avoid micromanagement',
+        responsibleCommittee: 'hr_committee',
+        responsibleIndividuals: ['Supervisors', 'HR Director'],
+        timeline: 'Ongoing',
+        outputs: ['Performance metrics', 'Regular reviews', 'Productivity data', 'Feedback documentation'],
+        checkpoints: ['Performance maintained', 'Feedback regular', 'Fair evaluation']
+      },
+      {
+        step: 7,
+        phase: 'Monitoring',
+        activity: 'Wellbeing and Engagement',
+        details: 'Monitor remote worker wellbeing, prevent isolation, maintain engagement, provide support',
+        responsibleCommittee: 'hr_committee',
+        responsibleIndividuals: ['HR Officer', 'Supervisors', 'Wellness Coordinator'],
+        timeline: 'Ongoing',
+        outputs: ['Engagement surveys', 'Virtual social events', 'Wellbeing resources', 'Mental health support'],
+        checkpoints: ['Engagement high', 'Wellbeing maintained', 'Isolation prevented']
+      },
+      {
+        step: 8,
+        phase: 'Monitoring',
+        activity: 'Policy Review and Adjustment',
+        details: 'Regularly review remote work effectiveness, gather feedback, adjust policies and practices',
+        responsibleCommittee: 'hr_committee',
+        responsibleIndividuals: ['HR Director', 'Department Heads'],
+        timeline: 'Quarterly',
+        outputs: ['Review reports', 'Feedback summary', 'Policy updates', 'Best practices documentation'],
+        checkpoints: ['Reviews conducted', 'Issues addressed', 'Continuous improvement']
+      }
+    ],
+    committeeInvolved: ['hr_committee'],
+    approvalChain: [
+      { level: 'Department Head', for: 'Remote work requests and eligibility' },
+      { level: 'IT Head', for: 'Technology approval and security clearance' },
+      { level: 'HR Director', for: 'Policy compliance and agreement' },
+      { level: 'Administrative Director', for: 'Major policy changes' }
+    ],
+    criticalSuccess: [
+      'Productivity maintained or improved',
+      'Work-life balance enhanced',
+      'Technology reliable',
+      'Team collaboration effective'
+    ],
+    risks: [
+      { risk: 'Productivity concerns', mitigation: 'Clear goals, regular check-ins, output measurement' },
+      { risk: 'Security breaches', mitigation: 'VPN, security training, monitoring, policies' },
+      { risk: 'Isolation and disengagement', mitigation: 'Regular communication, virtual events, wellbeing support' },
+      { risk: 'Unfairness perceptions', mitigation: 'Clear eligibility criteria, transparent process' }
+    ],
+    legalCompliance: [
+      'Employment laws on remote work',
+      'Data protection and privacy',
+      'Occupational safety (home office)',
+      'Working hours and overtime regulations'
+    ]
+  },
+
+  // SECTION 11: COMPENSATION & BENEFITS
+  section11_compensation: {
+    policyName: 'Compensation and Benefits Management',
+    byLawsSection: 'section11',
+    category: 'HR Operations',
+    implementationSteps: [
+      {
+        step: 1,
+        phase: 'Planning',
+        activity: 'Compensation Philosophy and Structure',
+        details: 'Define pay philosophy, salary structure, grading system, market positioning, internal equity principles',
+        responsibleCommittee: 'hr_committee',
+        responsibleIndividuals: ['HR Director', 'Finance Director', 'Compensation Consultant'],
+        timeline: '3-4 weeks',
+        outputs: ['Compensation philosophy', 'Salary structure', 'Grading system', 'Pay scales'],
+        checkpoints: ['Philosophy approved', 'Structure competitive', 'Internal equity ensured']
+      },
+      {
+        step: 2,
+        phase: 'Planning',
+        activity: 'Benefits Package Design',
+        details: 'Design comprehensive benefits - health insurance, retirement, leave, allowances, perks',
+        responsibleCommittee: 'hr_committee',
+        responsibleIndividuals: ['HR Director', 'Finance Director', 'Benefits Consultant'],
+        timeline: '3-4 weeks',
+        outputs: ['Benefits package', 'Insurance plans', 'Retirement scheme', 'Allowances policy', 'Perks catalog'],
+        checkpoints: ['Package competitive', 'Cost sustainable', 'Legal compliance verified']
+      },
+      {
+        step: 3,
+        phase: 'Preparation',
+        activity: 'Job Evaluation and Grading',
+        details: 'Evaluate all jobs, assign grades, determine salary ranges for each position',
+        responsibleCommittee: 'hr_committee',
+        responsibleIndividuals: ['HR Director', 'Department Heads', 'Job Evaluation Committee'],
+        timeline: '4-6 weeks',
+        outputs: ['Job evaluation reports', 'Grade assignments', 'Salary range matrix', 'Documentation'],
+        checkpoints: ['All jobs evaluated', 'Grades defensible', 'Equity maintained']
+      },
+      {
+        step: 4,
+        phase: 'Preparation',
+        activity: 'Benefits Administration Setup',
+        details: 'Set up insurance, retirement plans, vendor management, enrollment systems, communication',
+        responsibleCommittee: 'hr_committee',
+        responsibleIndividuals: ['HR Officer', 'Finance Team', 'Payroll', 'Benefits Vendors'],
+        timeline: '4-6 weeks',
+        outputs: ['Insurance enrollment', 'Retirement plan setup', 'Vendor contracts', 'Administration system'],
+        checkpoints: ['All plans operational', 'Enrollment smooth', 'Communication clear']
+      },
+      {
+        step: 5,
+        phase: 'Implementation',
+        activity: 'Salary Implementation',
+        details: 'Implement new salary structure, handle transitions, address anomalies, communicate changes',
+        responsibleCommittee: 'hr_committee',
+        responsibleIndividuals: ['HR Director', 'Finance Director', 'Payroll Team'],
+        timeline: '1-2 months',
+        outputs: ['Updated salaries', 'Communication materials', 'Transition plans', 'Issue resolution'],
+        checkpoints: ['Implementation smooth', 'Issues resolved', 'Satisfaction maintained']
+      },
+      {
+        step: 6,
+        phase: 'Implementation',
+        activity: 'Annual Increment Process',
+        details: 'Define increment policy, link to performance, budget allocation, approval and communication',
+        responsibleCommittee: 'hr_committee',
+        responsibleIndividuals: ['HR Director', 'Finance Director', 'Department Heads'],
+        timeline: 'Annually (2-3 months)',
+        outputs: ['Increment matrix', 'Individual increments', 'Approval records', 'Communication letters'],
+        checkpoints: ['Performance linked', 'Budget adhered', 'Fair distribution', 'Communication timely']
+      },
+      {
+        step: 7,
+        phase: 'Monitoring',
+        activity: 'Payroll Processing',
+        details: 'Accurate and timely payroll processing, deductions, statutory compliance, payslip distribution',
+        responsibleCommittee: 'hr_committee',
+        responsibleIndividuals: ['Payroll Team', 'Finance Officer', 'HR Officer'],
+        timeline: 'Monthly',
+        outputs: ['Payroll register', 'Payslips', 'Tax deductions', 'Statutory filings'],
+        checkpoints: ['Accuracy 100%', 'Timely payment', 'Compliance maintained']
+      },
+      {
+        step: 8,
+        phase: 'Monitoring',
+        activity: 'Market Benchmarking',
+        details: 'Regular salary surveys, market comparison, competitiveness analysis, adjustment recommendations',
+        responsibleCommittee: 'hr_committee',
+        responsibleIndividuals: ['HR Director', 'Compensation Analyst'],
+        timeline: 'Annually',
+        outputs: ['Market survey report', 'Comparison analysis', 'Competitiveness assessment', 'Recommendations'],
+        checkpoints: ['Competitiveness maintained', 'Retention supported', 'Budget realistic']
+      },
+      {
+        step: 9,
+        phase: 'Monitoring',
+        activity: 'Benefits Utilization Analysis',
+        details: 'Monitor benefits usage, employee satisfaction, cost effectiveness, improvements needed',
+        responsibleCommittee: 'hr_committee',
+        responsibleIndividuals: ['HR Director', 'Finance Director'],
+        timeline: 'Quarterly/Annually',
+        outputs: ['Utilization reports', 'Satisfaction surveys', 'Cost analysis', 'Enhancement proposals'],
+        checkpoints: ['Utilization healthy', 'Satisfaction high', 'Value for money']
+      }
+    ],
+    committeeInvolved: ['hr_committee', 'board_of_directors'],
+    approvalChain: [
+      { level: 'HR Director', for: 'Compensation administration and minor adjustments' },
+      { level: 'Finance Director', for: 'Budget approval and cost impact' },
+      { level: 'Administrative Director', for: 'Policy changes and major adjustments' },
+      { level: 'Board of Directors', for: 'Compensation structure and senior management pay' }
+    ],
+    criticalSuccess: [
+      'Competitive compensation',
+      'Internal equity and fairness',
+      'Transparent and understood',
+      'Sustainable and affordable'
+    ],
+    risks: [
+      { risk: 'Budget overruns', mitigation: 'Careful planning, cost modeling, phased implementation' },
+      { risk: 'Equity concerns', mitigation: 'Job evaluation, clear criteria, transparent communication' },
+      { risk: 'Retention issues', mitigation: 'Market competitiveness, total rewards approach, career growth' }
+    ],
+    legalCompliance: [
+      'Minimum wage laws',
+      'Equal pay for equal work',
+      'Statutory benefits (PF, gratuity, insurance)',
+      'Tax compliance and deductions'
+    ]
+  },
   section14_data_privacy: { policyName: 'Data Privacy and Confidentiality', byLawsSection: 'section14', category: 'Compliance', status: 'detailed_guide_pending' },
   section15_intellectual_property: { policyName: 'Intellectual Property Rights', byLawsSection: 'section15', category: 'Legal', status: 'detailed_guide_pending' },
   section16_discipline: { policyName: 'Disciplinary Procedures', byLawsSection: 'section16', category: 'HR Operations', status: 'detailed_guide_pending' },
