@@ -18,16 +18,11 @@ const HRByLaws = ({ setActiveModule }) => {
   const [expandedSections, setExpandedSections] = useState({});
   const contentRef = useRef(null);
 
-  // Parse and render content - Using <p> tags for guaranteed block display
+  // Parse and render content - Using BR tags and explicit block display
   const renderFormattedContent = (content) => {
     if (!content) return '';
     
-    console.log('=== PARSER CALLED ===');
-    console.log('First 200 chars:', content.substring(0, 200));
-    
     const lines = content.split('\n');
-    console.log('Total lines:', lines.length);
-    
     let html = '';
     let i = 0;
     
@@ -44,10 +39,7 @@ const HRByLaws = ({ setActiveModule }) => {
       // Check for (a) **Title:** pattern
       const mainPointMatch = trimmedLine.match(/^\(([a-z])\)\s+\*\*(.*?)\*\*:?$/);
       if (mainPointMatch) {
-        console.log('MATCHED MAIN POINT:', mainPointMatch[1], mainPointMatch[2]);
-        html += `<p style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: bold; font-size: 1.1rem; color: #0f172a;">
-(${mainPointMatch[1]}) <strong>${mainPointMatch[2]}:</strong>
-</p>`;
+        html += `<br><br><strong style="display: block; font-size: 1.1rem; color: #0f172a; margin-bottom: 0.5rem;">(${mainPointMatch[1]}) ${mainPointMatch[2]}:</strong>`;
         i++;
         continue;
       }
@@ -55,11 +47,8 @@ const HRByLaws = ({ setActiveModule }) => {
       // Check for (i), (ii), (iii) sub-points
       const subPointMatch = line.match(/^\s+((?:i{1,3}|iv|v|vi{0,3}|ix|x))\)\s+(.+)$/);
       if (subPointMatch) {
-        console.log('MATCHED SUB POINT:', subPointMatch[1]);
         const text = subPointMatch[2].replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
-        html += `<p style="margin-left: 3rem; margin-top: 0.75rem; margin-bottom: 0.75rem; color: #334155; line-height: 1.75;">
-<span style="font-weight: 600; color: #475569;">(${subPointMatch[1]})</span> ${text}
-</p>`;
+        html += `<br><span style="display: block; margin-left: 3rem; color: #334155; line-height: 1.75;"><strong style="color: #475569;">(${subPointMatch[1]})</strong> ${text}</span>`;
         i++;
         continue;
       }
@@ -67,23 +56,17 @@ const HRByLaws = ({ setActiveModule }) => {
       // Check for bullets
       const bulletMatch = line.match(/^\s+•\s+(.+)$/);
       if (bulletMatch) {
-        console.log('MATCHED BULLET');
         const text = bulletMatch[1].replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
-        html += `<p style="margin-left: 2.5rem; margin-top: 0.5rem; margin-bottom: 0.5rem; color: #334155; line-height: 1.75;">
-<span style="color: #d97706; font-weight: bold; font-size: 1.25rem; margin-right: 0.75rem;">•</span>${text}
-</p>`;
+        html += `<br><span style="display: block; margin-left: 2.5rem; color: #334155; line-height: 1.75;"><strong style="color: #d97706; font-size: 1.25rem;">• </strong>${text}</span>`;
         i++;
         continue;
       }
       
       // Regular text line
       const text = trimmedLine.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
-      html += `<p style="color: #334155; line-height: 1.75; margin-bottom: 0.5rem;">${text}</p>`;
+      html += `<br><span style="display: block; color: #334155; line-height: 1.75;">${text}</span>`;
       i++;
     }
-    
-    console.log('HTML OUTPUT LENGTH:', html.length);
-    console.log('First 300 chars of HTML:', html.substring(0, 300));
     
     return html;
   };
