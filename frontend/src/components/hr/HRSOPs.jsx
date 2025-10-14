@@ -475,8 +475,6 @@ const HRSOPs = ({ setActiveModule }) => {
   return (
     <div className="flex h-screen bg-gradient-to-br from-slate-100 to-slate-200">
       {/* Dedicated Left Sidebar */}
-                  </div>
-      {/* Dedicated Left Sidebar */}
       <div className={`${sidebarCollapsed ? 'w-16' : 'w-80'} bg-white border-r-2 border-slate-300 flex flex-col transition-all duration-300 shadow-xl`}>
         {/* Back to HR Dashboard */}
         {setActiveModule && !sidebarCollapsed && (
