@@ -11124,7 +11124,423 @@ Serious Violations (Termination grounds):
     title: 'Cybersecurity Breach Reporting Protocol',
     searchTerms: ['cybersecurity', 'breach', 'reporting', 'incident', 'security'],
     category: 'K. Technology Usage & Digital Security',
-    content: 'Outlines standardised procedure for identifying, reporting, investigating, and mitigating cybersecurity breaches ensuring protection of data and operational continuity.'
+    subsections: [
+      {
+        number: '1',
+        title: 'OBJECTIVE',
+        content: 'To establish immediate, systematic, and comprehensive protocol for identifying, reporting, investigating, containing, and mitigating cybersecurity breaches and incidents ensuring rapid response, minimizing damage, protecting patient data, maintaining regulatory compliance, and preserving institutional reputation and operational continuity.'
+      },
+      {
+        number: '2',
+        title: 'SCOPE',
+        content: 'Covers all cybersecurity incidents including data breaches, unauthorized access, malware infections, phishing attacks, ransomware, denial of service attacks, lost/stolen devices with sensitive data, insider threats, and any event compromising confidentiality, integrity, or availability of hospital IT systems and data. Applicable to all employees, contractors, and third parties.'
+      },
+      {
+        number: '3',
+        title: 'TYPES OF CYBERSECURITY INCIDENTS',
+        content: `(i) Data Breach:
+    • Unauthorized access to patient records, employee data, financial information
+    • Data theft or exfiltration
+    • Accidental exposure of confidential data
+
+(ii) Malware/Ransomware:
+    • Virus, trojan, spyware infection
+    • Ransomware encrypting hospital data with ransom demand
+    • Malicious software affecting systems
+
+(iii) Phishing & Social Engineering:
+    • Successful phishing attack (credentials compromised)
+    • Wire fraud attempts
+    • Impersonation of executives or IT staff
+
+(iv) Unauthorized Access:
+    • Hacking or brute-force attack
+    • Compromised accounts
+    • Insider threat (employee accessing unauthorized data)
+
+(v) Denial of Service (DoS):
+    • Systems unavailable due to attack
+    • Network disruption
+
+(vi) Physical Security Breach:
+    • Lost or stolen laptop/device with sensitive data
+    • Unauthorized physical access to server room
+
+(vii) Third-Party Breach:
+    • Vendor or partner system compromised affecting hospital data`
+      },
+      {
+        number: '4',
+        title: 'INCIDENT SEVERITY CLASSIFICATION',
+        subsections: [
+          {
+            number: '4.1',
+            title: 'Level 1 - CRITICAL (Immediate Response)',
+            content: `• Large-scale data breach (>1000 records)
+• Ransomware attack encrypting critical systems
+• Patient care systems down
+• Active ongoing attack
+• Regulatory reporting mandatory (HIPAA breach)
+
+Response Time: Immediate (within 15 minutes)`
+          },
+          {
+            number: '4.2',
+            title: 'Level 2 - HIGH (Urgent Response)',
+            content: `• Limited data breach (100-1000 records)
+• Compromised admin account
+• Malware infection affecting multiple systems
+• Suspected insider threat
+
+Response Time: Within 1 hour`
+          },
+          {
+            number: '4.3',
+            title: 'Level 3 - MEDIUM (Standard Response)',
+            content: `• Single device malware infection (contained)
+• Suspected phishing email (no credential compromise)
+• Minor unauthorized access attempt (failed)
+• Lost device (encrypted, remotely wiped)
+
+Response Time: Within 4 hours`
+          },
+          {
+            number: '4.4',
+            title: 'Level 4 - LOW (Routine Handling)',
+            content: `• Spam emails
+• Failed login attempts (automated attacks)
+• Policy violations (non-malicious)
+• General security concerns
+
+Response Time: Within 24 hours`
+          }
+        ]
+      },
+      {
+        number: '5',
+        title: 'INCIDENT REPORTING MECHANISM',
+        subsections: [
+          {
+            number: '5.1',
+            title: 'Reporting Channels (24/7 Availability)',
+            content: `Primary:
+• Email: security@koyilihospital.com
+• Phone: IT Helpdesk (Extension XXXX)
+• Emergency hotline: +91-XXXX-XXXXXX (after hours)
+
+Secondary:
+• Raise ticket via IT helpdesk portal
+• Inform immediate supervisor
+• Physical reporting to IT Department
+
+For Critical Incidents:
+• Call IT Security Officer directly
+• Escalate to CISO (Chief Information Security Officer) if available
+• Inform Hospital Administrator/CEO`
+          },
+          {
+            number: '5.2',
+            title: 'Information to Provide When Reporting',
+            content: `• Your name, department, contact details
+• Date and time of incident discovery
+• Nature of incident (phishing, malware, data breach, etc.)
+• What happened (brief description)
+• Systems/data affected
+• Actions already taken (if any)
+• Any evidence (suspicious email, error message, screenshot)
+• Urgency level (your assessment)
+
+Do NOT:
+• Delay reporting to investigate yourself
+• Delete evidence (emails, logs)
+• Attempt to fix if beyond your expertise (may cause more damage)`
+          },
+          {
+            number: '5.3',
+            title: 'Mandatory Reporting Situations',
+            content: `All employees MUST report:
+• Suspected or confirmed data breach
+• Compromised credentials (password stolen)
+• Malware or ransomware infection
+• Lost or stolen device with work data
+• Suspicious email or phishing attempt
+• Unauthorized access to systems or data
+• Any unusual system behavior
+
+No Penalty for Reporting:
+• Encouraged to report immediately
+• No disciplinary action for genuine mistakes or reporting security concerns
+• Penalties only for intentional breaches or gross negligence`
+          }
+        ]
+      },
+      {
+        number: '6',
+        title: 'INCIDENT RESPONSE PROCESS',
+        subsections: [
+          {
+            number: '6.1',
+            title: 'Phase 1: Identification & Triage (0-15 minutes)',
+            content: `(i) IT Security Team receives report
+(ii) Initial assessment:
+    • Confirm incident is genuine (not false alarm)
+    • Classify severity (Level 1-4)
+    • Identify affected systems and data
+(iii) Alert Incident Response Team (IRT):
+    • IT Security Officer (Lead)
+    • IT Head
+    • Relevant system administrators
+    • CISO (if available)
+    • CHRO and Legal (for data breaches)
+(iv) Activate Incident Response Plan
+(v) Establish communication channel (war room, dedicated chat group)`
+          },
+          {
+            number: '6.2',
+            title: 'Phase 2: Containment (15 mins - 2 hours)',
+            content: `Immediate Actions:
+• Isolate affected systems (disconnect from network)
+• Disable compromised user accounts
+• Block malicious IP addresses or domains
+• Remote wipe lost/stolen devices
+• Preserve evidence (logs, screenshots, forensic images)
+• Prevent further spread or damage
+
+For Ransomware:
+• DO NOT pay ransom (hospital policy unless extreme circumstances)
+• Isolate infected systems immediately
+• Assess backup integrity for restoration`
+          },
+          {
+            number: '6.3',
+            title: 'Phase 3: Investigation & Analysis (Hours to Days)',
+            content: `(i) Forensic Analysis:
+    • Determine attack vector (how breach occurred)
+    • Identify scope (what data/systems compromised)
+    • Assess impact (data loss, exposure, downtime)
+    • Preserve evidence for legal/regulatory use
+
+(ii) External Support (if needed):
+    • Engage cybersecurity forensic experts
+    • Law enforcement (for criminal activity)
+    • Legal counsel
+
+(iii) Documentation:
+    • Detailed incident log maintained
+    • Timeline of events
+    • Actions taken and by whom
+    • Evidence collected`
+          },
+          {
+            number: '6.4',
+            title: 'Phase 4: Eradication (1-7 days)',
+            content: `• Remove malware completely (deep scan, rebuild systems if needed)
+• Patch vulnerabilities exploited
+• Reset all compromised credentials
+• Update firewall and security rules
+• Implement additional security controls
+• Verify threat is eliminated (no persistence)`
+          },
+          {
+            number: '6.5',
+            title: 'Phase 5: Recovery (1-14 days)',
+            content: `• Restore systems from clean backups
+• Verify data integrity
+• Gradual reconnection to network (monitored)
+• Resume normal operations incrementally
+• Enhanced monitoring post-recovery
+• Validate business continuity`
+          },
+          {
+            number: '6.6',
+            title: 'Phase 6: Post-Incident Review (Within 30 days)',
+            content: `• Incident review meeting with IRT
+• Root cause analysis
+• Lessons learned
+• Identify policy/process gaps
+• Implement corrective actions
+• Update security controls
+• Staff training and awareness
+• Final incident report prepared`
+          }
+        ]
+      },
+      {
+        number: '7',
+        title: 'REGULATORY & LEGAL REPORTING',
+        subsections: [
+          {
+            number: '7.1',
+            title: 'Data Breach Notification (HIPAA/Privacy Laws)',
+            content: `If Patient Data Breach:
+• Notify affected individuals: Within 60 days (HIPAA requirement)
+• Notify regulatory authority: Within 72 hours (GDPR-like requirements)
+• Public notification if >500 patients affected
+• Media notice if large-scale breach
+
+Notification Content:
+• What happened
+• What data was compromised
+• Actions taken to secure data
+• Steps individuals should take (credit monitoring, etc.)
+• Contact for questions
+
+Responsibility: Legal and Compliance team with IT support`
+          },
+          {
+            number: '7.2',
+            title: 'Law Enforcement Reporting',
+            content: `Report to Police/Cyber Crime Cell if:
+• Criminal activity (hacking, data theft, fraud)
+• Financial loss or ransom demand
+• Serious insider threat
+
+Coordinate with:
+• Legal department
+• Local police
+• Cyber Crime Cell (state/national)`
+          },
+          {
+            number: '7.3',
+            title: 'Insurance Claims',
+            content: `• If cyber insurance policy exists
+• File claim for financial losses, recovery costs
+• Provide incident documentation and evidence
+• Coordinate with insurance assessor`
+          }
+        ]
+      },
+      {
+        number: '8',
+        title: 'COMMUNICATION PROTOCOL',
+        subsections: [
+          {
+            number: '8.1',
+            title: 'Internal Communication',
+            content: `• Need-to-know basis initially (avoid panic)
+• Incident Response Team fully informed
+• Senior management briefed regularly
+• Affected departments notified
+• All-staff communication (if widespread impact)
+• Regular updates until resolution
+
+Communication Channels:
+• Email updates from IT/Management
+• Intranet announcements
+• Team meetings for affected departments`
+          },
+          {
+            number: '8.2',
+            title: 'External Communication',
+            content: `Managed by:
+• Communications/PR team
+• Legal department
+• CEO/Management
+
+External Stakeholders:
+• Patients (if data breach)
+• Vendors/partners (if their data affected)
+• Media (if required)
+• Regulatory authorities
+
+Unified Messaging:
+• Designated spokesperson only
+• Consistent, transparent, factual communication
+• No speculation or assigning blame prematurely`
+          }
+        ]
+      },
+      {
+        number: '9',
+        title: 'EMPLOYEE RESPONSIBILITIES DURING INCIDENT',
+        content: `Do's:
+• Report immediately
+• Preserve evidence
+• Follow IT instructions
+• Disconnect device if instructed
+• Change passwords if advised
+• Maintain confidentiality (don't discuss publicly)
+
+Don'ts:
+• Don't panic or ignore
+• Don't attempt to fix yourself (unless IT expert)
+• Don't delete anything
+• Don't communicate with attacker (e.g., ransomware payment)
+• Don't share incident details on social media
+• Don't speculate or spread rumors internally`
+      },
+      {
+        number: '10',
+        title: 'PREVENTION & PREPAREDNESS',
+        content: `Ongoing Measures:
+• Regular security awareness training (phishing simulations, best practices)
+• Software updates and patch management
+• Strong password policies and MFA
+• Regular data backups (tested for restoration)
+• Firewall and antivirus updates
+• Network monitoring and intrusion detection
+• Vulnerability assessments and penetration testing
+• Incident response drills and tabletop exercises
+• Business continuity and disaster recovery plans
+
+Employee Role:
+• Complete security training
+• Follow IT policies (SOP K.1, K.2)
+• Be vigilant (report suspicious activity)
+• Practice safe computing habits`
+      },
+      {
+        number: '11',
+        title: 'INCIDENT RESPONSE TEAM (IRT) ROLES',
+        content: `IT Security Officer (Incident Commander):
+• Overall incident management
+• Coordination and decision-making
+
+IT Team:
+• Technical investigation and remediation
+• System isolation and recovery
+
+CHRO/HR:
+• Employee-related incidents (insider threat)
+• Communication to staff
+
+Legal & Compliance:
+• Regulatory reporting
+• Legal implications and advice
+
+Communications/PR:
+• External messaging
+• Media relations
+
+Finance:
+• Financial impact assessment
+• Insurance claims
+
+CEO/Senior Management:
+• Strategic decisions
+• Stakeholder communication`
+      },
+      {
+        number: '12',
+        title: 'DOCUMENTATION & RECORDS',
+        content: `Maintain:
+• Incident report (detailed log)
+• Investigation findings
+• Evidence (forensic data, logs, emails)
+• Actions taken and timeline
+• Communications (internal and external)
+• Regulatory notifications and responses
+• Post-incident review report
+• Lessons learned document
+
+Retention: Minimum 7 years (legal and audit requirements)`
+      },
+      {
+        number: '13',
+        title: 'REFERENCE DOCUMENTS',
+        content: 'IT Security Policy, Data Privacy Policy, Business Continuity Plan, Disaster Recovery Plan, HIPAA Security Rule, Cyber Crisis Management Plan, Annexure K.5.1: Incident Reporting Form, Annexure K.5.2: Incident Response Checklist'
+      }
+    ]
   },
 
   // SECTION L: WELLNESS, WORK-LIFE BALANCE & EAP
