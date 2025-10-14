@@ -1417,7 +1417,60 @@ Once drafted, the policy shall be reviewed internally by:
     title: 'Pre-Employment Medical Fitness Clearance',
     searchTerms: ['medical', 'fitness', 'health', 'clearance', 'pre-employment'],
     category: 'B. Recruitment, Selection & Appointment',
-    content: 'Ensures all newly selected candidates are medically fit to perform designated duties through pre-employment medical examinations and fitness clearance.'
+    subsections: [
+      {
+        number: '1',
+        title: 'OBJECTIVE',
+        content: 'This SOP ensures all newly selected candidates are medically fit to perform designated duties through pre-employment medical examinations and fitness clearance. The objective is to protect employee health, ensure patient safety, comply with healthcare regulations, and identify health conditions requiring workplace accommodations.'
+      },
+      {
+        number: '2',
+        title: 'SCOPE',
+        content: 'Applies to all newly selected candidates before offer letter issuance or appointment, including clinical staff (doctors, nurses, paramedics), non-clinical staff, and all employment categories. Specific tests vary by role and exposure risk.'
+      },
+      {
+        number: '3',
+        title: 'PROCEDURE',
+        subsections: [
+          {
+            number: '3.1',
+            title: 'Medical Examination Scheduling',
+            content: `(i) HR shall schedule pre-employment medical exams at Hospital's Occupational Health Department or empaneled clinics
+(ii) Standard tests for all employees:
+    • General physical examination (height, weight, BMI, BP, vision, hearing)
+    • Chest X-ray (TB screening)
+    • Blood tests: Hemoglobin, Blood Sugar, HIV, HBsAg (Hepatitis B)
+    • Urine analysis
+(iii) Additional tests for clinical staff:
+    • HCV (Hepatitis C), VDRL (Syphilis)
+    • Vaccination status verification (Hepatitis B, Tetanus, COVID-19)
+    • Drug screening (if hospital policy mandates)
+(iv) Turnaround: 3-5 business days for report generation`
+          },
+          {
+            number: '3.2',
+            title: 'Fitness Assessment and Clearance',
+            content: `(i) Occupational Health Physician reviews medical reports and issues:
+    • Fit: No health issues, cleared for duty
+    • Fit with Restrictions: Cleared with specific limitations (e.g., no night shifts, no heavy lifting)
+    • Temporarily Unfit: Requires treatment/re-examination after specified period
+    • Permanently Unfit: Cannot perform role duties due to medical reasons
+(ii) Fitness Certificate issued for "Fit" and "Fit with Restrictions" candidates
+(iii) Unfit candidates: Offer may be withheld or withdrawn with medical grounds documented`
+          }
+        ]
+      },
+      {
+        number: '4',
+        title: 'COMPLIANCE',
+        content: 'Medical records confidential, retained for 7 years. Vaccination records maintained as per infection control policy. Discrimin ation based on health status (except genuine job requirements) prohibited per Persons with Disabilities Act.'
+      },
+      {
+        number: '5',
+        title: 'REFERENCES',
+        content: 'HR By-Laws Section 3, SOP B.9 (Offer Letter), Occupational Health and Safety Policy, Infection Control Policy'
+      }
+    ]
   },
 
   sopB9: {
@@ -1426,7 +1479,90 @@ Once drafted, the policy shall be reviewed internally by:
     title: 'Offer Letter Generation & Negotiation',
     searchTerms: ['offer', 'letter', 'negotiation', 'compensation', 'salary'],
     category: 'B. Recruitment, Selection & Appointment',
-    content: 'Defines standardised process for generation, issuance, and negotiation of offer letters ensuring alignment with approved manpower budgets and institutional policies.'
+    subsections: [
+      {
+        number: '1',
+        title: 'OBJECTIVE',
+        content: 'This SOP defines a standardised process for generation, issuance, and negotiation of offer letters ensuring alignment with approved manpower budgets, market competitiveness, internal equity, and institutional policies.'
+      },
+      {
+        number: '2',
+        title: 'SCOPE',
+        content: 'Applies to all selected candidates post-interview, BGV clearance, and medical fitness. Covers permanent, contractual, and consultant positions across all departments.'
+      },
+      {
+        number: '3',
+        title: 'PROCEDURE',
+        subsections: [
+          {
+            number: '3.1',
+            title: 'Compensation Determination',
+            content: `(i) HR determines offer package based on:
+    • Approved salary range for the position (as per manpower budget)
+    • Candidate's current/last salary (if disclosed)
+    • Years of experience and qualifications
+    • Market benchmarking for similar roles
+    • Internal equity (alignment with existing employees in similar roles)
+(ii) Compensation components:
+    • Basic Salary (40-50% of CTC)
+    • House Rent Allowance (HRA): 40-50% of Basic
+    • Special Allowance: 10-20% of Basic
+    • Other Allowances: Transport, Medical, Food (as per grade)
+    • Performance Bonus/Incentive (variable, if applicable)
+    • Statutory: PF (12% employer + 12% employee), ESI, Gratuity
+(iii) Total CTC calculation: Fixed + Variable + Statutory Benefits`
+          },
+          {
+            number: '3.2',
+            title: 'Offer Letter Preparation',
+            content: `(i) HR prepares offer letter (Annexure B.9.1) including:
+    • Position, department, location, reporting manager
+    • Date of joining, probation period (6 months)
+    • Compensation breakdown (CTC, monthly gross, in-hand salary)
+    • Benefits: PF, medical insurance, leave entitlements
+    • Working hours, notice period (30-90 days as per grade)
+    • Offer validity (7-15 days)
+    • Conditions: BGV clearance, medical fitness, document submission
+(ii) Offer approval:
+    • Grade A-C: HR Head approval
+    • Grade D-F: HR Head + CFO/CEO approval
+(iii) Offer issued via email with digital signature`
+          },
+          {
+            number: '3.3',
+            title: 'Salary Negotiation',
+            content: `(i) If candidate requests revision:
+    • HR assesses reasonableness (market data, budget constraints, internal equity)
+    • Negotiation authority:
+        - Up to 10% above initial offer: HR Head
+        - 10-20% above: HR Head + CFO
+        - Beyond 20%: Requires CEO approval or offer withdrawal consideration
+(ii) Revised offer issued if approved, clearly marked "Revised Offer"
+(iii) Maximum 1-2 rounds of negotiation; prolonged back-and-forth discouraged`
+          },
+          {
+            number: '3.4',
+            title: 'Offer Acceptance and Follow-Up',
+            content: `(i) Candidate accepts by signing and returning offer letter (email or physical)
+(ii) HR tracks:
+    • Offers issued, accepted, declined, expired
+    • Average time to offer acceptance
+    • Offer decline reasons (for improvement analysis)
+(iii) Upon acceptance: Proceed to SOP B.10 (Appointment Letter & Joining)`
+          }
+        ]
+      },
+      {
+        number: '4',
+        title: 'COMPLIANCE',
+        content: 'All offers within approved budget. Compensation must comply with minimum wage laws, equal pay principles. Offer letters retained 5 years. Verbal offers not binding; only written signed offers valid.'
+      },
+      {
+        number: '5',
+        title: 'REFERENCES',
+        content: 'HR By-Laws Section 3, SOP B.1 (Manpower Budgeting), SOP B.10 (Appointment), Annexure B.9.1 (Offer Letter Template), Compensation and Benefits Policy'
+      }
+    ]
   },
 
   sopB10: {
@@ -1435,7 +1571,95 @@ Once drafted, the policy shall be reviewed internally by:
     title: 'Appointment Letter Signing & Joining Checklist',
     searchTerms: ['appointment', 'joining', 'checklist', 'onboarding', 'letter'],
     category: 'B. Recruitment, Selection & Appointment',
-    content: 'Establishes uniform process for issuing signed appointment letters to newly joining employees while ensuring completion of all administrative and regulatory formalities.'
+    subsections: [
+      {
+        number: '1',
+        title: 'OBJECTIVE',
+        content: 'This SOP establishes a uniform process for issuing signed appointment letters to newly joining employees while ensuring completion of all administrative and regulatory formalities. The objective is to create personnel files, complete statutory registrations, and facilitate smooth onboarding.'
+      },
+      {
+        number: '2',
+        title: 'SCOPE',
+        content: 'Applies to all candidates who have accepted offers and reported for joining. Covers documentation, statutory compliance, and onboarding preparation.'
+      },
+      {
+        number: '3',
+        title: 'PROCEDURE',
+        subsections: [
+          {
+            number: '3.1',
+            title: 'Pre-Joining Documentation',
+            content: `(i) Candidate submits on/before joining date:
+    • Signed offer letter copy
+    • Educational certificates (originals + copies)
+    • Previous employment certificates (relieving, experience)
+    • Professional licenses/registrations
+    • ID proofs: Aadhaar, PAN, Passport
+    • Address proof, photographs (passport size)
+    • Bank account details with cancelled cheque
+    • PF UAN, ESI number (if previously employed)
+    • Medical fitness certificate
+    • Declaration forms: Background consent, confidentiality, conflict of interest
+(ii) HR verifies all documents for completeness and authenticity
+(iii) Missing documents: Joining allowed with undertaking to submit within 7 days`
+          },
+          {
+            number: '3.2',
+            title: 'Appointment Letter Issuance',
+            content: `(i) HR prepares appointment letter (Annexure B.10.1) confirming:
+    • Employment commencement date
+    • Employee ID assigned
+    • Designation, department, reporting manager
+    • Probation period (6 months)
+    • Compensation as per offer letter
+    • Leave entitlements, working hours, code of conduct reference
+    • Governed by HR By-Laws and policies
+(ii) Appointment letter signed by:
+    • HR Head (for all grades)
+    • CEO/COO (for Grade E-F)
+(iii) New employee signs acknowledgment copy
+(iv) Original to employee, copy in personnel file`
+          },
+          {
+            number: '3.3',
+            title: 'Statutory Registrations',
+            content: `(i) HR initiates:
+    • PF enrollment: UAN activation/new UAN generation within 7 days
+    • ESI enrollment: For employees with salary ≤ ₹21,000 per month
+    • Professional Tax registration (if applicable in state)
+    • TDS declaration: Form 12BB, investment proofs for tax planning
+(ii) Nominee declarations for PF, Gratuity, Group Insurance
+(iii) Statutory records updated in registers (Form F, attendance, wages)`
+          },
+          {
+            number: '3.4',
+            title: 'Onboarding Checklist Completion',
+            content: `(i) HR coordinates onboarding activities (Annexure B.10.2):
+    • ID card issuance (SOP C.2)
+    • Biometric enrollment (SOP C.2)
+    • HRMS/payroll system access creation (SOP C.3)
+    • Email and IT system access (coordination with IT)
+    • Uniform/PPE issuance (for clinical/operational staff)
+    • Department induction scheduling (SOP C.1)
+    • HR orientation program scheduling (SOP C.1)
+    • Workspace/locker allocation
+    • Introduction to team and reporting manager
+(ii) Onboarding checklist signed off by HR, IT, Admin, and Department Head
+(iii) Completion target: Within first 3 days of joining`
+          }
+        ]
+      },
+      {
+        number: '4',
+        title: 'COMPLIANCE',
+        content: 'Appointment letters issued within 3 days of joining. Personnel files created immediately. Statutory enrollments completed within statutory timelines (PF: 1 month, ESI: 10 days). Document verification audit quarterly.'
+      },
+      {
+        number: '5',
+        title: 'REFERENCES',
+        content: 'HR By-Laws Section 3, SOP C.1 (Orientation), SOP C.2 (ID & Biometric), SOP C.3 (HRMS Access), Annexure B.10.1 (Appointment Letter), Annexure B.10.2 (Onboarding Checklist), EPF Act, ESI Act'
+      }
+    ]
   },
 
   // SECTION C: ONBOARDING & ACCESS CONTROL
