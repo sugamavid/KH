@@ -18,39 +18,38 @@ const HRByLaws = ({ setActiveModule }) => {
   const [expandedSections, setExpandedSections] = useState({});
   const contentRef = useRef(null);
 
-  // Format content with proper HTML structure
+  // Format content - now handling both HTML and plain text
   const formatContent = (content) => {
     if (!content) return '';
     
+    // If content already contains HTML tags, return as-is
+    if (content.includes('<div') || content.includes('<ul')) {
+      return content;
+    }
+    
+    // Otherwise, apply text formatting (for legacy content)
     let formatted = content
-      // First, handle bold text
       .replace(/\*\*(.*?)\*\*/g, '<strong class="font-bold">$1</strong>')
-      
-      // Split into lines for better processing
       .split('\n')
       .map(line => {
-        // Main points (a), (b), (c), (d) - at start of line
         if (line.match(/^\([a-z]\)\s+/)) {
           const match = line.match(/^\(([a-z])\)\s+(.*)/);
           return `<div class="mt-6 mb-3"><span class="inline-block font-bold text-slate-900 mr-2">(${match[1]})</span><span class="font-semibold">${match[2]}</span></div>`;
         }
-        // Sub-points (i), (ii), (iii) - indented
         else if (line.match(/^\s{4}\(([ivxl]+)\)\s+/)) {
           const match = line.match(/^\s{4}\(([ivxl]+)\)\s+(.*)/);
           return `<div class="ml-8 mt-3 mb-2"><span class="inline-block font-semibold text-slate-700 mr-2">(${match[1]})</span><span>${match[2]}</span></div>`;
         }
-        // Bullets - indented
         else if (line.match(/^\s{4}•\s+/)) {
           const match = line.match(/^\s{4}•\s+(.*)/);
           return `<div class="ml-8 mt-2 mb-2 flex items-start"><span class="text-amber-600 mr-3 mt-1">•</span><span class="flex-1">${match[1]}</span></div>`;
         }
-        // Regular paragraph
         else if (line.trim()) {
           return `<p class="mb-2">${line.trim()}</p>`;
         }
         return '';
       })
-      .filter(line => line)  // Remove empty lines
+      .filter(line => line)
       .join('');
     
     return formatted;
