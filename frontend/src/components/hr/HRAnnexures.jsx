@@ -6,7 +6,7 @@ import {
 } from 'lucide-react';
 import { HR_ANNEXURES } from '../../data/hrDemoData';
 
-const HRAnnexures = () => {
+const HRAnnexures = ({ setActiveModule }) => {
   const [searchQuery, setSearchQuery] = useState('');
   const [filterCategory, setFilterCategory] = useState('All');
   const [selectedAnnexure, setSelectedAnnexure] = useState(null);
