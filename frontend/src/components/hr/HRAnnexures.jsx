@@ -202,6 +202,41 @@ const HRAnnexures = ({ setActiveModule }) => {
       linkedSOP: 'SOP D.1',
       color: 'gray'
     },
+    {
+      code: 'D2',
+      title: 'Document Verification Register',
+      category: 'Personnel Management',
+      linkedSOP: 'SOP D.2',
+      color: 'indigo'
+    },
+    {
+      code: 'D3',
+      title: 'Statutory Register Format (PF/ESI/Bonus/Gratuity)',
+      category: 'Statutory Compliance',
+      linkedSOP: 'SOP D.3',
+      color: 'purple'
+    },
+    {
+      code: 'D4',
+      title: 'Display Board Compliance Checklist',
+      category: 'Compliance',
+      linkedSOP: 'SOP D.4',
+      color: 'teal'
+    },
+    {
+      code: 'D5',
+      title: 'KYC / UAN / ESIC Mapping Sheet',
+      category: 'Statutory Compliance',
+      linkedSOP: 'SOP D.5',
+      color: 'orange'
+    },
+    {
+      code: 'E1',
+      title: 'Biometric Attendance Report Format',
+      category: 'Attendance Management',
+      linkedSOP: 'SOP E.1',
+      color: 'rose'
+    },
   ];
 
   // Mock data for dashboard stats
