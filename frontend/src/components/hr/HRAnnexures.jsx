@@ -177,7 +177,7 @@ const HRAnnexures = ({ setActiveModule }) => {
   const AnnexureContent = ({ annexure }) => {
     // Load the appropriate form component based on annexure code
     if (annexure.code === 'A1') {
-      return <A1HRPolicyRevisionForm />;
+      return <ProfessionalA1Form />;
     }
 
     // For other forms (A2, A3, A4, B1) show coming soon
