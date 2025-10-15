@@ -274,8 +274,12 @@ const ProfessionalF1Form = () => {
         </section>
       </div>
 
-      <div className="bg-green-100 px-8 py-4 text-center text-xs text-green-600 border-t-2 border-green-200">
-        © Koyili Hospital – Governance • Confidential • Version-controlled
+      {/* Standardized NABH-Compliant Footer */}
+      <div className="bg-gradient-to-r from-blue-50 to-blue-100 px-8 py-4 border-t-4 border-blue-900">
+        <div className="flex items-center justify-between text-sm">
+          <span className="text-blue-900 font-semibold">© Koyili Hospital • NABH Accredited • Confidential • Version-controlled</span>
+          <span className="text-blue-700 font-bold">Form F1 – Leave Application Form</span>
+        </div>
       </div>
     </div>
   );
