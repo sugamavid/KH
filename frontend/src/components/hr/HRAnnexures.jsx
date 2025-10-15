@@ -345,8 +345,8 @@ const HRAnnexures = ({ setActiveModule }) => {
     if (annexure.code === 'B7') {
       return <ProfessionalB7Form />;
     }
-    if (annexure.code === 'B8' || annexure.code === 'B9' || annexure.code === 'B10' || annexure.code === 'C1') {
-      // Placeholder for remaining forms
+    if (['B8', 'B9', 'B10', 'C1', 'C2', 'C3', 'C4', 'C5', 'D1'].includes(annexure.code)) {
+      // Placeholder for forms being implemented
       return (
         <div className="max-w-5xl mx-auto">
           <div className="bg-white rounded-2xl shadow-xl border-2 border-slate-200 p-8">
@@ -355,8 +355,16 @@ const HRAnnexures = ({ setActiveModule }) => {
               <p className="text-blue-100 text-sm">{annexure.linkedSOP} • {annexure.category}</p>
             </div>
             <div className="bg-blue-50 border-2 border-blue-200 rounded-xl p-6">
-              <h3 className="font-bold text-slate-900 mb-2">Form Being Finalized</h3>
-              <p className="text-sm text-slate-600">This professional interactive form will be available in the next batch.</p>
+              <h3 className="font-bold text-slate-900 mb-2 flex items-center gap-2">
+                <span>🔄</span> Form In Development
+              </h3>
+              <p className="text-sm text-slate-600 mb-3">This professional interactive form is currently being implemented with all sections from the HTML template.</p>
+              <div className="bg-white border border-blue-300 rounded-lg p-3">
+                <p className="text-xs font-semibold text-blue-900 mb-1">Current Batch Progress:</p>
+                <p className="text-xs text-slate-700">• Forms B8-B10: Final recruitment documents</p>
+                <p className="text-xs text-slate-700">• Forms C1-C5: Complete onboarding suite</p>
+                <p className="text-xs text-slate-700">• Form D1: Personnel management</p>
+              </div>
             </div>
           </div>
         </div>
