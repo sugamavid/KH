@@ -174,77 +174,78 @@ const HRAnnexures = ({ setActiveModule }) => {
   );
 
   // Annexure Content View
-  const AnnexureContent = ({ annexure }) => (
-    <div className="max-w-5xl mx-auto">
-      <div className="bg-white rounded-2xl shadow-xl border-2 border-slate-200 overflow-hidden">
-        {/* Document Header */}
-        <div className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white p-6">
-          <div className="flex items-center justify-between">
-            <div>
-              <div className="flex items-center gap-3 mb-2">
-                <span className="px-3 py-1 bg-white/20 backdrop-blur-sm rounded-lg font-bold text-lg">
-                  {annexure.code}
-                </span>
-                <span className="px-3 py-1 bg-white/10 backdrop-blur-sm rounded text-sm">
-                  {annexure.category}
-                </span>
+  const AnnexureContent = ({ annexure }) => {
+    // Load the appropriate form component based on annexure code
+    if (annexure.code === 'A1') {
+      return <A1HRPolicyRevisionForm />;
+    }
+
+    // For other forms (A2, A3, A4, B1) show coming soon
+    return (
+      <div className="max-w-5xl mx-auto">
+        <div className="bg-white rounded-2xl shadow-xl border-2 border-slate-200 overflow-hidden">
+          {/* Document Header */}
+          <div className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white p-6">
+            <div className="flex items-center justify-between">
+              <div>
+                <div className="flex items-center gap-3 mb-2">
+                  <span className="px-3 py-1 bg-white/20 backdrop-blur-sm rounded-lg font-bold text-lg">
+                    {annexure.code}
+                  </span>
+                  <span className="px-3 py-1 bg-white/10 backdrop-blur-sm rounded text-sm">
+                    {annexure.category}
+                  </span>
+                </div>
+                <h1 className="text-2xl font-bold mb-1">{annexure.title}</h1>
+                <p className="text-blue-100 text-sm">{annexure.linkedSOP} • Professional HR Form</p>
               </div>
-              <h1 className="text-2xl font-bold mb-1">{annexure.title}</h1>
-              <p className="text-blue-100 text-sm">{annexure.linkedSOP} • Professional HR Form</p>
+              <FileText className="w-16 h-16 opacity-20" />
             </div>
-            <FileText className="w-16 h-16 opacity-20" />
-          </div>
-        </div>
-
-        {/* Form Content */}
-        <div className="p-8">
-          <div className="bg-blue-50 border-2 border-blue-200 rounded-xl p-6 mb-6">
-            <h3 className="font-bold text-slate-900 mb-2 flex items-center">
-              <Sparkles className="w-5 h-5 text-blue-600 mr-2" />
-              Interactive Form Loading...
-            </h3>
-            <p className="text-sm text-slate-600">
-              The detailed interactive form for {annexure.title} will be loaded here.
-              This form will include all fields from your HTML template with React state management,
-              validation, save/load functionality, and PDF export.
-            </p>
           </div>
 
-          {/* Placeholder sections */}
-          <div className="space-y-6">
-            <section className="border-2 border-slate-200 rounded-xl p-6">
-              <h3 className="text-lg font-bold text-slate-900 mb-4">Document Control</h3>
-              <div className="grid grid-cols-2 gap-4 text-sm">
-                <div>
-                  <span className="text-slate-600 font-semibold">Document Title:</span>
-                  <p className="text-slate-900">{annexure.title}</p>
-                </div>
-                <div>
-                  <span className="text-slate-600 font-semibold">Annexure Number:</span>
-                  <p className="text-slate-900">{annexure.code}</p>
-                </div>
-                <div>
-                  <span className="text-slate-600 font-semibold">Linked SOP:</span>
-                  <p className="text-slate-900">{annexure.linkedSOP}</p>
-                </div>
-                <div>
-                  <span className="text-slate-600 font-semibold">Category:</span>
-                  <p className="text-slate-900">{annexure.category}</p>
-                </div>
-              </div>
-            </section>
-
-            <section className="border-2 border-slate-200 rounded-xl p-6">
-              <h3 className="text-lg font-bold text-slate-900 mb-4">Form Fields</h3>
-              <p className="text-slate-600">
-                Complete interactive form will be implemented here with all fields from your HTML template.
+          {/* Form Content */}
+          <div className="p-8">
+            <div className="bg-blue-50 border-2 border-blue-200 rounded-xl p-6 mb-6">
+              <h3 className="font-bold text-slate-900 mb-2 flex items-center">
+                <Sparkles className="w-5 h-5 text-blue-600 mr-2" />
+                Interactive Form Coming Soon
+              </h3>
+              <p className="text-sm text-slate-600">
+                The detailed interactive form for {annexure.title} will be implemented in the next update.
+                This form will include all fields from your HTML template with React state management,
+                validation, save/load functionality, and PDF export.
               </p>
-            </section>
+            </div>
+
+            {/* Placeholder sections */}
+            <div className="space-y-6">
+              <section className="border-2 border-slate-200 rounded-xl p-6">
+                <h3 className="text-lg font-bold text-slate-900 mb-4">Document Control</h3>
+                <div className="grid grid-cols-2 gap-4 text-sm">
+                  <div>
+                    <span className="text-slate-600 font-semibold">Document Title:</span>
+                    <p className="text-slate-900">{annexure.title}</p>
+                  </div>
+                  <div>
+                    <span className="text-slate-600 font-semibold">Annexure Number:</span>
+                    <p className="text-slate-900">{annexure.code}</p>
+                  </div>
+                  <div>
+                    <span className="text-slate-600 font-semibold">Linked SOP:</span>
+                    <p className="text-slate-900">{annexure.linkedSOP}</p>
+                  </div>
+                  <div>
+                    <span className="text-slate-600 font-semibold">Category:</span>
+                    <p className="text-slate-900">{annexure.category}</p>
+                  </div>
+                </div>
+              </section>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  );
+    );
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
