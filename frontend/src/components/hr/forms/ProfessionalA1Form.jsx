@@ -79,7 +79,7 @@ const ProfessionalA1Form = () => {
     ceoStatus: 'pending'
   });
 
-  const [logoUrl, setLogoUrl] = useState('/images.jpeg');
+  const [logoUrl, setLogoUrl] = useState('/koyili-logo.png');
   const [completionPercentage, setCompletionPercentage] = useState(0);
   const [currentSection, setCurrentSection] = useState(1);
   const [validationErrors, setValidationErrors] = useState({});
