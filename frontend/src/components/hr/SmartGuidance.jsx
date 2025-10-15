@@ -53,79 +53,79 @@ const SmartGuidance = () => {
     if (savedBookmarks) setBookmarks(JSON.parse(savedBookmarks));
   }, []);
 
-  // Common scenarios with comprehensive queries
+  // Example scenarios - User can ask ANYTHING beyond these
   const scenarios = [
     {
       id: 'bylaw-implementation',
-      title: 'By-Laws Implementation',
-      description: 'Complete process from ideation to board approval',
+      title: 'Implement By-Laws',
+      description: 'Complete process from need identification to board approval',
       icon: BookOpen,
       color: 'blue',
       gradient: 'from-blue-500 to-indigo-600',
-      query: 'Provide a complete step-by-step guide for implementing or amending By-Laws at Koyili Hospital. Include: 1) How to identify the need 2) Legal consultation process 3) Drafting procedures 4) Department review process 5) Approval chain from departments to board 6) Communication with lawyers 7) Stakeholder discussions 8) Final notification and implementation. For each step, explain What, When, Where, How, Why, and Whom.'
+      query: 'How do I implement or amend By-Laws at Koyili Hospital? Give me the complete process.'
     },
     {
       id: 'recruitment',
-      title: 'Recruitment Process',
-      description: 'End-to-end hiring workflow with approvals',
+      title: 'Hire New Employee',
+      description: 'Full recruitment workflow',
       icon: Users,
       color: 'green',
       gradient: 'from-green-500 to-emerald-600',
-      query: 'Explain the complete recruitment process at Koyili Hospital including position approval, job posting, candidate screening, interview process, selection criteria, offer approval, documentation required, and onboarding. Include all approval authorities and timelines.'
+      query: 'What is the complete recruitment and hiring process at Koyili Hospital?'
     },
     {
       id: 'leave-management',
       title: 'Leave Management',
-      description: 'Leave application and approval workflow',
+      description: 'All types of leave policies',
       icon: CheckCircle,
       color: 'purple',
       gradient: 'from-purple-500 to-violet-600',
-      query: 'How does leave management work at Koyili Hospital? Include different types of leave, application process, approval authorities, required forms, timelines, and special considerations for emergency leave.'
+      query: 'Explain the leave management system - types of leave, how to apply, approval process, and policies.'
     },
     {
       id: 'disciplinary',
-      title: 'Disciplinary Actions',
-      description: 'Handling employee conduct issues',
+      title: 'Disciplinary Action',
+      description: 'Handle misconduct properly',
       icon: AlertCircle,
       color: 'red',
       gradient: 'from-red-500 to-rose-600',
-      query: 'What is the disciplinary action process? Include investigation procedures, documentation requirements, hearing process, decision-making authority, appeals process, and timeline for each step.'
+      query: 'How do I handle employee disciplinary actions? What is the proper process?'
     },
     {
-      id: 'performance',
-      title: 'Performance Review',
-      description: 'Evaluation and appraisal process',
+      id: 'resignation',
+      title: 'Employee Exit',
+      description: 'Resignation & separation',
       icon: TrendingUp,
       color: 'orange',
       gradient: 'from-orange-500 to-amber-600',
-      query: 'Explain the performance management cycle including evaluation criteria, review schedules, feedback mechanisms, goal setting, rating system, and promotion considerations.'
+      query: 'What is the process when an employee resigns? Include notice period, exit formalities, and final settlement.'
     },
     {
-      id: 'grievance',
-      title: 'Grievance Resolution',
-      description: 'Employee complaint handling',
+      id: 'patient-complaint',
+      title: 'Patient Complaints',
+      description: 'Handle patient grievances',
       icon: MessageSquare,
       color: 'teal',
       gradient: 'from-teal-500 to-cyan-600',
-      query: 'What is the grievance handling procedure? Include how to file a grievance, investigation process, resolution timeline, escalation path, and confidentiality measures.'
+      query: 'How should I handle patient complaints and grievances at the hospital?'
     },
     {
-      id: 'training',
-      title: 'Training Programs',
-      description: 'Employee development and certification',
+      id: 'budget-approval',
+      title: 'Budget & Expenses',
+      description: 'Financial approvals',
       icon: Lightbulb,
       color: 'indigo',
       gradient: 'from-indigo-500 to-blue-600',
-      query: 'How do I organize training programs? Include approval process, budget allocation, vendor selection, attendance tracking, certification, and mandatory vs optional training.'
+      query: 'What is the budget approval process? Who approves different expense amounts?'
     },
     {
-      id: 'sop-creation',
-      title: 'Create New SOP',
-      description: 'SOP development workflow',
+      id: 'fire-safety',
+      title: 'Emergency Protocols',
+      description: 'Fire & disaster management',
       icon: ClipboardList,
       color: 'amber',
       gradient: 'from-amber-500 to-yellow-600',
-      query: 'Guide me through creating a new SOP including drafting guidelines, review process, approval chain, version control, and communication to staff.'
+      query: 'What are the fire safety and emergency response protocols at the hospital?'
     }
   ];
 
