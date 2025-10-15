@@ -246,7 +246,7 @@ const HRAnnexures = ({ setActiveModule }) => {
           {/* Coming Soon */}
           <div className="mt-6 p-3 bg-gradient-to-br from-purple-50 to-pink-50 rounded-lg border-2 border-purple-200">
             <p className="text-xs font-semibold text-purple-900 mb-1">More Annexures Coming</p>
-            <p className="text-xs text-purple-700">10 forms available, more batches coming soon</p>
+            <p className="text-xs text-purple-700">11 of 15 complete, 4 finalizing soon</p>
           </div>
         </div>
       </div>
