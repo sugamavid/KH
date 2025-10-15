@@ -1,36 +1,35 @@
 import React, { useState, useRef } from 'react';
-import { Save, Upload, RotateCcw, Printer, Download, Heart } from 'lucide-react';
+import { Save, Upload, RotateCcw, Printer, Download, Ban } from 'lucide-react';
 
-const ProfessionalF3Form = () => {
+const ProfessionalF5Form = () => {
   const [formData, setFormData] = useState({
-    ann_title: 'Maternity / Paternity / Bereavement Leave Declaration',
-    ann_no: 'F3',
-    ann_sop: 'SOP F.3 – Special Leave Management',
-    ann_bylaws: 'Section 7.2(a)(iii) – Maternity / Paternity Leave; Section 7.5 – Special Leave Provisions',
-    ann_version: '1.0',
-    ann_effective: '',
-    ann_cust: 'Human Resources',
-    ann_auth: 'HR Manager / Compliance Officer / Hospital Director',
-    ann_purpose: 'This Annexure provides the standardized declaration form for Maternity, Paternity, and Bereavement Leave at Koyili Hospital. It ensures compliance with SOP F.3 and By-Laws Section 7.2(a), as well as statutory requirements under the Maternity Benefit Act, Shops & Establishments Act, and relevant labour laws.',
+    doc_title: 'Leave Without Pay (LOP) Request Format',
+    ann_no: 'F5',
+    linked_sop: 'SOP F.5 – Leave Without Pay (LOP) Tracking & Approval',
+    bylaws_ref: 'Section 7.2(c) – Unpaid Leave',
+    version: '1.0',
+    effective_date: '',
+    custodian: 'Human Resources / Finance',
+    authority: 'Reporting Manager / HR Manager / Finance Head',
+    purpose: 'This Annexure provides the standardized Leave Without Pay (LOP) Request Format for employees of Koyili Hospital. It ensures compliance with SOP F.5 and By-Laws Section 7.2(c) by documenting employee LOP applications, payroll adjustments, and approvals. It also ensures compliance with labour laws, payroll accuracy, and NABH/JCI workforce audit standards.',
     emp_name: '',
     emp_id: '',
     emp_dept: '',
     emp_desig: '',
-    leave_type: '',
     app_date: '',
-    duration: '',
     start_date: '',
     end_date: '',
+    duration: '',
     reason: '',
-    support_doc: '',
+    supporting_docs: '',
     dec_name: '',
     dec_date: '',
-    sig_mgr_name: '',
-    sig_mgr_date: '',
+    sig_rm_name: '',
+    sig_rm_date: '',
     sig_hr_name: '',
     sig_hr_date: '',
-    sig_comp_name: '',
-    sig_comp_date: ''
+    sig_fin_name: '',
+    sig_fin_date: ''
   });
 
   const [logo, setLogo] = useState('https://customer-assets.emergentagent.com/job_koyili-hrms/artifacts/0pgv6z3a_koyili-logo.png');
@@ -38,12 +37,8 @@ const ProfessionalF3Form = () => {
   const loadInputRef = useRef(null);
 
   const handleChange = (e) => {
-    const { name, value, type } = e.target;
-    if (type === 'radio') {
-      setFormData(prev => ({ ...prev, [name]: value }));
-    } else {
-      setFormData(prev => ({ ...prev, [name]: value }));
-    }
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
   };
 
   const handleLogoUpload = (e) => {
@@ -61,7 +56,7 @@ const ProfessionalF3Form = () => {
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = 'Annexure_F3_Special_Leave_Declaration.json';
+    a.download = 'Annexure_F5_Leave_Without_Pay.json';
     a.click();
     URL.revokeObjectURL(url);
   };
@@ -86,34 +81,33 @@ const ProfessionalF3Form = () => {
   const handleReset = () => {
     if (window.confirm('Reset all fields to default values?')) {
       setFormData({
-        ann_title: 'Maternity / Paternity / Bereavement Leave Declaration',
-        ann_no: 'F3',
-        ann_sop: 'SOP F.3 – Special Leave Management',
-        ann_bylaws: 'Section 7.2(a)(iii) – Maternity / Paternity Leave; Section 7.5 – Special Leave Provisions',
-        ann_version: '1.0',
-        ann_effective: '',
-        ann_cust: 'Human Resources',
-        ann_auth: 'HR Manager / Compliance Officer / Hospital Director',
-        ann_purpose: 'This Annexure provides the standardized declaration form for Maternity, Paternity, and Bereavement Leave at Koyili Hospital.',
+        doc_title: 'Leave Without Pay (LOP) Request Format',
+        ann_no: 'F5',
+        linked_sop: 'SOP F.5 – Leave Without Pay (LOP) Tracking & Approval',
+        bylaws_ref: 'Section 7.2(c) – Unpaid Leave',
+        version: '1.0',
+        effective_date: '',
+        custodian: 'Human Resources / Finance',
+        authority: 'Reporting Manager / HR Manager / Finance Head',
+        purpose: 'This Annexure provides the standardized Leave Without Pay (LOP) Request Format for employees of Koyili Hospital.',
         emp_name: '',
         emp_id: '',
         emp_dept: '',
         emp_desig: '',
-        leave_type: '',
         app_date: '',
-        duration: '',
         start_date: '',
         end_date: '',
+        duration: '',
         reason: '',
-        support_doc: '',
+        supporting_docs: '',
         dec_name: '',
         dec_date: '',
-        sig_mgr_name: '',
-        sig_mgr_date: '',
+        sig_rm_name: '',
+        sig_rm_date: '',
         sig_hr_name: '',
         sig_hr_date: '',
-        sig_comp_name: '',
-        sig_comp_date: ''
+        sig_fin_name: '',
+        sig_fin_date: ''
       });
       setLogo('https://customer-assets.emergentagent.com/job_koyili-hrms/artifacts/0pgv6z3a_koyili-logo.png');
     }
@@ -161,8 +155,8 @@ const ProfessionalF3Form = () => {
         <div className="grid grid-cols-[240px_1fr] gap-6 items-center pb-6 border-b-4 border-blue-900 mb-6">
           <img src={logo} alt="Koyili Hospital Logo" className="w-full max-h-36 object-contain" />
           <div>
-            <h1 className="text-2xl font-black text-blue-900 uppercase tracking-tight">Maternity / Paternity / Bereavement Leave Declaration</h1>
-            <p className="text-gray-600 font-bold mt-2">HR • SOP F.3 – Special Leave Management • Annexure F3</p>
+            <h1 className="text-2xl font-black text-blue-900 uppercase tracking-tight">Leave Without Pay (LOP) Request Format</h1>
+            <p className="text-gray-600 font-bold mt-2">HR • SOP F.5 – Leave Without Pay Tracking & Approval • Annexure F5</p>
           </div>
         </div>
 
@@ -174,14 +168,14 @@ const ProfessionalF3Form = () => {
           </div>
           <table className="w-full border-collapse text-sm">
             <tbody>
-              <tr><th className="border border-gray-200 bg-blue-50 text-blue-900 font-bold px-3 py-2 text-left w-1/3">Document Title</th><td className="border border-gray-200 px-3 py-2"><input name="ann_title" value={formData.ann_title} onChange={handleChange} className="w-full px-2 py-1 border border-gray-300 rounded" /></td></tr>
+              <tr><th className="border border-gray-200 bg-blue-50 text-blue-900 font-bold px-3 py-2 text-left w-1/3">Document Title</th><td className="border border-gray-200 px-3 py-2"><input name="doc_title" value={formData.doc_title} onChange={handleChange} className="w-full px-2 py-1 border border-gray-300 rounded" /></td></tr>
               <tr><th className="border border-gray-200 bg-blue-50 text-blue-900 font-bold px-3 py-2 text-left">Annexure Number</th><td className="border border-gray-200 px-3 py-2"><input name="ann_no" value={formData.ann_no} onChange={handleChange} className="w-full px-2 py-1 border border-gray-300 rounded" /></td></tr>
-              <tr><th className="border border-gray-200 bg-blue-50 text-blue-900 font-bold px-3 py-2 text-left">Linked SOP</th><td className="border border-gray-200 px-3 py-2"><input name="ann_sop" value={formData.ann_sop} onChange={handleChange} className="w-full px-2 py-1 border border-gray-300 rounded" /></td></tr>
-              <tr><th className="border border-gray-200 bg-blue-50 text-blue-900 font-bold px-3 py-2 text-left">By-Laws Reference</th><td className="border border-gray-200 px-3 py-2"><input name="ann_bylaws" value={formData.ann_bylaws} onChange={handleChange} className="w-full px-2 py-1 border border-gray-300 rounded" /></td></tr>
-              <tr><th className="border border-gray-200 bg-blue-50 text-blue-900 font-bold px-3 py-2 text-left">Version No.</th><td className="border border-gray-200 px-3 py-2"><input name="ann_version" value={formData.ann_version} onChange={handleChange} className="w-full px-2 py-1 border border-gray-300 rounded" /></td></tr>
-              <tr><th className="border border-gray-200 bg-blue-50 text-blue-900 font-bold px-3 py-2 text-left">Effective Date</th><td className="border border-gray-200 px-3 py-2"><input type="date" name="ann_effective" value={formData.ann_effective} onChange={handleChange} className="w-full px-2 py-1 border border-gray-300 rounded" /></td></tr>
-              <tr><th className="border border-gray-200 bg-blue-50 text-blue-900 font-bold px-3 py-2 text-left">Custodian Department</th><td className="border border-gray-200 px-3 py-2"><input name="ann_cust" value={formData.ann_cust} onChange={handleChange} className="w-full px-2 py-1 border border-gray-300 rounded" /></td></tr>
-              <tr><th className="border border-gray-200 bg-blue-50 text-blue-900 font-bold px-3 py-2 text-left">Approved Authority</th><td className="border border-gray-200 px-3 py-2"><input name="ann_auth" value={formData.ann_auth} onChange={handleChange} className="w-full px-2 py-1 border border-gray-300 rounded" /></td></tr>
+              <tr><th className="border border-gray-200 bg-blue-50 text-blue-900 font-bold px-3 py-2 text-left">Linked SOP</th><td className="border border-gray-200 px-3 py-2"><input name="linked_sop" value={formData.linked_sop} onChange={handleChange} className="w-full px-2 py-1 border border-gray-300 rounded" /></td></tr>
+              <tr><th className="border border-gray-200 bg-blue-50 text-blue-900 font-bold px-3 py-2 text-left">By-Laws Reference</th><td className="border border-gray-200 px-3 py-2"><input name="bylaws_ref" value={formData.bylaws_ref} onChange={handleChange} className="w-full px-2 py-1 border border-gray-300 rounded" /></td></tr>
+              <tr><th className="border border-gray-200 bg-blue-50 text-blue-900 font-bold px-3 py-2 text-left">Version No.</th><td className="border border-gray-200 px-3 py-2"><input name="version" value={formData.version} onChange={handleChange} className="w-full px-2 py-1 border border-gray-300 rounded" /></td></tr>
+              <tr><th className="border border-gray-200 bg-blue-50 text-blue-900 font-bold px-3 py-2 text-left">Effective Date</th><td className="border border-gray-200 px-3 py-2"><input type="date" name="effective_date" value={formData.effective_date} onChange={handleChange} className="w-full px-2 py-1 border border-gray-300 rounded" /></td></tr>
+              <tr><th className="border border-gray-200 bg-blue-50 text-blue-900 font-bold px-3 py-2 text-left">Custodian Department</th><td className="border border-gray-200 px-3 py-2"><input name="custodian" value={formData.custodian} onChange={handleChange} className="w-full px-2 py-1 border border-gray-300 rounded" /></td></tr>
+              <tr><th className="border border-gray-200 bg-blue-50 text-blue-900 font-bold px-3 py-2 text-left">Approved Authority</th><td className="border border-gray-200 px-3 py-2"><input name="authority" value={formData.authority} onChange={handleChange} className="w-full px-2 py-1 border border-gray-300 rounded" /></td></tr>
             </tbody>
           </table>
         </div>
@@ -192,7 +186,7 @@ const ProfessionalF3Form = () => {
             <div className="w-1.5 h-6 bg-gradient-to-b from-yellow-600 to-blue-900 rounded-full" />
             <h3 className="text-lg font-bold text-gray-900">Purpose</h3>
           </div>
-          <textarea name="ann_purpose" value={formData.ann_purpose} onChange={handleChange} rows="4" className="w-full px-3 py-2 border border-gray-300 rounded-lg resize-none" />
+          <textarea name="purpose" value={formData.purpose} onChange={handleChange} rows="4" className="w-full px-3 py-2 border border-gray-300 rounded-lg resize-none" />
         </div>
 
         {/* Employee Details */}
@@ -206,45 +200,25 @@ const ProfessionalF3Form = () => {
             <div><label className="block text-sm font-semibold text-gray-700 mb-1">Employee ID</label><input name="emp_id" value={formData.emp_id} onChange={handleChange} className="w-full px-3 py-2 border border-gray-300 rounded-lg" /></div>
             <div><label className="block text-sm font-semibold text-gray-700 mb-1">Department</label><input name="emp_dept" value={formData.emp_dept} onChange={handleChange} className="w-full px-3 py-2 border border-gray-300 rounded-lg" /></div>
             <div><label className="block text-sm font-semibold text-gray-700 mb-1">Designation</label><input name="emp_desig" value={formData.emp_desig} onChange={handleChange} className="w-full px-3 py-2 border border-gray-300 rounded-lg" /></div>
+            <div><label className="block text-sm font-semibold text-gray-700 mb-1">Date of Application</label><input type="date" name="app_date" value={formData.app_date} onChange={handleChange} className="w-full px-3 py-2 border border-gray-300 rounded-lg" /></div>
           </div>
         </div>
 
-        {/* Leave Details */}
+        {/* Leave Without Pay Request */}
         <div className="bg-white border border-gray-200 rounded-xl p-5 mb-5">
           <div className="flex items-center gap-3 mb-4">
             <div className="w-1.5 h-6 bg-gradient-to-b from-yellow-600 to-blue-900 rounded-full" />
             <div className="flex items-center gap-2">
-              <Heart className="text-pink-600" size={20} />
-              <h3 className="text-lg font-bold text-gray-900">Leave Details</h3>
+              <Ban className="text-red-600" size={20} />
+              <h3 className="text-lg font-bold text-gray-900">Leave Without Pay Request</h3>
             </div>
           </div>
-          <div className="flex flex-col gap-2 mb-4">
-            <label className="flex items-center gap-2">
-              <input type="radio" name="leave_type" value="Maternity Leave" checked={formData.leave_type === 'Maternity Leave'} onChange={handleChange} className="w-4 h-4" />
-              <span className="text-sm font-medium">Maternity Leave</span>
-            </label>
-            <label className="flex items-center gap-2">
-              <input type="radio" name="leave_type" value="Paternity Leave" checked={formData.leave_type === 'Paternity Leave'} onChange={handleChange} className="w-4 h-4" />
-              <span className="text-sm font-medium">Paternity Leave</span>
-            </label>
-            <label className="flex items-center gap-2">
-              <input type="radio" name="leave_type" value="Bereavement Leave" checked={formData.leave_type === 'Bereavement Leave'} onChange={handleChange} className="w-4 h-4" />
-              <span className="text-sm font-medium">Bereavement Leave</span>
-            </label>
-          </div>
-          <div className="grid grid-cols-2 gap-4 mb-4">
-            <div><label className="block text-sm font-semibold text-gray-700 mb-1">Date of Application</label><input type="date" name="app_date" value={formData.app_date} onChange={handleChange} className="w-full px-3 py-2 border border-gray-300 rounded-lg" /></div>
-            <div><label className="block text-sm font-semibold text-gray-700 mb-1">Total Duration (Days)</label><input name="duration" value={formData.duration} onChange={handleChange} className="w-full px-3 py-2 border border-gray-300 rounded-lg" /></div>
+          <div className="grid grid-cols-2 gap-4">
             <div><label className="block text-sm font-semibold text-gray-700 mb-1">Leave Start Date</label><input type="date" name="start_date" value={formData.start_date} onChange={handleChange} className="w-full px-3 py-2 border border-gray-300 rounded-lg" /></div>
             <div><label className="block text-sm font-semibold text-gray-700 mb-1">Leave End Date</label><input type="date" name="end_date" value={formData.end_date} onChange={handleChange} className="w-full px-3 py-2 border border-gray-300 rounded-lg" /></div>
-          </div>
-          <div className="mb-4">
-            <label className="block text-sm font-semibold text-gray-700 mb-1">Reason / Event</label>
-            <textarea name="reason" value={formData.reason} onChange={handleChange} rows="3" className="w-full px-3 py-2 border border-gray-300 rounded-lg resize-none" />
-          </div>
-          <div>
-            <label className="block text-sm font-semibold text-gray-700 mb-1">Supporting Documents</label>
-            <input name="support_doc" value={formData.support_doc} onChange={handleChange} placeholder="Medical Certificate / Birth Certificate / Death Certificate" className="w-full px-3 py-2 border border-gray-300 rounded-lg" />
+            <div><label className="block text-sm font-semibold text-gray-700 mb-1">Total Duration</label><input name="duration" value={formData.duration} onChange={handleChange} placeholder="Days / Half-Days" className="w-full px-3 py-2 border border-gray-300 rounded-lg" /></div>
+            <div><label className="block text-sm font-semibold text-gray-700 mb-1">Reason for LOP</label><input name="reason" value={formData.reason} onChange={handleChange} className="w-full px-3 py-2 border border-gray-300 rounded-lg" /></div>
+            <div className="col-span-2"><label className="block text-sm font-semibold text-gray-700 mb-1">Supporting Documents (if any)</label><input name="supporting_docs" value={formData.supporting_docs} onChange={handleChange} className="w-full px-3 py-2 border border-gray-300 rounded-lg" /></div>
           </div>
         </div>
 
@@ -254,7 +228,11 @@ const ProfessionalF3Form = () => {
             <div className="w-1.5 h-6 bg-gradient-to-b from-yellow-600 to-blue-900 rounded-full" />
             <h3 className="text-lg font-bold text-gray-900">Employee Declaration</h3>
           </div>
-          <p className="mb-4 text-sm">I, <input name="dec_name" value={formData.dec_name} onChange={handleChange} className="inline-block w-96 px-2 py-1 border-b-2 border-gray-300 focus:border-blue-600 outline-none" />, hereby declare that the above details are correct and that I am applying for the above leave in accordance with hospital policy and applicable law.</p>
+          <div className="mb-3">
+            <label className="block text-sm font-semibold text-gray-700 mb-1">Employee Name</label>
+            <input name="dec_name" value={formData.dec_name} onChange={handleChange} className="w-3/5 px-3 py-2 border border-gray-300 rounded-lg" />
+          </div>
+          <p className="mb-4 text-sm">I hereby request Leave Without Pay for the above-mentioned duration. I acknowledge that my absence will result in proportionate payroll deductions as per hospital policy.</p>
           <div className="grid grid-cols-2 gap-4">
             <div><label className="block text-sm font-semibold text-gray-700 mb-1">Signature</label><div className="h-12 border-b-2 border-dotted border-gray-400" /></div>
             <div><label className="block text-sm font-semibold text-gray-700 mb-1">Date</label><input type="date" name="dec_date" value={formData.dec_date} onChange={handleChange} className="w-full px-3 py-2 border border-gray-300 rounded-lg" /></div>
@@ -278,41 +256,41 @@ const ProfessionalF3Form = () => {
             </thead>
             <tbody>
               <tr>
-                <td className="border border-gray-200 px-3 py-2">Reporting Manager (Recommendation / Verification)</td>
+                <td className="border border-gray-200 px-3 py-2">Reporting Manager (Recommendation / Work Impact Assessment)</td>
                 <td className="border border-gray-200 px-3 py-2"><div className="h-12 border-b-2 border-dotted border-gray-400" /></td>
-                <td className="border border-gray-200 px-3 py-2"><input name="sig_mgr_name" value={formData.sig_mgr_name} onChange={handleChange} className="w-full px-2 py-1 border border-gray-300 rounded" /></td>
-                <td className="border border-gray-200 px-3 py-2"><input type="date" name="sig_mgr_date" value={formData.sig_mgr_date} onChange={handleChange} className="w-full px-2 py-1 border border-gray-300 rounded" /></td>
+                <td className="border border-gray-200 px-3 py-2"><input name="sig_rm_name" value={formData.sig_rm_name} onChange={handleChange} className="w-full px-2 py-1 border border-gray-300 rounded" /></td>
+                <td className="border border-gray-200 px-3 py-2"><input type="date" name="sig_rm_date" value={formData.sig_rm_date} onChange={handleChange} className="w-full px-2 py-1 border border-gray-300 rounded" /></td>
               </tr>
               <tr>
-                <td className="border border-gray-200 px-3 py-2">HR Manager (Verification & Leave Balance Confirmation)</td>
+                <td className="border border-gray-200 px-3 py-2">HR Manager (Verification & Record Entry)</td>
                 <td className="border border-gray-200 px-3 py-2"><div className="h-12 border-b-2 border-dotted border-gray-400" /></td>
                 <td className="border border-gray-200 px-3 py-2"><input name="sig_hr_name" value={formData.sig_hr_name} onChange={handleChange} className="w-full px-2 py-1 border border-gray-300 rounded" /></td>
                 <td className="border border-gray-200 px-3 py-2"><input type="date" name="sig_hr_date" value={formData.sig_hr_date} onChange={handleChange} className="w-full px-2 py-1 border border-gray-300 rounded" /></td>
               </tr>
               <tr>
-                <td className="border border-gray-200 px-3 py-2">Compliance Officer / Hospital Director (Final Approval)</td>
+                <td className="border border-gray-200 px-3 py-2">Finance Head (Payroll Deduction Approval)</td>
                 <td className="border border-gray-200 px-3 py-2"><div className="h-12 border-b-2 border-dotted border-gray-400" /></td>
-                <td className="border border-gray-200 px-3 py-2"><input name="sig_comp_name" value={formData.sig_comp_name} onChange={handleChange} className="w-full px-2 py-1 border border-gray-300 rounded" /></td>
-                <td className="border border-gray-200 px-3 py-2"><input type="date" name="sig_comp_date" value={formData.sig_comp_date} onChange={handleChange} className="w-full px-2 py-1 border border-gray-300 rounded" /></td>
+                <td className="border border-gray-200 px-3 py-2"><input name="sig_fin_name" value={formData.sig_fin_name} onChange={handleChange} className="w-full px-2 py-1 border border-gray-300 rounded" /></td>
+                <td className="border border-gray-200 px-3 py-2"><input type="date" name="sig_fin_date" value={formData.sig_fin_date} onChange={handleChange} className="w-full px-2 py-1 border border-gray-300 rounded" /></td>
               </tr>
             </tbody>
           </table>
         </div>
 
         {/* Instructions */}
-        <div className="bg-pink-50 border border-pink-200 rounded-xl p-5">
+        <div className="bg-red-50 border border-red-200 rounded-xl p-5">
           <div className="flex items-center gap-3 mb-3">
-            <Heart className="text-pink-700" size={20} />
-            <h3 className="text-lg font-bold text-pink-900">Instructions for Use</h3>
+            <Ban className="text-red-700" size={20} />
+            <h3 className="text-lg font-bold text-red-900">Instructions for Use</h3>
           </div>
           <ul className="list-disc list-inside space-y-1 text-sm text-gray-700">
-            <li>Maternity Leave: As per Maternity Benefit Act (up to 26 weeks).</li>
-            <li>Paternity Leave: As per hospital policy (5–15 days).</li>
-            <li>Bereavement Leave: As per hospital policy (case-to-case basis, usually 3–5 days).</li>
-            <li>All applications must be supported with valid documents.</li>
-            <li>HR must update leave balances and payroll records immediately.</li>
-            <li>All records must be preserved for 7 years for compliance and audit purposes.</li>
+            <li>LOP requests are applicable when leave balances are exhausted.</li>
+            <li>Payroll deductions must be calculated based on rate per working day.</li>
+            <li>HR must update records in the Leave Log (Annexure E3) and payroll system.</li>
+            <li>Finance must ensure deductions reflect in the same payroll cycle.</li>
+            <li>All LOP records must be preserved for 7 years for payroll and compliance audits.</li>
           </ul>
+          <p className="mt-3 text-sm text-gray-700">This Annexure shall be read in conjunction with SOP F.5 (Leave Without Pay Management), By-Laws Section 7.2(c), and related annexures (F1 – Leave Application, F4 – Leave Encashment Approval, E3 – Leave Log). It is a compliance-critical document and must be archived with version control.</p>
         </div>
       </div>
 
@@ -320,11 +298,11 @@ const ProfessionalF3Form = () => {
       <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 px-6 py-3 text-xs text-gray-600 print:relative print:mt-8">
         <div className="flex justify-between items-center max-w-5xl mx-auto">
           <span>© Koyili Hospital • Confidential • Version-controlled</span>
-          <span>Form F3 – Maternity / Paternity / Bereavement Leave Declaration</span>
+          <span>Form F5 – Leave Without Pay Request Format</span>
         </div>
       </div>
     </div>
   );
 };
 
-export default ProfessionalF3Form;
+export default ProfessionalF5Form;

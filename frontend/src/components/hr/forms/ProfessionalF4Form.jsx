@@ -1,46 +1,33 @@
 import React, { useState, useRef } from 'react';
-import { Save, Upload, RotateCcw, Printer, Download, AlertCircle } from 'lucide-react';
+import { Save, Upload, RotateCcw, Printer, Download, DollarSign, Plus, Trash2 } from 'lucide-react';
 
-const ProfessionalF2Form = () => {
+const ProfessionalF4Form = () => {
   const [formData, setFormData] = useState({
-    ann_title: 'Emergency Leave Escalation Note',
-    ann_no: 'F2',
-    ann_sop: 'SOP F.2 – Emergency Leave Escalation Note',
-    ann_bylaws: 'Section 7.3(c) – Emergency Leave Protocol',
+    ann_title: 'Leave Encashment Approval Sheet',
+    ann_no: 'F4',
+    ann_sop: 'SOP F.4 – Leave Encashment Process',
+    ann_bylaws: 'Section 11.5 – Leave Benefits',
     ann_version: '1.0',
     ann_effective: '',
-    ann_cust: 'Human Resources / Department Heads',
-    ann_auth: 'Reporting Manager / HR Manager / Compliance Officer',
-    ann_purpose: 'This Annexure provides the standardized Emergency Leave Escalation Note for employees of Koyili Hospital. It ensures compliance with SOP F.2 and By-Laws Section 7.3, by documenting emergency leave requests, escalation workflows, and approvals. It also ensures continuity of services in critical care, emergency, and clinical operations, and readiness for audit verification.',
+    ann_cust: 'Human Resources / Finance',
+    ann_auth: 'HR Manager / Finance Head / Compliance Officer',
     emp_name: '',
     emp_id: '',
     emp_dept: '',
     emp_desig: '',
-    req_date: '',
-    leave_dates: '',
-    em_type: '',
-    nature: '',
-    reason: '',
-    support_doc: '',
-    lvl1_action: 'Initial approval / decline',
-    lvl1_time: 'Within 2 hours',
-    lvl1_remarks: '',
-    lvl2_action: 'Verify leave records & arrange substitute',
-    lvl2_time: 'Within 4 hours',
-    lvl2_remarks: '',
-    lvl3_action: 'Approve exceptions / ensure service continuity',
-    lvl3_time: 'Within 6 hours',
-    lvl3_remarks: '',
+    date_join: '',
+    app_date: '',
     dec_name: '',
     dec_date: '',
-    sig_mgr_name: '',
-    sig_mgr_date: '',
     sig_hr_name: '',
     sig_hr_date: '',
+    sig_fin_name: '',
+    sig_fin_date: '',
     sig_comp_name: '',
     sig_comp_date: ''
   });
 
+  const [rows, setRows] = useState([]);
   const [logo, setLogo] = useState('https://customer-assets.emergentagent.com/job_koyili-hrms/artifacts/0pgv6z3a_koyili-logo.png');
   const fileInputRef = useRef(null);
   const loadInputRef = useRef(null);
@@ -48,6 +35,39 @@ const ProfessionalF2Form = () => {
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
+  };
+
+  const handleRowChange = (index, field, value) => {
+    const newRows = [...rows];
+    newRows[index][field] = value;
+    
+    // Auto-calculate payable
+    if (field === 'requested' || field === 'rate') {
+      const requested = Number(newRows[index].requested || 0);
+      const rate = Number(newRows[index].rate || 0);
+      newRows[index].payable = (requested * rate).toFixed(2);
+    }
+    
+    setRows(newRows);
+  };
+
+  const addRow = () => {
+    setRows([...rows, {
+      leave_type: '',
+      total_earned: '',
+      availed: '',
+      balance: '',
+      requested: '',
+      rate: '',
+      payable: '',
+      verified_by: '',
+      approved_by: '',
+      remarks: ''
+    }]);
+  };
+
+  const deleteSelected = () => {
+    setRows(rows.filter((_, index) => !document.getElementById(`row-check-${index}`)?.checked));
   };
 
   const handleLogoUpload = (e) => {
@@ -60,12 +80,12 @@ const ProfessionalF2Form = () => {
   };
 
   const handleSave = () => {
-    const data = { logo, formData };
+    const data = { logo, formData, rows };
     const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = 'Annexure_F2_Emergency_Leave_Escalation.json';
+    a.download = 'Annexure_F4_Leave_Encashment.json';
     a.click();
     URL.revokeObjectURL(url);
   };
@@ -79,6 +99,7 @@ const ProfessionalF2Form = () => {
           const data = JSON.parse(event.target.result);
           if (data.logo) setLogo(data.logo);
           if (data.formData) setFormData(data.formData);
+          if (data.rows) setRows(data.rows);
         } catch (err) {
           alert('Invalid JSON file');
         }
@@ -90,43 +111,30 @@ const ProfessionalF2Form = () => {
   const handleReset = () => {
     if (window.confirm('Reset all fields to default values?')) {
       setFormData({
-        ann_title: 'Emergency Leave Escalation Note',
-        ann_no: 'F2',
-        ann_sop: 'SOP F.2 – Emergency Leave Escalation Note',
-        ann_bylaws: 'Section 7.3(c) – Emergency Leave Protocol',
+        ann_title: 'Leave Encashment Approval Sheet',
+        ann_no: 'F4',
+        ann_sop: 'SOP F.4 – Leave Encashment Process',
+        ann_bylaws: 'Section 11.5 – Leave Benefits',
         ann_version: '1.0',
         ann_effective: '',
-        ann_cust: 'Human Resources / Department Heads',
-        ann_auth: 'Reporting Manager / HR Manager / Compliance Officer',
-        ann_purpose: 'This Annexure provides the standardized Emergency Leave Escalation Note for employees of Koyili Hospital.',
+        ann_cust: 'Human Resources / Finance',
+        ann_auth: 'HR Manager / Finance Head / Compliance Officer',
         emp_name: '',
         emp_id: '',
         emp_dept: '',
         emp_desig: '',
-        req_date: '',
-        leave_dates: '',
-        em_type: '',
-        nature: '',
-        reason: '',
-        support_doc: '',
-        lvl1_action: 'Initial approval / decline',
-        lvl1_time: 'Within 2 hours',
-        lvl1_remarks: '',
-        lvl2_action: 'Verify leave records & arrange substitute',
-        lvl2_time: 'Within 4 hours',
-        lvl2_remarks: '',
-        lvl3_action: 'Approve exceptions / ensure service continuity',
-        lvl3_time: 'Within 6 hours',
-        lvl3_remarks: '',
+        date_join: '',
+        app_date: '',
         dec_name: '',
         dec_date: '',
-        sig_mgr_name: '',
-        sig_mgr_date: '',
         sig_hr_name: '',
         sig_hr_date: '',
+        sig_fin_name: '',
+        sig_fin_date: '',
         sig_comp_name: '',
         sig_comp_date: ''
       });
+      setRows([]);
       setLogo('https://customer-assets.emergentagent.com/job_koyili-hrms/artifacts/0pgv6z3a_koyili-logo.png');
     }
   };
@@ -153,6 +161,14 @@ const ProfessionalF2Form = () => {
             <Download size={16} />
             <span className="font-semibold text-sm">Load (JSON)</span>
           </button>
+          <button onClick={addRow} className="flex items-center gap-2 px-4 py-2 border border-green-300 bg-green-50 text-green-700 rounded-lg hover:bg-green-100 transition-colors">
+            <Plus size={16} />
+            <span className="font-semibold text-sm">Add Row</span>
+          </button>
+          <button onClick={deleteSelected} className="flex items-center gap-2 px-4 py-2 border border-red-300 bg-red-50 text-red-700 rounded-lg hover:bg-red-100 transition-colors">
+            <Trash2 size={16} />
+            <span className="font-semibold text-sm">Delete Selected</span>
+          </button>
           <button onClick={handleReset} className="flex items-center gap-2 px-4 py-2 border border-orange-300 bg-orange-50 text-orange-700 rounded-lg hover:bg-orange-100 transition-colors">
             <RotateCcw size={16} />
             <span className="font-semibold text-sm">Reset</span>
@@ -168,13 +184,13 @@ const ProfessionalF2Form = () => {
       <input ref={loadInputRef} type="file" accept="application/json" onChange={handleLoad} className="hidden" />
 
       {/* Main Content */}
-      <div className="max-w-5xl mx-auto px-6 py-8 print:py-4">
+      <div className="max-w-7xl mx-auto px-6 py-8 print:py-4">
         {/* Header */}
         <div className="grid grid-cols-[240px_1fr] gap-6 items-center pb-6 border-b-4 border-blue-900 mb-6">
           <img src={logo} alt="Koyili Hospital Logo" className="w-full max-h-36 object-contain" />
           <div>
-            <h1 className="text-2xl font-black text-blue-900 uppercase tracking-tight">Emergency Leave Escalation Note</h1>
-            <p className="text-gray-600 font-bold mt-2">HR • SOP F.2 – Emergency Leave Escalation Note • Annexure F2</p>
+            <h1 className="text-2xl font-black text-blue-900 uppercase tracking-tight">Leave Encashment Approval Sheet</h1>
+            <p className="text-gray-600 font-bold mt-2">HR • SOP F.4 – Leave Encashment Process • Annexure F4</p>
           </div>
         </div>
 
@@ -198,15 +214,6 @@ const ProfessionalF2Form = () => {
           </table>
         </div>
 
-        {/* Purpose */}
-        <div className="bg-white border border-gray-200 rounded-xl p-5 mb-5">
-          <div className="flex items-center gap-3 mb-4">
-            <div className="w-1.5 h-6 bg-gradient-to-b from-yellow-600 to-blue-900 rounded-full" />
-            <h3 className="text-lg font-bold text-gray-900">Purpose</h3>
-          </div>
-          <textarea name="ann_purpose" value={formData.ann_purpose} onChange={handleChange} rows="4" className="w-full px-3 py-2 border border-gray-300 rounded-lg resize-none" />
-        </div>
-
         {/* Employee Details */}
         <div className="bg-white border border-gray-200 rounded-xl p-5 mb-5">
           <div className="flex items-center gap-3 mb-4">
@@ -218,113 +225,81 @@ const ProfessionalF2Form = () => {
             <div><label className="block text-sm font-semibold text-gray-700 mb-1">Employee ID</label><input name="emp_id" value={formData.emp_id} onChange={handleChange} className="w-full px-3 py-2 border border-gray-300 rounded-lg" /></div>
             <div><label className="block text-sm font-semibold text-gray-700 mb-1">Department</label><input name="emp_dept" value={formData.emp_dept} onChange={handleChange} className="w-full px-3 py-2 border border-gray-300 rounded-lg" /></div>
             <div><label className="block text-sm font-semibold text-gray-700 mb-1">Designation</label><input name="emp_desig" value={formData.emp_desig} onChange={handleChange} className="w-full px-3 py-2 border border-gray-300 rounded-lg" /></div>
+            <div><label className="block text-sm font-semibold text-gray-700 mb-1">Date of Joining</label><input type="date" name="date_join" value={formData.date_join} onChange={handleChange} className="w-full px-3 py-2 border border-gray-300 rounded-lg" /></div>
+            <div><label className="block text-sm font-semibold text-gray-700 mb-1">Date of Application</label><input type="date" name="app_date" value={formData.app_date} onChange={handleChange} className="w-full px-3 py-2 border border-gray-300 rounded-lg" /></div>
           </div>
         </div>
 
-        {/* Emergency Leave Request */}
+        {/* Leave Balance & Encashment Calculation */}
         <div className="bg-white border border-gray-200 rounded-xl p-5 mb-5">
           <div className="flex items-center gap-3 mb-4">
             <div className="w-1.5 h-6 bg-gradient-to-b from-yellow-600 to-blue-900 rounded-full" />
             <div className="flex items-center gap-2">
-              <AlertCircle className="text-red-600" size={20} />
-              <h3 className="text-lg font-bold text-gray-900">Emergency Leave Request</h3>
+              <DollarSign className="text-green-600" size={20} />
+              <h3 className="text-lg font-bold text-gray-900">Leave Balance & Encashment Calculation</h3>
             </div>
           </div>
-          <div className="grid grid-cols-2 gap-4 mb-4">
-            <div><label className="block text-sm font-semibold text-gray-700 mb-1">Date of Request</label><input type="date" name="req_date" value={formData.req_date} onChange={handleChange} className="w-full px-3 py-2 border border-gray-300 rounded-lg" /></div>
-            <div><label className="block text-sm font-semibold text-gray-700 mb-1">Leave Date(s)</label><input name="leave_dates" value={formData.leave_dates} onChange={handleChange} placeholder="YYYY-MM-DD to YYYY-MM-DD" className="w-full px-3 py-2 border border-gray-300 rounded-lg" /></div>
-          </div>
-          <div className="mb-4">
-            <label className="block text-sm font-semibold text-gray-700 mb-1">Type of Emergency</label>
-            <select name="em_type" value={formData.em_type} onChange={handleChange} className="w-full px-3 py-2 border border-gray-300 rounded-lg">
-              <option value="">-- Select --</option>
-              <option value="Medical">Medical</option>
-              <option value="Family">Family</option>
-              <option value="Accident">Accident</option>
-              <option value="Other">Other</option>
-            </select>
-          </div>
-          <div className="mb-4">
-            <label className="block text-sm font-semibold text-gray-700 mb-1">Nature of Leave</label>
-            <select name="nature" value={formData.nature} onChange={handleChange} className="w-full px-3 py-2 border border-gray-300 rounded-lg">
-              <option value="">-- Select --</option>
-              <option value="Full Day">Full Day</option>
-              <option value="Half Day">Half Day</option>
-              <option value="Short Duration">Short Duration</option>
-            </select>
-          </div>
-          <div className="mb-4">
-            <label className="block text-sm font-semibold text-gray-700 mb-1">Reason for Leave</label>
-            <textarea name="reason" value={formData.reason} onChange={handleChange} rows="3" placeholder="Describe reason" className="w-full px-3 py-2 border border-gray-300 rounded-lg resize-none" />
-          </div>
-          <div>
-            <label className="block text-sm font-semibold text-gray-700 mb-1">Supporting Document (if applicable)</label>
-            <input name="support_doc" value={formData.support_doc} onChange={handleChange} className="w-full px-3 py-2 border border-gray-300 rounded-lg" />
-          </div>
-        </div>
-
-        {/* Escalation Workflow */}
-        <div className="bg-white border border-gray-200 rounded-xl p-5 mb-5">
-          <div className="flex items-center gap-3 mb-4">
-            <div className="w-1.5 h-6 bg-gradient-to-b from-yellow-600 to-blue-900 rounded-full" />
-            <h3 className="text-lg font-bold text-gray-900">Escalation Workflow</h3>
+          <div className="mb-3 print:hidden">
+            <span className="inline-block px-3 py-1 bg-blue-100 border border-blue-200 rounded-full text-sm font-bold">Rows: {rows.length}</span>
           </div>
           <div className="overflow-x-auto">
-            <table className="w-full border-collapse text-sm">
+            <table className="w-full border-collapse text-xs">
               <thead>
                 <tr>
-                  <th className="border border-gray-200 bg-blue-50 text-blue-900 font-bold px-3 py-2">Level</th>
-                  <th className="border border-gray-200 bg-blue-50 text-blue-900 font-bold px-3 py-2">Responsible Authority</th>
-                  <th className="border border-gray-200 bg-blue-50 text-blue-900 font-bold px-3 py-2">Action Required</th>
-                  <th className="border border-gray-200 bg-blue-50 text-blue-900 font-bold px-3 py-2">Timeframe</th>
-                  <th className="border border-gray-200 bg-blue-50 text-blue-900 font-bold px-3 py-2">Remarks</th>
+                  <th className="border border-gray-200 bg-blue-50 text-blue-900 font-bold px-2 py-2 print:hidden">☑</th>
+                  <th className="border border-gray-200 bg-blue-50 text-blue-900 font-bold px-2 py-2">Sl.</th>
+                  <th className="border border-gray-200 bg-blue-50 text-blue-900 font-bold px-2 py-2">Leave Type</th>
+                  <th className="border border-gray-200 bg-blue-50 text-blue-900 font-bold px-2 py-2">Total Earned</th>
+                  <th className="border border-gray-200 bg-blue-50 text-blue-900 font-bold px-2 py-2">Availed</th>
+                  <th className="border border-gray-200 bg-blue-50 text-blue-900 font-bold px-2 py-2">Balance</th>
+                  <th className="border border-gray-200 bg-blue-50 text-blue-900 font-bold px-2 py-2">Requested</th>
+                  <th className="border border-gray-200 bg-blue-50 text-blue-900 font-bold px-2 py-2">Rate (₹)</th>
+                  <th className="border border-gray-200 bg-blue-50 text-blue-900 font-bold px-2 py-2">Payable (₹)</th>
+                  <th className="border border-gray-200 bg-blue-50 text-blue-900 font-bold px-2 py-2">Verified By</th>
+                  <th className="border border-gray-200 bg-blue-50 text-blue-900 font-bold px-2 py-2">Approved By</th>
+                  <th className="border border-gray-200 bg-blue-50 text-blue-900 font-bold px-2 py-2">Remarks</th>
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td className="border border-gray-200 px-3 py-2">Level 1</td>
-                  <td className="border border-gray-200 px-3 py-2">Reporting Manager</td>
-                  <td className="border border-gray-200 px-3 py-2"><input name="lvl1_action" value={formData.lvl1_action} onChange={handleChange} className="w-full px-2 py-1 border border-gray-300 rounded" /></td>
-                  <td className="border border-gray-200 px-3 py-2"><input name="lvl1_time" value={formData.lvl1_time} onChange={handleChange} className="w-full px-2 py-1 border border-gray-300 rounded" /></td>
-                  <td className="border border-gray-200 px-3 py-2"><input name="lvl1_remarks" value={formData.lvl1_remarks} onChange={handleChange} className="w-full px-2 py-1 border border-gray-300 rounded" /></td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-200 px-3 py-2">Level 2</td>
-                  <td className="border border-gray-200 px-3 py-2">HR Manager</td>
-                  <td className="border border-gray-200 px-3 py-2"><input name="lvl2_action" value={formData.lvl2_action} onChange={handleChange} className="w-full px-2 py-1 border border-gray-300 rounded" /></td>
-                  <td className="border border-gray-200 px-3 py-2"><input name="lvl2_time" value={formData.lvl2_time} onChange={handleChange} className="w-full px-2 py-1 border border-gray-300 rounded" /></td>
-                  <td className="border border-gray-200 px-3 py-2"><input name="lvl2_remarks" value={formData.lvl2_remarks} onChange={handleChange} className="w-full px-2 py-1 border border-gray-300 rounded" /></td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-200 px-3 py-2">Level 3</td>
-                  <td className="border border-gray-200 px-3 py-2">Compliance Officer</td>
-                  <td className="border border-gray-200 px-3 py-2"><input name="lvl3_action" value={formData.lvl3_action} onChange={handleChange} className="w-full px-2 py-1 border border-gray-300 rounded" /></td>
-                  <td className="border border-gray-200 px-3 py-2"><input name="lvl3_time" value={formData.lvl3_time} onChange={handleChange} className="w-full px-2 py-1 border border-gray-300 rounded" /></td>
-                  <td className="border border-gray-200 px-3 py-2"><input name="lvl3_remarks" value={formData.lvl3_remarks} onChange={handleChange} className="w-full px-2 py-1 border border-gray-300 rounded" /></td>
-                </tr>
+                {rows.map((row, index) => (
+                  <tr key={index}>
+                    <td className="border border-gray-200 px-2 py-1 text-center print:hidden"><input id={`row-check-${index}`} type="checkbox" className="w-4 h-4" /></td>
+                    <td className="border border-gray-200 px-2 py-1 text-center">{index + 1}</td>
+                    <td className="border border-gray-200 px-2 py-1"><input value={row.leave_type} onChange={(e) => handleRowChange(index, 'leave_type', e.target.value)} className="w-full px-1 py-0.5 border border-gray-300 rounded text-xs" /></td>
+                    <td className="border border-gray-200 px-2 py-1"><input type="number" value={row.total_earned} onChange={(e) => handleRowChange(index, 'total_earned', e.target.value)} className="w-20 px-1 py-0.5 border border-gray-300 rounded text-xs" /></td>
+                    <td className="border border-gray-200 px-2 py-1"><input type="number" value={row.availed} onChange={(e) => handleRowChange(index, 'availed', e.target.value)} className="w-20 px-1 py-0.5 border border-gray-300 rounded text-xs" /></td>
+                    <td className="border border-gray-200 px-2 py-1"><input type="number" value={row.balance} onChange={(e) => handleRowChange(index, 'balance', e.target.value)} className="w-20 px-1 py-0.5 border border-gray-300 rounded text-xs" /></td>
+                    <td className="border border-gray-200 px-2 py-1"><input type="number" value={row.requested} onChange={(e) => handleRowChange(index, 'requested', e.target.value)} className="w-20 px-1 py-0.5 border border-gray-300 rounded text-xs" /></td>
+                    <td className="border border-gray-200 px-2 py-1"><input type="number" value={row.rate} onChange={(e) => handleRowChange(index, 'rate', e.target.value)} className="w-20 px-1 py-0.5 border border-gray-300 rounded text-xs" /></td>
+                    <td className="border border-gray-200 px-2 py-1"><input type="number" value={row.payable} readOnly className="w-24 px-1 py-0.5 bg-gray-100 border border-gray-300 rounded text-xs" /></td>
+                    <td className="border border-gray-200 px-2 py-1"><input value={row.verified_by} onChange={(e) => handleRowChange(index, 'verified_by', e.target.value)} className="w-full px-1 py-0.5 border border-gray-300 rounded text-xs" /></td>
+                    <td className="border border-gray-200 px-2 py-1"><input value={row.approved_by} onChange={(e) => handleRowChange(index, 'approved_by', e.target.value)} className="w-full px-1 py-0.5 border border-gray-300 rounded text-xs" /></td>
+                    <td className="border border-gray-200 px-2 py-1"><input value={row.remarks} onChange={(e) => handleRowChange(index, 'remarks', e.target.value)} className="w-full px-1 py-0.5 border border-gray-300 rounded text-xs" /></td>
+                  </tr>
+                ))}
               </tbody>
             </table>
           </div>
         </div>
 
-        {/* Declaration by Employee */}
+        {/* Employee Declaration */}
         <div className="bg-white border border-gray-200 rounded-xl p-5 mb-5">
           <div className="flex items-center gap-3 mb-4">
             <div className="w-1.5 h-6 bg-gradient-to-b from-yellow-600 to-blue-900 rounded-full" />
-            <h3 className="text-lg font-bold text-gray-900">Declaration by Employee</h3>
+            <h3 className="text-lg font-bold text-gray-900">Employee Declaration</h3>
           </div>
-          <p className="mb-4 text-sm">I, <input name="dec_name" value={formData.dec_name} onChange={handleChange} className="inline-block w-96 px-2 py-1 border-b-2 border-gray-300 focus:border-blue-600 outline-none" />, request emergency leave due to unavoidable circumstances and confirm that the above details are true.</p>
+          <p className="mb-4 text-sm">I, <input name="dec_name" value={formData.dec_name} onChange={handleChange} className="inline-block w-96 px-2 py-1 border-b-2 border-gray-300 focus:border-blue-600 outline-none" />, hereby request leave encashment as per the hospital's policy. I confirm that I have verified my leave balance with HR.</p>
           <div className="grid grid-cols-2 gap-4">
             <div><label className="block text-sm font-semibold text-gray-700 mb-1">Signature</label><div className="h-12 border-b-2 border-dotted border-gray-400" /></div>
             <div><label className="block text-sm font-semibold text-gray-700 mb-1">Date</label><input type="date" name="dec_date" value={formData.dec_date} onChange={handleChange} className="w-full px-3 py-2 border border-gray-300 rounded-lg" /></div>
           </div>
         </div>
 
-        {/* Signatures - Approval Workflow */}
+        {/* Approval Workflow */}
         <div className="bg-white border border-gray-200 rounded-xl p-5 mb-5">
           <div className="flex items-center gap-3 mb-4">
             <div className="w-1.5 h-6 bg-gradient-to-b from-yellow-600 to-blue-900 rounded-full" />
-            <h3 className="text-lg font-bold text-gray-900">Signatures – Approval Workflow</h3>
+            <h3 className="text-lg font-bold text-gray-900">Approval Workflow</h3>
           </div>
           <table className="w-full border-collapse text-sm">
             <thead>
@@ -337,19 +312,19 @@ const ProfessionalF2Form = () => {
             </thead>
             <tbody>
               <tr>
-                <td className="border border-gray-200 px-3 py-2">Reporting Manager (Immediate Action)</td>
-                <td className="border border-gray-200 px-3 py-2"><div className="h-12 border-b-2 border-dotted border-gray-400" /></td>
-                <td className="border border-gray-200 px-3 py-2"><input name="sig_mgr_name" value={formData.sig_mgr_name} onChange={handleChange} className="w-full px-2 py-1 border border-gray-300 rounded" /></td>
-                <td className="border border-gray-200 px-3 py-2"><input type="date" name="sig_mgr_date" value={formData.sig_mgr_date} onChange={handleChange} className="w-full px-2 py-1 border border-gray-300 rounded" /></td>
-              </tr>
-              <tr>
-                <td className="border border-gray-200 px-3 py-2">HR Manager (Verification & Substitution Arrangements)</td>
+                <td className="border border-gray-200 px-3 py-2">HR Manager (Verification of Leave Balance & Eligibility)</td>
                 <td className="border border-gray-200 px-3 py-2"><div className="h-12 border-b-2 border-dotted border-gray-400" /></td>
                 <td className="border border-gray-200 px-3 py-2"><input name="sig_hr_name" value={formData.sig_hr_name} onChange={handleChange} className="w-full px-2 py-1 border border-gray-300 rounded" /></td>
                 <td className="border border-gray-200 px-3 py-2"><input type="date" name="sig_hr_date" value={formData.sig_hr_date} onChange={handleChange} className="w-full px-2 py-1 border border-gray-300 rounded" /></td>
               </tr>
               <tr>
-                <td className="border border-gray-200 px-3 py-2">Compliance Officer (Oversight & Final Validation)</td>
+                <td className="border border-gray-200 px-3 py-2">Finance Head (Verification of Payment Calculation & Disbursement)</td>
+                <td className="border border-gray-200 px-3 py-2"><div className="h-12 border-b-2 border-dotted border-gray-400" /></td>
+                <td className="border border-gray-200 px-3 py-2"><input name="sig_fin_name" value={formData.sig_fin_name} onChange={handleChange} className="w-full px-2 py-1 border border-gray-300 rounded" /></td>
+                <td className="border border-gray-200 px-3 py-2"><input type="date" name="sig_fin_date" value={formData.sig_fin_date} onChange={handleChange} className="w-full px-2 py-1 border border-gray-300 rounded" /></td>
+              </tr>
+              <tr>
+                <td className="border border-gray-200 px-3 py-2">Compliance Officer (Oversight & Policy Compliance)</td>
                 <td className="border border-gray-200 px-3 py-2"><div className="h-12 border-b-2 border-dotted border-gray-400" /></td>
                 <td className="border border-gray-200 px-3 py-2"><input name="sig_comp_name" value={formData.sig_comp_name} onChange={handleChange} className="w-full px-2 py-1 border border-gray-300 rounded" /></td>
                 <td className="border border-gray-200 px-3 py-2"><input type="date" name="sig_comp_date" value={formData.sig_comp_date} onChange={handleChange} className="w-full px-2 py-1 border border-gray-300 rounded" /></td>
@@ -359,30 +334,30 @@ const ProfessionalF2Form = () => {
         </div>
 
         {/* Instructions */}
-        <div className="bg-blue-50 border border-blue-200 rounded-xl p-5">
+        <div className="bg-green-50 border border-green-200 rounded-xl p-5">
           <div className="flex items-center gap-3 mb-3">
-            <AlertCircle className="text-blue-700" size={20} />
-            <h3 className="text-lg font-bold text-blue-900">Instructions for Use</h3>
+            <DollarSign className="text-green-700" size={20} />
+            <h3 className="text-lg font-bold text-green-900">Instructions for Use</h3>
           </div>
           <ul className="list-disc list-inside space-y-1 text-sm text-gray-700">
-            <li>Emergency leave requests must be submitted immediately via manual form, HRMS, or phone/email escalation.</li>
-            <li>Reporting Manager must act within 2 hours, ensuring critical services are covered.</li>
-            <li>HR must ensure alternate staff or duty redistribution within 4 hours.</li>
-            <li>Escalation beyond 1 day must be routed through Annexure F1 (Leave Application Form).</li>
-            <li>All Emergency Leave Notes must be retained for 7 years for compliance and audit.</li>
+            <li>Leave encashment will be processed as per hospital policy and statutory provisions.</li>
+            <li>Only earned leave (EL) is eligible for encashment unless otherwise specified.</li>
+            <li>HR must verify leave balances and eligibility before forwarding to Finance.</li>
+            <li>Finance must verify calculations and disburse payment through salary or separate transfer.</li>
+            <li>All encashment records must be retained for 7 years for payroll and audit compliance.</li>
           </ul>
         </div>
       </div>
 
       {/* Footer */}
       <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 px-6 py-3 text-xs text-gray-600 print:relative print:mt-8">
-        <div className="flex justify-between items-center max-w-5xl mx-auto">
+        <div className="flex justify-between items-center max-w-7xl mx-auto">
           <span>© Koyili Hospital • Confidential • Version-controlled</span>
-          <span>Form F2 – Emergency Leave Escalation Note</span>
+          <span>Form F4 – Leave Encashment Approval Sheet</span>
         </div>
       </div>
     </div>
   );
 };
 
-export default ProfessionalF2Form;
+export default ProfessionalF4Form;
