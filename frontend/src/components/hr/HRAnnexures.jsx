@@ -239,12 +239,13 @@ const HRAnnexures = ({ setActiveModule }) => {
       return (
         <div className="max-w-5xl mx-auto">
           <div className="bg-white rounded-2xl shadow-xl border-2 border-slate-200 p-8">
-            <div className=\"bg-gradient-to-r from-blue-600 to-indigo-600 text-white p-6 rounded-xl mb-6\">
-              <h1 className=\"text-2xl font-bold mb-2\">{annexure.title}</h1>
-              <p className=\"text-blue-100 text-sm\">{annexure.linkedSOP} • {annexure.category}</p>
+            <div className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white p-6 rounded-xl mb-6">
+              <h1 className="text-2xl font-bold mb-2">{annexure.title}</h1>
+              <p className="text-blue-100 text-sm">{annexure.linkedSOP} • {annexure.category}</p>
             </div>
-            <div className=\"bg-blue-50 border-2 border-blue-200 rounded-xl p-6\">\n              <h3 className=\"font-bold text-slate-900 mb-2\">Form Under Development</h3>
-              <p className=\"text-sm text-slate-600\">This professional interactive form is currently being developed and will be available in the next update.</p>
+            <div className="bg-blue-50 border-2 border-blue-200 rounded-xl p-6">
+              <h3 className="font-bold text-slate-900 mb-2">Form Under Development</h3>
+              <p className="text-sm text-slate-600">This professional interactive form is currently being developed and will be available in the next update.</p>
             </div>
           </div>
         </div>
