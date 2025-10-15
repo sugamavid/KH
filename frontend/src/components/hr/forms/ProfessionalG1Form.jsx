@@ -300,18 +300,15 @@ const ProfessionalG1Form = () => {
             <li>Records must be archived for 7 years for compliance and audit purposes.</li>
           </ul>
         </div>
-
-        {/* Standardized NABH-Compliant Footer */}
-        <div className="bg-gradient-to-r from-blue-50 to-blue-100 px-8 py-4 border-t-4 border-blue-900">
-          <div className="flex items-center justify-between text-sm">
-            <span className="text-blue-900 font-semibold">© Koyili Hospital • NABH Accredited • Confidential • Version-controlled</span>
-            <span className="text-blue-700 font-bold">Form G1 – Dress Code Acknowledgment Form</span>
-          </div>
-        </div>
       </div>
 
-      {/* Footer */}
-      <div className="print:hidden h-16"></div>
+      {/* Standardized NABH-Compliant Footer - Flows with Content */}
+      <div className="bg-gradient-to-r from-blue-50 to-blue-100 px-8 py-4 border-t-4 border-blue-900 mt-8">
+        <div className="flex items-center justify-between text-sm max-w-5xl mx-auto">
+          <span className="text-blue-900 font-semibold">© Koyili Hospital • NABH Accredited • Confidential • Version-controlled</span>
+          <span className="text-blue-700 font-bold">Form G1 – Dress Code Acknowledgment Form</span>
+        </div>
+      </div>
     </div>
   );
 };
