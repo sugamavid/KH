@@ -239,7 +239,7 @@ const HRAnnexures = ({ setActiveModule }) => {
               <X className="w-5 h-5" />
             </button>
           </div>
-          <p className="text-xs text-slate-600">Batches 1-4: 20 Forms (12 Complete, 8 In Progress)</p>
+          <p className="text-xs text-slate-600">Batches 1-4: 20 Forms (13 Complete, 7 In Progress)</p>
         </div>
 
         {/* Back to Dashboard Button */}
