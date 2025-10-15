@@ -141,28 +141,35 @@ const ProfessionalG1Form = () => {
 
       {/* Main Content */}
       <div className="max-w-5xl mx-auto bg-white shadow-2xl">
-        {/* Standardized NABH-Compliant Header */}
-        <div className="bg-gradient-to-r from-blue-900 via-blue-800 to-blue-700 text-white p-8">
-          <div className="flex items-center gap-8">
-            {/* Logo - Left Aligned */}
+        {/* Compact NABH-Compliant Header with Blue Gradient */}
+        <div className="bg-gradient-to-r from-blue-900 via-blue-800 to-blue-700 text-white px-8 py-6">
+          <div className="flex items-center justify-between gap-6">
+            {/* Logo - Left */}
             <div className="flex-shrink-0">
-              <img src={logo} alt="Koyili Hospital Logo" className="w-32 h-32 bg-white rounded-lg p-3 shadow-xl object-contain" />
+              <img src={logo} alt="Koyili Hospital Logo" className="w-24 h-24 bg-white rounded-lg p-2 shadow-xl object-contain" />
             </div>
             
-            {/* Hospital Details & Form Title */}
-            <div className="flex-1">
-              <div className="mb-4">
-                <h1 className="text-4xl font-bold tracking-tight mb-1">KOYILI HOSPITAL</h1>
-                <p className="text-blue-200 text-base font-semibold">Human Resources Department</p>
-                <p className="text-blue-300 text-sm">NABH Accredited • Pallikkunnu, Talap, Kannur, Kerala</p>
+            {/* Hospital Details - Center */}
+            <div className="flex-1 text-center">
+              <h1 className="text-3xl font-bold tracking-wide mb-1">KOYILI HOSPITAL</h1>
+              <p className="text-blue-200 text-sm font-semibold">Human Resources Department</p>
+              <p className="text-blue-300 text-xs">NABH Accredited • Pallikkunnu, Talap, Kannur, Kerala</p>
+              <div className="mt-3 pt-3 border-t border-blue-400/30">
+                <h2 className="text-xl font-bold">DRESS CODE ACKNOWLEDGMENT FORM</h2>
               </div>
-              <div className="border-t border-blue-400/30 pt-4">
-                <h2 className="text-2xl font-bold mb-2">DRESS CODE ACKNOWLEDGMENT FORM</h2>
-                <div className="flex items-center gap-4 text-sm">
-                  <span className="bg-blue-700/50 px-3 py-1 rounded-full">Annexure G1</span>
-                  <span className="bg-blue-700/50 px-3 py-1 rounded-full">SOP G.1</span>
-                  <span className="bg-blue-700/50 px-3 py-1 rounded-full">Version 1.0</span>
-                </div>
+            </div>
+            
+            {/* Document Control - Right */}
+            <div className="flex-shrink-0 text-right space-y-2">
+              <div className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg border border-white/20">
+                <p className="text-xs text-blue-200 mb-0.5">Annexure</p>
+                <p className="text-2xl font-bold">G1</p>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm px-4 py-1.5 rounded-lg border border-white/20">
+                <p className="text-xs text-blue-200">Version 1.0</p>
+              </div>
+              <div className="bg-yellow-500/90 px-3 py-1 rounded-full">
+                <p className="text-xs font-bold text-blue-900">NABH</p>
               </div>
             </div>
           </div>
@@ -171,7 +178,7 @@ const ProfessionalG1Form = () => {
         {/* Document Control Strip */}
         <div className="bg-blue-50 px-8 py-3 border-b-2 border-blue-900 flex items-center justify-between">
           <div className="flex items-center gap-6 text-xs font-semibold text-blue-900">
-            <span>Compliance</span>
+            <span>📋 Compliance</span>
             <div className="w-px h-4 bg-blue-300"></div>
             <span>SOP G.1 – Dress Code & Uniform Policy</span>
             <div className="w-px h-4 bg-blue-300"></div>
