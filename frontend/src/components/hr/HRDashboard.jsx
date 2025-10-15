@@ -47,8 +47,6 @@ const HRDashboard = () => {
       case 'sops':
         return <HRSOPs setActiveModule={setActiveModule} />;
       case 'annexures':
-        return <ProfessionalAnnexures />;
-      case 'annexures-old':
         return <HRAnnexures setActiveModule={setActiveModule} />;
       case 'reckoner':
         return <SmartGuidance />;
