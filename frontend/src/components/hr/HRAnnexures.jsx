@@ -286,6 +286,26 @@ const HRAnnexures = ({ setActiveModule }) => {
     if (annexure.code === 'B6') {
       return <ProfessionalB6Form />;
     }
+    if (annexure.code === 'B7') {
+      return <ProfessionalB7Form />;
+    }
+    if (annexure.code === 'B8' || annexure.code === 'B9' || annexure.code === 'B10' || annexure.code === 'C1') {
+      // Placeholder for remaining forms
+      return (
+        <div className="max-w-5xl mx-auto">
+          <div className="bg-white rounded-2xl shadow-xl border-2 border-slate-200 p-8">
+            <div className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white p-6 rounded-xl mb-6">
+              <h1 className="text-2xl font-bold mb-2">{annexure.title}</h1>
+              <p className="text-blue-100 text-sm">{annexure.linkedSOP} • {annexure.category}</p>
+            </div>
+            <div className="bg-blue-50 border-2 border-blue-200 rounded-xl p-6">
+              <h3 className="font-bold text-slate-900 mb-2">Form Being Finalized</h3>
+              <p className="text-sm text-slate-600">This professional interactive form will be available in the next batch.</p>
+            </div>
+          </div>
+        </div>
+      );
+    }
 
     // Fallback for future forms
     return (
