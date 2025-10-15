@@ -241,6 +241,34 @@ const HRAnnexures = ({ setActiveModule }) => {
       linkedSOP: 'SOP E.1',
       color: 'rose'
     },
+    {
+      code: 'E2',
+      title: 'Shift Roster Template',
+      category: 'Shift Management',
+      linkedSOP: 'SOP E.2',
+      color: 'blue'
+    },
+    {
+      code: 'E3',
+      title: 'Leave / Short Leave Entry Log',
+      category: 'Leave Management',
+      linkedSOP: 'SOP E.3',
+      color: 'emerald'
+    },
+    {
+      code: 'E4',
+      title: 'Holiday Calendar Format',
+      category: 'Holiday Management',
+      linkedSOP: 'SOP E.4',
+      color: 'fuchsia'
+    },
+    {
+      code: 'E5',
+      title: 'Compensatory Off Application Form',
+      category: 'Leave Management',
+      linkedSOP: 'SOP E.5',
+      color: 'cyan'
+    },
   ];
 
   // Mock data for dashboard stats
