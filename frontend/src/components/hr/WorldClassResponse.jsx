@@ -148,6 +148,18 @@ const WorldClassResponse = ({ answer, query }) => {
     setTimeout(() => setCopied(false), 2000);
   };
 
+  // Helper function to strip markdown from text
+  const stripMarkdown = (text) => {
+    return text
+      .replace(/\*\*/g, '')  // Remove bold
+      .replace(/\*/g, '')    // Remove italic
+      .replace(/###/g, '')   // Remove headers
+      .replace(/####/g, '')  // Remove sub-headers
+      .replace(/`/g, '')     // Remove code
+      .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')  // Links to text
+      .replace(/^[-•*]\s+/gm, ''); // Remove bullet points
+  };
+
   // Create flowchart for process steps
   const ProcessFlowchart = ({ steps }) => {
     if (steps.length === 0) return null;
@@ -174,7 +186,7 @@ const WorldClassResponse = ({ answer, query }) => {
               {/* Step content */}
               <div className="ml-6 flex-1">
                 <div className="bg-white rounded-xl p-5 shadow-lg border-2 border-blue-100 hover:border-blue-300 transition-all">
-                  <h4 className="text-lg font-bold text-slate-900 mb-2">{step.title}</h4>
+                  <h4 className="text-lg font-bold text-slate-900 mb-2">{stripMarkdown(step.title)}</h4>
                   <div className="flex items-center gap-3 text-sm text-slate-600">
                     <div className="flex items-center">
                       <Clock className="w-4 h-4 mr-1 text-blue-600" />
