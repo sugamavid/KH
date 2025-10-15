@@ -366,30 +366,20 @@ const HRAnnexures = ({ setActiveModule }) => {
     if (annexure.code === 'C1') {
       return <ProfessionalC1Form />;
     }
-    if (['C2', 'C3', 'C4', 'C5', 'D1'].includes(annexure.code)) {
-      // Placeholder for forms being implemented
-      return (
-        <div className="max-w-5xl mx-auto">
-          <div className="bg-white rounded-2xl shadow-xl border-2 border-slate-200 p-8">
-            <div className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white p-6 rounded-xl mb-6">
-              <h1 className="text-2xl font-bold mb-2">{annexure.title}</h1>
-              <p className="text-blue-100 text-sm">{annexure.linkedSOP} • {annexure.category}</p>
-            </div>
-            <div className="bg-blue-50 border-2 border-blue-200 rounded-xl p-6">
-              <h3 className="font-bold text-slate-900 mb-2 flex items-center gap-2">
-                <span>🔄</span> Form In Development
-              </h3>
-              <p className="text-sm text-slate-600 mb-3">This professional interactive form is currently being implemented with all sections from the HTML template.</p>
-              <div className="bg-white border border-blue-300 rounded-lg p-3">
-                <p className="text-xs font-semibold text-blue-900 mb-1">Current Batch Progress:</p>
-                <p className="text-xs text-slate-700">• Forms B8-B10: Final recruitment documents</p>
-                <p className="text-xs text-slate-700">• Forms C1-C5: Complete onboarding suite</p>
-                <p className="text-xs text-slate-700">• Form D1: Personnel management</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      );
+    if (annexure.code === 'C2') {
+      return <ProfessionalC2Form />;
+    }
+    if (annexure.code === 'C3') {
+      return <ProfessionalC3Form />;
+    }
+    if (annexure.code === 'C4') {
+      return <ProfessionalC4Form />;
+    }
+    if (annexure.code === 'C5') {
+      return <ProfessionalC5Form />;
+    }
+    if (annexure.code === 'D1') {
+      return <ProfessionalD1Form />;
     }
 
     // Fallback for future forms
