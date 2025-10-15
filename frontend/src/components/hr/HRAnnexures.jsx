@@ -6,7 +6,7 @@ import {
 } from 'lucide-react';
 import InteractiveFormViewer from './InteractiveFormViewer';
 import formTemplates, { formScenarios } from '../../data/formTemplates';
-import A1HRPolicyRevisionForm from './forms/A1HRPolicyRevisionForm';
+import ProfessionalA1Form from './forms/ProfessionalA1Form';
 
 const HRAnnexures = ({ setActiveModule }) => {
   const [selectedForm, setSelectedForm] = useState(null);
