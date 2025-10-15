@@ -129,10 +129,10 @@ const SmartGuidance = () => {
     }
   ];
 
-  // Suggestion keywords that trigger autocomplete
+  // Suggestion keywords - Just examples, AI can answer ANYTHING
   const suggestions = [
     'How do I implement By-Laws?',
-    'What is the recruitment approval process?',
+    'What is the recruitment process?',
     'How to handle employee grievances?',
     'Leave application procedure',
     'Disciplinary action steps',
@@ -145,7 +145,22 @@ const SmartGuidance = () => {
     'Promotion criteria',
     'Salary revision process',
     'Exit interview procedure',
-    'Transfer request process'
+    'Transfer request process',
+    'Patient complaint handling',
+    'Fire safety protocols',
+    'Budget approval limits',
+    'Vendor empanelment process',
+    'Equipment purchase approval',
+    'Staff shortage management',
+    'Night shift allowances',
+    'Medical license renewal',
+    'Infection control procedures',
+    'Waste disposal protocols',
+    'NABH accreditation requirements',
+    'Doctor credentialing process',
+    'OPD timings and schedules',
+    'Emergency department protocols',
+    'ICU admission criteria'
   ];
 
   // Filter suggestions based on current query
