@@ -274,6 +274,41 @@ const HRAnnexures = ({ setActiveModule }) => {
       linkedSOP: 'SOP E.5',
       color: 'cyan'
     },
+    {
+      code: 'F1',
+      title: 'Leave Application Form',
+      category: 'Leave Management',
+      linkedSOP: 'SOP F.1',
+      color: 'sky'
+    },
+    {
+      code: 'F2',
+      title: 'Emergency Leave Escalation Note',
+      category: 'Leave Management',
+      linkedSOP: 'SOP F.2',
+      color: 'red'
+    },
+    {
+      code: 'F3',
+      title: 'Maternity / Paternity / Bereavement Leave Declaration',
+      category: 'Special Leave',
+      linkedSOP: 'SOP F.3',
+      color: 'pink'
+    },
+    {
+      code: 'F4',
+      title: 'Leave Encashment Approval Sheet',
+      category: 'Leave Benefits',
+      linkedSOP: 'SOP F.4',
+      color: 'green'
+    },
+    {
+      code: 'F5',
+      title: 'Leave Without Pay (LOP) Request Format',
+      category: 'Leave Management',
+      linkedSOP: 'SOP F.5',
+      color: 'amber'
+    },
   ];
 
   // Mock data for dashboard stats
