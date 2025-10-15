@@ -140,15 +140,46 @@ const ProfessionalG1Form = () => {
       <input ref={loadInputRef} type="file" accept="application/json" onChange={handleLoad} className="hidden" />
 
       {/* Main Content */}
-      <div className="max-w-5xl mx-auto px-6 py-8 print:py-4">
-        {/* Header */}
-        <div className="grid grid-cols-[240px_1fr] gap-6 items-center pb-6 border-b-4 border-blue-900 mb-6">
-          <img src={logo} alt="Koyili Hospital Logo" className="w-full max-h-36 object-contain" />
-          <div>
-            <h1 className="text-2xl font-black text-blue-900 uppercase tracking-tight">Dress Code Acknowledgment Form</h1>
-            <p className="text-gray-600 font-bold mt-2">HR • SOP G.1 – Dress Code & Uniform Policy • Annexure G1</p>
+      <div className="max-w-5xl mx-auto bg-white shadow-2xl">
+        {/* Standardized NABH-Compliant Header */}
+        <div className="bg-gradient-to-r from-blue-900 via-blue-800 to-blue-700 text-white p-8">
+          <div className="flex items-center gap-8">
+            {/* Logo - Left Aligned */}
+            <div className="flex-shrink-0">
+              <img src={logo} alt="Koyili Hospital Logo" className="w-32 h-32 bg-white rounded-lg p-3 shadow-xl object-contain" />
+            </div>
+            
+            {/* Hospital Details & Form Title */}
+            <div className="flex-1">
+              <div className="mb-4">
+                <h1 className="text-4xl font-bold tracking-tight mb-1">KOYILI HOSPITAL</h1>
+                <p className="text-blue-200 text-base font-semibold">Human Resources Department</p>
+                <p className="text-blue-300 text-sm">NABH Accredited • Pallikkunnu, Talap, Kannur, Kerala</p>
+              </div>
+              <div className="border-t border-blue-400/30 pt-4">
+                <h2 className="text-2xl font-bold mb-2">DRESS CODE ACKNOWLEDGMENT FORM</h2>
+                <div className="flex items-center gap-4 text-sm">
+                  <span className="bg-blue-700/50 px-3 py-1 rounded-full">Annexure G1</span>
+                  <span className="bg-blue-700/50 px-3 py-1 rounded-full">SOP G.1</span>
+                  <span className="bg-blue-700/50 px-3 py-1 rounded-full">Version 1.0</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+
+        {/* Document Control Strip */}
+        <div className="bg-blue-50 px-8 py-3 border-b-2 border-blue-900 flex items-center justify-between">
+          <div className="flex items-center gap-6 text-xs font-semibold text-blue-900">
+            <span>Compliance</span>
+            <div className="w-px h-4 bg-blue-300"></div>
+            <span>SOP G.1 – Dress Code & Uniform Policy</span>
+            <div className="w-px h-4 bg-blue-300"></div>
+            <span>By-Laws Section 3.2</span>
+          </div>
+        </div>
+
+        <div className="px-6 py-8 print:py-4">
 
         {/* Document Control */}
         <div className="bg-white border border-gray-200 rounded-xl p-5 mb-5">
