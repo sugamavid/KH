@@ -300,6 +300,55 @@ class GuidanceResponse(BaseModel):
     suggested_actions: List[str] = []
     process_steps: List[Dict[str, Any]] = []
 
+# Helper function to create document context
+def get_document_context():
+    """Create rich context from hospital documents"""
+    context = """
+KOYILI HOSPITAL DOCUMENT KNOWLEDGE BASE:
+
+**BY-LAWS STRUCTURE (30 Sections):**
+- Section 1: Preliminary (Title, Objectives, Applicability)
+- Section 2: Recruitment & Employment (Equal opportunity, selection criteria, background verification)
+- Section 3: Code of Conduct (Professional behavior, ethics, confidentiality, dress code)
+- Section 4: Working Hours & Attendance (Shift schedules, overtime, time tracking)
+- Section 5: Compensation & Benefits (Salary structure, PF, ESI, bonuses, insurance)
+- Section 6: Leave Policies (Annual, sick, maternity/paternity, emergency leave)
+- Section 7: Performance Management (Appraisals, KPIs, feedback, promotions)
+- Section 8: Training & Development (Mandatory training, CME, skill enhancement)
+- Section 9: Grievance Handling (Filing procedure, investigation, resolution)
+- Section 10: Disciplinary Actions (Warnings, suspension, termination process)
+- Section 11-30: Health & Safety, Data Protection, Committee Formation, etc.
+
+**KEY PROCESSES:**
+- Recruitment: Job posting → Screening → Interviews → Offer → Onboarding (4-6 weeks)
+- Leave Approval: Request (2 weeks advance) → Supervisor review (5 days) → HR recording
+- Disciplinary: Incident report → Investigation (10 days) → Hearing → Decision (30 days total)
+- Performance Review: Annual cycle (Dec-Jan), 360-degree feedback, rating scale 1-5
+- Training: Mandatory 40 hours/year, CME for clinical staff, compliance certifications
+
+**APPROVAL AUTHORITIES:**
+- Leave: Supervisor (up to 7 days), Department Head (8-14 days), HR Manager (15+ days)
+- Recruitment: Department Head (request) → HR (screening) → CEO (final approval)
+- Budget: Department Head (up to ₹50k), CFO (₹50k-5L), CEO (₹5L+), Board (₹1Cr+)
+- Disciplinary: Supervisor (warning), HR Manager (suspension), CEO (termination)
+
+**ADMINISTRATIVE ANNEXURES (85 Forms):**
+- Annexure 1-10: Employment (application, offer letter, contract, ID card)
+- Annexure 11-20: Leave (request form, medical certificate, travel approval)
+- Annexure 21-30: Performance (appraisal form, PIP, promotion nomination)
+- Annexure 31-40: Training (attendance, feedback, certificate)
+- Annexure 41-50: Compliance (incident report, investigation, disciplinary notice)
+- Annexure 51-85: Operations (vendor forms, requisitions, safety checklists)
+
+**TIMELINES:**
+- Notice Period: 30 days (staff), 60 days (managers), 90 days (senior management)
+- Probation: 6 months (extendable to 12 months)
+- Annual Leave: 21 days/year (increases with tenure)
+- Sick Leave: 12 days/year (medical certificate required after 3 consecutive days)
+- Background Verification: 7-14 working days
+"""
+    return context
+
 @api_router.post("/guidance/ask", response_model=GuidanceResponse)
 async def get_ai_guidance(query_data: GuidanceQuery):
     """AI-powered HR guidance system with document context"""
@@ -309,6 +358,9 @@ async def get_ai_guidance(query_data: GuidanceQuery):
         # Initialize AI chat
         api_key = os.environ.get('EMERGENT_LLM_KEY')
         session_id = query_data.session_id or str(uuid.uuid4())
+        
+        # Get document context
+        doc_context = get_document_context()
         
         # Create comprehensive system message with FULL flexibility
         system_message = """You are an advanced AI-powered Hospital Administration Expert for Koyili Hospital with deep knowledge of healthcare operations, human resources, compliance, and general hospital administration.
