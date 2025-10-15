@@ -376,12 +376,23 @@ const ProfessionalF4Form = () => {
           </ul>
         </div>
       </div>
-
-      {/* Footer */}
-      <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 px-6 py-3 text-xs text-gray-600 print:relative print:mt-8">
-        <div className="flex justify-between items-center max-w-7xl mx-auto">
-          <span>© Koyili Hospital • Confidential • Version-controlled</span>
-          <span>Form F4 – Leave Encashment Approval Sheet</span>
+      
+      {/* Matching Blue Gradient Footer */}
+      <div className="bg-gradient-to-r from-blue-900 via-blue-800 to-blue-700 px-8 py-5 mt-8">
+        <div className="flex items-center justify-between text-white">
+          <div className="flex items-center gap-4">
+            <div className="bg-yellow-500 rounded-full w-10 h-10 flex items-center justify-center">
+              <span className="text-blue-900 font-bold text-xs">NABH</span>
+            </div>
+            <div>
+              <p className="text-sm font-semibold">© 2024 Koyili Hospital</p>
+              <p className="text-xs text-blue-200">NABH Accredited • Confidential Document • Version-controlled</p>
+            </div>
+          </div>
+          <div className="text-right">
+            <p className="text-sm font-bold">Form F4</p>
+            <p className="text-xs text-blue-200">Leave Encashment Approval Sheet</p>
+          </div>
         </div>
       </div>
     </div>
