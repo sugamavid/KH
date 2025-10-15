@@ -287,6 +287,91 @@ async def search_department_content(dept_id: str, q: str):
     return results
 
 # Include the router in the main app
+# ============ AI GUIDANCE SYSTEM ============
+
+class GuidanceQuery(BaseModel):
+    query: str
+    context: Optional[str] = None
+    session_id: Optional[str] = None
+
+class GuidanceResponse(BaseModel):
+    answer: str
+    related_documents: List[Dict[str, Any]] = []
+    suggested_actions: List[str] = []
+    process_steps: List[Dict[str, Any]] = []
+
+@api_router.post("/guidance/ask", response_model=GuidanceResponse)
+async def get_ai_guidance(query_data: GuidanceQuery):
+    """AI-powered HR guidance system"""
+    try:
+        from emergentintegrations.llm.chat import LlmChat, UserMessage
+        
+        # Initialize AI chat
+        api_key = os.environ.get('EMERGENT_LLM_KEY')
+        session_id = query_data.session_id or str(uuid.uuid4())
+        
+        # Create comprehensive system message with HR context
+        system_message = """You are an expert HR Knowledge Assistant for Koyili Hospital.  
+        
+Your role is to provide comprehensive, step-by-step guidance on ALL HR-related processes, policies, and procedures based on the hospital's By-Laws, SOPs, and Administrative Annexures.
+
+When answering questions, you should:
+1. Provide detailed, step-by-step processes
+2. Reference relevant By-Laws sections, SOPs, and Annexures
+3. Explain the What, When, Where, How, Why, and Whom for each process
+4. Include approval chains and timelines
+5. Mention required documents and forms
+6. Highlight compliance requirements
+7. Suggest related processes or considerations
+
+Key Hospital Documents Context:
+- 30 By-Laws Sections covering governance, operations, HR policies
+- 68 SOPs covering detailed procedures
+- 85 Administrative Annexures with forms and templates
+
+Example Topics You Handle:
+- By-Laws implementation and amendment processes
+- Recruitment and hiring procedures
+- Leave policies and applications
+- Disciplinary actions and grievances
+- Performance management
+- Training and development
+- Payroll and benefits
+- Compliance and legal requirements
+
+Always provide actionable, practical guidance with specific steps and relevant document references."""
+
+        chat = LlmChat(
+            api_key=api_key,
+            session_id=session_id,
+            system_message=system_message
+        ).with_model("openai", "gpt-4o-mini")
+        
+        # Create user message with context
+        user_text = query_data.query
+        if query_data.context:
+            user_text = f"Context: {query_data.context}\n\nQuestion: {query_data.query}"
+        
+        user_message = UserMessage(text=user_text)
+        
+        # Get AI response
+        ai_response = await chat.send_message(user_message)
+        
+        # Parse response and extract structured information
+        # For now, return the full response
+        # TODO: Add document retrieval and related content suggestions
+        
+        return GuidanceResponse(
+            answer=ai_response,
+            related_documents=[],
+            suggested_actions=[],
+            process_steps=[]
+        )
+        
+    except Exception as e:
+        logger.error(f"AI Guidance error: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"Failed to process guidance request: {str(e)}")
+
 app.include_router(api_router)
 
 app.add_middleware(
