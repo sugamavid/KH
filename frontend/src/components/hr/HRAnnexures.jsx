@@ -314,6 +314,41 @@ const HRAnnexures = ({ setActiveModule }) => {
       linkedSOP: 'SOP F.5',
       color: 'amber'
     },
+    {
+      code: 'G1',
+      title: 'Dress Code Acknowledgment Form',
+      category: 'Compliance',
+      linkedSOP: 'SOP G.1',
+      color: 'indigo'
+    },
+    {
+      code: 'G2',
+      title: 'Code of Ethics & Conduct Declaration',
+      category: 'Ethics & Conduct',
+      linkedSOP: 'SOP G.2',
+      color: 'purple'
+    },
+    {
+      code: 'G3',
+      title: 'Conflict of Interest Disclosure Form',
+      category: 'Governance',
+      linkedSOP: 'SOP G.3',
+      color: 'amber'
+    },
+    {
+      code: 'G4',
+      title: 'Disciplinary Action Reporting Form',
+      category: 'Compliance',
+      linkedSOP: 'SOP G.4',
+      color: 'red'
+    },
+    {
+      code: 'G5',
+      title: 'Intoxication Screening & Fitness to Work Format',
+      category: 'Safety',
+      linkedSOP: 'SOP G.5',
+      color: 'blue'
+    },
   ];
 
   // Mock data for dashboard stats
