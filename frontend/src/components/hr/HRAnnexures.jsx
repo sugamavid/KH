@@ -19,7 +19,7 @@ const HRAnnexures = ({ setActiveModule }) => {
   const [activeAnnexure, setActiveAnnexure] = useState(null);
   const [viewMode, setViewMode] = useState('dashboard'); // 'dashboard' or 'annexure'
 
-  // Professional Annexures List (Batch 1)
+  // Professional Annexures List (Batch 1 & 2)
   const professionalAnnexures = [
     {
       code: 'A1',
@@ -55,6 +55,41 @@ const HRAnnexures = ({ setActiveModule }) => {
       category: 'Recruitment',
       linkedSOP: 'SOP B.1',
       color: 'teal'
+    },
+    {
+      code: 'B2',
+      title: 'Recruitment Approval Note',
+      category: 'Recruitment',
+      linkedSOP: 'SOP B.2',
+      color: 'emerald'
+    },
+    {
+      code: 'B3',
+      title: 'Job Advertisement & Posting Template',
+      category: 'Recruitment',
+      linkedSOP: 'SOP B.3',
+      color: 'indigo'
+    },
+    {
+      code: 'B4',
+      title: 'Resume Screening Tracker',
+      category: 'Recruitment',
+      linkedSOP: 'SOP B.4',
+      color: 'cyan'
+    },
+    {
+      code: 'B5',
+      title: 'Interview Panel Evaluation Sheet',
+      category: 'Recruitment',
+      linkedSOP: 'SOP B.5',
+      color: 'violet'
+    },
+    {
+      code: 'B6',
+      title: 'Candidate Evaluation Summary',
+      category: 'Recruitment',
+      linkedSOP: 'SOP B.6',
+      color: 'rose'
     },
   ];
 
