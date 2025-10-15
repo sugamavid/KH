@@ -97,6 +97,41 @@ const HRAnnexures = ({ setActiveModule }) => {
       linkedSOP: 'SOP B.6',
       color: 'rose'
     },
+    {
+      code: 'B7',
+      title: 'Background Verification Authorization Form',
+      category: 'Recruitment',
+      linkedSOP: 'SOP B.7',
+      color: 'amber'
+    },
+    {
+      code: 'B8',
+      title: 'Pre-Employment Medical Fitness Certificate',
+      category: 'Recruitment',
+      linkedSOP: 'SOP B.8',
+      color: 'green'
+    },
+    {
+      code: 'B9',
+      title: 'Offer Letter Template',
+      category: 'Recruitment',
+      linkedSOP: 'SOP B.9',
+      color: 'sky'
+    },
+    {
+      code: 'B10',
+      title: 'Appointment Letter Template',
+      category: 'Recruitment',
+      linkedSOP: 'SOP B.10',
+      color: 'navy'
+    },
+    {
+      code: 'C1',
+      title: 'Orientation Program Checklist',
+      category: 'Onboarding',
+      linkedSOP: 'SOP C.1',
+      color: 'lime'
+    },
   ];
 
   // Mock data for dashboard stats
