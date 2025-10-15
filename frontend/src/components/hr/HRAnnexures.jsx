@@ -490,7 +490,7 @@ const HRAnnexures = ({ setActiveModule }) => {
                     </div>
                     <div className="hidden lg:flex gap-4">
                       <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center border border-white/20">
-                        <p className="text-3xl font-bold text-white">11</p>
+                        <p className="text-3xl font-bold text-white">12</p>
                         <p className="text-sm text-blue-100">Professional Forms</p>
                       </div>
                       <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center border border-white/20">
