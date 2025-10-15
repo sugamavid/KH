@@ -26,6 +26,11 @@ import ProfessionalC3Form from './forms/ProfessionalC3Form';
 import ProfessionalC4Form from './forms/ProfessionalC4Form';
 import ProfessionalC5Form from './forms/ProfessionalC5Form';
 import ProfessionalD1Form from './forms/ProfessionalD1Form';
+import ProfessionalD2Form from './forms/ProfessionalD2Form';
+import ProfessionalD3Form from './forms/ProfessionalD3Form';
+import ProfessionalD4Form from './forms/ProfessionalD4Form';
+import ProfessionalD5Form from './forms/ProfessionalD5Form';
+import ProfessionalE1Form from './forms/ProfessionalE1Form';
 
 const HRAnnexures = ({ setActiveModule }) => {
   const [selectedForm, setSelectedForm] = useState(null);
