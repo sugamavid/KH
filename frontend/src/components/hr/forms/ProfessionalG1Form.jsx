@@ -179,10 +179,11 @@ const ProfessionalG1Form = () => {
           </div>
         </div>
 
+        {/* Content Area */}
         <div className="px-6 py-8 print:py-4">
 
-        {/* Document Control */}
-        <div className="bg-white border border-gray-200 rounded-xl p-5 mb-5">
+          {/* Document Control */}
+          <div className="bg-white border border-gray-200 rounded-xl p-5 mb-5">
           <div className="flex items-center gap-3 mb-4">
             <div className="w-1.5 h-6 bg-gradient-to-b from-yellow-600 to-blue-900 rounded-full" />
             <h3 className="text-lg font-bold text-gray-900">Document Control</h3>
