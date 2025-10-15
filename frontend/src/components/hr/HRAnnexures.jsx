@@ -355,7 +355,13 @@ const HRAnnexures = ({ setActiveModule }) => {
     if (annexure.code === 'B9') {
       return <ProfessionalB9Form />;
     }
-    if (['B10', 'C1', 'C2', 'C3', 'C4', 'C5', 'D1'].includes(annexure.code)) {
+    if (annexure.code === 'B10') {
+      return <ProfessionalB10Form />;
+    }
+    if (annexure.code === 'C1') {
+      return <ProfessionalC1Form />;
+    }
+    if (['C2', 'C3', 'C4', 'C5', 'D1'].includes(annexure.code)) {
       // Placeholder for forms being implemented
       return (
         <div className="max-w-5xl mx-auto">
