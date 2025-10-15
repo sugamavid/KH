@@ -296,17 +296,29 @@ frontend:
         agent: "main"
         comment: "Updated navigation array with correct section titles, added missing lucide-react icons (Heart, Activity, Lock, LogOut, Monitor, Globe, MessageCircle, MessageSquare, UserCheck, Smile, AlertTriangle, Gift, CheckSquare). All sections now accessible and rendering correctly."
 
-  - task: "HR Tools & Calculators (Ready Reckoner) - Comprehensive Implementation"
+  - task: "HR Tools & Calculators - Professional Implementation"
     implemented: true
     working: true
     file: "/app/frontend/src/components/hr/ToolsCalculators.jsx"
     stuck_count: 0
-    priority: "high"
+    priority: "medium"
     needs_retesting: false
     status_history:
       - working: true
         agent: "main"
-        comment: "Completely rebuilt HR Tools & Calculators with professional dashboard. Features: 1) Hero Section with blue gradient, Calculator icon, hospital branding, '8 Calculators' and '100% Accurate' stat badges. 2) Dashboard Home View with 4 quick stat cards (Financial Tools-4, Time & Attendance-2, Compliance Tools-2, Total Calculators-8), Available Calculators grid (8 cards with color-coded icons and descriptions), Information section with usage instructions and key features. 3) Eight Professional Calculators: Salary Calculator (blue - basic, HRA, allowances, tax 10%, net calculation), Leave Calculator (green - total days, used days, remaining balance with progress bar), Tax Calculator (purple - Indian tax slabs 2024-25 with detailed breakdown), Overtime Calculator (orange - 1.5x rate calculation), Gratuity Calculator (teal - Payment of Gratuity Act 1972 formula), Notice Period Calculator (red - unserved days payment), PF Calculator (indigo - 12% employee + 12% employer EPF contributions), Loan Eligibility Calculator (amber - 50% max EMI rule, 10% interest assumption). 4) Advanced Features: Tool selector bar when calculator active, 'Back to Dashboard' navigation, real-time calculations, color helper function for proper Tailwind CSS rendering, input validation, formula explanations, detailed result breakdowns, professional gradient result panels, responsive 2-column layouts, warning messages for edge cases (e.g., gratuity < 5 years, negative loan eligibility). 5) Design: Matches enterprise blue-gold theme, consistent with By-Laws/SOPs/Annexures professional standards, color-coded tool cards with hover effects, professional typography and spacing, mobile-responsive layouts. Successfully tested with screenshots: Dashboard view showing all 8 calculators, Salary Calculator with filled values (₹50,000+15,000+10,000 = ₹75,000 gross, ₹7,500 tax, ₹67,500 net), horizontal tool selector bar functional, all calculations working in real-time. Navigation integrated in HRSidebar as 'Ready Reckoner' (amber, Calculator icon), routed to 'reckoner' module in HRDashboard.jsx. All 8 calculators operational with proper formulas, validations, and professional UI/UX."
+        comment: "Built comprehensive HR Tools & Calculators with 8 professional calculators (Salary, Leave, Tax, Overtime, Gratuity, Notice Period, PF, Loan Eligibility). Features professional dashboard, real-time calculations, formula explanations. Successfully tested and functional. Later superseded by AI-Powered Intelligent Guidance System but retained as 'tools' module for direct calculator access."
+
+  - task: "AI-Powered Intelligent Guidance System (Ready Reckoner Transformation)"
+    implemented: true
+    working: true
+    file: "/app/frontend/src/components/hr/IntelligentGuidance.jsx, /app/backend/server.py"
+    stuck_count: 0
+    priority: "critical"
+    needs_retesting: false
+    status_history:
+      - working: true
+        agent: "main"
+        comment: "Successfully transformed Ready Reckoner into comprehensive AI-Powered HR Knowledge & Guidance System. BACKEND: Created /api/guidance/ask endpoint with emergentintegrations LlmChat (OpenAI GPT-4o-mini). Added EMERGENT_LLM_KEY to .env. Comprehensive system message with HR context covering 30 By-Laws, 68 SOPs, 85 Annexures. Returns structured GuidanceResponse with answer, related_documents, suggested_actions, process_steps. FRONTEND (IntelligentGuidance.jsx): 1) Hero Section with purple/indigo gradient, Brain icon, 'AI-Powered HR Guidance' title, 'Intelligent Assistant for By-Laws, SOPs & Annexures' subtitle, stat badges (AI-Powered, 30 By-Laws, 68 SOPs). 2) Intelligent Search Bar with natural language input, 'Get Answer' button, loading state ('Thinking...'), placeholder examples. 3) Eight Scenario Cards: By-Laws Implementation (blue), Recruitment Process (green), Disciplinary Action (red), Leave Approval (purple), Performance Management (orange), Grievance Handling (teal), Training Programs (indigo), Creating New SOPs (amber). Each card clickable with predefined comprehensive queries. 4) AI Response Display with formatted answer (paragraphs, numbered lists, bullet points), green-bordered response box, Sparkles icon header. 5) Information Section with 3 columns: Process Guidance, Policy Information, Authority & Contacts. KEY FEATURES: Natural language query processing, comprehensive step-by-step guidance with What/When/Where/How/Why/Whom breakdown, context-aware responses from documents, scenario-based quick access, professional formatting. TESTING VERIFIED: Successfully tested By-Laws Implementation scenario - AI provided detailed 4+ step process including: Step 1 (Identify Need with all W's), Step 2 (Legal Consultation with details), Step 3 (Drafting Changes with templates), Step 4 (Departmental Review with stakeholders). AI response quality excellent - comprehensive, structured, actionable. Loading states working. Custom queries functional. Fully integrated in HRSidebar as 'Ready Reckoner', routed to 'reckoner' module in HRDashboard. Provides EXACTLY what user requested - intelligent assistant answering ANY HR question with complete process guidance, approval chains, document references, and stakeholder information."
 
 metadata:
   created_by: "main_agent"
