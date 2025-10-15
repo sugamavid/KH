@@ -244,6 +244,13 @@ const WorldClassResponse = ({ answer, query }) => {
     const hasWho = answer.toLowerCase().includes('who') || answer.toLowerCase().includes('whom');
     const hasWhere = answer.toLowerCase().includes('where');
 
+    const colorMap = {
+      blue: { bg: 'bg-blue-50', border: 'border-blue-200', gradient: 'from-blue-500 to-blue-600' },
+      green: { bg: 'bg-green-50', border: 'border-green-200', gradient: 'from-green-500 to-green-600' },
+      purple: { bg: 'bg-purple-50', border: 'border-purple-200', gradient: 'from-purple-500 to-purple-600' },
+      orange: { bg: 'bg-orange-50', border: 'border-orange-200', gradient: 'from-orange-500 to-orange-600' }
+    };
+
     const cards = [];
     
     if (hasWhat) cards.push({ title: 'What', icon: Info, color: 'blue', desc: 'Actions & Requirements' });
@@ -257,9 +264,10 @@ const WorldClassResponse = ({ answer, query }) => {
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
         {cards.map((card, idx) => {
           const Icon = card.icon;
+          const colors = colorMap[card.color];
           return (
-            <div key={idx} className={`bg-${card.color}-50 rounded-xl p-4 border-2 border-${card.color}-200`}>
-              <div className={`w-10 h-10 rounded-lg bg-gradient-to-br from-${card.color}-500 to-${card.color}-600 flex items-center justify-center mb-3`}>
+            <div key={idx} className={`${colors.bg} rounded-xl p-4 border-2 ${colors.border}`}>
+              <div className={`w-10 h-10 rounded-lg bg-gradient-to-br ${colors.gradient} flex items-center justify-center mb-3`}>
                 <Icon className="w-6 h-6 text-white" />
               </div>
               <h4 className="font-bold text-slate-900 mb-1">{card.title}</h4>
