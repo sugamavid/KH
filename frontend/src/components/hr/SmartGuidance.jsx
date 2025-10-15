@@ -484,81 +484,28 @@ const SmartGuidance = () => {
         {/* Response Section */}
         {response && (
           <div className="mb-8">
-            <div className="bg-white rounded-2xl shadow-xl p-8 border-2 border-green-200">
-              {/* Response Header */}
-              <div className="flex items-center justify-between mb-6 pb-6 border-b-2 border-slate-100">
-                <div className="flex items-center">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center mr-4">
-                    <Sparkles className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h2 className="text-2xl font-bold text-slate-900">AI Guidance Response</h2>
-                    <p className="text-sm text-slate-600">Comprehensive answer to your query</p>
-                  </div>
-                </div>
-                
-                {/* Action Buttons */}
-                <div className="flex gap-2">
-                  <button
-                    onClick={handleBookmark}
-                    className="px-4 py-2 bg-amber-100 text-amber-700 rounded-lg hover:bg-amber-200 flex items-center transition-colors"
-                  >
-                    <Bookmark className="w-4 h-4 mr-2" />
-                    Save
-                  </button>
-                  <button
-                    onClick={handleCopy}
-                    className="px-4 py-2 bg-blue-100 text-blue-700 rounded-lg hover:bg-blue-200 flex items-center transition-colors"
-                  >
-                    {copied ? (
-                      <>
-                        <Check className="w-4 h-4 mr-2" />
-                        Copied!
-                      </>
-                    ) : (
-                      <>
-                        <Copy className="w-4 h-4 mr-2" />
-                        Copy
-                      </>
-                    )}
-                  </button>
-                  <button className="px-4 py-2 bg-purple-100 text-purple-700 rounded-lg hover:bg-purple-200 flex items-center transition-colors">
-                    <Download className="w-4 h-4 mr-2" />
-                    PDF
-                  </button>
-                  <button className="px-4 py-2 bg-slate-100 text-slate-700 rounded-lg hover:bg-slate-200 flex items-center transition-colors">
-                    <Share2 className="w-4 h-4 mr-2" />
-                    Share
-                  </button>
+            <WorldClassResponse answer={response.answer} query={query} />
+            
+            {/* Related Questions */}
+            {getRelatedQuestions().length > 0 && (
+              <div className="mt-8 bg-white rounded-2xl shadow-lg p-6 border-2 border-purple-200">
+                <h3 className="text-lg font-bold text-slate-900 mb-4 flex items-center">
+                  <Lightbulb className="w-5 h-5 text-yellow-500 mr-2" />
+                  Related Questions You Might Have
+                </h3>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+                  {getRelatedQuestions().map((q, idx) => (
+                    <button
+                      key={idx}
+                      onClick={() => {setQuery(q); handleSearch(q);}}
+                      className="text-left px-4 py-3 bg-gradient-to-br from-purple-50 to-indigo-50 hover:from-purple-100 hover:to-indigo-100 rounded-lg text-sm text-slate-700 hover:text-purple-700 transition-all border-2 border-purple-200 hover:border-purple-400 hover:shadow-lg"
+                    >
+                      {q}
+                    </button>
+                  ))}
                 </div>
               </div>
-
-              {/* Response Content */}
-              <div className="prose max-w-none">
-                {formatAnswer(response.answer)}
-              </div>
-
-              {/* Related Questions */}
-              {getRelatedQuestions().length > 0 && (
-                <div className="mt-8 pt-8 border-t-2 border-slate-100">
-                  <h3 className="text-lg font-bold text-slate-900 mb-4 flex items-center">
-                    <Lightbulb className="w-5 h-5 text-yellow-500 mr-2" />
-                    Related Questions
-                  </h3>
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
-                    {getRelatedQuestions().map((q, idx) => (
-                      <button
-                        key={idx}
-                        onClick={() => {setQuery(q); handleSearch(q);}}
-                        className="text-left px-4 py-3 bg-slate-50 hover:bg-purple-50 rounded-lg text-sm text-slate-700 hover:text-purple-700 transition-colors border border-slate-200 hover:border-purple-300"
-                      >
-                        {q}
-                      </button>
-                    ))}
-                  </div>
-                </div>
-              )}
-            </div>
+            )}
           </div>
         )}
 
