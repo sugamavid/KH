@@ -132,6 +132,62 @@ const HRAnnexures = ({ setActiveModule }) => {
       linkedSOP: 'SOP C.1',
       color: 'lime'
     },
+    {
+      code: 'B8',
+      title: 'Pre-Employment Medical Fitness Certificate',
+      category: 'Recruitment',
+      linkedSOP: 'SOP B.8',
+      color: 'green'
+    },
+    {
+      code: 'B9',
+      title: 'Offer Letter Template',
+      category: 'Recruitment',
+      linkedSOP: 'SOP B.9',
+      color: 'sky'
+    },
+    {
+      code: 'B10',
+      title: 'Appointment Letter Template',
+      category: 'Recruitment',
+      linkedSOP: 'SOP B.10',
+      color: 'blue'
+    },
+    {
+      code: 'C2',
+      title: 'Uniform & ID Card Issue Register',
+      category: 'Onboarding',
+      linkedSOP: 'SOP C.2',
+      color: 'slate'
+    },
+    {
+      code: 'C3',
+      title: 'HRMS Biometric Access Request Form',
+      category: 'Onboarding',
+      linkedSOP: 'SOP C.3',
+      color: 'zinc'
+    },
+    {
+      code: 'C4',
+      title: 'Confidentiality Declaration Form',
+      category: 'Onboarding',
+      linkedSOP: 'SOP C.4',
+      color: 'stone'
+    },
+    {
+      code: 'C5',
+      title: 'Clinical Credentialing Application Form',
+      category: 'Onboarding',
+      linkedSOP: 'SOP C.5',
+      color: 'neutral'
+    },
+    {
+      code: 'D1',
+      title: 'Personnel File Checklist',
+      category: 'Personnel Management',
+      linkedSOP: 'SOP D.1',
+      color: 'gray'
+    },
   ];
 
   // Mock data for dashboard stats
