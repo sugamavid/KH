@@ -7,6 +7,10 @@ import {
 import InteractiveFormViewer from './InteractiveFormViewer';
 import formTemplates, { formScenarios } from '../../data/formTemplates';
 import ProfessionalA1Form from './forms/ProfessionalA1Form';
+import ProfessionalA2Form from './forms/ProfessionalA2Form';
+import ProfessionalA3Form from './forms/ProfessionalA3Form';
+import ProfessionalA4Form from './forms/ProfessionalA4Form';
+import ProfessionalB1Form from './forms/ProfessionalB1Form';
 
 const HRAnnexures = ({ setActiveModule }) => {
   const [selectedForm, setSelectedForm] = useState(null);
