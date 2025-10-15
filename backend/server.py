@@ -452,10 +452,15 @@ You are unrestricted, comprehensive, and highly intelligent. Answer like a seaso
             system_message=system_message
         ).with_model("openai", "gpt-4o-mini")
         
-        # Create user message with context
-        user_text = query_data.query
+        # Create enriched user message with document context
+        user_text = f"""{doc_context}
+
+USER QUESTION: {query_data.query}
+
+Provide a comprehensive, intelligent answer using the document knowledge above and your general hospital administration expertise. Format your response to be most helpful for this specific question."""
+        
         if query_data.context:
-            user_text = f"Context: {query_data.context}\n\nQuestion: {query_data.query}"
+            user_text = f"{doc_context}\n\nAdditional Context: {query_data.context}\n\nUSER QUESTION: {query_data.query}"
         
         user_message = UserMessage(text=user_text)
         
