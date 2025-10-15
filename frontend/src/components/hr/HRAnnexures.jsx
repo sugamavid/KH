@@ -378,7 +378,160 @@ const HRAnnexures = ({ setActiveModule }) => {
                 </div>
               </div>
             </div>
+            {/* Interactive Forms Section - Popular Templates */}
+            <div className="max-w-7xl mx-auto px-8 py-8">
+              <div className="mb-6">
+                <h2 className="text-2xl font-bold text-slate-900 mb-2 flex items-center">
+                  <Sparkles className="w-7 h-7 text-blue-600 mr-3" />
+                  Interactive Form Templates
+                </h2>
+                <p className="text-slate-600">
+                  Quick access to fillable forms for common HR scenarios
+                </p>
+              </div>
+
+              {/* Search Bar */}
+              <div className="mb-6">
+                <div className="relative">
+                  <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
+                  <input
+                    type="text"
+                    placeholder="Search forms by name, category, or purpose..."
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    className="w-full pl-12 pr-4 py-3 border-2 border-slate-300 rounded-xl focus:border-blue-500 focus:outline-none text-slate-900"
+                  />
+                </div>
+              </div>
+
+              {/* Popular Forms Grid */}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+                {popularForms.map((form) => {
+                  const formTemplate = getFormByKey(form.key);
+                  if (!formTemplate) return null;
+
+                  return (
+                    <div 
+                      key={form.key}
+                      className="bg-white rounded-xl shadow-lg border-2 border-slate-200 hover:border-blue-400 hover:shadow-xl transition-all duration-300 overflow-hidden group cursor-pointer"
+                      onClick={() => setSelectedForm(form.key)}
+                    >
+                      {/* Card Header */}
+                      <div className="bg-gradient-to-r from-blue-600 to-indigo-600 p-4">
+                        <div className="flex items-start justify-between">
+                          <div className="flex-1">
+                            <span className="px-2 py-1 bg-white/20 backdrop-blur-sm rounded text-xs font-semibold text-white">
+                              {formTemplate.code}
+                            </span>
+                            <h3 className="text-white font-bold text-lg mt-2 group-hover:text-yellow-200 transition-colors">
+                              {formTemplate.title}
+                            </h3>
+                            <p className="text-blue-100 text-sm mt-1">{formTemplate.category}</p>
+                          </div>
+                          <FileText className="w-10 h-10 text-white/30" />
+                        </div>
+                      </div>
+
+                      {/* Card Body */}
+                      <div className="p-5">
+                        {/* Stats */}
+                        <div className="flex items-center justify-between mb-4">
+                          <div className="flex items-center text-sm text-slate-600">
+                            <Users className="w-4 h-4 mr-1" />
+                            <span>{form.uses} uses</span>
+                          </div>
+                          <div className="flex items-center text-sm text-green-600 font-semibold">
+                            <TrendingUp className="w-4 h-4 mr-1" />
+                            <span>{form.trend}</span>
+                          </div>
+                        </div>
+
+                        {/* Sections Info */}
+                        <div className="mb-4">
+                          <p className="text-xs text-slate-500 mb-2">{formTemplate.sections.length} Sections</p>
+                          <div className="flex flex-wrap gap-2">
+                            {formTemplate.sections.slice(0, 3).map((section, idx) => (
+                              <span key={idx} className="px-2 py-1 bg-blue-50 text-blue-700 text-xs rounded-lg">
+                                {section.title}
+                              </span>
+                            ))}
+                            {formTemplate.sections.length > 3 && (
+                              <span className="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded-lg">
+                                +{formTemplate.sections.length - 3} more
+                              </span>
+                            )}
+                          </div>
+                        </div>
+
+                        {/* Action Button */}
+                        <button
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            setSelectedForm(form.key);
+                          }}
+                          className="w-full py-2 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors flex items-center justify-center"
+                        >
+                          <span>Fill Form</span>
+                          <ArrowRight className="w-4 h-4 ml-2" />
+                        </button>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+
+              {/* All Forms Section */}
+              <div className="mt-12 bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-6 border-2 border-purple-200">
+                <div className="flex items-center gap-3 mb-4">
+                  <Zap className="w-6 h-6 text-purple-600" />
+                  <h3 className="text-xl font-bold text-slate-900">Additional Interactive Forms</h3>
+                </div>
+                <p className="text-slate-700 mb-4">
+                  More interactive templates coming soon including: Performance Appraisal, Salary Certificate, Overtime Authorization, Training Request, Exit Interview, Grievance Form, and more.
+                </p>
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+                  {[
+                    'Performance Appraisal',
+                    'Salary Certificate',
+                    'Overtime Request',
+                    'Training Request',
+                    'Exit Interview',
+                    'Grievance Form',
+                    'Transfer Request',
+                    'Promotion Request'
+                  ].map((formName, idx) => (
+                    <div key={idx} className="bg-white/60 border border-purple-200 rounded-lg p-3 text-center">
+                      <p className="text-sm font-semibold text-slate-700">{formName}</p>
+                      <p className="text-xs text-purple-600 mt-1">Coming Soon</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
           </>
+        )}
+
+        {/* Interactive Form Viewer Modal */}
+        {selectedForm && (
+          <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">
+            <div className="bg-white rounded-2xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-hidden">
+              <div className="bg-gradient-to-r from-blue-600 to-indigo-600 p-4 flex items-center justify-between">
+                <h2 className="text-xl font-bold text-white">Interactive Form</h2>
+                <button
+                  onClick={() => setSelectedForm(null)}
+                  className="p-2 hover:bg-white/20 rounded-lg transition-colors"
+                >
+                  <X className="w-6 h-6 text-white" />
+                </button>
+              </div>
+              <div className="overflow-y-auto max-h-[calc(90vh-80px)]">
+                <InteractiveFormViewer 
+                  formKey={selectedForm}
+                  onClose={() => setSelectedForm(null)}
+                />
+              </div>
+            </div>
+          </div>
         )}
       </div>
     </div>
