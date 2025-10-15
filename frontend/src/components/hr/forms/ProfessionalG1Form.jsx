@@ -301,6 +301,7 @@ const ProfessionalG1Form = () => {
             <li>Records must be archived for 7 years for compliance and audit purposes.</li>
           </ul>
         </div>
+        </div>
       </div>
 
       {/* Standardized NABH-Compliant Footer - Flows with Content */}
