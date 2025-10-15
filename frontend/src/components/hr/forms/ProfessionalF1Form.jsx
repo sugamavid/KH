@@ -281,11 +281,22 @@ const ProfessionalF1Form = () => {
         </section>
       </div>
 
-      {/* Standardized NABH-Compliant Footer */}
-      <div className="bg-gradient-to-r from-blue-50 to-blue-100 px-8 py-4 border-t-4 border-blue-900">
-        <div className="flex items-center justify-between text-sm">
-          <span className="text-blue-900 font-semibold">© Koyili Hospital • NABH Accredited • Confidential • Version-controlled</span>
-          <span className="text-blue-700 font-bold">Form F1 – Leave Application Form</span>
+      {/* Matching Blue Gradient Footer */}
+      <div className="bg-gradient-to-r from-blue-900 via-blue-800 to-blue-700 px-8 py-5 mt-8">
+        <div className="flex items-center justify-between text-white">
+          <div className="flex items-center gap-4">
+            <div className="bg-yellow-500 rounded-full w-10 h-10 flex items-center justify-center">
+              <span className="text-blue-900 font-bold text-xs">NABH</span>
+            </div>
+            <div>
+              <p className="text-sm font-semibold">© 2024 Koyili Hospital</p>
+              <p className="text-xs text-blue-200">NABH Accredited • Confidential Document • Version-controlled</p>
+            </div>
+          </div>
+          <div className="text-right">
+            <p className="text-sm font-bold">Form F1</p>
+            <p className="text-xs text-blue-200">Leave Application Form</p>
+          </div>
         </div>
       </div>
     </div>
