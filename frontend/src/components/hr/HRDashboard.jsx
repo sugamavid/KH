@@ -47,6 +47,8 @@ const HRDashboard = () => {
       case 'annexures':
         return <HRAnnexures setActiveModule={setActiveModule} />;
       case 'reckoner':
+        return <IntelligentGuidance />;
+      case 'tools':
         return <ToolsCalculators />;
       case 'reports':
         return <ReportsAnalytics />;
