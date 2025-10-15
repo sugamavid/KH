@@ -236,7 +236,15 @@ const WorldClassResponse = ({ answer, query }) => {
     const summaryPoints = answer.split('\n')
       .filter(line => line.match(/^[-•*]\s\*\*/))
       .slice(0, 4)
-      .map(line => line.replace(/^[-•*]\s\*\*/, '').replace(/\*\*/g, '').trim());
+      .map(line => {
+        // Remove all markdown formatting
+        return line
+          .replace(/^[-•*]\s+/, '')  // Remove bullet
+          .replace(/\*\*/g, '')      // Remove bold markers
+          .replace(/\*/g, '')        // Remove italic markers
+          .replace(/`/g, '')         // Remove code markers
+          .trim();
+      });
 
     if (summaryPoints.length === 0) return null;
 
