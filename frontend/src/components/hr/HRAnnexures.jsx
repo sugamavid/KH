@@ -183,8 +183,20 @@ const HRAnnexures = ({ setActiveModule }) => {
     if (annexure.code === 'A1') {
       return <ProfessionalA1Form />;
     }
+    if (annexure.code === 'A2') {
+      return <ProfessionalA2Form />;
+    }
+    if (annexure.code === 'A3') {
+      return <ProfessionalA3Form />;
+    }
+    if (annexure.code === 'A4') {
+      return <ProfessionalA4Form />;
+    }
+    if (annexure.code === 'B1') {
+      return <ProfessionalB1Form />;
+    }
 
-    // For other forms (A2, A3, A4, B1) show coming soon
+    // Fallback for future forms
     return (
       <div className="max-w-5xl mx-auto">
         <div className="bg-white rounded-2xl shadow-xl border-2 border-slate-200 overflow-hidden">
