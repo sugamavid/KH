@@ -10,6 +10,7 @@ import TrainingManagement from './TrainingManagement';
 import ReportsAnalytics from './ReportsAnalytics';
 import ToolsCalculators from './ToolsCalculators';
 import IntelligentGuidance from './IntelligentGuidance';
+import SmartGuidance from './SmartGuidance';
 import HRByLaws from './HRByLaws';
 import HRSOPs from './HRSOPs';
 import HRAnnexures from './HRAnnexures';
