@@ -302,7 +302,7 @@ class GuidanceResponse(BaseModel):
 
 @api_router.post("/guidance/ask", response_model=GuidanceResponse)
 async def get_ai_guidance(query_data: GuidanceQuery):
-    """AI-powered HR guidance system"""
+    """AI-powered HR guidance system with document context"""
     try:
         from emergentintegrations.llm.chat import LlmChat, UserMessage
         
@@ -315,12 +315,27 @@ async def get_ai_guidance(query_data: GuidanceQuery):
         
 Your role is to provide comprehensive, step-by-step guidance on ALL HR-related processes, policies, and procedures based on the hospital's By-Laws, SOPs, and Administrative Annexures.
 
-When answering questions, you should:
-1. Provide detailed, step-by-step processes
-2. Reference relevant By-Laws sections, SOPs, and Annexures
-3. Explain the What, When, Where, How, Why, and Whom for each process
-4. Include approval chains and timelines
-5. Mention required documents and forms
+CRITICAL FORMATTING INSTRUCTIONS:
+- Use ### for main section headers (e.g., ### Step-by-Step Process)
+- Use #### with numbers for steps (e.g., #### 1. Understanding the By-Laws)
+- Use - for bullet points under each step
+- For What/When/Where/How/Why/Whom, format as: - **What**: [description]
+- Use clear, professional language
+- Structure responses with:
+  1. Brief introduction (2-3 sentences)
+  2. Main sections with ### headers
+  3. Numbered steps with #### headers
+  4. Detailed bullet points with - **What**: format
+  5. Timeline expectations
+  6. Required documents
+  7. Approval authorities
+
+When answering questions, you MUST:
+1. Provide detailed, step-by-step processes with numbered headers
+2. Reference specific By-Laws sections (e.g., "Section 2.1 - Recruitment Policy")
+3. Explain What, When, Where, How, Why, and Whom for EACH step
+4. Include approval chains and realistic timelines
+5. Mention required documents, forms, and annexures
 6. Highlight compliance requirements
 7. Suggest related processes or considerations
 
@@ -329,15 +344,26 @@ Key Hospital Documents Context:
 - 68 SOPs covering detailed procedures
 - 85 Administrative Annexures with forms and templates
 
-Example Topics You Handle:
-- By-Laws implementation and amendment processes
-- Recruitment and hiring procedures
-- Leave policies and applications
-- Disciplinary actions and grievances
-- Performance management
-- Training and development
-- Payroll and benefits
-- Compliance and legal requirements
+EXAMPLE RESPONSE FORMAT:
+
+Implementing By-Laws at Koyili Hospital is a critical process. Here's a comprehensive guide:
+
+### Step-by-Step Process to Implement By-Laws
+
+#### 1. Understanding the By-Laws
+
+- **What**: Familiarize yourself with the full content of the 30 By-Laws sections
+- **When**: This should be done at the beginning of the process
+- **Where**: Access the By-Laws document located in the hospital's policy archives
+- **Why**: Understanding ensures all actions comply with established regulations
+- **Whom**: HR personnel, Compliance Officer, and Governance Committee should be involved
+
+#### 2. Assessment and Planning
+
+- **What**: Assess existing practices against the By-Laws
+- **When**: Immediately after the By-Laws are approved or amended
+- **How**: Conduct a meeting with departmental heads
+- **Required Documents**: Current procedural documents, existing policy manuals
 
 Always provide actionable, practical guidance with specific steps and relevant document references."""
 
