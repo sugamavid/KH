@@ -65,16 +65,25 @@ const WorldClassResponse = ({ answer, query }) => {
 
   const sections = parseAnswer(answer);
 
-  // Extract process steps for flowchart
+  // Extract process steps for flowchart and clean markdown
   const extractSteps = (text) => {
     const stepPattern = /####\s*(\d+)\.\s*([^\n]+)/g;
     const steps = [];
     let match;
 
     while ((match = stepPattern.exec(text)) !== null) {
+      // Clean markdown from title - remove **, ###, etc.
+      let cleanTitle = match[2].trim()
+        .replace(/\*\*/g, '')  // Remove bold markers
+        .replace(/\*/g, '')    // Remove italic markers
+        .replace(/###/g, '')   // Remove headers
+        .replace(/####/g, '')  // Remove sub-headers
+        .replace(/`/g, '')     // Remove code markers
+        .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1'); // Convert links to text
+      
       steps.push({
         number: match[1],
-        title: match[2].trim()
+        title: cleanTitle
       });
     }
 
