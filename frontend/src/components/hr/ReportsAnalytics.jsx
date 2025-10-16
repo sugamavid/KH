@@ -290,28 +290,332 @@ const ReportsAnalytics = () => {
     avgGenerationTime: '5 mins'
   };
 
+  // Filter reports
+  const filteredReports = useMemo(() => {
+    let filtered = reportTemplates;
+
+    if (selectedCategory !== 'all') {
+      filtered = filtered.filter(r => r.category === selectedCategory);
+    }
+
+    if (searchQuery.trim()) {
+      const query = searchQuery.toLowerCase();
+      filtered = filtered.filter(r =>
+        r.title.toLowerCase().includes(query) ||
+        r.description.toLowerCase().includes(query) ||
+        r.category.toLowerCase().includes(query)
+      );
+    }
+
+    return filtered.sort((a, b) => b.popularity - a.popularity);
+  }, [searchQuery, selectedCategory]);
+
+  const handleGenerateReport = (report) => {
+    setSelectedReport(report);
+    setReportConfig({
+      ...reportConfig,
+      type: report.id,
+      title: report.title
+    });
+    setShowReportBuilder(true);
+  };
+
+  const renderReportCard = (report) => {
+    const ReportIcon = report.icon;
+    
+    return (
+      <div
+        key={report.id}
+        className="bg-white rounded-xl p-6 border-2 border-slate-200 hover:border-green-400 hover:shadow-lg transition-all group"
+      >
+        <div className="flex items-start justify-between mb-4">
+          <div className="flex items-start gap-3 flex-1">
+            <div className={`p-3 bg-${report.color}-100 rounded-xl group-hover:bg-green-100 transition-colors`}>
+              <ReportIcon className={`w-6 h-6 text-${report.color}-600 group-hover:text-green-600 transition-colors`} />
+            </div>
+            <div className="flex-1">
+              <div className="flex items-center gap-2 mb-2">
+                <h4 className="font-bold text-slate-900 group-hover:text-green-700 transition-colors">
+                  {report.title}
+                </h4>
+                <div className="flex items-center gap-1">
+                  {[...Array(report.popularity)].map((_, i) => (
+                    <Star key={i} className="w-3 h-3 text-yellow-500 fill-current" />
+                  ))}
+                </div>
+              </div>
+              <p className="text-sm text-slate-600 mb-3 line-clamp-2">{report.description}</p>
+              <div className="flex items-center gap-3 text-xs text-slate-500">
+                <span className={`px-2 py-1 rounded bg-${report.color}-100 text-${report.color}-700 font-semibold`}>
+                  {report.category}
+                </span>
+                <span className="flex items-center gap-1">
+                  <Calendar className="w-3 h-3" />
+                  {report.frequency}
+                </span>
+                <span className="flex items-center gap-1">
+                  <Clock className="w-3 h-3" />
+                  {report.estimatedTime}
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Metrics */}
+        <div className="mb-4 bg-slate-50 rounded-lg p-3">
+          <div className="text-xs font-semibold text-slate-600 mb-2">Key Metrics</div>
+          <div className="flex flex-wrap gap-1">
+            {report.metrics.slice(0, 4).map((metric, idx) => (
+              <span key={idx} className="text-xs px-2 py-1 bg-white rounded border border-slate-200 text-slate-700">
+                {metric}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        {/* Details */}
+        <div className="mb-4 grid grid-cols-2 gap-2 text-xs">
+          <div className="bg-blue-50 rounded p-2">
+            <div className="text-blue-600 mb-1">Last Generated</div>
+            <div className="font-semibold text-blue-900">{new Date(report.lastGenerated).toLocaleDateString()}</div>
+          </div>
+          <div className="bg-green-50 rounded p-2">
+            <div className="text-green-600 mb-1">Page Count</div>
+            <div className="font-semibold text-green-900">{report.pageCount}</div>
+          </div>
+        </div>
+
+        {/* Actions */}
+        <div className="flex gap-2">
+          <button
+            onClick={() => handleGenerateReport(report)}
+            className="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors text-sm font-semibold"
+          >
+            <Zap className="w-4 h-4" />
+            Generate Report
+          </button>
+          <button className="p-2 bg-slate-100 hover:bg-slate-200 rounded-lg transition-colors">
+            <Eye className="w-4 h-4 text-slate-600" />
+          </button>
+        </div>
+      </div>
+    );
+  };
+
+  const renderHistory = () => (
+    <div className="space-y-3">
+      <div className="flex items-center justify-between mb-4">
+        <div className="text-sm text-slate-600">
+          Showing {reportHistory.length} reports
+        </div>
+        <button className="flex items-center gap-2 px-4 py-2 bg-white text-slate-700 rounded-lg hover:bg-slate-100 transition-colors text-sm font-semibold border border-slate-200">
+          <RefreshCw className="w-4 h-4" />
+          Refresh
+        </button>
+      </div>
+
+      <div className="bg-white rounded-xl border-2 border-slate-200 overflow-hidden">
+        <table className="w-full">
+          <thead className="bg-slate-50 border-b border-slate-200">
+            <tr>
+              <th className="px-4 py-3 text-left text-xs font-bold text-slate-600 uppercase">Report</th>
+              <th className="px-4 py-3 text-left text-xs font-bold text-slate-600 uppercase">Generated</th>
+              <th className="px-4 py-3 text-left text-xs font-bold text-slate-600 uppercase">By</th>
+              <th className="px-4 py-3 text-left text-xs font-bold text-slate-600 uppercase">Format</th>
+              <th className="px-4 py-3 text-left text-xs font-bold text-slate-600 uppercase">Size</th>
+              <th className="px-4 py-3 text-left text-xs font-bold text-slate-600 uppercase">Downloads</th>
+              <th className="px-4 py-3 text-left text-xs font-bold text-slate-600 uppercase">Actions</th>
+            </tr>
+          </thead>
+          <tbody className="divide-y divide-slate-200">
+            {reportHistory.map((report) => (
+              <tr key={report.id} className="hover:bg-slate-50 transition-colors">
+                <td className="px-4 py-3">
+                  <div className="font-semibold text-slate-900">{report.title}</div>
+                  <div className="text-xs text-slate-500">{report.reportId}</div>
+                </td>
+                <td className="px-4 py-3 text-sm text-slate-600">
+                  {new Date(report.generatedDate).toLocaleDateString()}
+                </td>
+                <td className="px-4 py-3 text-sm text-slate-600">{report.generatedBy}</td>
+                <td className="px-4 py-3">
+                  <span className="px-2 py-1 bg-blue-100 text-blue-700 rounded text-xs font-semibold">
+                    {report.format}
+                  </span>
+                </td>
+                <td className="px-4 py-3 text-sm text-slate-600">{report.size}</td>
+                <td className="px-4 py-3">
+                  <div className="flex items-center gap-1 text-sm text-slate-600">
+                    <Download className="w-4 h-4" />
+                    {report.downloads}
+                  </div>
+                </td>
+                <td className="px-4 py-3">
+                  <div className="flex items-center gap-2">
+                    <button className="p-1.5 hover:bg-green-100 rounded transition-colors">
+                      <Download className="w-4 h-4 text-green-600" />
+                    </button>
+                    <button className="p-1.5 hover:bg-blue-100 rounded transition-colors">
+                      <Eye className="w-4 h-4 text-blue-600" />
+                    </button>
+                    <button className="p-1.5 hover:bg-slate-100 rounded transition-colors">
+                      <Share2 className="w-4 h-4 text-slate-600" />
+                    </button>
+                  </div>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  );
+
+  const renderReportBuilder = () => {
+    if (!showReportBuilder || !selectedReport) return null;
+
+    return (
+      <div className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+        <div className="bg-white rounded-2xl shadow-2xl max-w-3xl w-full max-h-[90vh] overflow-hidden">
+          {/* Header */}
+          <div className="bg-gradient-to-r from-green-600 to-green-700 px-8 py-6 text-white">
+            <div className="flex items-center justify-between mb-2">
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 bg-white/20 backdrop-blur rounded-xl flex items-center justify-center">
+                  <Zap className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold">Generate Report</h3>
+                  <p className="text-green-100 text-sm">{selectedReport.title}</p>
+                </div>
+              </div>
+              <button
+                onClick={() => setShowReportBuilder(false)}
+                className="p-2 hover:bg-white/20 rounded-lg transition-colors"
+              >
+                <X className="w-6 h-6 text-white" />
+              </button>
+            </div>
+          </div>
+
+          {/* Content */}
+          <div className="p-8 overflow-y-auto max-h-[calc(90vh-160px)]">
+            {/* Date Range */}
+            <div className="mb-6">
+              <label className="block text-sm font-semibold text-slate-700 mb-2">Date Range</label>
+              <select 
+                className="w-full px-4 py-2 border-2 border-slate-200 rounded-lg focus:border-green-500 focus:outline-none"
+                value={reportConfig.dateRange}
+                onChange={(e) => setReportConfig({...reportConfig, dateRange: e.target.value})}
+              >
+                <option value="last_week">Last Week</option>
+                <option value="last_month">Last Month</option>
+                <option value="last_quarter">Last Quarter</option>
+                <option value="last_year">Last Year</option>
+                <option value="custom">Custom Range</option>
+              </select>
+            </div>
+
+            {/* Output Format */}
+            <div className="mb-6">
+              <label className="block text-sm font-semibold text-slate-700 mb-2">Output Format</label>
+              <div className="grid grid-cols-3 gap-3">
+                {['pdf', 'excel', 'csv'].map((format) => (
+                  <button
+                    key={format}
+                    onClick={() => setReportConfig({...reportConfig, format})}
+                    className={`flex items-center justify-center gap-2 px-4 py-3 rounded-lg border-2 transition-all ${
+                      reportConfig.format === format
+                        ? 'border-green-500 bg-green-50 text-green-700'
+                        : 'border-slate-200 hover:border-slate-300'
+                    }`}
+                  >
+                    {format === 'pdf' && <FileText className="w-5 h-5" />}
+                    {format === 'excel' && <FileSpreadsheet className="w-5 h-5" />}
+                    {format === 'csv' && <File className="w-5 h-5" />}
+                    <span className="font-semibold uppercase">{format}</span>
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* Options */}
+            <div className="mb-6">
+              <label className="block text-sm font-semibold text-slate-700 mb-3">Report Options</label>
+              <div className="space-y-2">
+                <label className="flex items-center gap-3 p-3 bg-slate-50 rounded-lg cursor-pointer hover:bg-slate-100 transition-colors">
+                  <input 
+                    type="checkbox" 
+                    checked={reportConfig.includeCharts}
+                    onChange={(e) => setReportConfig({...reportConfig, includeCharts: e.target.checked})}
+                    className="w-5 h-5 text-green-600 rounded"
+                  />
+                  <div>
+                    <div className="font-semibold text-slate-900">Include Charts & Graphs</div>
+                    <div className="text-xs text-slate-600">Visual data representation</div>
+                  </div>
+                </label>
+                <label className="flex items-center gap-3 p-3 bg-slate-50 rounded-lg cursor-pointer hover:bg-slate-100 transition-colors">
+                  <input 
+                    type="checkbox" 
+                    checked={reportConfig.includeRecommendations}
+                    onChange={(e) => setReportConfig({...reportConfig, includeRecommendations: e.target.checked})}
+                    className="w-5 h-5 text-green-600 rounded"
+                  />
+                  <div>
+                    <div className="font-semibold text-slate-900">Include Recommendations</div>
+                    <div className="text-xs text-slate-600">AI-powered insights and suggestions</div>
+                  </div>
+                </label>
+              </div>
+            </div>
+
+            {/* Generation Info */}
+            <div className="bg-green-50 rounded-lg p-4 border border-green-200">
+              <div className="flex items-center gap-2 text-green-900 font-semibold mb-2">
+                <Clock className="w-4 h-4" />
+                Estimated Generation Time
+              </div>
+              <div className="text-2xl font-bold text-green-700">{selectedReport.estimatedTime}</div>
+            </div>
+          </div>
+
+          {/* Footer */}
+          <div className="px-8 py-4 bg-slate-50 border-t border-slate-200 flex gap-3">
+            <button
+              onClick={() => setShowReportBuilder(false)}
+              className="flex-1 px-4 py-3 bg-white border-2 border-slate-300 text-slate-700 rounded-lg hover:bg-slate-50 transition-colors font-semibold"
+            >
+              Cancel
+            </button>
+            <button className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors font-semibold">
+              <Download className="w-5 h-5" />
+              Generate & Download
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  };
+
   return (
-    <div className="p-6 space-y-6">
-      {/* Header */}
+    <div className="p-6 space-y-6 bg-slate-50 min-h-screen">{/* Header */}
       <div className="flex justify-between items-center">
         <div>
-          <h1 className="text-3xl font-bold text-slate-900">Reports & Analytics</h1>
-          <p className="text-slate-600 mt-1">Comprehensive HR metrics and insights</p>
+          <h1 className="text-3xl font-bold text-slate-900" style={{ fontFamily: "'Inter', sans-serif" }}>
+            Reports & Analytics Hub
+          </h1>
+          <p className="text-slate-600 mt-1">Comprehensive analytics and reporting suite</p>
         </div>
         <div className="flex space-x-3">
-          <select
-            value={selectedPeriod}
-            onChange={(e) => setSelectedPeriod(e.target.value)}
-            className="px-4 py-2 border-2 border-slate-200 rounded-lg focus:outline-none focus:border-blue-500 bg-white"
-          >
-            <option value="weekly">This Week</option>
-            <option value="monthly">This Month</option>
-            <option value="quarterly">This Quarter</option>
-            <option value="yearly">This Year</option>
-          </select>
-          <button className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors font-semibold flex items-center shadow-lg">
+          <button className="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-colors font-semibold flex items-center shadow-lg">
+            <Plus className="w-5 h-5 mr-2" />
+            Custom Report
+          </button>
+          <button className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors font-semibold flex items-center shadow-lg">
             <Download className="w-5 h-5 mr-2" />
-            Export Report
+            Export All
           </button>
         </div>
       </div>
