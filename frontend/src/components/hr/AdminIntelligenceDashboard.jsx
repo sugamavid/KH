@@ -3,7 +3,7 @@ import {
   AlertTriangle, TrendingDown, TrendingUp, Shield, Users, Clock, 
   DollarSign, Target, Activity, Award, Brain, Zap, AlertCircle,
   CheckCircle, XCircle, MinusCircle, ArrowUpRight, ArrowDownRight,
-  Calendar, FileText, BarChart3, PieChart, LineChart, Briefcase
+  Calendar, FileText, BarChart3, PieChart, LineChart, Briefcase, Bell
 } from 'lucide-react';
 import StaffShortagePredictorModal from './StaffShortagePredictorModal';
 import BurnoutDetectorModal from './BurnoutDetectorModal';
