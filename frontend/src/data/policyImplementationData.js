@@ -107,6 +107,61 @@ export const committeesDatabase = {
       'Advise on end-of-life decisions'
     ],
     reportingTo: 'Board of Directors'
+  },
+
+  grievance_redressal_committee: {
+    id: 'grievance_redressal_committee',
+    name: 'Grievance Redressal Committee (GRC)',
+    composition: [
+      { role: 'HR Director/Chairperson', count: 1, qualifications: 'Senior HR professional with dispute resolution experience', powers: ['Committee leadership', 'Final decision authority', 'Policy interpretation', 'Case escalation'] },
+      { role: 'Department Head (Rotating)', count: 1, qualifications: 'Senior department head from relevant area', powers: ['Departmental perspective', 'Operational insight', 'Resource allocation', 'Implementation oversight'] },
+      { role: 'Employee Representative', count: 2, qualifications: 'Elected by employees, min 2 years service', powers: ['Staff concerns representation', 'Peer perspective', 'Fair hearing advocacy', 'Ground-level feedback'] },
+      { role: 'Legal Advisor', count: 1, qualifications: 'Labor law specialist or internal legal counsel', powers: ['Legal compliance', 'Due process oversight', 'Documentation review', 'Risk assessment'] },
+      { role: 'External Member (Optional)', count: 1, qualifications: 'HR expert or mediator from outside organization', powers: ['Impartial perspective', 'Mediation services', 'Best practices guidance', 'Conflict resolution'] }
+    ],
+    meetings: 'As required (within 7 days of grievance filing)',
+    quorum: '4 members (including HR Director)',
+    powers: [
+      'Receive and investigate employee grievances',
+      'Conduct fair and impartial hearings',
+      'Interview relevant parties and witnesses',
+      'Review evidence and documentation',
+      'Recommend corrective actions or disciplinary measures',
+      'Monitor resolution implementation',
+      'Maintain confidential grievance records',
+      'Report quarterly to Board on grievance trends'
+    ],
+    reportingTo: 'Board of Directors',
+    mandatoryUnder: 'Industrial Disputes Act, 1947 & Standing Orders',
+    relatedByLawSection: 'Section 12 - Grievance Redressal'
+  },
+
+  internal_complaints_committee: {
+    id: 'internal_complaints_committee',
+    name: 'Internal Complaints Committee (ICC)',
+    composition: [
+      { role: 'Presiding Officer (Female)', count: 1, qualifications: 'Senior female employee from management level', powers: ['Committee leadership', 'Investigation oversight', 'Final recommendations', 'Confidentiality management'] },
+      { role: 'Internal Members (Female)', count: 2, qualifications: 'Female employees with commitment to women\'s issues', powers: ['Complaint investigation', 'Witness interviews', 'Evidence assessment', 'Support to complainant'] },
+      { role: 'Internal Member (Male)', count: 1, qualifications: 'Male employee with understanding of gender issues', powers: ['Balanced perspective', 'Investigation support', 'Fair hearing', 'Documentation'] },
+      { role: 'External Member (Female)', count: 1, qualifications: 'NGO/expert in women\'s rights or social work', powers: ['Impartial oversight', 'Expert guidance', 'Legal compliance', 'Best practices'] }
+    ],
+    meetings: 'As required (within 7 days of complaint)',
+    quorum: '3 members (including Presiding Officer)',
+    powers: [
+      'Receive complaints of sexual harassment',
+      'Conduct inquiries as per POSH Act guidelines',
+      'Ensure confidentiality and privacy',
+      'Provide interim relief to complainant if needed',
+      'Complete inquiry within 90 days',
+      'Submit inquiry report with findings',
+      'Recommend disciplinary action if harassment proven',
+      'Conduct awareness programs on POSH',
+      'Submit annual report to District Officer',
+      'Display ICC details prominently in workplace'
+    ],
+    reportingTo: 'Board of Directors & District Officer',
+    mandatoryUnder: 'Sexual Harassment of Women at Workplace (Prevention, Prohibition and Redressal) Act, 2013 (POSH Act)',
+    relatedByLawSection: 'Section 14 - Prevention of Sexual Harassment (POSH)'
   }
 };
 
