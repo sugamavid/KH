@@ -9,20 +9,23 @@ import {
 // Import tool components
 import DailyTaskGenerator from './tools/DailyTaskGenerator';
 import SmartFormAssistant from './tools/SmartFormAssistant';
-import RecruitmentPipeline from './tools/RecruitmentPipeline';
-import OnboardingHub from './tools/OnboardingHub';
-import PerformanceScheduler from './tools/PerformanceScheduler';
-import AttendanceDashboard from './tools/AttendanceDashboard';
-import PayrollProcessor from './tools/PayrollProcessor';
-import TrainingTracker from './tools/TrainingTracker';
-import SecurityCompliance from './tools/SecurityCompliance';
-import WellnessMonitor from './tools/WellnessMonitor';
-import GrievanceTracker from './tools/GrievanceTracker';
-import ExitAutomation from './tools/ExitAutomation';
-import ComplianceCalendar from './tools/ComplianceCalendar';
-import BulkFormGenerator from './tools/BulkFormGenerator';
-import AnalyticsDashboard from './tools/AnalyticsDashboard';
 import FormLibrary from './tools/FormLibrary';
+import {
+  RecruitmentPipeline,
+  OnboardingHub,
+  PerformanceScheduler,
+  AttendanceDashboard,
+  PayrollProcessor,
+  TrainingTracker,
+  SecurityCompliance,
+  WellnessMonitor,
+  GrievanceTracker,
+  ExitAutomation,
+  ComplianceCalendar,
+  BulkFormGenerator,
+  AnalyticsDashboard,
+  DocumentLifecycle
+} from './tools/index';
 
 const SmartAnnexuresDashboard = () => {
   const [activeTool, setActiveTool] = useState(null);
