@@ -290,6 +290,7 @@ const ProfessionalG2Form = () => {
             <li>Records must be archived for 10 years for statutory and accreditation audits.</li>
           </ul>
         </div>
+        </div>
       </div>
 
       {/* Footer */}
