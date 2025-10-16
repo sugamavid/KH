@@ -1124,7 +1124,8 @@ const HRAnnexures = ({ setActiveModule }) => {
         tools: [
           { id: 'security', name: 'IT Security Monitor', icon: AlertCircle, desc: 'Device allocation, access logs, and cybersecurity incident tracking', color: 'red', badge: 'SECURITY' },
           { id: 'wellness', name: 'Employee Wellness Hub', icon: Users, desc: 'Health screenings, EAP referrals, and work-life balance tracking', color: 'pink', badge: 'WELLNESS' },
-          { id: 'audit', name: 'Audit Trail System', icon: FileText, desc: 'Complete audit trail of all form submissions and approvals', color: 'purple', badge: 'COMPLIANCE' }
+          { id: 'audit', name: 'Audit Trail System', icon: FileText, desc: 'Complete audit trail of all form submissions and approvals', color: 'purple', badge: 'COMPLIANCE' },
+          { id: 'policy-tracker', name: 'Policy Compliance Tracker', icon: CheckCircle, desc: 'Track policy acknowledgments, renewals, and compliance status', color: 'rose', badge: 'MANDATORY' }
         ]
       },
       {
