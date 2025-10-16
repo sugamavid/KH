@@ -118,7 +118,6 @@ const ProfessionalB1Form = () => {
           </div>
         </div>
       </div>
-      </div>
 
       {/* Document Metadata Bar */}
       <div className="bg-slate-50 px-8 py-4 border-b-2 border-teal-700 flex items-center justify-between">
@@ -131,7 +130,6 @@ const ProfessionalB1Form = () => {
           <div><span className="font-semibold text-slate-900">SOP:</span> B.1</div>
           <div className="w-px h-4 bg-slate-300"></div>
           <div><span className="font-semibold text-slate-900">Version:</span> 1.0</div>
-        </div>
         <div className="flex items-center gap-4">
           <div className="flex items-center gap-2">
             <span className="text-xs text-slate-600">Progress:</span>
@@ -172,7 +170,6 @@ const ProfessionalB1Form = () => {
             <span>Approval Authority: CEO / Medical Director</span>
           </div>
         </div>
-      </div>
 
       {/* Form Content */}
       <div className="px-8 py-8 space-y-8">
@@ -226,7 +223,6 @@ const ProfessionalB1Form = () => {
               <label className="block text-sm font-semibold text-slate-700 mb-2">Location/Unit</label>
               <input type="text" value={formData.req_location} onChange={(e) => handleChange('req_location', e.target.value)} placeholder="e.g., ICU, OPD" className="w-full px-4 py-2 border-2 border-slate-300 rounded-lg focus:border-teal-500 focus:outline-none" />
             </div>
-          </div>
           <div className="mt-6">
             <label className="block text-sm font-semibold text-slate-700 mb-2">Reason for Requisition *</label>
             <textarea value={formData.req_reason} onChange={(e) => handleChange('req_reason', e.target.value)} placeholder="e.g., Replacement, New Position, Workload Increase" rows={3} className="w-full px-4 py-3 border-2 border-slate-300 rounded-lg focus:border-teal-500 focus:outline-none" />
@@ -300,7 +296,6 @@ const ProfessionalB1Form = () => {
                 <input type="text" value={formData.hod_name} onChange={(e) => handleChange('hod_name', e.target.value)} placeholder="Name" className="px-3 py-2 border border-slate-300 rounded focus:border-teal-500 focus:outline-none" />
                 <input type="date" value={formData.hod_date} onChange={(e) => handleChange('hod_date', e.target.value)} className="px-3 py-2 border border-slate-300 rounded focus:border-teal-500 focus:outline-none" />
               </div>
-            </div>
             <div className="border-2 border-slate-300 rounded-lg p-4">
               <p className="font-semibold text-slate-900 mb-3">HR Manager</p>
               <div className="border-b-2 border-slate-400 mb-3 h-12"></div>
@@ -308,7 +303,6 @@ const ProfessionalB1Form = () => {
                 <input type="text" value={formData.hr_name} onChange={(e) => handleChange('hr_name', e.target.value)} placeholder="Name" className="px-3 py-2 border border-slate-300 rounded focus:border-teal-500 focus:outline-none" />
                 <input type="date" value={formData.hr_date} onChange={(e) => handleChange('hr_date', e.target.value)} className="px-3 py-2 border border-slate-300 rounded focus:border-teal-500 focus:outline-none" />
               </div>
-            </div>
             <div className="border-2 border-slate-300 rounded-lg p-4">
               <p className="font-semibold text-slate-900 mb-3">Finance Manager</p>
               <div className="border-b-2 border-slate-400 mb-3 h-12"></div>
@@ -316,7 +310,6 @@ const ProfessionalB1Form = () => {
                 <input type="text" value={formData.fin_name} onChange={(e) => handleChange('fin_name', e.target.value)} placeholder="Name" className="px-3 py-2 border border-slate-300 rounded focus:border-teal-500 focus:outline-none" />
                 <input type="date" value={formData.fin_date} onChange={(e) => handleChange('fin_date', e.target.value)} className="px-3 py-2 border border-slate-300 rounded focus:border-teal-500 focus:outline-none" />
               </div>
-            </div>
             <div className="border-2 border-slate-300 rounded-lg p-4">
               <p className="font-semibold text-slate-900 mb-3">CEO / Medical Director</p>
               <div className="border-b-2 border-slate-400 mb-3 h-12"></div>

@@ -184,7 +184,6 @@ const ProfessionalF3Form = () => {
               </div>
             </div>
           </div>
-        </div>
         <div className="bg-blue-50 px-8 py-3 border-b-2 border-blue-900">
           <div className="flex items-center gap-6 text-xs font-semibold text-blue-900">
             <span>📋 Special Leave</span>

@@ -102,7 +102,6 @@ const ProfessionalB9Form = () => {
           </div>
         </div>
       </div>
-      </div>
 
       <div className="bg-white border-b-2 border-slate-200 px-8 py-3 flex items-center justify-end gap-3">
         <button onClick={handleSave} className="px-4 py-2 bg-sky-600 text-white rounded-lg hover:bg-sky-700 transition-colors flex items-center gap-2 text-sm font-semibold">

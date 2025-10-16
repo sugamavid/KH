@@ -325,7 +325,6 @@ const ProfessionalA1Form = () => {
             </div>
           </div>
         </div>
-      </div>
 
       {/* Main Content */}
       <div className="max-w-7xl mx-auto p-6">
@@ -337,7 +336,6 @@ const ProfessionalA1Form = () => {
             <div className="absolute inset-0 opacity-5">
               <div className="absolute top-10 left-10 text-9xl font-bold transform -rotate-45">KOYILI</div>
               <div className="absolute bottom-10 right-10 text-9xl font-bold transform -rotate-45">HOSPITAL</div>
-            </div>
             
             <div className="relative grid grid-cols-[200px_1fr_200px] gap-6 items-center p-8">
               {/* Hospital Logo */}
@@ -373,7 +371,6 @@ const ProfessionalA1Form = () => {
                   </div>
                 </div>
               </div>
-            </div>
             
             {/* Document Control Strip */}
             <div className="bg-blue-900/50 backdrop-blur-sm px-8 py-3 grid grid-cols-5 gap-4 text-xs">
@@ -398,7 +395,6 @@ const ProfessionalA1Form = () => {
                 <p className="text-white font-bold">CEO / Medical Director</p>
               </div>
             </div>
-          </div>
 
           {/* Purpose Banner */}
           <div className="bg-gradient-to-r from-blue-900 via-blue-800 to-blue-700 text-white px-8 py-6">
@@ -428,7 +424,6 @@ const ProfessionalA1Form = () => {
           </div>
         </div>
       </div>
-          </div>
 
           {/* Form Content - Will continue in next part... */}
           <div className="p-8 space-y-8">
@@ -614,7 +609,6 @@ const ProfessionalA1Form = () => {
                         placeholder="e.g., Version 2.1 - Jan 2024"
                       />
                     </div>
-                  </div>
                   
                   <div>
                     <label className="block text-sm font-bold text-slate-700 mb-2">
@@ -739,7 +733,6 @@ const ProfessionalA1Form = () => {
                       </label>
                     ))}
                   </div>
-                </div>
 
                 {/* Detailed Rationale */}
                 <div>
@@ -773,7 +766,6 @@ const ProfessionalA1Form = () => {
                       </p>
                     )}
                   </div>
-                </div>
 
                 {/* Impact Assessment */}
                 <div>
@@ -861,14 +853,12 @@ const ProfessionalA1Form = () => {
                         placeholder="Comments or conditions..."
                       />
                     </div>
-                  </div>
                   <div className="mt-4 h-20 border-2 border-dashed border-slate-300 rounded-lg flex items-center justify-center text-slate-400">
                     <div className="text-center">
                       <Edit3 className="w-6 h-6 mx-auto mb-1" />
                       <p className="text-xs">Digital Signature Area</p>
                     </div>
                   </div>
-                </div>
 
                 {/* HR Manager */}
                 <div className="border-2 border-blue-200 rounded-xl p-6 bg-blue-50">
@@ -911,14 +901,12 @@ const ProfessionalA1Form = () => {
                         placeholder="Comments or conditions..."
                       />
                     </div>
-                  </div>
                   <div className="mt-4 h-20 border-2 border-dashed border-slate-300 rounded-lg flex items-center justify-center text-slate-400">
                     <div className="text-center">
                       <Edit3 className="w-6 h-6 mx-auto mb-1" />
                       <p className="text-xs">Digital Signature Area</p>
                     </div>
                   </div>
-                </div>
 
                 {/* Compliance Officer */}
                 <div className="border-2 border-purple-200 rounded-xl p-6 bg-purple-50">
@@ -961,14 +949,12 @@ const ProfessionalA1Form = () => {
                         placeholder="Comments or conditions..."
                       />
                     </div>
-                  </div>
                   <div className="mt-4 h-20 border-2 border-dashed border-slate-300 rounded-lg flex items-center justify-center text-slate-400">
                     <div className="text-center">
                       <Edit3 className="w-6 h-6 mx-auto mb-1" />
                       <p className="text-xs">Digital Signature Area</p>
                     </div>
                   </div>
-                </div>
 
                 {/* CEO / Medical Director */}
                 <div className="border-2 border-red-200 rounded-xl p-6 bg-red-50">
@@ -1011,7 +997,6 @@ const ProfessionalA1Form = () => {
                         placeholder="Final approval decision, comments, or conditions..."
                       />
                     </div>
-                  </div>
                   <div className="mt-4 h-24 border-2 border-dashed border-slate-300 rounded-lg flex items-center justify-center text-slate-400">
                     <div className="text-center">
                       <Shield className="w-8 h-8 mx-auto mb-1" />
@@ -1051,7 +1036,6 @@ const ProfessionalA1Form = () => {
                   </ul>
                 </div>
               </div>
-            </div>
             
           </div>
 
@@ -1066,13 +1050,11 @@ const ProfessionalA1Form = () => {
               <p className="text-sm font-semibold">© 2024 Koyili Hospital</p>
               <p className="text-xs text-blue-200">NABH Accredited • Confidential Document • Version-controlled</p>
             </div>
-          </div>
           <div className="text-right">
             <p className="text-sm font-bold">Form A1</p>
             <p className="text-xs text-blue-200">Form</p>
           </div>
         </div>
-      </div>
 
         </div>
       </div>

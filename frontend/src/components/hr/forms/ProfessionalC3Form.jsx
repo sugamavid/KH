@@ -106,7 +106,6 @@ const ProfessionalC3Form = () => {
           </div>
         </div>
       </div>
-      </div>
 
       <div className="bg-zinc-50 px-8 py-4 border-b-2 border-zinc-700 flex items-center justify-between">
         <div className="flex items-center gap-6 text-xs">

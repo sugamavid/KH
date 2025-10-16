@@ -148,7 +148,6 @@ const ProfessionalA3Form = () => {
           </div>
         </div>
       </div>
-      </div>
 
       {/* Document Metadata Bar */}
       <div className="bg-slate-50 px-8 py-4 border-b-2 border-purple-700 flex items-center justify-between">
@@ -161,7 +160,6 @@ const ProfessionalA3Form = () => {
           <div><span className="font-semibold text-slate-900">SOP:</span> B.1</div>
           <div className="w-px h-4 bg-slate-300"></div>
           <div><span className="font-semibold text-slate-900">Version:</span> 1.0</div>
-        </div>
         <div className="flex items-center gap-4">
           <div className="flex items-center gap-2">
             <span className="text-xs text-slate-600">Progress:</span>
@@ -202,7 +200,6 @@ const ProfessionalA3Form = () => {
             <span>Approval Authority: CEO / Medical Director</span>
           </div>
         </div>
-      </div>
 
       {/* Form Content */}
       <div className="px-8 py-8 space-y-8">
@@ -418,7 +415,6 @@ const ProfessionalA3Form = () => {
                 <input type="text" value={formData.hr_name} onChange={(e) => handleChange('hr_name', e.target.value)} placeholder="Name" className="w-full px-3 py-2 border border-slate-300 rounded focus:border-purple-500 focus:outline-none" />
                 <input type="date" value={formData.hr_date} onChange={(e) => handleChange('hr_date', e.target.value)} className="w-full px-3 py-2 border border-slate-300 rounded focus:border-purple-500 focus:outline-none" />
               </div>
-            </div>
             <div className="border-2 border-slate-300 rounded-lg p-4">
               <p className="font-semibold text-slate-900 mb-3">Employee Acknowledgment</p>
               <div className="border-b-2 border-slate-400 mb-3 h-12"></div>

@@ -110,7 +110,6 @@ const ProfessionalB3Form = () => {
           </div>
         </div>
       </div>
-      </div>
 
       <div className="bg-slate-50 px-8 py-4 border-b-2 border-indigo-700 flex items-center justify-between">
         <div className="flex items-center gap-6 text-xs">

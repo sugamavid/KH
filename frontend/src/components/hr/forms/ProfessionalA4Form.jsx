@@ -116,7 +116,6 @@ const ProfessionalA4Form = () => {
           </div>
         </div>
       </div>
-      </div>
 
       {/* Document Metadata Bar */}
       <div className="bg-slate-50 px-8 py-4 border-b-2 border-orange-700 flex items-center justify-between">
@@ -129,7 +128,6 @@ const ProfessionalA4Form = () => {
           <div><span className="font-semibold text-slate-900">SOP:</span> A.4</div>
           <div className="w-px h-4 bg-slate-300"></div>
           <div><span className="font-semibold text-slate-900">Version:</span> 1.0</div>
-        </div>
         <div className="flex items-center gap-4">
           <div className="flex items-center gap-2">
             <span className="text-xs text-slate-600">Progress:</span>
@@ -170,7 +168,6 @@ const ProfessionalA4Form = () => {
             <span>Approval Authority: HR Manager / Compliance Officer</span>
           </div>
         </div>
-      </div>
 
       {/* Form Content */}
       <div className="px-8 py-8 space-y-8">
