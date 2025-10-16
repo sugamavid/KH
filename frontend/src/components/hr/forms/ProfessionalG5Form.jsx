@@ -244,10 +244,27 @@ const ProfessionalG5Form = () => {
           </tbody></table>
         </div>
 
-        <div className="bg-blue-50 border border-blue-200 rounded-xl p-5"><div className="flex items-center gap-3 mb-3"><Activity className="text-blue-700" size={20} /><h3 className="text-lg font-bold text-blue-900">Instructions for Use</h3></div><ul className="list-disc list-inside space-y-1 text-sm text-gray-700"><li>Screening may only be conducted by an authorized medical officer.</li><li>If found unfit, the employee must be immediately removed from duty.</li><li>A disciplinary action report must also be filed in Annexure G4.</li><li>HR must retain reports in the Personnel File (Annexure D1).</li><li>All records must be preserved for 10 years for legal, compliance, and accreditation audits.</li></ul></div>
+        </div>
       </div>
-
-      <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 px-6 py-3 text-xs text-gray-600 print:relative print:mt-8"><div className="flex justify-between items-center max-w-5xl mx-auto"><span>© Koyili Hospital • Confidential • Version-controlled</span><span>Form G5 – Intoxication Screening & Fitness to Work Format</span></div></div>
+      
+      {/* Matching Blue Gradient Footer */}
+      <div className="bg-gradient-to-r from-blue-900 via-blue-800 to-blue-700 px-8 py-5 mt-8">
+        <div className="flex items-center justify-between text-white">
+          <div className="flex items-center gap-4">
+            <div className="bg-yellow-500 rounded-full w-10 h-10 flex items-center justify-center">
+              <span className="text-blue-900 font-bold text-xs">NABH</span>
+            </div>
+            <div>
+              <p className="text-sm font-semibold">© 2024 Koyili Hospital</p>
+              <p className="text-xs text-blue-200">NABH Accredited • Confidential Document • Version-controlled</p>
+            </div>
+          </div>
+          <div className="text-right">
+            <p className="text-sm font-bold">Form G5</p>
+            <p className="text-xs text-blue-200">Intoxication Screening & Fitness</p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
