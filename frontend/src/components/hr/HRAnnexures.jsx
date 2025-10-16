@@ -1135,7 +1135,8 @@ const HRAnnexures = ({ setActiveModule }) => {
         tools: [
           { id: 'grievance', name: 'Grievance Resolution Tracker', icon: AlertCircle, desc: 'Track complaints, POSH cases, and disciplinary actions with timelines', color: 'rose', badge: 'SENSITIVE' },
           { id: 'exit', name: 'Exit Process Automation', icon: Users, desc: 'Resignation → Exit Interview → Clearance → F&F Settlement', color: 'slate', badge: 'END-TO-END' },
-          { id: 'retention', name: 'Retention Analytics', icon: TrendingUp, desc: 'Analyze exit trends and identify retention opportunities', color: 'indigo', badge: 'ANALYTICS' }
+          { id: 'retention', name: 'Retention Analytics', icon: TrendingUp, desc: 'Analyze exit trends and identify retention opportunities', color: 'indigo', badge: 'ANALYTICS' },
+          { id: 'sentiment', name: 'Employee Sentiment Monitor', icon: TrendingUp, desc: 'Real-time pulse surveys and sentiment analysis to prevent attrition', color: 'purple', badge: 'PREDICTIVE' }
         ]
       }
     ];
