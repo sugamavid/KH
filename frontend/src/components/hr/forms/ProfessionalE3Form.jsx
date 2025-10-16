@@ -72,39 +72,43 @@ const ProfessionalE3Form = () => {
 
   return (
     <div className="max-w-7xl mx-auto bg-white shadow-2xl">
-      <div className="bg-gradient-to-r from-emerald-700 via-teal-600 to-emerald-600 text-white p-8">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-6">
-            {logoData && <img src={logoData} alt="Logo" className="w-20 h-20 bg-white rounded-lg p-2 shadow-lg object-contain" />}
-            <div>
-              <h1 className="text-3xl font-bold tracking-tight">KOYILI HOSPITAL</h1>
-              <p className="text-emerald-200 text-sm mt-1">Leave & Attendance Department</p>
-              <p className="text-emerald-300 text-xs">Pallikkunnu, Talap, Kannur, Kerala</p>
+      {/* Compact NABH-Compliant Header */}
+      <div className="bg-gradient-to-r from-blue-900 via-blue-800 to-blue-700 text-white px-8 py-6">
+        <div className="flex items-center justify-between gap-6">
+          <div className="flex-shrink-0">
+            {logoData && <img src={logoData} alt="Koyili Hospital Logo" className="w-24 h-24 bg-white rounded-lg p-2 shadow-xl object-contain" />}
+          </div>
+          <div className="flex-1 text-center">
+            <h1 className="text-3xl font-bold tracking-wide mb-1">KOYILI HOSPITAL</h1>
+            <p className="text-blue-200 text-sm font-semibold">Human Resources Department</p>
+            <p className="text-blue-300 text-xs">NABH Accredited • Pallikkunnu, Talap, Kannur, Kerala</p>
+            <div className="mt-3 pt-3 border-t border-blue-400/30">
+              <h2 className="text-xl font-bold">LEAVE & SHORT LEAVE ENTRY LOG</h2>
             </div>
           </div>
-          <div className="text-right">
+          <div className="flex-shrink-0 text-right space-y-2">
             <div className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg border border-white/20">
-              <p className="text-xs text-emerald-200 mb-1">Leave Management</p>
-              <p className="text-sm font-bold">ENTRY LOG</p>
+              <p className="text-xs text-blue-200 mb-0.5">Annexure</p>
+              <p className="text-2xl font-bold">E3</p>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm px-4 py-1.5 rounded-lg border border-white/20">
+              <p className="text-xs text-blue-200">Version 1.0</p>
+            </div>
+            <div className="bg-yellow-500/90 px-3 py-1 rounded-full">
+              <p className="text-xs font-bold text-blue-900">NABH</p>
             </div>
           </div>
         </div>
       </div>
-
-      <div className="bg-emerald-50 px-8 py-4 border-b-2 border-emerald-700 flex items-center justify-between">
-        <div className="flex items-center gap-6 text-xs">
-          <div className="flex items-center gap-2">
-            <span className="font-semibold text-emerald-900">Annexure:</span>
-            <span className="bg-emerald-100 text-emerald-800 px-3 py-1 rounded font-bold">E3</span>
-          </div>
-          <div className="w-px h-4 bg-emerald-300"></div>
-          <div><span className="font-semibold text-emerald-900">SOP:</span> E.3</div>
-          <div className="w-px h-4 bg-emerald-300"></div>
-          <div><span className="font-semibold text-emerald-900">Version:</span> 1.0</div>
+      <div className="bg-blue-50 px-8 py-3 border-b-2 border-blue-900">
+        <div className="flex items-center gap-6 text-xs font-semibold text-blue-900">
+          <span>📋 Leave Management</span>
+          <div className="w-px h-4 bg-blue-300"></div>
+          <span>SOP E.3 – Leave Entry Log</span>
         </div>
       </div>
 
-      <div className="bg-white border-b-2 border-emerald-200 px-8 py-3 flex items-center justify-end gap-3">
+      <div className="bg-white border-b-2 border-blue-200 px-8 py-3 flex items-center justify-end gap-3">
         <button onClick={handleSave} className="px-4 py-2 bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 transition-colors flex items-center gap-2 text-sm font-semibold">
           <Save className="w-4 h-4" /> Save
         </button>
