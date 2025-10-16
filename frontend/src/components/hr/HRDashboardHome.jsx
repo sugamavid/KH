@@ -203,6 +203,14 @@ const HRDashboardHome = ({ setActiveModule }) => {
             <p className="text-sm text-slate-600 mt-1">Koyili Hospital • HR Operations Dashboard</p>
           </div>
           <div className="flex items-center space-x-3">
+            <button 
+              onClick={() => handleNavigation('intelligence')}
+              className="px-6 py-3 bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 text-white rounded-xl hover:shadow-2xl transition-all font-bold text-sm flex items-center animate-pulse hover:animate-none group"
+            >
+              <Zap className="w-5 h-5 mr-2 group-hover:rotate-12 transition-transform" />
+              CEO Intelligence Center
+              <ArrowUpRight className="w-4 h-4 ml-2" />
+            </button>
             <button className="px-4 py-2 bg-slate-100 text-slate-700 rounded-lg hover:bg-slate-200 transition-colors font-medium text-sm flex items-center">
               <Filter className="w-4 h-4 mr-2" />
               Filter
