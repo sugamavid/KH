@@ -223,10 +223,27 @@ const ProfessionalG3Form = () => {
           </tbody></table>
         </div>
 
-        <div className="bg-amber-50 border border-amber-200 rounded-xl p-5"><div className="flex items-center gap-3 mb-3"><AlertTriangle className="text-amber-700" size={20} /><h3 className="text-lg font-bold text-amber-900">Instructions for Use</h3></div><ul className="list-disc list-inside space-y-1 text-sm text-gray-700"><li>This form must be signed at joining and updated annually.</li><li>Employees must immediately disclose any new or emerging conflicts.</li><li>HR must retain signed forms in the Personnel File (Annexure D1).</li><li>Significant disclosures must be escalated to the Compliance Officer & Director.</li><li>Records must be preserved for 10 years for governance and accreditation audits.</li></ul></div>
+        </div>
       </div>
-
-      <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 px-6 py-3 text-xs text-gray-600 print:relative print:mt-8"><div className="flex justify-between items-center max-w-5xl mx-auto"><span>© Koyili Hospital • Confidential • Version-controlled</span><span>Form G3 – Conflict of Interest Disclosure Form</span></div></div>
+      
+      {/* Matching Blue Gradient Footer */}
+      <div className="bg-gradient-to-r from-blue-900 via-blue-800 to-blue-700 px-8 py-5 mt-8">
+        <div className="flex items-center justify-between text-white">
+          <div className="flex items-center gap-4">
+            <div className="bg-yellow-500 rounded-full w-10 h-10 flex items-center justify-center">
+              <span className="text-blue-900 font-bold text-xs">NABH</span>
+            </div>
+            <div>
+              <p className="text-sm font-semibold">© 2024 Koyili Hospital</p>
+              <p className="text-xs text-blue-200">NABH Accredited • Confidential Document • Version-controlled</p>
+            </div>
+          </div>
+          <div className="text-right">
+            <p className="text-sm font-bold">Form G3</p>
+            <p className="text-xs text-blue-200">Conflict of Interest Disclosure</p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
