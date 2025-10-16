@@ -6,6 +6,8 @@ import {
 } from 'lucide-react';
 import InteractiveFormViewer from './InteractiveFormViewer';
 import formTemplates, { formScenarios } from '../../data/formTemplates';
+import DailyTaskGenerator from './tools/DailyTaskGenerator';
+import SmartFormAssistant from './tools/SmartFormAssistant';
 import ProfessionalA1Form from './forms/ProfessionalA1Form';
 import ProfessionalA2Form from './forms/ProfessionalA2Form';
 import ProfessionalA3Form from './forms/ProfessionalA3Form';
