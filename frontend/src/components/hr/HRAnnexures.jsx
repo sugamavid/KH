@@ -1223,17 +1223,21 @@ const HRAnnexures = ({ setActiveModule }) => {
         </div>
 
         {/* Tool Categories */}
-        {toolCategories.map((category, idx) => (
-          <div key={idx} className="mb-10">
-            <div className="flex items-center space-x-4 mb-6">
-              <div className={`w-14 h-14 bg-gradient-to-br ${category.gradient} rounded-xl flex items-center justify-center shadow-lg`}>
-                <category.icon className="w-7 h-7 text-white" />
+        {toolCategories.map((category, idx) => {
+          // Get the actual gradient class without 'from-' prefix
+          const gradientClass = category.gradient;
+          
+          return (
+            <div key={idx} className="mb-10">
+              <div className="flex items-center space-x-4 mb-6">
+                <div className={`w-14 h-14 bg-gradient-to-br ${gradientClass} rounded-xl flex items-center justify-center shadow-lg`}>
+                  <category.icon className="w-7 h-7 text-white" />
+                </div>
+                <div>
+                  <h2 className="text-3xl font-black text-gray-900">{category.name}</h2>
+                  <p className="text-gray-500 text-sm font-medium">{category.tools.length} powerful automation tools</p>
+                </div>
               </div>
-              <div>
-                <h2 className="text-3xl font-black text-gray-900">{category.name}</h2>
-                <p className="text-gray-500 text-sm font-medium">{category.tools.length} powerful automation tools</p>
-              </div>
-            </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {category.tools.map(tool => {
