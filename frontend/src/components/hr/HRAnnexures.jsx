@@ -1178,7 +1178,7 @@ const HRAnnexures = ({ setActiveModule }) => {
               <div className="hidden lg:block">
                 <div className="bg-white/20 backdrop-blur-xl rounded-2xl px-8 py-4 border border-white/30 shadow-2xl">
                   <div className="text-center">
-                    <div className="text-4xl font-black text-white mb-1">18</div>
+                    <div className="text-4xl font-black text-white mb-1">22</div>
                     <div className="text-sm text-white/80 font-semibold">Smart Tools</div>
                   </div>
                 </div>
