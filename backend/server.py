@@ -117,11 +117,118 @@ class Tool(BaseModel):
     outputs: List[str]
 
 
+# ============ AUTHENTICATION HELPERS ============
+
+def create_access_token(data: dict):
+    to_encode = data.copy()
+    expire = datetime.now(timezone.utc) + timedelta(hours=ACCESS_TOKEN_EXPIRE_HOURS)
+    to_encode.update({"exp": expire})
+    encoded_jwt = jwt.encode(to_encode, SECRET_KEY, algorithm=ALGORITHM)
+    return encoded_jwt
+
+def verify_token(credentials: HTTPAuthorizationCredentials = Depends(security)):
+    try:
+        token = credentials.credentials
+        payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+        email: str = payload.get("sub")
+        if email is None:
+            raise HTTPException(
+                status_code=status.HTTP_401_UNAUTHORIZED,
+                detail="Could not validate credentials"
+            )
+        return payload
+    except jwt.ExpiredSignatureError:
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="Token has expired"
+        )
+    except jwt.JWTError:
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="Could not validate credentials"
+        )
+
+
 # ============ ROUTES ============
+
+@api_router.post("/auth/login", response_model=TokenResponse)
+async def login(login_data: LoginRequest):
+    """
+    Simple JWT-based login endpoint.
+    For demo purposes, accepts any email from koyilihospital.com domain with any password.
+    In production, this should verify against a user database with hashed passwords.
+    """
+    # Simple validation - accept any koyilihospital.com email
+    if not login_data.email.endswith('@koyilihospital.com'):
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="Invalid email domain. Must be @koyilihospital.com"
+        )
+    
+    if len(login_data.password) < 3:
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="Invalid password"
+        )
+    
+    # Extract user info from email
+    username = login_data.email.split('@')[0].replace('.', ' ').title()
+    
+    # Determine role and department based on email prefix
+    if 'hr' in login_data.email.lower():
+        role = "HR Manager"
+        department = "Human Resources"
+    elif 'admin' in login_data.email.lower():
+        role = "Administrator"
+        department = "Administration"
+    elif 'dr' in login_data.email.lower() or 'doctor' in login_data.email.lower():
+        role = "Doctor"
+        department = "Clinical Services"
+    else:
+        role = "Staff"
+        department = "General"
+    
+    # Create JWT token
+    token_data = {
+        "sub": login_data.email,
+        "name": username,
+        "role": role,
+        "department": department
+    }
+    access_token = create_access_token(token_data)
+    
+    return {
+        "access_token": access_token,
+        "token_type": "bearer",
+        "user": {
+            "email": login_data.email,
+            "name": username,
+            "role": role,
+            "department": department
+        }
+    }
+
+@api_router.post("/auth/verify")
+async def verify(payload: dict = Depends(verify_token)):
+    """Verify token and return user info"""
+    return {
+        "valid": True,
+        "user": {
+            "email": payload.get("sub"),
+            "name": payload.get("name"),
+            "role": payload.get("role"),
+            "department": payload.get("department")
+        }
+    }
 
 @api_router.get("/")
 async def root():
     return {"message": "Koyili Hospital Department Dashboard API"}
+
+# Protected route example (can be applied to any route)
+@api_router.get("/protected-example")
+async def protected_route(payload: dict = Depends(verify_token)):
+    return {"message": "This is a protected route", "user": payload}
 
 # Department Routes
 @api_router.get("/departments", response_model=List[Department])
