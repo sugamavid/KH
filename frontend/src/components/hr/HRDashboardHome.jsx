@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { 
   Users, Clock, DollarSign, TrendingUp, AlertCircle, CheckCircle2, Calendar, 
   Briefcase, FileText, UserPlus, LogOut, Award, Bell, AlertTriangle,
-  Download, Upload, Search, Filter, ArrowUpRight, Activity, Target
+  Download, Upload, Search, Filter, ArrowUpRight, Activity, Target, Zap
 } from 'lucide-react';
 import { DEMO_EMPLOYEES, DEMO_LEAVE_APPLICATIONS } from '../../data/hrDemoData';
 
