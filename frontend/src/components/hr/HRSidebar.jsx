@@ -12,7 +12,8 @@ import {
   Calculator,
   FileText,
   FolderOpen,
-  BookOpen
+  BookOpen,
+  Building2
 } from 'lucide-react';
 
 const HRSidebar = ({ activeModule, setActiveModule }) => {
