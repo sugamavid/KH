@@ -198,27 +198,6 @@ const HRAnnexures = ({ setActiveModule }) => {
       color: 'lime'
     },
     {
-      code: 'B8',
-      title: 'Pre-Employment Medical Fitness Certificate',
-      category: 'Recruitment',
-      linkedSOP: 'SOP B.8',
-      color: 'green'
-    },
-    {
-      code: 'B9',
-      title: 'Offer Letter Template',
-      category: 'Recruitment',
-      linkedSOP: 'SOP B.9',
-      color: 'sky'
-    },
-    {
-      code: 'B10',
-      title: 'Appointment Letter Template',
-      category: 'Recruitment',
-      linkedSOP: 'SOP B.10',
-      color: 'blue'
-    },
-    {
       code: 'C2',
       title: 'Uniform & ID Card Issue Register',
       category: 'Onboarding',
