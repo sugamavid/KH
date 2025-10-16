@@ -1057,6 +1057,96 @@ const HRAnnexures = ({ setActiveModule }) => {
     );
   };
 
+  // Smart Tools Hub Component
+  const SmartToolsHub = () => {
+    const [activeTool, setActiveTool] = useState(null);
+
+    const toolCategories = [
+      {
+        name: 'Daily Operations',
+        tools: [
+          { id: 'daily-tasks', name: 'Daily Task List Generator', icon: CheckCircle, desc: 'Generate time-bound tasks for all departments', color: 'blue' },
+          { id: 'smart-assistant', name: 'AI Form Intelligence Assistant', icon: Sparkles, desc: 'Natural language form recommendations', color: 'purple' },
+          { id: 'analytics', name: 'Real-Time Analytics Hub', icon: TrendingUp, desc: 'Form completion rates and metrics', color: 'green' }
+        ]
+      },
+      {
+        name: 'Process Automation',
+        tools: [
+          { id: 'recruitment', name: 'Smart Recruitment Pipeline', icon: Users, desc: 'End-to-end hiring workflow (B1-B10)', color: 'green' },
+          { id: 'onboarding', name: 'Onboarding Automation Hub', icon: Award, desc: 'Automated onboarding workflows (C1-C5)', color: 'teal' },
+          { id: 'exit', name: 'Exit Process Automation', icon: AlertCircle, desc: 'Complete exit management (N1-N4)', color: 'slate' }
+        ]
+      }
+    ];
+
+    if (activeTool === 'daily-tasks') {
+      return <DailyTaskGenerator onClose={() => setActiveTool(null)} />;
+    }
+    if (activeTool === 'smart-assistant') {
+      return <SmartFormAssistant onClose={() => setActiveTool(null)} />;
+    }
+
+    return (
+      <div className="p-8">
+        <div className="mb-8">
+          <div className="bg-gradient-to-r from-blue-900 via-blue-800 to-indigo-900 rounded-2xl shadow-2xl p-8 text-white">
+            <div className="flex items-center space-x-3 mb-4">
+              <Zap className="w-10 h-10 text-yellow-400" />
+              <div>
+                <h1 className="text-4xl font-black">Smart Annexures Hub</h1>
+                <p className="text-blue-100 text-lg font-medium">AI-Powered Administrative Automation Platform</p>
+              </div>
+            </div>
+            <div className="grid grid-cols-4 gap-4 mt-6">
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
+                <div className="text-2xl font-bold">76</div>
+                <div className="text-sm text-blue-200">Forms Available</div>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
+                <div className="text-2xl font-bold">100%</div>
+                <div className="text-sm text-blue-200">NABH Compliant</div>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
+                <div className="text-2xl font-bold">24/7</div>
+                <div className="text-sm text-blue-200">Automation</div>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
+                <div className="text-2xl font-bold">AI</div>
+                <div className="text-sm text-blue-200">Powered</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {toolCategories.map((category, idx) => (
+          <div key={idx} className="mb-8">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">{category.name}</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {category.tools.map(tool => (
+                <div
+                  key={tool.id}
+                  onClick={() => setActiveTool(tool.id)}
+                  className="group bg-white rounded-xl shadow-md hover:shadow-2xl transition-all p-6 cursor-pointer border-2 border-transparent hover:border-blue-400 transform hover:-translate-y-1"
+                >
+                  <div className={`w-14 h-14 bg-gradient-to-br from-${tool.color}-400 to-${tool.color}-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
+                    <tool.icon className="w-7 h-7 text-white" />
+                  </div>
+                  <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-blue-600">{tool.name}</h3>
+                  <p className="text-sm text-gray-600">{tool.desc}</p>
+                  <div className="mt-4 flex items-center text-blue-600 font-semibold text-sm opacity-0 group-hover:opacity-100">
+                    Open Tool
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    );
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
       {/* Sidebar */}
