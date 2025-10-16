@@ -1086,6 +1086,9 @@ const HRAnnexures = ({ setActiveModule }) => {
             </button>
             <AnnexureContent annexure={activeAnnexure} />
           </div>
+        ) : viewMode === 'smarttools' ? (
+          // Show Smart Tools Hub
+          <SmartToolsHub />
         ) : (
           // Show original dashboard
           <>
