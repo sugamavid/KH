@@ -602,6 +602,41 @@ const HRAnnexures = ({ setActiveModule }) => {
       linkedSOP: 'SOP M.3',
       color: 'rose'
     },
+    {
+      code: 'M4',
+      title: 'Appeal Submission Format',
+      category: 'Grievance & Disciplinary Management',
+      linkedSOP: 'SOP M.4',
+      color: 'red'
+    },
+    {
+      code: 'M5',
+      title: 'POSH Complaint Form & ICC Meeting Register',
+      category: 'Grievance & Disciplinary Management',
+      linkedSOP: 'SOP M.5',
+      color: 'pink'
+    },
+    {
+      code: 'N1',
+      title: 'Resignation Form & Withdrawal Request',
+      category: 'Employee Separation & Exit',
+      linkedSOP: 'SOP N.1',
+      color: 'teal'
+    },
+    {
+      code: 'N2',
+      title: 'Exit Interview Questionnaire',
+      category: 'Employee Separation & Exit',
+      linkedSOP: 'SOP N.2',
+      color: 'cyan'
+    },
+    {
+      code: 'N3',
+      title: 'Departmental Clearance Certificate',
+      category: 'Employee Separation & Exit',
+      linkedSOP: 'SOP N.3',
+      color: 'sky'
+    },
   ];
 
   // Mock data for dashboard stats
