@@ -375,13 +375,16 @@ frontend:
     implemented: true
     working: false
     file: "/app/frontend/src/components/hr/TrainingManagement.jsx"
-    stuck_count: 1
+    stuck_count: 2
     priority: "high"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
       - working: "NA"
         agent: "testing"
         comment: "COMPREHENSIVE MODULE VERIFICATION: Training & Development Hub is fully implemented with 16 training programs (TRN-001 to TRN-016) covering Clinical & Medical, Compliance & Regulatory, Safety & Emergency, Professional Development, and Soft Skills categories. FEATURES IMPLEMENTED: ✅ Search functionality (by title, instructor, description), ✅ Category filtering (6 categories with counts), ✅ Type filtering (Mandatory/Optional), ✅ View modes (Browse Catalog, My Trainings, Certifications, Schedule), ✅ Training card modals with full details, ✅ Action buttons (Enroll Now, Continue, Download Certificate), ✅ Progress bars and status indicators, ✅ Stats dashboard (Completed, In Progress, Not Started, Mandatory, Certificates). ACCESSIBILITY ISSUE: ❌ Cannot access due to session management problems - sessions expire during navigation preventing comprehensive testing of implemented functionality."
+      - working: false
+        agent: "testing"
+        comment: "CRITICAL SESSION MANAGEMENT ISSUE CONFIRMED: Extensive testing reveals persistent session expiration problem that prevents access to Training & Development Hub. LOGIN STATUS: ✅ Authentication works with hr.admin@koyilihospital.com/password, ✅ Successfully navigated to HR Department, ✅ Training & Development module visible in sidebar. CRITICAL BLOCKER: ❌ Sessions expire within minutes during navigation, ❌ Automatic redirects to login page prevent module testing, ❌ Multiple login attempts show same pattern. IMPACT: All 16 training programs (HIPAA, Fire Safety, CPR, Leadership, etc.) are implemented and accessible in codebase but completely inaccessible to users due to session persistence failure. This is a production-blocking authentication/JWT token issue requiring immediate main agent intervention."
 
   - task: "Reports & Analytics Hub - Comprehensive Testing"
     implemented: true
