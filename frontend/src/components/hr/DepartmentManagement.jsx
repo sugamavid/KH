@@ -198,33 +198,126 @@ const DepartmentManagement = () => {
     });
   };
 
-  const handleAddDepartment = () => {
+  const handleAddDepartment = async () => {
     const newDept = {
-      ...formData,
-      id: `DEPT-${String(departments.length + 1).padStart(3, '0')}`,
-      kpis: {
-        patientSatisfaction: 0,
-        avgWaitTime: 'N/A',
-        staffUtilization: 0
-      }
+      id: formData.code.toLowerCase() || `dept-${Date.now()}`,
+      name: formData.name,
+      description: formData.description,
+      icon: 'folder',
+      color: 'blue'
     };
-    setDepartments([...departments, newDept]);
-    setShowAddModal(false);
-    resetForm();
+    
+    try {
+      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/departments`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(newDept)
+      });
+      
+      if (response.ok) {
+        const createdDept = await response.json();
+        // Add full details to created department for display
+        const fullDept = {
+          ...createdDept,
+          code: formData.code,
+          head: formData.head,
+          headEmail: formData.headEmail,
+          headPhone: formData.headPhone,
+          employeeCount: formData.employeeCount,
+          budget: formData.budget,
+          status: formData.status,
+          location: formData.location,
+          establishedDate: formData.establishedDate,
+          functions: formData.functions,
+          kpis: {
+            patientSatisfaction: 0,
+            avgWaitTime: 'N/A',
+            staffUtilization: 0
+          }
+        };
+        setDepartments([...departments, fullDept]);
+        setShowAddModal(false);
+        resetForm();
+      } else {
+        const error = await response.json();
+        alert(`Failed to create department: ${error.detail}`);
+      }
+    } catch (error) {
+      console.error('Error creating department:', error);
+      alert('Failed to create department. Please try again.');
+    }
   };
 
-  const handleEditDepartment = () => {
-    setDepartments(departments.map(dept => 
-      dept.id === selectedDepartment.id ? { ...selectedDepartment, ...formData } : dept
-    ));
-    setShowEditModal(false);
-    setSelectedDepartment(null);
-    resetForm();
+  const handleEditDepartment = async () => {
+    const updatedDept = {
+      id: selectedDepartment.id,
+      name: formData.name,
+      description: formData.description,
+      icon: selectedDepartment.icon || 'folder',
+      color: selectedDepartment.color || 'blue'
+    };
+    
+    try {
+      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/departments/${selectedDepartment.id}`, {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(updatedDept)
+      });
+      
+      if (response.ok) {
+        const updated = await response.json();
+        // Update with full details
+        const fullUpdated = {
+          ...updated,
+          code: formData.code,
+          head: formData.head,
+          headEmail: formData.headEmail,
+          headPhone: formData.headPhone,
+          employeeCount: formData.employeeCount,
+          budget: formData.budget,
+          status: formData.status,
+          location: formData.location,
+          establishedDate: formData.establishedDate,
+          functions: formData.functions,
+          kpis: selectedDepartment.kpis
+        };
+        setDepartments(departments.map(dept => 
+          dept.id === selectedDepartment.id ? fullUpdated : dept
+        ));
+        setShowEditModal(false);
+        setSelectedDepartment(null);
+        resetForm();
+      } else {
+        const error = await response.json();
+        alert(`Failed to update department: ${error.detail}`);
+      }
+    } catch (error) {
+      console.error('Error updating department:', error);
+      alert('Failed to update department. Please try again.');
+    }
   };
 
-  const handleDeleteDepartment = (id) => {
+  const handleDeleteDepartment = async (id) => {
     if (window.confirm('Are you sure you want to delete this department? This action cannot be undone.')) {
-      setDepartments(departments.filter(dept => dept.id !== id));
+      try {
+        const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/departments/${id}`, {
+          method: 'DELETE'
+        });
+        
+        if (response.ok) {
+          setDepartments(departments.filter(dept => dept.id !== id));
+        } else {
+          const error = await response.json();
+          alert(`Failed to delete department: ${error.detail}`);
+        }
+      } catch (error) {
+        console.error('Error deleting department:', error);
+        alert('Failed to delete department. Please try again.');
+      }
     }
   };
 
