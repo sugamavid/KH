@@ -333,6 +333,17 @@ const ProfessionalG2Form = () => {
         </div>
       </div>
     </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
   );
 };
 

@@ -420,6 +420,20 @@ const ProfessionalF2Form = () => {
         </div>
       </div>
     </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
   );
 };
 
