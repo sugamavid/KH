@@ -638,6 +638,13 @@ const HRAnnexures = ({ setActiveModule }) => {
       linkedSOP: 'SOP N.3',
       color: 'sky'
     },
+    {
+      code: 'N4',
+      title: 'Full & Final Settlement & Service Certificate',
+      category: 'Employee Separation & Exit',
+      linkedSOP: 'SOP N.4',
+      color: 'blue'
+    },
   ];
 
   // Mock data for dashboard stats
