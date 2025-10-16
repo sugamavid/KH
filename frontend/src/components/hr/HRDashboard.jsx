@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import HRSidebar from './HRSidebar';
 import HRDashboardHome from './HRDashboardHome';
+import AdminIntelligenceDashboard from './AdminIntelligenceDashboard';
 import EmployeeManagement from './EmployeeManagement';
 import AttendanceLeave from './AttendanceLeave';
 import PayrollManagement from './PayrollManagement';
