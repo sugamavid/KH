@@ -72,7 +72,8 @@ const AdminIntelligenceDashboard = ({ setActiveModule }) => {
       departments: ['ICU', 'Emergency', 'OT'],
       confidence: '89%',
       action: 'View Predictions',
-      severity: 'high'
+      severity: 'high',
+      onClick: () => setShowShortagePredictor(true)
     },
     {
       name: 'Employee Burnout Detector',
@@ -82,7 +83,8 @@ const AdminIntelligenceDashboard = ({ setActiveModule }) => {
       metrics: 'Excessive overtime, low leave usage',
       confidence: '76%',
       action: 'View At-Risk Staff',
-      severity: 'medium'
+      severity: 'medium',
+      onClick: () => setShowBurnoutDetector(true)
     },
     {
       name: 'Turnover Risk Analyzer',
@@ -92,7 +94,8 @@ const AdminIntelligenceDashboard = ({ setActiveModule }) => {
       departments: ['Nursing', 'Lab', 'Radiology'],
       confidence: '82%',
       action: 'View Risk Report',
-      severity: 'medium'
+      severity: 'medium',
+      onClick: () => alert('Turnover Risk Analyzer - Coming Soon!')
     },
     {
       name: 'Compliance Deadline Tracker',
@@ -102,7 +105,8 @@ const AdminIntelligenceDashboard = ({ setActiveModule }) => {
       categories: ['Certifications', 'Training', 'Licenses'],
       confidence: '100%',
       action: 'View Timeline',
-      severity: 'high'
+      severity: 'high',
+      onClick: () => alert('Compliance Deadline Tracker - Coming Soon!')
     },
     {
       name: 'Skill Gap Analyzer',
@@ -112,7 +116,8 @@ const AdminIntelligenceDashboard = ({ setActiveModule }) => {
       gaps: ['ACLS', 'BLS', 'Infection Control'],
       confidence: '94%',
       action: 'View Gap Analysis',
-      severity: 'low'
+      severity: 'low',
+      onClick: () => alert('Skill Gap Analyzer - Coming Soon!')
     },
     {
       name: 'Cost Optimization Engine',
@@ -122,7 +127,8 @@ const AdminIntelligenceDashboard = ({ setActiveModule }) => {
       areas: ['Overtime', 'Temp Staff', 'Idle Time'],
       confidence: '87%',
       action: 'View Opportunities',
-      severity: 'low'
+      severity: 'low',
+      onClick: () => alert('Cost Optimization Engine - Coming Soon!')
     }
   ];
 
