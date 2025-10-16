@@ -26,7 +26,8 @@ const HRDashboardHome = ({ setActiveModule }) => {
       color: 'blue',
       trend: '+2',
       trendLabel: 'vs last month',
-      percentage: ((DEMO_EMPLOYEES.filter(e => e.status === 'Active').length / DEMO_EMPLOYEES.length) * 100).toFixed(0)
+      percentage: ((DEMO_EMPLOYEES.filter(e => e.status === 'Active').length / DEMO_EMPLOYEES.length) * 100).toFixed(0),
+      module: 'employees'
     },
     { 
       title: 'Attendance Rate', 
@@ -35,7 +36,8 @@ const HRDashboardHome = ({ setActiveModule }) => {
       color: 'green',
       trend: '+3%',
       trendLabel: 'vs last month',
-      status: 'Excellent'
+      status: 'Excellent',
+      module: 'attendance'
     },
     { 
       title: 'Pending Clearances', 
@@ -44,7 +46,8 @@ const HRDashboardHome = ({ setActiveModule }) => {
       color: 'orange',
       trend: '-2',
       trendLabel: 'vs last week',
-      urgent: true
+      urgent: true,
+      module: 'employees'
     },
     { 
       title: 'Payroll Status', 
@@ -52,7 +55,8 @@ const HRDashboardHome = ({ setActiveModule }) => {
       icon: DollarSign, 
       color: 'emerald',
       subtitle: 'Next: Jan 30, 2025',
-      amount: '₹8.1L'
+      amount: '₹8.1L',
+      module: 'payroll'
     }
   ];
 
