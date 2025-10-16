@@ -20,7 +20,16 @@ import DocumentManagement from './DocumentManagement';
 import DepartmentManagement from './DepartmentManagement';
 
 const HRDashboard = () => {
-  const [activeModule, setActiveModule] = useState('dashboard');
+  // Initialize activeModule from localStorage or default to 'dashboard'
+  const [activeModule, setActiveModule] = useState(() => {
+    const savedModule = localStorage.getItem('hrActiveModule');
+    return savedModule || 'dashboard';
+  });
+
+  // Save activeModule to localStorage whenever it changes
+  React.useEffect(() => {
+    localStorage.setItem('hrActiveModule', activeModule);
+  }, [activeModule]);
 
   // Define modules that should hide the HR sidebar (legal documents)
   const legalDocumentModules = ['bylaws', 'sops', 'annexures'];
