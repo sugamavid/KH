@@ -234,14 +234,28 @@ const ProfessionalB6Form = () => {
         <section className="bg-amber-50 border-2 border-amber-400 rounded-lg p-6">
           <p className="text-sm text-slate-800 leading-relaxed"><strong>Note:</strong> This summary consolidates all evaluation stages (B4-B5). Final offer letters shall only be issued upon approval and compliance with SOP B.6.</p>
         </section>
-      </div>
-
-      <div className="border-t-2 border-rose-700 bg-gradient-to-r from-rose-700 via-pink-700 to-rose-700 px-8 py-6 text-white">
-        <div className="flex items-center justify-between text-sm">
-          <p>© Koyili Hospital • Confidential • Version-controlled</p>
-          <p>Annexure B6 • Version 1.0</p>
+      
+      {/* Matching Blue Gradient Footer */}
+      <div className="bg-gradient-to-r from-blue-900 via-blue-800 to-blue-700 px-8 py-5 mt-8">
+        <div className="flex items-center justify-between text-white">
+          <div className="flex items-center gap-4">
+            <div className="bg-yellow-500 rounded-full w-10 h-10 flex items-center justify-center">
+              <span className="text-blue-900 font-bold text-xs">NABH</span>
+            </div>
+            <div>
+              <p className="text-sm font-semibold">© 2024 Koyili Hospital</p>
+              <p className="text-xs text-blue-200">NABH Accredited • Confidential Document • Version-controlled</p>
+            </div>
+          </div>
+          <div className="text-right">
+            <p className="text-sm font-bold">Form B6</p>
+            <p className="text-xs text-blue-200">Background Verification</p>
+          </div>
         </div>
       </div>
+    </div>
+
+      
     </div>
   );
 };

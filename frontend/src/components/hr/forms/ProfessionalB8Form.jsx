@@ -287,14 +287,28 @@ const ProfessionalB8Form = () => {
         <section className="bg-amber-50 border-2 border-amber-400 rounded-lg p-6">
           <p className="text-sm text-slate-800 leading-relaxed"><strong>Note:</strong> This Annexure shall be read in conjunction with SOP B.8 (Pre-Employment Medical Examination) and By-Laws Section 2.2(d). No employee shall join duty without submission of a duly certified Medical Fitness Certificate in this format.</p>
         </section>
-      </div>
-
-      <div className="border-t-2 border-green-700 bg-gradient-to-r from-green-700 via-emerald-700 to-green-700 px-8 py-6 text-white">
-        <div className="flex items-center justify-between text-sm">
-          <p>© Koyili Hospital • Medical Certificate • Version-controlled</p>
-          <p>Annexure B8 • Version 1.0</p>
+      
+      {/* Matching Blue Gradient Footer */}
+      <div className="bg-gradient-to-r from-blue-900 via-blue-800 to-blue-700 px-8 py-5 mt-8">
+        <div className="flex items-center justify-between text-white">
+          <div className="flex items-center gap-4">
+            <div className="bg-yellow-500 rounded-full w-10 h-10 flex items-center justify-center">
+              <span className="text-blue-900 font-bold text-xs">NABH</span>
+            </div>
+            <div>
+              <p className="text-sm font-semibold">© 2024 Koyili Hospital</p>
+              <p className="text-xs text-blue-200">NABH Accredited • Confidential Document • Version-controlled</p>
+            </div>
+          </div>
+          <div className="text-right">
+            <p className="text-sm font-bold">Form B8</p>
+            <p className="text-xs text-blue-200">Probation Review</p>
+          </div>
         </div>
       </div>
+    </div>
+
+      
     </div>
   );
 };

@@ -275,14 +275,28 @@ const ProfessionalB3Form = () => {
         <section className="bg-amber-50 border-2 border-amber-400 rounded-lg p-6">
           <p className="text-sm text-slate-800 leading-relaxed"><strong>Note:</strong> This advertisement template must be approved before posting. All information must be consistent with the approved Job Description (Annexure A3).</p>
         </section>
-      </div>
-
-      <div className="border-t-2 border-indigo-700 bg-gradient-to-r from-indigo-700 via-blue-700 to-indigo-700 px-8 py-6 text-white">
-        <div className="flex items-center justify-between text-sm">
-          <p>© Koyili Hospital • Confidential • Version-controlled</p>
-          <p>Annexure B3 • Version 1.0</p>
+      
+      {/* Matching Blue Gradient Footer */}
+      <div className="bg-gradient-to-r from-blue-900 via-blue-800 to-blue-700 px-8 py-5 mt-8">
+        <div className="flex items-center justify-between text-white">
+          <div className="flex items-center gap-4">
+            <div className="bg-yellow-500 rounded-full w-10 h-10 flex items-center justify-center">
+              <span className="text-blue-900 font-bold text-xs">NABH</span>
+            </div>
+            <div>
+              <p className="text-sm font-semibold">© 2024 Koyili Hospital</p>
+              <p className="text-xs text-blue-200">NABH Accredited • Confidential Document • Version-controlled</p>
+            </div>
+          </div>
+          <div className="text-right">
+            <p className="text-sm font-bold">Form B3</p>
+            <p className="text-xs text-blue-200">Candidate Interview Evaluation</p>
+          </div>
         </div>
       </div>
+    </div>
+
+      
     </div>
   );
 };

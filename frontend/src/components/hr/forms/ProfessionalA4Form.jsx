@@ -322,10 +322,24 @@ const ProfessionalA4Form = () => {
       </div>
 
       {/* Professional Footer */}
-      <div className="border-t-2 border-orange-700 bg-gradient-to-r from-orange-700 via-red-700 to-orange-700 px-8 py-6 text-white">
-        <div className="flex items-center justify-between text-sm">
-          <p>© Koyili Hospital – HR • Confidential • Version‑controlled</p>
-          <p>Annexure A4 • Version 1.0</p>
+      
+    
+      {/* Matching Blue Gradient Footer */}
+      <div className="bg-gradient-to-r from-blue-900 via-blue-800 to-blue-700 px-8 py-5 mt-8">
+        <div className="flex items-center justify-between text-white">
+          <div className="flex items-center gap-4">
+            <div className="bg-yellow-500 rounded-full w-10 h-10 flex items-center justify-center">
+              <span className="text-blue-900 font-bold text-xs">NABH</span>
+            </div>
+            <div>
+              <p className="text-sm font-semibold">© 2024 Koyili Hospital</p>
+              <p className="text-xs text-blue-200">NABH Accredited • Confidential Document • Version-controlled</p>
+            </div>
+          </div>
+          <div className="text-right">
+            <p className="text-sm font-bold">Form A4</p>
+            <p className="text-xs text-blue-200">Employee Handbook Acknowledgment</p>
+          </div>
         </div>
       </div>
     </div>

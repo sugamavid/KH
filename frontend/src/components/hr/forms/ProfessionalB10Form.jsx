@@ -200,13 +200,29 @@ const ProfessionalB10Form = () => {
             <input type="text" value={formData.emp_ack_name} onChange={(e) => handleChange('emp_ack_name', e.target.value)} placeholder="Employee Name" className="px-3 py-2 border border-slate-300 rounded focus:border-green-500 focus:outline-none text-sm" />
             <input type="date" value={formData.emp_ack_date} onChange={(e) => handleChange('emp_ack_date', e.target.value)} className="px-3 py-2 border border-slate-300 rounded focus:border-green-500 focus:outline-none text-sm" />
           </div>
+        
+      {/* Matching Blue Gradient Footer */}
+      <div className="bg-gradient-to-r from-blue-900 via-blue-800 to-blue-700 px-8 py-5 mt-8">
+        <div className="flex items-center justify-between text-white">
+          <div className="flex items-center gap-4">
+            <div className="bg-yellow-500 rounded-full w-10 h-10 flex items-center justify-center">
+              <span className="text-blue-900 font-bold text-xs">NABH</span>
+            </div>
+            <div>
+              <p className="text-sm font-semibold">© 2024 Koyili Hospital</p>
+              <p className="text-xs text-blue-200">NABH Accredited • Confidential Document • Version-controlled</p>
+            </div>
+          </div>
+          <div className="text-right">
+            <p className="text-sm font-bold">Form B10</p>
+            <p className="text-xs text-blue-200">Resignation Acceptance</p>
+          </div>
         </div>
       </div>
-
-      <div className="border-t-2 border-blue-800 bg-gradient-to-r from-blue-800 via-indigo-800 to-blue-800 px-8 py-4 text-white text-center text-sm">
-        <p>© Koyili Hospital • Appointment Letter • Annexure B10 • Version 1.0</p>
-      </div>
     </div>
+      </div>
+
+      
   );
 };
 
