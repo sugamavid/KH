@@ -418,6 +418,8 @@ agent_communication:
       - Successfully updated all 26 remaining forms (E4-E5, C1-C5, D1-D5, B1-B10, A2-A4)
       - Applied NABH-compliant blue gradient header (from-blue-900 via-blue-800 to-blue-700) to all forms
       - Applied matching blue gradient footer with NABH badge and copyright to all forms
+  - agent: "testing"
+    message: "CRITICAL SESSION MANAGEMENT ISSUE DISCOVERED: While all 76 annexure forms appear to be properly implemented in the codebase, there is a critical session management problem preventing user access. Testing revealed: 1) Login works successfully with provided credentials. 2) Dashboard correctly shows '85 Forms & Documents' indicating backend integration is working. 3) However, sessions expire immediately after login, causing automatic redirects to login page when attempting to access any annexures. 4) Multiple navigation paths tested (sidebar links, direct URLs, HR Department navigation) all fail due to session timeout. 5) Console errors show React key duplication warnings for forms B8, B9, B10. IMPACT: Despite successful form implementation, users cannot access any of the 76 Professional Annexure Forms due to authentication/session persistence failure. This is a critical production blocker that must be resolved before deployment. RECOMMENDATION: Investigate and fix session management, authentication middleware, and token persistence issues."
       - Header design: Logo (left), Hospital Details (center), Document Info with NABH badge (right)
       - Footer design: NABH icon + copyright (left), Form code and title (right)
       - Verified: All 39 Professional Annexure forms (A1-A4, B1-B10, C1-C5, D1-D5, E1-E5, F1-F5, G1-G5) now have consistent, professional, international-standard branding
