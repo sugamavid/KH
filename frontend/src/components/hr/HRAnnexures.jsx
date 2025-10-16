@@ -1113,7 +1113,8 @@ const HRAnnexures = ({ setActiveModule }) => {
         tools: [
           { id: 'attendance', name: 'Attendance Dashboard', icon: Clock, desc: 'Real-time tracking, leave management, and shift planning', color: 'cyan', badge: 'LIVE' },
           { id: 'payroll', name: 'Payroll Pre-Processor', icon: CheckCircle, desc: 'Automate calculations, statutory deductions, and payslip generation', color: 'emerald', badge: 'AUTOMATED' },
-          { id: 'overtime', name: 'Overtime Manager', icon: Clock, desc: 'Track and approve overtime requests with automated calculations', color: 'blue', badge: 'EFFICIENCY' }
+          { id: 'overtime', name: 'Overtime Manager', icon: Clock, desc: 'Track and approve overtime requests with automated calculations', color: 'blue', badge: 'EFFICIENCY' },
+          { id: 'shift-planner', name: 'Smart Shift Planner', icon: Calendar, desc: 'AI-powered shift scheduling with workload balancing and optimization', color: 'indigo', badge: 'AI-SMART' }
         ]
       },
       {
