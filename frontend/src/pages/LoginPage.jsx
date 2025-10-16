@@ -23,12 +23,12 @@ const LoginPage = ({ onLogin }) => {
         body: JSON.stringify({ email, password }),
       });
 
+      const data = await response.json();
+
       if (response.ok) {
-        const data = await response.json();
         onLogin(data.access_token, data.user);
       } else {
-        const errorData = await response.json();
-        setError(errorData.detail || 'Login failed. Please check your credentials.');
+        setError(data.detail || 'Login failed. Please check your credentials.');
       }
     } catch (err) {
       console.error('Login error:', err);
