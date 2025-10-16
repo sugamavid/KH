@@ -352,9 +352,11 @@ const AdminIntelligenceDashboard = ({ setActiveModule }) => {
                     <div className={`w-14 h-14 rounded-xl ${colors.bg} flex items-center justify-center shadow-lg`}>
                       <metric.icon className="w-7 h-7 text-white" />
                     </div>
-                    <span className={`px-3 py-1 rounded-full text-xs font-bold ${metric.trend.startsWith('+') ? 'bg-green-500/20 text-green-400' : 'bg-red-500/20 text-red-400'}`}>
-                      {metric.trend}
-                    </span>
+                    {metric.trend && (
+                      <span className={`px-3 py-1 rounded-full text-xs font-bold ${metric.trend.startsWith('+') ? 'bg-green-500/20 text-green-400' : 'bg-red-500/20 text-red-400'}`}>
+                        {metric.trend}
+                      </span>
+                    )}
                   </div>
                   <h3 className="text-3xl font-black text-white mb-1">{metric.value}</h3>
                   {metric.outOf && <p className="text-sm text-gray-400 mb-2">out of {metric.outOf}</p>}
