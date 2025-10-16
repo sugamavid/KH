@@ -684,17 +684,6 @@ const HRAnnexures = ({ setActiveModule }) => {
             onClick={handleBackToDashboard}
             className={`w-full flex items-center gap-2 px-3 py-2 rounded-lg transition-colors ${
               viewMode === 'dashboard'
-                ? 'bg-blue-100 text-blue-700 font-semibold'
-                : 'hover:bg-slate-100 text-slate-700'
-            }`}
-          >
-            <Home className="w-4 h-4" />
-            <span>Dashboard Home</span>
-          </button>
-          <button
-            onClick={() => setViewMode('smarttools')}
-            className={`w-full flex items-center gap-2 px-3 py-2 rounded-lg transition-colors ${
-              viewMode === 'smarttools'
                 ? 'bg-gradient-to-r from-purple-100 to-blue-100 text-purple-700 font-semibold border-2 border-purple-300'
                 : 'hover:bg-gradient-to-r hover:from-purple-50 hover:to-blue-50 text-slate-700 border-2 border-transparent'
             }`}
