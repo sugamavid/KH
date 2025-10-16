@@ -417,7 +417,11 @@ const AdminIntelligenceDashboard = ({ setActiveModule }) => {
             {intelligenceTools.map((tool, idx) => {
               const colors = getColorClasses(tool.color);
               return (
-                <div key={idx} className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl p-6 border border-slate-700 hover:border-purple-500 transition-all shadow-xl hover:shadow-purple-500/20 cursor-pointer group">
+                <div 
+                  key={idx} 
+                  onClick={tool.onClick}
+                  className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl p-6 border border-slate-700 hover:border-purple-500 transition-all shadow-xl hover:shadow-purple-500/20 cursor-pointer group"
+                >
                   <div className="flex items-start justify-between mb-4">
                     <div className={`w-12 h-12 rounded-lg ${colors.bg} flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform`}>
                       <tool.icon className="w-6 h-6 text-white" />
