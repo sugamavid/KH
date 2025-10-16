@@ -441,6 +441,34 @@ const HRAnnexures = ({ setActiveModule }) => {
       linkedSOP: 'SOP I.6',
       color: 'orange'
     },
+    {
+      code: 'J1',
+      title: 'Training Needs Assessment Tracker',
+      category: 'Training & Development',
+      linkedSOP: 'SOP J.1',
+      color: 'purple'
+    },
+    {
+      code: 'J2',
+      title: 'Training Calendar Template',
+      category: 'Training & Development',
+      linkedSOP: 'SOP J.2',
+      color: 'purple'
+    },
+    {
+      code: 'J3',
+      title: 'Clinical Competency Assessment Checklist',
+      category: 'Training & Development',
+      linkedSOP: 'SOP J.3',
+      color: 'purple'
+    },
+    {
+      code: 'J4',
+      title: 'External Training Approval Request',
+      category: 'Training & Development',
+      linkedSOP: 'SOP J.4',
+      color: 'purple'
+    },
   ];
 
   // Mock data for dashboard stats
