@@ -392,7 +392,7 @@ const AdminIntelligenceDashboard = ({ setActiveModule }) => {
                 alert.severity === 'high' ? 'border-orange-500 bg-orange-900/10' :
                 alert.severity === 'medium' ? 'border-yellow-500 bg-yellow-900/10' :
                 'border-blue-500 bg-blue-900/10'
-              } shadow-lg hover:shadow-2xl transition-all`}>
+              } shadow-lg hover:shadow-2xl transition-all cursor-pointer`} onClick={alert.onClick}>
                 <div className="flex items-start justify-between mb-3">
                   <div className="flex items-start space-x-3">
                     {getSeverityIcon(alert.severity)}
@@ -407,7 +407,10 @@ const AdminIntelligenceDashboard = ({ setActiveModule }) => {
                     <span className="text-gray-400">{alert.time}</span>
                     <span className="px-2 py-1 bg-slate-700 text-cyan-400 rounded font-semibold">{alert.department}</span>
                   </div>
-                  <button className="px-4 py-2 bg-gradient-to-r from-cyan-600 to-blue-600 text-white text-xs font-bold rounded-lg hover:from-cyan-500 hover:to-blue-500 transition-all">
+                  <button 
+                    onClick={(e) => { e.stopPropagation(); alert.onClick(); }}
+                    className="px-4 py-2 bg-gradient-to-r from-cyan-600 to-blue-600 text-white text-xs font-bold rounded-lg hover:from-cyan-500 hover:to-blue-500 transition-all"
+                  >
                     {alert.action}
                   </button>
                 </div>
