@@ -1125,60 +1125,160 @@ const HRAnnexures = ({ setActiveModule }) => {
 
     return (
       <div className="p-8">
-        <div className="mb-8">
-          <div className="bg-gradient-to-r from-blue-900 via-blue-800 to-indigo-900 rounded-2xl shadow-2xl p-8 text-white">
-            <div className="flex items-center space-x-3 mb-4">
-              <Zap className="w-10 h-10 text-yellow-400" />
-              <div>
-                <h1 className="text-4xl font-black">Smart Annexures Hub</h1>
-                <p className="text-blue-100 text-lg font-medium">AI-Powered Administrative Automation Platform</p>
+        {/* Stunning Hero Section */}
+        <div className="mb-10 relative overflow-hidden rounded-3xl">
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-purple-600 to-pink-500 opacity-90"></div>
+          <div className="absolute inset-0" style={{backgroundImage: 'radial-gradient(circle at 20% 50%, rgba(255,255,255,0.1) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(255,255,255,0.1) 0%, transparent 50%)'}}></div>
+          
+          <div className="relative z-10 p-10">
+            <div className="flex items-center justify-between mb-8">
+              <div className="flex items-center space-x-4">
+                <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-2xl flex items-center justify-center shadow-xl transform hover:rotate-12 transition-transform">
+                  <Zap className="w-8 h-8 text-white" />
+                </div>
+                <div>
+                  <h1 className="text-5xl font-black text-white mb-2 tracking-tight">Smart Annexures Hub</h1>
+                  <p className="text-xl text-white/90 font-medium">AI-Powered Administrative Automation Platform</p>
+                  <p className="text-white/70 text-sm mt-1">Transform Hospital HR Operations with Intelligent Tools</p>
+                </div>
+              </div>
+              <div className="hidden lg:block">
+                <div className="bg-white/20 backdrop-blur-xl rounded-2xl px-8 py-4 border border-white/30 shadow-2xl">
+                  <div className="text-center">
+                    <div className="text-4xl font-black text-white mb-1">18</div>
+                    <div className="text-sm text-white/80 font-semibold">Smart Tools</div>
+                  </div>
+                </div>
               </div>
             </div>
-            <div className="grid grid-cols-4 gap-4 mt-6">
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
-                <div className="text-2xl font-bold">76</div>
-                <div className="text-sm text-blue-200">Forms Available</div>
+
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              <div className="bg-white/10 backdrop-blur-md rounded-xl p-5 border border-white/20 hover:bg-white/20 transition-all cursor-pointer group">
+                <div className="flex items-center space-x-3">
+                  <FileText className="w-8 h-8 text-yellow-300 group-hover:scale-110 transition-transform" />
+                  <div>
+                    <div className="text-3xl font-bold text-white">76</div>
+                    <div className="text-xs text-white/70 font-semibold">Forms Available</div>
+                  </div>
+                </div>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
-                <div className="text-2xl font-bold">100%</div>
-                <div className="text-sm text-blue-200">NABH Compliant</div>
+              <div className="bg-white/10 backdrop-blur-md rounded-xl p-5 border border-white/20 hover:bg-white/20 transition-all cursor-pointer group">
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="w-8 h-8 text-green-300 group-hover:scale-110 transition-transform" />
+                  <div>
+                    <div className="text-3xl font-bold text-white">100%</div>
+                    <div className="text-xs text-white/70 font-semibold">NABH Compliant</div>
+                  </div>
+                </div>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
-                <div className="text-2xl font-bold">24/7</div>
-                <div className="text-sm text-blue-200">Automation</div>
+              <div className="bg-white/10 backdrop-blur-md rounded-xl p-5 border border-white/20 hover:bg-white/20 transition-all cursor-pointer group">
+                <div className="flex items-center space-x-3">
+                  <Clock className="w-8 h-8 text-blue-300 group-hover:scale-110 transition-transform" />
+                  <div>
+                    <div className="text-3xl font-bold text-white">24/7</div>
+                    <div className="text-xs text-white/70 font-semibold">Automation</div>
+                  </div>
+                </div>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
-                <div className="text-2xl font-bold">AI</div>
-                <div className="text-sm text-blue-200">Powered</div>
+              <div className="bg-white/10 backdrop-blur-md rounded-xl p-5 border border-white/20 hover:bg-white/20 transition-all cursor-pointer group">
+                <div className="flex items-center space-x-3">
+                  <Sparkles className="w-8 h-8 text-purple-300 group-hover:scale-110 transition-transform" />
+                  <div>
+                    <div className="text-3xl font-bold text-white">AI</div>
+                    <div className="text-xs text-white/70 font-semibold">Powered</div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
 
+        {/* Tool Categories */}
         {toolCategories.map((category, idx) => (
-          <div key={idx} className="mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">{category.name}</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div key={idx} className="mb-10">
+            <div className="flex items-center space-x-4 mb-6">
+              <div className={`w-14 h-14 bg-gradient-to-br ${category.gradient} rounded-xl flex items-center justify-center shadow-lg`}>
+                <category.icon className="w-7 h-7 text-white" />
+              </div>
+              <div>
+                <h2 className="text-3xl font-black text-gray-900">{category.name}</h2>
+                <p className="text-gray-500 text-sm font-medium">{category.tools.length} powerful automation tools</p>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {category.tools.map(tool => (
                 <div
                   key={tool.id}
                   onClick={() => setActiveTool(tool.id)}
-                  className="group bg-white rounded-xl shadow-md hover:shadow-2xl transition-all p-6 cursor-pointer border-2 border-transparent hover:border-blue-400 transform hover:-translate-y-1"
+                  onMouseEnter={() => setHoveredTool(tool.id)}
+                  onMouseLeave={() => setHoveredTool(null)}
+                  className="group relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-6 cursor-pointer border-2 border-gray-100 hover:border-transparent overflow-hidden transform hover:-translate-y-2"
                 >
-                  <div className={`w-14 h-14 bg-gradient-to-br from-${tool.color}-400 to-${tool.color}-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
-                    <tool.icon className="w-7 h-7 text-white" />
+                  {/* Gradient Background on Hover */}
+                  <div className={`absolute inset-0 bg-gradient-to-br from-${tool.color}-50 to-${tool.color}-100 opacity-0 group-hover:opacity-100 transition-opacity duration-300`}></div>
+                  
+                  {/* Badge */}
+                  <div className={`absolute top-4 right-4 px-3 py-1 rounded-full text-xs font-bold bg-${tool.color}-100 text-${tool.color}-700 z-10`}>
+                    {tool.badge}
                   </div>
-                  <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-blue-600">{tool.name}</h3>
-                  <p className="text-sm text-gray-600">{tool.desc}</p>
-                  <div className="mt-4 flex items-center text-blue-600 font-semibold text-sm opacity-0 group-hover:opacity-100">
-                    Open Tool
-                    <ArrowRight className="w-4 h-4 ml-2" />
+
+                  {/* Content */}
+                  <div className="relative z-10">
+                    <div className={`w-16 h-16 bg-gradient-to-br from-${tool.color}-400 to-${tool.color}-600 rounded-2xl flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 group-hover:rotate-6 transition-all duration-300`}>
+                      <tool.icon className="w-8 h-8 text-white" />
+                    </div>
+
+                    <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-${tool.color}-600 transition-colors">
+                      {tool.name}
+                    </h3>
+                    <p className="text-sm text-gray-600 leading-relaxed mb-4">
+                      {tool.desc}
+                    </p>
+
+                    {/* Action Button */}
+                    <div className="flex items-center text-${tool.color}-600 font-bold text-sm opacity-0 group-hover:opacity-100 transition-all transform translate-y-2 group-hover:translate-y-0">
+                      <span>Launch Tool</span>
+                      <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                    </div>
+                  </div>
+
+                  {/* Shine Effect */}
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-20 transition-opacity duration-500">
+                    <div className="absolute -top-full -left-full w-full h-full bg-gradient-to-br from-white to-transparent transform rotate-45 group-hover:top-full group-hover:left-full transition-all duration-700"></div>
                   </div>
                 </div>
               ))}
             </div>
           </div>
         ))}
+
+        {/* Quick Stats Footer */}
+        <div className="mt-12 bg-gradient-to-r from-slate-900 via-gray-800 to-slate-900 rounded-2xl shadow-2xl p-8">
+          <div className="flex items-center justify-between">
+            <div>
+              <div className="flex items-center space-x-3 mb-2">
+                <CheckCircle className="w-6 h-6 text-green-400" />
+                <span className="text-white font-bold text-lg">All Systems Operational</span>
+              </div>
+              <p className="text-gray-400 text-sm">Koyili Hospital HRMS • NABH Accredited • ISO 9001 Compliant • JCI Ready</p>
+            </div>
+            <div className="flex items-center space-x-6">
+              <div className="text-center">
+                <div className="text-2xl font-bold text-white">18</div>
+                <div className="text-xs text-gray-400">Active Tools</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-white">76</div>
+                <div className="text-xs text-gray-400">Total Forms</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-green-400">●</div>
+                <div className="text-xs text-gray-400">Online</div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     );
   };
