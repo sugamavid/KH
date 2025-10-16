@@ -178,7 +178,13 @@ const HRDashboardHome = ({ setActiveModule }) => {
       emerald: { bg: 'bg-emerald-600', light: 'bg-emerald-100', text: 'text-emerald-600', hover: 'hover:bg-emerald-700' },
       purple: { bg: 'bg-purple-600', light: 'bg-purple-100', text: 'text-purple-600', hover: 'hover:bg-purple-700' },
       indigo: { bg: 'bg-indigo-600', light: 'bg-indigo-100', text: 'text-indigo-600', hover: 'hover:bg-indigo-700' },
-      red: { bg: 'bg-red-600', light: 'bg-red-100', text: 'text-red-600', hover: 'hover:bg-red-700' }
+      red: { bg: 'bg-red-600', light: 'bg-red-100', text: 'text-red-600', hover: 'hover:bg-red-700' },
+      teal: { bg: 'bg-teal-600', light: 'bg-teal-100', text: 'text-teal-600', hover: 'hover:bg-teal-700' },
+      pink: { bg: 'bg-pink-600', light: 'bg-pink-100', text: 'text-pink-600', hover: 'hover:bg-pink-700' },
+      cyan: { bg: 'bg-cyan-600', light: 'bg-cyan-100', text: 'text-cyan-600', hover: 'hover:bg-cyan-700' },
+      violet: { bg: 'bg-violet-600', light: 'bg-violet-100', text: 'text-violet-600', hover: 'hover:bg-violet-700' },
+      amber: { bg: 'bg-amber-600', light: 'bg-amber-100', text: 'text-amber-600', hover: 'hover:bg-amber-700' },
+      rose: { bg: 'bg-rose-600', light: 'bg-rose-100', text: 'text-rose-600', hover: 'hover:bg-rose-700' }
     };
     return colors[color]?.[type] || colors.blue[type];
   };
