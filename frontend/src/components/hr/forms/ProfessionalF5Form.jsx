@@ -150,42 +150,15 @@ const ProfessionalF5Form = () => {
       <input ref={loadInputRef} type="file" accept="application/json" onChange={handleLoad} className="hidden" />
 
       {/* Main Content */}
-      <div className="max-w-5xl mx-auto bg-white shadow-2xl">
-        {/* Compact NABH-Compliant Header */}
-        <div className="bg-gradient-to-r from-blue-900 via-blue-800 to-blue-700 text-white px-8 py-6">
-          <div className="flex items-center justify-between gap-6">
-            <div className="flex-shrink-0">
-              <img src={logo} alt="Koyili Hospital Logo" className="w-24 h-24 bg-white rounded-lg p-2 shadow-xl object-contain" />
-            </div>
-            <div className="flex-1 text-center">
-              <h1 className="text-3xl font-bold tracking-wide mb-1">KOYILI HOSPITAL</h1>
-              <p className="text-blue-200 text-sm font-semibold">Human Resources Department</p>
-              <p className="text-blue-300 text-xs">NABH Accredited • Pallikkunnu, Talap, Kannur, Kerala</p>
-              <div className="mt-3 pt-3 border-t border-blue-400/30">
-                <h2 className="text-xl font-bold">LEAVE WITHOUT PAY (LOP) REQUEST</h2>
-              </div>
-            </div>
-            <div className="flex-shrink-0 text-right space-y-2">
-              <div className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg border border-white/20">
-                <p className="text-xs text-blue-200 mb-0.5">Annexure</p>
-                <p className="text-2xl font-bold">F5</p>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm px-4 py-1.5 rounded-lg border border-white/20">
-                <p className="text-xs text-blue-200">Version 1.0</p>
-              </div>
-              <div className="bg-yellow-500/90 px-3 py-1 rounded-full">
-                <p className="text-xs font-bold text-blue-900">NABH</p>
-              </div>
-            </div>
-          </div>
-        <div className="bg-blue-50 px-8 py-3 border-b-2 border-blue-900">
-          <div className="flex items-center gap-6 text-xs font-semibold text-blue-900">
-            <span>📋 Leave Management</span>
-            <div className="w-px h-4 bg-blue-300"></div>
-            <span>SOP F.5 – Leave Without Pay (LOP) Tracking</span>
+      <div className="max-w-5xl mx-auto px-6 py-8 print:py-4">
+        {/* Header */}
+        <div className="grid grid-cols-[240px_1fr] gap-6 items-center pb-6 border-b-4 border-blue-900 mb-6">
+          <img src={logo} alt="Koyili Hospital Logo" className="w-full max-h-36 object-contain" />
+          <div>
+            <h1 className="text-2xl font-black text-blue-900 uppercase tracking-tight">Leave Without Pay (LOP) Request Format</h1>
+            <p className="text-gray-600 font-bold mt-2">HR • SOP F.5 – Leave Without Pay Tracking & Approval • Annexure F5</p>
           </div>
         </div>
-        <div className="px-6 py-8 print:py-4">
 
         {/* Document Control */}
         <div className="bg-white border border-gray-200 rounded-xl p-5 mb-5">
@@ -320,39 +293,15 @@ const ProfessionalF5Form = () => {
           <p className="mt-3 text-sm text-gray-700">This Annexure shall be read in conjunction with SOP F.5 (Leave Without Pay Management), By-Laws Section 7.2(c), and related annexures (F1 – Leave Application, F4 – Leave Encashment Approval, E3 – Leave Log). It is a compliance-critical document and must be archived with version control.</p>
         </div>
       </div>
-      
-      {/* Matching Blue Gradient Footer */}
-      <div className="bg-gradient-to-r from-blue-900 via-blue-800 to-blue-700 px-8 py-5 mt-8">
-        <div className="flex items-center justify-between text-white">
-          <div className="flex items-center gap-4">
-            <div className="bg-yellow-500 rounded-full w-10 h-10 flex items-center justify-center">
-              <span className="text-blue-900 font-bold text-xs">NABH</span>
-            </div>
-            <div>
-              <p className="text-sm font-semibold">© 2024 Koyili Hospital</p>
-              <p className="text-xs text-blue-200">NABH Accredited • Confidential Document • Version-controlled</p>
-            </div>
-          </div>
-          <div className="text-right">
-            <p className="text-sm font-bold">Form F5</p>
-            <p className="text-xs text-blue-200">Leave Without Pay Request</p>
-          </div>
+
+      {/* Footer */}
+      <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 px-6 py-3 text-xs text-gray-600 print:relative print:mt-8">
+        <div className="flex justify-between items-center max-w-5xl mx-auto">
+          <span>© Koyili Hospital • Confidential • Version-controlled</span>
+          <span>Form F5 – Leave Without Pay Request Format</span>
         </div>
       </div>
     </div>
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>
   );
 };
 
