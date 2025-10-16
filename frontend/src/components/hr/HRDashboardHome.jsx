@@ -151,9 +151,9 @@ const HRDashboardHome = ({ setActiveModule }) => {
 
   // Alerts & Notifications
   const alerts = [
-    { type: 'urgent', title: 'Contract Expiring', message: '2 employment contracts expire this month', icon: AlertTriangle },
-    { type: 'warning', title: 'Document Renewal', message: '5 compliance certificates need renewal', icon: FileText },
-    { type: 'info', title: 'Training Due', message: 'Infection Control training starts in 5 days', icon: Award }
+    { type: 'urgent', title: 'Contract Expiring', message: '2 employment contracts expire this month', icon: AlertTriangle, module: 'employees' },
+    { type: 'warning', title: 'Document Renewal', message: '5 compliance certificates need renewal', icon: FileText, module: 'documents' },
+    { type: 'info', title: 'Training Due', message: 'Infection Control training starts in 5 days', icon: Award, module: 'training' }
   ];
 
   // Recent Activities
