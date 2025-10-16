@@ -572,6 +572,10 @@ const AdminIntelligenceDashboard = ({ setActiveModule }) => {
         isOpen={showBurnoutDetector} 
         onClose={() => setShowBurnoutDetector(false)} 
       />
+      <TurnoverRiskAnalyzerModal 
+        isOpen={showTurnoverAnalyzer} 
+        onClose={() => setShowTurnoverAnalyzer(false)} 
+      />
     </div>
   );
 };
