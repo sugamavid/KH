@@ -743,6 +743,18 @@ const HRAnnexures = ({ setActiveModule }) => {
     if (annexure.code === 'I6') {
       return <ProfessionalI6Form />;
     }
+    if (annexure.code === 'J1') {
+      return <ProfessionalJ1Form />;
+    }
+    if (annexure.code === 'J2') {
+      return <ProfessionalJ2Form />;
+    }
+    if (annexure.code === 'J3') {
+      return <ProfessionalJ3Form />;
+    }
+    if (annexure.code === 'J4') {
+      return <ProfessionalJ4Form />;
+    }
 
     // Fallback for future forms
     return (
