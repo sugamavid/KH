@@ -5,10 +5,16 @@ import {
   CheckCircle, XCircle, MinusCircle, ArrowUpRight, ArrowDownRight,
   Calendar, FileText, BarChart3, PieChart, LineChart, Briefcase
 } from 'lucide-react';
+import StaffShortagePredictorModal from './StaffShortagePredictorModal';
+import BurnoutDetectorModal from './BurnoutDetectorModal';
 
 const AdminIntelligenceDashboard = ({ setActiveModule }) => {
   const [selectedTimeframe, setSelectedTimeframe] = useState('month');
   const [criticalAlerts, setCriticalAlerts] = useState([]);
+  
+  // Modal states
+  const [showShortagePredictor, setShowShortagePredictor] = useState(false);
+  const [showBurnoutDetector, setShowBurnoutDetector] = useState(false);
 
   // CEO-Critical Metrics
   const executiveInsights = [
