@@ -1323,7 +1323,7 @@ const HRAnnexures = ({ setActiveModule }) => {
             </div>
             <div className="flex items-center space-x-6">
               <div className="text-center">
-                <div className="text-2xl font-bold text-white">18</div>
+                <div className="text-2xl font-bold text-white">22</div>
                 <div className="text-xs text-gray-400">Active Tools</div>
               </div>
               <div className="text-center">
