@@ -141,3 +141,7 @@ code {
 .animation-delay-4000 {
     animation-delay: 4s;
 }
+
+.hover\:scale-102:hover {
+    transform: scale(1.02);
+}
