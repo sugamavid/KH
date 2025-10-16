@@ -24,7 +24,8 @@ const HRDashboard = () => {
 
   // Define modules that should hide the HR sidebar (legal documents)
   const legalDocumentModules = ['bylaws', 'sops', 'annexures'];
-  const shouldHideSidebar = legalDocumentModules.includes(activeModule);
+  const fullScreenModules = ['intelligence']; // Intelligence dashboard is full-screen
+  const shouldHideSidebar = legalDocumentModules.includes(activeModule) || fullScreenModules.includes(activeModule);
 
   const renderModule = () => {
     switch (activeModule) {
