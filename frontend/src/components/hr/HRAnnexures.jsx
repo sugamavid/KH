@@ -514,6 +514,41 @@ const HRAnnexures = ({ setActiveModule }) => {
       linkedSOP: 'SOP K.3',
       color: 'teal'
     },
+    {
+      code: 'K4',
+      title: 'Remote Work Tracker',
+      category: 'IT Security & Digital Compliance',
+      linkedSOP: 'SOP K.4',
+      color: 'teal'
+    },
+    {
+      code: 'K5',
+      title: 'Cybersecurity Incident Reporting Format',
+      category: 'IT Security & Digital Compliance',
+      linkedSOP: 'SOP K.5',
+      color: 'teal'
+    },
+    {
+      code: 'L1',
+      title: 'Employee Assistance Program (EAP) Referral Form',
+      category: 'Employee Health & Wellness',
+      linkedSOP: 'SOP L.1',
+      color: 'green'
+    },
+    {
+      code: 'L2',
+      title: 'Health and Wellness Event Calendar',
+      category: 'Employee Health & Wellness',
+      linkedSOP: 'SOP L.2',
+      color: 'green'
+    },
+    {
+      code: 'L3',
+      title: 'Health Screening Consent Form',
+      category: 'Employee Health & Wellness',
+      linkedSOP: 'SOP L.3',
+      color: 'green'
+    },
   ];
 
   // Mock data for dashboard stats
