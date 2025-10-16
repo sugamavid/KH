@@ -563,31 +563,63 @@ const TrainingManagement = () => {
         </button>
       </div>
 
-      {/* Search and Filter */}
-      <div className="bg-white rounded-xl p-6 border-2 border-slate-200 shadow-sm">
-        <div className="flex flex-col md:flex-row gap-4">
-          <div className="flex-1 relative">
-            <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
-            <input
-              type="text"
-              placeholder="Search by training title or department..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-12 pr-4 py-3 border-2 border-slate-200 rounded-lg focus:outline-none focus:border-blue-500 transition-colors"
-            />
-          </div>
-          <div className="relative">
-            <Filter className="absolute left-4 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
-            <select
-              value={filterStatus}
-              onChange={(e) => setFilterStatus(e.target.value)}
-              className="pl-12 pr-8 py-3 border-2 border-slate-200 rounded-lg focus:outline-none focus:border-blue-500 appearance-none cursor-pointer min-w-[200px] bg-white"
-            >
-              {statusOptions.map(status => (
-                <option key={status} value={status}>{status}</option>
-              ))}
-            </select>
-          </div>
+      {/* Stats Row */}
+      <div className="grid grid-cols-5 gap-4">
+        <div className="bg-white rounded-xl p-4 border-2 border-slate-200 shadow-sm text-center">
+          <div className="text-3xl font-bold text-teal-600">{stats.completed}</div>
+          <div className="text-sm text-slate-600 mt-1">Completed</div>
+        </div>
+        <div className="bg-white rounded-xl p-4 border-2 border-slate-200 shadow-sm text-center">
+          <div className="text-3xl font-bold text-blue-600">{stats.inProgress}</div>
+          <div className="text-sm text-slate-600 mt-1">In Progress</div>
+        </div>
+        <div className="bg-white rounded-xl p-4 border-2 border-slate-200 shadow-sm text-center">
+          <div className="text-3xl font-bold text-slate-600">{stats.notStarted}</div>
+          <div className="text-sm text-slate-600 mt-1">Not Started</div>
+        </div>
+        <div className="bg-white rounded-xl p-4 border-2 border-slate-200 shadow-sm text-center">
+          <div className="text-3xl font-bold text-red-600">{stats.mandatory}</div>
+          <div className="text-sm text-slate-600 mt-1">Mandatory</div>
+        </div>
+        <div className="bg-white rounded-xl p-4 border-2 border-slate-200 shadow-sm text-center">
+          <div className="text-3xl font-bold text-green-600">{stats.certificates}</div>
+          <div className="text-sm text-slate-600 mt-1">Certificates</div>
+        </div>
+      </div>
+
+      {/* Search Bar */}
+      <div className="bg-white rounded-xl p-4 border-2 border-slate-200 shadow-sm">
+        <div className="relative">
+          <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-teal-600" />
+          <input
+            type="text"
+            placeholder="Search trainings by title, instructor, or description..."
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            className="w-full pl-12 pr-4 py-3 rounded-lg border-2 border-slate-300 focus:outline-none focus:ring-2 focus:ring-teal-500 text-slate-900 placeholder-slate-500"
+            style={{ fontFamily: "'Inter', sans-serif" }}
+          />
+        </div>
+
+        {/* View Tabs */}
+        <div className="flex gap-2 mt-4">
+          {views.map((view) => {
+            const ViewIcon = view.icon;
+            return (
+              <button
+                key={view.id}
+                onClick={() => setActiveView(view.id)}
+                className={`flex items-center gap-2 px-4 py-2 rounded-lg font-semibold transition-all ${
+                  activeView === view.id
+                    ? 'bg-teal-600 text-white shadow-lg'
+                    : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
+                }`}
+              >
+                <ViewIcon className="w-4 h-4" />
+                {view.name}
+              </button>
+            );
+          })}
         </div>
       </div>
 
