@@ -327,7 +327,10 @@ const HRDashboardHome = ({ setActiveModule }) => {
                             <p className="text-sm font-bold text-slate-900">{alert.title}</p>
                             <p className="text-sm text-slate-600 mt-1">{alert.message}</p>
                           </div>
-                          <button className="text-sm font-semibold text-blue-600 hover:text-blue-700">
+                          <button 
+                            onClick={() => handleNavigation(alert.module)}
+                            className="text-sm font-semibold text-blue-600 hover:text-blue-700 cursor-pointer"
+                          >
                             View
                           </button>
                         </div>
