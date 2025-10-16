@@ -1256,6 +1256,7 @@ const HRAnnexures = ({ setActiveModule }) => {
                   indigo: { bg: 'from-indigo-400 to-indigo-600', hover: 'from-indigo-50 to-indigo-100', badge: 'bg-indigo-100 text-indigo-700', text: 'text-indigo-600' },
                   cyan: { bg: 'from-cyan-400 to-cyan-600', hover: 'from-cyan-50 to-cyan-100', badge: 'bg-cyan-100 text-cyan-700', text: 'text-cyan-600' },
                   orange: { bg: 'from-orange-400 to-orange-600', hover: 'from-orange-50 to-orange-100', badge: 'bg-orange-100 text-orange-700', text: 'text-orange-600' },
+                  amber: { bg: 'from-amber-400 to-amber-600', hover: 'from-amber-50 to-amber-100', badge: 'bg-amber-100 text-amber-700', text: 'text-amber-600' },
                   violet: { bg: 'from-violet-400 to-violet-600', hover: 'from-violet-50 to-violet-100', badge: 'bg-violet-100 text-violet-700', text: 'text-violet-600' },
                   pink: { bg: 'from-pink-400 to-pink-600', hover: 'from-pink-50 to-pink-100', badge: 'bg-pink-100 text-pink-700', text: 'text-pink-600' },
                   slate: { bg: 'from-slate-400 to-slate-600', hover: 'from-slate-50 to-slate-100', badge: 'bg-slate-100 text-slate-700', text: 'text-slate-600' }
