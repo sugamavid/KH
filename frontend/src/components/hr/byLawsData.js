@@ -871,7 +871,18 @@ export const sections = [
   { id: 'section7', category: 'HR Operations', title: 'Section 7: Attendance and Leave Policy', icon: 'Calendar', color: 'cyan' },
   { id: 'section8', category: 'HR Operations', title: 'Section 8: Performance Management', icon: 'TrendingUp', color: 'orange' },
   { id: 'section9', category: 'HR Operations', title: 'Section 9: Training and Development', icon: 'BookOpen', color: 'teal' },
-  { id: 'section10', category: 'HR Operations', title: 'Section 10: Remote Work and Flexible Scheduling', icon: 'Home', color: 'lime' }
+  { id: 'section10', category: 'HR Operations', title: 'Section 10: Remote Work and Flexible Scheduling', icon: 'Home', color: 'lime' },
+  { id: 'section11', category: 'Compensation', title: 'Section 11: Compensation and Benefits', icon: 'DollarSign', color: 'emerald' },
+  { id: 'section12', category: 'Compensation', title: 'Section 12: Payroll and Statutory Compliance', icon: 'CheckCircle', color: 'blue' },
+  { id: 'section13', category: 'Health & Safety', title: 'Section 13: Occupational Health and Safety', icon: 'Shield', color: 'red' },
+  { id: 'section14', category: 'Discipline', title: 'Section 14: Disciplinary Procedures and Grievance Redressal', icon: 'AlertCircle', color: 'orange' },
+  { id: 'section15', category: 'Discipline', title: 'Section 15: Termination and Exit Procedures', icon: 'LogOut', color: 'rose' },
+  { id: 'section16', category: 'Technology', title: 'Section 16: Information Technology and Data Security', icon: 'Lock', color: 'indigo' },
+  { id: 'section17', category: 'Compliance', title: 'Section 17: Legal and Regulatory Compliance', icon: 'Scale', color: 'purple' },
+  { id: 'section18', category: 'Communication', title: 'Section 18: Communication and Stakeholder Engagement', icon: 'MessageCircle', color: 'cyan' },
+  { id: 'section19', category: 'Quality', title: 'Section 19: Quality Assurance and Accreditation', icon: 'CheckSquare', color: 'green' },
+  { id: 'section20', category: 'Emergency', title: 'Section 20: Crisis Management and Business Continuity', icon: 'AlertTriangle', color: 'amber' },
+  { id: 'section21', category: 'Governance', title: 'Section 21: Amendments and Review', icon: 'FileText', color: 'slate' }
 ];
 
 export const quickReferenceData = {
