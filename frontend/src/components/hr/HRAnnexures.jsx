@@ -354,6 +354,41 @@ const HRAnnexures = ({ setActiveModule }) => {
       linkedSOP: 'SOP G.5',
       color: 'blue'
     },
+    {
+      code: 'H1',
+      title: 'Goal Setting & KPI Sheet',
+      category: 'Performance Management',
+      linkedSOP: 'SOP H.1',
+      color: 'green'
+    },
+    {
+      code: 'H2',
+      title: 'Appraisal Format (Mid-Year / Year-End)',
+      category: 'Performance Management',
+      linkedSOP: 'SOP H.2',
+      color: 'green'
+    },
+    {
+      code: 'H3',
+      title: '360-Degree Feedback Form',
+      category: 'Performance Management',
+      linkedSOP: 'SOP H.3',
+      color: 'green'
+    },
+    {
+      code: 'H4',
+      title: 'Performance Improvement Plan (PIP)',
+      category: 'Performance Management',
+      linkedSOP: 'SOP H.4',
+      color: 'green'
+    },
+    {
+      code: 'H5',
+      title: 'Promotion & Internal Job Posting Application',
+      category: 'Performance Management',
+      linkedSOP: 'SOP H.5',
+      color: 'green'
+    },
   ];
 
   // Mock data for dashboard stats
