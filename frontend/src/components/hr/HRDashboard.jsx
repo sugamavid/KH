@@ -28,7 +28,7 @@ const HRDashboard = () => {
   const renderModule = () => {
     switch (activeModule) {
       case 'dashboard':
-        return <HRDashboardHome />;
+        return <HRDashboardHome setActiveModule={setActiveModule} />;
       case 'employees':
         return <EmployeeManagement />;
       case 'attendance':
@@ -58,7 +58,7 @@ const HRDashboard = () => {
       case 'departments':
         return <DepartmentManagement />;
       default:
-        return <HRDashboardHome />;
+        return <HRDashboardHome setActiveModule={setActiveModule} />;
     }
   };
 
