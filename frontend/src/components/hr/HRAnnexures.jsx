@@ -735,19 +735,23 @@ const HRAnnexures = ({ setActiveModule }) => {
                           : 'text-blue-600'
                       }`}>{annexure.category}</span>
                     </div>
-                    <h4 className={`text-sm font-semibold leading-tight ${
+                    <h4 className={`text-sm font-bold leading-tight ${
                       activeAnnexure?.code === annexure.code
-                        ? 'text-blue-900'
-                        : 'text-slate-900'
+                        ? 'text-white'
+                        : 'text-gray-800'
                     }`}>
                       {annexure.title}
                     </h4>
-                    <p className="text-xs text-slate-500 mt-1">{annexure.linkedSOP}</p>
+                    <p className={`text-xs mt-1 font-medium ${
+                      activeAnnexure?.code === annexure.code
+                        ? 'text-blue-100'
+                        : 'text-blue-500'
+                    }`}>{annexure.linkedSOP}</p>
                   </div>
-                  <ChevronRight className={`w-4 h-4 flex-shrink-0 ml-2 ${
+                  <ChevronRight className={`w-5 h-5 flex-shrink-0 ml-2 transition-transform ${
                     activeAnnexure?.code === annexure.code
-                      ? 'text-blue-600'
-                      : 'text-slate-400'
+                      ? 'text-white transform translate-x-1'
+                      : 'text-blue-400'
                   }`} />
                 </div>
               </button>
