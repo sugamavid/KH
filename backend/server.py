@@ -39,6 +39,22 @@ api_router = APIRouter(prefix="/api")
 
 # ============ MODELS ============
 
+# Auth Models
+class LoginRequest(BaseModel):
+    email: str
+    password: str
+
+class TokenResponse(BaseModel):
+    access_token: str
+    token_type: str
+    user: Dict[str, Any]
+
+class User(BaseModel):
+    email: str
+    name: str
+    role: str
+    department: str
+
 # Department Models
 class Department(BaseModel):
     model_config = ConfigDict(extra="ignore")
