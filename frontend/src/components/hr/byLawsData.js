@@ -857,6 +857,282 @@ These By-Laws are applicable to all individuals engaged in any capacity with Koy
     • Employees shall be given advance notice and an opportunity to address any concerns before arrangements are terminated.`
       }
     ]
+  },
+  section11: {
+    subsections: [
+      {
+        number: '11.1',
+        title: 'Salary Structure',
+        content: `(a) **Components of Salary:**
+    • The salary structure comprises Basic Pay, House Rent Allowance (HRA), Medical Allowance, Transport Allowance, Special Allowances, and other benefits as applicable.
+    
+(b) **Pay Scales:**
+    • Salary scales are determined based on role, experience, qualifications, and market benchmarking.
+    • Annual increments are performance-based and subject to management approval.
+    
+(c) **Salary Reviews:**
+    • Salaries are reviewed annually during the appraisal cycle.
+    • Exceptional performance may be rewarded with mid-year increments or bonuses.`
+      },
+      {
+        number: '11.2',
+        title: 'Benefits and Allowances',
+        content: `(a) **Provident Fund (PF):**
+    • The hospital contributes 12% of the basic salary towards PF as per statutory requirements.
+    • Employees are entitled to withdraw PF upon resignation or retirement as per EPF regulations.
+    
+(b) **Gratuity:**
+    • Employees completing 5 years of continuous service are eligible for gratuity as per the Payment of Gratuity Act.
+    
+(c) **Medical Insurance:**
+    • The hospital provides health insurance coverage for employees and their immediate family members.
+    • Coverage includes hospitalization, outpatient consultation, and preventive health check-ups.
+    
+(d) **Other Benefits:**
+    • Meal allowances or subsidized canteen facilities
+    • Transportation facilities or allowances
+    • Professional development support (conferences, certifications)
+    • Wellness programs and employee assistance programs`
+      },
+      {
+        number: '11.3',
+        title: 'Performance-Based Incentives',
+        content: `(a) **Annual Bonus:**
+    • Performance-based bonuses are awarded based on individual and organizational performance.
+    • Bonus payout is at the discretion of management and subject to profitability.
+    
+(b) **Recognition and Rewards:**
+    • Outstanding performers are recognized through awards, certificates, and monetary rewards.
+    • Long service awards are given to employees completing significant tenure milestones.`
+      }
+    ]
+  },
+  section12: {
+    subsections: [
+      {
+        number: '12.1',
+        title: 'Payroll Processing',
+        content: `(a) **Salary Payment Schedule:**
+    • Salaries are disbursed on the last working day of each month or as communicated by the Finance Department.
+    • In case of bank holidays, salaries are credited one working day prior.
+    
+(b) **Salary Slip:**
+    • Employees receive detailed salary slips showing gross pay, deductions, and net pay.
+    • Salary slips are accessible through the HRMS portal.
+    
+(c) **Deductions:**
+    • Statutory deductions include PF, ESI, Professional Tax, and TDS as applicable.
+    • Other deductions may include loan repayments, advance recovery, and disciplinary fines.`
+      },
+      {
+        number: '12.2',
+        title: 'Statutory Compliance',
+        content: `(a) **Tax Compliance:**
+    • The hospital deducts Tax Deducted at Source (TDS) as per Income Tax Act.
+    • Employees must submit investment declarations for tax-saving deductions.
+    
+(b) **Employee State Insurance (ESI):**
+    • Employees earning below the ESI wage ceiling are covered under the ESI scheme.
+    • The hospital contributes to ESI as per statutory rates.
+    
+(c) **Professional Tax:**
+    • Professional tax is deducted as per state regulations and remitted to authorities.`
+      }
+    ]
+  },
+  section13: {
+    subsections: [
+      {
+        number: '13.1',
+        title: 'Workplace Safety',
+        content: `(a) **Safe Working Environment:**
+    • The hospital is committed to providing a safe, healthy, and hazard-free workplace.
+    • Regular safety audits and risk assessments are conducted.
+    
+(b) **Personal Protective Equipment (PPE):**
+    • Employees working in clinical and hazardous areas must use appropriate PPE.
+    • The hospital provides PPE as per job requirements.
+    
+(c) **Incident Reporting:**
+    • All workplace accidents, injuries, or near-miss incidents must be reported immediately to the supervisor and Safety Officer.
+    • Investigation and corrective actions are initiated promptly.`
+      },
+      {
+        number: '13.2',
+        title: 'Health and Wellness',
+        content: `(a) **Occupational Health Services:**
+    • Regular health check-ups are provided to employees, especially those in high-risk roles.
+    • Vaccination programs are conducted as per hospital policy and public health guidelines.
+    
+(b) **Employee Assistance Program (EAP):**
+    • Confidential counseling services are available for employees facing personal or work-related stress.
+    
+(c) **Ergonomics and Workplace Design:**
+    • Workstations are designed to minimize physical strain and promote employee well-being.`
+      }
+    ]
+  },
+  section14: {
+    subsections: [
+      {
+        number: '14.1',
+        title: 'Disciplinary Actions',
+        content: `(a) **Types of Misconduct:**
+    • Misconduct includes insubordination, theft, dishonesty, harassment, breach of confidentiality, and violation of hospital policies.
+    
+(b) **Disciplinary Measures:**
+    • Verbal warning
+    • Written warning
+    • Suspension without pay
+    • Demotion
+    • Termination of employment
+    
+(c) **Due Process:**
+    • Employees are given an opportunity to explain their conduct before disciplinary action is taken.
+    • All disciplinary actions are documented and maintained in the employee's personnel file.`
+      },
+      {
+        number: '14.2',
+        title: 'Grievance Redressal',
+        content: `(a) **Grievance Filing:**
+    • Employees may raise grievances related to work conditions, policies, or interpersonal issues through the designated Grievance Redressal Committee (GRC).
+    
+(b) **Grievance Resolution:**
+    • The GRC reviews and resolves grievances within 15 working days.
+    • Employees have the right to appeal if dissatisfied with the resolution.
+    
+(c) **Confidentiality:**
+    • All grievances are handled with strict confidentiality to protect the complainant's identity.`
+      }
+    ]
+  },
+  section15: {
+    subsections: [
+      {
+        number: '15.1',
+        title: 'Resignation and Notice Period',
+        content: `(a) **Resignation Procedure:**
+    • Employees wishing to resign must submit a written resignation letter to their immediate supervisor and HR Department.
+    
+(b) **Notice Period:**
+    • Employees must serve the notice period as specified in their employment contract (typically 1-3 months).
+    • Notice period may be waived or reduced at the discretion of management.
+    
+(c) **Withdrawal of Resignation:**
+    • Resignation may be withdrawn within the notice period with mutual consent.`
+      },
+      {
+        number: '15.2',
+        title: 'Termination and Exit Clearance',
+        content: `(a) **Termination:**
+    • Employment may be terminated for cause (misconduct, poor performance) or without cause (organizational restructuring).
+    • Employees are provided with a termination letter stating the reason and effective date.
+    
+(b) **Exit Interview:**
+    • Exit interviews are conducted to gather feedback and insights for organizational improvement.
+    
+(c) **Clearance and Settlement:**
+    • Employees must complete exit clearance procedures and return all hospital property.
+    • Full and final settlement is processed within 45 days of the last working day.`
+      }
+    ]
+  },
+  section16: {
+    subsections: [
+      {
+        number: '16.1',
+        title: 'IT Systems and Data Security',
+        content: `(a) **Acceptable Use of IT Resources:**
+    • Hospital IT resources (computers, email, internet) are provided for official use only.
+    • Personal use is permitted to a reasonable extent but must not interfere with work responsibilities.
+    
+(b) **Data Security and Confidentiality:**
+    • Employees must protect patient data and hospital information from unauthorized access, disclosure, or breach.
+    • Use of strong passwords, encryption, and secure data handling practices is mandatory.
+    
+(c) **Cybersecurity:**
+    • Employees must report any suspected cybersecurity incidents or data breaches immediately.
+    • Regular training on cybersecurity awareness is provided.`
+      },
+      {
+        number: '16.2',
+        title: 'Device and Access Management',
+        content: `(a) **Device Allocation:**
+    • Hospital-issued devices (laptops, tablets, mobile phones) remain hospital property and must be returned upon exit.
+    
+(b) **Access Control:**
+    • System access is granted based on job role and revoked upon termination or role change.
+    
+(c) **Remote Access:**
+    • Remote access to hospital systems must comply with IT security protocols.`
+      }
+    ]
+  },
+  section17: {
+    subsections: [
+      {
+        number: '17.1',
+        title: 'Regulatory Compliance',
+        content: `(a) **Healthcare Regulations:**
+    • The hospital complies with all applicable healthcare regulations, including MCI, NMC, NABH, JCI, and state health department requirements.
+    
+(b) **Labor Laws:**
+    • The hospital adheres to labor laws including the Industrial Disputes Act, Payment of Wages Act, Minimum Wages Act, and EPF Act.
+    
+(c) **POSH Act Compliance:**
+    • The hospital has constituted an Internal Complaints Committee (ICC) as per the Prevention of Sexual Harassment (POSH) Act, 2013.`
+      }
+    ]
+  },
+  section18: {
+    subsections: [
+      {
+        number: '18.1',
+        title: 'Internal Communication',
+        content: `(a) **Communication Channels:**
+    • Official communication is conducted through emails, intranet, notice boards, and staff meetings.
+    
+(b) **Feedback Mechanisms:**
+    • Employees are encouraged to provide feedback through suggestion boxes, surveys, and town hall meetings.`
+      }
+    ]
+  },
+  section19: {
+    subsections: [
+      {
+        number: '19.1',
+        title: 'Quality Standards',
+        content: `(a) **NABH and JCI Accreditation:**
+    • The hospital is committed to maintaining NABH and JCI accreditation standards.
+    • All employees must comply with quality protocols and participate in accreditation activities.`
+      }
+    ]
+  },
+  section20: {
+    subsections: [
+      {
+        number: '20.1',
+        title: 'Emergency Preparedness',
+        content: `(a) **Crisis Management Plan:**
+    • The hospital maintains a crisis management plan to address emergencies such as natural disasters, pandemics, and security threats.
+    
+(b) **Business Continuity:**
+    • Contingency plans are in place to ensure uninterrupted patient care and hospital operations during crises.`
+      }
+    ]
+  },
+  section21: {
+    subsections: [
+      {
+        number: '21.1',
+        title: 'Amendments',
+        content: `(a) **Review and Updates:**
+    • These By-Laws are reviewed annually or as needed to reflect changes in law, policy, or organizational needs.
+    
+(b) **Communication of Amendments:**
+    • All amendments are communicated to employees through official channels and updated in the employee handbook.`
+      }
+    ]
   }
 };
 
