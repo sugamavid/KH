@@ -1,21 +1,41 @@
 import React, { useState } from 'react';
 import { Mail, Lock, ArrowRight, Shield, Award, Clock, CheckCircle2, Building2, Phone } from 'lucide-react';
 
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL || '';
+
 const LoginPage = ({ onLogin }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
+    setError('');
     
-    setTimeout(() => {
-      if (email && password) {
-        onLogin();
+    try {
+      const response = await fetch(`${BACKEND_URL}/api/auth/login`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email, password }),
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        onLogin(data.access_token, data.user);
+      } else {
+        const errorData = await response.json();
+        setError(errorData.detail || 'Login failed. Please check your credentials.');
       }
+    } catch (err) {
+      console.error('Login error:', err);
+      setError('Network error. Please try again.');
+    } finally {
       setLoading(false);
-    }, 1500);
+    }
   };
 
   return (
