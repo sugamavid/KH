@@ -13,7 +13,7 @@ import IntelligentGuidance from './IntelligentGuidance';
 import SmartGuidance from './SmartGuidance';
 import HRByLaws from './HRByLaws';
 import HRSOPs from './HRSOPs';
-import HRAnnexures from './HRAnnexures';
+import SmartAnnexuresDashboard from './SmartAnnexuresDashboard';
 import ProfessionalAnnexures from './ProfessionalAnnexures';
 import DocumentManagement from './DocumentManagement';
 
