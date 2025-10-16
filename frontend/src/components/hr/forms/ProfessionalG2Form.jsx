@@ -235,6 +235,7 @@ const ProfessionalG2Form = () => {
             </label>
           </div>
         </div>
+        </div>
 
         {/* Signatures */}
         <div className="bg-white border border-gray-200 rounded-xl p-5 mb-5">
