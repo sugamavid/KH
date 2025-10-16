@@ -137,10 +137,33 @@ const DepartmentManagement = () => {
     }
   ];
 
-  // Load departments on mount
+  // Load departments on mount from backend
   useEffect(() => {
-    setDepartments(initialDepartments);
+    fetchDepartments();
   }, []);
+
+  // Fetch departments from backend
+  const fetchDepartments = async () => {
+    try {
+      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/departments`);
+      if (response.ok) {
+        const data = await response.json();
+        // If backend has no departments or has only basic departments, use our detailed initial departments
+        if (data.length === 0) {
+          setDepartments(initialDepartments);
+        } else {
+          setDepartments(data);
+        }
+      } else {
+        // Fallback to initial departments if API fails
+        setDepartments(initialDepartments);
+      }
+    } catch (error) {
+      console.error('Failed to fetch departments:', error);
+      // Fallback to initial departments
+      setDepartments(initialDepartments);
+    }
+  };
 
   // Form state for add/edit
   const [formData, setFormData] = useState({
