@@ -430,6 +430,13 @@ const HRAnnexures = ({ setActiveModule }) => {
       linkedSOP: 'SOP I.4',
       color: 'orange'
     },
+    {
+      code: 'I6',
+      title: 'Salary Slip Format & Payroll Helpdesk Query Form',
+      category: 'Payroll & Compensation',
+      linkedSOP: 'SOP I.6',
+      color: 'orange'
+    },
   ];
 
   // Mock data for dashboard stats
