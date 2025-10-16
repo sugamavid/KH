@@ -205,7 +205,6 @@ const ProfessionalG2Form = () => {
           </div>
           <textarea name="ann_purpose" value={formData.ann_purpose} onChange={handleChange} rows="4" className="w-full px-3 py-2 border border-gray-300 rounded-lg resize-none" />
         </div>
-        </div>
 
         {/* Employee Details */}
         <div className="bg-white border border-gray-200 rounded-xl p-5 mb-5">
