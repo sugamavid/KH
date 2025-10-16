@@ -1122,15 +1122,366 @@ These By-Laws are applicable to all individuals engaged in any capacity with Koy
     ]
   },
   section21: {
+    section: 'Section 21',
+    title: 'Special Provisions for Sensitive Situations',
+    searchTerms: ['sensitive situations', 'harassment', 'investigation', 'support', 'confidentiality'],
+    icon: 'AlertTriangle',
+    color: 'red',
     subsections: [
       {
         number: '21.1',
-        title: 'Amendments',
-        content: `(a) **Review and Updates:**
-    • These By-Laws are reviewed annually or as needed to reflect changes in law, policy, or organizational needs.
-    
-(b) **Communication of Amendments:**
-    • All amendments are communicated to employees through official channels and updated in the employee handbook.`
+        title: 'Purpose and Overview',
+        content: `(a) **Definition of Sensitive Situations:**
+    • Sensitive situations include, but are not limited to, cases involving harassment, workplace violence, severe employee grievances, ethical violations, and critical personal circumstances impacting an employee's work performance.
+    • These situations require heightened sensitivity, confidentiality, and a structured approach to ensure fairness and support for all parties involved.
+
+(b) **Objective:**
+    • To establish clear procedures for handling sensitive situations to protect the well-being of employees and maintain a safe, respectful, and supportive work environment.
+    • To provide employees with the assurance that the hospital will respond promptly and fairly to sensitive matters.`
+      },
+      {
+        number: '21.2',
+        title: 'Reporting and Initial Response',
+        content: `(a) **Reporting Procedures:**
+    • Employees are encouraged to report sensitive situations through formal channels, including HR, a designated ethics committee, or the hospital's confidential reporting system.
+    • Reports may be submitted in person, via email, or through an anonymous reporting platform, ensuring accessibility for all employees.
+
+(b) **Immediate Response Protocol:**
+    • Upon receiving a report, the HR department or relevant authority shall acknowledge receipt and take initial steps to assess the urgency and scope of the situation.
+    • Immediate measures may be provided to the affected employees to mitigate risks.`
+      }
+    ]
+  },
+
+  section22: {
+    section: 'Section 22',
+    title: 'Compliance and Regular Audits',
+    searchTerms: ['compliance', 'audits', 'monitoring', 'regulatory', 'quality assurance'],
+    icon: 'CheckCircle',
+    color: 'blue',
+    subsections: [
+      {
+        number: '22.1',
+        title: 'Purpose and Importance',
+        content: `(a) **Definition of Compliance:**
+    • Compliance refers to the adherence to laws, regulations, hospital policies, and best practices that govern the operations of Koyili Hospital.
+    • Ensuring compliance helps maintain the integrity of hospital operations, protect patient and employee rights, and prevent legal and financial risks.
+
+(b) **Importance of Audits:**
+    • Regular audits are essential for assessing compliance, identifying areas of risk, and ensuring continuous improvement in operational standards.
+    • Audits reinforce the hospital's commitment to transparency, accountability, and regulatory adherence.`
+      },
+      {
+        number: '22.2',
+        title: 'Types of Audits',
+        content: `(a) **Internal Audits:**
+    • Internal audits shall be conducted by the hospital's compliance team to review adherence to hospital policies, internal controls, and regulatory requirements.
+    • These may include reviews of HR practices, patient safety protocols, financial transactions, and IT systems.
+
+(b) **External Audits:**
+    • External audits shall be conducted by independent auditing firms or government agencies to ensure compliance with national laws and healthcare standards.
+    • May focus on financial reporting, clinical standards, data protection, and labor law adherence.
+
+(c) **Special Audits:**
+    • Special audits may be initiated in response to specific incidents to address and resolve issues promptly.`
+      }
+    ]
+  },
+
+  section23: {
+    section: 'Section 23',
+    title: 'Workplace Culture and Team Building',
+    searchTerms: ['culture', 'team building', 'collaboration', 'engagement', 'values'],
+    icon: 'Users',
+    color: 'purple',
+    subsections: [
+      {
+        number: '23.1',
+        title: 'Purpose and Importance',
+        content: `(a) **Defining Workplace Culture:**
+    • Workplace culture at Koyili Hospital refers to the shared values, beliefs, attitudes, and practices that shape the work environment.
+    • A positive culture promotes respect, collaboration, and high morale, fostering an environment where employees feel valued and motivated.
+
+(b) **Importance of Team Building:**
+    • Team building is essential for strengthening collaboration, enhancing communication, and building trust among employees.
+    • Effective team building activities lead to improved teamwork, increased productivity, and a greater sense of belonging.`
+      },
+      {
+        number: '23.2',
+        title: 'Core Values and Principles',
+        content: `(a) **Core Values:**
+    • Koyili Hospital's core values include integrity, empathy, teamwork, excellence, and innovation.
+    • Employees are encouraged to embody these values in their daily work and interactions.
+
+(b) **Principles of Collaboration:**
+    • The hospital fosters an inclusive culture where collaboration is prioritised and diverse perspectives are valued.
+    • Open communication and mutual respect are the foundations of collaborative work.`
+      }
+    ]
+  },
+
+  section24: {
+    section: 'Section 24',
+    title: 'Employee Wellness and Support Programs',
+    searchTerms: ['wellness', 'health', 'support', 'work-life balance', 'EAP'],
+    icon: 'Heart',
+    color: 'pink',
+    subsections: [
+      {
+        number: '24.1',
+        title: 'Purpose and Overview',
+        content: `(a) **Importance of Employee Wellness:**
+    • Koyili Hospital recognises that employee wellness is vital for maintaining a productive, healthy, and engaged workforce.
+    • Wellness programs aim to enhance physical, mental, and emotional well-being, promoting a balanced work-life approach.
+
+(b) **Objectives of Wellness Programs:**
+    • To reduce stress, prevent burnout, and improve overall job satisfaction.
+    • These programs support employees in achieving a healthier lifestyle.`
+      },
+      {
+        number: '24.2',
+        title: 'Types of Wellness Programs',
+        content: `(a) **Physical Wellness Initiatives:**
+    • Programs include gym memberships, fitness classes, yoga sessions, and wellness challenges.
+    • Regular health check-ups and screenings shall be provided.
+
+(b) **Mental Health Support:**
+    • Mental health support through counselling services, stress management workshops, and awareness campaigns.
+    • Confidential consultations available through the Employee Assistance Program.
+
+(c) **Nutritional Programs:**
+    • Healthy meal options, nutritional workshops, and diet consultations to promote balanced eating habits.`
+      }
+    ]
+  },
+
+  section25: {
+    section: 'Section 25',
+    title: 'Handling Conflict of Interest',
+    searchTerms: ['conflict of interest', 'disclosure', 'ethics', 'financial interests'],
+    icon: 'AlertCircle',
+    color: 'orange',
+    subsections: [
+      {
+        number: '25.1',
+        title: 'Purpose and Scope',
+        content: `(a) **Definition of Conflict of Interest:**
+    • A conflict of interest arises when an employee's personal interests interfere with their responsibilities at Koyili Hospital.
+    • This section provides a framework for identifying, disclosing, and managing conflicts of interest.
+
+(b) **Scope of Application:**
+    • These provisions apply to all hospital employees, contractors, and affiliates.
+    • Employees must uphold the highest standards of ethical conduct.`
+      },
+      {
+        number: '25.2',
+        title: 'Types of Conflicts',
+        content: `(a) **Personal and Family Relationships:**
+    • Conflicts may occur if family members hold significant positions with the hospital or suppliers.
+    • Employees must disclose any relationships that could affect impartiality.
+
+(b) **Financial Interests:**
+    • Conflicts arise when employees have financial interests in entities conducting business with the hospital.
+    • Includes owning shares or investments in such companies.
+
+(c) **External Employment:**
+    • External work must not conflict with hospital duties or compete with hospital services.`
+      }
+    ]
+  },
+
+  section26: {
+    section: 'Section 26',
+    title: 'Innovation and Continuous Improvement',
+    searchTerms: ['innovation', 'improvement', 'creativity', 'development', 'quality'],
+    icon: 'Lightbulb',
+    color: 'yellow',
+    subsections: [
+      {
+        number: '26.1',
+        title: 'Purpose and Commitment',
+        content: `(a) **Definition and Importance:**
+    • Innovation encompasses the development and application of new ideas, processes, and technologies to enhance healthcare services.
+    • Continuous improvement is a commitment to ongoing refinement of processes, policies, and services.
+
+(b) **Organisational Commitment:**
+    • The hospital fosters a culture that encourages innovation and continuous improvement as key operational components.
+    • All employees are encouraged to contribute ideas.`
+      },
+      {
+        number: '26.2',
+        title: 'Fostering Innovation Culture',
+        content: `(a) **Encouragement of Creative Thinking:**
+    • Employees are encouraged to think creatively and propose new methods to improve efficiency and patient care.
+    • Open-minded approach to evaluating and testing new ideas.
+
+(b) **Idea Submission Channels:**
+    • Formal channels provided for submitting innovative ideas through online portals and suggestion boxes.
+    • All ideas reviewed by the Innovation Committee.
+
+(c) **Recognition of Innovation:**
+    • Employees whose ideas lead to improvements shall be recognised through awards and incentives.`
+      }
+    ]
+  },
+
+  section27: {
+    section: 'Section 27',
+    title: 'Work-Life Balance Initiatives',
+    searchTerms: ['work-life balance', 'flexible work', 'wellness', 'personal time'],
+    icon: 'Coffee',
+    color: 'brown',
+    subsections: [
+      {
+        number: '27.1',
+        title: 'Purpose and Importance',
+        content: `(a) **Definition of Work-Life Balance:**
+    • Work-life balance refers to the equilibrium between professional responsibilities and personal life.
+    • Essential for maintaining employee health, productivity, and job satisfaction.
+
+(b) **Objectives:**
+    • To reduce stress, prevent burnout, and enhance job performance.
+    • To support employees in managing personal responsibilities alongside work duties.`
+      },
+      {
+        number: '27.2',
+        title: 'Flexible Work Arrangements',
+        content: `(a) **Types of Arrangements:**
+    • Various flexible work arrangements including adjusted hours, part-time schedules, and job-sharing opportunities.
+    • Remote work options for eligible roles.
+
+(b) **Approval Process:**
+    • Formal request submission outlining proposed arrangement and expected impact.
+    • Approval contingent upon operational needs and employee role.
+
+(c) **Monitoring and Review:**
+    • Periodic review to ensure arrangements meet both employee and hospital needs.`
+      }
+    ]
+  },
+
+  section28: {
+    section: 'Section 28',
+    title: 'Corporate Social Responsibility (CSR) Policies',
+    searchTerms: ['CSR', 'community', 'social responsibility', 'sustainability', 'outreach'],
+    icon: 'Globe',
+    color: 'green',
+    subsections: [
+      {
+        number: '28.1',
+        title: 'Purpose and Overview',
+        content: `(a) **Definition and Importance:**
+    • Corporate Social Responsibility refers to the ethical obligation to contribute positively to society and the environment.
+    • CSR initiatives enhance reputation, foster goodwill, and contribute to broader social and environmental goals.
+
+(b) **Objectives of CSR:**
+    • To integrate socially responsible practices into hospital operations.
+    • To actively engage in community service, environmental sustainability, and ethical business practices.`
+      },
+      {
+        number: '28.2',
+        title: 'CSR Focus Areas',
+        content: `(a) **Healthcare Outreach Programs:**
+    • Organise and participate in healthcare outreach providing medical assistance to underprivileged communities.
+    • Regular health camps, vaccination drives, and preventive care initiatives.
+
+(b) **Environmental Sustainability:**
+    • Prioritise eco-friendly practices including waste reduction, energy conservation, and water management.
+    • Green initiatives such as tree planting and recycling campaigns.
+
+(c) **Education and Training:**
+    • Support educational initiatives including scholarships and training workshops.
+    • Collaborative programs with schools and colleges for health awareness.
+
+(d) **Social and Economic Empowerment:**
+    • Projects focused on economic empowerment and skill development for marginalised groups.`
+      }
+    ]
+  },
+
+  section29: {
+    section: 'Section 29',
+    title: 'Compliance with Industry Standards and Best Practices',
+    searchTerms: ['industry standards', 'best practices', 'accreditation', 'NABH', 'quality'],
+    icon: 'Award',
+    color: 'gold',
+    subsections: [
+      {
+        number: '29.1',
+        title: 'Purpose and Scope',
+        content: `(a) **Definition of Compliance:**
+    • Compliance with industry standards refers to adherence to established regulations, protocols, and guidelines.
+    • Ensures the hospital upholds the highest level of service quality, safety, and professionalism.
+
+(b) **Scope of Compliance:**
+    • Applies to all departments and employees, ensuring practices align with healthcare regulations and ethical standards.
+    • Includes patient care, clinical procedures, data protection, and operational efficiency.`
+      },
+      {
+        number: '29.2',
+        title: 'Regulatory Compliance Framework',
+        content: `(a) **National and Local Regulations:**
+    • Adherence to all applicable laws related to healthcare, labor, environmental standards, and business operations.
+    • Compliance frameworks regularly updated to reflect changes in regulations.
+
+(b) **Accreditation Standards:**
+    • Seek and maintain accreditation from NABH and JCI where applicable.
+    • Ensures hospital meets international standards of patient care, safety, and clinical excellence.
+
+(c) **Ethical Guidelines:**
+    • Medical and non-medical staff must adhere to ethical guidelines set by professional bodies.
+    • Ethical compliance reinforces trust, professionalism, and accountability.`
+      }
+    ]
+  },
+
+  section30: {
+    section: 'Section 30',
+    title: 'Miscellaneous Provisions',
+    searchTerms: ['miscellaneous', 'amendments', 'interpretation', 'general provisions'],
+    icon: 'FileText',
+    color: 'slate',
+    subsections: [
+      {
+        number: '30.1',
+        title: 'General Applicability and Interpretation',
+        content: `(a) **Applicability:**
+    • These by-laws apply to all employees, contractors, and affiliates of Koyili Hospital.
+    • Provisions are intended to complement existing laws, regulations, and hospital policies.
+
+(b) **Interpretation:**
+    • Questions regarding interpretation shall be directed to HR or legal advisory team.
+    • In case of ambiguity, interpretation most aligned with hospital's mission and legal obligations shall prevail.`
+      },
+      {
+        number: '30.2',
+        title: 'Amendments and Revisions',
+        content: `(a) **Periodic Review:**
+    • By-laws shall be reviewed periodically to ensure they remain current and aligned with law changes.
+    • Reviews conducted by HR with legal advisors and senior management.
+
+(b) **Amendment Process:**
+    • Proposed amendments documented and presented to senior management for approval.
+    • Once approved, amendments communicated to all employees.
+
+(c) **Emergency Revisions:**
+    • Urgent changes may be enacted by senior management without standard review process.
+    • Emergency revisions documented and communicated as soon as possible.`
+      },
+      {
+        number: '30.3',
+        title: 'Severability and Compliance',
+        content: `(a) **Severability of Provisions:**
+    • If any provision is found invalid, illegal, or unenforceable, remaining provisions continue in full force.
+    • Hospital shall make reasonable efforts to amend invalid provisions.
+
+(b) **Legal Compliance:**
+    • All employees expected to comply with applicable laws and regulations.
+    • Actions contrary to laws may result in disciplinary action.
+
+(c) **Regulatory Liaison:**
+    • Legal team acts as liaison with regulatory authorities to ensure compliance.
+    • Employees informed of relevant changes affecting their roles.`
       }
     ]
   }
