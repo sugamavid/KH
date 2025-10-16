@@ -306,7 +306,6 @@ const ProfessionalG2Form = () => {
             <li>Records must be archived for 10 years for statutory and accreditation audits.</li>
           </ul>
         </div>
-        </div>
 
       {/* Matching Blue Gradient Footer */}
       <div className="bg-gradient-to-r from-blue-900 via-blue-800 to-blue-700 px-8 py-5 mt-8">
