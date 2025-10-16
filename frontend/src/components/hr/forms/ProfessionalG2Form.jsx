@@ -312,7 +312,6 @@ const ProfessionalG2Form = () => {
           </ul>
         </div>
         </div>
-      </div>
 
       {/* Matching Blue Gradient Footer */}
       <div className="bg-gradient-to-r from-blue-900 via-blue-800 to-blue-700 px-8 py-5 mt-8">
