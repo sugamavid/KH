@@ -276,7 +276,125 @@ Once drafted, the policy shall be reviewed internally by:
     title: 'Reporting Matrix & Job Description Repository',
     searchTerms: ['reporting', 'matrix', 'job', 'description', 'jd', 'repository'],
     category: 'A. Organisational Governance',
-    content: 'Establishes unified Reporting Matrix and Job Description Repository for all positions ensuring role clarity, accountability, and alignment with organizational goals.'
+    subsections: [
+      {
+        number: '1',
+        title: 'OBJECTIVE',
+        content: 'This Standard Operating Procedure (SOP) sets forth the process for establishing a unified Reporting Matrix and maintaining an up-to-date Job Description (JD) Repository for all positions across the hospital. The objective is to ensure role clarity, institutional accountability, proper supervisory control, and alignment with organisational goals and statutory obligations.'
+      },
+      {
+        number: '2',
+        title: 'SCOPE AND APPLICABILITY',
+        content: `This SOP applies to:
+• All permanent, contractual, probationary, and temporary positions within Koyili Hospital
+• All departments including clinical, administrative, finance, HR, IT, operations, paramedical, and support services
+• The HR Department, Departmental Heads, & Senior Management responsible for governance of job roles and performance supervision`
+      },
+      {
+        number: '3',
+        title: 'DEFINITIONS',
+        content: `• Reporting Matrix: A structured chart detailing the immediate and escalated reporting authority of each role
+• Job Description (JD): A formal document outlining duties, responsibilities, qualifications, KPIs, and reporting lines of a position
+• JD Repository: A centrally maintained digital and physical archive of all sanctioned Job Descriptions
+• Position Code: A unique alphanumeric identifier assigned to each post under the Organisational Structure`
+      },
+      {
+        number: '4',
+        title: 'PROCEDURE',
+        subsections: [
+          {
+            number: '4.1',
+            title: 'Reporting Matrix Finalisation',
+            content: `(i) Each Departmental Head, in coordination with the HR Department, shall submit a Department-Wise Reporting Matrix detailing:
+    • All sanctioned posts (by designation and Position Code)
+    • Immediate supervisor and next-level authority
+    • Lateral coordination responsibilities (if applicable)
+
+(ii) The HR Department shall compile the information into a Hospital-Wide Reporting Matrix, ensuring:
+    • No duplicate reporting
+    • Clear escalation path for each post
+    • Alignment with approved Organogram under SOP 2`
+          },
+          {
+            number: '4.2',
+            title: 'Job Description (JD) Template and Creation',
+            content: `(i) The HR Department shall issue a standardised JD Template, which must include:
+    • Position Title & Code
+    • Department
+    • Grade/Pay Band
+    • Reporting To (Immediate + Escalated)
+    • Job Summary
+    • Key Duties & Responsibilities (KRA-linked)
+    • Qualifications & Experience Required
+    • Inter-Departmental Linkages
+    • Statutory/Regulatory Requirements (if any)
+    • Revision History (Version Control Table)
+
+(ii) Departmental Heads shall draft or revise JDs for each position using the standard format and submit them to HR for review`
+          },
+          {
+            number: '4.3',
+            title: 'Review, Approval & Archiving',
+            content: `(i) The HR Department shall verify:
+    • Structural consistency across similar grades or departments
+    • Completeness and clarity of role expectations
+    • Linkage of JDs to organisational KPIs and compliance norms
+
+(ii) Final JDs shall be:
+    • Assigned a unique Document Number and Version Code
+    • Signed off by the Department Head and HR Manager
+    • Digitally archived in the JD Repository with access controls
+    • Cross-linked with the employee's profile in the HRMS`
+          },
+          {
+            number: '4.4',
+            title: 'Communication & Access',
+            content: `(i) Upon finalisation:
+    • Every employee shall be issued a signed copy of their JD at the time of onboarding, transfer, or promotion
+    • JDs shall be displayed on the internal portal under department-wise folders
+    • Managers shall be trained to refer to JDs during evaluations and work allocation`
+          },
+          {
+            number: '4.5',
+            title: 'Revisions and Updation',
+            content: `(i) JDs shall be reviewed:
+    • Once every two years, or
+    • Upon restructuring, role redefinition, legal requirement, or performance audit recommendation
+
+(ii) Any revision must follow the same path: Departmental Draft → HR Review → Final Approval → Versioning → Archiving`
+          }
+        ]
+      },
+      {
+        number: '5',
+        title: 'ROLES AND RESPONSIBILITIES',
+        table: {
+          headers: ['Position', 'Responsibility'],
+          rows: [
+            ['HR Department', 'Issue template, validate structure, archive JDs, maintain repository'],
+            ['Department Heads', 'Draft department-specific JDs, define reporting matrix'],
+            ['Executive Committee', 'Ratify structure-wide changes to reporting roles'],
+            ['Employees', 'Acknowledge and comply with roles as defined in the JD']
+          ]
+        }
+      },
+      {
+        number: '6',
+        title: 'COMPLIANCE AND RECORD-KEEPING',
+        content: `• The JD Repository shall be maintained with version histories, access logs, and audit trails
+• HR shall maintain JD Issuance Records with employee acknowledgments and cross-referencing to appointment/transfer letters
+• During internal audits or statutory inspections (e.g., NABH, Labour Inspections), HR shall be responsible for producing role-linked documentation`
+      },
+      {
+        number: '7',
+        title: 'REFERENCE DOCUMENTS',
+        content: `• Organisational Structure (SOP 2)
+• Koyili Hospital Human Resource By-Laws – Sections on Role Governance and Duty Assignment
+• NABH and Clinical Establishment Act Guidelines
+• Standard JD Template (Annexure A)
+• HRMS Access Control Policy`
+      }
+    ]
   },
 
   sopA4: {
@@ -285,7 +403,113 @@ Once drafted, the policy shall be reviewed internally by:
     title: 'Employee Handbook Issuance & Acknowledgment',
     searchTerms: ['handbook', 'employee', 'issuance', 'acknowledgment', 'manual'],
     category: 'A. Organisational Governance',
-    content: 'Defines standardised procedure for timely issuance, version control, and formal acknowledgment of Employee Handbook to all staff members.'
+    subsections: [
+      {
+        number: '1',
+        title: 'OBJECTIVE',
+        content: 'To define a standardised procedure for the timely issuance, version control, and formal acknowledgment of the Employee Handbook to all staff members of Koyili Hospital. The purpose is to ensure that every employee is made aware of their rights, responsibilities, and the institutional policies governing their employment in a documented and transparent manner.'
+      },
+      {
+        number: '2',
+        title: 'SCOPE AND APPLICABILITY',
+        content: `This SOP applies to:
+• All categories of employees including regular, temporary, contractual, part-time, and interns
+• All departments of Koyili Hospital—clinical, non-clinical, support services, and administration
+• The HR Department, Departmental Heads, and Onboarding/Induction Coordinators`
+      },
+      {
+        number: '3',
+        title: 'DEFINITIONS',
+        content: `• Employee Handbook: A codified and officially approved document summarising key HR policies, employee rights, workplace rules, benefits, code of conduct, grievance redressal mechanisms, and disciplinary procedures
+• Acknowledgment Form: A written declaration signed by the employee confirming receipt, understanding, and agreement to comply with the Employee Handbook
+• Handbook Version Control: The system of assigning version numbers and effective dates to track updates or amendments to the Handbook`
+      },
+      {
+        number: '4',
+        title: 'PROCEDURE',
+        subsections: [
+          {
+            number: '4.1',
+            title: 'Handbook Content and Approval',
+            content: `(i) The Employee Handbook shall be prepared and updated by the HR Department, in consultation with the Legal and Compliance Cell
+
+(ii) The Handbook shall include:
+    • Welcome Note and Mission Statement
+    • Key Policies and By-Laws (Leave, Attendance, Working Hours, Code of Conduct)
+    • HR Benefits (Salary, PF, Gratuity, ESI, Medical)
+    • Disciplinary Procedure
+    • POSH, Anti-Harassment, and Whistleblower Guidelines
+    • Grievance Redressal Framework
+    • Summary of Compliance Requirements
+
+(iii) The finalised draft shall be submitted to the Executive Committee for formal approval
+
+(iv) Once approved, the Handbook shall be assigned a Version Number and Effective Date, and archived digitally`
+          },
+          {
+            number: '4.2',
+            title: 'Issuance of Handbook',
+            content: `(i) The Employee Handbook shall be:
+    • Provided to each employee at the time of joining as part of the Onboarding Kit
+    • Issued in both print and digital form (PDF with read-only settings)
+    • Circulated via official email and uploaded on the HRMS or Internal Portal
+    • Made available in English and Malayalam (or local language) wherever applicable`
+          },
+          {
+            number: '4.3',
+            title: 'Acknowledgment Procedure',
+            content: `(i) Each employee shall be required to sign an Employee Handbook Acknowledgment Form, which includes the following declaration:
+
+"I hereby acknowledge that I have received and read the Koyili Hospital Employee Handbook and understand its contents. I agree to comply with the terms and policies contained therein and understand that it is my responsibility to seek clarification from the HR Department in case of any doubt."
+
+(ii) The signed Acknowledgment Form shall be:
+    • Collected by the HR Department within 7 days of joining
+    • Digitally archived in the Employee Master File
+    • Made available for inspection during audits or HR proceedings`
+          },
+          {
+            number: '4.4',
+            title: 'Revised Editions and Updates',
+            content: `(i) In the event of a revision or new edition:
+    • Employees shall be notified through circular and email
+    • Summary of Changes shall be annexed to the updated Handbook
+    • A fresh acknowledgment shall be obtained if the revision pertains to rights, obligations, or disciplinary provisions
+
+(ii) The HR Department shall maintain a Handbook Revision Register for version tracking`
+          }
+        ]
+      },
+      {
+        number: '5',
+        title: 'ROLES AND RESPONSIBILITIES',
+        table: {
+          headers: ['Position', 'Responsibility'],
+          rows: [
+            ['HR Department', 'Drafting, publishing, and disseminating the Handbook; obtaining and maintaining acknowledgment records'],
+            ['Legal/Compliance Cell', 'Vetting contents for legal validity and statutory alignment'],
+            ['Executive Committee', 'Approving the official version and any subsequent amendments'],
+            ['Induction Coordinator', 'Ensuring distribution and signed acknowledgment during onboarding'],
+            ['Employees', 'Reading, understanding, and formally acknowledging the Handbook']
+          ]
+        }
+      },
+      {
+        number: '6',
+        title: 'COMPLIANCE AND RECORD-KEEPING',
+        content: `• The HR Department shall retain acknowledgment records and updated versions for at least 5 years post an employee's separation
+• The Employee Handbook and signed acknowledgments shall be treated as official institutional documents, admissible in inquiries, disciplinary actions, and legal proceedings
+• Non-receipt or failure to acknowledge shall be escalated to the HR Head and noted in the employee's file`
+      },
+      {
+        number: '7',
+        title: 'REFERENCE DOCUMENTS',
+        content: `• Koyili Hospital Human Resource By-Laws – Sections on Employee Conduct and Orientation
+• Labour Codes and Industrial Employment Rules
+• POSH Policy, Whistleblower Policy, Code of Ethics
+• Handbook Template and Acknowledgment Form
+• HRMS SOP on Onboarding and Document Uploads`
+      }
+    ]
   },
 
   // SECTION B: RECRUITMENT, SELECTION & APPOINTMENT  
