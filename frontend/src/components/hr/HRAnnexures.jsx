@@ -569,6 +569,34 @@ const HRAnnexures = ({ setActiveModule }) => {
       linkedSOP: 'SOP L.4',
       color: 'green'
     },
+    {
+      code: 'L5',
+      title: 'Work-Life Balance Feedback Form',
+      category: 'Employee Health & Wellness',
+      linkedSOP: 'SOP L.5',
+      color: 'green'
+    },
+    {
+      code: 'M1',
+      title: 'Grievance Filing Form',
+      category: 'Grievance & Disciplinary Management',
+      linkedSOP: 'SOP M.1',
+      color: 'rose'
+    },
+    {
+      code: 'M2',
+      title: 'GRC Meeting Minutes Template',
+      category: 'Grievance & Disciplinary Management',
+      linkedSOP: 'SOP M.2',
+      color: 'rose'
+    },
+    {
+      code: 'M3',
+      title: 'Disciplinary Process Tracker',
+      category: 'Grievance & Disciplinary Management',
+      linkedSOP: 'SOP M.3',
+      color: 'rose'
+    },
   ];
 
   // Mock data for dashboard stats
