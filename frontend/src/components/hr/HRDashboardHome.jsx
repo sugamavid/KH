@@ -204,7 +204,8 @@ const HRDashboardHome = ({ setActiveModule }) => {
             {quickActions.map((action, idx) => (
               <button 
                 key={idx}
-                className="bg-white rounded-xl p-4 border border-slate-200 hover:border-blue-400 hover:shadow-lg transition-all group text-left relative"
+                onClick={() => handleNavigation(action.module)}
+                className="bg-white rounded-xl p-4 border border-slate-200 hover:border-blue-400 hover:shadow-lg transition-all group text-left relative cursor-pointer"
               >
                 {action.badge && (
                   <span className="absolute top-2 right-2 w-5 h-5 bg-red-500 text-white text-xs rounded-full flex items-center justify-center font-bold">
