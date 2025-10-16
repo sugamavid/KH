@@ -55,6 +55,8 @@ const HRDashboard = () => {
         return <ToolsCalculators />;
       case 'reports':
         return <ReportsAnalytics />;
+      case 'departments':
+        return <DepartmentManagement />;
       default:
         return <HRDashboardHome />;
     }
