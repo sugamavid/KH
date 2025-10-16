@@ -338,6 +338,18 @@ frontend:
         agent: "main"
         comment: "FINAL COMPLETION: Successfully recreated all remaining 7 problematic forms (A1, A2, A3, A4, B1, B9, B10) from scratch with proper JSX structure and standardized branding. All forms verified with balanced div tags. Frontend compiled successfully with no errors. Application tested and loading correctly. FINAL STATUS: All 39/39 Professional Annexure forms now working with consistent NABH-compliant branding: A1 (HR Policy Revision), A2 (Policy Acknowledgment), A3 (Joining Checklist), A4 (Background Verification), B1 (Manpower Requisition), B2-B8 (original), B9 (Offer Letter), B10 (Appointment Letter), C1-C5 (all functional), D1-D5 (all functional), E1-E5 (all functional), F1-F5 (F1 original, F2-F5 recreated), G1-G5 (G1 original, G2 recreated, G3-G5 original). Standardized blue gradient header and footer applied to all forms. Professional NABH branding complete."
 
+  - task: "Integration of New Annexure Forms (M4-M5, N1-N3) - Batch 14"
+    implemented: true
+    working: true
+    file: "/app/frontend/src/components/hr/forms/Professional[M4-M5,N1-N3]Form.jsx"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: true
+    status_history:
+      - working: true
+        agent: "main"
+        comment: "Successfully created and integrated 5 new annexure forms (M4, M5, N1, N2, N3) bringing total count from 70 to 75 forms. FORMS CREATED: 1) M4 - Appeal Submission Format (Grievance & Disciplinary Management): Complete appeal submission process with grounds selection, employee details, original case details, declaration, and official use sections. 2) M5 - POSH Complaint Form & ICC Meeting Register (POSH Compliance): Two-part form with POSH complaint filing (complainant/respondent details, nature of complaint, incident details) and ICC meeting register with attendees table and summary. 3) N1 - Resignation Form & Withdrawal Request (Employee Separation): Dual-purpose form with Part A for resignation (employee details, reason checkboxes, last working day) and Part B for withdrawal requests with reasons. 4) N2 - Exit Interview Questionnaire (Exit Feedback): Comprehensive exit interview with employee details, dynamic questionnaire table (theme/rating/comments), knowledge transfer table, and interviewer summary sections. 5) N3 - Departmental Clearance Certificate (Asset Return): Clearance checklist with dynamic table for department/items/status/signatory/date/remarks, final certification with signatures. STANDARDIZED BRANDING APPLIED: All forms feature standardized blue gradient header (from-blue-900 via-blue-800 to-blue-700) with three-column layout (Logo left, Hospital Details center, Document Info right with annexure code/version/NABH badges), blue gradient footer with NABH icon and copyright. DYNAMIC FEATURES: useState hooks for form data management, Save/Load/Print functionality, dynamic tables with add/remove rows, checkbox groups, textarea fields, date/time inputs. INTEGRATION COMPLETED: 1) Added imports for 5 new forms in HRAnnexures.jsx (lines 79-83). 2) Added metadata to professionalAnnexures array with proper categories (M4-M5: Grievance & Disciplinary Management, N1-N3: Employee Separation & Exit), linked SOPs, and color codes. 3) Added render cases in switch statement (lines 974-988). 4) Updated total form count from 70 to 75 in sidebar display (Batches 1-14: 75 Forms). VERIFICATION: ESLint passed with no issues for all 5 new forms and HRAnnexures.jsx. Frontend compiled successfully with no errors. All imports, array entries, and render cases properly configured. Ready for user testing and verification."
+
 metadata:
   created_by: "main_agent"
   version: "1.0"
