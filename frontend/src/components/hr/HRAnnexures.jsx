@@ -660,36 +660,49 @@ const HRAnnexures = ({ setActiveModule }) => {
 
   // Sidebar Component
   const Sidebar = () => (
-    <div className={`fixed left-0 top-0 h-full bg-white border-r-2 border-slate-200 transition-all duration-300 z-40 ${
+    <div className={`fixed left-0 top-0 h-full bg-gradient-to-b from-blue-50 via-indigo-50 to-blue-100 border-r-2 border-blue-200 shadow-2xl transition-all duration-300 z-40 ${
       sidebarOpen ? 'w-80' : 'w-0'
     } overflow-hidden`}>
-      <div className="h-full flex flex-col">
+      <div className="h-full flex flex-col relative">
+        {/* Animated Background Pattern */}
+        <div className="absolute inset-0 opacity-10 pointer-events-none">
+          <div className="absolute top-0 left-0 w-full h-full" style={{backgroundImage: 'radial-gradient(circle at 50% 50%, rgba(59,130,246,0.3) 0%, transparent 50%)', backgroundSize: '40px 40px'}}></div>
+        </div>
+
         {/* Sidebar Header */}
-        <div className="p-4 border-b-2 border-slate-200 bg-gradient-to-r from-blue-50 to-indigo-50">
+        <div className="relative p-4 border-b-2 border-blue-300 bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-700 shadow-lg">
           <div className="flex items-center justify-between mb-2">
-            <h3 className="font-bold text-slate-900">Professional Annexures</h3>
+            <div className="flex items-center space-x-2">
+              <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center shadow-md">
+                <FileText className="w-5 h-5 text-blue-600" />
+              </div>
+              <h3 className="font-black text-white text-lg">Annexures</h3>
+            </div>
             <button
               onClick={() => setSidebarOpen(false)}
-              className="p-1 hover:bg-slate-200 rounded"
+              className="p-1.5 hover:bg-white/20 rounded-lg transition-all"
             >
-              <X className="w-5 h-5" />
+              <X className="w-5 h-5 text-white" />
             </button>
           </div>
-          <p className="text-xs text-slate-600">Batches 1-15: 76 Forms (All Complete ✓)</p>
+          <div className="bg-white/20 backdrop-blur-sm rounded-lg px-3 py-2 border border-white/30">
+            <p className="text-xs text-white font-semibold">76 Forms Available ✓</p>
+            <p className="text-xs text-blue-100">NABH Compliant</p>
+          </div>
         </div>
 
         {/* Navigation Buttons */}
-        <div className="p-3 border-b border-slate-200 space-y-2">
+        <div className="relative p-3 border-b border-blue-200 space-y-2 bg-white/50 backdrop-blur-sm">
           <button
             onClick={handleBackToDashboard}
-            className={`w-full flex items-center gap-2 px-3 py-2 rounded-lg transition-colors ${
+            className={`w-full flex items-center gap-2 px-4 py-3 rounded-xl transition-all duration-300 transform ${
               viewMode === 'dashboard'
-                ? 'bg-gradient-to-r from-purple-100 to-blue-100 text-purple-700 font-semibold border-2 border-purple-300'
-                : 'hover:bg-gradient-to-r hover:from-purple-50 hover:to-blue-50 text-slate-700 border-2 border-transparent'
+                ? 'bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-bold shadow-lg scale-105 border-2 border-blue-400'
+                : 'hover:bg-gradient-to-r hover:from-blue-100 hover:to-indigo-100 text-blue-700 border-2 border-transparent hover:scale-105 hover:shadow-md'
             }`}
           >
-            <Zap className="w-4 h-4" />
-            <span>Smart Tools Hub</span>
+            <Zap className={`w-5 h-5 ${viewMode === 'dashboard' ? 'animate-pulse' : ''}`} />
+            <span className="font-semibold">Smart Tools Hub</span>
           </button>
         </div>
 
