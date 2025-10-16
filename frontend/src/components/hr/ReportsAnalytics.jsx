@@ -1,30 +1,294 @@
-import React, { useState } from 'react';
-import { BarChart3, TrendingUp, Users, Clock, DollarSign, Award, FileText, Download, Calendar } from 'lucide-react';
-import { DEMO_EMPLOYEES, DEMO_LEAVE_APPLICATIONS, DEMO_TRAINING_PROGRAMS, DEMO_PERFORMANCE_REVIEWS } from '../../data/hrDemoData';
+import React, { useState, useMemo } from 'react';
+import { 
+  BarChart3, TrendingUp, Users, Clock, DollarSign, Award, FileText, Download, Calendar,
+  Search, Filter, Shield, BookOpen, AlertCircle, Activity, Target, Zap, RefreshCw,
+  Eye, Edit, Trash2, Plus, Settings, Mail, Send, FileSpreadsheet, File, Printer,
+  Share2, Star, ArrowRight, ChevronDown, ChevronRight, PieChart, X
+} from 'lucide-react';
 
 const ReportsAnalytics = () => {
-  const [selectedPeriod, setSelectedPeriod] = useState('monthly');
-  const [selectedReport, setSelectedReport] = useState('overview');
+  const [activeView, setActiveView] = useState('templates');
+  const [selectedReport, setSelectedReport] = useState(null);
+  const [showReportBuilder, setShowReportBuilder] = useState(false);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [reportConfig, setReportConfig] = useState({
+    type: '',
+    title: '',
+    dateRange: 'last_month',
+    departments: [],
+    sections: [],
+    format: 'pdf',
+    includeCharts: true,
+    includeRecommendations: true
+  });
 
-  const reportTypes = [
-    { id: 'overview', label: 'Overview', icon: BarChart3 },
-    { id: 'attendance', label: 'Attendance', icon: Clock },
-    { id: 'payroll', label: 'Payroll', icon: DollarSign },
-    { id: 'performance', label: 'Performance', icon: Award },
-    { id: 'training', label: 'Training', icon: FileText }
+  // Comprehensive Report Templates
+  const reportTemplates = [
+    {
+      id: 'RPT-001',
+      title: 'Comprehensive Compliance Report',
+      category: 'Compliance',
+      icon: Shield,
+      color: 'green',
+      description: 'Complete overview of compliance status across all By-Laws sections',
+      frequency: 'Monthly',
+      lastGenerated: '2024-02-15',
+      sections: ['section3', 'section14', 'section15', 'section22', 'section29'],
+      metrics: ['Compliance Score', 'Violations', 'Remediation Status', 'Audit Findings'],
+      popularity: 5,
+      estimatedTime: '5 minutes',
+      pageCount: '12-15 pages'
+    },
+    {
+      id: 'RPT-002',
+      title: 'Training Completion Summary',
+      category: 'Training',
+      icon: BookOpen,
+      color: 'blue',
+      description: 'Detailed analysis of training program completion rates and certifications',
+      frequency: 'Quarterly',
+      lastGenerated: '2024-02-10',
+      sections: ['section9'],
+      metrics: ['Completion Rate', 'Certifications Earned', 'Pending Training', 'Overdue Training'],
+      popularity: 4,
+      estimatedTime: '3 minutes',
+      pageCount: '8-10 pages'
+    },
+    {
+      id: 'RPT-003',
+      title: 'Risk Assessment Dashboard',
+      category: 'Risk Management',
+      icon: AlertCircle,
+      color: 'orange',
+      description: 'Comprehensive risk analysis with severity ratings and mitigation tracking',
+      frequency: 'Monthly',
+      lastGenerated: '2024-02-18',
+      sections: ['section13', 'section14', 'section15', 'section17', 'section18'],
+      metrics: ['Critical Risks', 'Risk Score', 'Mitigation Progress', 'Open Issues'],
+      popularity: 5,
+      estimatedTime: '7 minutes',
+      pageCount: '15-18 pages'
+    },
+    {
+      id: 'RPT-004',
+      title: 'Attendance & Leave Analysis',
+      category: 'HR Operations',
+      icon: Calendar,
+      color: 'purple',
+      description: 'Staff attendance patterns, leave utilization, and absence trends',
+      frequency: 'Monthly',
+      lastGenerated: '2024-02-12',
+      sections: ['section7'],
+      metrics: ['Attendance Rate', 'Leave Utilization', 'Unauthorized Absences', 'Overtime Hours'],
+      popularity: 4,
+      estimatedTime: '4 minutes',
+      pageCount: '10-12 pages'
+    },
+    {
+      id: 'RPT-005',
+      title: 'Performance Management Review',
+      category: 'Performance',
+      icon: TrendingUp,
+      color: 'indigo',
+      description: 'Employee performance evaluations, KPIs, and development progress',
+      frequency: 'Quarterly',
+      lastGenerated: '2024-01-28',
+      sections: ['section8'],
+      metrics: ['Performance Score', 'KPI Achievement', 'Development Plans', 'Promotion Readiness'],
+      popularity: 4,
+      estimatedTime: '6 minutes',
+      pageCount: '14-16 pages'
+    },
+    {
+      id: 'RPT-006',
+      title: 'Audit Findings & Recommendations',
+      category: 'Audit',
+      icon: Target,
+      color: 'red',
+      description: 'Summary of audit findings, non-conformances, and corrective actions',
+      frequency: 'Quarterly',
+      lastGenerated: '2024-02-05',
+      sections: ['section22'],
+      metrics: ['Total Findings', 'Critical Issues', 'Actions Completed', 'Pending Actions'],
+      popularity: 3,
+      estimatedTime: '5 minutes',
+      pageCount: '12-14 pages'
+    },
+    {
+      id: 'RPT-007',
+      title: 'Employee Wellness Report',
+      category: 'Wellness',
+      icon: Activity,
+      color: 'pink',
+      description: 'Wellness program participation, EAP utilization, and health metrics',
+      frequency: 'Monthly',
+      lastGenerated: '2024-02-14',
+      sections: ['section20', 'section24', 'section27'],
+      metrics: ['Program Participation', 'EAP Usage', 'Wellness Score', 'Satisfaction Rate'],
+      popularity: 3,
+      estimatedTime: '4 minutes',
+      pageCount: '8-10 pages'
+    },
+    {
+      id: 'RPT-008',
+      title: 'Grievance Resolution Tracker',
+      category: 'Employee Relations',
+      icon: Users,
+      color: 'yellow',
+      description: 'Grievance cases, resolution timelines, and outcome analysis',
+      frequency: 'Monthly',
+      lastGenerated: '2024-02-11',
+      sections: ['section12'],
+      metrics: ['Open Cases', 'Resolution Time', 'Outcome Types', 'Recurring Issues'],
+      popularity: 3,
+      estimatedTime: '3 minutes',
+      pageCount: '6-8 pages'
+    },
+    {
+      id: 'RPT-009',
+      title: 'DEI Progress Dashboard',
+      category: 'Diversity',
+      icon: Award,
+      color: 'teal',
+      description: 'Diversity metrics, inclusion initiatives, and equity assessments',
+      frequency: 'Quarterly',
+      lastGenerated: '2024-01-30',
+      sections: ['section5'],
+      metrics: ['Diversity Index', 'Hiring Diversity', 'Inclusion Score', 'Pay Equity'],
+      popularity: 4,
+      estimatedTime: '5 minutes',
+      pageCount: '10-12 pages'
+    },
+    {
+      id: 'RPT-010',
+      title: 'Policy Review Status',
+      category: 'Policy Management',
+      icon: FileText,
+      color: 'cyan',
+      description: 'Policy update status, review schedules, and version control',
+      frequency: 'Monthly',
+      lastGenerated: '2024-02-16',
+      sections: ['preamble', 'section1', 'section2', 'section3', 'section4', 'section5'],
+      metrics: ['Policies Reviewed', 'Pending Reviews', 'Updates Required', 'Version Status'],
+      popularity: 3,
+      estimatedTime: '4 minutes',
+      pageCount: '8-10 pages'
+    },
+    {
+      id: 'RPT-011',
+      title: 'Workplace Safety Metrics',
+      category: 'Safety',
+      icon: Shield,
+      color: 'orange',
+      description: 'Incident reports, safety training, and hazard assessments',
+      frequency: 'Monthly',
+      lastGenerated: '2024-02-13',
+      sections: ['section13'],
+      metrics: ['Incident Count', 'Safety Score', 'Training Completion', 'Near Misses'],
+      popularity: 4,
+      estimatedTime: '5 minutes',
+      pageCount: '10-12 pages'
+    },
+    {
+      id: 'RPT-012',
+      title: 'Executive Summary - All Areas',
+      category: 'Executive',
+      icon: BarChart3,
+      color: 'slate',
+      description: 'High-level overview of all HR metrics and key performance indicators',
+      frequency: 'Monthly',
+      lastGenerated: '2024-02-17',
+      sections: ['preamble', 'section1', 'section3', 'section7', 'section8', 'section9'],
+      metrics: ['Overall Health', 'Key Risks', 'Achievements', 'Priorities'],
+      popularity: 5,
+      estimatedTime: '8 minutes',
+      pageCount: '18-20 pages'
+    }
   ];
 
-  // Calculate stats
-  const totalEmployees = DEMO_EMPLOYEES.length;
-  const activeEmployees = DEMO_EMPLOYEES.filter(e => e.status === 'Active').length;
-  const totalPayroll = DEMO_EMPLOYEES.reduce((sum, e) => sum + e.salary, 0);
-  const avgPerformance = (DEMO_PERFORMANCE_REVIEWS.reduce((sum, p) => sum + (p.overallRating || 0), 0) / DEMO_PERFORMANCE_REVIEWS.length).toFixed(1);
-  const trainingCompletion = ((DEMO_TRAINING_PROGRAMS.filter(t => t.status === 'Completed').length / DEMO_TRAINING_PROGRAMS.length) * 100).toFixed(0);
+  // Report History
+  const reportHistory = [
+    {
+      id: 'HIST-001',
+      reportId: 'RPT-001',
+      title: 'Comprehensive Compliance Report',
+      generatedDate: '2024-02-15',
+      generatedBy: 'Admin User',
+      format: 'PDF',
+      size: '2.4 MB',
+      status: 'completed',
+      downloads: 12
+    },
+    {
+      id: 'HIST-002',
+      reportId: 'RPT-012',
+      title: 'Executive Summary - All Areas',
+      generatedDate: '2024-02-17',
+      generatedBy: 'HR Director',
+      format: 'PDF',
+      size: '3.1 MB',
+      status: 'completed',
+      downloads: 8
+    },
+    {
+      id: 'HIST-003',
+      reportId: 'RPT-003',
+      title: 'Risk Assessment Dashboard',
+      generatedDate: '2024-02-18',
+      generatedBy: 'Compliance Officer',
+      format: 'Excel',
+      size: '1.8 MB',
+      status: 'completed',
+      downloads: 15
+    },
+    {
+      id: 'HIST-004',
+      reportId: 'RPT-002',
+      title: 'Training Completion Summary',
+      generatedDate: '2024-02-10',
+      generatedBy: 'Training Coordinator',
+      format: 'PDF',
+      size: '1.5 MB',
+      status: 'completed',
+      downloads: 20
+    },
+    {
+      id: 'HIST-005',
+      reportId: 'RPT-009',
+      title: 'DEI Progress Dashboard',
+      generatedDate: '2024-01-30',
+      generatedBy: 'DEI Coordinator',
+      format: 'PDF',
+      size: '2.0 MB',
+      status: 'completed',
+      downloads: 6
+    }
+  ];
 
-  const departmentStats = DEMO_EMPLOYEES.reduce((acc, emp) => {
-    acc[emp.department] = (acc[emp.department] || 0) + 1;
-    return acc;
-  }, {});
+  const categories = [
+    { id: 'all', name: 'All Reports', count: reportTemplates.length },
+    { id: 'Compliance', name: 'Compliance', count: reportTemplates.filter(r => r.category === 'Compliance').length },
+    { id: 'Training', name: 'Training', count: reportTemplates.filter(r => r.category === 'Training').length },
+    { id: 'Risk Management', name: 'Risk Management', count: reportTemplates.filter(r => r.category === 'Risk Management').length },
+    { id: 'HR Operations', name: 'HR Operations', count: reportTemplates.filter(r => r.category === 'HR Operations').length },
+    { id: 'Performance', name: 'Performance', count: reportTemplates.filter(r => r.category === 'Performance').length },
+    { id: 'Audit', name: 'Audit', count: reportTemplates.filter(r => r.category === 'Audit').length }
+  ];
+
+  const views = [
+    { id: 'templates', name: 'Report Templates', icon: FileText },
+    { id: 'history', name: 'Report History', icon: Clock },
+    { id: 'scheduled', name: 'Scheduled Reports', icon: Calendar },
+    { id: 'analytics', name: 'Analytics', icon: BarChart3 }
+  ];
+
+  const stats = {
+    totalReports: reportHistory.length,
+    thisMonth: reportHistory.filter(r => r.generatedDate.startsWith('2024-02')).length,
+    totalDownloads: reportHistory.reduce((sum, r) => sum + r.downloads, 0),
+    avgGenerationTime: '5 mins'
+  };
 
   return (
     <div className="p-6 space-y-6">
