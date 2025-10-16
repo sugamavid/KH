@@ -264,6 +264,39 @@ async def create_department(dept: DepartmentCreate):
     await db.departments.insert_one(dept_dict)
     return dept_dict
 
+@api_router.put("/departments/{dept_id}", response_model=Department)
+async def update_department(dept_id: str, dept: DepartmentCreate):
+    """Update existing department"""
+    existing = await db.departments.find_one({"id": dept_id})
+    if not existing:
+        raise HTTPException(status_code=404, detail="Department not found")
+    
+    dept_dict = dept.model_dump()
+    dept_dict["populated"] = existing.get("populated", False)
+    dept_dict["stats"] = existing.get("stats", {"bylaws": 0, "sops": 0, "annexures": 0, "tools": 0})
+    
+    await db.departments.update_one(
+        {"id": dept_id},
+        {"$set": dept_dict}
+    )
+    
+    updated_dept = await db.departments.find_one({"id": dept_id}, {"_id": 0})
+    return updated_dept
+
+@api_router.delete("/departments/{dept_id}")
+async def delete_department(dept_id: str):
+    """Delete a department"""
+    result = await db.departments.delete_one({"id": dept_id})
+    if result.deleted_count == 0:
+        raise HTTPException(status_code=404, detail="Department not found")
+    
+    # Also delete related by-laws, SOPs, and annexures
+    await db.bylaws.delete_many({"department_id": dept_id})
+    await db.sops.delete_many({"department_id": dept_id})
+    await db.annexures.delete_many({"department_id": dept_id})
+    
+    return {"message": "Department deleted successfully"}
+
 # By-Laws Routes
 @api_router.get("/bylaws/{dept_id}", response_model=List[ByLaw])
 async def get_bylaws(dept_id: str):
