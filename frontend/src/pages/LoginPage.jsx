@@ -152,6 +152,13 @@ const LoginPage = ({ onLogin }) => {
 
                 {/* Login Form */}
                 <form onSubmit={handleSubmit} className="space-y-6">
+                  {/* Error Message */}
+                  {error && (
+                    <div className="bg-red-50 border-2 border-red-200 rounded-xl p-4">
+                      <p className="text-red-700 text-sm font-semibold text-center">{error}</p>
+                    </div>
+                  )}
+
                   {/* Email Field */}
                   <div className="space-y-2">
                     <label className="block text-sm font-bold text-slate-700 uppercase tracking-wide">
