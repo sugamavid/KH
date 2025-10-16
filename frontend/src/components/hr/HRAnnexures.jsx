@@ -558,6 +558,13 @@ const HRAnnexures = ({ setActiveModule }) => {
       linkedSOP: 'SOP L.3',
       color: 'green'
     },
+    {
+      code: 'L4',
+      title: 'Mental Health Support Request Tracker',
+      category: 'Employee Health & Wellness',
+      linkedSOP: 'SOP L.4',
+      color: 'green'
+    },
   ];
 
   // Mock data for dashboard stats
