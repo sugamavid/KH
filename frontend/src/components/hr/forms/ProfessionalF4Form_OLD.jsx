@@ -52,9 +52,7 @@ const ProfessionalF4Form = () => {
   };
 
   const removeRow = (index) => {
-    if (rows.length > 1) {
-      setRows(rows.filter((_, i) => i !== index));
-    }
+    setRows(rows.filter((_, i) => i !== index));
   };
 
   const handleLogoUpload = (e) => {
@@ -96,34 +94,8 @@ const ProfessionalF4Form = () => {
   };
 
   const handleReset = () => {
-    if (window.confirm('Reset all fields to default values?')) {
-      setFormData({
-        ann_title: 'Leave Encashment Approval Sheet',
-        ann_no: 'F4',
-        ann_sop: 'SOP F.4 – Leave Encashment Process',
-        ann_bylaws: 'Section 11.5 – Leave Benefits',
-        ann_version: '1.0',
-        ann_effective: '',
-        ann_cust: 'Human Resources / Finance',
-        ann_auth: 'HR Manager / Finance Head / Compliance Officer',
-        ann_purpose: 'This Annexure provides the standardized Leave Encashment Approval Sheet for employees of Koyili Hospital.',
-        emp_name: '',
-        emp_id: '',
-        emp_dept: '',
-        emp_desig: '',
-        date_join: '',
-        app_date: '',
-        dec_name: '',
-        dec_date: '',
-        sig_hr_name: '',
-        sig_hr_date: '',
-        sig_fin_name: '',
-        sig_fin_date: '',
-        sig_comp_name: '',
-        sig_comp_date: ''
-      });
-      setRows([{ year: '', leave_type: '', earned: '', availed: '', balance: '', encash: '', amount: '' }]);
-      setLogoData('https://customer-assets.emergentagent.com/job_koyili-hrms/artifacts/0pgv6z3a_koyili-logo.png');
+    if (window.confirm('Reset all fields?')) {
+      window.location.reload();
     }
   };
 
@@ -181,7 +153,7 @@ const ProfessionalF4Form = () => {
         </div>
       </div>
 
-      <div className="max-w-5xl mx-auto px-6 py-8">
+      <div className="max-w-6xl mx-auto px-6 py-8">
         <div className="bg-white border border-gray-200 rounded-xl p-5 mb-5">
           <h3 className="text-lg font-bold text-gray-900 mb-4">Document Control</h3>
           <table className="w-full border-collapse text-sm">
@@ -192,11 +164,6 @@ const ProfessionalF4Form = () => {
               <tr><th className="border border-gray-200 bg-blue-50 text-blue-900 font-bold px-3 py-2 text-left">By-Laws Reference</th><td className="border border-gray-200 px-3 py-2"><input name="ann_bylaws" value={formData.ann_bylaws} onChange={handleChange} className="w-full px-2 py-1 border border-gray-300 rounded" /></td></tr>
             </tbody>
           </table>
-        </div>
-
-        <div className="bg-white border border-gray-200 rounded-xl p-5 mb-5">
-          <h3 className="text-lg font-bold text-gray-900 mb-4">Purpose</h3>
-          <textarea name="ann_purpose" value={formData.ann_purpose} onChange={handleChange} rows="4" className="w-full px-3 py-2 border border-gray-300 rounded-lg resize-none" />
         </div>
 
         <div className="bg-white border border-gray-200 rounded-xl p-5 mb-5">
@@ -212,9 +179,9 @@ const ProfessionalF4Form = () => {
         </div>
 
         <div className="bg-white border border-gray-200 rounded-xl p-5 mb-5">
-          <div className="flex items-center justify-between mb-4">
+          <div className="flex justify-between items-center mb-4">
             <h3 className="text-lg font-bold text-gray-900">Leave Encashment Details</h3>
-            <button onClick={addRow} className="px-3 py-1.5 bg-green-600 text-white rounded-lg hover:bg-green-700 flex items-center gap-2 text-sm font-semibold">
+            <button onClick={addRow} className="px-3 py-1.5 bg-green-600 text-white rounded-lg hover:bg-green-700 flex items-center gap-2 text-sm">
               <Plus className="w-4 h-4" /> Add Row
             </button>
           </div>
@@ -222,28 +189,28 @@ const ProfessionalF4Form = () => {
             <table className="w-full border-collapse text-sm">
               <thead>
                 <tr className="bg-blue-50">
-                  <th className="border border-gray-200 px-2 py-2 text-left">Year</th>
-                  <th className="border border-gray-200 px-2 py-2 text-left">Leave Type</th>
-                  <th className="border border-gray-200 px-2 py-2 text-left">Earned</th>
-                  <th className="border border-gray-200 px-2 py-2 text-left">Availed</th>
-                  <th className="border border-gray-200 px-2 py-2 text-left">Balance</th>
-                  <th className="border border-gray-200 px-2 py-2 text-left">Encash</th>
-                  <th className="border border-gray-200 px-2 py-2 text-left">Amount (₹)</th>
-                  <th className="border border-gray-200 px-2 py-2 text-center">Action</th>
+                  <th className="border border-gray-200 px-2 py-2">Year</th>
+                  <th className="border border-gray-200 px-2 py-2">Leave Type</th>
+                  <th className="border border-gray-200 px-2 py-2">Earned</th>
+                  <th className="border border-gray-200 px-2 py-2">Availed</th>
+                  <th className="border border-gray-200 px-2 py-2">Balance</th>
+                  <th className="border border-gray-200 px-2 py-2">Encash</th>
+                  <th className="border border-gray-200 px-2 py-2">Amount (₹)</th>
+                  <th className="border border-gray-200 px-2 py-2">Action</th>
                 </tr>
               </thead>
               <tbody>
                 {rows.map((row, index) => (
                   <tr key={index}>
-                    <td className="border border-gray-200 px-2 py-2"><input value={row.year} onChange={(e) => handleRowChange(index, 'year', e.target.value)} className="w-full px-2 py-1 border border-gray-300 rounded" /></td>
-                    <td className="border border-gray-200 px-2 py-2"><input value={row.leave_type} onChange={(e) => handleRowChange(index, 'leave_type', e.target.value)} className="w-full px-2 py-1 border border-gray-300 rounded" /></td>
-                    <td className="border border-gray-200 px-2 py-2"><input value={row.earned} onChange={(e) => handleRowChange(index, 'earned', e.target.value)} className="w-full px-2 py-1 border border-gray-300 rounded" /></td>
-                    <td className="border border-gray-200 px-2 py-2"><input value={row.availed} onChange={(e) => handleRowChange(index, 'availed', e.target.value)} className="w-full px-2 py-1 border border-gray-300 rounded" /></td>
-                    <td className="border border-gray-200 px-2 py-2"><input value={row.balance} onChange={(e) => handleRowChange(index, 'balance', e.target.value)} className="w-full px-2 py-1 border border-gray-300 rounded" /></td>
-                    <td className="border border-gray-200 px-2 py-2"><input value={row.encash} onChange={(e) => handleRowChange(index, 'encash', e.target.value)} className="w-full px-2 py-1 border border-gray-300 rounded" /></td>
-                    <td className="border border-gray-200 px-2 py-2"><input value={row.amount} onChange={(e) => handleRowChange(index, 'amount', e.target.value)} className="w-full px-2 py-1 border border-gray-300 rounded" /></td>
+                    <td className="border border-gray-200 px-2 py-2"><input type="text" value={row.year} onChange={(e) => handleRowChange(index, 'year', e.target.value)} className="w-full px-2 py-1 border border-gray-300 rounded" /></td>
+                    <td className="border border-gray-200 px-2 py-2"><input type="text" value={row.leave_type} onChange={(e) => handleRowChange(index, 'leave_type', e.target.value)} className="w-full px-2 py-1 border border-gray-300 rounded" /></td>
+                    <td className="border border-gray-200 px-2 py-2"><input type="number" value={row.earned} onChange={(e) => handleRowChange(index, 'earned', e.target.value)} className="w-full px-2 py-1 border border-gray-300 rounded" /></td>
+                    <td className="border border-gray-200 px-2 py-2"><input type="number" value={row.availed} onChange={(e) => handleRowChange(index, 'availed', e.target.value)} className="w-full px-2 py-1 border border-gray-300 rounded" /></td>
+                    <td className="border border-gray-200 px-2 py-2"><input type="number" value={row.balance} onChange={(e) => handleRowChange(index, 'balance', e.target.value)} className="w-full px-2 py-1 border border-gray-300 rounded" /></td>
+                    <td className="border border-gray-200 px-2 py-2"><input type="number" value={row.encash} onChange={(e) => handleRowChange(index, 'encash', e.target.value)} className="w-full px-2 py-1 border border-gray-300 rounded" /></td>
+                    <td className="border border-gray-200 px-2 py-2"><input type="number" value={row.amount} onChange={(e) => handleRowChange(index, 'amount', e.target.value)} className="w-full px-2 py-1 border border-gray-300 rounded" /></td>
                     <td className="border border-gray-200 px-2 py-2 text-center">
-                      <button onClick={() => removeRow(index)} disabled={rows.length === 1} className="p-1 text-red-600 hover:text-red-800 disabled:text-gray-400">
+                      <button onClick={() => removeRow(index)} className="text-red-600 hover:text-red-800">
                         <Trash2 className="w-4 h-4" />
                       </button>
                     </td>
@@ -255,27 +222,21 @@ const ProfessionalF4Form = () => {
         </div>
 
         <div className="bg-white border border-gray-200 rounded-xl p-5 mb-5">
-          <h3 className="text-lg font-bold text-gray-900 mb-4">Employee Declaration</h3>
-          <div className="space-y-3">
-            <p className="text-sm text-gray-700">I hereby declare that the above details are true to the best of my knowledge. I understand that any misrepresentation may result in disciplinary action.</p>
-            <div className="grid grid-cols-2 gap-4">
-              <div><label className="block text-sm font-semibold text-gray-700 mb-1">Employee Name</label><input type="text" name="dec_name" value={formData.dec_name} onChange={handleChange} className="w-full px-3 py-2 border border-gray-300 rounded-lg" /></div>
-              <div><label className="block text-sm font-semibold text-gray-700 mb-1">Date</label><input type="date" name="dec_date" value={formData.dec_date} onChange={handleChange} className="w-full px-3 py-2 border border-gray-300 rounded-lg" /></div>
-            </div>
-          </div>
-        </div>
-
-        <div className="bg-white border border-gray-200 rounded-xl p-5 mb-5">
-          <h3 className="text-lg font-bold text-gray-900 mb-4">Approvals & Signatures</h3>
+          <h3 className="text-lg font-bold text-gray-900 mb-4">Signatures</h3>
           <table className="w-full border-collapse text-sm">
             <thead>
               <tr className="bg-blue-50">
-                <th className="border border-gray-200 px-3 py-2 text-left">Authority</th>
-                <th className="border border-gray-200 px-3 py-2 text-left">Name</th>
+                <th className="border border-gray-200 px-3 py-2 text-left">Role</th>
+                <th className="border border-gray-200 px-3 py-2 text-left">Name & Signature</th>
                 <th className="border border-gray-200 px-3 py-2 text-left">Date</th>
               </tr>
             </thead>
             <tbody>
+              <tr>
+                <td className="border border-gray-200 px-3 py-2">Employee</td>
+                <td className="border border-gray-200 px-3 py-2"><input name="dec_name" value={formData.dec_name} onChange={handleChange} className="w-full px-2 py-1 border border-gray-300 rounded" /></td>
+                <td className="border border-gray-200 px-3 py-2"><input type="date" name="dec_date" value={formData.dec_date} onChange={handleChange} className="w-full px-2 py-1 border border-gray-300 rounded" /></td>
+              </tr>
               <tr>
                 <td className="border border-gray-200 px-3 py-2">HR Manager</td>
                 <td className="border border-gray-200 px-3 py-2"><input name="sig_hr_name" value={formData.sig_hr_name} onChange={handleChange} className="w-full px-2 py-1 border border-gray-300 rounded" /></td>
@@ -285,11 +246,6 @@ const ProfessionalF4Form = () => {
                 <td className="border border-gray-200 px-3 py-2">Finance Head</td>
                 <td className="border border-gray-200 px-3 py-2"><input name="sig_fin_name" value={formData.sig_fin_name} onChange={handleChange} className="w-full px-2 py-1 border border-gray-300 rounded" /></td>
                 <td className="border border-gray-200 px-3 py-2"><input type="date" name="sig_fin_date" value={formData.sig_fin_date} onChange={handleChange} className="w-full px-2 py-1 border border-gray-300 rounded" /></td>
-              </tr>
-              <tr>
-                <td className="border border-gray-200 px-3 py-2">Compliance Officer</td>
-                <td className="border border-gray-200 px-3 py-2"><input name="sig_comp_name" value={formData.sig_comp_name} onChange={handleChange} className="w-full px-2 py-1 border border-gray-300 rounded" /></td>
-                <td className="border border-gray-200 px-3 py-2"><input type="date" name="sig_comp_date" value={formData.sig_comp_date} onChange={handleChange} className="w-full px-2 py-1 border border-gray-300 rounded" /></td>
               </tr>
             </tbody>
           </table>
@@ -309,7 +265,7 @@ const ProfessionalF4Form = () => {
           </div>
           <div className="text-right">
             <p className="text-sm font-bold">Form F4</p>
-            <p className="text-xs text-blue-200">Leave Encashment Approval Sheet</p>
+            <p className="text-xs text-blue-200">Leave Encashment Approval</p>
           </div>
         </div>
       </div>
