@@ -6,8 +6,15 @@ import {
 } from 'lucide-react';
 import { DEMO_EMPLOYEES, DEMO_LEAVE_APPLICATIONS } from '../../data/hrDemoData';
 
-const HRDashboardHome = () => {
+const HRDashboardHome = ({ setActiveModule }) => {
   const [activeTab, setActiveTab] = useState('operations');
+
+  // Navigation handler
+  const handleNavigation = (module) => {
+    if (setActiveModule) {
+      setActiveModule(module);
+    }
+  };
 
   // Executive Summary KPIs
   const executiveKPIs = [
