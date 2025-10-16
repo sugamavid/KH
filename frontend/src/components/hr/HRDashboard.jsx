@@ -16,6 +16,7 @@ import HRSOPs from './HRSOPs';
 import HRAnnexures from './HRAnnexures';
 import ProfessionalAnnexures from './ProfessionalAnnexures';
 import DocumentManagement from './DocumentManagement';
+import DepartmentManagement from './DepartmentManagement';
 
 const HRDashboard = () => {
   const [activeModule, setActiveModule] = useState('dashboard');
