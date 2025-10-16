@@ -623,43 +623,46 @@ const TrainingManagement = () => {
         </div>
       </div>
 
-      {/* Stats Overview */}
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-        <div className="bg-white rounded-xl p-6 border-2 border-slate-200 shadow-sm">
-          <div className="flex items-center justify-between mb-2">
-            <div className="w-12 h-12 rounded-lg bg-blue-100 flex items-center justify-center">
-              <BookOpen className="w-6 h-6 text-blue-600" />
-            </div>
+      {/* Filters */}
+      <div className="bg-white rounded-xl p-4 border-2 border-slate-200 shadow-sm">
+        <div className="mb-4">
+          <div className="flex gap-2 overflow-x-auto pb-2">
+            <span className="text-sm font-semibold text-slate-600 py-2 mr-2">Category:</span>
+            {categories.map((cat) => {
+              const CatIcon = cat.icon;
+              return (
+                <button
+                  key={cat.id}
+                  onClick={() => setSelectedCategory(cat.id)}
+                  className={`flex items-center gap-2 px-3 py-1.5 rounded-lg text-sm font-semibold whitespace-nowrap transition-all ${
+                    selectedCategory === cat.id
+                      ? 'bg-teal-600 text-white shadow-lg'
+                      : 'bg-slate-100 text-slate-600 hover:bg-slate-200 border border-slate-200'
+                  }`}
+                >
+                  <CatIcon className="w-4 h-4" />
+                  {cat.name} ({cat.count})
+                </button>
+              );
+            })}
           </div>
-          <h3 className="text-3xl font-bold text-slate-900">{trainings.length}</h3>
-          <p className="text-sm text-slate-600">Total Programs</p>
         </div>
-        <div className="bg-white rounded-xl p-6 border-2 border-slate-200 shadow-sm">
-          <div className="flex items-center justify-between mb-2">
-            <div className="w-12 h-12 rounded-lg bg-purple-100 flex items-center justify-center">
-              <Users className="w-6 h-6 text-purple-600" />
-            </div>
-          </div>
-          <h3 className="text-3xl font-bold text-slate-900">{trainings.reduce((sum, t) => sum + t.enrolled, 0)}</h3>
-          <p className="text-sm text-slate-600">Total Enrolled</p>
-        </div>
-        <div className="bg-white rounded-xl p-6 border-2 border-slate-200 shadow-sm">
-          <div className="flex items-center justify-between mb-2">
-            <div className="w-12 h-12 rounded-lg bg-green-100 flex items-center justify-center">
-              <CheckCircle2 className="w-6 h-6 text-green-600" />
-            </div>
-          </div>
-          <h3 className="text-3xl font-bold text-slate-900">{trainings.filter(t => t.status === 'Completed').length}</h3>
-          <p className="text-sm text-slate-600">Completed</p>
-        </div>
-        <div className="bg-white rounded-xl p-6 border-2 border-slate-200 shadow-sm">
-          <div className="flex items-center justify-between mb-2">
-            <div className="w-12 h-12 rounded-lg bg-orange-100 flex items-center justify-center">
-              <Award className="w-6 h-6 text-orange-600" />
-            </div>
-          </div>
-          <h3 className="text-3xl font-bold text-slate-900">{trainings.filter(t => t.type === 'Certification').length}</h3>
-          <p className="text-sm text-slate-600">Certifications</p>
+
+        <div className="flex gap-2">
+          <span className="text-sm font-semibold text-slate-600 py-2 mr-2">Type:</span>
+          {types.map((type) => (
+            <button
+              key={type.id}
+              onClick={() => setSelectedType(type.id)}
+              className={`px-3 py-1.5 rounded-lg text-sm font-semibold whitespace-nowrap transition-all ${
+                selectedType === type.id
+                  ? 'bg-teal-600 text-white shadow-lg'
+                  : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
+              }`}
+            >
+              {type.name} ({type.count})
+            </button>
+          ))}
         </div>
       </div>
 
