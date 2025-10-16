@@ -607,7 +607,7 @@ const HRSOPs = ({ setActiveModule }) => {
             </p>
           )}
 
-          {/* Subsections (same as before) */}
+          {/* Subsections with nested support */}
           {section.subsections && section.subsections.map((subsection, idx) => (
             <div key={idx} className="mb-10">
               <div className="mb-6 pb-3 border-b-2 border-teal-900 bg-gradient-to-r from-teal-50 to-transparent px-4 py-3 -mx-4">
@@ -681,6 +681,54 @@ const HRSOPs = ({ setActiveModule }) => {
                   </div>
                 </div>
               )}
+
+              {/* Nested subsections (level 2) */}
+              {subsection.subsections && subsection.subsections.map((nestedSub, nestedIdx) => (
+                <div key={nestedIdx} className="mb-8 pl-12">
+                  <div className="mb-4 pb-2 border-b border-teal-600 bg-gradient-to-r from-teal-25 to-transparent px-3 py-2">
+                    <div className="flex items-baseline space-x-3">
+                      <span className="text-lg font-bold text-teal-800 min-w-[2.5rem]">{nestedSub.number}</span>
+                      <h4 className="text-lg font-semibold text-gray-800 tracking-wide">{nestedSub.title}</h4>
+                    </div>
+                  </div>
+
+                  {nestedSub.content && (
+                    <div className="mb-4 pl-8">
+                      <div className="text-[14px] leading-[1.8] text-gray-800 text-justify space-y-3" style={{ lineHeight: '1.8' }}>
+                        {nestedSub.content.split('\n\n').map((para, pIdx) => {
+                          if (para.trim().startsWith('•') || para.trim().startsWith('-')) {
+                            const items = para.split('\n').filter(line => line.trim());
+                            return (
+                              <ul key={pIdx} className="space-y-2 pl-4">
+                                {items.map((item, iIdx) => (
+                                  <li key={iIdx} className="flex items-start">
+                                    <span className="text-teal-600 font-bold mr-2 mt-0.5">●</span>
+                                    <span className="flex-1 text-justify">{item.replace(/^[•\-]\s*/, '')}</span>
+                                  </li>
+                                ))}
+                              </ul>
+                            );
+                          }
+                          return <p key={pIdx} className="text-justify">{para}</p>;
+                        })}
+                      </div>
+                    </div>
+                  )}
+
+                  {nestedSub.points && (
+                    <ul className="pl-8 space-y-2 mb-4">
+                      {nestedSub.points.map((point, pointIdx) => (
+                        <li key={pointIdx} className="flex items-start">
+                          <span className="text-teal-600 font-bold mr-2 mt-0.5">●</span>
+                          <p className="text-[14px] leading-[1.8] text-gray-800 flex-1 text-justify">
+                            {point}
+                          </p>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              ))}
             </div>
           ))}
         </div>
