@@ -221,7 +221,11 @@ const HRDashboardHome = ({ setActiveModule }) => {
           <h2 className="text-lg font-bold text-slate-900 mb-4">Executive Summary</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             {executiveKPIs.map((kpi, idx) => (
-              <div key={idx} className="bg-white rounded-xl p-5 border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+              <button
+                key={idx}
+                onClick={() => handleNavigation(kpi.module)}
+                className="bg-white rounded-xl p-5 border border-slate-200 shadow-sm hover:shadow-md hover:border-blue-400 transition-all cursor-pointer text-left w-full"
+              >
                 <div className="flex items-start justify-between mb-3">
                   <div className={`w-11 h-11 rounded-lg ${getColorClasses(kpi.color, 'light')} flex items-center justify-center`}>
                     <kpi.icon className={`w-6 h-6 ${getColorClasses(kpi.color, 'text')}`} />
@@ -244,7 +248,7 @@ const HRDashboardHome = ({ setActiveModule }) => {
                   {kpi.subtitle && <span className="text-slate-500">{kpi.subtitle}</span>}
                   {kpi.amount && <span className="font-bold text-slate-900">{kpi.amount}</span>}
                 </div>
-              </div>
+              </button>
             ))}
           </div>
         </div>
