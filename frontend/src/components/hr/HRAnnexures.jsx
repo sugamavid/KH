@@ -676,8 +676,8 @@ const HRAnnexures = ({ setActiveModule }) => {
           <p className="text-xs text-slate-600">Batches 1-15: 76 Forms (All Complete ✓)</p>
         </div>
 
-        {/* Back to Dashboard Button */}
-        <div className="p-3 border-b border-slate-200">
+        {/* Navigation Buttons */}
+        <div className="p-3 border-b border-slate-200 space-y-2">
           <button
             onClick={handleBackToDashboard}
             className={`w-full flex items-center gap-2 px-3 py-2 rounded-lg transition-colors ${
@@ -688,6 +688,17 @@ const HRAnnexures = ({ setActiveModule }) => {
           >
             <Home className="w-4 h-4" />
             <span>Dashboard Home</span>
+          </button>
+          <button
+            onClick={() => setViewMode('smarttools')}
+            className={`w-full flex items-center gap-2 px-3 py-2 rounded-lg transition-colors ${
+              viewMode === 'smarttools'
+                ? 'bg-gradient-to-r from-purple-100 to-blue-100 text-purple-700 font-semibold border-2 border-purple-300'
+                : 'hover:bg-gradient-to-r hover:from-purple-50 hover:to-blue-50 text-slate-700 border-2 border-transparent'
+            }`}
+          >
+            <Zap className="w-4 h-4" />
+            <span>Smart Tools Hub</span>
           </button>
         </div>
 
