@@ -707,29 +707,33 @@ const HRAnnexures = ({ setActiveModule }) => {
         </div>
 
         {/* Annexures List */}
-        <div className="flex-1 overflow-y-auto p-3">
+        <div className="flex-1 overflow-y-auto p-3 relative">
           <div className="space-y-2">
             {professionalAnnexures.map((annexure) => (
               <button
                 key={annexure.code}
                 onClick={() => handleAnnexureClick(annexure)}
-                className={`w-full text-left px-3 py-3 rounded-lg transition-all ${
+                className={`w-full text-left px-3 py-3 rounded-xl transition-all duration-300 transform ${
                   activeAnnexure?.code === annexure.code
-                    ? 'bg-blue-100 border-2 border-blue-400 shadow-sm'
-                    : 'hover:bg-slate-50 border-2 border-transparent'
+                    ? 'bg-gradient-to-r from-blue-500 to-indigo-600 shadow-lg scale-105 border-2 border-blue-400'
+                    : 'bg-white/70 hover:bg-gradient-to-r hover:from-blue-50 hover:to-indigo-50 border-2 border-blue-100 hover:border-blue-300 hover:shadow-md hover:scale-102'
                 }`}
               >
                 <div className="flex items-start justify-between">
                   <div className="flex-1">
                     <div className="flex items-center gap-2 mb-1">
-                      <span className={`px-2 py-0.5 rounded text-xs font-bold ${
+                      <span className={`px-2.5 py-1 rounded-lg text-xs font-bold shadow-sm ${
                         activeAnnexure?.code === annexure.code
-                          ? 'bg-blue-600 text-white'
-                          : 'bg-slate-200 text-slate-700'
+                          ? 'bg-white text-blue-600'
+                          : 'bg-gradient-to-r from-blue-500 to-indigo-600 text-white'
                       }`}>
                         {annexure.code}
                       </span>
-                      <span className="text-xs text-slate-500">{annexure.category}</span>
+                      <span className={`text-xs font-medium ${
+                        activeAnnexure?.code === annexure.code
+                          ? 'text-blue-100'
+                          : 'text-blue-600'
+                      }`}>{annexure.category}</span>
                     </div>
                     <h4 className={`text-sm font-semibold leading-tight ${
                       activeAnnexure?.code === annexure.code
