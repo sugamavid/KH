@@ -394,6 +394,41 @@ const HRAnnexures = ({ setActiveModule }) => {
       linkedSOP: 'SOP H.5',
       color: 'green'
     },
+    {
+      code: 'H6',
+      title: 'Employee Recognition Nomination Form',
+      category: 'Performance Management',
+      linkedSOP: 'SOP H.6',
+      color: 'green'
+    },
+    {
+      code: 'I1',
+      title: 'Payroll Input Sheet',
+      category: 'Payroll & Compensation',
+      linkedSOP: 'SOP I.1',
+      color: 'orange'
+    },
+    {
+      code: 'I2',
+      title: 'Overtime Approval Sheet',
+      category: 'Payroll & Compensation',
+      linkedSOP: 'SOP I.2',
+      color: 'orange'
+    },
+    {
+      code: 'I3',
+      title: 'Allowance Disbursement Form',
+      category: 'Payroll & Compensation',
+      linkedSOP: 'SOP I.3',
+      color: 'orange'
+    },
+    {
+      code: 'I4',
+      title: 'Bonus Calculation Format',
+      category: 'Payroll & Compensation',
+      linkedSOP: 'SOP I.4',
+      color: 'orange'
+    },
   ];
 
   // Mock data for dashboard stats
