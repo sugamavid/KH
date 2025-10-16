@@ -1049,22 +1049,69 @@ const HRAnnexures = ({ setActiveModule }) => {
   // Smart Tools Hub Component
   const SmartToolsHub = () => {
     const [activeTool, setActiveTool] = useState(null);
+    const [hoveredTool, setHoveredTool] = useState(null);
 
     const toolCategories = [
       {
-        name: 'Daily Operations',
+        name: 'Daily Operations & Planning',
+        icon: Zap,
+        gradient: 'from-blue-500 via-cyan-500 to-blue-600',
         tools: [
-          { id: 'daily-tasks', name: 'Daily Task List Generator', icon: CheckCircle, desc: 'Generate time-bound tasks for all departments', color: 'blue' },
-          { id: 'smart-assistant', name: 'AI Form Intelligence Assistant', icon: Sparkles, desc: 'Natural language form recommendations', color: 'purple' },
-          { id: 'analytics', name: 'Real-Time Analytics Hub', icon: TrendingUp, desc: 'Form completion rates and metrics', color: 'green' }
+          { id: 'daily-tasks', name: 'Daily Task List Generator', icon: CheckCircle, desc: 'Auto-generate time-bound tasks for all departments with smart scheduling', color: 'blue', badge: 'ESSENTIAL' },
+          { id: 'smart-assistant', name: 'AI Form Intelligence', icon: Sparkles, desc: 'Natural language form recommendations - Ask "I need to hire a nurse"', color: 'purple', badge: 'AI-POWERED' },
+          { id: 'analytics', name: 'Real-Time Analytics', icon: TrendingUp, desc: 'Form completion rates, bottlenecks, and performance metrics', color: 'emerald', badge: 'INSIGHTS' },
+          { id: 'calendar', name: 'Compliance Calendar', icon: Calendar, desc: 'Track NABH/JCI deadlines and mandatory form submissions', color: 'rose', badge: 'CRITICAL' }
         ]
       },
       {
-        name: 'Process Automation',
+        name: 'Recruitment & Onboarding',
+        icon: Users,
+        gradient: 'from-green-500 via-emerald-500 to-teal-600',
         tools: [
-          { id: 'recruitment', name: 'Smart Recruitment Pipeline', icon: Users, desc: 'End-to-end hiring workflow (B1-B10)', color: 'green' },
-          { id: 'onboarding', name: 'Onboarding Automation Hub', icon: Award, desc: 'Automated onboarding workflows (C1-C5)', color: 'teal' },
-          { id: 'exit', name: 'Exit Process Automation', icon: AlertCircle, desc: 'Complete exit management (N1-N4)', color: 'slate' }
+          { id: 'recruitment', name: 'Smart Recruitment Pipeline', icon: Users, desc: 'End-to-end hiring: Requisition → Interview → Offer → Appointment', color: 'green', badge: 'WORKFLOW' },
+          { id: 'onboarding', name: 'Onboarding Automation', icon: Award, desc: 'Automated orientation, document generation, and checklist tracking', color: 'teal', badge: 'AUTOMATED' },
+          { id: 'bulk-forms', name: 'Bulk Form Generator', icon: FileText, desc: 'Generate multiple forms for multiple employees simultaneously', color: 'indigo', badge: 'BULK' },
+          { id: 'candidate-tracker', name: 'Candidate Journey Tracker', icon: TrendingUp, desc: 'Track candidate progress from application to joining', color: 'cyan', badge: 'TRACKING' }
+        ]
+      },
+      {
+        name: 'Performance & Development',
+        icon: Award,
+        gradient: 'from-orange-500 via-amber-500 to-yellow-600',
+        tools: [
+          { id: 'performance', name: 'Performance Scheduler', icon: Award, desc: 'Automated goal setting, reviews, and appraisal cycles', color: 'orange', badge: 'SCHEDULED' },
+          { id: 'training', name: 'Training & Competency Hub', icon: Users, desc: 'Training calendar, needs assessment, and certification tracking', color: 'violet', badge: 'DEVELOPMENT' },
+          { id: '360-feedback', name: '360° Feedback System', icon: TrendingUp, desc: 'Multi-source feedback collection and analysis', color: 'pink', badge: 'ADVANCED' }
+        ]
+      },
+      {
+        name: 'Payroll & Attendance',
+        icon: Clock,
+        gradient: 'from-cyan-500 via-blue-500 to-indigo-600',
+        tools: [
+          { id: 'attendance', name: 'Attendance Dashboard', icon: Clock, desc: 'Real-time tracking, leave management, and shift planning', color: 'cyan', badge: 'LIVE' },
+          { id: 'payroll', name: 'Payroll Pre-Processor', icon: CheckCircle, desc: 'Automate calculations, statutory deductions, and payslip generation', color: 'emerald', badge: 'AUTOMATED' },
+          { id: 'overtime', name: 'Overtime Manager', icon: Clock, desc: 'Track and approve overtime requests with automated calculations', color: 'blue', badge: 'EFFICIENCY' }
+        ]
+      },
+      {
+        name: 'Compliance & Security',
+        icon: AlertCircle,
+        gradient: 'from-red-500 via-pink-500 to-rose-600',
+        tools: [
+          { id: 'security', name: 'IT Security Monitor', icon: AlertCircle, desc: 'Device allocation, access logs, and cybersecurity incident tracking', color: 'red', badge: 'SECURITY' },
+          { id: 'wellness', name: 'Employee Wellness Hub', icon: Users, desc: 'Health screenings, EAP referrals, and work-life balance tracking', color: 'pink', badge: 'WELLNESS' },
+          { id: 'audit', name: 'Audit Trail System', icon: FileText, desc: 'Complete audit trail of all form submissions and approvals', color: 'purple', badge: 'COMPLIANCE' }
+        ]
+      },
+      {
+        name: 'Grievance & Exit Management',
+        icon: AlertCircle,
+        gradient: 'from-purple-500 via-fuchsia-500 to-pink-600',
+        tools: [
+          { id: 'grievance', name: 'Grievance Resolution Tracker', icon: AlertCircle, desc: 'Track complaints, POSH cases, and disciplinary actions with timelines', color: 'rose', badge: 'SENSITIVE' },
+          { id: 'exit', name: 'Exit Process Automation', icon: Users, desc: 'Resignation → Exit Interview → Clearance → F&F Settlement', color: 'slate', badge: 'END-TO-END' },
+          { id: 'retention', name: 'Retention Analytics', icon: TrendingUp, desc: 'Analyze exit trends and identify retention opportunities', color: 'indigo', badge: 'ANALYTICS' }
         ]
       }
     ];
