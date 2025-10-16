@@ -1,0 +1,25 @@
+H-Series Forms Analysis:
+
+H1 - Goal Setting & KPI Sheet:
+- Employee details section
+- Table A: Dynamic KPI tracking (goal, KPI, measurement, weightage, timeline, self rating, manager rating, remarks)
+- Table B: Dynamic competency development (area, plan, training, frequency, progress)
+- Declaration and signatures
+
+H2 - Appraisal Format:
+- Employee details section
+- Table A: Performance evaluation (goal/KPI, weightage, target vs achievement, self-rating, manager rating, final score, remarks)
+- Table B: Competency assessment (area, rating, comments)
+- Table C: Overall summary (rating, strengths, improvements, training needs, recommended actions)
+- Declaration & feedback
+- Signatures (4 levels)
+
+H3 - Feedback Form (need to extract)
+H4 - Performance Improvement Plan (need to extract)
+H5 - Promotion Application (need to extract)
+
+All forms need:
+- Standardized blue gradient header
+- Standardized blue gradient footer
+- Save/Load/Reset/Print buttons
+- Proper JSX balance
