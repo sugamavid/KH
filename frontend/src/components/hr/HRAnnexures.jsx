@@ -1236,48 +1236,67 @@ const HRAnnexures = ({ setActiveModule }) => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {category.tools.map(tool => (
-                <div
-                  key={tool.id}
-                  onClick={() => setActiveTool(tool.id)}
-                  onMouseEnter={() => setHoveredTool(tool.id)}
-                  onMouseLeave={() => setHoveredTool(null)}
-                  className="group relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-6 cursor-pointer border-2 border-gray-100 hover:border-transparent overflow-hidden transform hover:-translate-y-2"
-                >
-                  {/* Gradient Background on Hover */}
-                  <div className={`absolute inset-0 bg-gradient-to-br from-${tool.color}-50 to-${tool.color}-100 opacity-0 group-hover:opacity-100 transition-opacity duration-300`}></div>
-                  
-                  {/* Badge */}
-                  <div className={`absolute top-4 right-4 px-3 py-1 rounded-full text-xs font-bold bg-${tool.color}-100 text-${tool.color}-700 z-10`}>
-                    {tool.badge}
-                  </div>
+              {category.tools.map(tool => {
+                // Color mapping for proper gradients
+                const colorMap = {
+                  blue: { bg: 'from-blue-400 to-blue-600', hover: 'from-blue-50 to-blue-100', badge: 'bg-blue-100 text-blue-700', text: 'text-blue-600' },
+                  purple: { bg: 'from-purple-400 to-purple-600', hover: 'from-purple-50 to-purple-100', badge: 'bg-purple-100 text-purple-700', text: 'text-purple-600' },
+                  emerald: { bg: 'from-emerald-400 to-emerald-600', hover: 'from-emerald-50 to-emerald-100', badge: 'bg-emerald-100 text-emerald-700', text: 'text-emerald-600' },
+                  rose: { bg: 'from-rose-400 to-rose-600', hover: 'from-rose-50 to-rose-100', badge: 'bg-rose-100 text-rose-700', text: 'text-rose-600' },
+                  green: { bg: 'from-green-400 to-green-600', hover: 'from-green-50 to-green-100', badge: 'bg-green-100 text-green-700', text: 'text-green-600' },
+                  teal: { bg: 'from-teal-400 to-teal-600', hover: 'from-teal-50 to-teal-100', badge: 'bg-teal-100 text-teal-700', text: 'text-teal-600' },
+                  indigo: { bg: 'from-indigo-400 to-indigo-600', hover: 'from-indigo-50 to-indigo-100', badge: 'bg-indigo-100 text-indigo-700', text: 'text-indigo-600' },
+                  cyan: { bg: 'from-cyan-400 to-cyan-600', hover: 'from-cyan-50 to-cyan-100', badge: 'bg-cyan-100 text-cyan-700', text: 'text-cyan-600' },
+                  orange: { bg: 'from-orange-400 to-orange-600', hover: 'from-orange-50 to-orange-100', badge: 'bg-orange-100 text-orange-700', text: 'text-orange-600' },
+                  violet: { bg: 'from-violet-400 to-violet-600', hover: 'from-violet-50 to-violet-100', badge: 'bg-violet-100 text-violet-700', text: 'text-violet-600' },
+                  pink: { bg: 'from-pink-400 to-pink-600', hover: 'from-pink-50 to-pink-100', badge: 'bg-pink-100 text-pink-700', text: 'text-pink-600' },
+                  slate: { bg: 'from-slate-400 to-slate-600', hover: 'from-slate-50 to-slate-100', badge: 'bg-slate-100 text-slate-700', text: 'text-slate-600' }
+                };
+                const colors = colorMap[tool.color] || colorMap.blue;
 
-                  {/* Content */}
-                  <div className="relative z-10">
-                    <div className={`w-16 h-16 bg-gradient-to-br from-${tool.color}-400 to-${tool.color}-600 rounded-2xl flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 group-hover:rotate-6 transition-all duration-300`}>
-                      <tool.icon className="w-8 h-8 text-white" />
+                return (
+                  <div
+                    key={tool.id}
+                    onClick={() => setActiveTool(tool.id)}
+                    onMouseEnter={() => setHoveredTool(tool.id)}
+                    onMouseLeave={() => setHoveredTool(null)}
+                    className="group relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-6 cursor-pointer border-2 border-gray-100 hover:border-transparent overflow-hidden transform hover:-translate-y-2"
+                  >
+                    {/* Gradient Background on Hover */}
+                    <div className={`absolute inset-0 bg-gradient-to-br ${colors.hover} opacity-0 group-hover:opacity-100 transition-opacity duration-300`}></div>
+                    
+                    {/* Badge */}
+                    <div className={`absolute top-4 right-4 px-3 py-1 rounded-full text-xs font-bold ${colors.badge} z-10`}>
+                      {tool.badge}
                     </div>
 
-                    <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-${tool.color}-600 transition-colors">
-                      {tool.name}
-                    </h3>
-                    <p className="text-sm text-gray-600 leading-relaxed mb-4">
-                      {tool.desc}
-                    </p>
+                    {/* Content */}
+                    <div className="relative z-10">
+                      <div className={`w-16 h-16 bg-gradient-to-br ${colors.bg} rounded-2xl flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 group-hover:rotate-6 transition-all duration-300`}>
+                        <tool.icon className="w-8 h-8 text-white" />
+                      </div>
 
-                    {/* Action Button */}
-                    <div className="flex items-center text-${tool.color}-600 font-bold text-sm opacity-0 group-hover:opacity-100 transition-all transform translate-y-2 group-hover:translate-y-0">
-                      <span>Launch Tool</span>
-                      <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                      <h3 className={`text-xl font-bold text-gray-900 mb-2 group-hover:${colors.text} transition-colors`}>
+                        {tool.name}
+                      </h3>
+                      <p className="text-sm text-gray-600 leading-relaxed mb-4">
+                        {tool.desc}
+                      </p>
+
+                      {/* Action Button */}
+                      <div className={`flex items-center ${colors.text} font-bold text-sm opacity-0 group-hover:opacity-100 transition-all transform translate-y-2 group-hover:translate-y-0`}>
+                        <span>Launch Tool</span>
+                        <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                      </div>
+                    </div>
+
+                    {/* Shine Effect */}
+                    <div className="absolute inset-0 opacity-0 group-hover:opacity-20 transition-opacity duration-500">
+                      <div className="absolute -top-full -left-full w-full h-full bg-gradient-to-br from-white to-transparent transform rotate-45 group-hover:top-full group-hover:left-full transition-all duration-700"></div>
                     </div>
                   </div>
-
-                  {/* Shine Effect */}
-                  <div className="absolute inset-0 opacity-0 group-hover:opacity-20 transition-opacity duration-500">
-                    <div className="absolute -top-full -left-full w-full h-full bg-gradient-to-br from-white to-transparent transform rotate-45 group-hover:top-full group-hover:left-full transition-all duration-700"></div>
-                  </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
         ))}
