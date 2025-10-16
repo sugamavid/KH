@@ -253,10 +253,27 @@ const ProfessionalG4Form = () => {
           </tbody></table>
         </div>
 
-        <div className="bg-red-50 border border-red-200 rounded-xl p-5"><div className="flex items-center gap-3 mb-3"><AlertOctagon className="text-red-700" size={20} /><h3 className="text-lg font-bold text-red-900">Instructions for Use</h3></div><ul className="list-disc list-inside space-y-1 text-sm text-gray-700"><li>This form must be filled immediately after an incident is reported.</li><li>All disciplinary actions must comply with principles of natural justice.</li><li>Minor issues (warnings) may be approved at HR level; major cases require Director's approval.</li><li>Records must be linked to Personnel File (Annexure D1), Dress Code (G1), Ethics (G2) and COI (G3).</li><li>Reports must be preserved for 10 years for compliance, labour inspections, and NABH/JCI audits.</li></ul></div>
+        </div>
       </div>
-
-      <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 px-6 py-3 text-xs text-gray-600 print:relative print:mt-8"><div className="flex justify-between items-center max-w-5xl mx-auto"><span>© Koyili Hospital • Confidential • Version-controlled</span><span>Form G4 – Disciplinary Action Reporting Form</span></div></div>
+      
+      {/* Matching Blue Gradient Footer */}
+      <div className="bg-gradient-to-r from-blue-900 via-blue-800 to-blue-700 px-8 py-5 mt-8">
+        <div className="flex items-center justify-between text-white">
+          <div className="flex items-center gap-4">
+            <div className="bg-yellow-500 rounded-full w-10 h-10 flex items-center justify-center">
+              <span className="text-blue-900 font-bold text-xs">NABH</span>
+            </div>
+            <div>
+              <p className="text-sm font-semibold">© 2024 Koyili Hospital</p>
+              <p className="text-xs text-blue-200">NABH Accredited • Confidential Document • Version-controlled</p>
+            </div>
+          </div>
+          <div className="text-right">
+            <p className="text-sm font-bold">Form G4</p>
+            <p className="text-xs text-blue-200">Disciplinary Action Reporting</p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
