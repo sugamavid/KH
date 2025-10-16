@@ -667,162 +667,176 @@ const TrainingManagement = () => {
       </div>
 
       {/* Training Programs Grid */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        {filteredTrainings.map((training) => (
-          <div key={training.id} className="bg-white rounded-xl p-6 border-2 border-slate-200 hover:border-blue-400 transition-all shadow-sm hover:shadow-md">
-            <div className="flex justify-between items-start mb-4">
-              <div className="flex-1">
-                <div className="flex items-start justify-between mb-2">
-                  <h3 className="text-xl font-bold text-slate-900 flex-1">{training.title}</h3>
-                  <span className={`px-3 py-1 rounded-full text-xs font-semibold ml-2 ${
-                    training.status === 'Completed' ? 'bg-green-100 text-green-700' :
-                    training.status === 'Upcoming' ? 'bg-blue-100 text-blue-700' :
-                    'bg-orange-100 text-orange-700'
-                  }`}>
-                    {training.status}
-                  </span>
-                </div>
-                <span className={`inline-block px-3 py-1 rounded-full text-xs font-semibold ${typeColors[training.type] || 'bg-slate-100 text-slate-700'}`}>
-                  {training.type}
-                </span>
-              </div>
-            </div>
-
-            <div className="space-y-3 mb-4">
-              <div className="flex items-center text-sm text-slate-600">
-                <BookOpen className="w-4 h-4 mr-2 text-slate-400" />
-                {training.department}
-              </div>
-              <div className="flex items-center text-sm text-slate-600">
-                <Clock className="w-4 h-4 mr-2 text-slate-400" />
-                Duration: {training.duration}
-              </div>
-              <div className="flex items-center text-sm text-slate-600">
-                <Calendar className="w-4 h-4 mr-2 text-slate-400" />
-                {new Date(training.startDate).toLocaleDateString()} - {new Date(training.endDate).toLocaleDateString()}
-              </div>
-              <div className="flex items-center text-sm text-slate-600">
-                <Users className="w-4 h-4 mr-2 text-slate-400" />
-                Trainer: {training.trainer}
-              </div>
-            </div>
-
-            <div className="bg-slate-50 rounded-lg p-4 mb-4">
-              <div className="flex justify-between items-center mb-2">
-                <span className="text-sm font-semibold text-slate-700">Enrollment</span>
-                <span className="text-sm font-bold text-blue-600">{training.enrolled} / {training.capacity}</span>
-              </div>
-              <div className="w-full bg-slate-200 rounded-full h-2">
-                <div 
-                  className="bg-blue-600 h-2 rounded-full transition-all" 
-                  style={{ width: `${(training.enrolled / training.capacity) * 100}%` }}
-                ></div>
-              </div>
-              <p className="text-xs text-slate-500 mt-2">
-                {training.capacity - training.enrolled} seats remaining
-              </p>
-            </div>
-
-            <div className="flex space-x-2">
-              <button 
-                onClick={() => setSelectedTraining(training)}
-                className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors text-sm font-semibold flex items-center justify-center"
-              >
-                <Eye className="w-4 h-4 mr-1" />
-                View Details
-              </button>
-              <button className="bg-slate-100 text-slate-700 px-4 py-2 rounded-lg hover:bg-slate-200 transition-colors">
-                <Edit className="w-4 h-4" />
-              </button>
-              <button className="bg-red-100 text-red-700 px-4 py-2 rounded-lg hover:bg-red-200 transition-colors">
-                <Trash2 className="w-4 h-4" />
-              </button>
-            </div>
+      <div>
+        <div className="mb-4 flex items-center justify-between">
+          <div className="text-sm text-slate-600">
+            Showing {filteredTrainings.length} of {trainingPrograms.length} trainings
           </div>
-        ))}
+          <button className="flex items-center gap-2 px-4 py-2 bg-white text-slate-700 rounded-lg hover:bg-slate-100 transition-colors text-sm font-semibold border border-slate-200">
+            <RefreshCw className="w-4 h-4" />
+            Refresh
+          </button>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {filteredTrainings.map(renderTrainingCard)}
+        </div>
+
+        {filteredTrainings.length === 0 && (
+          <div className="text-center py-12 bg-white rounded-xl border-2 border-slate-200">
+            <BookOpen className="w-16 h-16 text-slate-300 mx-auto mb-4" />
+            <p className="text-slate-600 font-medium">No trainings found</p>
+            <p className="text-sm text-slate-500 mt-1">Try adjusting your search or filters</p>
+          </div>
+        )}
       </div>
 
       {/* Training Details Modal */}
       {selectedTraining && (
-        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4" onClick={() => setSelectedTraining(null)}>
-          <div className="bg-white rounded-2xl p-8 max-w-3xl w-full max-h-[90vh] overflow-y-auto" onClick={(e) => e.stopPropagation()}>
-            <div className="flex justify-between items-start mb-6">
-              <div>
-                <h2 className="text-2xl font-bold text-slate-900 mb-2">{selectedTraining.title}</h2>
-                <div className="flex items-center space-x-2">
-                  <span className={`px-3 py-1 rounded-full text-xs font-semibold ${typeColors[selectedTraining.type]}`}>
-                    {selectedTraining.type}
-                  </span>
-                  <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
-                    selectedTraining.status === 'Completed' ? 'bg-green-100 text-green-700' :
-                    selectedTraining.status === 'Upcoming' ? 'bg-blue-100 text-blue-700' :
-                    'bg-orange-100 text-orange-700'
-                  }`}>
-                    {selectedTraining.status}
-                  </span>
+        <div className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+          <div className="bg-white rounded-2xl shadow-2xl max-w-3xl w-full max-h-[90vh] overflow-hidden">
+            {/* Header */}
+            <div className={`bg-gradient-to-br from-${selectedTraining.color}-500 to-${selectedTraining.color}-600 px-8 py-6 text-white`}>
+              <div className="flex items-start justify-between mb-4">
+                <div className="flex items-start gap-4">
+                  <div className="w-16 h-16 bg-white/20 backdrop-blur rounded-2xl flex items-center justify-center">
+                    <selectedTraining.icon className="w-10 h-10 text-white" />
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex items-center gap-2 mb-2">
+                      <span className="text-sm font-semibold">{selectedTraining.id}</span>
+                      <span className={`px-2 py-0.5 rounded text-xs font-bold ${
+                        selectedTraining.type === 'mandatory' 
+                          ? 'bg-red-600' 
+                          : 'bg-blue-600'
+                      }`}>
+                        {selectedTraining.type === 'mandatory' ? 'MANDATORY' : 'OPTIONAL'}
+                      </span>
+                      <span className={`px-2 py-0.5 bg-white/30 rounded text-xs font-bold`}>
+                        {getStatusLabel(selectedTraining.status)}
+                      </span>
+                    </div>
+                    <h3 className="text-2xl font-bold mb-2">{selectedTraining.title}</h3>
+                    <div className="text-white/90">{selectedTraining.category}</div>
+                  </div>
                 </div>
-                <p className="text-sm text-slate-500 mt-2">{selectedTraining.id}</p>
-              </div>
-              <button onClick={() => setSelectedTraining(null)} className="text-slate-400 hover:text-slate-600 text-2xl">
-                ✕
-              </button>
-            </div>
-
-            <div className="grid grid-cols-2 gap-6 mb-6">
-              <div>
-                <p className="text-xs font-semibold text-slate-500 mb-1">Department</p>
-                <p className="text-sm font-medium text-slate-900">{selectedTraining.department}</p>
-              </div>
-              <div>
-                <p className="text-xs font-semibold text-slate-500 mb-1">Duration</p>
-                <p className="text-sm font-medium text-slate-900">{selectedTraining.duration}</p>
-              </div>
-              <div>
-                <p className="text-xs font-semibold text-slate-500 mb-1">Start Date</p>
-                <p className="text-sm font-medium text-slate-900">{new Date(selectedTraining.startDate).toLocaleDateString()}</p>
-              </div>
-              <div>
-                <p className="text-xs font-semibold text-slate-500 mb-1">End Date</p>
-                <p className="text-sm font-medium text-slate-900">{new Date(selectedTraining.endDate).toLocaleDateString()}</p>
-              </div>
-              <div>
-                <p className="text-xs font-semibold text-slate-500 mb-1">Trainer</p>
-                <p className="text-sm font-medium text-slate-900">{selectedTraining.trainer}</p>
-              </div>
-              <div>
-                <p className="text-xs font-semibold text-slate-500 mb-1">Enrollment</p>
-                <p className="text-sm font-medium text-slate-900">{selectedTraining.enrolled} / {selectedTraining.capacity}</p>
+                <button
+                  onClick={() => setSelectedTraining(null)}
+                  className="p-2 hover:bg-white/20 rounded-lg transition-colors"
+                >
+                  <X className="w-6 h-6 text-white" />
+                </button>
               </div>
             </div>
 
-            <div className="bg-slate-50 rounded-lg p-6 mb-6">
-              <h3 className="font-bold text-slate-900 mb-3">Training Overview</h3>
-              <p className="text-sm text-slate-700 mb-4">
-                This training program on {selectedTraining.title} is designed to enhance employee skills and knowledge.
-                It is a {selectedTraining.type.toLowerCase()} program for {selectedTraining.department}.
-              </p>
-              <h4 className="font-semibold text-slate-900 mb-2">Learning Objectives:</h4>
-              <ul className="list-disc list-inside text-sm text-slate-700 space-y-1 mb-4">
-                <li>Understand core concepts and principles</li>
-                <li>Develop practical skills through hands-on exercises</li>
-                <li>Apply knowledge to real-world scenarios</li>
-                <li>Achieve certification standards (if applicable)</li>
-              </ul>
-              <h4 className="font-semibold text-slate-900 mb-2">Prerequisites:</h4>
-              <ul className="list-disc list-inside text-sm text-slate-700 space-y-1">
-                <li>Current hospital employee</li>
-                <li>Relevant department experience</li>
-                <li>Basic knowledge of hospital procedures</li>
-              </ul>
-            </div>
+            {/* Content */}
+            <div className="p-8 overflow-y-auto max-h-[calc(90vh-200px)]">
+              {/* Description */}
+              <div className="mb-6">
+                <h4 className="text-lg font-bold text-slate-900 mb-3">About This Training</h4>
+                <p className="text-slate-700 leading-relaxed">{selectedTraining.description}</p>
+              </div>
 
-            <div className="flex space-x-3">
-              <button className="flex-1 bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors font-semibold">
-                View Participants
-              </button>
-              <button className="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-colors font-semibold">
-                Enroll Employee
-              </button>
+              {/* Details Grid */}
+              <div className="grid grid-cols-2 gap-4 mb-6">
+                <div className="bg-slate-50 rounded-lg p-4">
+                  <div className="flex items-center gap-2 text-slate-600 mb-1">
+                    <Clock className="w-4 h-4" />
+                    <span className="text-xs">Duration</span>
+                  </div>
+                  <div className="font-semibold text-slate-900">{selectedTraining.duration}</div>
+                </div>
+                <div className="bg-slate-50 rounded-lg p-4">
+                  <div className="flex items-center gap-2 text-slate-600 mb-1">
+                    <Users className="w-4 h-4" />
+                    <span className="text-xs">Enrolled</span>
+                  </div>
+                  <div className="font-semibold text-slate-900">{selectedTraining.enrolled} students</div>
+                </div>
+                <div className="bg-slate-50 rounded-lg p-4">
+                  <div className="flex items-center gap-2 text-slate-600 mb-1">
+                    <User className="w-4 h-4" />
+                    <span className="text-xs">Instructor</span>
+                  </div>
+                  <div className="font-semibold text-slate-900">{selectedTraining.instructor}</div>
+                </div>
+                <div className="bg-slate-50 rounded-lg p-4">
+                  <div className="flex items-center gap-2 text-slate-600 mb-1">
+                    <Calendar className="w-4 h-4" />
+                    <span className="text-xs">Next Session</span>
+                  </div>
+                  <div className="font-semibold text-slate-900">
+                    {new Date(selectedTraining.nextSession).toLocaleDateString()}
+                  </div>
+                </div>
+                {selectedTraining.deadline && (
+                  <div className="bg-red-50 rounded-lg p-4 border border-red-200">
+                    <div className="flex items-center gap-2 text-red-600 mb-1">
+                      <AlertCircle className="w-4 h-4" />
+                      <span className="text-xs">Deadline</span>
+                    </div>
+                    <div className="font-semibold text-red-900">
+                      {new Date(selectedTraining.deadline).toLocaleDateString()}
+                    </div>
+                  </div>
+                )}
+                <div className="bg-slate-50 rounded-lg p-4">
+                  <div className="flex items-center gap-2 text-slate-600 mb-1">
+                    <Star className="w-4 h-4 text-amber-500 fill-amber-500" />
+                    <span className="text-xs">Rating</span>
+                  </div>
+                  <div className="font-semibold text-slate-900">{selectedTraining.rating} / 5.0</div>
+                </div>
+              </div>
+
+              {/* Progress (if applicable) */}
+              {selectedTraining.status !== 'not_started' && (
+                <div className="mb-6 bg-blue-50 rounded-lg p-4 border border-blue-200">
+                  <h4 className="text-sm font-bold text-blue-900 mb-3">Your Progress</h4>
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-sm text-blue-700">Completion</span>
+                    <span className="font-bold text-blue-900">{selectedTraining.progress}%</span>
+                  </div>
+                  <div className="w-full h-3 bg-blue-200 rounded-full overflow-hidden">
+                    <div 
+                      className="h-full bg-blue-600"
+                      style={{ width: `${selectedTraining.progress}%` }}
+                    ></div>
+                  </div>
+                  {selectedTraining.completionDate && (
+                    <div className="mt-3 text-sm text-green-700 font-semibold flex items-center gap-2">
+                      <CheckCircle2 className="w-4 h-4" />
+                      Completed on {new Date(selectedTraining.completionDate).toLocaleDateString()}
+                    </div>
+                  )}
+                </div>
+              )}
+
+              {/* Actions */}
+              <div className="flex gap-3">
+                {selectedTraining.status === 'not_started' ? (
+                  <button className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition-colors font-semibold">
+                    <PlayCircle className="w-5 h-5" />
+                    Enroll in Training
+                  </button>
+                ) : selectedTraining.status === 'completed' && selectedTraining.certificateAvailable ? (
+                  <>
+                    <button className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors font-semibold">
+                      <Download className="w-5 h-5" />
+                      Download Certificate
+                    </button>
+                    <button className="flex items-center justify-center gap-2 px-4 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold">
+                      <FileText className="w-5 h-5" />
+                      View Policy
+                    </button>
+                  </>
+                ) : (
+                  <button className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold">
+                    <PlayCircle className="w-5 h-5" />
+                    Continue Training
+                  </button>
+                )}
+              </div>
             </div>
           </div>
         </div>
