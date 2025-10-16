@@ -59,14 +59,14 @@ const HRDashboardHome = ({ setActiveModule }) => {
   // Quick Action Cards
   const quickActions = [
     { 
-      title: 'Onboard Employee', 
+      title: 'Employee Management', 
       icon: UserPlus, 
       color: 'blue', 
-      description: 'Complete joining formalities',
+      description: 'Manage staff records',
       module: 'employees'
     },
     { 
-      title: 'Approve Leaves', 
+      title: 'Attendance & Leave', 
       icon: Calendar, 
       color: 'green', 
       description: '2 pending approvals',
@@ -74,32 +74,74 @@ const HRDashboardHome = ({ setActiveModule }) => {
       badge: '2'
     },
     { 
-      title: 'Process Payroll', 
+      title: 'Payroll', 
       icon: DollarSign, 
       color: 'purple', 
-      description: 'Generate salary slips',
+      description: 'Salary processing',
       module: 'payroll'
     },
     { 
-      title: 'Upload Documents', 
-      icon: Upload, 
-      color: 'indigo', 
-      description: 'Manage employee files',
-      module: 'legal'
-    },
-    { 
-      title: 'Exit Clearance', 
-      icon: LogOut, 
-      color: 'red', 
-      description: 'Process employee exit',
-      module: 'employees'
-    },
-    { 
-      title: 'Generate Reports', 
+      title: 'By-Laws', 
       icon: FileText, 
+      color: 'indigo', 
+      description: '30 comprehensive sections',
+      module: 'bylaws'
+    },
+    { 
+      title: 'SOPs', 
+      icon: Briefcase, 
+      color: 'teal', 
+      description: '75 standard procedures',
+      module: 'sops'
+    },
+    { 
+      title: 'Annexures', 
+      icon: Upload, 
       color: 'orange', 
+      description: '76 professional forms',
+      module: 'annexures'
+    },
+    { 
+      title: 'Performance', 
+      icon: TrendingUp, 
+      color: 'emerald', 
+      description: 'Appraisals & KPIs',
+      module: 'performance'
+    },
+    { 
+      title: 'Recruitment', 
+      icon: Users, 
+      color: 'pink', 
+      description: 'Hiring management',
+      module: 'recruitment'
+    },
+    { 
+      title: 'Training', 
+      icon: Award, 
+      color: 'cyan', 
+      description: '16 training programs',
+      module: 'training'
+    },
+    { 
+      title: 'Departments', 
+      icon: Target, 
+      color: 'violet', 
+      description: 'Department management',
+      module: 'departments'
+    },
+    { 
+      title: 'Reports', 
+      icon: Activity, 
+      color: 'amber', 
       description: 'Analytics & insights',
       module: 'reports'
+    },
+    { 
+      title: 'Tools', 
+      icon: Briefcase, 
+      color: 'rose', 
+      description: 'HR calculators',
+      module: 'tools'
     }
   ];
 
