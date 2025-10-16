@@ -144,7 +144,8 @@ const AdminIntelligenceDashboard = ({ setActiveModule }) => {
       time: '12 mins ago',
       department: 'ICU',
       action: 'Call Emergency Pool',
-      severity: 'critical'
+      severity: 'critical',
+      onClick: () => setShowShortagePredictor(true)
     },
     {
       type: 'urgent',
@@ -153,7 +154,8 @@ const AdminIntelligenceDashboard = ({ setActiveModule }) => {
       time: '1 hour ago',
       department: 'Multiple',
       action: 'Review & Stagger',
-      severity: 'high'
+      severity: 'high',
+      onClick: () => alert('Opening Leave Management Dashboard...')
     },
     {
       type: 'warning',
@@ -162,7 +164,8 @@ const AdminIntelligenceDashboard = ({ setActiveModule }) => {
       time: '3 hours ago',
       department: 'Nursing',
       action: 'Schedule Retention Meeting',
-      severity: 'medium'
+      severity: 'medium',
+      onClick: () => setShowTurnoverAnalyzer(true)
     },
     {
       type: 'info',
@@ -171,7 +174,8 @@ const AdminIntelligenceDashboard = ({ setActiveModule }) => {
       time: '1 day ago',
       department: 'HR',
       action: 'Start Audit Prep',
-      severity: 'low'
+      severity: 'low',
+      onClick: () => alert('Opening Compliance Dashboard...')
     }
   ];
 
