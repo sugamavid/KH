@@ -98,7 +98,7 @@ const AdminIntelligenceDashboard = ({ setActiveModule }) => {
       confidence: '82%',
       action: 'View Risk Report',
       severity: 'medium',
-      onClick: () => alert('Turnover Risk Analyzer - Coming Soon!')
+      onClick: () => setShowTurnoverAnalyzer(true)
     },
     {
       name: 'Compliance Deadline Tracker',
