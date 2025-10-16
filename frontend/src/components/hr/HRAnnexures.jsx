@@ -55,6 +55,7 @@ import ProfessionalI1Form from './forms/ProfessionalI1Form';
 import ProfessionalI2Form from './forms/ProfessionalI2Form';
 import ProfessionalI3Form from './forms/ProfessionalI3Form';
 import ProfessionalI4Form from './forms/ProfessionalI4Form';
+import ProfessionalI5Form from './forms/ProfessionalI5Form';
 import ProfessionalI6Form from './forms/ProfessionalI6Form';
 import ProfessionalJ1Form from './forms/ProfessionalJ1Form';
 import ProfessionalJ2Form from './forms/ProfessionalJ2Form';
