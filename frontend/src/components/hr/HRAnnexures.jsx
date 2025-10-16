@@ -994,6 +994,9 @@ const HRAnnexures = ({ setActiveModule }) => {
     if (annexure.code === 'N3') {
       return <ProfessionalN3Form />;
     }
+    if (annexure.code === 'N4') {
+      return <ProfessionalN4Form />;
+    }
 
     // Fallback for future forms
     return (
