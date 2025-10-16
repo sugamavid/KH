@@ -30,6 +30,8 @@ const HRDashboard = () => {
     switch (activeModule) {
       case 'dashboard':
         return <HRDashboardHome setActiveModule={setActiveModule} />;
+      case 'intelligence':
+        return <AdminIntelligenceDashboard setActiveModule={setActiveModule} />;
       case 'employees':
         return <EmployeeManagement />;
       case 'attendance':
