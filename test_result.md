@@ -352,15 +352,18 @@ frontend:
 
   - task: "Integration of Final Annexure Form (N4) - Batch 15 (FINAL)"
     implemented: true
-    working: true
+    working: false
     file: "/app/frontend/src/components/hr/forms/ProfessionalN4Form.jsx"
     stuck_count: 0
     priority: "critical"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
       - working: true
         agent: "main"
         comment: "Successfully created and integrated the FINAL annexure form N4 bringing total count from 75 to 76 forms. This is the last annexure in the series. FORM CREATED: N4 - Full & Final Settlement & Service Certificate (Employee Separation & Exit): Comprehensive two-part form with Part A (F&F Settlement Sheet) including employee details, dynamic settlement components table with add/remove rows and auto-calculated totals (Unpaid Salary, Leave Encashment, Bonus/Incentives, Reimbursements, Deductions, Statutory Deductions, Other Adjustments), Net Payable/Recoverable field, and three-level certifications (Finance Dept, HR Verification, Director Approval). Part B (Service Certificate) with certificate date, employee details, period of service, professional service certification statement with dynamic field interpolation, and authorized signatory section. ADVANCED FEATURES: Dynamic settlement table with Prefill Standard Lines button (auto-populates 7 common components), Add Component/Clear All functionality, Real-time total calculation, Net amount override capability. STANDARDIZED BRANDING: Blue gradient header with Koyili Hospital logo and NABH badges, matching blue gradient footer with copyright and form identifier. INTEGRATION COMPLETED: 1) Created ProfessionalN4Form.jsx with full functionality (Save/Load/Print). 2) Added import in HRAnnexures.jsx. 3) Added N4 metadata to professionalAnnexures array (category: Employee Separation & Exit, linkedSOP: SOP N.4, color: blue). 4) Added N4 render case in switch statement. 5) Updated total form count from 75 to 76 (Batches 1-15: 76 Forms - ALL COMPLETE). VERIFICATION: ESLint passed with no issues. Frontend compiled successfully. This completes the entire Professional Administrative Annexures series for Koyili Hospital HRMS. TOTAL FORMS: 76 (A1-A4, B1-B10, C1-C5, D1-D5, E1-E5, F1-F5, G1-G5, H1-H6, I1-I6, J1-J6, K1-K5, L1-L5, M1-M5, N1-N4)."
+      - working: false
+        agent: "testing"
+        comment: "CRITICAL ISSUE: Session management problem preventing access to annexures. Testing revealed: 1) Application successfully loads and login works with credentials hr.admin@koyilihospital.com. 2) Dashboard shows '85 Forms & Documents' indicating forms are available. 3) However, session expires immediately after login, redirecting back to login page when trying to access annexures section. 4) Multiple navigation attempts (HR Department → Annexures, direct URL navigation) all result in session timeout. 5) Unable to access the 76 Professional Annexure forms due to authentication/session persistence issues. 6) Console shows React key duplication errors for B8, B9, B10 forms. IMPACT: All 76 annexure forms are inaccessible to users due to session management failure. This is a critical blocker preventing any form usage or testing of standardized branding, interactive elements, or form functionality."
 
 metadata:
   created_by: "main_agent"
