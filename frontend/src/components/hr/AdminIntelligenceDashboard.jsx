@@ -56,6 +56,7 @@ const AdminIntelligenceDashboard = ({ setActiveModule }) => {
       score: 82,
       icon: DollarSign,
       color: 'green',
+      trend: '+5',
       savings: '₹2.3L',
       insight: 'Overtime reduced, temp staff costs down',
       action: 'Maintain current roster optimization'
