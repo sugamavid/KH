@@ -1176,12 +1176,10 @@ const HRAnnexures = ({ setActiveModule }) => {
             </button>
             <AnnexureContent annexure={activeAnnexure} />
           </div>
-        ) : viewMode === 'smarttools' ? (
-          // Show Smart Tools Hub
-          <SmartToolsHub />
         ) : (
-          // Show original dashboard
-          <>
+          // Show Smart Tools Hub (Default Dashboard Content)
+          <SmartToolsHub />
+        )}
             {/* Hero Section */}
             <div className="relative overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 opacity-90"></div>
