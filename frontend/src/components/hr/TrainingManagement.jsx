@@ -367,24 +367,199 @@ const TrainingManagement = () => {
     certificates: trainingPrograms.filter(t => t.certificateAvailable).length
   };
 
-  const filteredTrainings = trainings.filter(training => {
-    const matchesSearch = training.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         training.department.toLowerCase().includes(searchQuery.toLowerCase());
-    const matchesStatus = filterStatus === 'All' || training.status === filterStatus;
-    return matchesSearch && matchesStatus;
-  });
+  // Filter trainings
+  const filteredTrainings = useMemo(() => {
+    let filtered = trainingPrograms;
+
+    // Filter by view
+    if (activeView === 'my_trainings') {
+      filtered = filtered.filter(t => t.status !== 'not_started');
+    } else if (activeView === 'certifications') {
+      filtered = filtered.filter(t => t.certificateAvailable);
+    }
+
+    // Filter by category
+    if (selectedCategory !== 'all') {
+      filtered = filtered.filter(t => t.category === selectedCategory);
+    }
+
+    // Filter by type
+    if (selectedType !== 'all') {
+      filtered = filtered.filter(t => t.type === selectedType);
+    }
+
+    // Filter by search
+    if (searchQuery.trim()) {
+      const query = searchQuery.toLowerCase();
+      filtered = filtered.filter(t =>
+        t.title.toLowerCase().includes(query) ||
+        t.description.toLowerCase().includes(query) ||
+        t.instructor.toLowerCase().includes(query)
+      );
+    }
+
+    return filtered;
+  }, [searchQuery, selectedCategory, selectedType, activeView]);
+
+  const getStatusColor = (status) => {
+    switch (status) {
+      case 'completed': return 'green';
+      case 'in_progress': return 'blue';
+      case 'not_started': return 'slate';
+      default: return 'slate';
+    }
+  };
+
+  const getStatusLabel = (status) => {
+    switch (status) {
+      case 'completed': return 'Completed';
+      case 'in_progress': return 'In Progress';
+      case 'not_started': return 'Not Started';
+      default: return status;
+    }
+  };
+
+  const getStatusIcon = (status) => {
+    switch (status) {
+      case 'completed': return CheckCircle2;
+      case 'in_progress': return PlayCircle;
+      case 'not_started': return Clock;
+      default: return Clock;
+    }
+  };
+
+  const handleTrainingClick = (training) => {
+    setSelectedTraining(training);
+  };
+
+  const renderTrainingCard = (training) => {
+    const TrainingIcon = training.icon;
+    const StatusIcon = getStatusIcon(training.status);
+    const statusColor = getStatusColor(training.status);
+
+    return (
+      <div
+        key={training.id}
+        onClick={() => handleTrainingClick(training)}
+        className="bg-white rounded-xl p-5 border-2 border-slate-200 hover:border-teal-400 hover:shadow-lg transition-all cursor-pointer group"
+      >
+        <div className="flex items-start justify-between mb-3">
+          <div className="flex items-start gap-3 flex-1">
+            <div className={`p-3 bg-${training.color}-100 rounded-xl group-hover:bg-teal-100 transition-colors`}>
+              <TrainingIcon className={`w-6 h-6 text-${training.color}-600 group-hover:text-teal-600 transition-colors`} />
+            </div>
+            <div className="flex-1 min-w-0">
+              <h4 className="font-bold text-slate-900 mb-1 group-hover:text-teal-700 transition-colors line-clamp-2">
+                {training.title}
+              </h4>
+              <div className="flex items-center gap-2 flex-wrap mb-2">
+                <span className="text-xs text-slate-600">{training.id}</span>
+                <span className={`px-2 py-0.5 rounded text-xs font-bold ${
+                  training.type === 'mandatory' 
+                    ? 'bg-red-100 text-red-700' 
+                    : 'bg-blue-100 text-blue-700'
+                }`}>
+                  {training.type === 'mandatory' ? 'MANDATORY' : 'OPTIONAL'}
+                </span>
+              </div>
+              <div className="flex items-center gap-3 text-xs text-slate-600">
+                <div className="flex items-center gap-1">
+                  <Clock className="w-3 h-3" />
+                  {training.duration}
+                </div>
+                <div className="flex items-center gap-1">
+                  <Users className="w-3 h-3" />
+                  {training.enrolled} enrolled
+                </div>
+                <div className="flex items-center gap-1">
+                  <Star className="w-3 h-3 text-amber-500 fill-amber-500" />
+                  {training.rating}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Progress Bar */}
+        {training.status !== 'not_started' && (
+          <div className="mb-3">
+            <div className="flex items-center justify-between text-xs mb-1">
+              <span className="text-slate-600">Progress</span>
+              <span className="font-bold text-slate-900">{training.progress}%</span>
+            </div>
+            <div className="w-full h-2 bg-slate-200 rounded-full overflow-hidden">
+              <div 
+                className={`h-full bg-${statusColor}-600 transition-all`}
+                style={{ width: `${training.progress}%` }}
+              ></div>
+            </div>
+          </div>
+        )}
+
+        <div className="flex items-center justify-between pt-3 border-t border-slate-200">
+          <div className="flex items-center gap-2">
+            <StatusIcon className={`w-4 h-4 text-${statusColor}-600`} />
+            <span className={`text-sm font-semibold text-${statusColor}-700`}>
+              {getStatusLabel(training.status)}
+            </span>
+          </div>
+          {training.deadline && training.status !== 'completed' && (
+            <div className="text-xs text-red-600 font-semibold">
+              Due: {new Date(training.deadline).toLocaleDateString()}
+            </div>
+          )}
+          {training.completionDate && (
+            <div className="text-xs text-green-600 font-semibold flex items-center gap-1">
+              <CheckCircle2 className="w-3 h-3" />
+              {new Date(training.completionDate).toLocaleDateString()}
+            </div>
+          )}
+        </div>
+
+        <div className="mt-3 flex gap-2">
+          {training.status === 'not_started' ? (
+            <button
+              onClick={(e) => e.stopPropagation()}
+              className="flex-1 flex items-center justify-center gap-2 px-3 py-2 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition-colors text-sm font-semibold"
+            >
+              <PlayCircle className="w-4 h-4" />
+              Enroll Now
+            </button>
+          ) : training.status === 'completed' && training.certificateAvailable ? (
+            <button
+              onClick={(e) => e.stopPropagation()}
+              className="flex-1 flex items-center justify-center gap-2 px-3 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors text-sm font-semibold"
+            >
+              <Download className="w-4 h-4" />
+              Download Certificate
+            </button>
+          ) : (
+            <button
+              onClick={(e) => e.stopPropagation()}
+              className="flex-1 flex items-center justify-center gap-2 px-3 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-sm font-semibold"
+            >
+              <PlayCircle className="w-4 h-4" />
+              Continue
+            </button>
+          )}
+        </div>
+      </div>
+    );
+  };
 
   return (
-    <div className="p-6 space-y-6">
+    <div className="p-6 space-y-6 bg-slate-50 min-h-screen">
       {/* Header */}
       <div className="flex justify-between items-center">
         <div>
-          <h1 className="text-3xl font-bold text-slate-900">Training & Development</h1>
-          <p className="text-slate-600 mt-1">Manage employee training programs and certifications</p>
+          <h1 className="text-3xl font-bold text-slate-900" style={{ fontFamily: "'Inter', sans-serif" }}>
+            Training & Development Hub
+          </h1>
+          <p className="text-slate-600 mt-1">Professional development and skill enhancement center</p>
         </div>
-        <button className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors font-semibold flex items-center shadow-lg">
+        <button className="bg-teal-600 text-white px-6 py-3 rounded-lg hover:bg-teal-700 transition-colors font-semibold flex items-center shadow-lg">
           <PlusCircle className="w-5 h-5 mr-2" />
-          Create Training
+          Create Training Program
         </button>
       </div>
 
