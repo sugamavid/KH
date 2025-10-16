@@ -291,7 +291,6 @@ const ProfessionalG2Form = () => {
             </tbody>
           </table>
         </div>
-        </div>
 
         {/* Instructions */}
         <div className="bg-purple-50 border border-purple-200 rounded-xl p-5">
