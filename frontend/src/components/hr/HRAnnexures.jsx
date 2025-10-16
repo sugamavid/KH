@@ -446,6 +446,13 @@ const HRAnnexures = ({ setActiveModule }) => {
       color: 'orange'
     },
     {
+      code: 'I5',
+      title: 'Increment Recommendation Sheet',
+      category: 'Payroll & Compensation',
+      linkedSOP: 'SOP I.5',
+      color: 'orange'
+    },
+    {
       code: 'I6',
       title: 'Salary Slip Format & Payroll Helpdesk Query Form',
       category: 'Payroll & Compensation',
