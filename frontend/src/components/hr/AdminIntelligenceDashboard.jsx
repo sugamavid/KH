@@ -557,6 +557,16 @@ const AdminIntelligenceDashboard = ({ setActiveModule }) => {
           </div>
         </div>
       </div>
+
+      {/* Modals */}
+      <StaffShortagePredictorModal 
+        isOpen={showShortagePredictor} 
+        onClose={() => setShowShortagePredictor(false)} 
+      />
+      <BurnoutDetectorModal 
+        isOpen={showBurnoutDetector} 
+        onClose={() => setShowBurnoutDetector(false)} 
+      />
     </div>
   );
 };
