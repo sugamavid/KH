@@ -1127,8 +1127,9 @@ const HRAnnexures = ({ setActiveModule }) => {
       <div className="p-8">
         {/* Stunning Hero Section */}
         <div className="mb-10 relative overflow-hidden rounded-3xl">
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-purple-600 to-pink-500 opacity-90"></div>
-          <div className="absolute inset-0" style={{backgroundImage: 'radial-gradient(circle at 20% 50%, rgba(255,255,255,0.1) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(255,255,255,0.1) 0%, transparent 50%)'}}></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-700 opacity-95"></div>
+          <div className="absolute inset-0" style={{backgroundImage: 'radial-gradient(circle at 20% 50%, rgba(255,255,255,0.15) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(120,180,255,0.2) 0%, transparent 50%)'}}></div>
+          <div className="absolute inset-0 opacity-30" style={{backgroundImage: 'repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255,255,255,.05) 35px, rgba(255,255,255,.05) 70px)'}}></div>
           
           <div className="relative z-10 p-10">
             <div className="flex items-center justify-between mb-8">
