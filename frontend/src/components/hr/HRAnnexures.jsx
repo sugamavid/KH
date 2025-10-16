@@ -1102,7 +1102,8 @@ const HRAnnexures = ({ setActiveModule }) => {
         tools: [
           { id: 'performance', name: 'Performance Scheduler', icon: Award, desc: 'Automated goal setting, reviews, and appraisal cycles', color: 'orange', badge: 'SCHEDULED' },
           { id: 'training', name: 'Training & Competency Hub', icon: Users, desc: 'Training calendar, needs assessment, and certification tracking', color: 'violet', badge: 'DEVELOPMENT' },
-          { id: '360-feedback', name: '360° Feedback System', icon: TrendingUp, desc: 'Multi-source feedback collection and analysis', color: 'pink', badge: 'ADVANCED' }
+          { id: '360-feedback', name: '360° Feedback System', icon: TrendingUp, desc: 'Multi-source feedback collection and analysis', color: 'pink', badge: 'ADVANCED' },
+          { id: 'succession', name: 'Succession Planning Tool', icon: Users, desc: 'Identify and develop future leaders with talent pipeline management', color: 'amber', badge: 'STRATEGIC' }
         ]
       },
       {
