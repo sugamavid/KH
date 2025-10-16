@@ -474,6 +474,41 @@ const HRAnnexures = ({ setActiveModule }) => {
       linkedSOP: 'SOP J.4',
       color: 'purple'
     },
+    {
+      code: 'J5',
+      title: 'Training Tracker & Certificate Record',
+      category: 'Training & Development',
+      linkedSOP: 'SOP J.5',
+      color: 'purple'
+    },
+    {
+      code: 'J6',
+      title: 'Leadership Succession Plan Matrix',
+      category: 'Training & Development',
+      linkedSOP: 'SOP J.6',
+      color: 'purple'
+    },
+    {
+      code: 'K1',
+      title: 'Internet and Email Usage Declaration',
+      category: 'IT Security & Digital Compliance',
+      linkedSOP: 'SOP K.1',
+      color: 'teal'
+    },
+    {
+      code: 'K2',
+      title: 'IT Security Awareness Acknowledgment',
+      category: 'IT Security & Digital Compliance',
+      linkedSOP: 'SOP K.2',
+      color: 'teal'
+    },
+    {
+      code: 'K3',
+      title: 'Device Allocation and Return Register',
+      category: 'IT Security & Digital Compliance',
+      linkedSOP: 'SOP K.3',
+      color: 'teal'
+    },
   ];
 
   // Mock data for dashboard stats
