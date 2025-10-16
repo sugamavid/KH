@@ -1303,7 +1303,8 @@ const HRAnnexures = ({ setActiveModule }) => {
               })}
             </div>
           </div>
-        ))}
+          );
+        })}
 
         {/* Quick Stats Footer */}
         <div className="mt-12 bg-gradient-to-r from-slate-900 via-gray-800 to-slate-900 rounded-2xl shadow-2xl p-8">
