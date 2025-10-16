@@ -20,7 +20,7 @@ const HRSidebar = ({ activeModule, setActiveModule }) => {
   const modules = [
     { id: 'dashboard', name: 'HR Dashboard', icon: LayoutDashboard, color: 'blue' },
     { id: 'employees', name: 'Employee Management', icon: Users, color: 'green' },
-    { id: 'departments', name: 'Department Management', icon: FolderOpen, color: 'cyan' },
+    { id: 'departments', name: 'Department Management', icon: Building2, color: 'cyan' },
     { id: 'attendance', name: 'Attendance & Leave', icon: Clock, color: 'purple' },
     { id: 'payroll', name: 'Payroll Management', icon: DollarSign, color: 'emerald' },
     { id: 'documents', name: 'Document Management', icon: FolderOpen, color: 'indigo' },
