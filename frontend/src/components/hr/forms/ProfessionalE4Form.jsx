@@ -74,23 +74,33 @@ const ProfessionalE4Form = () => {
 
   return (
     <div className="max-w-6xl mx-auto bg-white shadow-2xl">
-      <div className="bg-gradient-to-r from-fuchsia-700 via-pink-600 to-fuchsia-600 text-white p-8">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-6">
-            {logoData && <img src={logoData} alt="Logo" className="w-20 h-20 bg-white rounded-lg p-2 shadow-lg object-contain" />}
-            <div>
-              <h1 className="text-3xl font-bold tracking-tight">KOYILI HOSPITAL</h1>
-              <p className="text-fuchsia-200 text-sm mt-1">Human Resources Department</p>
-              <p className="text-fuchsia-300 text-xs">Pallikkunnu, Talap, Kannur, Kerala</p>
+      <div className="bg-gradient-to-r from-blue-900 via-blue-800 to-blue-700 text-white px-8 py-6">
+        <div className="flex items-center justify-between gap-6">
+          <div className="flex-shrink-0">
+            {logoData && <img src={logoData} alt="Koyili Hospital Logo" className="w-24 h-24 bg-white rounded-lg p-2 shadow-xl object-contain" />}
+          </div>
+          <div className="flex-1 text-center">
+            <h1 className="text-3xl font-bold tracking-wide mb-1">KOYILI HOSPITAL</h1>
+            <p className="text-blue-200 text-sm font-semibold">Human Resources Department</p>
+            <p className="text-blue-300 text-xs">NABH Accredited • Pallikkunnu, Talap, Kannur, Kerala</p>
+            <div className="mt-3 pt-3 border-t border-blue-400/30">
+              <h2 className="text-xl font-bold">HOLIDAY CALENDAR FORMAT</h2>
             </div>
           </div>
-          <div className="text-right">
+          <div className="flex-shrink-0 text-right space-y-2">
             <div className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg border border-white/20">
-              <p className="text-xs text-fuchsia-200 mb-1">Annual Calendar</p>
-              <p className="text-sm font-bold">HOLIDAY LIST</p>
+              <p className="text-xs text-blue-200 mb-0.5">Annexure</p>
+              <p className="text-2xl font-bold">E4</p>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm px-4 py-1.5 rounded-lg border border-white/20">
+              <p className="text-xs text-blue-200">Version 1.0</p>
+            </div>
+            <div className="bg-yellow-500/90 px-3 py-1 rounded-full">
+              <p className="text-xs font-bold text-blue-900">NABH</p>
             </div>
           </div>
         </div>
+      </div>
       </div>
 
       <div className="bg-fuchsia-50 px-8 py-4 border-b-2 border-fuchsia-700 flex items-center justify-between">

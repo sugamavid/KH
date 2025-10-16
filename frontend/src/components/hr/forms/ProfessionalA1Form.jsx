@@ -401,21 +401,33 @@ const ProfessionalA1Form = () => {
           </div>
 
           {/* Purpose Banner */}
-          <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border-b-4 border-blue-200 p-6">
-            <div className="flex items-start gap-4">
-              <div className="w-12 h-12 rounded-lg bg-blue-600 flex items-center justify-center flex-shrink-0">
-                <Info className="w-6 h-6 text-white" />
-              </div>
-              <div>
-                <h3 className="text-lg font-bold text-slate-900 mb-2">Purpose of This Document</h3>
-                <p className="text-slate-700 leading-relaxed">
-                  This Annexure provides a <strong>uniform, auditable, and legally compliant mechanism</strong> through which 
-                  revisions to HR policies at Koyili Hospital are proposed, reviewed, and approved. It ensures that all 
-                  amendments align with statutory compliance requirements, internal governance practices, and the provisions 
-                  of the Hospital By-Laws on HR Governance & Compliance (Section 4.2).
-                </p>
-              </div>
+          <div className="bg-gradient-to-r from-blue-900 via-blue-800 to-blue-700 text-white px-8 py-6">
+        <div className="flex items-center justify-between gap-6">
+          <div className="flex-shrink-0">
+            {logoData && <img src={logoData} alt="Koyili Hospital Logo" className="w-24 h-24 bg-white rounded-lg p-2 shadow-xl object-contain" />}
+          </div>
+          <div className="flex-1 text-center">
+            <h1 className="text-3xl font-bold tracking-wide mb-1">KOYILI HOSPITAL</h1>
+            <p className="text-blue-200 text-sm font-semibold">Human Resources Department</p>
+            <p className="text-blue-300 text-xs">NABH Accredited • Pallikkunnu, Talap, Kannur, Kerala</p>
+            <div className="mt-3 pt-3 border-t border-blue-400/30">
+              <h2 className="text-xl font-bold">FORM</h2>
             </div>
+          </div>
+          <div className="flex-shrink-0 text-right space-y-2">
+            <div className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg border border-white/20">
+              <p className="text-xs text-blue-200 mb-0.5">Annexure</p>
+              <p className="text-2xl font-bold">A1</p>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm px-4 py-1.5 rounded-lg border border-white/20">
+              <p className="text-xs text-blue-200">Version 1.0</p>
+            </div>
+            <div className="bg-yellow-500/90 px-3 py-1 rounded-full">
+              <p className="text-xs font-bold text-blue-900">NABH</p>
+            </div>
+          </div>
+        </div>
+      </div>
           </div>
 
           {/* Form Content - Will continue in next part... */}
@@ -1044,31 +1056,23 @@ const ProfessionalA1Form = () => {
           </div>
 
           {/* Professional Footer */}
-          <div className="bg-gradient-to-r from-slate-800 to-slate-900 text-white px-8 py-6">
-            <div className="grid grid-cols-3 gap-6 text-sm">
-              <div>
-                <p className="font-bold mb-2">Koyili Hospital</p>
-                <p className="text-slate-400 text-xs">
-                  Professional Healthcare Services<br />
-                  Committed to Excellence
-                </p>
-              </div>
-              <div className="text-center">
-                <p className="text-slate-400 text-xs mb-2">This is a controlled document</p>
-                <p className="font-bold">© {new Date().getFullYear()} Koyili Hospital</p>
-                <p className="text-slate-400 text-xs mt-2">
-                  Confidential • For Internal Use Only • Version-Controlled
-                </p>
-              </div>
-              <div className="text-right">
-                <p className="text-slate-400 text-xs mb-2">Document Reference</p>
-                <p className="font-mono font-bold text-xs">{formData.documentNumber}</p>
-                <p className="text-slate-400 text-xs mt-2">
-                  Generated: {new Date().toLocaleString()}
-                </p>
-              </div>
+          <div className="bg-gradient-to-r from-blue-900 via-blue-800 to-blue-700 px-8 py-5 mt-8">
+        <div className="flex items-center justify-between text-white">
+          <div className="flex items-center gap-4">
+            <div className="bg-yellow-500 rounded-full w-10 h-10 flex items-center justify-center">
+              <span className="text-blue-900 font-bold text-xs">NABH</span>
+            </div>
+            <div>
+              <p className="text-sm font-semibold">© 2024 Koyili Hospital</p>
+              <p className="text-xs text-blue-200">NABH Accredited • Confidential Document • Version-controlled</p>
             </div>
           </div>
+          <div className="text-right">
+            <p className="text-sm font-bold">Form A1</p>
+            <p className="text-xs text-blue-200">Form</p>
+          </div>
+        </div>
+      </div>
 
         </div>
       </div>
