@@ -3,7 +3,7 @@ import {
   Users, Clock, DollarSign, TrendingUp, AlertCircle, CheckCircle2, Calendar, 
   Briefcase, FileText, UserPlus, Award, Bell, AlertTriangle,
   Download, Zap, ArrowUpRight, UserX, UserCheck, Timer, 
-  Megaphone, ClipboardList, Plus, Eye, Phone, Mail, X, Send
+  Megaphone, ClipboardList, Plus, Eye, Phone, Mail, X, Send, Activity
 } from 'lucide-react';
 
 const HRDashboardHome = ({ setActiveModule }) => {
