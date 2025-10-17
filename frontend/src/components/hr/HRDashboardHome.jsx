@@ -2,18 +2,141 @@ import React, { useState } from 'react';
 import { 
   Users, Clock, DollarSign, TrendingUp, AlertCircle, CheckCircle2, Calendar, 
   Briefcase, FileText, UserPlus, LogOut, Award, Bell, AlertTriangle,
-  Download, Upload, Search, Filter, ArrowUpRight, Activity, Target, Zap
+  Download, Upload, Search, Filter, ArrowUpRight, Activity, Target, Zap,
+  UserX, UserCheck, Timer, Coffee, Megaphone, FileCheck, ClipboardList,
+  TrendingDown, Plus, Send, Eye, Edit, Trash2, PlayCircle, MessageSquare
 } from 'lucide-react';
 import { DEMO_EMPLOYEES, DEMO_LEAVE_APPLICATIONS } from '../../data/hrDemoData';
 
 const HRDashboardHome = ({ setActiveModule }) => {
-  const [activeTab, setActiveTab] = useState('operations');
+  const [activeTab, setActiveTab] = useState('today');
+  const [showAnnouncementModal, setShowAnnouncementModal] = useState(false);
 
   // Navigation handler
   const handleNavigation = (module) => {
     if (setActiveModule) {
       setActiveModule(module);
     }
+  };
+
+  // TODAY'S REAL-TIME DATA
+  const todayData = {
+    date: new Date().toLocaleDateString('en-IN', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }),
+    totalEmployees: 168,
+    present: 156,
+    absent: 8,
+    onLeave: 4,
+    lateComers: 12,
+    overtime: 6,
+    pendingApprovals: 7
+  };
+
+  // LATE COMERS TODAY
+  const lateComers = [
+    { id: 1, name: 'Rajesh Kumar', dept: 'Nursing', time: '09:45 AM', expected: '09:00 AM', delay: '45 mins', reason: 'Traffic' },
+    { id: 2, name: 'Priya Sharma', dept: 'Laboratory', time: '09:30 AM', expected: '09:00 AM', delay: '30 mins', reason: 'Not specified' },
+    { id: 3, name: 'Anil Menon', dept: 'Emergency', time: '08:20 AM', expected: '08:00 AM', delay: '20 mins', reason: 'Bus delay' },
+    { id: 4, name: 'Divya Nair', dept: 'Radiology', time: '09:15 AM', expected: '09:00 AM', delay: '15 mins', reason: 'Personal' },
+    { id: 5, name: 'Suresh Pillai', dept: 'ICU', time: '08:25 AM', expected: '08:00 AM', delay: '25 mins', reason: 'Not specified' }
+  ];
+
+  // ABSENTEES TODAY
+  const absentees = [
+    { id: 1, name: 'Lakshmi Iyer', dept: 'Nursing', reason: 'Sick Leave', status: 'Approved', contact: '+91 98765 43210' },
+    { id: 2, name: 'Mohanan Das', dept: 'Support', reason: 'No call/No show', status: 'Unmarked', contact: '+91 98765 43211', alert: true },
+    { id: 3, name: 'Sreeja Thomas', dept: 'Admin', reason: 'Emergency Leave', status: 'Pending', contact: '+91 98765 43212' },
+    { id: 4, name: 'Vinod Kumar', dept: 'Maintenance', reason: 'Casual Leave', status: 'Approved', contact: '+91 98765 43213' }
+  ];
+
+  // OVERTIME WORKERS (This week)
+  const overtimeWorkers = [
+    { id: 1, name: 'Dr. Meera Nair', dept: 'Emergency', hours: 18, amount: '₹9,000', week: 'This week', status: 'Pending approval' },
+    { id: 2, name: 'Nurse Anita Roy', dept: 'ICU', hours: 15, amount: '₹6,000', week: 'This week', status: 'Approved' },
+    { id: 3, name: 'Lab Tech Ramesh', dept: 'Laboratory', hours: 12, amount: '₹4,800', week: 'This week', status: 'Approved' },
+    { id: 4, name: 'Radha Krishna', dept: 'OT', hours: 10, amount: '₹5,000', week: 'This week', status: 'Pending approval' }
+  ];
+
+  // PENDING APPROVALS
+  const pendingApprovals = [
+    { id: 1, type: 'Leave', employee: 'Rajesh Kumar', detail: 'Annual Leave - 5 days (Feb 15-19)', urgent: true, time: '2 hours ago' },
+    { id: 2, type: 'Overtime', employee: 'Dr. Meera Nair', detail: '18 hours overtime claim', urgent: false, time: '5 hours ago' },
+    { id: 3, type: 'Document', employee: 'Priya Sharma', detail: 'Medical certificate submission', urgent: false, time: '1 day ago' },
+    { id: 4, type: 'Shift Change', employee: 'Anil Menon', detail: 'Night shift to day shift request', urgent: true, time: '3 hours ago' },
+    { id: 5, type: 'Leave', employee: 'Divya Nair', detail: 'Sick Leave - 2 days', urgent: true, time: '1 hour ago' }
+  ];
+
+  // ANNOUNCEMENTS
+  const announcements = [
+    { id: 1, title: 'NABH Audit Next Week', message: 'All documents must be ready by Friday', priority: 'high', date: 'Today', author: 'HR Manager' },
+    { id: 2, title: 'New Payroll Schedule', message: 'Salary processing moved to 28th of every month', priority: 'medium', date: 'Yesterday', author: 'Finance' },
+    { id: 3, title: 'Staff Meeting - Feb 10', message: 'Mandatory attendance for all HODs', priority: 'high', date: '2 days ago', author: 'Administration' }
+  ];
+
+  // UPCOMING EVENTS
+  const upcomingEvents = [
+    { id: 1, type: 'birthday', name: 'Rajesh Kumar', dept: 'Nursing', date: 'Today', icon: '🎂' },
+    { id: 2, type: 'anniversary', name: 'Dr. Priya Sharma', dept: 'Cardiology', date: 'Tomorrow', years: '5 years', icon: '🎉' },
+    { id: 3, type: 'retirement', name: 'Mr. Suresh Nair', dept: 'Admin', date: 'Next week', icon: '👋' },
+    { id: 4, type: 'birthday', name: 'Nurse Anita', dept: 'ICU', date: 'Feb 25', icon: '🎂' }
+  ];
+
+  // QUICK ACTIONS for HR Admin
+  const quickActions = [
+    { 
+      title: 'Mark Attendance', 
+      icon: UserCheck, 
+      color: 'blue', 
+      description: 'Quick attendance marking',
+      action: () => alert('Opening Attendance Marker...')
+    },
+    { 
+      title: 'Approve Leaves', 
+      icon: CheckCircle2, 
+      color: 'green', 
+      description: pendingApprovals.filter(a => a.type === 'Leave').length + ' pending',
+      action: () => handleNavigation('attendance')
+    },
+    { 
+      title: 'Generate Payslip', 
+      icon: FileText, 
+      color: 'purple', 
+      description: 'Salary slip generation',
+      action: () => handleNavigation('payroll')
+    },
+    { 
+      title: 'New Announcement', 
+      icon: Megaphone, 
+      color: 'orange', 
+      description: 'Broadcast message',
+      action: () => setShowAnnouncementModal(true)
+    },
+    { 
+      title: 'Onboard Employee', 
+      icon: UserPlus, 
+      color: 'indigo', 
+      description: 'Add new employee',
+      action: () => handleNavigation('employees')
+    },
+    { 
+      title: 'Attendance Report', 
+      icon: ClipboardList, 
+      color: 'teal', 
+      description: 'Download reports',
+      action: () => handleNavigation('reports')
+    }
+  ];
+
+  const getColorClasses = (color) => {
+    const colors = {
+      blue: { bg: 'bg-blue-500', light: 'bg-blue-50', text: 'text-blue-600', border: 'border-blue-200' },
+      green: { bg: 'bg-green-500', light: 'bg-green-50', text: 'text-green-600', border: 'border-green-200' },
+      orange: { bg: 'bg-orange-500', light: 'bg-orange-50', text: 'text-orange-600', border: 'border-orange-200' },
+      purple: { bg: 'bg-purple-500', light: 'bg-purple-50', text: 'text-purple-600', border: 'border-purple-200' },
+      indigo: { bg: 'bg-indigo-500', light: 'bg-indigo-50', text: 'text-indigo-600', border: 'border-indigo-200' },
+      teal: { bg: 'bg-teal-500', light: 'bg-teal-50', text: 'text-teal-600', border: 'border-teal-200' },
+      red: { bg: 'bg-red-500', light: 'bg-red-50', text: 'text-red-600', border: 'border-red-200' }
+    };
+    return colors[color] || colors.blue;
   };
 
   // Executive Summary KPIs
