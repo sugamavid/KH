@@ -152,7 +152,22 @@ const DepartmentManagement = () => {
         if (data.length === 0) {
           setDepartments(initialDepartments);
         } else {
-          setDepartments(data);
+          // Merge backend data with defaults to ensure all fields exist
+          const enrichedData = data.map(dept => ({
+            ...dept,
+            status: dept.status || 'active',
+            code: dept.code || dept.name.substring(0, 4).toUpperCase(),
+            head: dept.head || 'Not Assigned',
+            headEmail: dept.headEmail || '',
+            headPhone: dept.headPhone || '',
+            employeeCount: dept.employeeCount || 0,
+            budget: dept.budget || 0,
+            location: dept.location || 'Not Specified',
+            establishedDate: dept.establishedDate || new Date().toISOString().split('T')[0],
+            functions: dept.functions || [],
+            kpis: dept.kpis || {}
+          }));
+          setDepartments(enrichedData);
         }
       } else {
         // Fallback to initial departments if API fails
