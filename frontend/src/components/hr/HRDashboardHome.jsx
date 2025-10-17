@@ -297,33 +297,14 @@ const HRDashboardHome = ({ setActiveModule }) => {
     { task: 'Upload compliance certificates', priority: 'low', dueDate: 'This Week' }
   ];
 
-  const getColorClasses = (color, type = 'bg') => {
-    const colors = {
-      blue: { bg: 'bg-blue-600', light: 'bg-blue-100', text: 'text-blue-600', hover: 'hover:bg-blue-700' },
-      green: { bg: 'bg-green-600', light: 'bg-green-100', text: 'text-green-600', hover: 'hover:bg-green-700' },
-      orange: { bg: 'bg-orange-600', light: 'bg-orange-100', text: 'text-orange-600', hover: 'hover:bg-orange-700' },
-      emerald: { bg: 'bg-emerald-600', light: 'bg-emerald-100', text: 'text-emerald-600', hover: 'hover:bg-emerald-700' },
-      purple: { bg: 'bg-purple-600', light: 'bg-purple-100', text: 'text-purple-600', hover: 'hover:bg-purple-700' },
-      indigo: { bg: 'bg-indigo-600', light: 'bg-indigo-100', text: 'text-indigo-600', hover: 'hover:bg-indigo-700' },
-      red: { bg: 'bg-red-600', light: 'bg-red-100', text: 'text-red-600', hover: 'hover:bg-red-700' },
-      teal: { bg: 'bg-teal-600', light: 'bg-teal-100', text: 'text-teal-600', hover: 'hover:bg-teal-700' },
-      pink: { bg: 'bg-pink-600', light: 'bg-pink-100', text: 'text-pink-600', hover: 'hover:bg-pink-700' },
-      cyan: { bg: 'bg-cyan-600', light: 'bg-cyan-100', text: 'text-cyan-600', hover: 'hover:bg-cyan-700' },
-      violet: { bg: 'bg-violet-600', light: 'bg-violet-100', text: 'text-violet-600', hover: 'hover:bg-violet-700' },
-      amber: { bg: 'bg-amber-600', light: 'bg-amber-100', text: 'text-amber-600', hover: 'hover:bg-amber-700' },
-      rose: { bg: 'bg-rose-600', light: 'bg-rose-100', text: 'text-rose-600', hover: 'hover:bg-rose-700' }
-    };
-    return colors[color]?.[type] || colors.blue[type];
-  };
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
-      {/* Page Header */}
-      <div className="bg-white border-b border-slate-200 px-6 py-5">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-slate-100">
+      {/* Header */}
+      <div className="bg-gradient-to-r from-blue-600 to-indigo-700 border-b-4 border-blue-400 shadow-xl px-6 py-5">
         <div className="flex items-center justify-between">
           <div>
-            <h1 className="text-2xl font-bold text-slate-900">Human Resources Management</h1>
-            <p className="text-sm text-slate-600 mt-1">Koyili Hospital • HR Operations Dashboard</p>
+            <h1 className="text-3xl font-black text-white">HR Admin Dashboard</h1>
+            <p className="text-blue-100 mt-1 font-medium">{todayData.date}</p>
           </div>
           <div className="flex items-center space-x-3">
             <button 
@@ -334,13 +315,9 @@ const HRDashboardHome = ({ setActiveModule }) => {
               CEO Intelligence Center
               <ArrowUpRight className="w-4 h-4 ml-2" />
             </button>
-            <button className="px-4 py-2 bg-slate-100 text-slate-700 rounded-lg hover:bg-slate-200 transition-colors font-medium text-sm flex items-center">
-              <Filter className="w-4 h-4 mr-2" />
-              Filter
-            </button>
-            <button className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium text-sm flex items-center">
+            <button className="px-4 py-2.5 bg-white/20 backdrop-blur-md text-white rounded-lg hover:bg-white/30 transition-all font-semibold text-sm flex items-center border border-white/30">
               <Download className="w-4 h-4 mr-2" />
-              Export Report
+              Reports
             </button>
           </div>
         </div>
