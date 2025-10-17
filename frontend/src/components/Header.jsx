@@ -5,6 +5,8 @@ import { useNavigate } from 'react-router-dom';
 const Header = ({ onLogout, sidebarOpen, setSidebarOpen, isInDepartment }) => {
   const [showUserMenu, setShowUserMenu] = useState(false);
   const [showNotifications, setShowNotifications] = useState(false);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [showSearchResults, setShowSearchResults] = useState(false);
   const navigate = useNavigate();
 
   const notifications = [
@@ -14,6 +16,41 @@ const Header = ({ onLogout, sidebarOpen, setSidebarOpen, isInDepartment }) => {
   ];
 
   const unreadCount = notifications.filter(n => n.unread).length;
+
+  // Search data - departments, modules, and quick links
+  const searchableItems = [
+    { type: 'Department', name: 'Human Resources', path: '/department/human-resources', icon: '👥' },
+    { type: 'Department', name: 'Finance', path: '/department/finance', icon: '💰' },
+    { type: 'Department', name: 'Operations', path: '/department/operations', icon: '⚙️' },
+    { type: 'Department', name: 'Quality Assurance', path: '/department/quality-assurance', icon: '✓' },
+    { type: 'Department', name: 'Medical Records', path: '/department/medical-records', icon: '📋' },
+    { type: 'Department', name: 'IT & Technology', path: '/department/it-technology', icon: '💻' },
+    { type: 'Module', name: 'HR Dashboard', path: '/department/human-resources', icon: '📊', keywords: 'hr admin attendance leave payroll' },
+    { type: 'Module', name: 'By-Laws', path: '/department/human-resources', icon: '📜', keywords: 'bylaws policies rules regulations' },
+    { type: 'Module', name: 'SOPs', path: '/department/human-resources', icon: '📄', keywords: 'sop procedures operations standard' },
+    { type: 'Module', name: 'Annexures', path: '/department/human-resources', icon: '📎', keywords: 'forms annexure documents' },
+    { type: 'Module', name: 'Intelligence Center', path: '/department/human-resources', icon: '🧠', keywords: 'ai analytics intelligence reports' }
+  ];
+
+  // Filter search results
+  const searchResults = searchQuery.length > 0 
+    ? searchableItems.filter(item => 
+        item.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        (item.keywords && item.keywords.toLowerCase().includes(searchQuery.toLowerCase()))
+      ).slice(0, 8)
+    : [];
+
+  const handleSearch = (e) => {
+    const value = e.target.value;
+    setSearchQuery(value);
+    setShowSearchResults(value.length > 0);
+  };
+
+  const handleSearchResultClick = (path) => {
+    navigate(path);
+    setSearchQuery('');
+    setShowSearchResults(false);
+  };
 
   return (
     <header className="fixed top-0 left-0 right-0 h-16 md:h-20 bg-white border-b-2 border-slate-200 z-50 shadow-sm">
