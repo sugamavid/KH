@@ -330,6 +330,13 @@ const AdminIntelligenceDashboard = ({ setActiveModule }) => {
               <p className="text-cyan-300 mt-2 font-medium">Real-time insights • Predictive analytics • Strategic automation</p>
             </div>
             <div className="flex items-center space-x-4">
+              <button 
+                onClick={() => setActiveModule('dashboard')}
+                className="px-5 py-2.5 bg-white/10 backdrop-blur-md text-white rounded-xl hover:bg-white/20 transition-all font-bold text-sm flex items-center border border-white/30"
+              >
+                <ArrowDownRight className="w-5 h-5 mr-2 rotate-180" />
+                Back to HR Dashboard
+              </button>
               <div className="bg-white/10 backdrop-blur-md rounded-xl px-6 py-3 border border-white/20">
                 <div className="text-xs text-cyan-300 mb-1">System Status</div>
                 <div className="flex items-center space-x-2">
