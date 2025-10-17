@@ -478,7 +478,7 @@ const DepartmentManagement = () => {
               <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
                 dept.status === 'active' ? 'bg-green-100 text-green-700' : 'bg-orange-100 text-orange-700'
               }`}>
-                {dept.status.toUpperCase()}
+                {dept.status ? dept.status.toUpperCase() : 'ACTIVE'}
               </span>
             </div>
 
