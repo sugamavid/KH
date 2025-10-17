@@ -60,11 +60,6 @@ const DepartmentView = () => {
 
   // If department is Human Resources, show the HR Dashboard
   if (deptId === 'human-resources' || department.name === 'Human Resources') {
-    // Reset to HR Dashboard home when entering HR section
-    React.useEffect(() => {
-      localStorage.setItem('hrActiveModule', 'dashboard');
-    }, []);
-    
     return <HRDashboard />;
   }
 
