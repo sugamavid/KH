@@ -21,6 +21,13 @@ const DepartmentView = () => {
     fetchDepartment();
   }, [deptId]);
 
+  // Reset HR module to dashboard when entering HR section
+  useEffect(() => {
+    if (deptId === 'human-resources' || (department && department.name === 'Human Resources')) {
+      localStorage.setItem('hrActiveModule', 'dashboard');
+    }
+  }, [deptId, department]);
+
   const fetchDepartment = async () => {
     try {
       const response = await axios.get(`${API}/departments/${deptId}`);
