@@ -71,7 +71,8 @@ const Dashboard = ({ onLogout }) => {
             )}
           </div>
           
-          {!isInDepartment && <Footer />}
+          {/* Footer removed as per user request */}
+          {false && !isInDepartment && <Footer />}
         </main>
       </div>
     </div>
